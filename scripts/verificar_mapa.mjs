@@ -37,7 +37,7 @@ export async function medirMapa(page) {
   });
 }
 
-// Globo de la primera flecha de color: debe abrir con cifra, frase y contexto.
+// Globo de la primera flecha de color: debe abrir con grupo, cifra y población.
 export async function globoMapa(page) {
   const pt = await puntoEnFlecha(page);
   if (!pt) return null;
@@ -48,7 +48,7 @@ export async function globoMapa(page) {
     const t = document.querySelector(".globo-tarjeta");
     if (!t || t.hidden) return null;
     const txt = (c) => t.querySelector(c)?.textContent.trim() ?? "";
-    return {cifra: txt(".gt-cifra"), frase: txt(".gt-frase"), contexto: txt(".gt-contexto"), orden: [...t.children].map((n) => n.className)};
+    return {grupo: txt(".gt-grupo"), cifra: txt(".gt-cifra"), personas: txt(".gt-personas"), orden: [...t.children].map((n) => n.className)};
   });
   await page.mouse.move(2, 2);
   return r;

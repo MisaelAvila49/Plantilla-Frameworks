@@ -24,7 +24,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, campoUmbral, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, categorias, P} from "../components/paleta.js";
-import {pct, entero, deCada, cambioRelativo} from "../components/formato.js";
+import {entero, deCada, cambioRelativo} from "../components/formato.js";
 import {waffle, multitud, fraccion, histogramaUnidades, pila, escalones, unidadesEspejo} from "../components/formas/index.js";
 import {REGIONES} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
@@ -70,11 +70,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const filas = REGIONES.map((region) => ({region, anio: v.anio, ...tasa(indicador.filter((r) => r.region === region && r.anio === v.anio && r.sexo === v.sexo))}));
       const g = globo({
-        donde: (d) => `Región ${d.region}`, cuando: (d) => d.anio, color: () => P.tonoTexto,
+        grupo: (d) => `Región ${d.region}`, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "de100",
-        frase: `personas ${UNIVERSO} cumplen la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => `Porcentaje exacto: ${pct(d.pct)}`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
       });
       return {
         figura: {
@@ -123,11 +121,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const filas = SITUACIONES.map((situacion) => ({situacion, personas: d3.sum(situaciones.filter((r) => r.situacion === situacion && r.periodo === v.periodo).filter(enRegion(v.region)), (r) => r.personas)}));
       const g = globo({
-        donde: lugarDe(v.region), cuando: v.periodo, grupo: (d) => d.situacion, color: (d) => tintaDe(d.situacion),
-        valor: (d) => d.personas, formato: "conteo",
-        frase: `personas ${UNIVERSO} en esta situación`,
-        personas: (d) => d.personas, universo: (d) => d.total, apellido: UNIVERSO,
-        comparacion: (d) => `${pct(100 * d.personas / d.total)} de esa población`,
+        grupo: (d) => d.situacion, color: (d) => tintaDe(d.situacion),
+        valor: (d) => (d.total ? 100 * d.personas / d.total : null), formato: "pct",
+        personas: (d) => d.personas, universo: (d) => d.total, unidad: "habitantes",
       });
       const dibujo = multitud(filas, {ancho, grupo: (d) => d.situacion, valor: (d) => d.personas, color: (d) => colorDe(d.situacion), acomodo: v.acomodo, globo: g});
       return {
@@ -173,12 +169,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const filas = condiciones.filter((r) => r.condicion === v.condicion && r.comparacion === v.comparacion && r.anio === v.anio);
       const g = globo({
-        donde: (d) => (v.comparacion === "Región" ? `Región ${d.grupo}` : "Todo el país"), cuando: v.anio,
-        grupo: (d) => (v.comparacion === "Sexo" ? d.grupo : null), color: () => P.tonoTexto,
+        grupo: (d) => (v.comparacion === "Región" ? `Región ${d.grupo}` : v.comparacion === "Sexo" ? d.grupo : "Todo el país"), color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: (x, d) => deCada(x, d.base),
-        frase: `personas ${UNIVERSO} cumplen la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => `Porcentaje exacto: ${pct(d.pct)}`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => (v.comparacion === "Sexo" ? d.grupo.toLowerCase() : "habitantes"),
         precision: (d) => ({valor: d.pct, casos: d.casos}),
       });
       const dibujo = fraccion(filas, {ancho, etiqueta: (d) => d.grupo, valor: (d) => d.pct, color: () => P.serie,
@@ -232,11 +225,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const filas = edadCumplida.filter((r) => r.anio === v.anio);
       const destacado = v.destacar === "nadie" ? null : v.destacar;
       const g = globo({
-        donde: (d) => `De ${d.desde} a ${d.hasta - 1} años`, cuando: v.anio, grupo: destacado, color: P.tonoTexto,
+        marca: (d) => `De ${d.desde} a ${d.hasta - 1} años`, grupo: destacado, color: P.tonoTexto,
         valor: (d) => 100 * (destacado ? d.destacadas : d.personas) / d.total, formato: "pct",
-        frase: destacado ? `de quienes cumplen la condición son ${destacado.toLowerCase()} de esa edad` : "de quienes cumplen la condición tiene esa edad",
-        personas: (d) => (destacado ? d.destacadas : d.personas), universo: (d) => d.total, apellido: "que cumplen la condición",
-        comparacion: (d) => (destacado ? `Mujeres y hombres de esa edad: ${entero(d.personas)} personas` : null),
+        personas: (d) => (destacado ? d.destacadas : d.personas), universo: (d) => d.total, unidad: "personas que cumplen la condición",
       });
       const dibujo = histogramaUnidades(filas, {ancho, valor: (d) => d.edad, peso: (d) => d.personas, clase: v.clase, dominio: [0, 100],
         destacar: destacado ? (d) => d.sexo === destacado : null, color: P.serie, nombreDestacado: destacado, nombreResto: destacado === "Mujeres" ? "Hombres" : "Mujeres",
@@ -284,11 +275,10 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const filas = anios.map((anio) => ({anio, personas: d3.sum(pilas.filter((r) => r.anio === anio && (v.sexo === "Total" || r.sexo === v.sexo)).filter(enRegion(v.region)), (r) => r.personas)}));
       const quienes = v.sexo === "Total" ? "Mujeres y hombres" : v.sexo;
       const g = globo({
-        donde: lugarDe(v.region), cuando: (d) => d.anio, grupo: v.sexo === "Total" ? null : v.sexo, color: P.tonoTexto,
-        valor: (d) => d.personas, formato: "conteo",
-        frase: `${quienes.toLowerCase()} ${UNIVERSO} cumplen la condición`,
-        personas: (d) => d.personas, apellido: `${UNIVERSO} que cumplen la condición`,
-        comparacion: (d) => (d.cambio == null ? null : `Frente a ${d.primero.anio}: ${cambioRelativo(d.cambio)}`),
+        grupo: (d) => d.anio, color: P.tonoTexto,
+        // La pila cuenta personas y no hay un denominador: la cifra es el
+        // número de personas que cumplen, con su unidad.
+        valor: (d) => d.personas, formato: (x) => `${entero(x)} personas`,
       });
       const dibujo = pila(filas, {ancho, etiqueta: (d) => String(d.anio), valor: (d) => d.personas, color: () => P.serie,
         diferencia: "relativo", colorCambio: SIG.color, rotuloCambio: (a, b) => `de ${a.anio} a ${b.anio}`, globo: g});
@@ -336,11 +326,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
           unidadesSobre: sobre.length, parteSobre: f.length ? 100 * sobre.length / f.length : null};
       });
       const g = globo({
-        donde: (d) => `${lugarDe(v.region)}, ${d.grupo} años`, cuando: EDICION, color: P.tonoTexto,
+        grupo: (d) => `${d.grupo} años`, color: P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: "de las personas de ese grupo de edad cumple la condición",
-        personas: (d) => d.num, universo: (d) => d.den, apellido: (d) => `de ${d.grupo} años`,
-        comparacion: (d) => `${entero(d.unidadesSobre)} de ${entero(d.unidades)} unidades con ${v.umbral} % o más`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "personas de esa edad",
       });
       return {
         figura: {
@@ -404,11 +392,11 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const nombreLado = (l) => (v.comparacion === "Sexo" ? l.toLowerCase() : l === "Empezó a cumplir" ? "quienes empezaron a cumplir" : "quienes dejaron de cumplir");
       const verbo = (l) => (l === "Empezó a cumplir" ? "empezaron a cumplir la condición" : l === "Dejó de cumplir" ? "dejaron de cumplir la condición" : `cumplen la condición`);
       const g = globo({
-        donde: (d) => `${lugarDe(v.region)}, de ${d._categoria} años`, cuando: v.anio, grupo: (d) => d._lado, color: (d) => color(d._lado),
-        valor: (d) => (d._sinDato ? null : d.personas), formato: "conteo",
-        frase: (d) => (v.comparacion === "Sexo" ? `${d._lado.toLowerCase()} de ese grupo de edad ${verbo(d._lado)}` : `personas de ese grupo de edad ${verbo(d._lado)} desde la edición anterior`),
-        personas: (d) => (resaltar ? d.resaltadas : null), apellido: "en localidades rurales",
-        comparacion: (d) => (d.otro == null ? null : `Del otro lado: ${entero(d.otro)} personas`),
+        marca: (d) => `De ${d._categoria} años`, grupo: (d) => d._lado, color: (d) => color(d._lado),
+        // Cada pila cuenta personas sin denominador: la cifra es el número de
+        // personas, y al resaltar, debajo van las de localidades rurales.
+        valor: (d) => (d._sinDato ? null : d.personas), formato: (x) => `${entero(x)} personas`,
+        personas: (d) => (resaltar ? d.resaltadas : null), unidad: "personas en localidades rurales",
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = unidadesEspejo(filas, {ancho, categoria: (d) => d.edad, lado: (d) => d.lado, valor: (d) => d.personas, lados, categorias: EDADES_ESPEJO, color,
@@ -481,12 +469,9 @@ import {margen} from "../components/formato.js";
       const ahora = del(v.anio), antes = del(v.comparar);
       const valores = new Map([...ahora].map(([cve, r]) => [cve, {...r, antes: antes.get(cve)?.pct ?? null}]));
       const g = globo({
-        donde: (d) => d.nombre, cuando: v.anio,
-        grupo: (d) => (d._sinDato ? null : d._rango), color: P.tonoTexto,
+        marca: (d) => d.nombre, grupo: (d) => (d._sinDato ? null : d._rango), color: P.tonoTexto,
         valor: (d) => (d._sinDato ? null : d.pct), formato: "pct",
-        frase: `de su población ${UNIVERSO} cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => (d.antes == null ? `${v.comparar}: Sin dato` : `${v.comparar}: ${pct(d.antes)}${d._cambio ? `, en el rango ${d._rangoAntes.toLowerCase()}` : ""}`),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const dibujo = fichasRango(valores, {ancho, valor: (d) => d.pct, antes: (d) => d.antes, rangos: RANGOS, escala, colorCambio: (s) => SIG.color(s),

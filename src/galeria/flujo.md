@@ -27,7 +27,7 @@ import {analisis} from "../components/seccion.js";
 import {globo} from "../components/globo.js";
 import {panel, campo} from "../components/filtros.js";
 import {categorias, significado, P} from "../components/paleta.js";
-import {pct, personas, deA} from "../components/formato.js";
+import {personas} from "../components/formato.js";
 import {barraMapa, flechas, apiladasFlujo, aluvial} from "../components/formas/index.js";
 import {ENTIDADES, REGIONES, POR_CVE} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
@@ -80,22 +80,16 @@ const cortoDe = new Map([...ENTIDADES.map((e) => [e.nombre, e.corto]), ["Otras",
     dibujar: ({v, ancho}) => {
       const parte = PARTES[v.parte], foco = v.entidad, nombre = POR_CVE.get(foco).nombre;
       const tono = SIG_FLUJO.color("baja");
-      const porQue = (d) => (v.parte === "motivo" ? `por ${d.categoria.toLowerCase()}` : d.categoria === "Mujeres" ? "mujeres" : "hombres");
       const g = globo({
-        donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD,
-        grupo: (d) => d.categoria, color: (d) => (d.categoria === v.destacada ? tono : P.tinta2),
-        valor: (d) => d.valor, formato: (x) => personas(x),
-        frase: (d) => (v.parte === "motivo" ? `salieron de ${d.origen} ${porQue(d)} y llegaron a ${d.destino}` : `${porQue(d)} que salieron de ${d.origen} y llegaron a ${d.destino}`),
-        personas: (d) => d.valor, universo: (d) => d.totalCategoria,
-        apellido: (d) => (v.parte === "motivo" ? `que salieron de ${d.origen} ${porQue(d)}` : `${porQue(d)} que salieron de ${d.origen}`),
-        comparacion: (d) => `${pct(100 * d.valor / d.total)} de todas las salidas de ${d.origen}`,
+        marca: (d) => `${d.origen} → ${d.destino}`, grupo: (d) => d.categoria, color: (d) => (d.categoria === v.destacada ? tono : P.tinta2),
+        valor: (d) => 100 * d.valor / d.total, formato: "pct",
+        personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const gBarra = globo({
-        donde: (d) => d.origen, cuando: () => PERIODO_OD, grupo: (d) => d.categoria, color: (d) => (d.destacada ? tono : P.tinta2),
+        grupo: (d) => d.categoria, color: (d) => (d.destacada ? tono : P.tinta2),
         valor: (d) => 100 * d.valor / d.total, formato: "pct",
-        frase: (d) => (v.parte === "motivo" ? `de las personas que salieron de ${d.origen} lo hicieron ${porQue(d)}` : `de las personas que salieron de ${d.origen} son ${porQue(d)}`),
-        personas: (d) => d.valor, universo: (d) => d.total, apellido: (d) => `que salieron de ${d.origen}`,
+        personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = barraMapa(geo, odm, {
@@ -149,13 +143,10 @@ const cortoDe = new Map([...ENTIDADES.map((e) => [e.nombre, e.corto]), ["Otras",
       const foco = v.entidad === "todas" ? null : v.entidad, llegan = v.sentido === "llegan";
       const universo = (d) => (llegan ? llegadas.get(d.cveDestino) : salidas.get(d.cveOrigen));
       const g = globo({
-        donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD,
-        grupo: (d) => (foco ? (llegan ? `Llegan a ${d.destino}` : `Salen de ${d.origen}`) : null),
+        grupo: (d) => `${d.origen} → ${d.destino}`,
         color: () => (foco ? SIG_FLUJO.color(llegan ? "sube" : "baja") : P.tonoTexto),
-        valor: (d) => d.personas, formato: (x) => personas(x),
-        frase: (d) => `cambiaron su residencia de ${d.origen} a ${d.destino}`,
-        personas: (d) => d.personas, universo, apellido: (d) => (llegan ? `que llegaron a ${d.destino}` : `que salieron de ${d.origen}`),
-        comparacion: (d) => `${pct(100 * d.personas / universo(d))} de ${llegan ? "esas llegadas" : "esas salidas"}`,
+        valor: (d) => (universo(d) ? 100 * d.personas / universo(d) : null), formato: "pct",
+        personas: (d) => d.personas, universo, unidad: llegan ? "personas que llegaron" : "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = flechas(geo, od, {
@@ -212,19 +203,14 @@ const cortoDe = new Map([...ENTIDADES.map((e) => [e.nombre, e.corto]), ["Otras",
       const lugar = v.ambito === "Nacional" ? "Todo el país" : `Región ${v.ambito}`;
       const tinta = (m) => (m === "Otros motivos" ? P.tinta2 : colorMotivo(m));
       const g = globo({
-        donde: (d) => d.motivo, cuando: (d) => d.corte, color: (d) => tinta(d.motivo),
+        marca: (d) => d.motivo, grupo: (d) => d.corte, color: (d) => tinta(d.motivo),
         valor: (d) => d.parte, formato: "pct",
-        frase: "de las personas que cambiaron de residencia lo hicieron por este motivo",
-        personas: (d) => d.personas, universo: (d) => d.total,
-        comparacion: (d) => (d.anterior ? `${d.anterior.corte}: ${pct(d.anterior.parte)}` : null),
+        personas: (d) => d.personas, universo: (d) => d.total, unidad: "personas del corte",
         precision: (d) => ({casos: d.casos}),
       });
       const gCinta = globo({
-        donde: (d) => d.categoria, cuando: (d) => `${d.de.corte} a ${d.a.corte}`, color: (d) => tinta(d.categoria),
+        marca: (d) => d.categoria, grupo: (d) => `${d.de.corte} a ${d.a.corte}`, color: (d) => tinta(d.categoria),
         valor: (d) => d.cambio, formato: "puntos",
-        frase: "de cambio en la parte de este motivo entre dos cortes independientes",
-        personas: (d) => d.a.personas, universo: (d) => d.a.total, apellido: (d) => `en ${d.a.corte}`,
-        comparacion: (d) => deA(d.de.parte, d.a.parte, pct),
       });
       const dibujo = apiladasFlujo(filas, {
         ancho, corte: (d) => d.corte, categoria: (d) => d.motivo, valor: (d) => d.personas, categorias: MOTIVOS, color: colorMotivo, destacar,
@@ -275,22 +261,18 @@ const cortoDe = new Map([...ENTIDADES.map((e) => [e.nombre, e.corto]), ["Otras",
       "Las cintas de la entidad destacada conservan el color y las demás quedan en gris. Si de 200,000 personas que salieron de una entidad 50,000 llegaron a otra, la cinta que las une representa 25 de cada 100 de esas salidas."],
     dibujar: ({v, ancho}) => {
       const deDestino = v.lado === "destino", tono = SIG_FLUJO.color(deDestino ? "sube" : "baja");
-      const otras = (t) => t.replace(/Otras/g, "otras entidades");
+      const nom = (n) => (n === "Otras" ? "Otras entidades" : n);
+      const totalLado = (d) => (deDestino ? d.totalDestino : d.totalOrigen);
       const g = globo({
-        donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD, color: (d) => ((deDestino ? d.destino : d.origen) === v.entidad ? tono : P.tinta2),
-        valor: (d) => d.valor, formato: (x) => personas(x),
-        frase: (d) => otras(`cambiaron su residencia de ${d.origen} a ${d.destino}`),
-        personas: (d) => d.valor, universo: (d) => (deDestino ? d.totalDestino : d.totalOrigen),
-        apellido: (d) => otras(deDestino ? `que llegaron a ${d.destino}` : `que salieron de ${d.origen}`),
-        comparacion: (d) => `${pct(100 * d.valor / d.total)} de todos los cambios de entidad`,
+        grupo: (d) => `${nom(d.origen)} → ${nom(d.destino)}`, color: (d) => ((deDestino ? d.destino : d.origen) === v.entidad ? tono : P.tinta2),
+        valor: (d) => (totalLado(d) ? 100 * d.valor / totalLado(d) : null), formato: "pct",
+        personas: (d) => d.valor, universo: totalLado, unidad: deDestino ? "personas que llegaron" : "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const gNodo = globo({
-        donde: (d) => (d.nombre === "Otras" ? "Otras entidades" : d.nombre), cuando: () => PERIODO_OD,
-        grupo: (d) => (d.lado === "origen" ? "Entidad de salida" : "Entidad de llegada"), color: (d) => (d.lado === v.lado && d.nombre === v.entidad ? tono : P.tinta2),
+        marca: (d) => nom(d.nombre), grupo: (d) => (d.lado === "origen" ? "Entidad de salida" : "Entidad de llegada"), color: (d) => (d.lado === v.lado && d.nombre === v.entidad ? tono : P.tinta2),
         valor: (d) => 100 * d.valor / d.total, formato: "pct",
-        frase: (d) => `de todas las personas que cambiaron de entidad ${d.lado === "origen" ? "salieron de aquí" : "llegaron aquí"}`,
-        personas: (d) => d.valor, universo: (d) => d.total,
+        personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que cambiaron de entidad",
       });
       const dibujo = aluvial(od, {
         ancho, origen: (d) => d.origen, destino: (d) => d.destino, valor: (d) => d.personas, casos: (d) => d.casos, maximo: NODOS,
@@ -358,7 +340,6 @@ const GRUPOS_G = [
   {valor: "otro_pais", texto: "Nació en otro país", apellido: "nacieron en otro país"},
 ];
 const textoDe = (lista, v) => lista.find((x) => String(x.valor) === String(v))?.texto ?? v;
-const causaFrase = (c) => (c === "violencia" ? " por violencia" : c === "otras" ? " por otra causa" : "");
 const nombreDe = (k) => POR_CVE.get(k)?.nombre ?? k;
 const cortoDe2 = (k) => POR_CVE.get(k)?.corto ?? k;
 // Flujo de cada par de entidades de la matriz origen-destino, por clave.
@@ -403,19 +384,14 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const filas = series.filter((r) => r.anio === v.anio && (v.region === "todas" || r.region === v.region));
       const lugar = v.region === "todas" ? "Todo el país" : `Región ${v.region}`;
       const g = globo({
-        donde: (d) => d.entidad, cuando: () => v.anio, grupo: (d) => (d.sentido === "salen" ? "Salen" : "Llegan"), color: (d) => SIG_FLUJO.color(d.sentido === "salen" ? "baja" : "sube"),
-        valor: (d) => m.de(d, d.sentido), formato: (x) => m.cifra(x),
-        frase: (d) => (d.sentido === "salen" ? `salieron de ${d.entidad} a otra entidad en el año` : `llegaron a ${d.entidad} desde otra entidad en el año`),
-        personas: (d) => d[d.sentido], universo: (d) => d.poblacion, apellido: (d) => `que viven en ${d.entidad}`,
-        comparacion: (d) => (v.medida === "personas" ? `${numero(d.sentido === "salen" ? d.tasaSalen : d.tasaLlegan, 1)} por cada mil habitantes` : personas(d[d.sentido])),
+        marca: (d) => d.entidad, grupo: (d) => (d.sentido === "salen" ? "Salen" : "Llegan"), color: (d) => SIG_FLUJO.color(d.sentido === "salen" ? "baja" : "sube"),
+        valor: (d) => MEDIDAS.tasa.de(d, d.sentido), formato: (x) => MEDIDAS.tasa.cifra(x),
+        personas: (d) => d[d.sentido], universo: (d) => d.poblacion, unidad: "habitantes",
         precision: (d) => ({casos: d.casos}),
       });
       const gs = globo({
-        donde: (d) => d.entidad, cuando: () => v.anio, color: () => P.tinta,
+        marca: (d) => d.entidad, grupo: "Saldo, llegadas menos salidas", color: () => P.tinta,
         valor: (d) => (v.medida === "personas" ? d.llegan - d.salen : d.tasaLlegan - d.tasaSalen), formato: (x) => `${x > 0 ? "+" : x < 0 ? "−" : ""}${m.cifra(Math.abs(x))}`,
-        frase: (d) => `de saldo: llegadas menos salidas de ${d.entidad}`,
-        personas: (d) => Math.abs(d.llegan - d.salen), apellido: (d) => (d.llegan >= d.salen ? "de diferencia a favor de las llegadas" : "de diferencia a favor de las salidas"),
-        comparacion: (d) => `Salen ${entero(d.salen)} · llegan ${entero(d.llegan)}`,
       });
       const dibujo = saldo(filas, {
         ancho, nombre: (d) => d.entidad, corto: (d) => POR_CVE.get(d.cve)?.corto ?? d.entidad,
@@ -478,18 +454,15 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const color = (c) => (!destacada || c === nombreR(destacada) ? P.serie : P.contexto);
       const periodo = textoDe(PERIODOS_G, v.periodo);
       const g = globo({
-        donde: (d) => `${d.regionO} → ${d.regionD}`, cuando: () => periodo, color: (d) => color(d.origen),
-        valor: (d) => d.personas, formato: (x) => personas(x),
-        frase: (d) => `cambiaron de una entidad de la región ${d.regionO} a una de la región ${d.regionD}${causaFrase(v.causa)}`,
-        personas: (d) => d.personas, universo: (d) => d.totalOrigen, apellido: (d) => `que salieron de la región ${d.regionO}`,
-        comparacion: (d) => `${pct((100 * d.personas) / d.totalOrigen)} de las salidas de la región ${d.regionO}`,
+        grupo: (d) => `${d.regionO} → ${d.regionD}`, color: (d) => color(d.origen),
+        valor: (d) => (d.totalOrigen ? (100 * d.personas) / d.totalOrigen : null), formato: "pct",
+        personas: (d) => d.personas, universo: (d) => d.totalOrigen, unidad: "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const gNodo = globo({
-        donde: (d) => `Región ${REGIONES.find((r) => nombreR(r) === d.categoria) ?? d.categoria}`, cuando: () => periodo, grupo: (d) => d.etapa, color: (d) => color(d.categoria),
+        marca: (d) => `Región ${REGIONES.find((r) => nombreR(r) === d.categoria) ?? d.categoria}`, grupo: (d) => d.etapa, color: (d) => color(d.categoria),
         valor: (d) => (100 * d.valor) / d.total, formato: "pct",
-        frase: (d) => `de las personas que cambiaron de entidad${causaFrase(v.causa)} ${d.etapa === "Salen de" ? "salieron de esta región" : "llegaron a esta región"}`,
-        personas: (d) => d.valor, universo: (d) => d.total,
+        personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que cambiaron de región",
       });
       const dibujo = sankey(pares, {
         ancho: angosto ? ancho - 32 : ancho, origen: (d) => d.origen, destino: (d) => d.destino, valor: (d) => d.personas,
@@ -556,11 +529,9 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const lugares = ORDENES[v.orden].fn(lugaresDe(v.ambito));
       const foco = v.destacar === "ninguna" ? null : v.destacar;
       const g = globo({
-        donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD, color: () => P.tonoTexto,
-        valor: (d) => d.valor, formato: (x) => personas(x),
-        frase: (d) => `cambiaron su residencia de ${d.origen} a ${d.destino}`,
-        personas: (d) => d.valor, universo: (d) => salidas.get(d.cveOrigen), apellido: (d) => `que salieron de ${d.origen}`,
-        comparacion: (d) => `${pct((100 * d.valor) / llegadas.get(d.cveDestino))} de las llegadas a ${d.destino}`,
+        grupo: (d) => `${d.origen} → ${d.destino}`, color: () => P.tonoTexto,
+        valor: (d) => (salidas.get(d.cveOrigen) ? (100 * d.valor) / salidas.get(d.cveOrigen) : null), formato: "pct",
+        personas: (d) => d.valor, universo: (d) => salidas.get(d.cveOrigen), unidad: "personas que salieron",
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = matriz(lugares, {
@@ -618,21 +589,15 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const dibujo = arcos(ORDENES[v.orden].fn(), flujosArco, {
         ancho, nombre: nombreDe, corto: cortoDe2, foco, maximo: v.cuantos, tope: TOPE_CELDA,
         globo: globo({
-          donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD,
-          grupo: (d) => (!foco ? null : d.o === foco ? `Salen de ${d.origen}` : d.d === foco ? `Llegan a ${d.destino}` : "Otro flujo mayor"),
+          grupo: (d) => `${d.origen} → ${d.destino}`,
           color: (d) => (!foco ? P.tonoTexto : d.o === foco ? SIG_FLUJO.color("baja") : d.d === foco ? SIG_FLUJO.color("sube") : P.tinta2),
-          valor: (d) => d.valor, formato: (x) => personas(x),
-          frase: (d) => `cambiaron su residencia de ${d.origen} a ${d.destino}`,
-          personas: (d) => d.valor, universo: (d) => salidas.get(d.o), apellido: (d) => `que salieron de ${d.origen}`,
-          comparacion: (d) => `${pct((100 * d.valor) / llegadas.get(d.d))} de las llegadas a ${d.destino}`,
+          valor: (d) => (salidas.get(d.o) ? (100 * d.valor) / salidas.get(d.o) : null), formato: "pct",
+          personas: (d) => d.valor, universo: (d) => salidas.get(d.o), unidad: "personas que salieron",
           precision: (d) => ({casos: d.casos}),
         }),
         globoLugar: globo({
-          donde: (d) => d.nombre, cuando: () => PERIODO_OD, color: () => P.tonoTexto,
+          grupo: (d) => `${d.nombre} · salen y llegan`, color: () => P.tonoTexto,
           valor: (d) => d.salen + d.llegan, formato: (x) => personas(x),
-          frase: (d) => `salieron de ${d.nombre} o llegaron a ella desde otra entidad`,
-          personas: (d) => d.salen + d.llegan, apellido: "que cambiaron de entidad, contadas en la salida o en la llegada",
-          comparacion: (d) => `Salen ${entero(d.salen)} · llegan ${entero(d.llegan)}`,
         }),
       });
       return {
@@ -684,20 +649,17 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const dim = DIMS.find((dm) => dm.id === v.color);
       const color = categorias(dim.categorias.map((q) => q.texto));
       const periodo = textoDe(PERIODOS_G, v.periodo);
-      const quienes = `que cambiaron de entidad${grupo.apellido ? ` y ${grupo.apellido}` : ""}`;
       const dibujo = conjuntos(filas, {
         ancho, dimensiones: DIMS, valor: (d) => d.personas, colorPor: v.color, color,
         globo: globo({
-          donde: () => "Todo el país", cuando: () => periodo, grupo: (d) => d.combo.map((c) => c.texto).join(" · "), color: (d) => d.color,
+          grupo: (d) => d.combo.map((c) => c.texto).join(" · "), color: (d) => d.color,
           valor: (d) => (100 * d.valor) / d.total, formato: "pct",
-          frase: `de las personas ${quienes} están en este grupo`,
-          personas: (d) => d.valor, universo: (d) => d.total, apellido: quienes,
+          personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que cambiaron de entidad",
         }),
         globoNodo: globo({
-          donde: () => "Todo el país", cuando: () => periodo, grupo: (d) => `${d.dim}: ${d.texto}`, color: () => P.tinta2,
+          grupo: (d) => `${d.dim}: ${d.texto}`, color: () => P.tinta2,
           valor: (d) => (100 * d.valor) / d.total, formato: "pct",
-          frase: `de las personas ${quienes}`,
-          personas: (d) => d.valor, universo: (d) => d.total, apellido: quienes,
+          personas: (d) => d.valor, universo: (d) => d.total, unidad: "personas que cambiaron de entidad",
         }),
       });
       return {
@@ -747,18 +709,15 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const parte = (v0, o) => (v0 == null ? null : (100 * v0) / salenFila.get(o));
       const enPersonas = v.cifra === "personas";
       const g = globo({
-        donde: (d) => `${d.origen} → ${d.destino}`, cuando: () => PERIODO_OD, color: () => P.tonoTexto,
-        valor: (d) => (enPersonas ? d.valor : parte(d.valor, d.cveOrigen)), formato: enPersonas ? (x) => personas(x) : "de100",
-        frase: (d) => (enPersonas ? `cambiaron su residencia de ${d.origen} a ${d.destino}` : `de las personas que salieron de ${d.origen} hacia la región ${v.region} llegaron a ${d.destino}`),
-        personas: (d) => d.valor, universo: (d) => d.totalOrigen, apellido: (d) => `que salieron de ${d.origen} hacia la región`,
-        comparacion: (d) => (enPersonas ? `${pct(parte(d.valor, d.cveOrigen))} de esas salidas` : personas(d.valor)),
+        grupo: (d) => `${d.origen} → ${d.destino}`, color: () => P.tonoTexto,
+        valor: (d) => parte(d.valor, d.cveOrigen), formato: enPersonas ? "pct" : "de100",
+        personas: (d) => d.valor, universo: (d) => salenFila.get(d.cveOrigen), unidad: "personas que salieron",
       });
+      const totalLugar = (d) => (d.sentido === "salen" ? salidas : llegadas).get(ENTIDADES.find((e) => e.nombre === d.lugar)?.cve);
       const gt = globo({
-        donde: (d) => d.lugar, cuando: () => PERIODO_OD, grupo: (d) => (d.sentido === "salen" ? "Salen" : "Llegan"), color: (d) => SIG_FLUJO.color(d.sentido === "salen" ? "baja" : "sube"),
-        valor: (d) => d.valor, formato: (x) => personas(x),
-        frase: (d) => (d.sentido === "salen" ? `salieron de ${d.lugar} a otras entidades de la región ${v.region}` : `llegaron a ${d.lugar} desde otras entidades de la región ${v.region}`),
-        personas: (d) => d.valor, universo: (d) => (d.sentido === "salen" ? salidas : llegadas).get(ENTIDADES.find((e) => e.nombre === d.lugar)?.cve),
-        apellido: (d) => (d.sentido === "salen" ? `que salieron de ${d.lugar} a cualquier entidad` : `que llegaron a ${d.lugar} desde cualquier entidad`),
+        marca: (d) => d.lugar, grupo: (d) => (d.sentido === "salen" ? "Salen a la región" : "Llegan de la región"), color: (d) => SIG_FLUJO.color(d.sentido === "salen" ? "baja" : "sube"),
+        valor: (d) => { const u = totalLugar(d); return d.valor == null || !u ? null : (100 * d.valor) / u; }, formato: "pct",
+        personas: (d) => d.valor, universo: totalLugar, unidad: (d) => (d.sentido === "salen" ? "personas que salieron" : "personas que llegaron"),
       });
       const dibujo = tablaOD(lugares, {
         ancho, valor, nombre: nombreDe, corto: cortoDe2,
@@ -817,18 +776,12 @@ const centroEnt = new Map(geo.features.map((f) => [ENTIDADES.find((e) => e.iso =
       const dibujo = red(nodos, pares, {
         ancho, base: 10000, minimo: v.minimo, tope: TOPE_RED, clave: "red-od", destacar: region ? (id) => POR_CVE.get(id)?.region === region : null,
         globo: globo({
-          donde: (d) => d.nombre, cuando: () => PERIODO_OD, grupo: (d) => (region ? (d.region === region ? `Región ${region}` : "Otra región") : null), color: (d) => (!region || d.region === region ? P.tonoTexto : P.tinta2),
+          marca: (d) => `${d.nombre} · salen y llegan`, grupo: (d) => (region ? (d.region === region ? `Región ${region}` : "Otra región") : null), color: (d) => (!region || d.region === region ? P.tonoTexto : P.tinta2),
           valor: (d) => d.tamano, formato: (x) => personas(x),
-          frase: (d) => `salieron de ${d.nombre} o llegaron a ella desde otra entidad`,
-          personas: (d) => d.tamano, apellido: "que cambiaron de entidad, contadas en la salida o en la llegada",
-          comparacion: (d) => `Salen ${entero(d.salen)} · llegan ${entero(d.llegan)}`,
         }),
         globoEnlace: globo({
-          donde: (d) => `${d.nombreA} y ${d.nombreB}`, cuando: () => PERIODO_OD, color: () => P.tonoTexto,
+          grupo: (d) => `${d.nombreA} y ${d.nombreB}, en los dos sentidos`, color: () => P.tonoTexto,
           valor: (d) => d.valor, formato: (x) => personas(x),
-          frase: "cambiaron de residencia entre las dos entidades, en los dos sentidos",
-          personas: (d) => d.valor,
-          comparacion: (d) => `${cortoDe2(d.a)} → ${cortoDe2(d.b)}: ${entero(odPar.get(`${d.a}-${d.b}`)?.personas)} · ${cortoDe2(d.b)} → ${cortoDe2(d.a)}: ${entero(odPar.get(`${d.b}-${d.a}`)?.personas)}`,
           precision: (d) => ({casos: d.casos}),
         }),
       });

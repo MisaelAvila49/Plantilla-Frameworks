@@ -16,7 +16,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, rampaTema, P} from "../components/paleta.js";
-import {pct, puntos, margen, deA, pocoPrecisa} from "../components/formato.js";
+import {pct, puntos, margen, pocoPrecisa} from "../components/formato.js";
 import {REGIONES} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
 import {VERIFICA_MUESTRA} from "../components/muestra.js";
@@ -66,11 +66,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const sinDato = todas.filter((r) => r.pct == null).map((r) => r.entidad);
       const servicio = enMinuscula(v.indicador);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, color: () => P.tonoTexto,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de los hogares tiene ${servicio}`,
         personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares",
-        comparacion: () => (nac ? `Todo el país: ${pct(nac.pct)}` : null),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -115,11 +113,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const sel = tic.filter((r) => deRegion(v)(r) && r.anio === v.anio);
       const g = globo({
-        donde: (d) => d.entidad ?? d._fila, cuando: v.anio, grupo: (d) => d.indicador ?? d._columna, color: () => P.tonoTexto,
+        marca: (d) => d.entidad ?? d._fila, grupo: (d) => d.indicador ?? d._columna, color: () => P.tonoTexto,
         valor: (d) => d.pct ?? null, formato: "pct",
-        frase: (d) => `de los hogares tiene ${enMinuscula(d.indicador)}`,
         personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares",
-        comparacion: (d) => { const n = nacional(d.indicador, v.anio); return n ? `Todo el país: ${pct(n.pct)}` : null; },
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const escala = rampaTema(DOMINIO_PCT);
@@ -168,11 +164,8 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const renglones = [...new Set(sel.map((r) => r.entidad))].map((nombre) => ({nombre, filas: sel.filter((r) => r.entidad === nombre)}));
       const servicio = enMinuscula(v.indicador);
       const g = globo({
-        donde: (r) => r.nombre, cuando: (r) => `${r.a.anio} a ${r.b.anio}`, grupo: (r) => SIG.etiqueta(r.s), color: (r) => SIG.color(r.s),
+        marca: (r) => `${r.nombre} · ${r.a.anio} a ${r.b.anio}`, grupo: (r) => SIG.etiqueta(r.s), color: (r) => SIG.color(r.s),
         valor: (r) => r.cambio, formato: "puntos",
-        frase: `de cambio en la parte de los hogares que tiene ${servicio}`,
-        personas: (r) => r.b.num, universo: (r) => r.b.den, unidad: "hogares", apellido: (r) => `en ${r.b.anio}`,
-        comparacion: (r) => deA(r.a.pct, r.b.pct, pct),
       });
       const cuadro = renglones.flatMap((r) => r.filas.filter((d) => d.pct != null).length >= 2 ? [{...r, a: r.filas.find((d) => d.anio === ANIOS[0]), b: r.filas.find((d) => d.anio === ANIOS.at(-1))}] : []).filter((r) => r.a?.pct != null && r.b?.pct != null);
       return {

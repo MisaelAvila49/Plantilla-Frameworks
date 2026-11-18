@@ -21,7 +21,7 @@ import {pct, puntos, margen, numero, pocoPrecisa} from "../components/formato.js
 import {REGIONES, ENTIDADES} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
 import {VERIFICA_MUESTRA} from "../components/muestra.js";
-import {leerAsistenciaEntidad, leerMunicipios, leerTrimestral, quienesSexo, unidadSexo, textoSexo} from "../components/muestra-gB.js";
+import {leerAsistenciaEntidad, leerMunicipios, leerTrimestral, unidadSexo, textoSexo} from "../components/muestra-gB.js";
 import {tablaPrecision} from "../components/formas/tabla-precision.js";
 import {puntosIntervalo} from "../components/formas/puntos-intervalo.js";
 import {cuantiles, debajoDe} from "../components/formas/cuantiles.js";
@@ -75,11 +75,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const sel = entidades(v), nac = nacional(v);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, color: () => P.tonoTexto,
+        grupo: (d) => (d.cve === "00" ? "Todo el país" : d.entidad), color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de ${quienesSexo(v.sexo)} de 18 a 24 años asiste a la escuela`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: "de 18 a 24 años",
-        comparacion: (d) => (d.cve === "00" || !nac ? null : `Todo el país: ${pct(nac.pct)}`),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "jóvenes" : unidadSexo(v.sexo),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const bajas = sel.filter((d) => d.ee / d.pct >= 0.3).length;
@@ -126,11 +124,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const sel = entidades(v), nac = nacional(v);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, color: () => P.tonoTexto,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de ${quienesSexo(v.sexo)} de 18 a 24 años asiste a la escuela`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: "de 18 a 24 años",
-        comparacion: () => (nac ? `Todo el país: ${pct(nac.pct)}` : null),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "jóvenes" : unidadSexo(v.sexo),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -176,11 +172,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const sel = entidades(v), nac = nacional(v);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, color: () => P.tonoTexto,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de ${quienesSexo(v.sexo)} de 18 a 24 años asiste a la escuela`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: "de 18 a 24 años",
-        comparacion: (d) => `${debajoDe(d.pct, d.ee, nac.pct)} de 20 resultados debajo de todo el país (${pct(nac.pct)})`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "jóvenes" : unidadSexo(v.sexo),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -235,11 +229,8 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
         return {...d, ref: r, dif, eeDif: ee, lado: ladoDe(dif, ee)};
       });
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, grupo: (d) => SIG.etiqueta(d.lado), color: (d) => SIG.color(d.lado),
+        marca: (d) => d.entidad, grupo: (d) => SIG.etiqueta(d.lado), color: (d) => SIG.color(d.lado),
         valor: (d) => d.dif, formato: "puntos",
-        frase: (d) => `de diferencia con ${d.ref.nombre} en la parte de ${quienesSexo(v.sexo)} de 18 a 24 años que asiste a la escuela`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: "de 18 a 24 años",
-        comparacion: (d) => `${pct(d.pct)} frente a ${pct(d.ref.pct)}`,
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const cuenta = (k) => filas.filter((d) => d.lado === k).length;
@@ -291,13 +282,10 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const nivel = NIVELES.find((n) => n.valor === v.nivel);
       const serie = trimestral.filter((d) => d.edad === v.edad && d.sexo === v.sexo).sort((a, b) => a.anio - b.anio || a.trimestre - b.trimestre).map((d, i) => ({...d, i}));
-      const anioAntes = (d) => serie.find((r) => r.anio === d.anio - 1 && r.trimestre === d.trimestre && r.pct != null);
       const g = globo({
-        donde: "Todo el país", cuando: (d) => d.etiqueta, color: () => P.tonoTexto,
+        grupo: (d) => d.etiqueta, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de ${quienesSexo(v.sexo)} de ${v.edad} años trabaja`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: `de ${v.edad} años`,
-        comparacion: (d) => (anioAntes(d) ? `${anioAntes(d).etiqueta}: ${pct(anioAntes(d).pct)}` : null),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: `${unidadSexo(v.sexo)} de esa edad`,
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const marcas = serie.filter((d) => d.trimestre === 1).map((d) => d.i);
@@ -341,11 +329,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const sel = municipios.filter((d) => d.edad === v.edad && d.anio === v.anio && (v.region === "todas" || d.region === v.region));
       const g = globo({
-        donde: (d) => d.entidad, cuando: `Censo ${v.anio}`, color: () => P.tonoTexto,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de la población de ${v.edad} años asiste a la escuela en toda la entidad`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: `de ${v.edad} años`,
-        comparacion: (d) => `Municipios: de ${pct(d.minimo)} a ${pct(d.maximo)}`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "personas de esa edad",
       });
       return {
         figura: {

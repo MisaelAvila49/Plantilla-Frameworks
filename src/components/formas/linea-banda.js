@@ -8,7 +8,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P, rampaTema} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, altoTiempo, vacio, TIPO} from "./comun.js";
 
@@ -16,7 +16,7 @@ import {base, altoTiempo, vacio, TIPO} from "./comun.js";
 // rotulo(d) texto del corte («2020 T2»), valor(d) en % o null, ee(d).
 // `z`: multiplicador del error (1.96 para 95 %). `dominioY`: FIJO.
 // `marcasX`: posiciones con rótulo en el eje; `formatoX(x)`.
-export function lineaBanda(datos, {ancho, x, valor, ee, z = 1.96, nivel = "95 %", dominioY = [0, 30], formato = pct, formatoEje = pctEje, rotuloY = null, marcasX = null, formatoX = String, globo: g}) {
+export function lineaBanda(datos, {ancho, x, valor, ee, z = 1.96, nivel = "95 %", dominioY = [0, 30], formato = pct, formatoEje = pctMarca, rotuloY = null, marcasX = null, formatoX = String, globo: g}) {
   const filas = datos.map((d) => {
     const v = valor(d), e = ee(d);
     return {d, x: x(d), v, lo: v == null || e == null ? null : Math.max(dominioY[0], v - z * e), hi: v == null || e == null ? null : Math.min(dominioY[1], v + z * e)};
@@ -34,7 +34,7 @@ export function lineaBanda(datos, {ancho, x, valor, ee, z = 1.96, nivel = "95 %"
   }).filter(Boolean);
   const ultimo = conValor.at(-1);
   const plot = Plot.plot(base({
-    ancho, alto: altoTiempo(ancho), marginLeft: 40, marginRight: angosto ? 16 : 54, marginTop: rotuloY ? 30 : 16, marginBottom: 30,
+    ancho, alto: altoTiempo(ancho), marginLeft: 48, marginRight: angosto ? 16 : 54, marginTop: rotuloY ? 30 : 16, marginBottom: 30,
     x: {label: null, ticks: marcasX ?? undefined, tickFormat: formatoX, tickSize: 4, inset: 6},
     y: {label: rotuloY, labelAnchor: "top", labelArrow: "none", domain: dominioY, grid: true, tickFormat: formatoEje, ticks: 5},
     marks: [

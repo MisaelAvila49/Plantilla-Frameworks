@@ -9,7 +9,8 @@ import path from "node:path";
 import {servirEstatico} from "./servidor_estatico.mjs";
 import {PUERTO} from "./paginas.mjs";
 
-export const DIST = path.join(import.meta.dirname, "..", "dist");
+// OBS_SALIDA: misma variable que observablehq.config.js (build en otra carpeta).
+export const DIST = path.join(import.meta.dirname, "..", process.env.OBS_SALIDA || "dist");
 
 export async function servidor(puerto = PUERTO) {
   if (!existsSync(path.join(DIST, "index.html"))) {

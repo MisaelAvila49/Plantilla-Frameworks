@@ -8,7 +8,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, leyendaItems, TIPO} from "./comun.js";
 
@@ -17,14 +17,14 @@ import {base, vacio, leyendaItems, TIPO} from "./comun.js";
 // con cualquier filtro. `incierta(d)`: true si la estimación es poco precisa
 // (barra en tinta clara con contorno y asterisco junto a la cifra).
 // `corto(x)`: rótulo del eje en pantallas angostas.
-export function barras(datos, {ancho, x, valor, orden = null, dominioY = [0, 100], formato = pct, formatoEje = pctEje, rotuloY = null, incierta = () => false, corto = null, globo: g}) {
+export function barras(datos, {ancho, x, valor, orden = null, dominioY = [0, 100], formato = pct, formatoEje = pctMarca, rotuloY = null, incierta = () => false, corto = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const angosto = ancho < 520;
   const dominio = orden ?? filas.map(x);
   const relleno = (d) => (incierta(d) ? P.tonoSuave : P.serie);
   const plot = Plot.plot(base({
-    ancho, alto: Math.round(Math.max(260, Math.min(380, ancho * 0.36))), marginTop: rotuloY ? 34 : 22, marginLeft: 40, marginRight: 8, marginBottom: 34,
+    ancho, alto: Math.round(Math.max(260, Math.min(380, ancho * 0.36))), marginTop: rotuloY ? 34 : 22, marginLeft: 48, marginRight: 8, marginBottom: 34,
     x: {label: null, domain: dominio, tickSize: 0, padding: angosto ? 0.22 : 0.32, tickFormat: (v) => (angosto && corto ? corto(v) : v)},
     y: {label: rotuloY, labelAnchor: "top", labelArrow: "none", domain: dominioY, grid: true, tickFormat: formatoEje, ticks: 5},
     marks: [

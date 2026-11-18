@@ -8,7 +8,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, azarEstable} from "./comun.js";
 
@@ -16,7 +16,7 @@ const MIN_CURVA = 8;
 
 // datos: una fila por unidad y edición. grupo(d) edición, valor(d), id(d).
 // colorGrupo(grupo) pinta la cresta; color(d) pinta cada punto.
-export function crestas(datos, {ancho, grupo, valor, id = (d) => JSON.stringify(d), dominio = [0, 100], suavizado = 4, colorGrupo = () => P.serie, color = null, orden = null, formatoEje = pctEje, rotuloX = null, globo: g}) {
+export function crestas(datos, {ancho, grupo, valor, id = (d) => JSON.stringify(d), dominio = [0, 100], suavizado = 4, colorGrupo = () => P.serie, color = null, orden = null, formatoEje = pctMarca, rotuloX = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const porGrupo = d3.group(filas, grupo);

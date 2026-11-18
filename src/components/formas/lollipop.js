@@ -5,11 +5,11 @@
 // No: menos de seis filas (barras) ni comparación de dos valores (dumbbell).
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, margenRotulos, vacio, TIPO} from "./comun.js";
 
-export function lollipop(datos, {ancho, etiqueta, valor, color = null, destacar = null, formato = pct, formatoEje = pctEje, rotuloX = null, dominioX = null, globo: g}) {
+export function lollipop(datos, {ancho, etiqueta, valor, color = null, destacar = null, formato = pct, formatoEje = pctMarca, rotuloX = null, dominioX = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null).sort((a, b) => valor(b) - valor(a));
   if (!filas.length) return vacio();
   const tinta = color ?? ((d) => (destacar == null || etiqueta(d) === destacar ? P.serie : P.contexto));

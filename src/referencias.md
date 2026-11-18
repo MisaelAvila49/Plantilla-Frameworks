@@ -28,3 +28,7 @@ toc: true
 <ol class="referencias">
   <li id="muestra-2026">Social Data IBERO. (2026). <em>Datos de muestra de la Plantilla de libro de datos</em> [Conjunto de datos sintéticos generado con semilla fija]. Universidad Iberoamericana. Archivo <code>scripts/generar_muestra.mjs</code>.</li>
 </ol>
+
+## Créditos
+
+Ilustración de la portada («El cruce»): equipo de Social Data IBERO.

@@ -8,14 +8,14 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P, rampaTema} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, margenRotulos, TIPO} from "./comun.js";
 
 // datos: una fila por unidad. etiqueta(d), valor(d) en %, ee(d) en puntos.
 // `incierta(d)`: poco precisa. `referencia`: {valor, texto}. `dominioX`:
 // FIJO. `corto(etiqueta)`: nombre corto en pantallas angostas.
-export function puntosIntervalo(datos, {ancho, etiqueta, valor, ee, incierta = () => false, referencia = null, dominioX = [0, 100], formato = pct, formatoEje = pctEje, rotuloX = null, corto = null, globo: g}) {
+export function puntosIntervalo(datos, {ancho, etiqueta, valor, ee, incierta = () => false, referencia = null, dominioX = [0, 100], formato = pct, formatoEje = pctMarca, rotuloX = null, corto = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null).map((d) => ({d, v: valor(d), lo: ee(d) == null ? null : Math.max(dominioX[0], valor(d) - 1.96 * ee(d)), hi: ee(d) == null ? null : Math.min(dominioX[1], valor(d) + 1.96 * ee(d))}))
     .sort((a, b) => b.v - a.v);
   if (!filas.length) return vacio();

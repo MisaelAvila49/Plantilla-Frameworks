@@ -9,7 +9,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {P, tintaSobre} from "../paleta.js";
-import {pct} from "../formato.js";
+import {pctMarca, pct} from "../formato.js";
 import {base, vacio, viva, leyendaItems, conLeyenda, TIPO} from "./comun.js";
 
 // datos: una fila por pregunta y respuesta. fila(d) la pregunta, respuesta(d),
@@ -51,7 +51,7 @@ export function likert(datos, {ancho, fila, respuesta, valor, respuestas, colore
   const ordenFilas = resumen.map((r) => r.fila);
   const plot = Plot.plot(base({
     ancho, alto: resumen.length * altoFila + 42, marginLeft: izquierda, marginRight: 10, marginTop: 30, marginBottom: 6,
-    x: {domain: [-tope, tope], axis: "top", tickFormat: (v) => `${Math.abs(v)}`, ticks: angosto ? 5 : 9, grid: true, label: null, tickSize: 0},
+    x: {domain: [-tope, tope], axis: "top", tickFormat: (v) => pctMarca(Math.abs(v)), ticks: angosto ? 5 : 9, grid: true, label: null, tickSize: 0},
     y: {domain: ordenFilas, axis: angosto ? null : "left", label: null, tickSize: 0, padding: angosto ? 0.42 : 0.2},
     color: {domain: respuestas, range: colores},
     marks: [

@@ -10,7 +10,7 @@
 // valores distintos (barras).
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca, pctEje} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, TIPO} from "./comun.js";
 
@@ -29,9 +29,9 @@ export function histograma(tramos, {ancho, dominioX, dominioY, abierto = false, 
   const ultimo = filas[filas.length - 1];
   const marcas = marcasX ?? (angosto ? [dominioX[0], (dominioX[0] + ultimo.x0) / 2, ultimo.x0] : null);
   const plot = Plot.plot(base({
-    ancho, alto: Math.round(Math.max(260, Math.min(380, ancho * 0.42))), marginLeft: 46, marginRight: abierto ? 40 : 16, marginTop: 30, marginBottom: 42,
+    ancho, alto: Math.round(Math.max(260, Math.min(380, ancho * 0.42))), marginLeft: 50, marginRight: abierto ? 40 : 16, marginTop: 30, marginBottom: 42,
     x: {domain: dominioX, label: rotuloX, labelArrow: "none", labelAnchor: "left", ticks: marcas ?? 6, tickFormat: (v) => `${formatoX(v)}${abierto && v === ultimo.x0 ? " o más" : ""}`},
-    y: {domain: dominioY, label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctEje, ticks: 5},
+    y: {domain: dominioY, label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctMarca, ticks: 5},
     marks: [
       Plot.rect(filas, {x1: "x0", x2: "x1", y1: 0, y2: "valor", fill: P.serie, inset: angosto ? 0.4 : 0.8}),
       Plot.ruleY([0], {stroke: P.regla}),

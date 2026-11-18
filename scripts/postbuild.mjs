@@ -20,14 +20,14 @@ function* html(dir) {
   }
 }
 let n = 0;
-for (const p of html("dist")) {
+for (const p of html(process.env.OBS_SALIDA || "dist")) {
   const s = readFileSync(p, "utf8");
   const t = s.replace(/,\s*maximum-scale=1/g, "").replace(/<html lang="[^"]*"/, '<html lang="es"');
   if (t !== s) { writeFileSync(p, t); n++; }
 }
 console.log(`postbuild: ${n} páginas corregidas (zoom y lang)`);
 
-const RECETAS = join("dist", "catalogo-recetas");
+const RECETAS = join(process.env.OBS_SALIDA || "dist", "catalogo-recetas");
 // copyFileSync y no cpSync: en Windows, cpSync de Node 24 falla al
 // sobrescribir dentro de una ruta con «ñ» («Pruebas Diseño»).
 function copiar(origen, destino) {

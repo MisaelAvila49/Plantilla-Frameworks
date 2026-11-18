@@ -19,7 +19,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, sentido, rampaTema, rampaCambio, categorias, P} from "../components/paleta.js";
-import {pct, pctEje, puntos, margen, deA, entero, numero, personas, cambioRelativo, SIN_DATO} from "../components/formato.js";
+import {pct, pctEje, pctMarca, puntos, margen, entero, numero, cambioRelativo, SIN_DATO} from "../components/formato.js";
 import {riel, mosaicoTriangulos, destacadas, areasSuperpuestas, leyendaItems} from "../components/formas/index.js";
 import {leyendaContinua} from "../components/formas/comun.js";
 import {lineas} from "../components/formas/lineas.js";
@@ -73,8 +73,6 @@ const AMBITOS = ["Todo el país", ...REGIONES];
 const textoAmbito = (a) => (a === "Todo el país" ? a : `Región ${a}`);
 const opcionesAmbito = AMBITOS.map((a) => ({valor: a, texto: textoAmbito(a)}));
 // Universo y frase de la desocupación, iguales en todas sus secciones.
-const FRASE_DESOCUPACION = "de la población económicamente activa no tenía trabajo y lo buscaba";
-const APELLIDO_PEA = "económicamente activas";
 // Dominio FIJO de la tasa: en la muestra va de 0.8 % a 8.4 % por entidad.
 const DOMINIO_DESOCUPACION = [0, 9];
 const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
@@ -101,10 +99,9 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const nombre = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       const color = (s) => (s === "Total" ? P.serie : colorSexo(s));
       const g = globo({
-        donde: textoAmbito(v.ambito), cuando: (d) => d.periodo, grupo: (d) => nombre(d.sexo), color: (d) => color(d.sexo),
-        valor: (d) => d.pct, formato: "pct", frase: FRASE_DESOCUPACION,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: APELLIDO_PEA,
-        comparacion: (d) => { const p = filas.find((r) => r.sexo === d.sexo && r.anio === 2005); return p && d.anio !== 2005 ? `Desde 2005: ${puntos(d.pct - p.pct)}` : null; },
+        marca: (d) => d.periodo, grupo: (d) => nombre(d.sexo), color: (d) => color(d.sexo),
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => ({Mujeres: "mujeres económicamente activas", Hombres: "hombres económicamente activos"})[d.sexo] ?? "personas económicamente activas",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -158,10 +155,9 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const signo = (f) => { const a = f.find((r) => r.anio === v.desde), b = f.find((r) => r.anio === v.hasta); return sentido(a.pct, b.pct, {eeA: a.ee, eeB: b.ee}); };
       const signos = new Map(completas.map(([e, f]) => [e, signo(f)]));
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => mayuscula(SIG.etiqueta(signos.get(d.entidad))), color: (d) => SIG.color(signos.get(d.entidad)),
-        valor: (d) => d.pct, formato: "pct", frase: `de la población ${UNIVERSO} cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => { const f = par.get(d.entidad), a = f.find((r) => r.anio === v.desde), b = f.find((r) => r.anio === v.hasta); return `De ${v.desde} a ${v.hasta}: ${puntos(b.pct - a.pct)}`; },
+        marca: (d) => `${d.entidad} · ${d.anio}`, grupo: (d) => mayuscula(SIG.etiqueta(signos.get(d.entidad))), color: (d) => SIG.color(signos.get(d.entidad)),
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "habitantes",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const faltan = [...par].filter(([, f]) => f.length < 2).map(([e]) => e);
@@ -220,11 +216,8 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const ultimoTramo = d3.rollup(filas, (f) => d3.greatest(f, (r) => r.anio).tramo, (r) => r.indicador);
       const apagada = (d) => v.resalte === "reciente" && d.tramo !== ultimoTramo.get(d.indicador);
       const g = globo({
-        donde: (d) => d.fuente, cuando: (d) => d.anio, grupo: (d) => d.indicador, color: (d) => (apagada(d) ? P.tinta2 : P.tonoTexto),
+        marca: (d) => d.anio, grupo: (d) => d.indicador, color: (d) => (apagada(d) ? P.tinta2 : P.tonoTexto),
         valor: (d) => d.ediciones, formato: (x) => (x === 1 ? "1 edición" : `${x} ediciones`),
-        frase: (d) => (d.ediciones > 1 ? `comparables entre sí, de ${d.desde} a ${d.hasta}` : "sin otra edición comparable"),
-        personas: (d) => d.muestra, unidad: "viviendas en la muestra",
-        comparacion: (d) => (d.motivo ? `Quiebre: ${d.motivo}` : null),
       });
       const fuenteDe = new Map(filas.map((r) => [r.indicador, r.fuente]));
       return {
@@ -272,10 +265,10 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const elegidas = [v.e1, v.e2, v.e3].filter((e) => e && e !== "ninguna");
       const color = categorias(elegidas);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => (elegidas.includes(d.entidad) ? "Entidad elegida" : "Las demás entidades"),
+        marca: (d) => d.entidad, grupo: (d) => d.anio,
         color: (d) => (elegidas.includes(d.entidad) ? color(d.entidad) : P.tinta2),
-        valor: (d) => d.pct, formato: "pct", frase: `de la población ${UNIVERSO} cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "habitantes",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const lista = elegidas.length > 1 ? `${elegidas.slice(0, -1).join(", ")} y ${elegidas.at(-1)}` : elegidas[0];
@@ -285,7 +278,7 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
           subtitulo: `Población ${UNIVERSO} · en color, ${lista} · las demás entidades en gris · ${ANIOS[0]} - ${ANIOS.at(-1)}`,
           sello: MUESTRA,
           pie: "Datos de muestra de la Plantilla · cada línea es una entidad, las elegidas van en color con su nombre al final y las demás, en gris.",
-          cuerpo: contexto(total, {ancho, tiempo: (d) => d.anio, valor: (d) => d.pct, serie: (d) => d.entidad, elegidas, color, dominio: DOMINIO_NIVEL, formato: pctEje,
+          cuerpo: contexto(total, {ancho, tiempo: (d) => d.anio, valor: (d) => d.pct, serie: (d) => d.entidad, elegidas, color, dominio: DOMINIO_NIVEL, formato: pctMarca,
             rotuloValor: "Porcentaje que cumple la condición", corto: (s) => cortoDeEntidad.get(s) ?? s, textoResto: "Las demás entidades", globo: g}),
         },
         tabla: {filas: total.filter((r) => elegidas.includes(r.entidad)).sort((a, b) => elegidas.indexOf(a.entidad) - elegidas.indexOf(b.entidad) || a.anio - b.anio), columnas: [
@@ -334,10 +327,9 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const signo = (d) => (d.pct == null ? null : sentido(ref.pct, d.pct, {eeA: ref.ee, eeB: d.ee}));
       const color = (d) => (signo(d) === "igual" ? escala(0) : escala(d.pct - ref.pct));
       const g = globo({
-        donde: textoAmbito(v.ambito), cuando: (d) => d.periodo, grupo: (d) => (signo(d) ? mayuscula(DES.etiqueta(signo(d))) : null), color: (d) => (signo(d) ? DES.color(signo(d)) : P.tinta2),
-        valor: (d) => d.pct, formato: "pct", frase: FRASE_DESOCUPACION,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: APELLIDO_PEA,
-        comparacion: (d) => (d.periodo === ref.periodo ? "Es el trimestre de referencia" : `Frente a ${ref.periodo}: ${puntos(d.pct - ref.pct)}`),
+        marca: (d) => d.periodo, grupo: (d) => (signo(d) ? mayuscula(DES.etiqueta(signo(d))) : null), color: (d) => (signo(d) ? DES.color(signo(d)) : P.tinta2),
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: ({Mujeres: "mujeres económicamente activas", Hombres: "hombres económicamente activos"})[v.sexo] ?? "personas económicamente activas",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const signos = new Set(filas.map(signo).filter(Boolean));
@@ -403,13 +395,11 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const filas = indicador.filter(deRegion(v));
       const porNum = v.medida === "num";
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => `Lugar ${d._lugar} de ${d._de} en la región`, color: (d) => (d.entidad === v.entidad ? P.serie : P.tinta2),
-        // Con el número de personas la gráfica ordena conteos: la cifra es el
-        // conteo y el porcentaje pasa a la comparación (R121).
-        valor: (d) => (porNum ? d.num : d.pct), formato: porNum ? "conteo" : "pct",
-        frase: porNum ? `personas ${UNIVERSO} cumplen la condición` : `de la población ${UNIVERSO} cumple la condición`,
-        personas: porNum ? null : (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: porNum ? (d) => `${pct(d.pct)} de su población ${UNIVERSO}` : null,
+        marca: (d) => `${d.entidad} · ${d.anio}`, grupo: (d) => `Lugar ${d._lugar} de ${d._de} en la región`, color: (d) => (d.entidad === v.entidad ? P.serie : P.tinta2),
+        // Con cualquier orden la cifra es el porcentaje y debajo van las
+        // personas que cumplen de su población (R116).
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "habitantes",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const dibujo = bump(filas, {ancho, tiempo: (d) => d.anio, unidad: (d) => d.entidad, valor: (d) => (porNum ? d.num : d.pct), destacada: (u) => u === v.entidad, color: () => P.serie,
@@ -466,13 +456,11 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
     dibujar: ({v, ancho}) => {
       const filas = registros.filter((r) => r.ambito === v.ambito && r.anio === v.anio);
       const escala = rampaTema(DOMINIO_CALENDARIO);
-      const porDiaSemana = d3.rollup(filas, (f) => 1e5 * d3.sum(f, (r) => r.registros) / d3.sum(f, (r) => r.poblacion), (r) => r.fecha.getUTCDay());
       const porDia = (x) => `${numero(x, 1)} por cada 100 mil`;
       const g = globo({
-        donde: textoAmbito(v.ambito), cuando: (d) => `${textoFecha(d.fecha)} de ${d.anio}`, color: (d) => P.tonoTexto,
-        valor: (d) => d.tasa, formato: porDia, frase: "habitantes: nacimientos registrados ese día",
+        grupo: (d) => `${textoFecha(d.fecha)} de ${d.anio}`, color: (d) => P.tonoTexto,
+        valor: (d) => d.tasa, formato: porDia,
         personas: (d) => d.registros, unidad: "nacimientos registrados",
-        comparacion: (d) => `Todos los ${DIAS[d.fecha.getUTCDay()]} del año: ${porDia(porDiaSemana.get(d.fecha.getUTCDay()))}`,
       });
       const altos = filas.filter((r) => r.tasa > DOMINIO_CALENDARIO[1]).length;
       const meses = d3.groups(filas, (r) => r.fecha.getUTCMonth()).map(([m, f]) => ({mes: m, registros: d3.sum(f, (r) => r.registros),
@@ -523,11 +511,9 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       const signo = (r) => sentido(r.primero.pct, r.ultimo.pct, {eeA: r.primero.ee, eeB: r.ultimo.ee});
       const colorDe = (r) => SIG.color(signo(r));
       const g = globo({
-        donde: lugarDe(v.ambito), cuando: (d) => d.corte, grupo: (d) => nombreGrupo(v.dimension, d.grupo), color: (d) => colorDe(d._resumen),
+        marca: (d) => nombreGrupo(v.dimension, d.grupo), grupo: (d) => d.corte, color: (d) => colorDe(d._resumen),
         valor: (d) => d.pct, formato: "pct",
-        frase: `de la población ${UNIVERSO} de ese grupo cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => (d.corte === CORTES[0] ? null : `Desde ${CORTES[0]}: ${puntos(d.pct - d._resumen.primero.pct)}`),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.dimension === "Grupo de edad" ? "personas de esa edad" : "personas del grupo",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const orden = v.orden === "cambio" ? (p, q) => p.cambio - q.cambio : (p, q) => q.ultimo.pct - p.ultimo.pct;
@@ -589,12 +575,10 @@ const MARCAS_ANIOS = [2005, 2010, 2015, 2020, 2025];
       }
       const fila = (d) => (d._lado === "a" ? d.a : d.b);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => (d._lado === "a" ? v.desde : v.hasta),
+        marca: (d) => `${d.entidad} · ${d._lado === "a" ? v.desde : v.hasta}`,
         grupo: (d) => (d.s ? SIG.etiqueta(d.s).replace(/^./, (c) => c.toUpperCase()) : null), color: (d) => (d.s ? SIG.color(d.s) : P.tonoTexto),
         valor: (d) => fila(d)?.pct ?? null, formato: "pct",
-        frase: `de la población ${UNIVERSO} cumple la condición`,
-        personas: (d) => fila(d)?.num, universo: (d) => fila(d)?.den, unidad: v.sexo === "Total" ? "personas" : v.sexo.toLowerCase(), apellido: UNIVERSO,
-        comparacion: (d) => (d.cambio == null ? null : `${v.desde} a ${v.hasta}: ${puntos(d.cambio)}`),
+        personas: (d) => fila(d)?.num, universo: (d) => fila(d)?.den, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
         precision: (d) => { const r = fila(d); return r ? {valor: r.pct, ee: r.ee, casos: r.casos} : null; },
       });
       const sinPar = ENTIDADES.length - [...valores.values()].filter((d) => d.cambio != null).length;
@@ -666,12 +650,10 @@ const DOMINIO_SALDO = [-4, 5];
       const lado = (d) => sentido(0, d.saldo);
       const elegida = (entidad) => (v.entidad !== "todas" && regionDeEntidad.get(v.entidad) === v.region ? entidad === v.entidad : regionDeEntidad.get(entidad) === v.region);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => MOV.etiqueta(lado(d)).replace(/^./, (c) => c.toUpperCase()),
+        marca: (d) => `${d.entidad} · ${d.anio}`, grupo: (d) => MOV.etiqueta(lado(d)).replace(/^./, (c) => c.toUpperCase()),
         color: (d) => (elegida(d.entidad) ? MOV.color(lado(d)) : P.tinta2),
         valor: (d) => d.saldo, formato: "relativo",
-        frase: "de su población: saldo de las personas que llegan menos las que salen",
         personas: (d) => Math.abs(d.llegan - d.salen), unidad: (d) => (d.llegan >= d.salen ? "personas más" : "personas menos"),
-        comparacion: (d) => `Llegan ${entero(d.llegan)} y salen ${entero(d.salen)}`,
         precision: (d) => ({casos: d.casos}),
       });
       const una = v.entidad !== "todas" && regionDeEntidad.get(v.entidad) === v.region;
@@ -729,12 +711,10 @@ const DOMINIO_SALDO = [-4, 5];
       const mayor = (f) => d3.greatest(f.filter((r) => r.pct != null), (r) => r.pct);
       const orden = [...porEntidad.keys()].sort(v.orden === "nombre" ? d3.ascending
         : v.orden === "maximo" ? (a, b) => mayor(porEntidad.get(b)).pct - mayor(porEntidad.get(a)).pct : (a, b) => ultimo(porEntidad.get(b)).pct - ultimo(porEntidad.get(a)).pct);
-      const previo = new Map(filas.map((r) => [`${r.ambito}|${r.periodo}`, r]));
       const g = globo({
-        donde: (d) => d.ambito, cuando: (d) => d.periodo, color: () => P.tonoTexto,
-        valor: (d) => d.pct, formato: "pct", frase: FRASE_DESOCUPACION,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: APELLIDO_PEA,
-        comparacion: (d) => { const p = previo.get(`${d.ambito}|${d.anio - 1}-T${d.trimestre}`); return p?.pct != null ? `Un año antes: ${pct(p.pct)}` : null; },
+        marca: (d) => d.ambito, grupo: (d) => d.periodo, color: () => P.tonoTexto,
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => ({Mujeres: "mujeres económicamente activas", Hombres: "hombres económicamente activos"})[d.sexo] ?? "personas económicamente activas",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const textoOrden = {ultimo: "de la tasa más alta a la más baja en el último trimestre", maximo: "del trimestre más alto al más bajo", nombre: "por nombre"}[v.orden];
@@ -784,12 +764,10 @@ const DOMINIO_SALDO = [-4, 5];
       // Todo el país: suma de numeradores entre suma de denominadores, solo en
       // los años con las 32 entidades. Sin alguna, la raya se corta.
       const referencia = ANIOS.map((a) => { const f = filas.filter((r) => r.anio === a); return {tiempo: a, valor: f.length === 32 ? tasa(f).pct : null, completo: f.length === 32}; });
-      const refDe = new Map(referencia.map((r) => [r.tiempo, r.valor]));
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, color: () => P.tonoTexto,
-        valor: (d) => d.pct, formato: "pct", frase: `de la población ${UNIVERSO} cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "personas" : v.sexo.toLowerCase(), apellido: UNIVERSO,
-        comparacion: (d) => (refDe.get(d.anio) != null ? `Todo el país: ${pct(refDe.get(d.anio))}` : null),
+        marca: (d) => d.entidad, grupo: (d) => d.anio, color: () => P.tonoTexto,
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const nombre = ENTIDADES.find((e) => e.cve === v.entidad)?.nombre;
@@ -842,11 +820,10 @@ const DOMINIO_SALDO = [-4, 5];
       const valor = (d) => (porMil ? d.tasa : d.personas);
       const tinta = (s) => MOV.color(s === "salen" ? "baja" : "sube");
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => `Personas que ${d.serie}`, color: (d) => tinta(d.serie),
-        valor, formato: porMil ? (x) => `${numero(x, 1)} por cada mil` : (x) => personas(x),
-        frase: (d) => (porMil ? `habitantes ${d.serie === "salen" ? "salieron de" : "llegaron a"} la entidad en el año` : `${d.serie === "salen" ? "salieron de" : "llegaron a"} la entidad en el año`),
+        marca: (d) => `${d.entidad} · ${d.anio}`, grupo: (d) => `Personas que ${d.serie}`, color: (d) => tinta(d.serie),
+        // La cifra es la tasa con cualquier medida; las personas van debajo.
+        valor: (d) => d.tasa, formato: (x) => `${numero(x, 1)} por cada mil`,
         personas: (d) => d.personas, universo: (d) => d.poblacion, unidad: "habitantes",
-        comparacion: (d) => (porMil ? null : `${numero(d.tasa, 1)} por cada mil habitantes`),
         precision: (d) => ({casos: d.casos}),
       });
       // Anotación: el mayor salto de un año al siguiente en la región, en

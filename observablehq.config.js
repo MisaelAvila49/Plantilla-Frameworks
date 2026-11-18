@@ -15,13 +15,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // ---------------------------------------------------------------- LIBRO
 export const LIBRO = {
   // Título completo y la palabra o frase del título que va en rojo.
-  titulo: "Plantilla de libro de datos",
-  clave: "libro de datos",
+  titulo: "Plantilla de libros de datos",
+  clave: "libros de datos",
   // Identificador corto: prefijo de las descargas y llave de la cita BibTeX.
   slug: "plantilla-libro",
   // UN párrafo: es el resumen de la portada, la descripción para buscadores
   // y el abstract de CITATION.cff (este último se copia a mano).
-  descripcion: "Esta plantilla reúne la estructura, los componentes y las formas de gráfica con que se construyen los libros de datos de Social Data IBERO. Todas las cifras que muestra son datos de muestra generados con una semilla fija; se sustituyen por los datos del libro.",
+  descripcion: "Es el punto de partida de los libros de datos de Social Data IBERO. Trae la anatomía de una sección, la galería y el catálogo de formas de gráfica, la muestra de colores, un mapa de flujos, los verificadores y el despliegue. Cada libro nuevo se crea copiándola. Todas sus cifras son datos de muestra.",
   // Autores en orden. `orcid` y `correo` son optativos.
   autores: [
     {nombre: "Nombre", apellidos: "Apellido Apellido", orcid: null, correo: "correo@ibero.mx", correspondencia: true},
@@ -33,7 +33,6 @@ export const LIBRO = {
   ciudad: "Ciudad de México",
   anio: 2026,
   fuentes: "Datos de muestra",
-  fuentesDetalle: "Valores sintéticos generados por scripts/generar_muestra.mjs",
   doi: null,            // "10.5281/zenodo.0000000" cuando se emita
   licencia: null,       // "CC BY 4.0" cuando se defina
   credito: "Social Data IBERO, Universidad Iberoamericana",
@@ -56,6 +55,7 @@ const DESCRIPCIONES = {
   "/seccion-modelo": "Una sección completa con la anatomía estándar: filtros, cifras, figura y los tres desplegables.",
   "/mapa": "Mapa de flujos a pantalla completa: de qué entidad a qué entidad cambiaron de residencia las personas, con datos de muestra.",
   "/catalogo": "Índice de todas las formas de gráfica de la Plantilla, por familia, entrada, función y figura, con enlace a cada forma implementada en la galería.",
+  "/colores": "Muestra de colores: nueve propuestas de paleta para los libros de datos sobre las mismas cinco gráficas de muestra, con el resultado del validador de daltonismo y contraste en claro y en oscuro.",
   "/metodologia": "Fuentes, universos y cómo se calculó cada análisis.",
   "/referencias": "Obras citadas y fuentes de datos.",
 };
@@ -86,6 +86,9 @@ export default {
   toc: {label: "En esta página"},
   search: true,
   base: BASE,
+  // Carpeta de salida: OBS_SALIDA permite que varios builds corran a la vez
+  // sin pisarse. Por omisión, dist.
+  output: process.env.OBS_SALIDA || "dist",
   pages: menu(),
 
   home: `<span class="sidebar-brand">
@@ -234,11 +237,32 @@ window.__RAIZ = ${JSON.stringify(raiz)};
       void raiz.offsetHeight;
       raiz.style.overflowAnchor = anclaPrevia;
     };
-    vigiaPanel ??= ("IntersectionObserver" in window) ? new IntersectionObserver((entradas) => {
-      for (const e of entradas) for (const [panel, centinela] of e.target.panelesDentro ?? []) {
-        fijar(panel, centinela.getBoundingClientRect().top < 0 && e.isIntersecting);
+    // Se compacta solo cuando el contenido que sigue al panel ya llego a la
+    // barra compacta. Antes de eso el panel completo queda fijo y tapa la
+    // franja que soltaria al compactarse; si se compactara apenas se fija, la
+    // reserva quedaria a la vista como un hueco vacio de unos 150 px bajo la
+    // barra. El largo de la pagina sigue igual en los dos estados.
+    const evaluar = (seccion, visible) => {
+      for (const [panel, centinela] of seccion.panelesDentro ?? []) {
+        if (!panel.classList.contains("pegado")) panel.alturaLlena = panel.offsetHeight;
+        const umbral = Math.max(0, (panel.alturaLlena || 0) - (panel.alturaCompacta || 56));
+        fijar(panel, visible && centinela.getBoundingClientRect().top < -umbral);
+        if (panel.classList.contains("pegado")) panel.alturaCompacta = panel.offsetHeight;
       }
-    }, {threshold: Array.from({length: 41}, (_, i) => i / 40)}) : null;
+    };
+    const seccionesVisibles = new Set();
+    let pendiente = false;
+    if (!vigiaPanel && "IntersectionObserver" in window) addEventListener("scroll", () => {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(() => { pendiente = false; for (const s of seccionesVisibles) evaluar(s, true); });
+    }, {passive: true});
+    vigiaPanel ??= ("IntersectionObserver" in window) ? new IntersectionObserver((entradas) => {
+      for (const e of entradas) {
+        if (e.isIntersecting) seccionesVisibles.add(e.target); else seccionesVisibles.delete(e.target);
+        evaluar(e.target, e.isIntersecting);
+      }
+    }, {threshold: [0, 1]}) : null;
     let n = 0;
     // Un panel con data-sin-pegar (el del mapa a pantalla completa, que vive
     // en su propia columna con scroll) no se fija ni se compacta.

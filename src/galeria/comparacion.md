@@ -17,7 +17,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, sentido, categorias, rampaTema, P} from "../components/paleta.js";
-import {pct, puntos, margen, deA} from "../components/formato.js";
+import {pct, puntos, margen} from "../components/formato.js";
 import {dumbbell, lollipop, heatmap, mosaicoTriangulos} from "../components/formas/index.js";
 import {REGIONES, ENTIDADES} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
@@ -61,14 +61,11 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
         return m && h ? {cve, entidad: m.entidad, anio: v.anio, m, h, brecha: m.pct - h.pct} : null;
       }).filter(Boolean);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio,
-        grupo: (d) => (d.lado === "a" ? "Mujeres" : "Hombres"),
+        marca: (d) => d.entidad, grupo: (d) => (d.lado === "a" ? "Mujeres" : "Hombres"),
         color: (d) => color(d.lado === "a" ? "Mujeres" : "Hombres"),
         valor: (d) => d.v, formato: "pct",
-        frase: (d) => `de ${d.lado === "a" ? "las mujeres" : "los hombres"} ${UNIVERSO} cumple la condición`,
         personas: (d) => (d.lado === "a" ? d.m.num : d.h.num), universo: (d) => (d.lado === "a" ? d.m.den : d.h.den),
-        unidad: (d) => (d.lado === "a" ? "mujeres" : "hombres"), apellido: UNIVERSO,
-        comparacion: (d) => `Brecha: ${puntos(d.brecha)}`,
+        unidad: (d) => (d.lado === "a" ? "mujeres" : "hombres"),
         precision: (d) => { const r = d.lado === "a" ? d.m : d.h; return {valor: r.pct, ee: r.ee, casos: r.casos}; },
       });
       return {
@@ -119,12 +116,8 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
         return {cve, entidad: a.entidad, a, b, cambio: b.pct - a.pct, s: sentido(a.pct, b.pct, {eeA: a.ee, eeB: b.ee})};
       }).filter(Boolean);
       const g = globo({
-        donde: (d) => d.entidad, cuando: () => `${v.desde} a ${v.hasta}`,
-        grupo: (d) => SIG.etiqueta(d.s), color: (d) => SIG.color(d.s),
+        marca: (d) => d.entidad, grupo: (d) => SIG.etiqueta(d.s), color: (d) => SIG.color(d.s),
         valor: (d) => d.cambio, formato: "puntos",
-        frase: `de cambio en el porcentaje de la población ${UNIVERSO} que cumple la condición`,
-        personas: (d) => d.b.num, universo: (d) => d.b.den, apellido: `${UNIVERSO} en ${v.hasta}`,
-        comparacion: (d) => deA(d.a.pct, d.b.pct, pct),
       });
       const sinPar = new Set(total.map((r) => r.cve)).size - filas.length;
       return {
@@ -166,10 +159,10 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
     dibujar: ({v, ancho}) => {
       const filas = REGIONES.flatMap((region) => ANIOS.map((anio) => ({region, anio, ...tasa(indicador.filter((r) => r.region === region && r.anio === anio && r.sexo === v.sexo))})));
       const g = globo({
-        donde: (d) => d.region ?? d._y, cuando: (d) => d.anio ?? d._x,
+        marca: (d) => d.region ?? d._y, grupo: (d) => d.anio ?? d._x,
         color: () => P.tonoTexto, valor: (d) => d.pct, formato: "pct",
-        frase: `de la ${v.sexo === "Total" ? "población" : v.sexo.toLowerCase()} ${UNIVERSO} cumple la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
+        // El total es toda la población de la región (o sus mujeres u hombres).
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
       });
       return {
         figura: {
@@ -224,11 +217,9 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
       const fila = (d) => (d._lado === "a" ? d.m : d.h);
       const sexoDe = (d) => (d._lado === "a" ? "Mujeres" : "Hombres");
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, grupo: sexoDe, color: (d) => color(sexoDe(d)),
+        marca: (d) => d.entidad, grupo: sexoDe, color: (d) => color(sexoDe(d)),
         valor: (d) => fila(d)?.pct ?? null, formato: "pct",
-        frase: (d) => `de ${d._lado === "a" ? "las mujeres" : "los hombres"} ${UNIVERSO} cumple la condición`,
-        personas: (d) => fila(d)?.num, universo: (d) => fila(d)?.den, unidad: (d) => sexoDe(d).toLowerCase(), apellido: UNIVERSO,
-        comparacion: (d) => (d.brecha == null ? null : `Brecha, mujeres menos hombres: ${puntos(d.brecha)}`),
+        personas: (d) => fila(d)?.num, universo: (d) => fila(d)?.den, unidad: (d) => sexoDe(d).toLowerCase(),
         precision: (d) => { const r = fila(d); return r ? {valor: r.pct, ee: r.ee, casos: r.casos} : null; },
       });
       const nombre = ENTIDADES.find((e) => e.cve === v.entidad)?.nombre;
@@ -281,7 +272,7 @@ import {ranking} from "../components/formas/ranking.js";
 import {puntosSeries} from "../components/formas/puntos-series.js";
 import {cifra} from "../components/formas/cifra.js";
 import {pocoPrecisa} from "../components/formato.js";
-import {leerTic, leerAsistenciaEdad, leerParticipacion, leerInternetIndigena, leerUsuarios, quienesSexo, unidadSexo, textoSexo} from "../components/muestra-gB.js";
+import {leerTic, leerAsistenciaEdad, leerParticipacion, leerInternetIndigena, leerUsuarios, unidadSexo, textoSexo} from "../components/muestra-gB.js";
 
 const asistenciaEdad = leerAsistenciaEdad(await FileAttachment("../data/muestra/gB_asistencia_edad.csv").csv());
 const participacion = leerParticipacion(await FileAttachment("../data/muestra/gB_participacion.csv").csv());
@@ -302,11 +293,6 @@ const DOMINIO_USUARIOS = [20, 100];
 const EDADES = [...new Set([...asistenciaEdad].sort((a, b) => a.orden - b.orden).map((d) => d.edad))];
 const ESCOLARIDADES = ["Primaria", "Secundaria", "Media superior", "Superior"];
 const GRUPOS_INDIGENA = ["Habla lengua indígena", "Se considera indígena, no habla", "Resto de la población"];
-const FRASE_GRUPO = {
-  "Habla lengua indígena": "donde la persona de referencia habla una lengua indígena",
-  "Se considera indígena, no habla": "donde la persona de referencia se considera indígena y no habla una lengua indígena",
-  "Resto de la población": "del resto de la población",
-};
 const INDICADORES_TIC = ["Internet", "Computadora", "Teléfono celular", "Televisión de paga"];
 const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
 ```
@@ -326,13 +312,10 @@ const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
     explica: "Cada barra es un grupo de edad y su altura es la parte de ese grupo que asiste a la escuela. Si de cada 100 jóvenes de 15 a 17 años asisten 76, la barra llega a 76.0 %. Los grupos van en el orden de la edad y no por su valor. Esta forma es el respaldo de las variantes llamativas de la galería: se usa cuando ninguna cabe.",
     dibujar: ({v, ancho}) => {
       const sel = asistenciaEdad.filter((d) => d.anio === v.anio && d.ambito === v.ambito && d.sexo === v.sexo);
-      const previo = (d) => asistenciaEdad.find((r) => r.anio === v.anio - 2 && r.ambito === d.ambito && r.sexo === d.sexo && r.edad === d.edad);
       const g = globo({
-        donde: textoAmbito(v.ambito), cuando: v.anio, color: () => P.tonoTexto,
+        grupo: (d) => `${d.edad} años`, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: (d) => `de ${quienesSexo(d.sexo)} de ${d.edad} años asiste a la escuela`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: (d) => `de ${d.edad} años`,
-        comparacion: (d) => (previo(d) ? `${v.anio - 2}: ${pct(previo(d).pct)}` : null),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: `${unidadSexo(v.sexo)} de esa edad`,
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -373,13 +356,10 @@ const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
     explica: "Cada renglón es una entidad y los tres símbolos son la parte de los hogares con internet en tres grupos, según la persona de referencia del hogar: si habla una lengua indígena, si se considera indígena sin hablarla, o el resto. La raya gris va del grupo más bajo al más alto. Si en una entidad los hogares hablantes tienen 31 % y el resto 74 %, la raya mide 43 puntos. El color y la forma del símbolo dicen el grupo.",
     dibujar: ({v, ancho}) => {
       const sel = internetIndigena.filter((d) => d.anio === v.anio);
-      const resto = (d) => sel.find((r) => r.cve === d.cve && r.grupo === GRUPOS_INDIGENA[2]);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, grupo: (d) => d.grupo, color: (d) => color(d.grupo),
+        marca: (d) => d.entidad, grupo: (d) => d.grupo, color: (d) => color(d.grupo),
         valor: (d) => d.pct, formato: "pct",
-        frase: (d) => `de los hogares ${FRASE_GRUPO[d.grupo]} tiene internet`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares",
-        comparacion: (d) => (d.grupo === GRUPOS_INDIGENA[2] || !resto(d) ? null : `Frente al resto de la población: ${puntos(d.pct - resto(d).pct)}`),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares de ese grupo",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -423,13 +403,10 @@ const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
     explica: "Cada bloque es un nivel de escolaridad y dentro van dos barras, mujeres y hombres. La altura es la parte de ese grupo, de 25 a 64 años, que trabaja o busca trabajo. Si de cada 100 mujeres con primaria 41 trabajan o buscan trabajo, su barra llega a 41.0 %. Esta forma es respaldo: cuando la brecha es la pregunta, la galería usa el dumbbell de la sección 1.",
     dibujar: ({v, ancho}) => {
       const sel = participacion.filter((d) => d.anio === v.anio && d.ambito === v.ambito);
-      const otro = (d) => sel.find((r) => r.escolaridad === d.escolaridad && r.sexo !== d.sexo);
       const g = globo({
-        donde: (d) => `${textoAmbito(v.ambito)} · ${d.escolaridad}`, cuando: v.anio, grupo: (d) => d.sexo, color: (d) => color(d.sexo),
+        marca: (d) => d.escolaridad, grupo: (d) => d.sexo, color: (d) => color(d.sexo),
         valor: (d) => d.pct, formato: "pct",
-        frase: (d) => `de ${quienesSexo(d.sexo)} de 25 a 64 años con ${enMinuscula(d.escolaridad)} trabaja o busca trabajo`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => unidadSexo(d.sexo), apellido: "de 25 a 64 años",
-        comparacion: (d) => (otro(d) ? `${otro(d).sexo}: ${pct(otro(d).pct)}` : null),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => unidadSexo(d.sexo),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -472,13 +449,10 @@ const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
     dibujar: ({v, ancho}) => {
       const sel = usuarios.filter((d) => d.sexo === v.sexo);
       const tarjetas = AMBITOS.map((a) => ({nombre: a.texto, filas: sel.filter((d) => d.ambito === a.valor)}));
-      const previo = (d) => sel.find((r) => r.ambito === d.ambito && r.anio === d.anio - 1);
       const g = globo({
-        donde: (d) => textoAmbito(d.ambito), cuando: (d) => d.anio, color: () => P.tonoTexto,
+        marca: (d) => textoAmbito(d.ambito), grupo: (d) => d.anio, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: "pct",
-        frase: `de ${quienesSexo(v.sexo)} de 6 años y más usa internet`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad: unidadSexo(v.sexo), apellido: "de 6 años y más",
-        comparacion: (d) => (previo(d) ? `${d.anio - 1}: ${pct(previo(d).pct)}` : null),
+        personas: (d) => d.num, universo: (d) => d.den, unidad: v.sexo === "Total" ? "habitantes" : unidadSexo(v.sexo),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -529,11 +503,9 @@ const enMinuscula = (t) => t.charAt(0).toLowerCase() + t.slice(1);
       const destacada = v.entidad === "ninguna" ? null : v.entidad;
       const servicio = enMinuscula(v.indicador);
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, color: (d) => (destacada == null || d.entidad === destacada ? P.tonoTexto : P.tinta2),
+        grupo: (d) => d.entidad, color: (d) => (destacada == null || d.entidad === destacada ? P.tonoTexto : P.tinta2),
         valor: (d) => d.pct, formato: "pct",
-        frase: `de los hogares tiene ${servicio}`,
         personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares",
-        comparacion: () => (nac ? `Todo el país: ${pct(nac.pct)}` : null),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {

@@ -9,7 +9,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, margenRotulos, TIPO} from "./comun.js";
 
@@ -17,7 +17,7 @@ import {base, vacio, margenRotulos, TIPO} from "./comun.js";
 // `destacar`: etiqueta de la unidad destacada (o null: todas en el tono).
 // `referencia`: {valor, texto} línea punteada vertical. `dominioX`: FIJO.
 // `corto(etiqueta)`: nombre corto en pantallas angostas.
-export function ranking(datos, {ancho, etiqueta, valor, destacar = null, referencia = null, dominioX = [0, 100], formato = pct, formatoEje = pctEje, rotuloX = null, corto = null, globo: g}) {
+export function ranking(datos, {ancho, etiqueta, valor, destacar = null, referencia = null, dominioX = [0, 100], formato = pct, formatoEje = pctMarca, rotuloX = null, corto = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null).sort((a, b) => valor(b) - valor(a));
   if (!filas.length) return vacio();
   const angosto = ancho < 560;

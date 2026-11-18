@@ -5,7 +5,7 @@
 //   <h2 id="…" class="toc-anchor">Título</h2>   ancla estática en el .md (índice)
 //   cabecera      número, título (el MISMO texto del ancla) y entradilla optativa
 //   panel         filtros de esta gráfica (filtros.js)
-//   cuerpo        cifras (kpis) y figura: título, subtítulo generado con los
+//   cuerpo        figura (sin tarjetas de cifras): título, subtítulo generado con los
 //                 filtros, leyenda, gráfica, pie de una frase, notas y descarga
 //   desplegables  siempre tres, idénticos cerrados y en este orden:
 //                 «Fuentes y verificación», «¿Qué quiere decir este
@@ -180,7 +180,9 @@ export function analisis({id, numero = null, titulo, entrada = null, panel = nul
       const figuras = (r.figuras ?? [r.figura]).filter(Boolean);
       const bloques = figuras.map((f) => figura(f, f.cuerpo));
       cuerpo.replaceChildren(
-        ...(r.kpis?.length ? [kpis(r.kpis)] : []),
+        // Sin tarjetas de cifras (decisión de noviembre 2026): la sección
+        // muestra solo la gráfica; las cifras viven en la figura, el globo y la
+        // tabla. `r.kpis` se ignora si una página todavía lo devuelve.
         figuras.length > 1 ? html`<div class="rejilla-figuras">${bloques}</div>` : bloques[0] ?? "",
       );
       abierta = huecoTabla.querySelector("details")?.open ?? abierta;

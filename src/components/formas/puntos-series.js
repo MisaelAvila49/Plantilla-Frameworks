@@ -7,7 +7,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, margenRotulos, TIPO} from "./comun.js";
 
@@ -26,7 +26,7 @@ function muestra(simbolo, color) {
 // su orden de identidad. `color(serie)`: categorias() de paleta.js.
 // `ordenPor`: serie por la que se ordenan los renglones (de mayor a menor);
 // su cifra se escribe junto al punto. `dominioX`: FIJO. `corto(fila)`.
-export function puntosSeries(datos, {ancho, fila, serie, valor, series, color, ordenPor = null, dominioX = [0, 100], formato = pct, formatoEje = pctEje, rotuloX = null, corto = null, incierta = () => false, globo: g}) {
+export function puntosSeries(datos, {ancho, fila, serie, valor, series, color, ordenPor = null, dominioX = [0, 100], formato = pct, formatoEje = pctMarca, rotuloX = null, corto = null, incierta = () => false, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const angosto = ancho < 560;

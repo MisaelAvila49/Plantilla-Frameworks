@@ -25,8 +25,8 @@
 
 export const PAGINAS = [
   {ruta: "/", nombre: "Inicio", analisis: 0, filtros: false},
-  {ruta: "/seccion-modelo", nombre: "Sección modelo", analisis: 1, filtros: true},
-  {ruta: "/mapa", nombre: "Mapa de flujos", analisis: 0, filtros: true, mapa: true, pager: false, estados: [
+  {ruta: "/seccion-modelo", nombre: "Sección modelo", grupo: "Ejemplos", analisis: 1, filtros: true},
+  {ruta: "/mapa", nombre: "Mapa de flujos", grupo: "Ejemplos", analisis: 0, filtros: true, mapa: true, pager: false, estados: [
     {nombre: "estado-salen", consulta: "?ent=12"},
     {nombre: "estado-llegan", consulta: "?ent=15&sentido=llegan"},
     {nombre: "flecha-fijada", consulta: "?ent=12&fija=12-22"},
@@ -37,10 +37,17 @@ export const PAGINAS = [
   ]},
   // Índice de todas las formas. No tiene secciones `.analisis`: los
   // verificadores lo revisan con sus propias reglas (`catalogo: true`).
-  {ruta: "/catalogo", nombre: "Catálogo de formas", analisis: 0, filtros: false, catalogo: true, estados: [
+  {ruta: "/catalogo", nombre: "Catálogo de formas", grupo: "Herramientas", analisis: 0, filtros: false, catalogo: true, estados: [
     {nombre: "entrada", consulta: "?vista=entrada"},
     {nombre: "forma", consulta: "?vista=forma"},
     {nombre: "combinado", consulta: "?vista=forma&familia=grafica&forma=barras&nivel=1"},
+  ]},
+  // Muestra de colores: propuestas de paleta sobre las mismas figuras, con el
+  // resultado del validador. Sus figuras no son secciones `.analisis` (no
+  // llevan filtros ni desplegables): el control es de página, no de sección.
+  {ruta: "/colores", nombre: "Muestra de colores", grupo: "Herramientas", analisis: 0, filtros: false, estados: [
+    // A, la recomendada, es la vista inicial; el resto va de mejor a peor resultado del validador.
+    ...["b", "c", "d", "e", "f", "g", "h", "i"].map((x) => ({nombre: x, consulta: `?propuesta=${x}`})),
   ]},
   // Galería, por función como Data Viz Project. Orden final con las páginas
   // nuevas: Comparación, Precisión e incertidumbre, Tablas, Distribución,
@@ -76,7 +83,8 @@ export function menu() {
 
 // Tamaños de ventana de las pruebas: escritorio de trabajo y teléfono.
 export const VENTANAS = {escritorio: {width: 1366, height: 768}, grande: {width: 1920, height: 1080}, tableta: {width: 1024, height: 768}, movil: {width: 390, height: 844}};
-export const PUERTO = 4173;
+// OBS_PUERTO: cada build paralelo verifica en su propio puerto.
+export const PUERTO = Number(process.env.OBS_PUERTO) || 4173;
 
 // Rutas pasadas por línea de comandos. Se aceptan sin la diagonal inicial
 // («seccion-modelo», «galeria/mapas», «index»): Git Bash en Windows convierte

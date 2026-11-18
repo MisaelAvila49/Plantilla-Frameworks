@@ -14,7 +14,7 @@ import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {html} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, viva} from "./comun.js";
 
@@ -25,14 +25,14 @@ import {base, vacio, viva} from "./comun.js";
 // que se compara; se marca con una raya en la línea de valores.
 // `leyenda`: nodo con la leyenda que la página arma (rampa y significado).
 // `dominio`: extremos FIJOS del eje de la línea.
-export function franjasTiempo(datos, {ancho, tiempo, valor, color, referencia = null, dominio, marcasTiempo = null, formato = pct, formatoEje = pctEje,
+export function franjasTiempo(datos, {ancho, tiempo, valor, color, referencia = null, dominio, marcasTiempo = null, formato = pct, formatoEje = pctMarca,
   rotuloValor = null, leyenda = null, globo: g}) {
   if (!datos.some((d) => valor(d) != null)) return vacio();
   const filas = [...datos].sort((a, b) => tiempo(a) - tiempo(b));
   const angosto = ancho < 560;
   const medio = (d3.min(d3.pairs(filas.map(tiempo)), ([a, b]) => b - a) ?? 1) / 2;
   const dominioX = [tiempo(filas[0]) - medio, tiempo(filas.at(-1)) + medio];
-  const margenes = {marginLeft: angosto ? 34 : 44, marginRight: 18};
+  const margenes = {marginLeft: angosto ? 42 : 50, marginRight: 18};
   const ejeX = {domain: dominioX, label: null, tickFormat: (v) => String(Math.floor(v)), ticks: marcasTiempo ?? undefined, tickSize: 0};
   const franjas = Plot.plot(base({
     ancho, alto: angosto ? 120 : 160, ...margenes, marginTop: 4, marginBottom: 4,

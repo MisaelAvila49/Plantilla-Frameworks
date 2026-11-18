@@ -78,11 +78,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     dibujar: ({v, ancho}) => {
       const filas = composicion.filter((r) => r.region === v.region);
       const g = globo({
-        donde: () => (v.region === "Nacional" ? "Todo el país" : `Región ${v.region}`), cuando: (d) => d.anio,
-        grupo: (d) => d.categoria, color: (d) => colorCategoria(d.categoria),
+        marca: (d) => d.anio, grupo: (d) => d.categoria, color: (d) => colorCategoria(d.categoria),
         valor: (d) => d.parte, formato: "pct",
-        frase: "del total de personas de ese año",
-        personas: (d) => d.personas, universo: (d) => d.total,
+        personas: (d) => d.personas, universo: (d) => d.total, unidad: "habitantes",
       });
       const totales = d3.rollup(filas, (f) => d3.sum(f, (r) => r.personas), (r) => r.anio);
       return {
@@ -141,11 +139,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
       const inicio = {etiqueta: `Ingreso de ${a}`, valor: 100, monto: totalA, casos: [...A.values()][0].casos};
       const fin = {etiqueta: `Ingreso de ${b}`, valor: 100 * totalB / totalA, monto: totalB, casos: [...B.values()][0].casos};
       const g = globo({
-        donde: v.grupo, cuando: (d) => (d._tipo === "total" ? d.etiqueta.slice(-4) : `${a} a ${b}`), grupo: (d) => (d._tipo === "paso" ? d.etiqueta : null),
+        grupo: (d) => d.etiqueta,
         color: (d) => (d._tipo === "paso" ? SIG.color(d.s) : P.tinta2),
         valor: (d) => (d._tipo === "paso" ? d.b - d.a : d.monto), formato: (x, d) => (d._tipo === "paso" ? conSigno(x, pesos) : pesos(x)),
-        frase: (d) => (d._tipo === "paso" ? "de cambio en el ingreso trimestral promedio por hogar que viene de esta fuente, en pesos de 2024" : "de ingreso corriente trimestral promedio por hogar, en pesos de 2024"),
-        comparacion: (d) => (d._tipo === "paso" ? `En el índice, ${conSigno(d.cambio, (x) => numero(x, 1))} (${a} = 100)` : `En el índice, ${numero(d.valor, 1)} (${a} = 100)`),
         precision: (d) => ({casos: d.casos}),
       });
       const presentes = new Set(pasos.map((p) => p.s));
@@ -186,7 +182,6 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     anio: +r.anio, ambito: r.ambito, servicio: r.servicio, respuesta: r.respuesta, orden: +r.orden, num: +r.num, den: +r.den, pct: +r.pct, ee: +r.ee, casos: +r.casos,
   }));
   const RESPUESTAS = ["Muy insatisfecho", "Insatisfecho", "Ni satisfecho ni insatisfecho", "Satisfecho", "Muy satisfecho"];
-  const FEMENINO = {"Muy insatisfecho": "muy insatisfecha", "Insatisfecho": "insatisfecha", "Ni satisfecho ni insatisfecho": "ni satisfecha ni insatisfecha", "Satisfecho": "satisfecha", "Muy satisfecho": "muy satisfecha"};
   const UNIVERSO_SERVICIOS = "de 18 años y más en ciudades de 100 mil habitantes y más";
   const AMBITOS = ["Todo el país", ...REGIONES];
   const textoAmbito = (x) => (x === "Todo el país" ? x : `Región ${x}`);
@@ -203,12 +198,10 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     dibujar: ({v, ancho}) => {
       const filas = satisfaccion.filter((r) => r.ambito === v.ambito && r.anio === v.anio);
       const colores = [P.divergente[1], P.divergente[3], P.divergente[4], P.divergente[5], P.divergente[7]];
-      const satisfechas = d3.rollup(filas, (f) => d3.sum(f.filter((r) => r.orden >= 3), (r) => r.pct), (r) => r.servicio);
       const g = globo({
-        donde: textoAmbito(v.ambito), cuando: v.anio, grupo: (d) => d.respuesta, color: (d) => (d.orden < 2 ? P.rojo : d.orden > 2 ? P.azul : P.gris),
-        valor: (d) => d.pct, formato: "pct", frase: (d) => `de la población ${UNIVERSO_SERVICIOS} se declara ${FEMENINO[d.respuesta]} con el servicio de ${d.servicio.toLowerCase()}`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: "de 18 años y más",
-        comparacion: (d) => `Satisfechas en total con ese servicio: ${pct(satisfechas.get(d.servicio))}`,
+        marca: (d) => d.servicio, grupo: (d) => d.respuesta, color: (d) => (d.orden < 2 ? P.rojo : d.orden > 2 ? P.azul : P.gris),
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "personas que respondieron",
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const orden = v.orden === "satisfechas" ? (x, y) => y.positivo - x.positivo : (x, y) => y.negativo - x.negativo;
@@ -254,11 +247,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     dibujar: ({v, ancho}) => {
       const filas = indicador.filter((r) => r.anio === v.anio && r.sexo === v.sexo);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.anio, grupo: (d) => `Región ${d.region}`, color: (d) => colorRegion(d.region),
+        marca: (d) => d.entidad, grupo: (d) => `Región ${d.region}`, color: (d) => colorRegion(d.region),
         valor: (d) => 100 * d.num / d.total, formato: "pct",
-        frase: "de todas las personas del país que cumplen la condición",
-        personas: (d) => d.num, universo: (d) => d.total, apellido: "que cumplen la condición",
-        comparacion: (d) => `De su región: ${pct(100 * d.num / d.totalGrupo)}`,
+        personas: (d) => d.num, universo: (d) => d.total, unidad: "personas que cumplen la condición",
       });
       const total = d3.sum(filas, (r) => r.num);
       return {
@@ -311,10 +302,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     dibujar: ({v, ancho}) => {
       const filas = carencias.filter((r) => r.localidad === v.localidad && r.anio === v.anio);
       const g = globo({
-        donde: v.localidad, cuando: v.anio, grupo: nombre, color: () => P.tonoTexto,
-        valor: (d) => d.pct, formato: "pct", frase: "de los hogares reúne exactamente esta combinación de carencias",
+        grupo: nombre, color: () => P.tonoTexto,
+        valor: (d) => d.pct, formato: "pct",
         personas: (d) => d.num, universo: (d) => d.den, unidad: "hogares",
-        comparacion: (d) => (d.numero ? `Reúne ${d.numero} de las tres carencias` : "No reúne ninguna de las tres"),
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const orden = v.orden === "numero" ? (a, b) => a.numero - b.numero || b.pct - a.pct : (a, b) => b.pct - a.pct;
@@ -365,11 +355,12 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
     dibujar: ({v, ancho}) => {
       const filas = ocupados.filter((r) => r.periodo === v.periodo && r.sexo === v.sexo);
       const unidad = v.sexo === "Total" ? "personas" : v.sexo.toLowerCase();
+      // En el globo, el total de cada renglón son las personas ocupadas del sector.
+      const delSector = {Mujeres: "mujeres ocupadas del sector", Hombres: "hombres ocupados del sector"}[v.sexo] ?? "personas ocupadas del sector";
       const g = globo({
-        donde: (d) => d.sector, cuando: v.periodo, grupo: (d) => d._nombreParte, color: (d) => (d.condicion === "Informal" ? P.tonoTexto : P.tinta2),
-        valor: (d) => d._parte, formato: "pct", frase: (d) => `de las ${unidad} ocupadas en el sector tiene un empleo ${d.condicion.toLowerCase()}`,
-        personas: (d) => d.num, universo: (d) => d.den, unidad, apellido: "ocupadas en el sector",
-        comparacion: (d) => `El sector reúne ${pct(d._grupoParte)} de las ${unidad} ocupadas`,
+        marca: (d) => d.sector, grupo: (d) => d._nombreParte, color: (d) => (d.condicion === "Informal" ? P.tonoTexto : P.tinta2),
+        valor: (d) => d._parte, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: delSector,
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       const dibujo = marimekko(filas, {ancho, grupo: (d) => d.sector, parte, valor: (d) => d.num, partes: PARTES, color, globo: g});
@@ -424,11 +415,13 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
       const total = d3.sum(filas, (r) => r.hablantes);
       const porFamilia = d3.rollup(filas, (f) => d3.sum(f, (r) => r.hablantes), (r) => r.familia);
       const g = globo({
-        donde: (d) => (d._nivel === 2 ? d.agrupacion : d._nombre), cuando: v.anio,
+        marca: (d) => (d._nivel === 2 ? d.agrupacion : d._nombre),
         grupo: (d) => (d._nivel === 2 ? `Familia ${d.familia}` : `${d._hojas} agrupaciones en el ejemplo`), color: () => P.tonoTexto,
-        valor: (d) => d._valor, formato: "conteo",
-        frase: (d) => (d._nivel === 2 ? "personas de 3 años y más hablan esta lengua" : d._nivel === 1 ? "personas de 3 años y más hablan una lengua de esta familia" : "personas de 3 años y más hablan una de estas lenguas"),
-        comparacion: (d) => (d._nivel === 2 ? `${pct(100 * d._valor / porFamilia.get(d.familia))} de los hablantes de su familia` : d._nivel === 1 ? `${pct(100 * d._valor / total)} de los hablantes del ejemplo` : null),
+        // La cifra es la parte de su rama: de la familia para una lengua, del
+        // ejemplo para una familia. La raíz es el ejemplo entero.
+        valor: (d) => (d._nivel === 2 ? 100 * d._valor / porFamilia.get(d.familia) : d._nivel === 1 ? 100 * d._valor / total : 100), formato: "pct",
+        personas: (d) => d._valor, universo: (d) => (d._nivel === 2 ? porFamilia.get(d.familia) : d._nivel === 1 ? total : null),
+        unidad: (d) => (d._nivel === 2 ? "hablantes de la familia" : "hablantes"),
       });
       return {
         figura: {
@@ -472,10 +465,8 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
       const filas = ingreso.filter((r) => r.grupo === v.grupo && r.anio === v.anio);
       const total = d3.sum(filas, (r) => r.monto);
       const g = globo({
-        donde: v.grupo, cuando: v.anio, grupo: (d) => d._rama, color: (d) => colorFuente(d._rama),
+        grupo: (d) => (d._nivel === 1 || !d._nombre || d._nombre === d._rama ? d._rama : `${d._rama} · ${d._nombre}`), color: (d) => colorFuente(d._rama),
         valor: (d) => d._parteTotal, formato: "pct",
-        frase: (d) => (d._nivel === 1 ? "del ingreso corriente de estos hogares viene de esta fuente" : `del ingreso corriente de estos hogares viene de ${d._nombre.toLowerCase()}`),
-        comparacion: (d) => `${pesos(d._valor)} por hogar al trimestre, en pesos de 2024`,
         precision: (d) => (d.casos ? {casos: d.casos} : null),
       });
       return {
@@ -523,11 +514,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
       const filas = fracciones.filter((r) => r.condicion === v.condicion && r.anio === v.anio);
       const valores = new Map(filas.map((r) => [r.cve, r]));
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio, grupo: v.condicion, color: () => P.tonoTexto,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
         valor: (d) => d.pct, formato: (x, d) => deCada(x, d.base),
-        frase: `personas ${UNIVERSO} cumplen la condición`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => `Porcentaje exacto: ${pct(d.pct)}`,
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "habitantes",
         precision: (d) => ({valor: d.pct, casos: d.casos}),
       });
       const dibujo = mosaicoFracciones(valores, {ancho: Math.min(ancho, 980), valor: (d) => d.pct, destacar: v.entidad, rotulos: {cumple: "Cumplen la condición", resto: "No la cumplen"},
@@ -593,11 +582,9 @@ const FUENTES = ["Trabajo", "Transferencias", "Estimación del alquiler", "Renta
       const desde = CORTES.indexOf(+v.desde);
       const filas = porSexo.get(v.sexo).filter((x) => CORTES.indexOf(x.corte) >= desde);
       const g = globo({
-        donde: (d) => d.entidad, cuando: (d) => d.corte, grupo: (d) => `Motivo más frecuente: ${MOTIVOS[d._mayor].replace("Motivo ", "")}`, color: (d) => colorMotivo(MOTIVOS[d._mayor]),
+        marca: (d) => `${d.entidad} · ${d.corte}`, grupo: (d) => `Motivo más frecuente: ${MOTIVOS[d._mayor].replace("Motivo ", "")}`, color: (d) => colorMotivo(MOTIVOS[d._mayor]),
         valor: (d) => d._partes[d._mayor], formato: "pct",
-        frase: (d) => `de quienes declararon un motivo señalan el ${MOTIVOS[d._mayor].toLowerCase()}`,
-        personas: (d) => d.partes[d._mayor], universo: (d) => d._total, apellido: "que declararon un motivo",
-        comparacion: (d) => MOTIVOS.map((m, k) => (k === d._mayor ? null : `${m}: ${pct(d._partes[k])}`)).filter(Boolean).join(" · "),
+        personas: (d) => d.partes[d._mayor], universo: (d) => d._total, unidad: "personas de los tres motivos",
         precision: (d) => ({casos: d.casos}),
       });
       const parte = (x, k) => 100 * x.partes[k] / d3.sum(x.partes);

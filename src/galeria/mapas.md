@@ -19,7 +19,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, sentido, rampaTema, rampaCambio, P} from "../components/paleta.js";
-import {pct, puntos, margen, deA, personas, entero, numero} from "../components/formato.js";
+import {pct, margen, entero, numero} from "../components/formato.js";
 import {coropleta, mosaico, picos, flechasCambio, semitonos, siluetaPuntos} from "../components/formas/index.js";
 import {REGIONES, ENTIDADES, ISO_A_CVE, POR_CVE, nombreEntidad} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
@@ -47,11 +47,12 @@ const columnasNivel = [
   {titulo: "Población total", valor: (d) => d.den, formato: "conteo"},
 ];
 // Globo de nivel, común al mapa y al mosaico. Una entidad sin dato trae solo su clave.
+// El total es la población de la entidad: sus habitantes, o sus mujeres u hombres.
+const habitantesDe = (d) => (d.sexo === "Mujeres" ? "mujeres" : d.sexo === "Hombres" ? "hombres" : "habitantes");
 const globoNivel = (v) => globo({
-  donde: (d) => d.entidad ?? nombreEntidad(d.cve), cuando: () => v.anio, color: () => P.tonoTexto,
+  grupo: (d) => d.entidad ?? nombreEntidad(d.cve), color: () => P.tonoTexto,
   valor: (d) => d.pct, formato: "pct",
-  frase: `de la ${v.sexo === "Total" ? "población" : v.sexo.toLowerCase()} ${UNIVERSO} cumple la condición`,
-  personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
+  personas: (d) => d.num, universo: (d) => d.den, unidad: habitantesDe,
   precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
 });
 ```
@@ -138,12 +139,8 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       }).filter(Boolean);
       const dentro = clavesDe(v.region);
       const g = globo({
-        donde: (d) => d.entidad ?? nombreEntidad(d.cve), cuando: () => `${v.desde} a ${v.hasta}`,
-        grupo: (d) => (d.s ? SIG.etiqueta(d.s) : null), color: (d) => (d.s ? SIG.color(d.s) : null),
+        marca: (d) => d.entidad ?? nombreEntidad(d.cve), grupo: (d) => (d.s ? SIG.etiqueta(d.s) : null), color: (d) => (d.s ? SIG.color(d.s) : null),
         valor: (d) => d.cambio, formato: "puntos",
-        frase: `de cambio en el porcentaje de la población ${UNIVERSO} que cumple la condición`,
-        personas: (d) => d.b?.num, universo: (d) => d.b?.den, apellido: `${UNIVERSO} en ${v.hasta}`,
-        comparacion: (d) => (d.a ? deA(d.a.pct, d.b.pct, pct) : null),
       });
       return {
         figura: {
@@ -189,11 +186,9 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       const filas = indicador.filter((r) => r.anio === v.anio && r.sexo === v.sexo);
       const dentro = clavesDe(v.region);
       const g = globo({
-        donde: (d) => d.entidad, cuando: () => v.anio, color: () => P.tonoTexto,
-        valor: (d) => d.num, formato: (x) => personas(x),
-        frase: `${UNIVERSO} cumplen la condición en esta entidad`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => `${pct(d.pct)} de su población`,
+        grupo: (d) => d.entidad, color: () => P.tonoTexto,
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: habitantesDe,
         precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
       });
       return {
@@ -267,11 +262,9 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       const dentro = clavesDe(v.region);
       const filas = municipios.filter((r) => r.anio === v.anio && (!dentro || dentro.includes(r.cve)));
       const g = globo({
-        donde: (d) => d.nombre, cuando: (d) => d.anio, color: () => P.tonoTexto,
-        valor: (d) => d.num, formato: (x) => personas(x),
-        frase: `${UNIVERSO} cumplen la condición en este municipio`,
-        personas: (d) => d.num, universo: (d) => d.den, apellido: UNIVERSO,
-        comparacion: (d) => `${pct(d.pct)} de su población`,
+        grupo: (d) => d.nombre, color: () => P.tonoTexto,
+        valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: "habitantes",
         precision: (d) => ({casos: d.casos}),
       });
       return {
@@ -324,12 +317,9 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       const porCve = new Map(filas.map((d) => [d.cve, d]));
       const dentro = clavesDe(v.region);
       const g = globo({
-        donde: (d) => d.entidad ?? (d.f ? nombreEntidad(ISO_A_CVE.get(d.f.properties.id)) : ""), cuando: () => `${a} a ${b}`,
+        marca: (d) => d.entidad ?? (d.f ? nombreEntidad(ISO_A_CVE.get(d.f.properties.id)) : ""),
         grupo: (d) => (d.s ? SIG.etiqueta(d.s) : null), color: (d) => (d.s ? SIG.color(d.s) : null),
         valor: (d) => d.cambio ?? null, formato: "puntos",
-        frase: `de cambio en el porcentaje de la población ${UNIVERSO} que cumple la condición`,
-        personas: (d) => d.b?.num, universo: (d) => d.b?.den, apellido: `${UNIVERSO} en ${b}`,
-        comparacion: (d) => (d.a ? deA(d.a.pct, d.b.pct, pct) : null),
       });
       const mapa = mapaPlano(geo, {
         ancho, dato: (f) => porCve.get(ISO_A_CVE.get(f.properties.id)) ?? null, color: (d) => (d ? SIG.color(d.s) : P.sinDato),
@@ -440,14 +430,9 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
         const cambio = A.pct != null && B.pct != null ? B.pct - A.pct : null;
         return {...m, a: A, b: B, cambio, s: sentido(A.pct, B.pct), casos: Math.min(A.casos, B.casos), foco: !dentro || dentro.includes(m.cve)};
       });
-      const quienes = v.sexo === "Total" ? "la población" : v.sexo === "Mujeres" ? "las mujeres" : "los hombres";
       const g = globo({
-        donde: (d) => d.nombre, cuando: () => `${a} a ${b}`,
-        grupo: (d) => (d.s ? SIG.etiqueta(d.s) : null), color: (d) => (d.s ? SIG.color(d.s) : null),
+        marca: (d) => d.nombre, grupo: (d) => (d.s ? SIG.etiqueta(d.s) : null), color: (d) => (d.s ? SIG.color(d.s) : null),
         valor: (d) => d.cambio, formato: "puntos",
-        frase: `de cambio en el porcentaje de ${quienes} ${UNIVERSO} que cumple la condición`,
-        personas: (d) => d.b.num, universo: (d) => d.b.den, apellido: `${UNIVERSO} en ${b}`,
-        comparacion: (d) => deA(d.a.pct, d.b.pct, pct),
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = flechasCambio(geo, unidades, {
@@ -591,12 +576,10 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       const dentro = clavesDe(v.region);
       const deAnio = celdas.filter((c) => c.anio === v.anio);
       const textoGrupo = v.grupo === "todas" ? "Todas las edades" : GRUPOS_EDAD.find((g) => g.id === v.grupo).texto;
-      const apellido = v.grupo === "todas" ? UNIVERSO : `de ${textoGrupo}`;
       const g = globo({
-        donde: (h) => h.nombre, cuando: () => v.anio, grupo: () => textoGrupo, color: () => P.tonoTexto,
+        grupo: (h) => h.nombre, color: () => P.tonoTexto,
         valor: (h) => h.v, formato: (x) => `${fDensidad(x)} por km²`,
-        frase: (h) => `personas ${apellido} por kilómetro cuadrado, en este hexágono de unos ${entero(h.areaKm2)} km²${h.estimado ? " (estimado con las celdas vecinas)" : ""}`,
-        personas: (h) => h.cantidad, apellido,
+        personas: (h) => h.cantidad,
       });
       const dibujo = semitonos(geo, deAnio, {
         ancho, posicion: (c) => [c.lon, c.lat], valor: (c) => personasDe(c, v.grupo), area: (c) => c.area, tope: TOPE_DENSIDAD,
@@ -640,12 +623,6 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
   // condición hace bajar el porcentaje y quien empezó a cumplirla lo hace
   // subir. Lo demás no es un cambio: tono de tema y gris.
   const colorSit = (s) => (s === "Dejó de cumplir" ? SIG.color("baja") : s === "Empezó a cumplir" ? SIG.color("sube") : s === "Cumple en los dos años" ? P.serie : P.contexto);
-  const FRASE = {
-    "Dejó de cumplir": "cumplía la condición en el primer año y ya no en el segundo",
-    "Empezó a cumplir": "no cumplía la condición en el primer año y sí en el segundo",
-    "Cumple en los dos años": "cumple la condición en los dos años",
-    "No cumple en ninguno": "no cumple la condición en ninguno de los dos años",
-  };
   const filtros = panel({grupos: [
     {leyenda: "Dónde", campos: [campo({id: "region", rotulo: "Región", inicial: "todas", opciones: opcionesRegion})]},
     {leyenda: "Entre quiénes y cuándo", campos: [
@@ -666,12 +643,10 @@ const textoSexo = (s) => (s === "Total" ? "Mujeres y hombres" : s);
       });
       const silueta = {type: "FeatureCollection", features: geo.features.filter((f) => v.region === "todas" || POR_CVE.get(ISO_A_CVE.get(f.properties.id))?.region === v.region)};
       const lugar = v.region === "todas" ? "Todo el país" : `Región ${v.region}`;
-      const quienes = v.sexo === "Total" ? "población" : v.sexo.toLowerCase();
       const g = globo({
-        donde: () => lugar, cuando: () => v.periodo, grupo: (d) => d.situacion, color: (d) => colorSit(d.situacion),
+        grupo: (d) => d.situacion, color: (d) => colorSit(d.situacion),
         valor: (d) => 100 * d.personas / d.total, formato: "pct",
-        frase: (d) => `de la ${quienes} ${UNIVERSO} ${FRASE[d.situacion]}`,
-        personas: (d) => d.personas, universo: (d) => d.total, apellido: UNIVERSO,
+        personas: (d) => d.personas, universo: (d) => d.total, unidad: v.sexo === "Total" ? "habitantes" : v.sexo.toLowerCase(),
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = siluetaPuntos(silueta, datos, {
@@ -732,12 +707,11 @@ import {leerEntidades} from "../components/muestra-gC.js";
       const filas = entidades.filter((r) => r.anio === v.anio);
       const dentro = clavesDe(v.region);
       const g = globo({
-        donde: (d) => d.entidad ?? nombreEntidad(d.cve), cuando: () => v.anio,
+        marca: (d) => d.entidad ?? nombreEntidad(d.cve),
         grupo: (d) => (d.internet == null ? null : `Internet ${nivel(d.internet, CORTES_INTERNET)}, escolaridad ${nivel(d.escolaridad, CORTES_ESCOLARIDAD)}`),
         color: () => P.tonoTexto,
-        valor: (d) => d.internet, formato: "pct", frase: "de sus hogares tiene internet",
+        valor: (d) => d.internet, formato: "pct",
         personas: (d) => d.hogaresInternet, universo: (d) => d.hogares, unidad: "hogares",
-        comparacion: (d) => (d.escolaridad == null ? null : `Escolaridad promedio: ${numero(d.escolaridad, 1)} años`),
       });
       return {
         figura: {

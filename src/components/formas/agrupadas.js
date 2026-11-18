@@ -9,7 +9,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, leyendaItems, TIPO} from "./comun.js";
 
@@ -20,7 +20,7 @@ import {base, vacio, leyendaItems, TIPO} from "./comun.js";
 // Clave invisible del renglón del título de cada faceta.
 const TITULO = "\u2063";
 
-export function agrupadas(datos, {ancho, faceta, serie, valor, facetas, series, color, dominio = [0, 100], formato = pct, formatoEje = pctEje, rotulo = null, incierta = () => false, globo: g}) {
+export function agrupadas(datos, {ancho, faceta, serie, valor, facetas, series, color, dominio = [0, 100], formato = pct, formatoEje = pctMarca, rotulo = null, incierta = () => false, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const angosto = ancho < 560;
@@ -42,7 +42,7 @@ export function agrupadas(datos, {ancho, faceta, serie, valor, facetas, series, 
       ],
     }))
     : Plot.plot(base({
-      ancho, alto: Math.round(Math.max(280, Math.min(380, ancho * 0.34))), marginLeft: 40, marginRight: 8, marginTop: rotulo ? 34 : 22, marginBottom: 36,
+      ancho, alto: Math.round(Math.max(280, Math.min(380, ancho * 0.34))), marginLeft: 48, marginRight: 8, marginTop: rotulo ? 34 : 22, marginBottom: 36,
       fx: {label: null, domain: facetas, padding: 0.14, axis: "bottom", tickSize: 0},
       x: {axis: null, domain: series, padding: 0.12},
       y: {label: rotulo, labelAnchor: "top", labelArrow: "none", domain: dominio, grid: true, tickFormat: formatoEje, ticks: 5},

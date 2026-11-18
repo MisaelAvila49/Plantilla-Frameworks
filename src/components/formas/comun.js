@@ -31,7 +31,10 @@ export const margenRotulos = (rotulos, tope = 190) => Math.min(tope, 16 + Math.m
 // Enlaza el globo a cada elemento de una marca de Plot (barras, celdas,
 // polígonos). Se usa como `...viva(datos, g)` en las opciones de la marca:
 // el globo pertenece a la marca que está bajo el puntero, no a la más
-// cercana. `subir` trae la marca al frente para que su contorno se vea entero.
+// cercana. `subir` dibuja el contorno en una copia al frente, para que se vea
+// entero sobre las vecinas. La marca misma NO se mueve en el DOM: mover el
+// nodo bajo el puntero hace que el navegador pierda su `pointerleave` y el
+// globo se quedaba abierto al salir del mapa.
 export function viva(datos, g, {subir = false} = {}) {
   if (!g) return {};
   return {
@@ -39,10 +42,24 @@ export function viva(datos, g, {subir = false} = {}) {
       const nodo = siguiente(indice, escalas, valores, dimensiones, contexto);
       const hijos = [...nodo.children];
       if (hijos.length !== indice.length) return nodo;
+      let copia = null;
+      const quitar = () => { copia?.remove(); copia = null; };
       hijos.forEach((n, k) => {
         n.classList.add("marca-viva");
         globoEn(n, g, datos[indice[k]]);
-        if (subir) n.addEventListener("pointerenter", () => n.parentNode?.appendChild(n));
+        if (!subir) return;
+        const poner = () => {
+          quitar();
+          copia = n.cloneNode(false);
+          copia.removeAttribute("tabindex");
+          copia.setAttribute("class", "marca-contorno");
+          copia.setAttribute("aria-hidden", "true");
+          n.parentNode?.appendChild(copia);
+        };
+        n.addEventListener("pointerenter", poner);
+        n.addEventListener("focus", poner);
+        n.addEventListener("pointerleave", quitar);
+        n.addEventListener("blur", quitar);
       });
       return nodo;
     },

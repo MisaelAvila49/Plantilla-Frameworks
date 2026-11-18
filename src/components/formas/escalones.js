@@ -8,7 +8,7 @@
 import * as d3 from "npm:d3";
 import {svg, html} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {globoEn} from "../globo.js";
 import {vacio, TIPO} from "./comun.js";
 import {PROPORCION, nuevoId, simbolos, refGlifo, usar, leyendaFiguras, partir} from "./unidad.js";
@@ -22,13 +22,14 @@ const acotar = (v, a, b) => Math.max(a, Math.min(b, v));
 // de 0 a 100, queda por encima. `nombres`: textos de la leyenda
 // {valor, banda, umbral, sobre, encima}. El dato del globo lleva además
 // `umbral` y `encima`.
-export function escalones(datos, {ancho, grupo, valor, bajo = null, alto = null, dominio = [0, 100], formato = pct, formatoEje = pctEje,
+export function escalones(datos, {ancho, grupo, valor, bajo = null, alto = null, dominio = [0, 100], formato = pct, formatoEje = pctMarca,
   umbral = null, encima = null, formatoEncima = (v) => pct(v, 0), nombres = {}, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const m = filas.length, [a, b] = dominio;
   const conUmbral = umbral != null, conBanda = Boolean(bajo && alto);
-  const ml = 40, mr = 4, PW = ancho - ml - mr, cw = PW / m, margen = Math.min(6, cw * 0.08);
+  // Margen izquierdo según la marca más larga del eje («100 %»).
+  const ml = Math.ceil(Math.max(40, 14 + Math.max(...dominio.map((v) => String(formatoEje(v)).length)) * 7.4)), mr = 4, PW = ancho - ml - mr, cw = PW / m, margen = Math.min(6, cw * 0.08);
   const titulos = filas.map((d) => partir(String(grupo(d)), Math.max(5, Math.floor(cw / 7.4))));
   const altoTitulos = 16 * Math.max(...titulos.map((t) => t.length));
   const conEncima = conUmbral && Boolean(encima);

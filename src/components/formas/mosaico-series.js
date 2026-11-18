@@ -78,9 +78,8 @@ export function mosaicoSeries(series, {ancho, tiempo, valor, cortes, dominio, re
       nodo.addEventListener("pointerleave", () => { marca.setAttribute("visibility", "hidden"); ocultarGlobo(); });
       nodo.addEventListener("focus", () => { const caja = nodo.getBoundingClientRect(); abrir(ultimo, caja.left + caja.width / 2, caja.top + caja.height / 2); });
       nodo.addEventListener("blur", () => { marca.setAttribute("visibility", "hidden"); ocultarGlobo(); });
-      const r = g.renglones(ultimo.d);
       nodo.setAttribute("role", "img");
-      nodo.setAttribute("aria-label", `${e.nombre}: ${conDato.map((p) => `${p.t}, ${formato(p.v)}`).join("; ")}. ${r.frase}`);
+      nodo.setAttribute("aria-label", `${e.nombre}: ${conDato.map((p) => `${p.t}, ${formato(p.v)}`).join("; ")}`);
     } else {
       nodo.setAttribute("role", "img");
       nodo.setAttribute("aria-label", `${e.nombre}: ${SIN_DATO}`);

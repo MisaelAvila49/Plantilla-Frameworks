@@ -13,7 +13,7 @@
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
 import {entero} from "../formato.js";
-import {mostrarGlobo, ocultarGlobo} from "../globo.js";
+import {mostrarGlobo, ocultarGlobo, textoGlobo} from "../globo.js";
 import {vacio, TIPO, leyendaItems} from "./comun.js";
 import {tamanoUnidad, topeFiguras, textoUnidad, tintaLegible, anchoTexto} from "./unidad.js";
 
@@ -133,7 +133,7 @@ export function unidadesEspejo(datos, {ancho, categoria, lado, valor, lados, cat
       const dato = {...(p.d ?? {}), _categoria: p.c, _lado: p.l, figuras: p.n, unidad: K, otro: p.otro, resaltadas: conResalte && p.d ? resaltado(p.d) : null, _sinDato: !p.d};
       const r = g.renglones(dato);
       nodo.setAttribute("role", "img");
-      nodo.setAttribute("aria-label", [r.contexto, r.grupo, r.cifra, r.frase, r.personas].filter(Boolean).join(", "));
+      nodo.setAttribute("aria-label", textoGlobo(r));
       const abrir = (x, y) => mostrarGlobo(g.html(dato), x, y);
       nodo.addEventListener("pointerenter", (e) => abrir(e.clientX, e.clientY));
       nodo.addEventListener("pointermove", (e) => abrir(e.clientX, e.clientY));

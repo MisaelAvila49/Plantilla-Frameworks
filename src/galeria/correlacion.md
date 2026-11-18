@@ -22,7 +22,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {P, rampaTema} from "../components/paleta.js";
-import {pct, entero, numero, pesos, margen, pctEje} from "../components/formato.js";
+import {pct, entero, numero, pesos, margen, pctEje, pctMarca} from "../components/formato.js";
 import {leyendaItems} from "../components/formas/comun.js";
 import {dispersion} from "../components/formas/dispersion.js";
 import {hexbin} from "../components/formas/hexbin.js";
@@ -75,12 +75,9 @@ const anios = (v) => `${numero(v, 1)} años`;
       const destacado = v.region === "todas" ? null : (d) => d.region === v.region;
       const medianas = {x: d3.median(filas, (d) => d.internet), y: d3.median(filas, m.valor)};
       const g = globo({
-        donde: (d) => d.entidad, cuando: v.anio,
-        grupo: (d) => `Región ${d.region}`, color: (d) => (!destacado || destacado(d) ? P.tonoTexto : P.tinta2),
+        marca: (d) => d.entidad, grupo: (d) => `Región ${d.region}`, color: (d) => (!destacado || destacado(d) ? P.tonoTexto : P.tinta2),
         valor: (d) => d.internet, formato: "pct",
-        frase: "de sus hogares tiene internet",
         personas: (d) => d.hogaresInternet, universo: (d) => d.hogares, unidad: "hogares",
-        comparacion: (d) => `${m.texto}: ${m.formato(m.valor(d))}`,
         precision: (d) => ({valor: d.internet, ee: d.internetEe, casos: d.casos}),
       });
       return {
@@ -95,7 +92,7 @@ const anios = (v) => `${numero(v, 1)} años`;
             {tipo: "punteada", color: P.resumen, texto: `Medianas: ${pct(medianas.x)} y ${m.formato(medianas.y)}`},
           ]),
           dispersion(filas, {ancho, x: (d) => d.internet, y: m.valor, nombre: (d) => d.entidad, dominioX: DOMINIO_INTERNET, dominioY: m.dominio, destacado, medianas,
-            formatoX: (x) => pctEje(x), formatoY: m.eje, rotuloX: "Porcentaje de hogares con internet", rotuloY: m.rotulo, globo: g})],
+            formatoX: (x) => pctMarca(x), formatoY: m.eje, rotuloX: "Porcentaje de hogares con internet", rotuloY: m.rotulo, globo: g})],
         },
         tabla: {filas: d3.sort(filas, (r) => -r.internet), columnas: [
           {titulo: "Entidad", valor: (d) => d.entidad, texto: true},
@@ -130,7 +127,6 @@ const ocupados = leerOcupados(await FileAttachment("../data/muestra/gC_ocupados.
   // toma el tono más oscuro y la leyenda lo dice («4 o más»).
   const TOPE_HEX = 4;
   const escala = rampaTema([0, TOPE_HEX]);
-  const ocupadas = (s) => (s === "Hombres" ? "los hombres ocupados" : s === "Mujeres" ? "las mujeres ocupadas" : "las personas ocupadas");
   const filtros = panel({grupos: [
     {leyenda: "Entre quiénes y cuándo", campos: [
       campo({id: "sexo", rotulo: "Sexo", inicial: "Total", opciones: OPCIONES_SEXO}),
@@ -143,10 +139,9 @@ const ocupados = leerOcupados(await FileAttachment("../data/muestra/gC_ocupados.
     dibujar: ({v, ancho}) => {
       const filas = ocupados.filter((r) => r.anio === v.anio && (v.sexo === "Total" || r.sexo === v.sexo));
       const g = globo({
-        donde: (c) => `Cerca de ${numero(c.x, 0)} años y ${numero(c.y, 0)} horas a la semana`, cuando: v.anio,
+        grupo: (c) => `Cerca de ${numero(c.x, 0)} años y ${numero(c.y, 0)} horas a la semana`,
         valor: (c) => c.parte, formato: "pct",
-        frase: `de ${ocupadas(v.sexo)} tiene esa edad y trabaja esas horas`,
-        personas: (c) => c.personas, universo: (c) => c.total, unidad: v.sexo === "Hombres" ? "hombres" : v.sexo === "Mujeres" ? "mujeres" : "personas", apellido: v.sexo === "Hombres" ? "ocupados" : "ocupadas",
+        personas: (c) => c.personas, universo: (c) => c.total, unidad: v.sexo === "Hombres" ? "hombres ocupados" : v.sexo === "Mujeres" ? "mujeres ocupadas" : "personas ocupadas",
         precision: (c) => ({valor: c.parte, casos: c.casos}),
       });
       const dibujo = hexbin(filas, {ancho, x: (d) => d.edad, y: (d) => d.horas, peso: (d) => d.factor, dominioX: [15, 80], dominioY: [0, 84], radio: 0.036, escala,
@@ -199,11 +194,8 @@ const ocupados = leerOcupados(await FileAttachment("../data/muestra/gC_ocupados.
       const filas = trayectorias.filter((r) => r.lugar === v.lugar && r.sexo === v.sexo);
       const fondo = trayectorias.filter((r) => r.lugar !== v.lugar && r.sexo === v.sexo);
       const g = globo({
-        donde: nombreLugar(v.lugar), cuando: (d) => d.anio,
-        grupo: v.sexo === "Total" ? null : v.sexo, color: P.tonoTexto,
+        grupo: (d) => d.anio, color: P.tonoTexto,
         valor: (d) => d.ingreso, formato: "pesos",
-        frase: "de ingreso al mes en promedio por persona ocupada, en pesos de 2024",
-        comparacion: (d) => `Escolaridad promedio: ${anios(d.escolaridad)}`,
         precision: (d) => ({valor: d.ingreso, ee: d.ingresoEe, casos: d.casos}),
       });
       return {

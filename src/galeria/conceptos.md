@@ -23,7 +23,7 @@ import {analisis} from "../components/seccion.js";
 import {globo} from "../components/globo.js";
 import {panel, campo} from "../components/filtros.js";
 import {significado, P} from "../components/paleta.js";
-import {pct, personas, entero} from "../components/formato.js";
+import {personas, entero} from "../components/formato.js";
 import {arbolPregunta} from "../components/formas/arbol-pregunta.js";
 import {embudo} from "../components/formas/embudo.js";
 import {euler} from "../components/formas/euler.js";
@@ -93,11 +93,11 @@ const panelBase = () => panel({grupos: [
       ];
       const color = (tipo) => ({universo: P.tinta, pregunta: P.regla, rojo: SIG.color("baja"), azul: SIG.color("sube"), gris: SIG.color("igual")})[tipo];
       const g = globo({
-        donde: () => f.texto, cuando: () => edad, grupo: (c) => (c.tipo === "universo" ? "Universo" : c.tipo === "pregunta" ? "Pregunta" : SIG.etiqueta({rojo: "baja", azul: "sube", gris: "igual"}[c.tipo])),
+        grupo: (c) => (c.tipo === "universo" ? "Universo" : c.tipo === "pregunta" ? "Pregunta" : SIG.etiqueta({rojo: "baja", azul: "sube", gris: "igual"}[c.tipo])),
         color: (c) => (["rojo", "azul", "gris"].includes(c.tipo) ? color(c.tipo) : P.tinta2),
-        valor: (c) => c.parte ?? (100 * c.n) / u.poblacion, formato: "pct", frase: (c) => c.frase,
-        personas: (c) => c.n, universo: (c) => (c.padre === "quienes cambiaron de residencia" ? u.migrantes : u.poblacion), apellido: (c) => (c.padre === "quienes cambiaron de residencia" ? "que cambiaron de residencia" : `de ${edad}`),
-        comparacion: (c) => (c.parte != null && c.padre === "quienes cambiaron de residencia" ? `${pct((100 * c.n) / u.poblacion)} de la población de ${edad}` : null),
+        valor: (c) => c.parte ?? (100 * c.n) / u.poblacion, formato: "pct",
+        personas: (c) => c.n, universo: (c) => (c.padre === "quienes cambiaron de residencia" ? u.migrantes : u.poblacion),
+        unidad: (c) => (c.padre === "quienes cambiaron de residencia" ? "personas que cambiaron de residencia" : "habitantes"),
         precision: (c) => (c.casos != null ? {casos: c.casos} : null),
       });
       const dibujo = arbolPregunta(cajas, {
@@ -148,11 +148,11 @@ const panelBase = () => panel({grupos: [
       const ultimo = pasos.length - 1;
       const color = (i) => (i >= ultimo - 1 ? SIG.color("baja") : P.serie);
       const g = globo({
-        donde: () => f.texto, cuando: () => edad, grupo: (d) => `Paso ${d.i + 1} de ${pasos.length}`, color: (d) => (d.i === ultimo ? SIG.color("baja") : P.tonoTexto),
+        grupo: (d) => d.paso, color: (d) => (d.i === ultimo ? SIG.color("baja") : P.tonoTexto),
         valor: (d) => (d.i === 0 ? 100 : (100 * d.n) / d.anterior.n), formato: "pct",
-        frase: (d) => (d.i === 0 ? `es el universo: ${d.paso.toLowerCase()}` : `del paso anterior: ${d.paso.toLowerCase()}`),
-        personas: (d) => d.n, universo: (d) => (d.anterior ? d.anterior.n : null), apellido: (d) => (d.anterior ? `del paso anterior` : `de ${edad}`),
-        comparacion: (d) => (d.i ? `${pct((100 * d.n) / d.total)} de la población de ${edad}` : null),
+        personas: (d) => d.n, universo: (d) => (d.anterior ? d.anterior.n : null),
+        // El total de cada paso es el paso anterior, nombrado en pocas palabras.
+        unidad: (d) => ["habitantes", "habitantes", "personas que cambiaron de residencia", "personas que dieron causa"][d.i],
         precision: (d) => ({casos: d.casos}),
       });
       const dibujo = embudo(pasos, {ancho, color, globo: g,
@@ -207,9 +207,10 @@ const panelBase = () => panel({grupos: [
       const dibujo = euler({a: {nombre: "Habla una lengua indígena", n: d.hli}, b: {nombre: "Se considera indígena", n: d.auto}, ambos: d.ambos, universo: d.total}, {
         ancho, colorA, colorB, apellido: "del universo",
         globo: globo({
-          donde: () => f.texto, cuando: () => edad, grupo: (z) => z.zona, color: (z) => z.color,
-          valor: (z) => (100 * z.n) / z.universo, formato: "pct", frase: `de ${U.frase(edad)}`,
-          personas: (z) => z.n, universo: (z) => z.universo, apellido: `de ${edad}`,
+          grupo: (z) => z.zona, color: (z) => z.color,
+          valor: (z) => (100 * z.n) / z.universo, formato: "pct",
+          personas: (z) => z.n, universo: (z) => z.universo,
+          unidad: {poblacion: "habitantes", migrantes: "personas que cambiaron de residencia", violencia: "personas desplazadas por violencia"}[v.universo] ?? "personas",
         }),
       });
       const z = dibujo.zonas ?? {};

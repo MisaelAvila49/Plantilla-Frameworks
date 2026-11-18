@@ -4,7 +4,7 @@
 # `abstract`, que es el MISMO párrafo que LIBRO.descripcion.
 cff-version: 1.2.0
 message: "Si usas esta plataforma, cítala con los datos de este archivo."
-title: "Plantilla de libro de datos"
+title: "Plantilla de libros de datos"
 type: dataset
 authors:
   - family-names: "Apellido Apellido"
@@ -23,7 +23,7 @@ keywords:
   - libro de datos
   - Observable Framework
 abstract: >-
-  Esta plantilla reúne la estructura, los componentes y las formas de gráfica
-  con que se construyen los libros de datos de Social Data IBERO. Todas las
-  cifras que muestra son datos de muestra generados con una semilla fija; se
-  sustituyen por los datos del libro.
+  Es el punto de partida de los libros de datos de Social Data IBERO. Trae la
+  anatomía de una sección, la galería y el catálogo de formas de gráfica, la
+  muestra de colores, un mapa de flujos, los verificadores y el despliegue.
+  Cada libro nuevo se crea copiándola. Todas sus cifras son datos de muestra.

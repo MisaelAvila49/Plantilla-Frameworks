@@ -30,8 +30,11 @@ export function pct(v, dec = null) {
   if (+v > 0 && +v < 0.001) return "menos de 0.001 %";
   return `${es(v, dec ?? decimales(v))} %`;
 }
-// Porcentaje corto para marcas de eje y celdas: sin el signo si el título ya lo dice.
+// Porcentaje corto para celdas y leyendas: sin el signo si el título ya lo dice.
 export const pctEje = (v) => (ausente(v) ? "" : es(v, Number.isInteger(+v) ? 0 : 1));
+// Marca de un eje de porcentaje: «40 %». Es el formato por omisión de todo eje
+// en 0-100, para que la unidad se lea en el eje y no solo en su título.
+export const pctMarca = (v) => (ausente(v) ? "" : `${pctEje(v)} %`);
 
 // Signo tipográfico: «+», «−» (menos verdadero) o nada en el cero.
 const signo = (v, dec) => (Math.abs(+v) < 0.5 / 10 ** dec ? "" : +v > 0 ? "+" : "−");

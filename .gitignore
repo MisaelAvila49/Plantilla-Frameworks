@@ -9,3 +9,6 @@ docs/*.log
 # Capturas de proyectos de terceros (NYT, Reuters, Bloomberg...): material de
 # consulta local con derechos de sus autores; no se publican.
 catalogo/referencias/
+
+# Builds paralelos (OBS_SALIDA): se regeneran.
+dist-*/

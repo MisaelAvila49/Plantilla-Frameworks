@@ -152,7 +152,9 @@ ol.referencias li:target { background: var(--tono-suave); }
   font-family: var(--sans-serif);
 }
 .panel-grupo { border: 0; margin: 0; padding: 0; min-width: 0; }
-.panel-grupo > legend { padding: 0; margin-bottom: 0.4rem; font: 700 0.72rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-3); }
+/* Rótulo de grupo en rojo, con el mismo formato que el número de sección (02):
+   compensa el negro dominante de la sección sin teñir los rótulos de cada campo. */
+.panel-grupo > legend { padding: 0; margin-bottom: 0.4rem; font: 700 0.8rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--rojo); }
 .panel-campos { display: grid; grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr)); gap: 0.6rem 0.9rem; align-items: end; }
 .campo { display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; }
 .campo-rotulo { font: 600 0.8rem var(--sans-serif); color: var(--tinta-2); }
@@ -226,12 +228,28 @@ ol.referencias li:target { background: var(--tono-suave); }
 .leyenda-continua { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.2rem 1.2rem; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
 .leyenda-sin-dato { padding-bottom: 0.2rem; }
 
-/* Contorno al pasar el puntero o al enfocar la marca. */
+/* Contorno al pasar el puntero o al enfocar la marca: un trazo fino en la
+   marca misma (rect, path, círculo), nunca en un grupo <g> ni en un <svg>
+   entero. El trazo puesto en el grupo se heredaba a sus <text> (texto con
+   contorno grueso) y a cada figura, y el outline del <svg> dibujaba una caja
+   redondeada alrededor del panel. En un grupo se contornea su primer
+   rectángulo (la caja de la marca). */
 .marca-viva { cursor: default; outline: none; }
-.marca-viva:hover, .marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 1.6px; }
-g.marca-viva:hover > rect, g.marca-viva:focus-visible > rect { stroke: var(--tinta); stroke-width: 2px; }
-svg.marca-viva:hover, svg.marca-viva:focus-visible { outline: 2px solid var(--tinta); outline-offset: 3px; border-radius: 4px; }
+.marca-viva:not(g, svg):hover, .marca-viva:not(g, svg):focus-visible { stroke: var(--tinta); stroke-width: 1.6px; }
+g.marca-viva:hover > rect:first-child, g.marca-viva:focus-visible > rect:first-child { stroke: var(--tinta); stroke-width: 1.6px; }
+/* Copia al frente con el contorno de una marca que se enciman (mapas). */
+.marca-contorno { fill: none; stroke: var(--tinta); stroke-width: 1.6px; pointer-events: none; }
+/* Un panel que es un <svg> entero (fracción, waffle): al pasar el puntero se
+   atenúan los paneles vecinos; el contorno queda para el teclado. */
+svg.marca-viva:focus-visible { outline: 2px solid var(--tinta); outline-offset: 3px; border-radius: 4px; }
+.fraccion > .marca-viva, .waffle-uno, .unidad-grupo { transition: opacity 0.15s ease; }
+.fraccion:has(> .marca-viva:is(:hover, :focus-visible)) > .marca-viva:not(:hover, :focus-visible),
+.waffle:has(.waffle-uno:is(:hover, :focus-visible)) .waffle-uno:not(:hover, :focus-visible) { opacity: 0.45; }
 .sankey-cinta:hover, .sankey-cinta:focus-visible { fill-opacity: 0.75; }
+/* Pirámide: la zona invisible del renglón enciende su barra o su raya. */
+.piramide-zona { cursor: default; }
+rect.piramide-resaltada { stroke: var(--tinta); stroke-width: 1.6px; }
+line.piramide-resaltada { stroke-width: 4px; }
 
 .waffle { display: flex; flex-wrap: wrap; gap: 1.4rem 2rem; }
 .waffle-grupo { display: flex; flex-direction: column; gap: 0.35rem; }
@@ -240,12 +258,13 @@ svg.marca-viva:hover, svg.marca-viva:focus-visible { outline: 2px solid var(--ti
 
 /* Familia de unidades (multitud, fracción, histograma de unidades, pila y
    escalones). El subgrupo es la marca: al pasar el puntero o enfocarlo se
-   contornea su zona, no cada figura. */
+   atenúan los otros subgrupos. Ni cada figura ni el texto llevan contorno, y
+   no se dibuja una caja alrededor del bloque. */
 .fraccion { display: flex; flex-wrap: wrap; align-items: flex-start; max-width: 100%; }
 .fraccion-panel { flex: none; max-width: 100%; }
 .leyenda-figuras { align-items: center; }
-.unidad-grupo.marca-viva:hover, .unidad-grupo.marca-viva:focus-visible { stroke: none; }
-.unidad-grupo:hover > .unidad-zona, .unidad-grupo:focus-visible > .unidad-zona { stroke: var(--tinta); stroke-width: 1.6px; }
+.unidad-grupo.marca-viva:is(:hover, :focus-visible) > .unidad-zona { stroke: none; }
+svg:has(.unidad-grupo:is(:hover, :focus-visible)) .unidad-grupo:not(:hover, :focus-visible) { opacity: 0.4; }
 
 .descarga { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.8rem; font: 0.8rem var(--sans-serif); color: var(--tinta-2); }
 .descarga-etiqueta { font-weight: 600; }
@@ -284,7 +303,7 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 
 /* ------------------------------------------------------------------ 8. globo */
 /* Una sola tarjeta para todos los globos del libro (src/components/globo.js).
-   Orden fijo: contexto, grupo, cifra, frase, personas, comparación, aviso. */
+   Orden fijo y corto (R116): grupo, cifra, personas y, si aplica, aviso. */
 .globo-tarjeta {
   position: absolute; z-index: 40; pointer-events: none; max-width: 17.5rem; min-width: 9rem;
   display: flex; flex-direction: column; gap: 0.12rem; padding: 0.6rem 0.75rem 0.65rem;
@@ -292,13 +311,10 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
   box-shadow: 0 6px 22px rgb(0 0 0 / 0.16); font: 0.82rem/1.35 var(--sans-serif);
 }
 .globo-tarjeta[hidden] { display: none; }
-.gt-contexto { color: var(--tinta-2); font-size: 0.78rem; }
 .gt-grupo { display: flex; align-items: center; gap: 0.35rem; color: var(--tinta-2); font-weight: 600; }
 .gt-muestra { flex: none; width: 0.62rem; height: 0.62rem; border-radius: 50%; }
 .gt-cifra { font: 700 1.5rem/1.15 var(--sans-serif); color: var(--tinta); margin-top: 0.1rem; }
-.gt-frase { color: var(--tinta); }
 .gt-personas { color: var(--tinta-2); margin-top: 0.15rem; }
-.gt-comparacion { color: var(--tinta-2); }
 .gt-aviso { margin-top: 0.3rem; padding-top: 0.3rem; border-top: 1px dashed var(--borde-fuerte); color: var(--tinta-2); font-size: 0.76rem; }
 
 /* ---------------------------------------------------------------- 9. portada */
@@ -333,20 +349,54 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 .tapa-lugar { font: 600 3cqw var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tapa-gris); display: flex; flex-direction: column; gap: 0.6cqw; }
 .tapa-logo { width: 26cqw; height: auto; display: block; }
 
+/* Tapa con imagen (opción `imagen` de portada(), R184): la ilustración del
+   tema, grande. Sello rojo y título arriba, figura debajo, año y logo abajo,
+   sobre el crema de la ilustración. Cada pieza va en su lugar fijo en cqw;
+   la figura recibe su posición desde portada(). Entra una vez al cargar. */
+.tapa--imagen { display: block; padding: 0; background: var(--tapa-crema); }
+.tapa--imagen > * { position: absolute; }
+.tapa--imagen::before { width: 7%; z-index: 4; pointer-events: none; box-shadow: none; background: linear-gradient(90deg, rgb(0 0 0 / 0.26) 0%, rgb(0 0 0 / 0.08) 35%, rgb(0 0 0 / 0) 48%, rgb(0 0 0 / 0.06) 62%, rgb(0 0 0 / 0) 100%); }
+.tapa--imagen .tapa-sello { top: 7cqw; left: 9cqw; right: 7cqw; z-index: 3; font: 600 2.5cqw var(--sans-serif); letter-spacing: 0.22em; color: var(--tapa-rojo); }
+.tapa--imagen .tapa-titulo { top: 15cqw; left: 9cqw; right: 8cqw; z-index: 3; font: 500 8.6cqw/1.03 var(--serif); letter-spacing: -0.01em; text-wrap: balance; }
+.tapa--imagen .tapa-imagen { z-index: 2; height: auto; display: block; max-width: none; filter: drop-shadow(0 0 0.7cqw var(--tapa-crema)) drop-shadow(0 0 0.4cqw var(--tapa-crema)); }
+.tapa--imagen .tapa-pie { right: 7cqw; bottom: 6.5cqw; z-index: 3; margin: 0; gap: 3cqw; justify-content: flex-end; }
+.tapa--imagen .tapa-anio { font: 600 2.4cqw var(--sans-serif); letter-spacing: 0.22em; color: var(--tapa-gris); }
+.tapa--imagen .tapa-logo { width: 21cqw; }
+@keyframes libro-llega { from { opacity: 0; transform: translateY(18px) rotateY(-28deg); } to { opacity: 1; transform: rotateY(-16deg) rotateX(3deg); } }
+@media (prefers-reduced-motion: no-preference) { .libro--imagen { animation: libro-llega 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; } }
+
 .portada-instituciones { margin: 0 0 2.4rem; }
 
-/* Metadatos editoriales: rejilla sin cajas. */
-.meta-rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.4rem 2rem; margin: 0 0 3rem; padding: 1.6rem 0; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); max-width: var(--ancho-figura); }
-.meta-campo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
-.meta-campo--ancho { grid-column: 1 / -1; }
-.meta-rotulo { font: 700 0.72rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-3); }
-.meta-valor { font: 600 1.02rem/1.35 var(--sans-serif); color: var(--tinta); overflow-wrap: anywhere; }
+/* Metadatos editoriales (R185): sin cajas. Los autores van primero, en su
+   propio renglón y en serif; debajo, la rejilla de datos con el rótulo rojo
+   de los grupos de filtros y del número de sección, valor en peso normal y
+   subtítulo gris. En el teléfono cada autor va en su renglón. */
+.meta-rejilla { display: flex; flex-direction: column; gap: 1.6rem; margin: 0 0 3rem; padding: 1.6rem 0; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); max-width: var(--ancho-figura); }
+.meta-rotulo { display: block; font: 700 0.8rem/1.3 var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--rojo); }
+.meta-autores .meta-rotulo { margin-bottom: 0.45rem; }
+ul.autores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 2.6rem; max-width: none; }
+ul.autores li { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.15rem 0.3rem; margin: 0; max-width: none; }
+.autor-nombre { font: 500 1.22rem/1.3 var(--serif); color: var(--tinta); margin-right: 0.15rem; }
+.autor-orcid, .autor-correo { display: inline-flex; padding: 0.2rem; border-radius: 4px; }
+#observablehq-main .autor-correo { color: var(--rojo); }
+.orcid-icono, .correo-icono { width: 1.1rem; height: 1.1rem; display: block; }
+.autor-nota { font: 400 0.8rem/1.3 var(--sans-serif); color: var(--tinta-2); margin-left: 0.15rem; }
+.meta-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem 2rem; }
+/* En escritorio los cinco datos van en un solo renglón (afiliación, año,
+   fuentes, DOI y licencia), con más ancho para los dos textos largos. */
+@media (min-width: 1100px) { .meta-datos { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.5fr) minmax(0, 1.5fr) minmax(0, 0.85fr) minmax(0, 0.75fr); } }
+.meta-campo { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.meta-valor { font: 400 1rem/1.45 var(--sans-serif); color: var(--tinta); overflow-wrap: anywhere; font-variant-numeric: lining-nums; }
 .meta-sub { font: 0.86rem/1.4 var(--sans-serif); color: var(--tinta-2); }
-.meta-pendiente { color: var(--tinta-2); font-weight: 400; font-style: italic; }
-ul.autores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.6rem; }
-ul.autores li { font: 600 1.02rem var(--sans-serif); color: var(--tinta); display: inline-flex; align-items: center; gap: 0.4rem; max-width: none; }
-.autor-nota { font: 400 0.8rem var(--sans-serif); color: var(--tinta-2); }
-.orcid-icono, .correo-icono { width: 1rem; height: 1rem; display: block; }
+.meta-pendiente { color: var(--tinta-2); font-style: italic; }
+#observablehq-main .meta-enlace { color: var(--rojo); text-decoration: underline; text-decoration-thickness: 1px; }
+#observablehq-main .meta-enlace:hover { text-decoration-thickness: 2px; }
+@media (max-width: 640px) {
+  ul.autores { flex-direction: column; gap: 0.55rem; }
+  .autor-nota { flex-basis: 100%; margin: 0; }
+  .meta-datos { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 1.2rem 1.2rem; }
+  .meta-campo--largo { grid-column: 1 / -1; }
+}
 
 /* «Cómo citar»: pestañas y botón de copiar. */
 .cita-bloque { max-width: 62rem; margin: 0 0 2rem; }
@@ -354,7 +404,8 @@ ul.autores li { font: 600 1.02rem var(--sans-serif); color: var(--tinta); displa
 .cita-bloque > p { color: var(--tinta-2); margin: 0 0 1rem; font-size: 0.95rem; }
 .cita-pestanas { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid var(--borde); }
 .cita-pestana { font: 600 0.88rem var(--sans-serif); color: var(--tinta-2); background: transparent; border: 0; border-bottom: 3px solid transparent; padding: 0.5rem 0.9rem; cursor: pointer; margin-bottom: -1px; }
-.cita-pestana[aria-selected="true"] { color: var(--tinta); border-bottom-color: var(--rojo); }
+.cita-pestana:hover { color: var(--tinta); }
+.cita-pestana[aria-selected="true"] { color: var(--rojo); border-bottom-color: var(--rojo); }
 .cita-panel { display: flex; gap: 1rem; align-items: flex-start; justify-content: space-between; padding: 1rem 1.1rem; background: var(--fondo-2); color: var(--tinta); border-radius: 0 0 var(--radio) var(--radio); }
 .cita-panel[hidden] { display: none; }
 .cita-texto { font: 1rem/1.55 var(--serif); margin: 0; overflow-wrap: anywhere; min-width: 0; flex: 1; }
@@ -364,12 +415,27 @@ ul.autores li { font: 600 1.02rem var(--sans-serif); color: var(--tinta); displa
 .cita-aviso { min-height: 1.3rem; font-size: 0.84rem; color: var(--tinta-2); margin-top: 0.4rem; }
 @media (max-width: 560px) { .cita-panel { flex-direction: column; } }
 
-/* Índice de la galería en la portada. */
-.indice-libro { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem 2rem; max-width: var(--ancho-figura); margin: 0 0 3rem; padding: 0; list-style: none; }
-.indice-libro li { max-width: none; }
-#observablehq-main .indice-libro a { font: 600 1.15rem/1.25 var(--serif); color: var(--tinta); text-decoration: none; }
-#observablehq-main .indice-libro a:hover { color: var(--rojo); }
-.indice-libro span { display: block; font: 0.88rem/1.4 var(--sans-serif); color: var(--tinta-2); margin-top: 0.15rem; }
+/* Índice de la portada (R185): número rojo como el de sección (sale de un
+   contador), título serif en tinta sin subrayado, que se subraya y enrojece
+   al pasar el cursor o enfocarlo, y descripción gris. */
+#observablehq-main .indice-rotulo { font: 700 0.8rem/1.3 var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta); margin: 0 0 1.1rem; }
+.indice-libro { counter-reset: indice; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.6rem 2rem; max-width: var(--ancho-figura); margin: 0 0 3rem; padding: 0; list-style: none; }
+.indice-libro li { counter-increment: indice; max-width: none; margin: 0; }
+.indice-libro li::before { content: counter(indice, decimal-leading-zero); display: block; font: 700 0.8rem/1.3 var(--sans-serif); letter-spacing: 0.08em; color: var(--rojo); margin-bottom: 0.25rem; font-variant-numeric: tabular-nums; }
+#observablehq-main .indice-libro li a[href] { font: 600 1.18rem/1.25 var(--serif); color: var(--tinta); text-decoration: none; }
+#observablehq-main .indice-libro li a[href]:is(:hover, :focus-visible) { color: var(--rojo); text-decoration: underline; text-decoration-thickness: 1px; }
+.indice-libro li > span { display: block; font: 0.88rem/1.45 var(--sans-serif); color: var(--tinta-2); margin-top: 0.2rem; }
+/* Índice agrupado como el menú (Plantilla): un rótulo por grupo y la
+   numeración corrida entre grupos. */
+.indice-grupos { counter-reset: indice; max-width: var(--ancho-figura); margin: 0 0 3rem; }
+.indice-grupos .indice-libro { counter-reset: none; margin-bottom: 2.2rem; }
+.indice-grupos .indice-libro:last-child { margin-bottom: 0; }
+#observablehq-main .indice-grupo { font: 600 1.05rem/1.3 var(--sans-serif); color: var(--tinta-2); margin: 0 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--borde); max-width: none; }
+/* «Cómo empezar un libro» (Plantilla): pasos numerados, en prosa breve. */
+.empezar { max-width: var(--ancho-figura); margin: 0 0 3rem; scroll-margin-top: 1rem; }
+.empezar-pasos { margin: 0; padding-left: 1.4rem; }
+.empezar-pasos li { margin: 0 0 0.7rem; padding-left: 0.3rem; line-height: 1.55; }
+.empezar-pasos li::marker { color: var(--rojo); font: 700 0.95rem var(--sans-serif); }
 
 /* ----------------------------------------- 10. accesibilidad y movimiento */
 .solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
@@ -394,5 +460,6 @@ ul.autores li { font: 600 1.02rem var(--sans-serif); color: var(--tinta); displa
 @media (prefers-reduced-motion: reduce) {
   .seccion-cuerpo.en-vista:not(.animada) > * { animation: none; }
   .seccion-cuerpo.en-vista:not(.animada) .unidad-entra { animation: none; }
+  .fraccion > .marca-viva, .waffle-uno, .unidad-grupo { transition: none; }
   .libro { transition: none; }
 }

@@ -1,19 +1,29 @@
 // src/components/globo.js
 // NORMA ÚNICA DE GLOBOS. Todo globo del libro se construye con `globo({...})`
 // y se ve igual: la misma tarjeta, los mismos renglones, en el mismo orden.
+// Desde noviembre de 2026 (REGLAS.md R116, lección 131) el globo es corto,
+// para leerse de un vistazo:
 //
-//   1. contexto     «Oaxaca · 2020»                       gris chico
-//   2. grupo        ● Mujeres                             con muestra de color
-//   3. cifra        12.3 %                                grande, color de la serie
-//   4. frase        de la población de 5 a 17 años …      qué es y sobre qué universo
-//   5. personas     1,234 de 10,032 personas de 5 a 17 años   el NUMERADOR
-//   6. comparación  2010: 15.2 %                          una sola, optativa
-//   7. aviso        Estimación poco precisa: pocos casos  solo si aplica
+//   1. grupo     ● Con discapacidad                   con muestra de color
+//   2. cifra     16.3 %                               grande, color de la serie
+//   3. personas  1,234 de 10,032 personas con discapacidad   numerador de denominador y universo
+//   4. aviso     Estimación poco precisa: pocos …     solo si aplica
+//
+// La cifra es el porcentaje o el valor del indicador (pesos, años, horas,
+// puntos), nunca un conteo cuando la gráfica tiene un porcentaje. Las personas
+// son el numerador expandido sobre su denominador; en pesos, horas e índices
+// el renglón se omite (ahí el numerador es masa de dinero o de tiempo).
+//
+// No van: el lugar y el año del panel (ya los dice el subtítulo), la frase del
+// denominador (va en el subtítulo y en «¿Qué quiere decir este análisis?»),
+// la comparación con otro grupo o año (va en la tabla) ni el margen de error.
+// Cuando la marca no se identifica por su grupo (un estado en un mapa, una
+// celda de una rejilla, un año de una serie), su nombre va DELANTE del grupo
+// en el mismo renglón, con `marca`: «Oaxaca · Con discapacidad».
 //
 // La jerarquía se DECLARA aquí, con campos con nombre. No hay ningún script
-// que lea el texto dibujado y adivine qué renglón es la cifra. El margen de
-// error no va en el globo: va en la tabla de respaldo. Tampoco se usa el
-// <title> nativo del SVG en ninguna forma.
+// que lea el texto dibujado y adivine qué renglón es la cifra. Tampoco se usa
+// el <title> nativo del SVG en ninguna forma.
 //
 // Uso con Plot:   conGlobo(Plot.plot({...}), g)      la marca interactiva
 //                 lleva Plot.pointerX / pointerY / pointer; el dato bajo el
@@ -26,62 +36,79 @@ import {P} from "./paleta.js";
 
 const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"})[c]);
 const val = (x, d) => (typeof x === "function" ? x(d) : x);
+// Campos de la norma anterior (siete renglones). Si una llamada los trae, se
+// avisa en vez de ignorarlos en silencio.
+const RETIRADOS = ["donde", "cuando", "frase", "comparacion", "apellido"];
 
-// globo({donde, cuando, grupo, color, valor, formato, frase, personas,
-//        universo, unidad, apellido, comparacion, precision, sinDato})
+// globo({marca, grupo, color, valor, formato, personas, universo, unidad,
+//        precision, sinDato})
 // Cada campo es un valor fijo o una función del dato. Devuelve un objeto con
-// `.html(d)` (la tarjeta) y `.renglones(d)` (los mismos datos, para pruebas).
+// `.html(d)` (la tarjeta) y `.renglones(d)` (los mismos datos, para pruebas y
+// para el nombre accesible).
 export function globo({
-  donde = null,        // (d) => "Oaxaca"            unidad o categoría de la marca
-  cuando = null,       // (d) => 2020                edición o tramo
-  grupo = null,        // (d) => "Mujeres"           serie o categoría (optativo)
+  marca = null,        // (d) => "Oaxaca"            nombre de la marca si el grupo no basta (mapa, celda, año)
+  grupo = null,        // (d) => "Con discapacidad"  serie o categoría
   color = null,        // (d) => color de la serie o del signo; pinta muestra y cifra
   valor,               // (d) => 12.34               la estadística, sin formatear
   formato = "pct",     // "pct" | "puntos" | "de100" | "conteo" | "razon" | "pesos" | "horas" | "relativo" | (v, d) => texto
-  frase,               // qué es la cifra y sobre qué denominador
   personas = null,     // (d) => 1234                numerador expandido: quienes cumplen
-  universo = null,     // (d) => 10032               denominador (optativo)
-  unidad = "personas", // "hogares", "municipios", "viviendas"…
-  apellido = "",       // "de 5 a 17 años"
-  comparacion = null,  // (d) => "2010: 15.2 %"      UNA sola
+  universo = null,     // (d) => 10032               denominador expandido
+  unidad = "personas", // el UNIVERSO en dos o tres palabras (R117): "personas con discapacidad", "hombres", "habitantes"…
   precision = null,    // (d) => ({valor, ee, casos}) para el aviso de poca precisión
   sinDato = SIN_DATO,
+  ...resto
 } = {}) {
   if (valor === undefined) throw new Error("globo(): falta `valor`.");
-  if (!frase) throw new Error("globo(): falta `frase` (qué es la cifra y sobre qué denominador).");
+  const viejos = Object.keys(resto).filter((k) => RETIRADOS.includes(k));
+  if (viejos.length) throw new Error(`globo(): ${viejos.join(", ")} ya no van en el globo. Lleva grupo, cifra y población (REGLAS.md R116).`);
   const renglones = (d) => {
     const v = val(valor, d);
     const hay = v != null && !Number.isNaN(+v);
     const p = val(personas, d);
     const prec = val(precision, d);
     return {
-      contexto: [val(donde, d), val(cuando, d)].filter((x) => x != null && x !== "").join(" · "),
-      grupo: val(grupo, d) ?? "",
+      grupo: [val(marca, d), val(grupo, d)].filter((x) => x != null && x !== "").join(" · "),
       color: val(color, d) ?? null,
       cifra: !hay ? sinDato : typeof formato === "function" ? formato(v, d) : formatear(v, formato),
-      frase: hay ? val(frase, d) ?? "" : "",
-      personas: hay && p != null ? fPersonas(p, {universo: val(universo, d), unidad: val(unidad, d), apellido: val(apellido, d)}) : "",
-      comparacion: hay ? val(comparacion, d) ?? "" : "",
+      personas: hay && p != null ? fPersonas(p, {universo: val(universo, d), unidad: val(unidad, d)}) : "",
       aviso: hay && prec && pocoPrecisa(prec) ? "Estimación poco precisa: pocos casos en la muestra" : "",
     };
   };
-  const html = (d) => {
-    const r = renglones(d);
-    const tono = r.color ? ` style="color:${esc(r.color)}"` : "";
-    return (r.contexto ? `<span class="gt-contexto">${esc(r.contexto)}</span>` : "") +
-      (r.grupo ? `<span class="gt-grupo">${r.color ? `<i class="gt-muestra" style="background:${esc(r.color)}"></i>` : ""}${esc(r.grupo)}</span>` : "") +
-      `<span class="gt-cifra"${tono}>${esc(r.cifra)}</span>` +
-      (r.frase ? `<span class="gt-frase">${esc(r.frase)}</span>` : "") +
-      (r.personas ? `<span class="gt-personas">${esc(r.personas)}</span>` : "") +
-      (r.comparacion ? `<span class="gt-comparacion">${esc(r.comparacion)}</span>` : "") +
-      (r.aviso ? `<span class="gt-aviso">${esc(r.aviso)}</span>` : "");
-  };
-  return {html, renglones};
+  return {html: (d) => tarjetaHtml(renglones(d)), renglones};
 }
 
+// La tarjeta a partir de sus renglones ya resueltos.
+function tarjetaHtml(r) {
+  const tono = r.color ? ` style="color:${esc(r.color)}"` : "";
+  return (r.grupo ? `<span class="gt-grupo">${r.color ? `<i class="gt-muestra" style="background:${esc(r.color)}"></i>` : ""}${esc(r.grupo)}</span>` : "") +
+    `<span class="gt-cifra"${tono}>${esc(r.cifra)}</span>` +
+    (r.personas ? `<span class="gt-personas">${esc(r.personas)}</span>` : "") +
+    (r.aviso ? `<span class="gt-aviso">${esc(r.aviso)}</span>` : "");
+}
+
+// El mismo globo con un nombre más al final del grupo. Sirve cuando una figura
+// tiene dos marcas del mismo grupo que se distinguen por su serie (la barra de
+// 2025 y la raya de 2020 de una pirámide): «85 años o más · Hombres · 2020».
+export function globoCon(g, sufijo) {
+  if (!g || !sufijo) return g;
+  const renglones = (d) => {
+    const r = g.renglones(d), s = val(sufijo, d);
+    return {...r, grupo: [r.grupo, s].filter((x) => x != null && x !== "").join(" · ")};
+  };
+  return {html: (d) => tarjetaHtml(renglones(d)), renglones};
+}
+
+// Nombre accesible de una marca: lo mismo que dice su globo, en el mismo orden.
+export const textoGlobo = (r) => [r.grupo, r.cifra, r.personas, r.aviso].filter(Boolean).join(", ");
+
 // ------------------------------------------------------------- la tarjeta
-// Una sola tarjeta para toda la página, colgada del <body>.
-let tarjeta = null;
+// Una sola tarjeta para toda la página, colgada del <body>. Cada vez que se
+// abre se anota su DUEÑO: el nodo (o la gráfica) que la abrió. La tarjeta se
+// cierra sola cuando el puntero ya no está sobre su dueño, aunque el dueño no
+// reciba su `pointerleave` (un nodo que se movió en el DOM bajo el puntero, un
+// puntero que sale rápido por el borde de un mapa), al hacer scroll con el
+// puntero, al salir de la ventana, al tocar fuera y con Escape.
+let tarjeta = null, dueno = null;
 function laTarjeta() {
   if (tarjeta?.isConnected) return tarjeta;
   tarjeta = document.createElement("div");
@@ -89,10 +116,38 @@ function laTarjeta() {
   tarjeta.setAttribute("role", "tooltip");
   tarjeta.hidden = true;
   document.body.appendChild(tarjeta);
+  vigilar();
   return tarjeta;
 }
-export function mostrarGlobo(contenido, x, y) {
+// Sin dueño explícito, el dueño es el dibujo (el <svg> exterior) que está bajo
+// el punto donde se abre la tarjeta.
+function duenoEn(x, y) {
+  let n = document.elementFromPoint?.(x, y);
+  if (!n || n === tarjeta) return null;
+  let svg = null;
+  for (; n && n !== document.body; n = n.parentNode) if (n instanceof SVGSVGElement) svg = n;
+  return svg;
+}
+let vigilando = false;
+function vigilar() {
+  if (vigilando) return;
+  vigilando = true;
+  const visible = () => tarjeta && !tarjeta.hidden;
+  const fuera = (e) => { if (visible() && dueno && !(e.target instanceof Node && dueno.contains(e.target))) ocultarGlobo(); };
+  // En fase de burbuja: el nodo nuevo bajo el puntero ya se anotó como dueño.
+  addEventListener("pointermove", fuera, {passive: true});
+  addEventListener("pointerdown", fuera, {passive: true});
+  document.addEventListener("pointerout", (e) => { if (!e.relatedTarget) ocultarGlobo(); });
+  document.documentElement.addEventListener("pointerleave", ocultarGlobo);
+  addEventListener("blur", ocultarGlobo);
+  // Un globo abierto con el teclado se queda al desplazar (el navegador lleva
+  // la marca enfocada a la vista); uno abierto con el puntero se cierra.
+  addEventListener("scroll", () => { if (visible() && !(dueno && dueno.contains(document.activeElement) && document.activeElement.matches?.(":focus-visible"))) ocultarGlobo(); }, {passive: true, capture: true});
+  addEventListener("keydown", (e) => { if (e.key === "Escape") ocultarGlobo(); });
+}
+export function mostrarGlobo(contenido, x, y, de = null) {
   const t = laTarjeta();
+  dueno = de ?? duenoEn(x, y);
   t.innerHTML = contenido;
   t.hidden = false;
   const w = t.offsetWidth, h = t.offsetHeight;
@@ -105,6 +160,7 @@ export function mostrarGlobo(contenido, x, y) {
 }
 export function ocultarGlobo() {
   if (tarjeta) tarjeta.hidden = true;
+  dueno = null;
 }
 
 // Conecta un globo a una gráfica de Plot. La marca que captura lleva una
@@ -116,7 +172,7 @@ export function conGlobo(plot, g) {
   const pintar = () => {
     const d = plot.value;
     if (d == null || !pos) return ocultarGlobo();
-    mostrarGlobo(g.html(d), pos.x, pos.y);
+    mostrarGlobo(g.html(d), pos.x, pos.y, plot);
   };
   plot.addEventListener("pointermove", (e) => { pos = {x: e.clientX, y: e.clientY}; pintar(); });
   plot.addEventListener("input", pintar);
@@ -129,12 +185,12 @@ export function conGlobo(plot, g) {
 // {rol: false} conserva el papel propio del nodo (una celda de tabla, un
 // botón) y solo le pone el nombre accesible.
 export function globoEn(nodo, g, dato, {rol = true} = {}) {
-  const abrir = (x, y) => mostrarGlobo(g.html(dato), x, y);
+  const abrir = (x, y) => mostrarGlobo(g.html(dato), x, y, nodo);
   // Una marca enfocable se anuncia con el mismo contenido del globo.
   if (nodo.hasAttribute("tabindex")) {
     const r = g.renglones(dato);
     if (rol) nodo.setAttribute("role", "img");
-    nodo.setAttribute("aria-label", [r.contexto, r.grupo, r.cifra, r.frase, r.personas].filter(Boolean).join(", "));
+    nodo.setAttribute("aria-label", textoGlobo(r));
   }
   nodo.addEventListener("pointerenter", (e) => abrir(e.clientX, e.clientY));
   nodo.addEventListener("pointermove", (e) => abrir(e.clientX, e.clientY));

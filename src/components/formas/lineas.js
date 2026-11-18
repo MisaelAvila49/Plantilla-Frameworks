@@ -4,7 +4,7 @@
 // No: más de cuatro o cinco series (usar heatmap o facetas).
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, altoTiempo, vacio, TIPO} from "./comun.js";
 
@@ -31,13 +31,13 @@ const marcasAnio = (valores, tope) => {
 
 // datos: filas largas. x(d) edición, y(d) valor, serie(d) nombre de la serie,
 // color(serie) color de la serie, hueco(d) true para una edición estimada.
-export function lineas(datos, {ancho, x, y, serie = () => "", color = () => P.serie, formatoY = pctEje, rotuloY = null, dominioY = null, globo: g, hueco = null}) {
+export function lineas(datos, {ancho, x, y, serie = () => "", color = () => P.serie, formatoY = pctMarca, rotuloY = null, dominioY = null, globo: g, hueco = null}) {
   const filas = datos.filter((d) => y(d) != null);
   if (!filas.length) return vacio();
   const tinta = (d) => color(serie(d));
   const rotulos = filas.some((d) => serie(d));
   const plot = Plot.plot(base({
-    ancho, alto: altoTiempo(ancho), marginRight: rotulos ? 118 : 24, marginLeft: 46, marginTop: 24,
+    ancho, alto: altoTiempo(ancho), marginRight: rotulos ? 118 : 24, marginLeft: 50, marginTop: 24,
     x: {label: null, tickFormat: (v) => String(v), ticks: marcasAnio([...new Set(filas.map(x))], ancho < 560 ? 4 : 10), inset: 8},
     y: {label: rotuloY, tickFormat: formatoY, grid: true, nice: true, ...(dominioY ? {domain: dominioY} : {zero: true})},
     marks: [

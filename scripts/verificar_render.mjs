@@ -5,7 +5,8 @@
 // Por página: sin errores de JavaScript; el número de secciones declarado en
 // paginas.mjs; cada sección pintada y sin error; cada figura con marcas, con
 // su título, su pie y su sello; los tres desplegables en su orden; ningún
-// <title> nativo como globo; el globo normado abre y trae cifra y frase;
+// <title> nativo como globo; el globo normado abre con grupo, cifra y
+// población, en ese orden y sin otros renglones (R116);
 // los colores cambian entre temas; sin desborde horizontal.
 //
 // Uso:  npm run verificar:render
@@ -77,12 +78,34 @@ async function globoDe(page, i) {
     const t = document.querySelector(".globo-tarjeta");
     if (!t || t.hidden) return null;
     const txt = (c) => t.querySelector(c)?.textContent.trim() ?? "";
-    return {cifra: txt(".gt-cifra"), frase: txt(".gt-frase"), contexto: txt(".gt-contexto"), personas: txt(".gt-personas"), orden: [...t.children].map((n) => n.className)};
+    return {grupo: txt(".gt-grupo"), cifra: txt(".gt-cifra"), personas: txt(".gt-personas"), orden: [...t.children].map((n) => n.className)};
   });
   await page.mouse.move(2, 2);
   return r;
 }
-const ORDEN_GLOBO = ["gt-contexto", "gt-grupo", "gt-cifra", "gt-frase", "gt-personas", "gt-comparacion", "gt-aviso"];
+// Norma del globo (REGLAS.md R116): grupo, cifra, población y, si aplica,
+// el aviso de poca precisión. Ningún otro renglón: ni contexto, ni frase del
+// denominador, ni comparación. Devuelve la lista de defectos.
+const ORDEN_GLOBO = ["gt-grupo", "gt-cifra", "gt-personas", "gt-aviso"];
+function defectosGlobo(g) {
+  const d = [];
+  const ajenos = g.orden.filter((c) => !ORDEN_GLOBO.includes(c));
+  if (ajenos.length) d.push(`renglones fuera de la norma: ${ajenos.join(", ")} (solo grupo, cifra, población y aviso)`);
+  const pos = g.orden.map((c) => ORDEN_GLOBO.indexOf(c)).filter((x) => x >= 0);
+  if (pos.some((x, k) => k && x <= pos[k - 1])) d.push(`renglones del globo fuera de orden (${g.orden.join(", ")})`);
+  if (!g.grupo) d.push("globo sin grupo: no dice qué marca es");
+  if (!g.cifra) d.push("globo sin cifra");
+  // La cifra grande es el porcentaje o el valor; el conteo va debajo.
+  if (g.personas && /^[\d,]+( [a-záéíóúñ]+)?$/.test(g.cifra)) d.push(`la cifra grande es un conteo («${g.cifra}»): va el porcentaje y debajo «N de M personas»`);
+  if (g.personas && !/^[\d,]+ (de [\d,]+ )?[a-záéíóúñ]+/.test(g.personas)) d.push(`renglón de población fuera de formato: «${g.personas}» (debe ser «N de M» y el universo, como «N de M personas con discapacidad»)`);
+  // El sustantivo final nombra el universo en dos o tres palabras (R117): ni
+  // la edad ni grupo, edad y lugar juntos, que ya dice el subtítulo.
+  const cola = g.personas.replace(/^[\d,]+ (de [\d,]+ )?/, "");
+  if (g.personas && /años/.test(cola)) d.push(`el renglón de población lleva la edad («${g.personas}»): va en el subtítulo (R117)`);
+  if (g.personas && cola.split(/\s+/).length > 5) d.push(`universo demasiado largo en el globo («${g.personas}»): dos o tres palabras (R117)`);
+  if (/±/.test(g.cifra + g.personas)) d.push("el margen de error va en la tabla, no en el globo");
+  return d;
+}
 const ORDEN_DESPLEGABLES = ["Fuentes y verificación", "¿Qué quiere decir este análisis?", "Ver los datos"];
 
 // Página de mapa a pantalla completa (`mapa: true`): flechas reales en el
@@ -118,9 +141,7 @@ async function revisarMapa(page, p, errores, nombreVentana, tema) {
     if (!g) falla("el globo de una flecha no abre");
     else {
       globos = 1;
-      if (!g.cifra || !g.frase || !g.contexto) falla(`globo incompleto: ${JSON.stringify(g)}`);
-      const pos = g.orden.map((c) => ORDEN_GLOBO.indexOf(c));
-      if (pos.some((x) => x < 0) || pos.some((x, k) => k && x <= pos[k - 1])) falla(`renglones del globo fuera de orden (${g.orden.join(", ")})`);
+      for (const x of defectosGlobo(g)) falla(`globo de una flecha: ${x}`);
     }
   }
   let flujo = "";
@@ -221,12 +242,7 @@ for (const [nombreVentana, ventana] of [["escritorio", VENTANAS.escritorio], ["m
           const id = m.secciones[i].id;
           if (!g) { falla(`sección ${id}: el globo no abre`); continue; }
           globos++;
-          if (!g.cifra) falla(`sección ${id}: globo sin cifra`);
-          if (g.cifra !== "Sin dato" && !g.frase) falla(`sección ${id}: globo sin la frase del denominador`);
-          if (!g.contexto) falla(`sección ${id}: globo sin contexto`);
-          if (/±/.test(g.cifra + g.personas)) falla(`sección ${id}: el margen de error va en la tabla, no en el globo`);
-          const pos = g.orden.map((c) => ORDEN_GLOBO.indexOf(c));
-          if (pos.some((x) => x < 0) || pos.some((x, k) => k && x <= pos[k - 1])) falla(`sección ${id}: renglones del globo fuera de orden (${g.orden.join(", ")})`);
+          for (const x of defectosGlobo(g)) falla(`sección ${id}: ${x}`);
         }
       }
       if (nombreVentana === "escritorio" && p.analisis) (coloresPorTema[p.ruta] ??= {})[tema] = m.colores.sort().join(",");

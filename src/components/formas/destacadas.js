@@ -12,7 +12,7 @@ import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca} from "../formato.js";
 import {conGlobo, globoEn} from "../globo.js";
 import {base, vacio, leyendaItems, conLeyenda, TIPO} from "./comun.js";
 import {rotulo, separar, anchoTexto} from "./anotaciones.js";
@@ -26,7 +26,7 @@ import {rotulo, separar, anchoTexto} from "./anotaciones.js";
 // del valor. `vertical`: tiempo hacia abajo. corto(serie): nombre abreviado.
 export function destacadas(datos, {
   ancho, tiempo, valor, serie, destacada = () => false, color = null, signo = null, referencia = null, dominio = null, vertical = true,
-  formato = pctEje, rotuloValor = null, nombre = String, corto = null, textoDestacadas = "Grupo destacado", textoResto = "Las demás series", prefijo = "destacadas", globo: g,
+  formato = pctMarca, rotuloValor = null, nombre = String, corto = null, textoDestacadas = "Grupo destacado", textoResto = "Las demás series", prefijo = "destacadas", globo: g,
 }) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();

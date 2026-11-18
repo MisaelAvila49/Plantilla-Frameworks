@@ -13,7 +13,7 @@
 import * as d3 from "npm:d3";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {globoEn, mostrarGlobo, ocultarGlobo} from "../globo.js";
 import {vacio, TIPO, margenRotulos} from "./comun.js";
 import {tintaLegible, anchoTexto} from "./unidad.js";
@@ -58,7 +58,7 @@ function trazar(pts, R) {
 // `referencia`: {valor, texto} línea punteada vertical. `corto(unidad)`:
 // nombre corto en pantallas angostas. El nodo trae `resumen`.
 export function riel(datos, {ancho, unidad, corte, valor, cortes = null, dominio, color = () => P.serie, orden = null, destacar = null,
-  formato = pct, formatoEje = pctEje, rotuloEje = null, referencia = null, corto = null, nombreCorte = String, globo: g}) {
+  formato = pct, formatoEje = pctMarca, rotuloEje = null, referencia = null, corto = null, nombreCorte = String, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null && !Number.isNaN(+valor(d)));
   if (!filas.length) return vacio();
   const lista = cortes ?? [...new Set(filas.map(corte))].sort(d3.ascending);
@@ -150,9 +150,8 @@ export function riel(datos, {ancho, unidad, corte, valor, cortes = null, dominio
     </g>`;
     // Teclado: el renglón entero toma el foco y abre el globo del último corte.
     if (g) {
-      const rr = g.renglones({...r.ultimo, _resumen: r});
       fila.setAttribute("role", "img");
-      fila.setAttribute("aria-label", `${String(r.unidad)}: ${r.filas.map((d) => `${nombreCorte(corte(d))}, ${formato(valor(d))}`).join("; ")}. ${rr.comparacion || ""}`.trim());
+      fila.setAttribute("aria-label", `${String(r.unidad)}: ${r.filas.map((d) => `${nombreCorte(corte(d))}, ${formato(valor(d))}`).join("; ")}`);
       fila.addEventListener("focus", () => { const c = fila.getBoundingClientRect(); mostrarGlobo(g.html({...r.ultimo, _resumen: r}), c.left + Math.min(c.width - 40, punta.x), c.top + (punta.y - top)); });
       fila.addEventListener("blur", ocultarGlobo);
     }

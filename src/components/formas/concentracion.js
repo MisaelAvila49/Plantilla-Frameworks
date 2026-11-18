@@ -10,7 +10,7 @@
 // No: pocos lugares (barras ordenadas), ni tasas, que no se suman.
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca, pctEje} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, TIPO} from "./comun.js";
 
@@ -24,9 +24,9 @@ export function concentracion(puntos, {ancho, grupos, corte = null, marcas = [],
   const color = (k) => (k === grupos[0] ? P.serie : P.comparacion);
   const texto = (k) => (k === grupos[0] ? P.tonoTexto : P.tinta2);
   const plot = Plot.plot(base({
-    ancho, alto: Math.round(Math.max(320, Math.min(440, ancho * 0.52))), marginLeft: 44, marginRight: 18, marginTop: 30, marginBottom: 44,
-    x: {domain: [0, 100], label: rotuloX, labelArrow: "none", labelAnchor: "left", ticks: angosto ? [0, 25, 50, 75, 100] : [0, 10, 25, 50, 75, 100], tickFormat: pctEje, grid: true},
-    y: {domain: [0, 100], label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctEje, ticks: 5},
+    ancho, alto: Math.round(Math.max(320, Math.min(440, ancho * 0.52))), marginLeft: 50, marginRight: 18, marginTop: 30, marginBottom: 44,
+    x: {domain: [0, 100], label: rotuloX, labelArrow: "none", labelAnchor: "left", ticks: angosto ? [0, 25, 50, 75, 100] : [0, 10, 25, 50, 75, 100], tickFormat: pctMarca, grid: true},
+    y: {domain: [0, 100], label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctMarca, ticks: 5},
     marks: [
       Plot.line([[0, 0], [100, 100]], {stroke: P.regla, strokeWidth: 1.2, strokeDasharray: "4 3"}),
       // Área entre la diagonal y la curva principal: cuanto más ancha, más concentrado.

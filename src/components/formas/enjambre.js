@@ -11,7 +11,7 @@
 import * as d3 from "npm:d3";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pctEje, entero} from "../formato.js";
+import {pctMarca, entero} from "../formato.js";
 import {globoEn} from "../globo.js";
 import {vacio, leyendaItems, conLeyenda, azarEstable, TIPO} from "./comun.js";
 import {lienzo, rotulo, separar, partir, anchoTexto} from "./anotaciones.js";
@@ -46,7 +46,7 @@ function empacar(nodos, sep) {
 export function enjambre(datos, {
   ancho, valor, tamano, id = (d) => JSON.stringify(d), nombre = () => "", destacado = null, color = null, dominio = [0, 100], tope = false,
   tamanoMax = null, radioMax = null, referencia = null, rotulos = null, enfocables = 12, vertical = null, largo = 540,
-  formatoEje = pctEje, formatoTamano = entero, rotuloEje = null, textoDestacado = "Grupo destacado", textoResto = "Las demás unidades", unidadTamano = "personas", globo: g,
+  formatoEje = pctMarca, formatoTamano = entero, rotuloEje = null, textoDestacado = "Grupo destacado", textoResto = "Las demás unidades", unidadTamano = "personas", globo: g,
 }) {
   const filas = datos.filter((d) => valor(d) != null && tamano(d) > 0);
   if (!filas.length) return vacio();
@@ -60,7 +60,7 @@ export function enjambre(datos, {
 
   // Márgenes: el eje del indicador va abajo (o a la izquierda si está en pie)
   // y los nombres, en renglones fuera del enjambre.
-  const mEje = enPie ? 46 : 16, mFin = enPie ? 14 : 16, mRot = enPie ? (angosto ? 108 : 150) : 34;
+  const mEje = enPie ? 52 : 16, mFin = enPie ? 14 : 16, mRot = enPie ? (angosto ? 108 : 150) : 34;
   // En pie, el título del eje va arriba y se parte en renglones que quepan.
   const tamTitulo = TIPO.ejes - 1;
   const lineasTitulo = rotuloEje && enPie ? partir(`${rotuloEje}${tope ? `. Arriba, ${formatoEje(dominio[1])} o más` : ""}`, Math.floor((W - 4) / (tamTitulo * 0.6))) : [];

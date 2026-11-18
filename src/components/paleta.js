@@ -79,6 +79,8 @@ const OSCURO = {
 const FIJOS = {
   tapaPapel: "#f6f1e4", tapaTinta: "#1d1d1b", tapaLomo: "#e4dcc8", tapaHojas: "#fbf9f3",
   tapaRojo: "#c4101b", tapaGris: "#6b6966", placaLogo: "#ffffff",
+  // Crema de la tapa con imagen: el fondo de las ilustraciones del equipo.
+  tapaCrema: "#f8f5ee",
 };
 
 // ---------------------------------------------------------- color en OKLab
@@ -240,8 +242,28 @@ export function categorias(nombres) {
   return color;
 }
 
-// Tinta legible sobre un relleno, por luminosidad del relleno.
-export const tintaSobre = (hex) => (luminosidad(hex) < 0.62 ? P.blanco : P.negro);
+// Tinta legible sobre un relleno: la que da MÁS contraste WCAG (blanco o negro).
+// Antes era un umbral fijo de luminosidad (0.62) y en los tonos medios de la
+// rampa, sobre todo en tema oscuro, escogía la tinta con menos contraste.
+// Canales de un color «#rrggbb» o «rgb(r, g, b)»; null si no se reconoce.
+const canales = (c) => {
+  const t = String(c).trim();
+  const h = /^#?([0-9a-f]{6})$/i.exec(t);
+  if (h) return [0, 2, 4].map((i) => parseInt(h[1].slice(i, i + 2), 16));
+  const r = /^rgba?\(\s*([\d.]+)[ ,]+([\d.]+)[ ,]+([\d.]+)/i.exec(t);
+  return r ? [r[1], r[2], r[3]].map(Number) : null;
+};
+const lumWcag = (rgb) => {
+  const v = rgb.map((x) => x / 255).map((x) => (x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+};
+const razon = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+export const tintaSobre = (color) => {
+  const rgb = canales(color);
+  if (!rgb) return luminosidad(color) < 0.62 ? P.blanco : P.negro;
+  const l = lumWcag(rgb);
+  return razon(l, lumWcag(canales(P.blanco))) >= razon(l, lumWcag(canales(P.negro))) ? P.blanco : P.negro;
+};
 
 // ----------------------------------------------------- para la hoja y Node
 // Variables CSS de todo el sitio, en los dos temas. La configuración las
@@ -258,7 +280,7 @@ export function tokensCss(t = "petroleo") {
       "--tono": P.serie, "--tono-texto": P.tonoTexto, "--tono-suave": P.tonoSuave,
       "--sin-dato": P.sinDato, "--apagado": P.apagado, "--blanco": P.blanco,
       "--tapa-papel": P.tapaPapel, "--tapa-tinta": P.tapaTinta, "--tapa-lomo": P.tapaLomo, "--tapa-hojas": P.tapaHojas,
-      "--tapa-rojo": P.tapaRojo, "--tapa-gris": P.tapaGris, "--placa-logo": P.placaLogo,
+      "--tapa-rojo": P.tapaRojo, "--tapa-gris": P.tapaGris, "--tapa-crema": P.tapaCrema, "--placa-logo": P.placaLogo,
     };
     return Object.entries(v).map(([k, x]) => `${k}:${x}`).join(";");
   };
@@ -305,3 +327,8 @@ if (typeof document !== "undefined") {
   recalcular();
   addEventListener("sdi:tema", (e) => aplicarModo(Boolean(e.detail?.oscuro)));
 }
+
+// Conversión a OKLab y rampa derivada de un tono, para el módulo de
+// propuestas de paleta (paletas-propuestas.js), que compara tonos sin cambiar
+// el del libro. CLARO y OSCURO son las bases de cada tema, de solo lectura.
+export {aOklab, deOklab, anclasDe, CLARO, OSCURO};

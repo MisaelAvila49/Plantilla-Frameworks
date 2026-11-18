@@ -77,22 +77,21 @@ display(analisis({
     const orden = [...filas].sort((a, b) => b.pct - a.pct);
     const alta = orden[0], baja = orden.at(-1);
     const ambito = v.region === "todas" ? "el país" : `la región ${v.region}`;
-    const quienes = v.sexo === "Total" ? "población" : v.sexo.toLowerCase();
     const destacada = v.entidad === "todas" ? null : v.entidad;
 
-    // GLOBO NORMADO: contexto, cifra en el color de la serie, frase con el
-    // denominador, personas como numerador y una sola comparación.
+    // GLOBO NORMADO: grupo (aquí la entidad, que es la marca), cifra en el
+    // color de la serie y la población como numerador de denominador, con el
+    // universo nombrado al final.
     const g = globo({
-      donde: (d) => d.entidad,
-      cuando: (d) => d.anio,
+      grupo: (d) => d.entidad,
       color: (d) => (destacada == null || d.entidad === destacada ? P.serie : P.tinta2),
       valor: (d) => d.pct,
       formato: "pct",
-      frase: `de la ${quienes} ${UNIVERSO} cumple la condición`,
       personas: (d) => d.num,
       universo: (d) => d.den,
-      apellido: UNIVERSO,
-      comparacion: () => `En ${ambito}: ${pct(pais.pct)}`,
+      // El sustantivo nombra el total en dos o tres palabras (R117): aquí la
+      // población de la entidad, o sus mujeres u hombres.
+      unidad: (d) => (d.sexo === "Mujeres" ? "mujeres" : d.sexo === "Hombres" ? "hombres" : "habitantes"),
       precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos}),
     });
 

@@ -68,7 +68,7 @@
 import * as d3 from "npm:d3";
 import {html, svg} from "npm:htl";
 import {P, significado, alCambiarModo} from "./paleta.js";
-import {entero, pct, personas as fPersonas, deCada100} from "./formato.js";
+import {entero, pct, deCada100} from "./formato.js";
 import {globo, globoEn, ocultarGlobo} from "./globo.js";
 import {panel, campo} from "./filtros.js";
 import {ENTIDADES, POR_CVE, nombreEntidad, proyeccionMx} from "./geografia.js";
@@ -493,13 +493,14 @@ export function mapaFlujos({flujos, poblacion, geo}) {
       return r;
     }
     const ancho = 112, x = (k) => 6 + Math.min(k, TOPE_REPRESENTACION) / TOPE_REPRESENTACION * (ancho - 12);
-    const contexto = `${donde} · ${rango(v.periodo)}`;
+    // Globo: el grupo, cuántos de cada 100 y a cuántas personas equivale. El
+    // lugar y el periodo ya van en el subtítulo de la tarjeta.
     const g = globo({
-      donde: () => contexto, grupo: (f) => f.rotulo, color: () => P.serie,
+      grupo: (f) => f.rotulo, color: () => P.serie,
       valor: (f) => f.kA, formato: (k) => deCada100(k),
-      frase: (f) => `${f.verbo}, entre quienes ${serieA(v).toLowerCase()}`,
-      personas: (f) => f.nA, universo: (f) => f.uA, apellido: () => tramoEdad(v),
-      comparacion: (f) => `${serieB(v)}: ${deCada100(f.kB)}`,
+      // El total son quienes se movieron por la causa en la selección (R117).
+      personas: (f) => f.nA, universo: (f) => f.uA,
+      unidad: foco == null ? "personas que cambiaron de entidad" : llegan ? "personas que llegaron" : "personas que salieron",
       precision: (f) => ({casos: f.casosA}),
     });
     const filas = r.filas.map((f) => {
@@ -663,13 +664,15 @@ export function mapaFlujos({flujos, poblacion, geo}) {
     const wMax = Math.max(12, Math.min(38, anchoDibujo * 0.045));
     const {v, foco, llegan, salidas, llegadas} = a;
     const universo = (d) => (llegan && foco != null ? llegadas.get(d.destino) : salidas.get(d.origen));
+    // Globo: la flecha (de dónde a dónde), qué parte de quienes salen del
+    // origen (o llegan al destino, con un lugar elegido en «llegan») y cuántas
+    // personas son de cuántas.
     const g = globo({
-      donde: (d) => `${nombre(d.origen)} → ${nombre(d.destino)}`, cuando: () => rango(v.periodo),
-      grupo: () => (foco == null ? null : llegan ? `Llegan a ${nombre(foco)}` : `Salen de ${nombre(foco)}`),
+      grupo: (d) => `${nombre(d.origen)} → ${nombre(d.destino)}`,
       color: () => a.tinta,
-      valor: (d) => d.personas, formato: (x) => fPersonas(x),
-      frase: () => quienes(v, {mayuscula: false}),
-      comparacion: (d) => `${pct(100 * d.personas / (universo(d) || 1))} de quienes ${llegan && foco != null ? `llegan a ${nombre(d.destino)}` : `salen de ${nombre(d.origen)}`}`,
+      valor: (d) => (universo(d) ? (100 * d.personas) / universo(d) : null), formato: "pct",
+      personas: (d) => d.personas, universo: (d) => universo(d) || null,
+      unidad: llegan && foco != null ? "personas que llegaron" : "personas que salieron",
       precision: (d) => ({casos: d.casos}),
     });
     const dibujo = flechas(geo, [...a.principales, ...a.contexto], {

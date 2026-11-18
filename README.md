@@ -4,6 +4,8 @@ Base de Observable Framework para los libros de datos de Social Data IBERO. Cada
 
 Todas las cifras que muestra son **datos de muestra** sintéticos (`scripts/generar_muestra.mjs`, semilla fija) y cada figura lo dice con un sello visible.
 
+> **Antes de crear un libro o tablero nuevo, lee [docs/EMPEZAR-AQUI.md](docs/EMPEZAR-AQUI.md)**: resume las decisiones vigentes (portada, menú, sección, globo, color, datos y verificación) y dice qué leer y en qué orden.
+
 ## Correr y verificar
 
 ```bash
@@ -74,7 +76,7 @@ Las miniaturas salen de la implementación real: `npm run miniaturas` (`scripts/
 ## Reglas que la plantilla hace cumplir
 
 - Un solo `analisis()` arma toda sección: ancla `h2.toc-anchor` en el `.md`, panel de filtros, cifras, figura y los tres desplegables en orden fijo.
-- El globo lleva contexto, grupo, cifra en el color de la serie, frase con el denominador, personas como numerador y una comparación. El margen de error va en la tabla.
+- El globo lleva grupo, cifra en el color de la serie (el porcentaje o el valor) y población «N de M personas» (REGLAS.md R116). Sin contexto, frase ni comparación; el margen de error va en la tabla.
 - Ningún color fuera de `paleta.js`; ningún formato fuera de `formato.js`.
 - Un selector solo ofrece opciones con dato y los dependientes se rellenan solos.
 - Las API que no existen en todos los navegadores se llaman como `window.X` (ver `diferido.js`).

@@ -9,7 +9,7 @@
 // No: un solo umbral reconocido (basta una barra), ni más de dos grupos.
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca, pctEje} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, TIPO} from "./comun.js";
 
@@ -27,9 +27,9 @@ export function curvasAcumuladas(datos, {ancho, grupos, umbrales = [], dominioX,
   const flechas = umbrales.map((u) => ({...u, a: valor.get(`${grupos[1]}|${u.x}`), b: valor.get(`${grupos[0]}|${u.x}`)})).filter((u) => u.a != null && u.b != null);
   const mt = angosto ? 28 : 34;
   const plot = Plot.plot(base({
-    ancho, alto: Math.round(Math.max(300, Math.min(420, ancho * 0.5))), marginLeft: 44, marginRight: 16, marginTop: mt, marginBottom: 44,
+    ancho, alto: Math.round(Math.max(300, Math.min(420, ancho * 0.5))), marginLeft: 50, marginRight: 16, marginTop: mt, marginBottom: 44,
     x: {domain: dominioX},
-    y: {domain: [0, 100], label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctEje, ticks: 5},
+    y: {domain: [0, 100], label: rotuloY, labelArrow: "none", grid: true, tickFormat: pctMarca, ticks: 5},
     marks: [
       Plot.ruleX(umbrales, {x: "x", stroke: P.regla, strokeWidth: 1, strokeDasharray: "3 3"}),
       // Un eje x explícito apaga el implícito: se declaran los dos.

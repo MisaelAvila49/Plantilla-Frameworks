@@ -7,14 +7,14 @@
 import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, margenRotulos, vacio, azarEstable} from "./comun.js";
 
 // datos: una fila por unidad. grupo(d), valor(d), id(d) (para el reparto
 // estable), color(d). `orden`: lista de grupos de arriba a abajo. Devuelve
 // también `resumen` (mediana y cuartiles por grupo) para la tabla.
-export function franjas(datos, {ancho, grupo, valor, id = (d) => JSON.stringify(d), color = () => P.serie, orden = null, formatoEje = pctEje, rotuloX = null, dominioX = null, globo: g}) {
+export function franjas(datos, {ancho, grupo, valor, id = (d) => JSON.stringify(d), color = () => P.serie, orden = null, formatoEje = pctMarca, rotuloX = null, dominioX = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const porGrupo = d3.group(filas, grupo);

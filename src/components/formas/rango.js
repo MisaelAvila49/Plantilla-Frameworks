@@ -8,7 +8,7 @@
 import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, vacio, margenRotulos, TIPO} from "./comun.js";
 
@@ -17,7 +17,7 @@ const corta = (v) => (v == null ? "" : (Math.round(v * 10) / 10).toFixed(1));
 // datos: una fila por unidad. etiqueta(d), valor(d) la unidad completa,
 // minimo(d) y maximo(d) sus partes extremas. `dominioX`: FIJO.
 // `nombreParte`: «municipio». `corto(etiqueta)`.
-export function rango(datos, {ancho, etiqueta, valor, minimo, maximo, dominioX = [0, 100], formato = pct, formatoEje = pctEje, rotuloX = null, nombreUnidad = "entidad", nombreParte = "municipio", corto = null, globo: g}) {
+export function rango(datos, {ancho, etiqueta, valor, minimo, maximo, dominioX = [0, 100], formato = pct, formatoEje = pctMarca, rotuloX = null, nombreUnidad = "entidad", nombreParte = "municipio", corto = null, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null).sort((a, b) => valor(b) - valor(a));
   if (!filas.length) return vacio();
   const angosto = ancho < 560;

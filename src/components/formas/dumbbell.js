@@ -4,14 +4,14 @@
 // No: más de dos valores por fila (heatmap o facetas).
 import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
-import {pctEje} from "../formato.js";
+import {pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
 import {base, margenRotulos, vacio, leyendaItems, conLeyenda} from "./comun.js";
 
 // datos: una fila por unidad. a(d) y b(d) son los dos valores; el dato que
 // recibe el globo es {...d, lado: "a" | "b", v}. `colorSegmento(d)` permite
 // pintar el segmento por sentido (rojo, azul o gris).
-export function dumbbell(datos, {ancho, etiqueta, a, b, nombreA, nombreB, colorA = null, colorB = null, colorSegmento = null, orden = null, formatoEje = pctEje, rotuloX = null, dominioX = null, globo: g}) {
+export function dumbbell(datos, {ancho, etiqueta, a, b, nombreA, nombreB, colorA = null, colorB = null, colorSegmento = null, orden = null, formatoEje = pctMarca, rotuloX = null, dominioX = null, globo: g}) {
   const filas = datos.filter((d) => a(d) != null && b(d) != null).sort(orden ?? ((p, q) => b(q) - b(p)));
   if (!filas.length) return vacio();
   const cA = colorA ?? P.resumen, cB = colorB ?? P.serie;

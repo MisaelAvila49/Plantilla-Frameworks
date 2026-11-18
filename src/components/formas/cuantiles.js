@@ -11,7 +11,7 @@
 import * as d3 from "npm:d3";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
-import {pct, pctEje} from "../formato.js";
+import {pct, pctMarca} from "../formato.js";
 import {globoEn} from "../globo.js";
 import {vacio, TIPO} from "./comun.js";
 
@@ -37,7 +37,7 @@ export const debajoDe = (valor, ee, ref, n = 20) => cuantilesDe(valor, ee, n).fi
 // datos: una fila por unidad. etiqueta(d), valor(d), ee(d). `referencia`:
 // {valor, texto}. `sig`: significado() del capítulo (rojo: debajo, azul:
 // encima). `dominioX`: FIJO. `n`: número de puntos por renglón.
-export function cuantiles(datos, {ancho, etiqueta, valor, ee, referencia, sig, dominioX = [0, 80], n = 20, formato = pct, formatoEje = pctEje, globo: g}) {
+export function cuantiles(datos, {ancho, etiqueta, valor, ee, referencia, sig, dominioX = [0, 80], n = 20, formato = pct, formatoEje = pctMarca, globo: g}) {
   const filas = datos.filter((d) => valor(d) != null && ee(d) != null).sort((a, b) => valor(b) - valor(a));
   if (!filas.length) return vacio();
   const angosto = ancho < 560;

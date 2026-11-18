@@ -27,7 +27,7 @@ Se hacen una sola vez, antes de escribir código. Todo lo demás está decidido 
 4. **Significado de rojo, azul y gris en cada capítulo** (R95). Si un capítulo solo mide niveles, se declara que no usa rojo ni azul.
 5. **Tono de tema** del libro. Por omisión, verde azulado (ver `src/components/paleta.js`, fuente única).
 6. **Fuentes**: qué publica cada una, a qué nivel geográfico, en qué ediciones y qué no es comparable entre ediciones (R142, R143).
-7. **Unidad de análisis, universo y apellido** de las cifras (por ejemplo, “personas de 5 años y más”). De aquí salen las frases de los globos (R118).
+7. **Unidad de análisis, universo y apellido** de las cifras (por ejemplo, “personas de 5 años y más”). De aquí salen el subtítulo y la explicación de cada figura; el globo no lleva frase (R118).
 8. **Metadatos editoriales**: autores con ORCID, afiliación, año, DOI y licencia. Ninguno se publica en “por definir” (R33).
 9. **Qué dibuja la tapa**: dos o tres candidatos para probar en el navegador (R32).
 10. **Vocabulario**: nombre respetuoso de los grupos de población y cómo se nombra el producto en el texto visible (R132).
@@ -136,6 +136,10 @@ Se hacen una sola vez, antes de escribir código. Todo lo demás está decidido 
 
 ---
 
+**R184. La imagen de la tapa es del tema, no de las gráficas.** Una figura que represente a la población del libro, con licencia verificada y anotada (dominio público, CC0, CC BY o ilustración propia), como la mujer del Códice Florentino de `perdida-lengua`. El dato solo puede ir como textura secundaria junto a la figura. Se evitan pictogramas que reduzcan al grupo a un ícono. *Por qué:* las tapas con dibujos de datos se leían como gráficas y se rechazaron.
+
+**R185. Anatomía del bloque de metadatos y del índice de la portada.** Los autores van primero, en su propio renglón y a todo lo ancho, con el nombre en Newsreader 500 a 1.22rem, el ícono oficial de ORCID en su verde #A6CE39 (SVG propio, con `aria-label` «ORCID iD de …»), el sobre del correo en rojo y «autor de correspondencia» chico en gris; en el teléfono cada autor ocupa su renglón. Debajo, la rejilla de afiliación, año, fuentes, DOI y licencia: rótulo encima del valor, en el formato del rótulo de grupo de filtros y del número de sección (700 0.8rem, espaciado 0.08em, mayúsculas, `var(--rojo)`); valor en peso normal, subtítulo en `--tinta-2`, DOI como enlace rojo subrayado y lo que falta («por asignar», «por definir») en gris itálico. El índice lleva un rótulo del mismo formato («Capítulos»), el número de cada capítulo en rojo («01», «02»…, contador CSS), el título en serif tinta sin subrayado, que se subraya y enrojece al pasar el cursor o enfocarlo, y la descripción en gris. En «Cómo citar» la pestaña activa va en rojo. *Por qué:* con rótulos grises, nombres y valores en negrita negra e índice subrayado en negro, el bloque se leía todo negro y los autores no destacaban como en `perdida-lengua`. El rojo de los rótulos da 6.11:1 sobre blanco y #f27076 da 6.72:1 sobre el fondo oscuro.
+
 ## 4. Anatomía de una sección
 
 Cada análisis se arma con el mismo esqueleto, en este orden:
@@ -145,7 +149,6 @@ Cada análisis se arma con el mismo esqueleto, en este orden:
 01 · Título de la sección             número pequeño en rojo
 Frase de entrada                      una sola, optativa (R39)
 [panel de filtros]                    sección 5
-[cifras destacadas]                   sin caja (R42)
 ┌ figura ─────────────────────────┐
 │ Título de la figura             │   en tinta, nombra lo que se mide (R40)
 │ Subtítulo generado              │   lo escribe el componente con los filtros (R41)
@@ -220,6 +223,10 @@ Notas.                                solo las que aplican a lo elegido (R45)
 **R65. `hidden` no oculta si un selector propio fija `display`.** La hoja termina con una regla explícita (`.panel-filtros [hidden] { display: none !important }`) y la prueba mide `getBoundingClientRect()`, no el atributo.
 
 **R66. Los filtros son pegajosos en todas las secciones y compactos al fijarse.** Fijos muestran solo los controles y la franja no pasa de unos 110 px a 1366 × 768. A 390 px colapsan en un botón “Filtros”. En estado normal van en rejilla, con el rótulo arriba de cada select, columnas alineadas entre grupos y selects del mismo alto. *Por qué:* una franja fija de 439 px tapaba la gráfica.
+
+**R182. Sin tarjetas de cifras.** La sección muestra solo la gráfica: no hay fila de cifras destacadas arriba de la figura. Las cifras viven en la figura (rótulos directos), en el globo y en la tabla. `analisis()` ignora `kpis` aunque una página lo devuelva. *Por qué:* las tarjetas repetían lo que la gráfica ya dice y empujaban la figura hacia abajo (noviembre de 2026).
+
+**R183. El panel se compacta solo cuando el contenido que lo sigue llega a la barra compacta.** Mientras tanto queda fijo el panel completo. Si se compactara apenas se fija, la reserva de R67 quedaba a la vista como un hueco vacío de unos 150 px bajo la barra. El cálculo usa el alto completo y el compacto medidos del propio panel, y se evalúa en el scroll con `requestAnimationFrame`.
 
 **R67. El compactado no cambia el largo de la página.** Una reserva de 1 px después del panel compensa en su `margin-top` el alto que el panel cede. `npm run verificar:quieto` da cero cambios. *Por qué:* cerca del final de una sección la pantalla temblaba sola.
 
@@ -359,42 +366,44 @@ La tabla de papeles, las declaraciones por capítulo y la lista de prohibiciones
 
 **R114. Prohibiciones de color.** Lista completa en `catalogo/colores.md`, sección 5. Las principales: morado, hexadecimales fuera del módulo, esquemas de Plot o D3, arcoíris, rosa y azul para el sexo, dominio calculado sobre la vista, rojo o azul sin significado declarado, `stroke: "#fff"` entre polígonos y colores de estado para pintar un grupo.
 
+**R114a. El tono de tema se elige comparando en la página «Muestra de colores»** (`/colores`), no a ojo ni con una muestra suelta. Ahí cada propuesta de `src/components/paletas-propuestas.js` se ve sobre las mismas cinco gráficas, en claro y en oscuro, con el resultado del validador calculado en el build (incluido si el rojo de «desfavorable» se confunde con la rampa o la serie). Una propuesta nueva se añade a ese módulo, se borra la caché de su loader (`src/.observablehq/cache/data/paletas-propuestas.json`) y se compara; la elegida pasa a `TONOS` de `paleta.js` y a `LIBRO.tono`. Con el rojo Ibero como «desfavorable», solo los verdes azulados de matiz 165° a 195° pasan todas las comprobaciones obligatorias en los dos temas (barrido de 55° a 215°, noviembre de 2026): los ocres y los verdes pino se confunden con el rojo con daltonismo, y los azules tinta, con el azul de «favorable». *Por qué:* una rampa que se ve bien sola (OrRd de ColorBrewer) termina en el mismo rojo que «desfavorable», y eso solo se nota con las dos gráficas a la vista y medido.
+
 ---
 
 ## 8. Globos
 
 **R115. Todo globo sale de una sola función, `globo()`, con papeles declarados por nombre.** La misma función entrega las opciones para Plot y el HTML equivalente para las gráficas que no pasan por Plot (treemap, SVG propio, mapas de teselas). Ninguna gráfica usa `<title>` nativo ni arma su tarjeta a mano. *Por qué:* en `perdida-lengua` convivían seis maneras de construir un globo, y la jerarquía se deducía con una expresión regular y con prefijos escondidos en los rótulos, de modo que un renglón “Año 2020” caía al pie por empezar con un dígito.
 
-**R116. Los renglones van siempre en este orden.**
+**R116. El globo lleva tres renglones, siempre en este orden, y nada más.**
 
 | # | Renglón | Contenido | Estilo | Obligatorio |
 | --- | --- | --- | --- | --- |
-| 1 | Contexto | Dónde y cuándo, en una línea: “Tecpatán, Chiapas · 2020” | Gris chico | Sí |
-| 2 | Grupo | Serie o categoría, con la muestra de su color | Gris, con muestra | Solo si la gráfica tiene series o categorías |
-| 3 | Cifra | La estadística con su unidad: “12.3 %”, “−5.0 puntos”, “61 de cada 100” | Grande, extra negrita, en el color de la serie o del signo | Sí |
-| 4 | Frase | Qué es la cifra y sobre qué denominador | Gris chico | Sí |
-| 5 | Personas | A cuántas personas equivale, como numerador | Tenue | Sí, salvo pesos, horas e índices |
-| 6 | Comparación | Una sola: otro año, el tramo o la referencia | Tenue | Optativo |
+| 1 | Grupo | La serie o categoría de la marca, con la muestra de su color: “Con discapacidad”. Si el grupo no basta para saber qué marca es, su nombre va delante en el mismo renglón: “Oaxaca · Con discapacidad” (R123) | Gris, con muestra | Sí |
+| 2 | Cifra | El porcentaje, o el valor del indicador cuando no es un porcentaje: “16.3 %”, “−5.0 puntos”, “$8,412”, “61 de cada 100” | Grande, extra negrita, en el color de la serie o del signo | Sí |
+| 3 | Población | Numerador de denominador, expandidos, y el universo en dos o tres palabras: “6,313 de 69,410 personas con discapacidad” (R117) | Tenue | Sí, salvo pesos, horas, índices y cambios (R119, R120) |
+| 4 | Aviso | “Estimación poco precisa: pocos casos en la muestra” | Gris chico, con línea punteada arriba | Solo si la estimación es poco precisa (R125) |
 
-**R117. Todo globo lleva la estadística y a cuántas personas equivale.** La cantidad es el numerador ya expandido (quienes cumplen), no el universo. El universo puede acompañarla con “de”, pero no sustituirla. *Por qué:* de los 23 globos publicados en `perdida-lengua`, seis mostraban solo el universo y cuatro no mostraban personas.
+No van en el globo el lugar y el año elegidos en el panel (ya los dice el subtítulo de la figura), la frase que explica qué es la cifra y sobre qué denominador (va en el subtítulo y en “¿Qué quiere decir este análisis?”) ni la comparación con otro grupo, otro año o una referencia (va en la tabla y en la gráfica misma). `globo()` rechaza con un error los campos retirados (`donde`, `cuando`, `frase`, `comparacion`, `apellido`) y `verificar:render` falla si la tarjeta trae otro renglón. *Por qué:* con seis renglones el globo repetía lo que ya estaba escrito arriba de la gráfica y la cifra quedaba enterrada a media tarjeta. El lector del libro de discapacidad pidió “solo el grupo, el porcentaje y debajo la población, para que sea más fácil de leer” (noviembre de 2026, lección 131).
 
-**R118. Toda cifra grande lleva debajo la frase que dice qué es y sobre qué denominador,** y la frase sigue al filtro. *Por qué:* la serie larga escribía siempre “habla una lengua indígena”, también cuando el título decía la lengua elegida.
+**R117. La población es el numerador sobre su denominador, los dos expandidos, y el sustantivo final nombra el universo en dos o tres palabras:** “6,313 de 69,410 personas con discapacidad”. El numerador son quienes cumplen, no el universo, y el universo acompaña con “de”. El sustantivo que cierra el renglón dice a qué total se refiere el segundo número. Cuando el denominador es uno de los grupos comparados, se nombra ese grupo: “personas con discapacidad”, “personas sin discapacidad”, “mujeres”, “hombres”, “hogares con personas con discapacidad”, “hablantes”. Cuando la marca es un lugar y el grupo ya está en el primer renglón, o el total es toda la población del lugar, se nombra a sus habitantes: “26,116 de 585,091 habitantes” en un mapa municipal. Cuando el total es un subconjunto que la gráfica define (las personas con una dificultad, las que dejaron la escuela, las que respondieron), se nombra con lo mínimo que lo distingue: “personas con esa dificultad”, “personas que respondieron”. “Personas” a secas queda para lo que no admite nada más corto ni más claro. Nunca se juntan edad, grupo y lugar: “personas sin discapacidad de 5 años o más del estado de Aguascalientes” es demasiado texto, y la edad y el lugar ya los dice el subtítulo. En `globo()` el sustantivo es el campo `unidad`, fijo o función del dato, con “personas” por omisión; `verificar:render` falla si el renglón trae una edad o más de cinco palabras después del segundo número. *Por qué:* de los 23 globos publicados en `perdida-lengua`, seis mostraban solo el universo y cuatro no mostraban personas. En el libro de discapacidad, “N de M personas” no decía de qué total salía M, y el lector pidió “x de y personas con discapacidad o x de y personas sin discapacidad […] pero de forma sencilla” (noviembre de 2026, lección 131).
 
-**R119. Cuando la unidad de análisis no son personas, la cantidad va en esa unidad y se escribe** (hogares, variantes, municipios). En pesos, horas e índices el renglón de personas se omite, porque ahí el numerador es masa de dinero o de tiempo.
+**R118. La cifra del globo es la misma estadística que dibuja la marca, con su unidad escrita.** Lo que significa y sobre qué denominador se calcula se dice una vez, en el subtítulo de la figura y en el desplegable de explicación, y sigue al filtro allí. *Por qué:* la frase repetida en cada globo crecía con cada filtro (“de las personas con discapacidad de 15 a 29 años que usan internet …”) y alargaba la tarjeta sin decir nada que no estuviera escrito encima.
 
-**R120. En un cambio entre dos años, la cifra es el cambio en puntos** y la cantidad son las personas del primer y del último año (“1,234 → 1,180 personas”). La diferencia entre dos porcentajes nunca lleva el signo de porcentaje.
+**R119. Cuando la unidad de análisis no son personas, la población se escribe en esa unidad:** “1,234 de 10,032 hogares”, “102 de 364 variantes”. En pesos, horas, años de escuela e índices el renglón de población se omite, porque ahí el numerador es masa de dinero o de tiempo.
 
-**R121. La cifra grande es siempre la estadística, nunca el conteo.** La excepción son las gráficas que dibujan conteos: ahí la cifra es el conteo y la comparación optativa es el porcentaje.
+**R120. En un cambio entre dos años o en una diferencia entre dos grupos, la cifra es el cambio en puntos** y no lleva renglón de población: cada extremo tiene su propio numerador y su propio universo, y los dos van en la tabla. La diferencia entre dos porcentajes nunca lleva el signo de porcentaje.
+
+**R121. La cifra grande es siempre el porcentaje o el valor, nunca el conteo, también en las gráficas que dibujan conteos** (multitud de figuras, flechas, burbujas, cintas): la cifra es la parte que representa la marca y el conteo va debajo, como “N de M personas”. Solo cuando no existe denominador (el saldo de un flujo, un nodo de una red) la cifra es el conteo con su unidad, “1,234 personas”, y no hay renglón de población. *Por qué:* en “Cuántas y dónde” el globo abría con 108,679,150 en grande y el 83.7 % quedaba en el último renglón; el lector buscaba el porcentaje.
 
 **R122. La cifra toma el color de la marca:** el de la serie cuando hay series, y el rojo, azul o gris del signo cuando la gráfica mide un cambio. *Por qué:* solo uno de los 23 globos pintaba la cifra con el color de su serie.
 
-**R123. El año va en el renglón de contexto,** nunca como renglón aparte ni dentro de la frase. Los rótulos no llevan dos puntos.
+**R123. El nombre de la marca va en el renglón del grupo solo cuando el grupo no la identifica,** delante del grupo y separado por un punto medio: la entidad en un mapa o en una rejilla de entidades (“Oaxaca · Con discapacidad”), la fila de una celda de un mapa de calor (“Dificultad para caminar · Por enfermedad”), el año cuando la vista muestra varios (“2020 · Con discapacidad”) o el tramo de edad de una serie por edad. Se declara con el campo `marca` de `globo()`. El lugar y el año del panel no van nunca: son iguales para todas las marcas. Los rótulos no llevan dos puntos.
 
-**R124. Hay un solo renglón de comparación.** Con dos medidas en la misma marca se muestra la que está bajo el puntero. *Por qué:* con las dos, el globo crecía demasiado.
+**R124. No hay renglón de comparación.** La otra serie, el otro año o el promedio de referencia se leen en la gráfica y en la tabla. *Por qué:* con la comparación, el globo crecía demasiado y competía con la cifra.
 
-**R125. El margen de error va a la tabla, no al globo.** No van en el globo el intervalo de confianza, el margen ±, los casos de muestra, el desglose del denominador, las notas de método ni las segundas comparaciones. Si la estimación es poco precisa, la cifra lleva asterisco y el globo añade un renglón corto: “Pocos casos en la muestra”. *Por qué:* 14 de los 23 globos llevaban el margen pegado a la cifra grande y sin unidad.
+**R125. El margen de error va a la tabla, no al globo.** No van en el globo el intervalo de confianza, el margen ±, los casos de muestra, el desglose del denominador ni las notas de método. Si la estimación es poco precisa, el globo añade al final un renglón corto: “Estimación poco precisa: pocos casos en la muestra”. *Por qué:* 14 de los 23 globos llevaban el margen pegado a la cifra grande y sin unidad.
 
-**R126. Toda marca tiene globo.** Las gráficas con celdas, tramos o cintas lo llevan en cada marca, no solo en una columna auxiliar. *Por qué:* las celdas del heatmap de edades imprimían el porcentaje y no había forma de saber cuántas personas eran.
+**R126. Toda marca tiene globo.** Las gráficas con celdas, tramos o cintas lo llevan en cada marca, no solo en una columna auxiliar. Una marca enfocable con el teclado se anuncia con los mismos renglones del globo, en el mismo orden (`textoGlobo()`): grupo, cifra, población y aviso. *Por qué:* las celdas del heatmap de edades imprimían el porcentaje y no había forma de saber cuántas personas eran.
 
 **R127. Formatos únicos, definidos una vez en el módulo base.** Ninguna página ni componente define una copia local.
 
@@ -406,8 +415,8 @@ La tabla de papeles, las declaraciones por capítulo y la lista de prohibiciones
 | Cambio relativo | Signo siempre y `%` | `+12.4 %` |
 | De cada cien | Entero | `61 de cada 100` |
 | Personas | Entero completo con coma de miles, nunca abreviado, con la unidad escrita | `1,234 personas` |
-| Personas con universo | Numerador, “de”, universo y apellido | `1,234 de 10,032 personas de 5 años y más` |
-| Dos años | Flecha entre los dos valores | `1,234 → 1,180 personas` |
+| Personas con universo | Numerador, “de”, universo y unidad | `1,234 de 10,032 personas` |
+| Dos años (tablas y textos) | Flecha entre los dos valores | `1,234 → 1,180 personas` |
 | Año | Identificador, sin separador | `2020` |
 | Sin dato | Un solo texto en todo el libro | `Sin dato` |
 
@@ -415,66 +424,108 @@ La tabla de papeles, las declaraciones por capítulo y la lista de prohibiciones
 
 **R128. El globo pertenece a la marca bajo el puntero.** Se separa la captura (puntos densos dentro de cada tramo) del ancla (centro de la marca). Una figura tiene un solo puntero aunque tenga dos tipos de marca. La tarjeta se elige por la posición del puntero, no por el último globo abierto. *Por qué:* con `Plot.stackX` el globo se anclaba lejos del tramo señalado, dos punteros abrían dos globos a la vez y aparecía el globo de otra gráfica lejana.
 
-**R129. Jerarquía visual medida.** La cifra va a 22 px en extra negrita y cumple 3:1 como texto grande. Los rótulos cumplen 4.5:1. La tarjeta es la misma en todas las formas y en los mapas.
+**R129. Jerarquía visual medida.** La cifra va a 24 px en extra negrita y cumple 3:1 como texto grande. Los rótulos cumplen 4.5:1. La tarjeta es la misma en todas las formas y en los mapas.
 
 ### Ejemplos
 
 Las cifras de los ejemplos ilustran el formato y no son datos publicados.
 
-Correcto, nivel con series:
+Correcto, nivel con series (el lugar y el año están en el subtítulo de la figura):
 
 ```text
-Tecpatán, Chiapas · 2020
-● Mujeres
-12.3 %
-de la población de 5 años y más habla una lengua indígena
-1,234 de 10,032 personas de 5 años y más
-1990: 15.2 %
+● Con discapacidad
+9.1 %
+6,313 de 69,410 personas con discapacidad
 ```
 
-Correcto, cambio entre dos años (la cifra en el rojo del signo):
+Correcto, el grupo de la marca reparte a toda la población (el universo son sus habitantes):
 
 ```text
-Tecpatán, Chiapas · 1990 → 2020
+● Sin dificultad en ninguna actividad
+83.7 %
+108,679,150 de 129,794,220 habitantes
+```
+
+Correcto, marca que el grupo no identifica (un estado en un mapa con dos series):
+
+```text
+● Oaxaca · Con discapacidad
+12.3 %
+1,234 de 10,032 personas con discapacidad
+```
+
+Correcto, municipio en un mapa de una sola medida (el universo es el lugar):
+
+```text
+● Tlaxiaco, Oaxaca
+4.5 %
+26,116 de 585,091 habitantes
+```
+
+Correcto, serie con varios años:
+
+```text
+● 2020 · Mujeres
+41.6 %
+240,567 de 495,401 mujeres
+```
+
+Correcto, hogares:
+
+```text
+● Con personas con discapacidad
+38.2 %
+1,234 de 3,230 hogares con personas con discapacidad
+```
+
+Correcto, cambio entre dos años (la cifra en el rojo del signo, sin población):
+
+```text
+● Tecpatán, Chiapas · Baja
 −5.0 puntos
-cambio en la parte de la población de 5 años y más que habla una lengua indígena
-1,234 → 1,180 personas
-15.2 % → 10.2 %
 ```
 
 Correcto, unidad distinta de personas:
 
 ```text
-País · 2010
 ● Riesgo alto
 28.0 %
-de las variantes con grado asignado
 102 de 364 variantes
+```
+
+Correcto, pesos (sin población):
+
+```text
+● 2024 · Con discapacidad
+$8,412
 ```
 
 Correcto, estimación poco precisa:
 
 ```text
-Guerrero · 2020
-● Por violencia
-4.2 % *
-de quienes cambiaron de residencia, de 5 a 17 años
-3,150 de 75,000 personas de 5 a 17 años
-Pocos casos en la muestra
+● Guerrero · Por violencia
+4.2 %
+3,150 de 75,000 personas
+Estimación poco precisa: pocos casos en la muestra
 ```
 
 Incorrecto, y por qué:
 
 | Lo que se ve | Defecto | Corrección |
 | --- | --- | --- |
+| `Todo el país · 2025` arriba del grupo | Repite el subtítulo de la figura | Se quita (R116) |
+| `personas no tienen ninguna dificultad` debajo de la cifra | Frase del denominador repetida en cada globo | Va en el subtítulo y en la explicación (R118) |
+| `108,679,150` grande y `83.7 % de la población` al pie | La cifra grande es el conteo | `83.7 %` arriba y `108,679,150 de 129,794,220 personas` debajo (R121) |
+| `2010: 15.2 %` o `Sin discapacidad: 4.1 %` al pie | Renglón de comparación | Se lee en la gráfica y en la tabla (R124) |
+| `Año 2020` como renglón aparte | El año se separa de la marca y alarga la tarjeta | `2020 · Con discapacidad`, solo si la vista muestra varios años (R123) |
 | `12.3 % ± 0.4` | El margen va pegado a la cifra y sin unidad | El margen va a la tabla (R125) |
-| `Niños con madre hablante: 10,032` | Da el universo, no cuántos cumplen | `6,120 de 10,032 niños con madre hablante` (R117) |
-| `Año 2020` como renglón aparte | El año se separa del lugar y cae al pie | `Tecpatán, Chiapas · 2020` (R123) |
+| `Niños con madre hablante: 10,032` | Da el universo, no cuántos cumplen | `6,120 de 10,032 niños` (R117) |
+| `6,313 de 69,410 personas` en la serie con discapacidad | No dice a qué total se refiere el segundo número | `6,313 de 69,410 personas con discapacidad` (R117) |
+| `6,313 de 69,410 personas sin discapacidad de 5 años o más del estado de Aguascalientes` | Junta grupo, edad y lugar | `6,313 de 69,410 personas sin discapacidad`; la edad y el lugar van en el subtítulo (R117) |
 | `0.000 %` | Se lee como nadie | `menos de 0.001 %` (R127) |
 | `–`, `s/d`, `sin dato` | Cuatro textos para lo mismo | `Sin dato` (R127) |
 | `1.23 M` | Abreviado y sin unidad | `1,230,000 personas` (R127) |
 | `−5.0` | Falta la unidad del cambio | `−5.0 puntos` (R120) |
-| `5,412 personas` grande y `3.1 %` al pie | La cifra grande es el conteo en una gráfica de tasas | La estadística arriba, las personas debajo (R121) |
 | Cifra del cambio en tinta | No lleva el color del signo | Rojo, azul o gris según `sentido()` (R122) |
 | Globo nativo del navegador en una cinta | No pasa por `globo()` | Tarjeta común (R115) |
 
@@ -503,6 +554,8 @@ Incorrecto, y por qué:
 **R139. Las citas del texto enlazan a su referencia:** `<a class="cita" href="./referencias#id">Autor, año</a>`.
 
 **R140. La introducción y la apertura de un capítulo son prosa del equipo académico,** en bloque de lectura (ancho de 46 rem, serif a 1.08 rem, interlínea de 1.65) y con citas enlazadas. La regla R130 no aplica a esa prosa, que sí argumenta. Al entrar la prosa se quita la entradilla.
+
+**R181. En la prosa solo van cifras publicadas, con su referencia.** La introducción, la apertura y el cierre de cada capítulo citan únicamente cifras que la fuente oficial publica (comunicado, tabulado, presentación de resultados), cada una con su cita enlazada a Referencias. Las cifras que salen de los análisis propios del libro (cruces, estandarizaciones, cálculos sobre microdatos que la fuente no publica) no van en el texto: se ven en la gráfica, el globo y la tabla, donde el lector las explora por sí mismo. *Por qué:* una cifra propia puesta en la prosa adelanta una lectura y sesga a la persona lectora antes de que mire los datos (decisión del usuario, noviembre de 2026).
 
 **R141. Hay un glosario único de indicadores,** con el sentido y la definición de cada uno por id de selector, que consumen todas las páginas.
 
@@ -657,7 +710,7 @@ Sustituciones respecto de las reglas escritas antes de noviembre de 2026. Donde 
 | C4 | La serie única va en rojo plano (Guía) o en morado (`perdida-lengua`) | La serie única va en el tono de tema (R99) | Decisión editorial |
 | C5 | El rojo marca siempre lo desfavorable y el azul lo favorable, según el `sentido` del glosario | Rojo y azul llevan el significado que declara cada capítulo, y cambia cuando cambia el tema (R95). “En desventaja” y “en ventaja” es una de las declaraciones posibles | Decisión editorial |
 | C6 | Un reparto por edad se pinta de rojo intenso a amarillo claro | Es una magnitud de nivel y va en el tono de tema (R99) | Decisión editorial |
-| C7 | El globo lleva tres o cuatro renglones: dimensión, grupo, valor y población | Seis papeles en orden fijo, con la frase del denominador y las personas como numerador (R116) | Auditoría de globos y decisión editorial |
+| C7 | El globo lleva tres o cuatro renglones: dimensión, grupo, valor y población | Seis papeles en orden fijo, con la frase del denominador y las personas como numerador. Sustituida por C30 | Auditoría de globos y decisión editorial |
 | C8 | El margen ± va pegado a la cifra del globo | El margen va a la tabla. El globo solo añade un renglón corto si la estimación es poco precisa (R125) | Decisión editorial |
 | C9 | Las personas del globo van abreviadas (“1.23 M”) | Entero completo con la unidad escrita (R127) | Auditoría de globos |
 | C10 | Orden de los desplegables: fuentes, explicación, tabla | Explicación, fuentes y verificación, tabla (R46) | Revisión de `perdida-lengua` |
@@ -677,6 +730,11 @@ Sustituciones respecto de las reglas escritas antes de noviembre de 2026. Donde 
 | C24 | Scrollytelling, movimiento en bucle y botón global de pausa | No aplican a los libros de datos. Quedan para las landings fuera de Framework (R2, R167) | Lecciones 116 y 117 |
 | C25 | Portadas oscuras para el libro y para cada capítulo | Tapa clara en perspectiva y encabezado claro por capítulo (R17, R29) | Lecciones 112 y 113 |
 | C26 | El título de una gráfica puede decir el hallazgo (convención de Datawrapper recogida en `formas-novedosas.md`) | El título nombra lo que se mide (R40) | Revisión de `perdida-lengua` y decisión editorial |
+| C27 | Fila de cifras destacadas (tarjetas) arriba de cada figura | Solo la gráfica; cifras en rótulos, globo y tabla (R182) | Libro de discapacidad, noviembre de 2026 |
+| C28 | La prosa podía citar cifras calculadas por el libro | Solo cifras publicadas por la fuente oficial, con referencia (R181) | Libro de discapacidad, noviembre de 2026 |
+| C29 | El dibujo de la tapa representa el dato (mapa de puntos, hilos, arcos) | La imagen representa al tema y a su población; el dato, solo como textura secundaria (R184) | Libro de discapacidad, noviembre de 2026; lección 129 |
+| C30 | El globo lleva seis papeles en orden fijo: contexto, grupo, cifra, frase del denominador, personas y comparación (C7) | Grupo, cifra (el porcentaje o el valor) y población «N de M personas»; el aviso de poca precisión solo si aplica. Sin contexto, frase ni comparación; el nombre de la marca va en el renglón del grupo cuando hace falta (R116 a R124) | Pedido del lector del libro de discapacidad, noviembre de 2026; lección 131 |
+| C31 | Metadatos con rótulo gris en mayúsculas, nombres y valores en negrita, ORCID en tinta; índice con títulos subrayados en negro | Autores en su renglón en serif con ORCID verde y correo rojo; rótulos en rojo de rótulo de grupo; valores en peso normal; índice con número rojo y título sin subrayado (R185) | Revisión de la portada, noviembre de 2026 |
 
 ---
 
@@ -703,7 +761,7 @@ Color y globos
 - [ ] Cada capítulo declara qué significan rojo, azul y gris, en la página y en Metodología.
 - [ ] No hay morado, salvo la esquina «los dos altos» del mapa bivariado (R93). No hay hexadecimales ni ternarios de tema fuera del módulo de paleta.
 - [ ] Toda rampa tiene dominio fijo en una constante. Toda magnitud continua tiene leyenda continua.
-- [ ] Todo globo sale de `globo()`, con cifra, frase del denominador y personas. Ningún globo lleva el margen ±.
+- [ ] Todo globo sale de `globo()` con grupo, cifra (el porcentaje o el valor) y población «N de M personas», sin contexto, frase ni comparación. Ningún globo lleva el margen ±.
 - [ ] Hay una sola función por formato y un solo texto para “Sin dato”.
 
 Textos y referencias

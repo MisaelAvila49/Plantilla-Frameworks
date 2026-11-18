@@ -36,21 +36,30 @@ export function tapaMosaico(valores, dominio = [0, 100]) {
 }
 
 // Hero: texto a la izquierda y libro claro en perspectiva a la derecha.
-export function portada(libro, {dibujo = null, explorar = "./seccion-modelo", metodo = "./metodologia", antetitulo = "Datos estadísticos · Social Data IBERO", logo = null} = {}) {
+// Dos composiciones de tapa:
+// - `dibujo` (la de omisión): sello, dibujo al centro, título y pie con lugar y año.
+// - `imagen`: la ilustración del tema, grande (R184). Sello rojo y título arriba,
+//   la figura debajo y el año con el logo abajo, sobre papel crema. Se pasa
+//   {url, izquierda, abajo, ancho}, en % del ancho de la tapa (cqw), para que
+//   la figura no tape el título ni el pie. Si llega `imagen`, `dibujo` no se usa.
+// Los dos botones llevan a `explorar` y a `metodo`; su texto se cambia con
+// `textoExplorar` y `textoMetodo` (la Plantilla los usa para su propia portada).
+export function portada(libro, {dibujo = null, imagen = null, explorar = "./seccion-modelo", metodo = "./metodologia", textoExplorar = "Explorar los datos", textoMetodo = "Cómo se hizo", antetitulo = "Datos estadísticos · Social Data IBERO", logo = null} = {}) {
+  const conImagen = Boolean(imagen?.url);
   return html`<div class="portada">
     <div class="portada-texto">
       <span class="portada-antetitulo">${antetitulo}</span>
       <h1 class="portada-titulo">${tituloCon(libro, "span")}</h1>
       <p class="portada-resumen">${libro.descripcion}</p>
       <div class="portada-botones">
-        <a class="boton boton-principal" href=${explorar}>Explorar los datos</a>
-        <a class="boton" href=${metodo}>Cómo se hizo</a>
+        <a class="boton boton-principal" href=${explorar}>${textoExplorar}</a>
+        <a class="boton" href=${metodo}>${textoMetodo}</a>
       </div>
     </div>
     <div class="lugar-libro" aria-hidden="true">
-      <div class="libro">
+      <div class=${conImagen ? "libro libro--imagen" : "libro"}>
         <div class="hojas"></div>
-        <div class="tapa">
+        ${conImagen ? tapaConImagen(libro, imagen, logo) : html`<div class="tapa">
           <span class="tapa-sello">Social Data Ibero</span>
           <div class="tapa-dibujo">${dibujo ?? ""}</div>
           <p class="tapa-titulo">${tituloCon(libro, "em")}</p>
@@ -58,28 +67,53 @@ export function portada(libro, {dibujo = null, explorar = "./seccion-modelo", me
             <span class="tapa-lugar"><span>${libro.ciudad}</span><span>${romano(libro.anio)}</span></span>
             ${logo ? html`<img class="tapa-logo" src=${logo} alt="">` : ""}
           </div>
-        </div>
+        </div>`}
       </div>
     </div>
   </div>`;
 }
 
-// Rejilla de metadatos: autores con ORCID, afiliación, año, fuentes, DOI y licencia.
+// Tapa con la ilustración del tema (opción `imagen` de portada()).
+function tapaConImagen(libro, {url, izquierda = 8, abajo = 18, ancho = 80}, logo) {
+  return html`<div class="tapa tapa--imagen">
+    <span class="tapa-sello">Social Data Ibero</span>
+    <p class="tapa-titulo">${tituloCon(libro, "em")}</p>
+    <img class="tapa-imagen" src=${url} alt="" style=${`left:${izquierda}cqw;bottom:${abajo}cqw;width:${ancho}cqw`}>
+    <div class="tapa-pie">
+      <span class="tapa-anio">${romano(libro.anio)}</span>
+      ${logo ? html`<img class="tapa-logo" src=${logo} alt="">` : ""}
+    </div>
+  </div>`;
+}
+
+// Bloque de metadatos (R185). Los autores van primero, en su propio renglón
+// y en serif, con el ícono oficial de ORCID en su verde (#A6CE39, que es de
+// la marca y no cambia con el tema) y el sobre del correo en rojo. Debajo, la
+// rejilla de los demás datos: rótulo rojo en mayúsculas chicas (el mismo de
+// los grupos de filtros y del número de sección), valor en peso normal y
+// subtítulo en gris. Lo que falta («por asignar», «por definir») va en gris
+// itálico.
+const ICONO_ORCID = svg`<svg class="orcid-icono" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="#A6CE39" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"/></svg>`;
+
 export function metadatos(libro) {
   const nombre = (a) => `${a.nombre} ${a.apellidos}`;
-  const orcid = (a) => (a.orcid ? html`<a href=${`https://orcid.org/${a.orcid}`} target="_blank" rel="noopener" aria-label=${`ORCID de ${nombre(a)}`}><svg class="orcid-icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="700" fill=${P.fondo} font-family="sans-serif">iD</text></svg></a>` : "");
-  const correo = (a) => (a.correo ? html`<a href=${`mailto:${a.correo}`} aria-label=${`Correo de ${nombre(a)}`}><svg class="correo-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><polyline points="22,7 12,14 2,7"/></svg></a>` : "");
+  // El nombre accesible incluye el texto visible «iD» del ícono (WCAG 2.5.3).
+  const orcid = (a) => (a.orcid ? html`<a class="autor-orcid" href=${`https://orcid.org/${a.orcid}`} target="_blank" rel="noopener" aria-label=${`ORCID iD de ${nombre(a)}`}>${ICONO_ORCID.cloneNode(true)}</a>` : "");
+  const correo = (a) => (a.correo ? html`<a class="autor-correo" href=${`mailto:${a.correo}`} aria-label=${`Correo de ${nombre(a)}`}><svg class="correo-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><polyline points="22,7 12,14 2,7"/></svg></a>` : "");
   const pendiente = (t) => html`<span class="meta-valor meta-pendiente">${t}</span>`;
+  const campo = (rotulo, valor, sub, clase = "") => html`<div class=${`meta-campo ${clase}`.trim()}><span class="meta-rotulo">${rotulo}</span>${valor}${sub ? html`<span class="meta-sub">${sub}</span>` : ""}</div>`;
   return html`<section class="meta-rejilla" aria-label="Información editorial">
-    <div class="meta-campo meta-campo--ancho">
+    <div class="meta-autores">
       <span class="meta-rotulo">Autores</span>
-      <ul class="autores">${libro.autores.map((a) => html`<li>${nombre(a)} ${orcid(a)} ${correo(a)} ${a.correspondencia ? html`<span class="autor-nota">autor de correspondencia</span>` : ""}</li>`)}</ul>
+      <ul class="autores">${libro.autores.map((a) => html`<li><span class="autor-nombre">${nombre(a)}</span>${orcid(a)}${correo(a)}${a.correspondencia ? html`<span class="autor-nota">autor de correspondencia</span>` : ""}</li>`)}</ul>
     </div>
-    <div class="meta-campo"><span class="meta-rotulo">Afiliación</span><span class="meta-valor">${libro.afiliacion}</span><span class="meta-sub">${libro.institucion}</span></div>
-    <div class="meta-campo"><span class="meta-rotulo">Año</span><span class="meta-valor">${libro.anio}</span></div>
-    <div class="meta-campo"><span class="meta-rotulo">Fuentes</span><span class="meta-valor">${libro.fuentes}</span><span class="meta-sub">${libro.fuentesDetalle ?? ""}</span></div>
-    <div class="meta-campo"><span class="meta-rotulo">DOI</span>${libro.doi ? html`<span class="meta-valor"><a href=${`https://doi.org/${libro.doi}`} target="_blank" rel="noopener">${libro.doi}</a></span>` : pendiente("por asignar")}</div>
-    <div class="meta-campo"><span class="meta-rotulo">Licencia</span>${libro.licencia ? html`<span class="meta-valor">${libro.licencia}</span>` : pendiente("por definir")}</div>
+    <div class="meta-datos">
+      ${campo("Afiliación", html`<span class="meta-valor">${libro.afiliacion}</span>`, libro.institucion, "meta-campo--largo")}
+      ${campo("Año", html`<span class="meta-valor">${libro.anio}</span>`)}
+      ${campo("Fuentes", html`<span class="meta-valor">${libro.fuentes}</span>`, html`<a class="meta-enlace" href="./referencias">Ver las referencias</a>`, "meta-campo--largo")}
+      ${campo("DOI", libro.doi ? html`<span class="meta-valor"><a class="meta-enlace" href=${`https://doi.org/${libro.doi}`} target="_blank" rel="noopener">${libro.doi}</a></span>` : pendiente("por asignar"))}
+      ${campo("Licencia", libro.licencia ? html`<span class="meta-valor">${libro.licencia}</span>` : pendiente("por definir"))}
+    </div>
   </section>`;
 }
 
