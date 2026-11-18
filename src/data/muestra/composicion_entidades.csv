@@ -1,0 +1,577 @@
+cve_ent,entidad,region,corte,sexo,motivo,personas,casos
+01,Aguascalientes,Centro-Occidente,2015,Mujeres,Motivo A,16994,34
+01,Aguascalientes,Centro-Occidente,2015,Mujeres,Motivo B,10045,16
+01,Aguascalientes,Centro-Occidente,2015,Mujeres,Motivo C,6801,8
+01,Aguascalientes,Centro-Occidente,2015,Hombres,Motivo A,21764,35
+01,Aguascalientes,Centro-Occidente,2015,Hombres,Motivo B,8195,14
+01,Aguascalientes,Centro-Occidente,2015,Hombres,Motivo C,8201,10
+01,Aguascalientes,Centro-Occidente,2020,Mujeres,Motivo A,15906,26
+01,Aguascalientes,Centro-Occidente,2020,Mujeres,Motivo B,13094,22
+01,Aguascalientes,Centro-Occidente,2020,Mujeres,Motivo C,8900,19
+01,Aguascalientes,Centro-Occidente,2020,Hombres,Motivo A,20836,24
+01,Aguascalientes,Centro-Occidente,2020,Hombres,Motivo B,10927,14
+01,Aguascalientes,Centro-Occidente,2020,Hombres,Motivo C,10976,29
+01,Aguascalientes,Centro-Occidente,2025,Mujeres,Motivo A,14335,21
+01,Aguascalientes,Centro-Occidente,2025,Mujeres,Motivo B,15902,24
+01,Aguascalientes,Centro-Occidente,2025,Mujeres,Motivo C,11725,13
+01,Aguascalientes,Centro-Occidente,2025,Hombres,Motivo A,19104,35
+01,Aguascalientes,Centro-Occidente,2025,Hombres,Motivo B,13501,27
+01,Aguascalientes,Centro-Occidente,2025,Hombres,Motivo C,14713,38
+02,Baja California,Norte,2015,Mujeres,Motivo A,24140,32
+02,Baja California,Norte,2015,Mujeres,Motivo B,34387,67
+02,Baja California,Norte,2015,Mujeres,Motivo C,15733,29
+02,Baja California,Norte,2015,Hombres,Motivo A,33216,52
+02,Baja California,Norte,2015,Hombres,Motivo B,30141,49
+02,Baja California,Norte,2015,Hombres,Motivo C,20382,41
+02,Baja California,Norte,2020,Mujeres,Motivo A,19415,41
+02,Baja California,Norte,2020,Mujeres,Motivo B,49985,57
+02,Baja California,Norte,2020,Mujeres,Motivo C,13771,31
+02,Baja California,Norte,2020,Hombres,Motivo A,28353,32
+02,Baja California,Norte,2020,Hombres,Motivo B,46502,66
+02,Baja California,Norte,2020,Hombres,Motivo C,18934,24
+02,Baja California,Norte,2025,Mujeres,Motivo A,13086,18
+02,Baja California,Norte,2025,Mujeres,Motivo B,68714,78
+02,Baja California,Norte,2025,Mujeres,Motivo C,10283,11
+02,Baja California,Norte,2025,Hombres,Motivo A,20420,28
+02,Baja California,Norte,2025,Hombres,Motivo B,68309,87
+02,Baja California,Norte,2025,Hombres,Motivo C,15108,23
+03,Baja California Sur,Norte,2015,Mujeres,Motivo A,92643,121
+03,Baja California Sur,Norte,2015,Mujeres,Motivo B,59581,81
+03,Baja California Sur,Norte,2015,Mujeres,Motivo C,41886,84
+03,Baja California Sur,Norte,2015,Hombres,Motivo A,119261,133
+03,Baja California Sur,Norte,2015,Hombres,Motivo B,48861,65
+03,Baja California Sur,Norte,2015,Hombres,Motivo C,50768,106
+03,Baja California Sur,Norte,2020,Mujeres,Motivo A,118721,166
+03,Baja California Sur,Norte,2020,Mujeres,Motivo B,55409,127
+03,Baja California Sur,Norte,2020,Mujeres,Motivo C,43274,48
+03,Baja California Sur,Norte,2020,Hombres,Motivo A,149440,334
+03,Baja California Sur,Norte,2020,Hombres,Motivo B,44431,64
+03,Baja California Sur,Norte,2020,Hombres,Motivo C,51285,60
+03,Baja California Sur,Norte,2025,Mujeres,Motivo A,148466,211
+03,Baja California Sur,Norte,2025,Mujeres,Motivo B,50031,62
+03,Baja California Sur,Norte,2025,Mujeres,Motivo C,42200,67
+03,Baja California Sur,Norte,2025,Hombres,Motivo A,183111,249
+03,Baja California Sur,Norte,2025,Hombres,Motivo B,39309,64
+03,Baja California Sur,Norte,2025,Hombres,Motivo C,49004,85
+04,Campeche,Sur-Sureste,2015,Mujeres,Motivo A,58056,114
+04,Campeche,Sur-Sureste,2015,Mujeres,Motivo B,60549,90
+04,Campeche,Sur-Sureste,2015,Mujeres,Motivo C,70335,170
+04,Campeche,Sur-Sureste,2015,Hombres,Motivo A,75956,154
+04,Campeche,Sur-Sureste,2015,Hombres,Motivo B,50465,61
+04,Campeche,Sur-Sureste,2015,Hombres,Motivo C,86640,173
+04,Campeche,Sur-Sureste,2020,Mujeres,Motivo A,84363,135
+04,Campeche,Sur-Sureste,2020,Mujeres,Motivo B,61917,126
+04,Campeche,Sur-Sureste,2020,Mujeres,Motivo C,65333,122
+04,Campeche,Sur-Sureste,2020,Hombres,Motivo A,108631,201
+04,Campeche,Sur-Sureste,2020,Hombres,Motivo B,50790,61
+04,Campeche,Sur-Sureste,2020,Hombres,Motivo C,79207,155
+04,Campeche,Sur-Sureste,2025,Mujeres,Motivo A,114465,275
+04,Campeche,Sur-Sureste,2025,Mujeres,Motivo B,62682,102
+04,Campeche,Sur-Sureste,2025,Mujeres,Motivo C,57139,81
+04,Campeche,Sur-Sureste,2025,Hombres,Motivo A,145254,166
+04,Campeche,Sur-Sureste,2025,Hombres,Motivo B,50671,86
+04,Campeche,Sur-Sureste,2025,Hombres,Motivo C,68269,129
+05,Coahuila,Norte,2015,Mujeres,Motivo A,16991,30
+05,Coahuila,Norte,2015,Mujeres,Motivo B,22867,26
+05,Coahuila,Norte,2015,Mujeres,Motivo C,11371,15
+05,Coahuila,Norte,2015,Hombres,Motivo A,23225,45
+05,Coahuila,Norte,2015,Hombres,Motivo B,19911,32
+05,Coahuila,Norte,2015,Hombres,Motivo C,14634,23
+05,Coahuila,Norte,2020,Mujeres,Motivo A,15787,22
+05,Coahuila,Norte,2020,Mujeres,Motivo B,30634,77
+05,Coahuila,Norte,2020,Mujeres,Motivo C,10957,15
+05,Coahuila,Norte,2020,Hombres,Motivo A,22391,30
+05,Coahuila,Norte,2020,Hombres,Motivo B,27679,51
+05,Coahuila,Norte,2020,Hombres,Motivo C,14632,33
+05,Coahuila,Norte,2025,Mujeres,Motivo A,13688,21
+05,Coahuila,Norte,2025,Mujeres,Motivo B,38681,76
+05,Coahuila,Norte,2025,Mujeres,Motivo C,11155,14
+05,Coahuila,Norte,2025,Hombres,Motivo A,20080,27
+05,Coahuila,Norte,2025,Hombres,Motivo B,36147,48
+05,Coahuila,Norte,2025,Hombres,Motivo C,15407,31
+06,Colima,Centro-Occidente,2015,Mujeres,Motivo A,14973,17
+06,Colima,Centro-Occidente,2015,Mujeres,Motivo B,20565,32
+06,Colima,Centro-Occidente,2015,Mujeres,Motivo C,11463,13
+06,Colima,Centro-Occidente,2015,Hombres,Motivo A,20418,29
+06,Colima,Centro-Occidente,2015,Hombres,Motivo B,17865,47
+06,Colima,Centro-Occidente,2015,Hombres,Motivo C,14717,17
+06,Colima,Centro-Occidente,2020,Mujeres,Motivo A,17037,25
+06,Colima,Centro-Occidente,2020,Mujeres,Motivo B,26676,45
+06,Colima,Centro-Occidente,2020,Mujeres,Motivo C,8927,16
+06,Colima,Centro-Occidente,2020,Hombres,Motivo A,23831,59
+06,Colima,Centro-Occidente,2020,Hombres,Motivo B,23771,52
+06,Colima,Centro-Occidente,2020,Hombres,Motivo C,11757,15
+06,Colima,Centro-Occidente,2025,Mujeres,Motivo A,21393,34
+06,Colima,Centro-Occidente,2025,Mujeres,Motivo B,29768,51
+06,Colima,Centro-Occidente,2025,Mujeres,Motivo C,7119,11
+06,Colima,Centro-Occidente,2025,Hombres,Motivo A,29876,36
+06,Colima,Centro-Occidente,2025,Hombres,Motivo B,26483,36
+06,Colima,Centro-Occidente,2025,Hombres,Motivo C,9361,15
+07,Chiapas,Sur-Sureste,2015,Mujeres,Motivo A,31450,42
+07,Chiapas,Sur-Sureste,2015,Mujeres,Motivo B,46124,112
+07,Chiapas,Sur-Sureste,2015,Mujeres,Motivo C,53086,131
+07,Chiapas,Sur-Sureste,2015,Hombres,Motivo A,41817,85
+07,Chiapas,Sur-Sureste,2015,Hombres,Motivo B,39067,57
+07,Chiapas,Sur-Sureste,2015,Hombres,Motivo C,66456,138
+07,Chiapas,Sur-Sureste,2020,Mujeres,Motivo A,46913,70
+07,Chiapas,Sur-Sureste,2020,Mujeres,Motivo B,47882,63
+07,Chiapas,Sur-Sureste,2020,Mujeres,Motivo C,51544,98
+07,Chiapas,Sur-Sureste,2020,Hombres,Motivo A,61468,148
+07,Chiapas,Sur-Sureste,2020,Hombres,Motivo B,39967,63
+07,Chiapas,Sur-Sureste,2020,Hombres,Motivo C,63586,72
+07,Chiapas,Sur-Sureste,2025,Mujeres,Motivo A,60396,149
+07,Chiapas,Sur-Sureste,2025,Mujeres,Motivo B,53537,112
+07,Chiapas,Sur-Sureste,2025,Mujeres,Motivo C,48085,70
+07,Chiapas,Sur-Sureste,2025,Hombres,Motivo A,78944,130
+07,Chiapas,Sur-Sureste,2025,Hombres,Motivo B,44580,56
+07,Chiapas,Sur-Sureste,2025,Hombres,Motivo C,59177,112
+08,Chihuahua,Norte,2015,Mujeres,Motivo A,6771,10
+08,Chihuahua,Norte,2015,Mujeres,Motivo B,5346,8
+08,Chihuahua,Norte,2015,Mujeres,Motivo C,3863,6
+08,Chihuahua,Norte,2015,Hombres,Motivo A,8833,12
+08,Chihuahua,Norte,2015,Hombres,Motivo B,4443,9
+08,Chihuahua,Norte,2015,Hombres,Motivo C,4745,6
+08,Chihuahua,Norte,2020,Mujeres,Motivo A,8047,19
+08,Chihuahua,Norte,2020,Mujeres,Motivo B,5380,6
+08,Chihuahua,Norte,2020,Mujeres,Motivo C,4471,7
+08,Chihuahua,Norte,2020,Hombres,Motivo A,10355,17
+08,Chihuahua,Norte,2020,Hombres,Motivo B,4410,6
+08,Chihuahua,Norte,2020,Hombres,Motivo C,5417,11
+08,Chihuahua,Norte,2025,Mujeres,Motivo A,9846,21
+08,Chihuahua,Norte,2025,Mujeres,Motivo B,5331,10
+08,Chihuahua,Norte,2025,Mujeres,Motivo C,4638,12
+08,Chihuahua,Norte,2025,Hombres,Motivo A,12494,14
+08,Chihuahua,Norte,2025,Hombres,Motivo B,4309,6
+08,Chihuahua,Norte,2025,Hombres,Motivo C,5541,9
+09,Ciudad de México,Centro,2015,Mujeres,Motivo A,57327,106
+09,Ciudad de México,Centro,2015,Mujeres,Motivo B,49957,75
+09,Ciudad de México,Centro,2015,Mujeres,Motivo C,58626,79
+09,Ciudad de México,Centro,2015,Hombres,Motivo A,74301,91
+09,Ciudad de México,Centro,2015,Hombres,Motivo B,41248,73
+09,Ciudad de México,Centro,2015,Hombres,Motivo C,71541,82
+09,Ciudad de México,Centro,2020,Mujeres,Motivo A,51325,66
+09,Ciudad de México,Centro,2020,Mujeres,Motivo B,69838,94
+09,Ciudad de México,Centro,2020,Mujeres,Motivo C,64656,130
+09,Ciudad de México,Centro,2020,Hombres,Motivo A,68637,132
+09,Ciudad de México,Centro,2020,Hombres,Motivo B,59495,100
+09,Ciudad de México,Centro,2020,Hombres,Motivo C,81408,138
+09,Ciudad de México,Centro,2025,Mujeres,Motivo A,46285,57
+09,Ciudad de México,Centro,2025,Mujeres,Motivo B,94002,226
+09,Ciudad de México,Centro,2025,Mujeres,Motivo C,65441,139
+09,Ciudad de México,Centro,2025,Hombres,Motivo A,63999,129
+09,Ciudad de México,Centro,2025,Hombres,Motivo B,82800,151
+09,Ciudad de México,Centro,2025,Hombres,Motivo C,85193,105
+10,Durango,Norte,2015,Mujeres,Motivo A,37019,41
+10,Durango,Norte,2015,Mujeres,Motivo B,60345,100
+10,Durango,Norte,2015,Mujeres,Motivo C,32356,53
+10,Durango,Norte,2015,Hombres,Motivo A,51123,112
+10,Durango,Norte,2015,Hombres,Motivo B,53088,112
+10,Durango,Norte,2015,Hombres,Motivo C,42070,105
+10,Durango,Norte,2020,Mujeres,Motivo A,56017,108
+10,Durango,Norte,2020,Mujeres,Motivo B,57331,80
+10,Durango,Norte,2020,Mujeres,Motivo C,31938,76
+10,Durango,Norte,2020,Hombres,Motivo A,74851,160
+10,Durango,Norte,2020,Hombres,Motivo B,48801,103
+10,Durango,Norte,2020,Hombres,Motivo C,40181,53
+10,Durango,Norte,2025,Mujeres,Motivo A,80688,105
+10,Durango,Norte,2025,Mujeres,Motivo B,54404,96
+10,Durango,Norte,2025,Mujeres,Motivo C,25761,36
+10,Durango,Norte,2025,Hombres,Motivo A,104841,118
+10,Durango,Norte,2025,Hombres,Motivo B,45032,66
+10,Durango,Norte,2025,Hombres,Motivo C,31514,41
+11,Guanajuato,Centro-Occidente,2015,Mujeres,Motivo A,16159,24
+11,Guanajuato,Centro-Occidente,2015,Mujeres,Motivo B,47186,67
+11,Guanajuato,Centro-Occidente,2015,Mujeres,Motivo C,25955,39
+11,Guanajuato,Centro-Occidente,2015,Hombres,Motivo A,23030,30
+11,Guanajuato,Centro-Occidente,2015,Hombres,Motivo B,42841,83
+11,Guanajuato,Centro-Occidente,2015,Hombres,Motivo C,34829,57
+11,Guanajuato,Centro-Occidente,2020,Mujeres,Motivo A,23276,34
+11,Guanajuato,Centro-Occidente,2020,Mujeres,Motivo B,49561,120
+11,Guanajuato,Centro-Occidente,2020,Mujeres,Motivo C,27179,69
+11,Guanajuato,Centro-Occidente,2020,Hombres,Motivo A,32636,43
+11,Guanajuato,Centro-Occidente,2020,Hombres,Motivo B,44268,69
+11,Guanajuato,Centro-Occidente,2020,Hombres,Motivo C,35880,52
+11,Guanajuato,Centro-Occidente,2025,Mujeres,Motivo A,34403,49
+11,Guanajuato,Centro-Occidente,2025,Mujeres,Motivo B,45615,83
+11,Guanajuato,Centro-Occidente,2025,Mujeres,Motivo C,30714,39
+11,Guanajuato,Centro-Occidente,2025,Hombres,Motivo A,46503,56
+11,Guanajuato,Centro-Occidente,2025,Hombres,Motivo B,39278,65
+11,Guanajuato,Centro-Occidente,2025,Hombres,Motivo C,39087,67
+12,Guerrero,Sur-Sureste,2015,Mujeres,Motivo A,18615,27
+12,Guerrero,Sur-Sureste,2015,Mujeres,Motivo B,47383,82
+12,Guerrero,Sur-Sureste,2015,Mujeres,Motivo C,50092,101
+12,Guerrero,Sur-Sureste,2015,Hombres,Motivo A,25395,48
+12,Guerrero,Sur-Sureste,2015,Hombres,Motivo B,41177,63
+12,Guerrero,Sur-Sureste,2015,Hombres,Motivo C,64338,150
+12,Guerrero,Sur-Sureste,2020,Mujeres,Motivo A,14637,18
+12,Guerrero,Sur-Sureste,2020,Mujeres,Motivo B,58072,72
+12,Guerrero,Sur-Sureste,2020,Mujeres,Motivo C,57312,89
+12,Guerrero,Sur-Sureste,2020,Hombres,Motivo A,20324,31
+12,Guerrero,Sur-Sureste,2020,Hombres,Motivo B,51368,101
+12,Guerrero,Sur-Sureste,2020,Hombres,Motivo C,74927,120
+12,Guerrero,Sur-Sureste,2025,Mujeres,Motivo A,10802,18
+12,Guerrero,Sur-Sureste,2025,Mujeres,Motivo B,67758,76
+12,Guerrero,Sur-Sureste,2025,Mujeres,Motivo C,65391,160
+12,Guerrero,Sur-Sureste,2025,Hombres,Motivo A,15178,19
+12,Guerrero,Sur-Sureste,2025,Hombres,Motivo B,60648,70
+12,Guerrero,Sur-Sureste,2025,Hombres,Motivo C,86503,105
+13,Hidalgo,Centro,2015,Mujeres,Motivo A,26254,32
+13,Hidalgo,Centro,2015,Mujeres,Motivo B,59080,83
+13,Hidalgo,Centro,2015,Mujeres,Motivo C,58016,87
+13,Hidalgo,Centro,2015,Hombres,Motivo A,35809,43
+13,Hidalgo,Centro,2015,Hombres,Motivo B,51335,69
+13,Hidalgo,Centro,2015,Hombres,Motivo C,74506,191
+13,Hidalgo,Centro,2020,Mujeres,Motivo A,23633,30
+13,Hidalgo,Centro,2020,Mujeres,Motivo B,77698,107
+13,Hidalgo,Centro,2020,Mujeres,Motivo C,59221,76
+13,Hidalgo,Centro,2020,Hombres,Motivo A,33197,56
+13,Hidalgo,Centro,2020,Hombres,Motivo B,69528,113
+13,Hidalgo,Centro,2020,Hombres,Motivo C,78323,201
+13,Hidalgo,Centro,2025,Mujeres,Motivo A,18777,23
+13,Hidalgo,Centro,2025,Mujeres,Motivo B,93794,120
+13,Hidalgo,Centro,2025,Mujeres,Motivo C,65183,80
+13,Hidalgo,Centro,2025,Hombres,Motivo A,26903,37
+13,Hidalgo,Centro,2025,Hombres,Motivo B,85610,191
+13,Hidalgo,Centro,2025,Hombres,Motivo C,87932,115
+14,Jalisco,Centro-Occidente,2015,Mujeres,Motivo A,8588,17
+14,Jalisco,Centro-Occidente,2015,Mujeres,Motivo B,13006,20
+14,Jalisco,Centro-Occidente,2015,Mujeres,Motivo C,9895,13
+14,Jalisco,Centro-Occidente,2015,Hombres,Motivo A,11644,14
+14,Jalisco,Centro-Occidente,2015,Hombres,Motivo B,11234,16
+14,Jalisco,Centro-Occidente,2015,Hombres,Motivo C,12632,21
+14,Jalisco,Centro-Occidente,2020,Mujeres,Motivo A,11015,16
+14,Jalisco,Centro-Occidente,2020,Mujeres,Motivo B,14025,24
+14,Jalisco,Centro-Occidente,2020,Mujeres,Motivo C,10229,14
+14,Jalisco,Centro-Occidente,2020,Hombres,Motivo A,14810,31
+14,Jalisco,Centro-Occidente,2020,Hombres,Motivo B,12012,19
+14,Jalisco,Centro-Occidente,2020,Hombres,Motivo C,12949,15
+14,Jalisco,Centro-Occidente,2025,Mujeres,Motivo A,14634,24
+14,Jalisco,Centro-Occidente,2025,Mujeres,Motivo B,14283,33
+14,Jalisco,Centro-Occidente,2025,Mujeres,Motivo C,10131,19
+14,Jalisco,Centro-Occidente,2025,Hombres,Motivo A,19367,29
+14,Jalisco,Centro-Occidente,2025,Hombres,Motivo B,12042,23
+14,Jalisco,Centro-Occidente,2025,Hombres,Motivo C,12624,16
+15,Estado de México,Centro,2015,Mujeres,Motivo A,14345,26
+15,Estado de México,Centro,2015,Mujeres,Motivo B,17391,28
+15,Estado de México,Centro,2015,Mujeres,Motivo C,17145,22
+15,Estado de México,Centro,2015,Hombres,Motivo A,19023,30
+15,Estado de México,Centro,2015,Hombres,Motivo B,14691,19
+15,Estado de México,Centro,2015,Hombres,Motivo C,21406,43
+15,Estado de México,Centro,2020,Mujeres,Motivo A,20842,32
+15,Estado de México,Centro,2020,Mujeres,Motivo B,17301,36
+15,Estado de México,Centro,2020,Mujeres,Motivo C,16603,22
+15,Estado de México,Centro,2020,Hombres,Motivo A,27091,52
+15,Estado de México,Centro,2020,Hombres,Motivo B,14325,21
+15,Estado de México,Centro,2020,Hombres,Motivo C,20319,42
+15,Estado de México,Centro,2025,Mujeres,Motivo A,29193,35
+15,Estado de México,Centro,2025,Mujeres,Motivo B,16222,21
+15,Estado de México,Centro,2025,Mujeres,Motivo C,15197,36
+15,Estado de México,Centro,2025,Hombres,Motivo A,37063,62
+15,Estado de México,Centro,2025,Hombres,Motivo B,13120,32
+15,Estado de México,Centro,2025,Hombres,Motivo C,18165,31
+16,Michoacán,Centro-Occidente,2015,Mujeres,Motivo A,25442,33
+16,Michoacán,Centro-Occidente,2015,Mujeres,Motivo B,42082,49
+16,Michoacán,Centro-Occidente,2015,Mujeres,Motivo C,8617,19
+16,Michoacán,Centro-Occidente,2015,Hombres,Motivo A,36189,46
+16,Michoacán,Centro-Occidente,2015,Hombres,Motivo B,38131,82
+16,Michoacán,Centro-Occidente,2015,Hombres,Motivo C,11540,24
+16,Michoacán,Centro-Occidente,2020,Mujeres,Motivo A,36519,66
+16,Michoacán,Centro-Occidente,2020,Mujeres,Motivo B,39892,65
+16,Michoacán,Centro-Occidente,2020,Mujeres,Motivo C,8866,12
+16,Michoacán,Centro-Occidente,2020,Hombres,Motivo A,49969,71
+16,Michoacán,Centro-Occidente,2020,Hombres,Motivo B,34772,41
+16,Michoacán,Centro-Occidente,2020,Hombres,Motivo C,11422,18
+16,Michoacán,Centro-Occidente,2025,Mujeres,Motivo A,48346,55
+16,Michoacán,Centro-Occidente,2025,Mujeres,Motivo B,37807,55
+16,Michoacán,Centro-Occidente,2025,Mujeres,Motivo C,8261,13
+16,Michoacán,Centro-Occidente,2025,Hombres,Motivo A,64173,93
+16,Michoacán,Centro-Occidente,2025,Hombres,Motivo B,31970,65
+16,Michoacán,Centro-Occidente,2025,Hombres,Motivo C,10324,20
+17,Morelos,Centro,2015,Mujeres,Motivo A,22502,40
+17,Morelos,Centro,2015,Mujeres,Motivo B,31859,53
+17,Morelos,Centro,2015,Mujeres,Motivo C,29299,68
+17,Morelos,Centro,2015,Hombres,Motivo A,30161,44
+17,Morelos,Centro,2015,Hombres,Motivo B,27204,59
+17,Morelos,Centro,2015,Hombres,Motivo C,36976,71
+17,Morelos,Centro,2020,Mujeres,Motivo A,34582,50
+17,Morelos,Centro,2020,Mujeres,Motivo B,34382,53
+17,Morelos,Centro,2020,Mujeres,Motivo C,24735,32
+17,Morelos,Centro,2020,Hombres,Motivo A,45804,77
+17,Morelos,Centro,2020,Hombres,Motivo B,29011,40
+17,Morelos,Centro,2020,Hombres,Motivo C,30846,37
+17,Morelos,Centro,2025,Mujeres,Motivo A,44064,88
+17,Morelos,Centro,2025,Mujeres,Motivo B,37006,47
+17,Morelos,Centro,2025,Mujeres,Motivo C,22668,57
+17,Morelos,Centro,2025,Hombres,Motivo A,57930,72
+17,Morelos,Centro,2025,Hombres,Motivo B,30993,71
+17,Morelos,Centro,2025,Hombres,Motivo C,28059,69
+18,Nayarit,Centro-Occidente,2015,Mujeres,Motivo A,37771,73
+18,Nayarit,Centro-Occidente,2015,Mujeres,Motivo B,69757,182
+18,Nayarit,Centro-Occidente,2015,Mujeres,Motivo C,25952,46
+18,Nayarit,Centro-Occidente,2015,Hombres,Motivo A,53312,72
+18,Nayarit,Centro-Occidente,2015,Hombres,Motivo B,62721,84
+18,Nayarit,Centro-Occidente,2015,Hombres,Motivo C,34487,74
+18,Nayarit,Centro-Occidente,2020,Mujeres,Motivo A,31503,43
+18,Nayarit,Centro-Occidente,2020,Mujeres,Motivo B,94233,116
+18,Nayarit,Centro-Occidente,2020,Mujeres,Motivo C,23762,34
+18,Nayarit,Centro-Occidente,2020,Hombres,Motivo A,46625,52
+18,Nayarit,Centro-Occidente,2020,Hombres,Motivo B,88846,159
+18,Nayarit,Centro-Occidente,2020,Hombres,Motivo C,33112,67
+18,Nayarit,Centro-Occidente,2025,Mujeres,Motivo A,24610,30
+18,Nayarit,Centro-Occidente,2025,Mujeres,Motivo B,117062,144
+18,Nayarit,Centro-Occidente,2025,Mujeres,Motivo C,23844,28
+18,Nayarit,Centro-Occidente,2025,Hombres,Motivo A,37764,43
+18,Nayarit,Centro-Occidente,2025,Hombres,Motivo B,114433,173
+18,Nayarit,Centro-Occidente,2025,Hombres,Motivo C,34449,60
+19,Nuevo León,Norte,2015,Mujeres,Motivo A,53877,63
+19,Nuevo León,Norte,2015,Mujeres,Motivo B,67294,77
+19,Nuevo León,Norte,2015,Mujeres,Motivo C,27348,41
+19,Nuevo León,Norte,2015,Hombres,Motivo A,73663,116
+19,Nuevo León,Norte,2015,Hombres,Motivo B,58612,91
+19,Nuevo León,Norte,2015,Hombres,Motivo C,35205,87
+19,Nuevo León,Norte,2020,Mujeres,Motivo A,65678,146
+19,Nuevo León,Norte,2020,Mujeres,Motivo B,74704,100
+19,Nuevo León,Norte,2020,Mujeres,Motivo C,25961,30
+19,Nuevo León,Norte,2020,Hombres,Motivo A,89461,219
+19,Nuevo León,Norte,2020,Hombres,Motivo B,64822,82
+19,Nuevo León,Norte,2020,Hombres,Motivo C,33294,73
+19,Nuevo León,Norte,2025,Mujeres,Motivo A,79083,151
+19,Nuevo León,Norte,2025,Mujeres,Motivo B,83030,155
+19,Nuevo León,Norte,2025,Mujeres,Motivo C,22052,25
+19,Nuevo León,Norte,2025,Hombres,Motivo A,107528,157
+19,Nuevo León,Norte,2025,Hombres,Motivo B,71917,151
+19,Nuevo León,Norte,2025,Hombres,Motivo C,28230,51
+20,Oaxaca,Sur-Sureste,2015,Mujeres,Motivo A,3151,6
+20,Oaxaca,Sur-Sureste,2015,Mujeres,Motivo B,11172,13
+20,Oaxaca,Sur-Sureste,2015,Mujeres,Motivo C,12467,19
+20,Oaxaca,Sur-Sureste,2015,Hombres,Motivo A,4325,6
+20,Oaxaca,Sur-Sureste,2015,Hombres,Motivo B,9771,14
+20,Oaxaca,Sur-Sureste,2015,Hombres,Motivo C,16114,42
+20,Oaxaca,Sur-Sureste,2020,Mujeres,Motivo A,4292,10
+20,Oaxaca,Sur-Sureste,2020,Mujeres,Motivo B,13006,23
+20,Oaxaca,Sur-Sureste,2020,Mujeres,Motivo C,12707,14
+20,Oaxaca,Sur-Sureste,2020,Hombres,Motivo A,5918,15
+20,Oaxaca,Sur-Sureste,2020,Hombres,Motivo B,11423,27
+20,Oaxaca,Sur-Sureste,2020,Hombres,Motivo C,16495,24
+20,Oaxaca,Sur-Sureste,2025,Mujeres,Motivo A,6393,9
+20,Oaxaca,Sur-Sureste,2025,Mujeres,Motivo B,14507,36
+20,Oaxaca,Sur-Sureste,2025,Mujeres,Motivo C,12320,17
+20,Oaxaca,Sur-Sureste,2025,Hombres,Motivo A,8794,11
+20,Oaxaca,Sur-Sureste,2025,Hombres,Motivo B,12711,18
+20,Oaxaca,Sur-Sureste,2025,Hombres,Motivo C,15955,24
+21,Puebla,Centro,2015,Mujeres,Motivo A,28437,46
+21,Puebla,Centro,2015,Mujeres,Motivo B,67639,87
+21,Puebla,Centro,2015,Mujeres,Motivo C,52914,103
+21,Puebla,Centro,2015,Hombres,Motivo A,39373,65
+21,Puebla,Centro,2015,Hombres,Motivo B,59658,76
+21,Puebla,Centro,2015,Hombres,Motivo C,68979,109
+21,Puebla,Centro,2020,Mujeres,Motivo A,37278,79
+21,Puebla,Centro,2020,Mujeres,Motivo B,76485,93
+21,Puebla,Centro,2020,Mujeres,Motivo C,53106,60
+21,Puebla,Centro,2020,Hombres,Motivo A,51577,115
+21,Puebla,Centro,2020,Hombres,Motivo B,67414,143
+21,Puebla,Centro,2020,Hombres,Motivo C,69180,98
+21,Puebla,Centro,2025,Mujeres,Motivo A,51528,117
+21,Puebla,Centro,2025,Mujeres,Motivo B,79261,119
+21,Puebla,Centro,2025,Mujeres,Motivo C,53959,61
+21,Puebla,Centro,2025,Hombres,Motivo A,70244,85
+21,Puebla,Centro,2025,Hombres,Motivo B,68832,147
+21,Puebla,Centro,2025,Hombres,Motivo C,69256,160
+22,Querétaro,Centro,2015,Mujeres,Motivo A,5506,12
+22,Querétaro,Centro,2015,Mujeres,Motivo B,4791,8
+22,Querétaro,Centro,2015,Mujeres,Motivo C,5213,8
+22,Querétaro,Centro,2015,Hombres,Motivo A,7151,11
+22,Querétaro,Centro,2015,Hombres,Motivo B,3964,7
+22,Querétaro,Centro,2015,Hombres,Motivo C,6375,10
+22,Querétaro,Centro,2020,Mujeres,Motivo A,8059,20
+22,Querétaro,Centro,2020,Mujeres,Motivo B,4626,6
+22,Querétaro,Centro,2020,Mujeres,Motivo C,4686,8
+22,Querétaro,Centro,2020,Hombres,Motivo A,10239,14
+22,Querétaro,Centro,2020,Hombres,Motivo B,3744,6
+22,Querétaro,Centro,2020,Hombres,Motivo C,5605,13
+22,Querétaro,Centro,2025,Mujeres,Motivo A,11455,19
+22,Querétaro,Centro,2025,Mujeres,Motivo B,3945,9
+22,Querétaro,Centro,2025,Mujeres,Motivo C,3833,7
+22,Querétaro,Centro,2025,Hombres,Motivo A,14134,23
+22,Querétaro,Centro,2025,Hombres,Motivo B,3101,6
+22,Querétaro,Centro,2025,Hombres,Motivo C,4453,8
+23,Quintana Roo,Sur-Sureste,2015,Mujeres,Motivo A,9472,24
+23,Quintana Roo,Sur-Sureste,2015,Mujeres,Motivo B,18324,32
+23,Quintana Roo,Sur-Sureste,2015,Mujeres,Motivo C,25314,38
+23,Quintana Roo,Sur-Sureste,2015,Hombres,Motivo A,12612,18
+23,Quintana Roo,Sur-Sureste,2015,Hombres,Motivo B,15543,20
+23,Quintana Roo,Sur-Sureste,2015,Hombres,Motivo C,31735,47
+23,Quintana Roo,Sur-Sureste,2020,Mujeres,Motivo A,16331,21
+23,Quintana Roo,Sur-Sureste,2020,Mujeres,Motivo B,17829,23
+23,Quintana Roo,Sur-Sureste,2020,Mujeres,Motivo C,25323,60
+23,Quintana Roo,Sur-Sureste,2020,Hombres,Motivo A,21258,45
+23,Quintana Roo,Sur-Sureste,2020,Hombres,Motivo B,14784,22
+23,Quintana Roo,Sur-Sureste,2020,Hombres,Motivo C,31035,55
+23,Quintana Roo,Sur-Sureste,2025,Mujeres,Motivo A,22818,42
+23,Quintana Roo,Sur-Sureste,2025,Mujeres,Motivo B,18875,33
+23,Quintana Roo,Sur-Sureste,2025,Mujeres,Motivo C,24163,27
+23,Quintana Roo,Sur-Sureste,2025,Hombres,Motivo A,29424,41
+23,Quintana Roo,Sur-Sureste,2025,Hombres,Motivo B,15505,19
+23,Quintana Roo,Sur-Sureste,2025,Hombres,Motivo C,29335,34
+24,San Luis Potosí,Centro-Occidente,2015,Mujeres,Motivo A,42712,80
+24,San Luis Potosí,Centro-Occidente,2015,Mujeres,Motivo B,33925,63
+24,San Luis Potosí,Centro-Occidente,2015,Mujeres,Motivo C,18303,21
+24,San Luis Potosí,Centro-Occidente,2015,Hombres,Motivo A,56068,93
+24,San Luis Potosí,Centro-Occidente,2015,Hombres,Motivo B,28370,72
+24,San Luis Potosí,Centro-Occidente,2015,Hombres,Motivo C,22622,30
+24,San Luis Potosí,Centro-Occidente,2020,Mujeres,Motivo A,61071,147
+24,San Luis Potosí,Centro-Occidente,2020,Mujeres,Motivo B,31865,47
+24,San Luis Potosí,Centro-Occidente,2020,Mujeres,Motivo C,13397,16
+24,San Luis Potosí,Centro-Occidente,2020,Hombres,Motivo A,77916,119
+24,San Luis Potosí,Centro-Occidente,2020,Hombres,Motivo B,25898,31
+24,San Luis Potosí,Centro-Occidente,2020,Hombres,Motivo C,16093,36
+24,San Luis Potosí,Centro-Occidente,2025,Mujeres,Motivo A,78692,106
+24,San Luis Potosí,Centro-Occidente,2025,Mujeres,Motivo B,29090,63
+24,San Luis Potosí,Centro-Occidente,2025,Mujeres,Motivo C,9943,16
+24,San Luis Potosí,Centro-Occidente,2025,Hombres,Motivo A,98013,250
+24,San Luis Potosí,Centro-Occidente,2025,Hombres,Motivo B,23082,52
+24,San Luis Potosí,Centro-Occidente,2025,Hombres,Motivo C,11660,27
+25,Sinaloa,Norte,2015,Mujeres,Motivo A,28889,39
+25,Sinaloa,Norte,2015,Mujeres,Motivo B,39942,98
+25,Sinaloa,Norte,2015,Mujeres,Motivo C,12949,25
+25,Sinaloa,Norte,2015,Hombres,Motivo A,40047,59
+25,Sinaloa,Norte,2015,Hombres,Motivo B,35272,70
+25,Sinaloa,Norte,2015,Hombres,Motivo C,16901,19
+25,Sinaloa,Norte,2020,Mujeres,Motivo A,32459,82
+25,Sinaloa,Norte,2020,Mujeres,Motivo B,47253,106
+25,Sinaloa,Norte,2020,Mujeres,Motivo C,11882,25
+25,Sinaloa,Norte,2020,Hombres,Motivo A,45460,57
+25,Sinaloa,Norte,2020,Hombres,Motivo B,42159,77
+25,Sinaloa,Norte,2020,Hombres,Motivo C,15668,26
+25,Sinaloa,Norte,2025,Mujeres,Motivo A,38590,48
+25,Sinaloa,Norte,2025,Mujeres,Motivo B,51209,127
+25,Sinaloa,Norte,2025,Mujeres,Motivo C,11608,17
+25,Sinaloa,Norte,2025,Hombres,Motivo A,53723,86
+25,Sinaloa,Norte,2025,Hombres,Motivo B,45415,61
+25,Sinaloa,Norte,2025,Hombres,Motivo C,15215,23
+26,Sonora,Norte,2015,Mujeres,Motivo A,65495,121
+26,Sonora,Norte,2015,Mujeres,Motivo B,57798,100
+26,Sonora,Norte,2015,Mujeres,Motivo C,43557,61
+26,Sonora,Norte,2015,Hombres,Motivo A,85979,151
+26,Sonora,Norte,2015,Hombres,Motivo B,48335,125
+26,Sonora,Norte,2015,Hombres,Motivo C,53836,72
+26,Sonora,Norte,2020,Mujeres,Motivo A,87230,133
+26,Sonora,Norte,2020,Mujeres,Motivo B,55659,70
+26,Sonora,Norte,2020,Mujeres,Motivo C,43983,62
+26,Sonora,Norte,2020,Hombres,Motivo A,112017,137
+26,Sonora,Norte,2020,Hombres,Motivo B,45532,101
+26,Sonora,Norte,2020,Hombres,Motivo C,53179,111
+26,Sonora,Norte,2025,Mujeres,Motivo A,108848,182
+26,Sonora,Norte,2025,Mujeres,Motivo B,52571,67
+26,Sonora,Norte,2025,Mujeres,Motivo C,45475,109
+26,Sonora,Norte,2025,Hombres,Motivo A,137156,158
+26,Sonora,Norte,2025,Hombres,Motivo B,42199,60
+26,Sonora,Norte,2025,Hombres,Motivo C,53951,89
+27,Tabasco,Sur-Sureste,2015,Mujeres,Motivo A,30831,72
+27,Tabasco,Sur-Sureste,2015,Mujeres,Motivo B,76057,93
+27,Tabasco,Sur-Sureste,2015,Mujeres,Motivo C,72652,85
+27,Tabasco,Sur-Sureste,2015,Hombres,Motivo A,42266,48
+27,Tabasco,Sur-Sureste,2015,Hombres,Motivo B,66421,79
+27,Tabasco,Sur-Sureste,2015,Hombres,Motivo C,93774,111
+27,Tabasco,Sur-Sureste,2020,Mujeres,Motivo A,43159,61
+27,Tabasco,Sur-Sureste,2020,Mujeres,Motivo B,81053,95
+27,Tabasco,Sur-Sureste,2020,Mujeres,Motivo C,76874,110
+27,Tabasco,Sur-Sureste,2020,Hombres,Motivo A,58542,96
+27,Tabasco,Sur-Sureste,2020,Hombres,Motivo B,70037,160
+27,Tabasco,Sur-Sureste,2020,Hombres,Motivo C,98176,209
+27,Tabasco,Sur-Sureste,2025,Mujeres,Motivo A,56461,106
+27,Tabasco,Sur-Sureste,2025,Mujeres,Motivo B,84367,97
+27,Tabasco,Sur-Sureste,2025,Mujeres,Motivo C,81802,135
+27,Tabasco,Sur-Sureste,2025,Hombres,Motivo A,75709,87
+27,Tabasco,Sur-Sureste,2025,Hombres,Motivo B,72067,91
+27,Tabasco,Sur-Sureste,2025,Hombres,Motivo C,103275,169
+28,Tamaulipas,Norte,2015,Mujeres,Motivo A,10188,27
+28,Tamaulipas,Norte,2015,Mujeres,Motivo B,7395,9
+28,Tamaulipas,Norte,2015,Mujeres,Motivo C,4977,6
+28,Tamaulipas,Norte,2015,Hombres,Motivo A,13234,24
+28,Tamaulipas,Norte,2015,Hombres,Motivo B,6119,8
+28,Tamaulipas,Norte,2015,Hombres,Motivo C,6087,8
+28,Tamaulipas,Norte,2020,Mujeres,Motivo A,9206,11
+28,Tamaulipas,Norte,2020,Mujeres,Motivo B,9714,12
+28,Tamaulipas,Norte,2020,Mujeres,Motivo C,6347,16
+28,Tamaulipas,Norte,2020,Hombres,Motivo A,12274,16
+28,Tamaulipas,Norte,2020,Hombres,Motivo B,8251,12
+28,Tamaulipas,Norte,2020,Hombres,Motivo C,7968,15
+28,Tamaulipas,Norte,2025,Mujeres,Motivo A,7850,18
+28,Tamaulipas,Norte,2025,Mujeres,Motivo B,12374,17
+28,Tamaulipas,Norte,2025,Mujeres,Motivo C,7750,13
+28,Tamaulipas,Norte,2025,Hombres,Motivo A,10753,19
+28,Tamaulipas,Norte,2025,Hombres,Motivo B,10798,14
+28,Tamaulipas,Norte,2025,Hombres,Motivo C,9995,15
+29,Tlaxcala,Centro,2015,Mujeres,Motivo A,27841,49
+29,Tlaxcala,Centro,2015,Mujeres,Motivo B,53363,86
+29,Tlaxcala,Centro,2015,Mujeres,Motivo C,28306,41
+29,Tlaxcala,Centro,2015,Hombres,Motivo A,38855,58
+29,Tlaxcala,Centro,2015,Hombres,Motivo B,47442,58
+29,Tlaxcala,Centro,2015,Hombres,Motivo C,37194,73
+29,Tlaxcala,Centro,2020,Mujeres,Motivo A,42103,78
+29,Tlaxcala,Centro,2020,Mujeres,Motivo B,51669,75
+29,Tlaxcala,Centro,2020,Mujeres,Motivo C,28880,50
+29,Tlaxcala,Centro,2020,Hombres,Motivo A,56974,88
+29,Tlaxcala,Centro,2020,Hombres,Motivo B,44541,55
+29,Tlaxcala,Centro,2020,Hombres,Motivo C,36795,76
+29,Tlaxcala,Centro,2025,Mujeres,Motivo A,57215,65
+29,Tlaxcala,Centro,2025,Mujeres,Motivo B,50020,63
+29,Tlaxcala,Centro,2025,Mujeres,Motivo C,28557,38
+29,Tlaxcala,Centro,2025,Hombres,Motivo A,75549,174
+29,Tlaxcala,Centro,2025,Hombres,Motivo B,42076,107
+29,Tlaxcala,Centro,2025,Hombres,Motivo C,35502,58
+30,Veracruz,Sur-Sureste,2015,Mujeres,Motivo A,39502,63
+30,Veracruz,Sur-Sureste,2015,Mujeres,Motivo B,76072,146
+30,Veracruz,Sur-Sureste,2015,Mujeres,Motivo C,67726,172
+30,Veracruz,Sur-Sureste,2015,Hombres,Motivo A,53814,62
+30,Veracruz,Sur-Sureste,2015,Hombres,Motivo B,66018,114
+30,Veracruz,Sur-Sureste,2015,Hombres,Motivo C,86868,119
+30,Veracruz,Sur-Sureste,2020,Mujeres,Motivo A,56346,129
+30,Veracruz,Sur-Sureste,2020,Mujeres,Motivo B,75200,91
+30,Veracruz,Sur-Sureste,2020,Mujeres,Motivo C,73750,105
+30,Veracruz,Sur-Sureste,2020,Hombres,Motivo A,75102,89
+30,Veracruz,Sur-Sureste,2020,Hombres,Motivo B,63851,161
+30,Veracruz,Sur-Sureste,2020,Hombres,Motivo C,92551,115
+30,Veracruz,Sur-Sureste,2025,Mujeres,Motivo A,72569,128
+30,Veracruz,Sur-Sureste,2025,Mujeres,Motivo B,80620,110
+30,Veracruz,Sur-Sureste,2025,Mujeres,Motivo C,74103,153
+30,Veracruz,Sur-Sureste,2025,Hombres,Motivo A,96027,200
+30,Veracruz,Sur-Sureste,2025,Hombres,Motivo B,67959,152
+30,Veracruz,Sur-Sureste,2025,Hombres,Motivo C,92322,240
+31,Yucatán,Sur-Sureste,2015,Mujeres,Motivo A,15336,38
+31,Yucatán,Sur-Sureste,2015,Mujeres,Motivo B,37045,47
+31,Yucatán,Sur-Sureste,2015,Mujeres,Motivo C,38799,44
+31,Yucatán,Sur-Sureste,2015,Hombres,Motivo A,20895,32
+31,Yucatán,Sur-Sureste,2015,Hombres,Motivo B,32153,81
+31,Yucatán,Sur-Sureste,2015,Hombres,Motivo C,49772,81
+31,Yucatán,Sur-Sureste,2020,Mujeres,Motivo A,14972,20
+31,Yucatán,Sur-Sureste,2020,Mujeres,Motivo B,48396,117
+31,Yucatán,Sur-Sureste,2020,Mujeres,Motivo C,38753,72
+31,Yucatán,Sur-Sureste,2020,Hombres,Motivo A,20952,24
+31,Yucatán,Sur-Sureste,2020,Hombres,Motivo B,43145,106
+31,Yucatán,Sur-Sureste,2020,Hombres,Motivo C,51061,108
+31,Yucatán,Sur-Sureste,2025,Mujeres,Motivo A,12886,16
+31,Yucatán,Sur-Sureste,2025,Mujeres,Motivo B,62837,144
+31,Yucatán,Sur-Sureste,2025,Mujeres,Motivo C,37340,58
+31,Yucatán,Sur-Sureste,2025,Hombres,Motivo A,18655,47
+31,Yucatán,Sur-Sureste,2025,Hombres,Motivo B,57948,93
+31,Yucatán,Sur-Sureste,2025,Hombres,Motivo C,50894,70
+32,Zacatecas,Centro-Occidente,2015,Mujeres,Motivo A,39710,74
+32,Zacatecas,Centro-Occidente,2015,Mujeres,Motivo B,37524,55
+32,Zacatecas,Centro-Occidente,2015,Mujeres,Motivo C,46846,83
+32,Zacatecas,Centro-Occidente,2015,Hombres,Motivo A,51580,128
+32,Zacatecas,Centro-Occidente,2015,Hombres,Motivo B,31050,40
+32,Zacatecas,Centro-Occidente,2015,Hombres,Motivo C,57290,90
+32,Zacatecas,Centro-Occidente,2020,Mujeres,Motivo A,58287,73
+32,Zacatecas,Centro-Occidente,2020,Mujeres,Motivo B,40254,57
+32,Zacatecas,Centro-Occidente,2020,Mujeres,Motivo C,40429,55
+32,Zacatecas,Centro-Occidente,2020,Hombres,Motivo A,74873,147
+32,Zacatecas,Centro-Occidente,2020,Hombres,Motivo B,32940,54
+32,Zacatecas,Centro-Occidente,2020,Hombres,Motivo C,48897,66
+32,Zacatecas,Centro-Occidente,2025,Mujeres,Motivo A,76309,92
+32,Zacatecas,Centro-Occidente,2025,Mujeres,Motivo B,42347,70
+32,Zacatecas,Centro-Occidente,2025,Mujeres,Motivo C,35203,43
+32,Zacatecas,Centro-Occidente,2025,Hombres,Motivo A,97044,140
+32,Zacatecas,Centro-Occidente,2025,Hombres,Motivo B,34306,75
+32,Zacatecas,Centro-Occidente,2025,Hombres,Motivo C,42150,64

@@ -1,0 +1,257 @@
+region,anio,comparacion,lado,edad,orden,personas,rurales,casos
+Norte,2010,Sexo,Mujeres,0 a 9,0,41698,17591,104
+Norte,2010,Sexo,Mujeres,10 a 19,1,68505,22238,145
+Norte,2010,Sexo,Mujeres,20 a 29,2,63985,22154,124
+Norte,2010,Sexo,Mujeres,30 a 39,3,67313,22005,166
+Norte,2010,Sexo,Mujeres,40 a 49,4,58528,17108,196
+Norte,2010,Sexo,Mujeres,50 a 59,5,36339,10039,82
+Norte,2010,Sexo,Mujeres,60 a 69,6,23794,11265,51
+Norte,2010,Sexo,Mujeres,70 y más,7,13881,4888,43
+Norte,2010,Sexo,Hombres,0 a 9,0,39543,10722,126
+Norte,2010,Sexo,Hombres,10 a 19,1,62132,18833,143
+Norte,2010,Sexo,Hombres,20 a 29,2,61106,20349,252
+Norte,2010,Sexo,Hombres,30 a 39,3,61572,22325,144
+Norte,2010,Sexo,Hombres,40 a 49,4,45781,16122,140
+Norte,2010,Sexo,Hombres,50 a 59,5,37598,12724,120
+Norte,2010,Sexo,Hombres,60 a 69,6,24004,10357,69
+Norte,2010,Sexo,Hombres,70 y más,7,13328,5303,28
+Norte,2010,Situación,Empezó a cumplir,0 a 9,0,21010,6207,48
+Norte,2010,Situación,Empezó a cumplir,10 a 19,1,25796,7965,91
+Norte,2010,Situación,Empezó a cumplir,20 a 29,2,34838,12057,88
+Norte,2010,Situación,Empezó a cumplir,30 a 39,3,30071,9975,103
+Norte,2010,Situación,Empezó a cumplir,40 a 49,4,26426,7464,62
+Norte,2010,Situación,Empezó a cumplir,50 a 59,5,20483,5994,75
+Norte,2010,Situación,Empezó a cumplir,60 a 69,6,15787,6113,57
+Norte,2010,Situación,Empezó a cumplir,70 y más,7,10803,4600,21
+Norte,2010,Situación,Dejó de cumplir,0 a 9,0,22794,6000,60
+Norte,2010,Situación,Dejó de cumplir,10 a 19,1,27088,9536,62
+Norte,2010,Situación,Dejó de cumplir,20 a 29,2,25875,8670,67
+Norte,2010,Situación,Dejó de cumplir,30 a 39,3,21634,5573,47
+Norte,2010,Situación,Dejó de cumplir,40 a 49,4,17037,4581,39
+Norte,2010,Situación,Dejó de cumplir,50 a 59,5,11416,3260,22
+Norte,2010,Situación,Dejó de cumplir,60 a 69,6,7126,2627,21
+Norte,2010,Situación,Dejó de cumplir,70 y más,7,5572,2094,16
+Norte,2020,Sexo,Mujeres,0 a 9,0,48468,15298,169
+Norte,2020,Sexo,Mujeres,10 a 19,1,71330,22634,257
+Norte,2020,Sexo,Mujeres,20 a 29,2,74653,26945,188
+Norte,2020,Sexo,Mujeres,30 a 39,3,63706,21139,146
+Norte,2020,Sexo,Mujeres,40 a 49,4,53906,15682,135
+Norte,2020,Sexo,Mujeres,50 a 59,5,44072,15439,122
+Norte,2020,Sexo,Mujeres,60 a 69,6,26022,11341,74
+Norte,2020,Sexo,Mujeres,70 y más,7,16689,6516,39
+Norte,2020,Sexo,Hombres,0 a 9,0,44622,14682,157
+Norte,2020,Sexo,Hombres,10 a 19,1,68110,23656,167
+Norte,2020,Sexo,Hombres,20 a 29,2,78283,27869,212
+Norte,2020,Sexo,Hombres,30 a 39,3,62130,21529,161
+Norte,2020,Sexo,Hombres,40 a 49,4,54631,17573,189
+Norte,2020,Sexo,Hombres,50 a 59,5,38164,13516,75
+Norte,2020,Sexo,Hombres,60 a 69,6,24606,9022,62
+Norte,2020,Sexo,Hombres,70 y más,7,15681,6814,69
+Norte,2020,Situación,Empezó a cumplir,0 a 9,0,20988,6435,95
+Norte,2020,Situación,Empezó a cumplir,10 a 19,1,29237,9420,67
+Norte,2020,Situación,Empezó a cumplir,20 a 29,2,35698,11366,83
+Norte,2020,Situación,Empezó a cumplir,30 a 39,3,38271,14772,109
+Norte,2020,Situación,Empezó a cumplir,40 a 49,4,30454,9567,70
+Norte,2020,Situación,Empezó a cumplir,50 a 59,5,23063,7766,82
+Norte,2020,Situación,Empezó a cumplir,60 a 69,6,20009,7275,38
+Norte,2020,Situación,Empezó a cumplir,70 y más,7,10604,4978,34
+Norte,2020,Situación,Dejó de cumplir,0 a 9,0,23246,7463,58
+Norte,2020,Situación,Dejó de cumplir,10 a 19,1,27242,7068,53
+Norte,2020,Situación,Dejó de cumplir,20 a 29,2,29971,10416,114
+Norte,2020,Situación,Dejó de cumplir,30 a 39,3,22750,9169,67
+Norte,2020,Situación,Dejó de cumplir,40 a 49,4,18134,6022,75
+Norte,2020,Situación,Dejó de cumplir,50 a 59,5,11525,3724,43
+Norte,2020,Situación,Dejó de cumplir,60 a 69,6,8016,2838,17
+Norte,2020,Situación,Dejó de cumplir,70 y más,7,5818,2339,14
+Centro-Occidente,2010,Sexo,Mujeres,0 a 9,0,43684,12043,95
+Centro-Occidente,2010,Sexo,Mujeres,10 a 19,1,59965,13573,146
+Centro-Occidente,2010,Sexo,Mujeres,20 a 29,2,58458,14499,218
+Centro-Occidente,2010,Sexo,Mujeres,30 a 39,3,53296,13673,147
+Centro-Occidente,2010,Sexo,Mujeres,40 a 49,4,48570,11368,112
+Centro-Occidente,2010,Sexo,Mujeres,50 a 59,5,34954,9049,68
+Centro-Occidente,2010,Sexo,Mujeres,60 a 69,6,22059,8189,59
+Centro-Occidente,2010,Sexo,Mujeres,70 y más,7,12606,4704,36
+Centro-Occidente,2010,Sexo,Hombres,0 a 9,0,34720,8763,75
+Centro-Occidente,2010,Sexo,Hombres,10 a 19,1,56012,12472,141
+Centro-Occidente,2010,Sexo,Hombres,20 a 29,2,59466,14883,171
+Centro-Occidente,2010,Sexo,Hombres,30 a 39,3,56537,12123,246
+Centro-Occidente,2010,Sexo,Hombres,40 a 49,4,44224,13007,135
+Centro-Occidente,2010,Sexo,Hombres,50 a 59,5,29642,8011,72
+Centro-Occidente,2010,Sexo,Hombres,60 a 69,6,19471,6186,76
+Centro-Occidente,2010,Sexo,Hombres,70 y más,7,11687,3535,28
+Centro-Occidente,2010,Situación,Empezó a cumplir,0 a 9,0,20001,3753,52
+Centro-Occidente,2010,Situación,Empezó a cumplir,10 a 19,1,19850,5338,42
+Centro-Occidente,2010,Situación,Empezó a cumplir,20 a 29,2,28843,10234,84
+Centro-Occidente,2010,Situación,Empezó a cumplir,30 a 39,3,28677,7249,73
+Centro-Occidente,2010,Situación,Empezó a cumplir,40 a 49,4,24169,6282,74
+Centro-Occidente,2010,Situación,Empezó a cumplir,50 a 59,5,20313,4913,88
+Centro-Occidente,2010,Situación,Empezó a cumplir,60 a 69,6,14183,4907,56
+Centro-Occidente,2010,Situación,Empezó a cumplir,70 y más,7,8839,3067,34
+Centro-Occidente,2010,Situación,Dejó de cumplir,0 a 9,0,20708,7320,40
+Centro-Occidente,2010,Situación,Dejó de cumplir,10 a 19,1,24694,5913,66
+Centro-Occidente,2010,Situación,Dejó de cumplir,20 a 29,2,22931,5224,53
+Centro-Occidente,2010,Situación,Dejó de cumplir,30 a 39,3,19808,3822,56
+Centro-Occidente,2010,Situación,Dejó de cumplir,40 a 49,4,14995,3138,41
+Centro-Occidente,2010,Situación,Dejó de cumplir,50 a 59,5,11226,3336,41
+Centro-Occidente,2010,Situación,Dejó de cumplir,60 a 69,6,6852,2549,27
+Centro-Occidente,2010,Situación,Dejó de cumplir,70 y más,7,4416,1662,13
+Centro-Occidente,2020,Sexo,Mujeres,0 a 9,0,43315,13287,110
+Centro-Occidente,2020,Sexo,Mujeres,10 a 19,1,61994,14576,128
+Centro-Occidente,2020,Sexo,Mujeres,20 a 29,2,69637,15824,237
+Centro-Occidente,2020,Sexo,Mujeres,30 a 39,3,56196,14530,196
+Centro-Occidente,2020,Sexo,Mujeres,40 a 49,4,51274,13295,106
+Centro-Occidente,2020,Sexo,Mujeres,50 a 59,5,35764,10196,77
+Centro-Occidente,2020,Sexo,Mujeres,60 a 69,6,25070,8178,61
+Centro-Occidente,2020,Sexo,Mujeres,70 y más,7,14634,5631,62
+Centro-Occidente,2020,Sexo,Hombres,0 a 9,0,39529,9788,83
+Centro-Occidente,2020,Sexo,Hombres,10 a 19,1,62802,19640,241
+Centro-Occidente,2020,Sexo,Hombres,20 a 29,2,70470,19006,147
+Centro-Occidente,2020,Sexo,Hombres,30 a 39,3,50902,13356,183
+Centro-Occidente,2020,Sexo,Hombres,40 a 49,4,46486,9447,206
+Centro-Occidente,2020,Sexo,Hombres,50 a 59,5,32451,8150,123
+Centro-Occidente,2020,Sexo,Hombres,60 a 69,6,25886,9569,58
+Centro-Occidente,2020,Sexo,Hombres,70 y más,7,12792,4597,34
+Centro-Occidente,2020,Situación,Empezó a cumplir,0 a 9,0,19837,4424,58
+Centro-Occidente,2020,Situación,Empezó a cumplir,10 a 19,1,24821,5831,77
+Centro-Occidente,2020,Situación,Empezó a cumplir,20 a 29,2,29019,9431,71
+Centro-Occidente,2020,Situación,Empezó a cumplir,30 a 39,3,36775,8839,106
+Centro-Occidente,2020,Situación,Empezó a cumplir,40 a 49,4,24315,7442,94
+Centro-Occidente,2020,Situación,Empezó a cumplir,50 a 59,5,20794,6013,50
+Centro-Occidente,2020,Situación,Empezó a cumplir,60 a 69,6,15300,5889,38
+Centro-Occidente,2020,Situación,Empezó a cumplir,70 y más,7,9529,3903,32
+Centro-Occidente,2020,Situación,Dejó de cumplir,0 a 9,0,22456,6703,56
+Centro-Occidente,2020,Situación,Dejó de cumplir,10 a 19,1,25901,6347,71
+Centro-Occidente,2020,Situación,Dejó de cumplir,20 a 29,2,24997,4667,94
+Centro-Occidente,2020,Situación,Dejó de cumplir,30 a 39,3,21955,7446,66
+Centro-Occidente,2020,Situación,Dejó de cumplir,40 a 49,4,15869,3476,33
+Centro-Occidente,2020,Situación,Dejó de cumplir,50 a 59,5,10901,2366,25
+Centro-Occidente,2020,Situación,Dejó de cumplir,60 a 69,6,6830,2649,23
+Centro-Occidente,2020,Situación,Dejó de cumplir,70 y más,7,5479,1725,16
+Centro,2010,Sexo,Mujeres,0 a 9,0,70642,15968,154
+Centro,2010,Sexo,Mujeres,10 a 19,1,126297,34959,359
+Centro,2010,Sexo,Mujeres,20 a 29,2,126573,44064,495
+Centro,2010,Sexo,Mujeres,30 a 39,3,104386,32005,320
+Centro,2010,Sexo,Mujeres,40 a 49,4,84201,22040,277
+Centro,2010,Sexo,Mujeres,50 a 59,5,66537,18870,146
+Centro,2010,Sexo,Mujeres,60 a 69,6,43683,15159,92
+Centro,2010,Sexo,Mujeres,70 y más,7,24103,9362,46
+Centro,2010,Sexo,Hombres,0 a 9,0,84800,25906,202
+Centro,2010,Sexo,Hombres,10 a 19,1,97890,24005,239
+Centro,2010,Sexo,Hombres,20 a 29,2,124590,36957,245
+Centro,2010,Sexo,Hombres,30 a 39,3,104532,24546,392
+Centro,2010,Sexo,Hombres,40 a 49,4,77941,25773,298
+Centro,2010,Sexo,Hombres,50 a 59,5,60522,17213,131
+Centro,2010,Sexo,Hombres,60 a 69,6,36398,15194,145
+Centro,2010,Sexo,Hombres,70 y más,7,23928,9657,48
+Centro,2010,Situación,Empezó a cumplir,0 a 9,0,42454,12036,149
+Centro,2010,Situación,Empezó a cumplir,10 a 19,1,46453,14450,127
+Centro,2010,Situación,Empezó a cumplir,20 a 29,2,62869,14141,210
+Centro,2010,Situación,Empezó a cumplir,30 a 39,3,53338,15027,184
+Centro,2010,Situación,Empezó a cumplir,40 a 49,4,41260,11814,84
+Centro,2010,Situación,Empezó a cumplir,50 a 59,5,36188,7577,94
+Centro,2010,Situación,Empezó a cumplir,60 a 69,6,28811,8698,115
+Centro,2010,Situación,Empezó a cumplir,70 y más,7,15955,6941,59
+Centro,2010,Situación,Dejó de cumplir,0 a 9,0,39795,13414,85
+Centro,2010,Situación,Dejó de cumplir,10 a 19,1,49024,14048,101
+Centro,2010,Situación,Dejó de cumplir,20 a 29,2,45554,15763,189
+Centro,2010,Situación,Dejó de cumplir,30 a 39,3,35438,9777,88
+Centro,2010,Situación,Dejó de cumplir,40 a 49,4,28968,7786,59
+Centro,2010,Situación,Dejó de cumplir,50 a 59,5,20878,5078,47
+Centro,2010,Situación,Dejó de cumplir,60 a 69,6,13015,5087,36
+Centro,2010,Situación,Dejó de cumplir,70 y más,7,9032,3135,31
+Centro,2020,Sexo,Mujeres,0 a 9,0,79763,20590,188
+Centro,2020,Sexo,Mujeres,10 a 19,1,135634,39313,271
+Centro,2020,Sexo,Mujeres,20 a 29,2,137642,41276,371
+Centro,2020,Sexo,Mujeres,30 a 39,3,122935,31825,535
+Centro,2020,Sexo,Mujeres,40 a 49,4,86196,33742,343
+Centro,2020,Sexo,Mujeres,50 a 59,5,77174,19261,314
+Centro,2020,Sexo,Mujeres,60 a 69,6,46718,17705,103
+Centro,2020,Sexo,Mujeres,70 y más,7,25178,10291,102
+Centro,2020,Sexo,Hombres,0 a 9,0,83369,30351,183
+Centro,2020,Sexo,Hombres,10 a 19,1,106467,26252,473
+Centro,2020,Sexo,Hombres,20 a 29,2,118474,34938,499
+Centro,2020,Sexo,Hombres,30 a 39,3,100926,24886,355
+Centro,2020,Sexo,Hombres,40 a 49,4,79783,20835,239
+Centro,2020,Sexo,Hombres,50 a 59,5,68346,21777,140
+Centro,2020,Sexo,Hombres,60 a 69,6,38160,12581,90
+Centro,2020,Sexo,Hombres,70 y más,7,28787,10229,56
+Centro,2020,Situación,Empezó a cumplir,0 a 9,0,41453,11295,152
+Centro,2020,Situación,Empezó a cumplir,10 a 19,1,51487,14662,125
+Centro,2020,Situación,Empezó a cumplir,20 a 29,2,55399,14738,190
+Centro,2020,Situación,Empezó a cumplir,30 a 39,3,58672,17247,186
+Centro,2020,Situación,Empezó a cumplir,40 a 49,4,46294,11971,153
+Centro,2020,Situación,Empezó a cumplir,50 a 59,5,44169,11452,127
+Centro,2020,Situación,Empezó a cumplir,60 a 69,6,27713,8831,116
+Centro,2020,Situación,Empezó a cumplir,70 y más,7,17616,6714,36
+Centro,2020,Situación,Dejó de cumplir,0 a 9,0,43960,9764,109
+Centro,2020,Situación,Dejó de cumplir,10 a 19,1,49835,14626,103
+Centro,2020,Situación,Dejó de cumplir,20 a 29,2,48459,12789,100
+Centro,2020,Situación,Dejó de cumplir,30 a 39,3,43726,11077,124
+Centro,2020,Situación,Dejó de cumplir,40 a 49,4,28839,7384,67
+Centro,2020,Situación,Dejó de cumplir,50 a 59,5,22032,7176,96
+Centro,2020,Situación,Dejó de cumplir,60 a 69,6,14741,4766,59
+Centro,2020,Situación,Dejó de cumplir,70 y más,7,10557,3415,47
+Sur-Sureste,2010,Sexo,Mujeres,0 a 9,0,47627,17256,96
+Sur-Sureste,2010,Sexo,Mujeres,10 a 19,1,72534,21800,183
+Sur-Sureste,2010,Sexo,Mujeres,20 a 29,2,77789,18938,182
+Sur-Sureste,2010,Sexo,Mujeres,30 a 39,3,67088,17977,201
+Sur-Sureste,2010,Sexo,Mujeres,40 a 49,4,57010,18091,127
+Sur-Sureste,2010,Sexo,Mujeres,50 a 59,5,35231,9523,93
+Sur-Sureste,2010,Sexo,Mujeres,60 a 69,6,28763,11319,74
+Sur-Sureste,2010,Sexo,Mujeres,70 y más,7,15193,6716,68
+Sur-Sureste,2010,Sexo,Hombres,0 a 9,0,44170,13220,158
+Sur-Sureste,2010,Sexo,Hombres,10 a 19,1,71286,22629,238
+Sur-Sureste,2010,Sexo,Hombres,20 a 29,2,67247,23325,147
+Sur-Sureste,2010,Sexo,Hombres,30 a 39,3,62176,20921,148
+Sur-Sureste,2010,Sexo,Hombres,40 a 49,4,51116,18150,165
+Sur-Sureste,2010,Sexo,Hombres,50 a 59,5,38751,10565,106
+Sur-Sureste,2010,Sexo,Hombres,60 a 69,6,27281,10996,71
+Sur-Sureste,2010,Sexo,Hombres,70 y más,7,14454,5978,33
+Sur-Sureste,2010,Situación,Empezó a cumplir,0 a 9,0,23487,6902,54
+Sur-Sureste,2010,Situación,Empezó a cumplir,10 a 19,1,30177,8590,67
+Sur-Sureste,2010,Situación,Empezó a cumplir,20 a 29,2,39081,13346,87
+Sur-Sureste,2010,Situación,Empezó a cumplir,30 a 39,3,33055,11565,66
+Sur-Sureste,2010,Situación,Empezó a cumplir,40 a 49,4,32474,8266,71
+Sur-Sureste,2010,Situación,Empezó a cumplir,50 a 59,5,24446,7032,104
+Sur-Sureste,2010,Situación,Empezó a cumplir,60 a 69,6,17314,5620,62
+Sur-Sureste,2010,Situación,Empezó a cumplir,70 y más,7,10272,4682,23
+Sur-Sureste,2010,Situación,Dejó de cumplir,0 a 9,0,25604,10771,100
+Sur-Sureste,2010,Situación,Dejó de cumplir,10 a 19,1,31106,8757,61
+Sur-Sureste,2010,Situación,Dejó de cumplir,20 a 29,2,26782,10460,71
+Sur-Sureste,2010,Situación,Dejó de cumplir,30 a 39,3,23023,8669,94
+Sur-Sureste,2010,Situación,Dejó de cumplir,40 a 49,4,17954,5316,38
+Sur-Sureste,2010,Situación,Dejó de cumplir,50 a 59,5,11980,3275,40
+Sur-Sureste,2010,Situación,Dejó de cumplir,60 a 69,6,7471,2846,16
+Sur-Sureste,2010,Situación,Dejó de cumplir,70 y más,7,6899,3153,14
+Sur-Sureste,2020,Sexo,Mujeres,0 a 9,0,56933,17505,118
+Sur-Sureste,2020,Sexo,Mujeres,10 a 19,1,78938,22659,257
+Sur-Sureste,2020,Sexo,Mujeres,20 a 29,2,89707,34060,305
+Sur-Sureste,2020,Sexo,Mujeres,30 a 39,3,76120,23735,158
+Sur-Sureste,2020,Sexo,Mujeres,40 a 49,4,60051,15126,166
+Sur-Sureste,2020,Sexo,Mujeres,50 a 59,5,48711,15900,213
+Sur-Sureste,2020,Sexo,Mujeres,60 a 69,6,28410,12018,112
+Sur-Sureste,2020,Sexo,Mujeres,70 y más,7,19733,8026,67
+Sur-Sureste,2020,Sexo,Hombres,0 a 9,0,56711,15765,132
+Sur-Sureste,2020,Sexo,Hombres,10 a 19,1,83284,26236,333
+Sur-Sureste,2020,Sexo,Hombres,20 a 29,2,75076,20677,196
+Sur-Sureste,2020,Sexo,Hombres,30 a 39,3,65273,22452,229
+Sur-Sureste,2020,Sexo,Hombres,40 a 49,4,50366,20527,160
+Sur-Sureste,2020,Sexo,Hombres,50 a 59,5,41147,11383,176
+Sur-Sureste,2020,Sexo,Hombres,60 a 69,6,26787,9039,105
+Sur-Sureste,2020,Sexo,Hombres,70 y más,7,17831,7007,39
+Sur-Sureste,2020,Situación,Empezó a cumplir,0 a 9,0,25026,6016,51
+Sur-Sureste,2020,Situación,Empezó a cumplir,10 a 19,1,31527,10147,81
+Sur-Sureste,2020,Situación,Empezó a cumplir,20 a 29,2,39093,13451,81
+Sur-Sureste,2020,Situación,Empezó a cumplir,30 a 39,3,36527,11865,139
+Sur-Sureste,2020,Situación,Empezó a cumplir,40 a 49,4,36208,12377,152
+Sur-Sureste,2020,Situación,Empezó a cumplir,50 a 59,5,23123,6547,91
+Sur-Sureste,2020,Situación,Empezó a cumplir,60 a 69,6,21624,9417,62
+Sur-Sureste,2020,Situación,Empezó a cumplir,70 y más,7,10394,4672,28
+Sur-Sureste,2020,Situación,Dejó de cumplir,0 a 9,0,25910,9318,83
+Sur-Sureste,2020,Situación,Dejó de cumplir,10 a 19,1,32884,10278,147
+Sur-Sureste,2020,Situación,Dejó de cumplir,20 a 29,2,30190,10394,107
+Sur-Sureste,2020,Situación,Dejó de cumplir,30 a 39,3,26632,8826,57
+Sur-Sureste,2020,Situación,Dejó de cumplir,40 a 49,4,20885,6302,71
+Sur-Sureste,2020,Situación,Dejó de cumplir,50 a 59,5,12479,3356,27
+Sur-Sureste,2020,Situación,Dejó de cumplir,60 a 69,6,8708,3535,23
+Sur-Sureste,2020,Situación,Dejó de cumplir,70 y más,7,6243,2405,25

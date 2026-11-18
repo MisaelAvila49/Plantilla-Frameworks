@@ -1,0 +1,11 @@
+node_modules/
+dist/
+src/.observablehq/cache/
+.DS_Store
+
+# Capturas de verificación: se regeneran con `npm run capturas` y pesan >100 MB.
+docs/capturas/
+docs/*.log
+# Capturas de proyectos de terceros (NYT, Reuters, Bloomberg...): material de
+# consulta local con derechos de sus autores; no se publican.
+catalogo/referencias/

@@ -1,0 +1,73 @@
+periodo,sexo,sector,condicion,num,den,pct,ee,casos
+2019-T4,Total,Agropecuario,Informal,5182779,6016000,86.15,0.322,21767
+2019-T4,Total,Agropecuario,Formal,833221,6016000,13.85,0.322,3500
+2019-T4,Mujeres,Agropecuario,Informal,701134,782080,89.65,0.788,2945
+2019-T4,Mujeres,Agropecuario,Formal,80946,782080,10.35,0.788,340
+2019-T4,Hombres,Agropecuario,Informal,4404339,5233920,84.15,0.365,18498
+2019-T4,Hombres,Agropecuario,Formal,829581,5233920,15.85,0.365,3484
+2019-T4,Total,Industria manufacturera,Informal,3752546,9118000,41.155,0.373,15761
+2019-T4,Total,Industria manufacturera,Formal,5365454,9118000,58.845,0.373,22535
+2019-T4,Mujeres,Industria manufacturera,Informal,1506520,3373660,44.655,0.619,6327
+2019-T4,Mujeres,Industria manufacturera,Formal,1867140,3373660,55.345,0.619,7842
+2019-T4,Hombres,Industria manufacturera,Informal,2249217,5744340,39.155,0.466,9447
+2019-T4,Hombres,Industria manufacturera,Formal,3495123,5744340,60.845,0.466,14679
+2019-T4,Total,Construcción,Informal,3462370,4512000,76.737,0.455,14542
+2019-T4,Total,Construcción,Formal,1049630,4512000,23.263,0.455,4408
+2019-T4,Mujeres,Construcción,Informal,144812,180480,80.237,2.145,608
+2019-T4,Mujeres,Construcción,Formal,35668,180480,19.763,2.145,150
+2019-T4,Hombres,Construcción,Informal,3237245,4331520,74.737,0.478,13596
+2019-T4,Hombres,Construcción,Formal,1094275,4331520,25.263,0.478,4596
+2019-T4,Total,Comercio,Informal,6671047,10904000,61.18,0.338,28019
+2019-T4,Total,Comercio,Formal,4232953,10904000,38.82,0.338,17778
+2019-T4,Mujeres,Comercio,Informal,3667397,5670080,64.68,0.459,15403
+2019-T4,Mujeres,Comercio,Formal,2002683,5670080,35.32,0.459,8411
+2019-T4,Hombres,Comercio,Informal,3097424,5233920,59.18,0.492,13009
+2019-T4,Hombres,Comercio,Formal,2136496,5233920,40.82,0.492,8973
+2019-T4,Total,Servicios,Informal,12102253,23688000,51.09,0.235,50830
+2019-T4,Total,Servicios,Formal,11585747,23688000,48.91,0.235,48660
+2019-T4,Mujeres,Servicios,Informal,6465667,11844000,54.59,0.331,27156
+2019-T4,Mujeres,Servicios,Formal,5378333,11844000,45.41,0.331,22589
+2019-T4,Hombres,Servicios,Informal,5814247,11844000,49.09,0.332,24420
+2019-T4,Hombres,Servicios,Formal,6029753,11844000,50.91,0.332,25325
+2019-T4,Total,Gobierno,Informal,207775,2444000,8.501,0.408,873
+2019-T4,Total,Gobierno,Formal,2236225,2444000,91.499,0.408,9392
+2019-T4,Mujeres,Gobierno,Informal,131992,1099800,12.001,0.709,554
+2019-T4,Mujeres,Gobierno,Formal,967808,1099800,87.999,0.709,4065
+2019-T4,Hombres,Gobierno,Informal,87392,1344200,6.501,0.487,367
+2019-T4,Hombres,Gobierno,Formal,1256808,1344200,93.499,0.487,5279
+2024-T4,Total,Agropecuario,Informal,5449374,6400000,85.146,0.322,22887
+2024-T4,Total,Agropecuario,Formal,950626,6400000,14.854,0.322,3993
+2024-T4,Mujeres,Agropecuario,Informal,737539,832000,88.646,0.796,3097
+2024-T4,Mujeres,Agropecuario,Formal,94461,832000,11.354,0.796,397
+2024-T4,Hombres,Agropecuario,Informal,4629596,5568000,83.146,0.363,19445
+2024-T4,Hombres,Agropecuario,Formal,938404,5568000,16.854,0.363,3941
+2024-T4,Total,Industria manufacturera,Informal,3801723,9700000,39.193,0.359,15967
+2024-T4,Total,Industria manufacturera,Formal,5898277,9700000,60.807,0.359,24773
+2024-T4,Mujeres,Industria manufacturera,Informal,1532253,3589000,42.693,0.598,6436
+2024-T4,Mujeres,Industria manufacturera,Formal,2056747,3589000,57.307,0.598,8638
+2024-T4,Hombres,Industria manufacturera,Informal,2272866,6111000,37.193,0.447,9546
+2024-T4,Hombres,Industria manufacturera,Formal,3838134,6111000,62.807,0.447,16120
+2024-T4,Total,Construcción,Informal,3645436,4800000,75.947,0.446,15311
+2024-T4,Total,Construcción,Formal,1154564,4800000,24.053,0.446,4849
+2024-T4,Mujeres,Construcción,Informal,152537,192000,79.447,2.111,640
+2024-T4,Mujeres,Construcción,Formal,39463,192000,20.553,2.111,166
+2024-T4,Hombres,Construcción,Informal,3407458,4608000,73.947,0.468,14312
+2024-T4,Hombres,Construcción,Formal,1200542,4608000,26.053,0.468,5042
+2024-T4,Total,Comercio,Informal,7016316,11600000,60.485,0.329,29469
+2024-T4,Total,Comercio,Formal,4583684,11600000,39.515,0.329,19251
+2024-T4,Mujeres,Comercio,Informal,3859604,6032000,63.985,0.447,16210
+2024-T4,Mujeres,Comercio,Formal,2172396,6032000,36.015,0.447,9124
+2024-T4,Hombres,Comercio,Informal,3256472,5568000,58.485,0.478,13677
+2024-T4,Hombres,Comercio,Formal,2311528,5568000,41.515,0.478,9709
+2024-T4,Total,Servicios,Informal,12642216,25200000,50.168,0.228,53097
+2024-T4,Total,Servicios,Formal,12557784,25200000,49.832,0.228,52743
+2024-T4,Mujeres,Servicios,Informal,6762108,12600000,53.668,0.322,28401
+2024-T4,Mujeres,Servicios,Formal,5837892,12600000,46.332,0.322,24519
+2024-T4,Hombres,Servicios,Informal,6069108,12600000,48.168,0.322,25490
+2024-T4,Hombres,Servicios,Formal,6530892,12600000,51.832,0.322,27430
+2024-T4,Total,Gobierno,Informal,200225,2600000,7.701,0.378,841
+2024-T4,Total,Gobierno,Formal,2399775,2600000,92.299,0.378,10079
+2024-T4,Mujeres,Gobierno,Informal,131051,1170000,11.201,0.667,550
+2024-T4,Mujeres,Gobierno,Formal,1038949,1170000,88.799,0.667,4364
+2024-T4,Hombres,Gobierno,Informal,81523,1430000,5.701,0.444,342
+2024-T4,Hombres,Gobierno,Formal,1348477,1430000,94.299,0.444,5664

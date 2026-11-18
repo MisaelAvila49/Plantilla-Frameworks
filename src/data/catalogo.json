@@ -1,0 +1,3633 @@
+{
+ "fichas": [
+  {
+   "id": "barras",
+   "nombre": "Barras verticales",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cuánto vale cada grupo?",
+   "si": "Hasta 12 grupos con nombres cortos.",
+   "no": "Nombres largos o muchos grupos: barras horizontales.",
+   "datosForma": "[{grupo, valor, num}]",
+   "fuentes": [],
+   "componente": "src/components/formas/barras.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "barras",
+   "destino": "galeria/comparacion#barras",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/barras.png",
+    "oscuro": "catalogo/miniaturas/barras-oscuro.png",
+    "ancho": 1320,
+    "alto": 560,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "agrupadas",
+   "nombre": "Barras agrupadas en facetas",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-series"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cómo se comparan dos o tres series dentro de cada categoría?",
+   "si": "Dos o tres series (sexo, año) por categoría.",
+   "no": "Más de tres series: facetas separadas o heatmap.",
+   "datosForma": "[{escolaridad, sexo, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/agrupadas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "agrupadas",
+   "destino": "galeria/comparacion#agrupadas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/agrupadas.png",
+    "oscuro": "catalogo/miniaturas/agrupadas-oscuro.png",
+    "ancho": 1320,
+    "alto": 648,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "dumbbell",
+   "nombre": "Dumbbell",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-series",
+    "dos-cortes"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "puntos",
+    "linea"
+   ],
+   "pregunta": "¿Cuánto separa a dos grupos en cada categoría?",
+   "si": "Dos grupos y muchas categorías; la brecha es la historia.",
+   "no": "Tres o más grupos: barras agrupadas o heatmap.",
+   "datosForma": "[{fila, serie, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/dumbbell.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "brecha",
+   "destino": "galeria/comparacion#brecha",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/dumbbell.png",
+    "oscuro": "catalogo/miniaturas/dumbbell-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "waffle",
+   "nombre": "Waffle",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "unidades"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cuántos de cada 100?",
+   "si": "Una proporción que se lee mejor como personas que como porcentaje.",
+   "no": "Más de cuatro grupos o diferencias de décimas.",
+   "datosForma": "[{grupo, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/waffle.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "de-cada-cien",
+   "destino": "galeria/unidades#de-cada-cien",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/waffle.png",
+    "oscuro": "catalogo/miniaturas/waffle-oscuro.png",
+    "ancho": 1320,
+    "alto": 378,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "cifra",
+   "nombre": "Cifra con tendencia",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Cuál es el número y hacia dónde va?",
+   "si": "Un solo número es la respuesta y su trayectoria da contexto.",
+   "no": "Varios números que se comparan entre sí: barras.",
+   "datosForma": "[{anio, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/cifra.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "cifra",
+   "destino": "galeria/comparacion#cifra",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/cifra.png",
+    "oscuro": "catalogo/miniaturas/cifra-oscuro.png",
+    "ancho": 1320,
+    "alto": 464,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "ranking",
+   "nombre": "Barras horizontales ordenadas",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Quién está arriba y quién abajo?",
+   "si": "Muchas categorías o nombres largos.",
+   "no": "Categorías con orden propio (edad, decil): barras verticales.",
+   "datosForma": "[{entidad, valor, num}]",
+   "fuentes": [],
+   "componente": "src/components/formas/ranking.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "ranking",
+   "destino": "galeria/comparacion#ranking",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/ranking.png",
+    "oscuro": "catalogo/miniaturas/ranking-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "lollipop",
+   "nombre": "Lollipop",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Cómo se ordenan muchas categorías sin llenar la vista de tinta?",
+   "si": "Ranking de 20 o más filas.",
+   "no": "Pocas filas: barras, que se leen más rápido.",
+   "datosForma": "[{entidad, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/lollipop.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "cambio",
+   "destino": "galeria/comparacion#cambio",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/lollipop.png",
+    "oscuro": "catalogo/miniaturas/lollipop-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "bump",
+   "nombre": "Bump chart",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo",
+    "comparacion"
+   ],
+   "forma": [
+    "linea",
+    "circulo"
+   ],
+   "pregunta": "¿Qué lugar ocupa cada quien año con año?",
+   "si": "El lugar es la historia y son hasta 15 entidades.",
+   "no": "Importa la distancia entre valores: líneas.",
+   "datosForma": "[{entidad, anio, lugar}]",
+   "fuentes": [],
+   "componente": "src/components/formas/bump.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "bump",
+   "destino": "galeria/tiempo#bump",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/bump.png",
+    "oscuro": "catalogo/miniaturas/bump-oscuro.png",
+    "ancho": 1320,
+    "alto": 656,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "histograma",
+   "nombre": "Histograma",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cómo se reparten los valores de una medida?",
+   "si": "Una medida continua: ingreso, edad, horas.",
+   "no": "Comparar más de dos grupos: caja o crestas.",
+   "datosForma": "[{ingreso, factor}]  factor = factor de expansión",
+   "fuentes": [],
+   "componente": "src/components/formas/histograma.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "histograma",
+   "destino": "galeria/distribucion#histograma",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/histograma.png",
+    "oscuro": "catalogo/miniaturas/histograma-oscuro.png",
+    "ancho": 1320,
+    "alto": 610,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "caja",
+   "nombre": "Caja (box plot)",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "cuadrado",
+    "linea"
+   ],
+   "pregunta": "¿Cómo se comparan las distribuciones de varios grupos?",
+   "si": "Varios grupos con cientos de casos cada uno.",
+   "no": "Pocos casos por grupo: puntos individuales.",
+   "datosForma": "[{grupo, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/caja.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "caja",
+   "destino": "galeria/distribucion#caja",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/caja.png",
+    "oscuro": "catalogo/miniaturas/caja-oscuro.png",
+    "ancho": 1320,
+    "alto": 780,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "enjambre",
+   "nombre": "Enjambre (beeswarm)",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "puntos"
+   ],
+   "pregunta": "¿Dónde cae cada unidad y cómo se agrupan?",
+   "si": "Cientos de unidades (municipios, escuelas) sobre una medida.",
+   "no": "Miles de unidades: histograma o hexbin.",
+   "datosForma": "[{municipio, region, valor}]",
+   "fuentes": [
+    {
+     "texto": "Mike Bostock, D3",
+     "url": "https://observablehq.com/@d3/beeswarm-mirrored/2"
+    }
+   ],
+   "componente": "src/components/formas/enjambre-puntos.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "enjambre-puntos",
+   "destino": "galeria/distribucion#enjambre-puntos",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/enjambre.png",
+    "oscuro": "catalogo/miniaturas/enjambre-oscuro.png",
+    "ancho": 1320,
+    "alto": 602,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "piramide",
+   "nombre": "Pirámide de población",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-series"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cómo se compone la población por edad y sexo?",
+   "si": "Estructura por edad de un lugar o un año.",
+   "no": "Comparar muchos lugares: facetas o índice de envejecimiento.",
+   "datosForma": "[{edad, sexo, pct}]  pct sobre el total",
+   "fuentes": [],
+   "componente": "src/components/formas/piramide.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "piramide",
+   "destino": "galeria/distribucion#piramide",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/piramide.png",
+    "oscuro": "catalogo/miniaturas/piramide-oscuro.png",
+    "ancho": 1320,
+    "alto": 916,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "crestas",
+   "nombre": "Crestas (ridgeline)",
+   "nivel": 2,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿Cómo se desplaza una distribución entre años o grupos?",
+   "si": "Cinco a quince distribuciones de la misma medida.",
+   "no": "Hay que leer valores exactos: caja o tabla.",
+   "datosForma": "[{anio, valor}]",
+   "fuentes": [
+    {
+     "texto": "Claus Wilke; galería de D3",
+     "url": "https://observablehq.com/@d3/ridgeline-plot"
+    }
+   ],
+   "componente": "src/components/formas/crestas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "crestas",
+   "destino": "galeria/distribucion#crestas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/crestas.png",
+    "oscuro": "catalogo/miniaturas/crestas-oscuro.png",
+    "ancho": 1320,
+    "alto": 920,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "lluvia",
+   "nombre": "Nube de lluvia (raincloud)",
+   "nivel": 3,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "area",
+    "puntos"
+   ],
+   "pregunta": "¿En qué se distinguen las distribuciones, más allá de la mediana?",
+   "si": "Pocos grupos y hay sospecha de dos jorobas o de casos extremos.",
+   "no": "Público sin tiempo de leer tres capas: caja o histograma.",
+   "datosForma": "[{grupo, valor}]",
+   "fuentes": [
+    {
+     "texto": "Allen, Poggiali, Whitaker y otros (2019)",
+     "url": "https://wellcomeopenresearch.org/articles/4-63"
+    }
+   ],
+   "componente": "src/components/formas/lluvia.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "lluvia",
+   "destino": "galeria/distribucion#lluvia",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/lluvia.png",
+    "oscuro": "catalogo/miniaturas/lluvia-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "cuantiles",
+   "nombre": "Puntos de cuantiles",
+   "nivel": 3,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "categoria-valor",
+    "intervalos"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "puntos"
+   ],
+   "pregunta": "¿Qué tan segura es esta cifra de encuesta?",
+   "si": "Publicar una estimación con su margen de error a un público general.",
+   "no": "La muestra es grande y el intervalo es angosto: basta la cifra.",
+   "datosForma": "[{lugar, estimacion, error}]  error = error estándar de diseño",
+   "fuentes": [
+    {
+     "texto": "Kay, Kola, Hullman y Munson (2016)",
+     "url": "https://idl.cs.washington.edu/files/2018-UncertaintyBus-CHI.pdf"
+    }
+   ],
+   "componente": "src/components/formas/cuantiles.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "cuantiles",
+   "destino": "galeria/precision#cuantiles",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/cuantiles.png",
+    "oscuro": "catalogo/miniaturas/cuantiles-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "lineas",
+   "nombre": "Líneas con etiqueta al final",
+   "nivel": 0,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Cómo evoluciona una serie larga?",
+   "si": "Una a tres series con muchos puntos en el tiempo.",
+   "no": "Dos o tres años: pendiente o barras.",
+   "datosForma": "[{anio, serie, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/lineas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "lineas",
+   "destino": "galeria/tiempo#lineas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/lineas.png",
+    "oscuro": "catalogo/miniaturas/lineas-oscuro.png",
+    "ancho": 1320,
+    "alto": 578,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "pendiente",
+   "nombre": "Pendiente",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "dos-cortes"
+   ],
+   "funcion": [
+    "tiempo",
+    "comparacion"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Cómo cambió entre dos o tres años?",
+   "si": "Dos o tres ediciones y pocas series.",
+   "no": "Series largas: líneas.",
+   "datosForma": "[{anio, serie, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/pendiente.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "pendiente",
+   "destino": "galeria/tiempo#pendiente",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/pendiente.png",
+    "oscuro": "catalogo/miniaturas/pendiente-oscuro.png",
+    "ancho": 1320,
+    "alto": 908,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "contexto",
+   "nombre": "Líneas con contexto",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Cómo le fue a unos pocos frente a todos los demás?",
+   "si": "Muchas entidades y el lector elige hasta tres.",
+   "no": "Todas importan por igual: heatmap.",
+   "datosForma": "[{entidad, anio, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/contexto.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "contexto",
+   "destino": "galeria/tiempo#contexto",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/contexto.png",
+    "oscuro": "catalogo/miniaturas/contexto-oscuro.png",
+    "ancho": 1320,
+    "alto": 688,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "calendario",
+   "nombre": "Calendario",
+   "nivel": 2,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo varía día con día?",
+   "si": "Series diarias donde importan el día de la semana y la estación.",
+   "no": "Datos mensuales o anuales: líneas.",
+   "datosForma": "[{fecha, valor}]  fecha en UTC",
+   "fuentes": [],
+   "componente": "src/components/formas/calendario.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "calendario",
+   "destino": "galeria/tiempo#calendario",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/calendario.png",
+    "oscuro": "catalogo/miniaturas/calendario-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "horizonte",
+   "nombre": "Horizonte",
+   "nivel": 3,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿Cómo se comparan muchas series largas en poco espacio?",
+   "si": "Diez o más series diarias o semanales que se revisan con frecuencia.",
+   "no": "Público que la ve una sola vez: líneas pequeñas en facetas.",
+   "datosForma": "[{serie, fecha, valor}]",
+   "fuentes": [
+    {
+     "texto": "Heer, Kong y Agrawala; Mike Bostock",
+     "url": "https://observablehq.com/@d3/horizon-chart/2"
+    }
+   ],
+   "componente": "src/components/formas/horizonte.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "horizonte",
+   "destino": "galeria/tiempo#horizonte",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/horizonte.png",
+    "oscuro": "catalogo/miniaturas/horizonte-oscuro.png",
+    "ancho": 1320,
+    "alto": 708,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "franjas",
+   "nombre": "Franjas",
+   "nivel": 3,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cuál es la tendencia larga, de un vistazo?",
+   "si": "Una serie anual o trimestral larga contra su promedio; portada o cierre de una historia.",
+   "no": "Hay que leer valores: acompañarla de una línea.",
+   "datosForma": "[{periodo, valor}]",
+   "fuentes": [
+    {
+     "texto": "Ed Hawkins (2018)",
+     "url": "https://showyourstripes.info/"
+    }
+   ],
+   "componente": "src/components/formas/franjas-tiempo.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "franjas",
+   "destino": "galeria/tiempo#franjas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/franjas.png",
+    "oscuro": "catalogo/miniaturas/franjas-oscuro.png",
+    "ancho": 1320,
+    "alto": 842,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "conectada",
+   "nombre": "Dispersión conectada",
+   "nivel": 3,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "dos-medidas",
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "correlacion",
+    "tiempo"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Cómo se movieron dos indicadores juntos a lo largo del tiempo?",
+   "si": "Una sola unidad y dos medidas con historia (idas y vueltas).",
+   "no": "Muchas unidades: se vuelve un nudo; usar dos líneas.",
+   "datosForma": "[{anio, x, y}]",
+   "fuentes": [
+    {
+     "texto": "Hannah Fairfield, The New York Times",
+     "url": "https://observablehq.com/@d3/connected-scatterplot/2"
+    }
+   ],
+   "componente": "src/components/formas/conectada.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/correlacion",
+   "paginaNombre": "Correlación",
+   "ancla": "conectada",
+   "destino": "galeria/correlacion#conectada",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/conectada.png",
+    "oscuro": "catalogo/miniaturas/conectada-oscuro.png",
+    "ancho": 1320,
+    "alto": 814,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "apiladas",
+   "nombre": "Barras apiladas al 100 %",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿De qué se compone el total de cada grupo?",
+   "si": "Hasta tres partes con orden propio, varios grupos.",
+   "no": "Más de tres partes sin orden: facetas o \"Otras\".",
+   "datosForma": "[{grupo, categoria, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/barras-apiladas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "composicion",
+   "destino": "galeria/parte-todo#composicion",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/apiladas.png",
+    "oscuro": "catalogo/miniaturas/apiladas-oscuro.png",
+    "ancho": 1320,
+    "alto": 540,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "likert",
+   "nombre": "Apilada divergente (Likert)",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Qué tan de acuerdo están?",
+   "si": "Escalas de acuerdo o satisfacción de cinco puntos.",
+   "no": "Respuestas sin orden: barras apiladas o ranking.",
+   "datosForma": "[{pregunta, respuesta, pct}]",
+   "fuentes": [],
+   "componente": "src/components/formas/likert.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "likert",
+   "destino": "galeria/parte-todo#likert",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/likert.png",
+    "oscuro": "catalogo/miniaturas/likert-oscuro.png",
+    "ancho": 1320,
+    "alto": 822,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "cascada",
+   "nombre": "Cascada",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "intervalos",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "parte-todo"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Qué partes explican el cambio de un total?",
+   "si": "Descomponer un cambio entre dos totales en sus fuentes.",
+   "no": "Las partes no suman el total: barras de diferencia.",
+   "datosForma": "[{paso, tipo, inicio, fin}]  tipo: total | paso",
+   "fuentes": [],
+   "componente": "src/components/formas/cascada.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "cascada",
+   "destino": "galeria/parte-todo#cascada",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/cascada.png",
+    "oscuro": "catalogo/miniaturas/cascada-oscuro.png",
+    "ancho": 1320,
+    "alto": 680,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "marimekko",
+   "nombre": "Marimekko",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "cruce",
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo se compone cada grupo cuando los grupos tienen tamaños distintos?",
+   "si": "El ancho (tamaño del grupo) y la mezcla interna importan a la vez.",
+   "no": "Grupos de tamaño parecido: apiladas al 100 %.",
+   "datosForma": "[{sector, condicion, personas}]",
+   "fuentes": [
+    {
+     "texto": "Galería de D3",
+     "url": "https://observablehq.com/@d3/marimekko-chart"
+    }
+   ],
+   "componente": "src/components/formas/marimekko.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "marimekko",
+   "destino": "galeria/parte-todo#marimekko",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/marimekko.png",
+    "oscuro": "catalogo/miniaturas/marimekko-oscuro.png",
+    "ancho": 1320,
+    "alto": 1036,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "dispersion",
+   "nombre": "Dispersión",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "dos-medidas"
+   ],
+   "funcion": [
+    "correlacion"
+   ],
+   "forma": [
+    "puntos"
+   ],
+   "pregunta": "¿Se relacionan dos medidas?",
+   "si": "Decenas o cientos de unidades con dos medidas.",
+   "no": "Miles de puntos: hexbin. Una unidad en el tiempo: dispersión conectada.",
+   "datosForma": "[{entidad, region, x, y}]",
+   "fuentes": [],
+   "componente": "src/components/formas/dispersion.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/correlacion",
+   "paginaNombre": "Correlación",
+   "ancla": "dispersion",
+   "destino": "galeria/correlacion#dispersion",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/dispersion.png",
+    "oscuro": "catalogo/miniaturas/dispersion-oscuro.png",
+    "ancho": 1320,
+    "alto": 830,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "heatmap",
+   "nombre": "Heatmap",
+   "nivel": 1,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "cruce"
+   ],
+   "funcion": [
+    "comparacion",
+    "correlacion"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo varía un valor entre dos categorías cruzadas?",
+   "si": "Más de cuatro paneles: entidades por año, edad por sexo.",
+   "no": "Pocas celdas: barras con valor escrito.",
+   "datosForma": "[{entidad, anio, valor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/heatmap.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "cruce",
+   "destino": "galeria/comparacion#cruce",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/heatmap.png",
+    "oscuro": "catalogo/miniaturas/heatmap-oscuro.png",
+    "ancho": 1320,
+    "alto": 608,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "hexbin",
+   "nombre": "Hexbin",
+   "nivel": 2,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "dos-medidas"
+   ],
+   "funcion": [
+    "correlacion",
+    "distribucion"
+   ],
+   "forma": [
+    "hexagono"
+   ],
+   "pregunta": "¿Dónde se concentran miles de puntos?",
+   "si": "Más de mil puntos con dos medidas continuas.",
+   "no": "Pocas unidades con nombre: dispersión.",
+   "datosForma": "[{edad, horas, factor}]",
+   "fuentes": [],
+   "componente": "src/components/formas/hexbin.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/correlacion",
+   "paginaNombre": "Correlación",
+   "ancla": "hexbin",
+   "destino": "galeria/correlacion#hexbin",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/hexbin.png",
+    "oscuro": "catalogo/miniaturas/hexbin-oscuro.png",
+    "ancho": 1320,
+    "alto": 1043,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "coropleta",
+   "nombre": "Coropleta",
+   "nivel": 1,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion"
+   ],
+   "forma": [
+    "mapa"
+   ],
+   "pregunta": "¿Dónde pasa? (tasas)",
+   "si": "Una tasa o porcentaje por entidad o municipio.",
+   "no": "Conteos: mapa de burbujas o agujas.",
+   "datosForma": "[{id, valor}]  id igual al del geojson",
+   "fuentes": [],
+   "componente": "src/components/formas/coropleta.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "nivel",
+   "destino": "galeria/mapas#nivel",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/coropleta.png",
+    "oscuro": "catalogo/miniaturas/coropleta-oscuro.png",
+    "ancho": 1320,
+    "alto": 968,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "burbujas",
+   "nombre": "Mapa de burbujas",
+   "nivel": 1,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion"
+   ],
+   "forma": [
+    "circulo",
+    "mapa"
+   ],
+   "pregunta": "¿Cuántos hay en cada lugar? (conteos)",
+   "si": "Personas, escuelas o casos por entidad.",
+   "no": "Tasas: coropleta.",
+   "datosForma": "[{id, num}]",
+   "fuentes": [],
+   "componente": "src/components/formas/burbujas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "burbujas",
+   "destino": "galeria/mapas#burbujas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/burbujas.png",
+    "oscuro": "catalogo/miniaturas/burbujas-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "bivariado",
+   "nombre": "Mapa bivariado",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "correlacion"
+   ],
+   "forma": [
+    "mapa"
+   ],
+   "pregunta": "¿Dónde coinciden dos cosas?",
+   "si": "Dos variables con terciles claros y una pregunta de coincidencia.",
+   "no": "Una sola variable: coropleta. Tres: no se lee.",
+   "datosForma": "[{id, a, b}]  terciles sobre el universo completo",
+   "fuentes": [
+    {
+     "texto": "Joshua Stevens",
+     "url": "https://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/"
+    }
+   ],
+   "componente": "src/components/formas/bivariado.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "bivariado",
+   "destino": "galeria/mapas#bivariado",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/bivariado.png",
+    "oscuro": "catalogo/miniaturas/bivariado-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "teselas",
+   "nombre": "Mosaico de entidades",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "comparacion"
+   ],
+   "forma": [
+    "cuadrado",
+    "mapa"
+   ],
+   "pregunta": "¿Cómo se comparan las 32 entidades con el mismo peso visual?",
+   "si": "Tasas por entidad donde Tlaxcala y la Ciudad de México deben verse igual que Chihuahua.",
+   "no": "La forma o el tamaño real del territorio importan: coropleta.",
+   "datosForma": "[{id, corto, col, fila, valor}]",
+   "fuentes": [
+    {
+     "texto": "NPR, Danny DeBelius (2015)",
+     "url": "https://blog.apps.npr.org/2015/05/11/hex-tile-maps.html"
+    }
+   ],
+   "componente": "src/components/formas/mosaico.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "mosaico",
+   "destino": "galeria/mapas#mosaico",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/teselas.png",
+    "oscuro": "catalogo/miniaturas/teselas-oscuro.png",
+    "ancho": 1320,
+    "alto": 784,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "agujas",
+   "nombre": "Mapa de agujas",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor",
+    "geo-puntos"
+   ],
+   "funcion": [
+    "geolocalizacion"
+   ],
+   "forma": [
+    "triangulo",
+    "mapa"
+   ],
+   "pregunta": "¿Dónde se concentran los conteos, sin que el territorio grande domine?",
+   "si": "Conteos absolutos con diferencias grandes entre lugares.",
+   "no": "Unidades muy juntas: las agujas se tapan; usar mosaico o burbujas.",
+   "datosForma": "[{id, num}]",
+   "fuentes": [
+    {
+     "texto": "Mike Bostock, D3",
+     "url": "https://observablehq.com/@d3/spike-map/2"
+    }
+   ],
+   "componente": "src/components/formas/picos.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "picos",
+   "destino": "galeria/mapas#picos",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/agujas.png",
+    "oscuro": "catalogo/miniaturas/agujas-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "dorling",
+   "nombre": "Cartograma de Dorling",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion"
+   ],
+   "forma": [
+    "circulo",
+    "mapa"
+   ],
+   "pregunta": "¿Cómo se ve el país pesado por personas y no por territorio?",
+   "si": "Una tasa donde importa cuánta gente vive en cada lugar.",
+   "no": "El lector necesita ubicar lugares con precisión: coropleta.",
+   "datosForma": "[{id, pob, valor}]",
+   "fuentes": [
+    {
+     "texto": "Danny Dorling; Julien Gaffuri",
+     "url": "https://observablehq.com/@jgaffuri/dorling-cartogram-population"
+    }
+   ],
+   "componente": "src/components/formas/dorling.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "dorling",
+   "destino": "galeria/mapas#dorling",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/dorling.png",
+    "oscuro": "catalogo/miniaturas/dorling-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "densidad",
+   "nombre": "Mapa de densidad de puntos",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "unidades"
+   ],
+   "forma": [
+    "puntos",
+    "mapa"
+   ],
+   "pregunta": "¿Dónde viven los grupos y cuánto se mezclan?",
+   "si": "Dos grupos de población y la pregunta es su mezcla en el territorio.",
+   "no": "Precisión de ubicación: los puntos se reparten al azar dentro de cada entidad.",
+   "datosForma": "[{id, pob, indigena}]",
+   "fuentes": [
+    {
+     "texto": "Dustin Cable (Racial Dot Map); Aaron Williams",
+     "url": "https://observablehq.com/@aboutaaron/racial-demographic-dot-density-map"
+    }
+   ],
+   "componente": "src/components/formas/densidad.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "densidad",
+   "destino": "galeria/mapas#densidad",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/densidad.png",
+    "oscuro": "catalogo/miniaturas/densidad-oscuro.png",
+    "ancho": 1320,
+    "alto": 955,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "sankey",
+   "nombre": "Sankey",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿De dónde a dónde se mueve algo?",
+   "si": "Tres o cuatro etapas con hasta ocho nodos cada una.",
+   "no": "Muchos orígenes y destinos: matriz de adyacencia.",
+   "datosForma": "nodos [{id}], enlaces [{source, target, value}]",
+   "fuentes": [
+    {
+     "texto": "Mike Bostock, d3-sankey",
+     "url": "https://observablehq.com/@d3/sankey/2"
+    }
+   ],
+   "componente": "src/components/formas/sankey.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "sankey",
+   "destino": "galeria/flujo#sankey",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/sankey.png",
+    "oscuro": "catalogo/miniaturas/sankey-oscuro.png",
+    "ancho": 1320,
+    "alto": 792,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "conjuntos",
+   "nombre": "Conjuntos paralelos",
+   "nivel": 3,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "cruce"
+   ],
+   "funcion": [
+    "flujo",
+    "parte-todo"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿Cómo se reparte una población entre varias categorías a la vez?",
+   "si": "Tres variables categóricas cruzadas (sexo, escolaridad, ocupación).",
+   "no": "Más de tres variables: los listones se enredan; usar tablas cruzadas.",
+   "datosForma": "[{sexo, escolaridad, condicion, personas}]",
+   "fuentes": [
+    {
+     "texto": "Kosara y Bendix; Jason Davies; galería de D3",
+     "url": "https://observablehq.com/@d3/parallel-sets"
+    }
+   ],
+   "componente": "src/components/formas/conjuntos.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "conjuntos",
+   "destino": "galeria/flujo#conjuntos",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/conjuntos.png",
+    "oscuro": "catalogo/miniaturas/conjuntos-oscuro.png",
+    "ancho": 1320,
+    "alto": 888,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "red",
+   "nombre": "Red",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo"
+   ],
+   "forma": [
+    "circulo",
+    "linea"
+   ],
+   "pregunta": "¿Quién se conecta con quién?",
+   "si": "La estructura (comunidades, nodos centrales) es la pregunta.",
+   "no": "Hay que comparar cantidades entre pares: matriz de adyacencia.",
+   "datosForma": "nodos [{id, grupo}], enlaces [{source, target}]",
+   "fuentes": [],
+   "componente": "src/components/formas/red.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "red",
+   "destino": "galeria/flujo#red",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/red.png",
+    "oscuro": "catalogo/miniaturas/red-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "matriz",
+   "nombre": "Matriz de adyacencia",
+   "nivel": 2,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cuánto se mueve entre cada par de lugares?",
+   "si": "Flujos origen-destino entre 6 y 30 lugares.",
+   "no": "Pocos flujos y la trayectoria importa: Sankey.",
+   "datosForma": "[{origen, destino, personas}]",
+   "fuentes": [
+    {
+     "texto": "Mike Bostock (Les Misérables)",
+     "url": "https://bost.ocks.org/mike/miserables/"
+    }
+   ],
+   "componente": "src/components/formas/matriz.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "matriz",
+   "destino": "galeria/flujo#matriz",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/matriz.png",
+    "oscuro": "catalogo/miniaturas/matriz-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "arcos",
+   "nombre": "Diagrama de arcos",
+   "nivel": 3,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo"
+   ],
+   "forma": [
+    "linea",
+    "circulo"
+   ],
+   "pregunta": "¿Qué pares de una lista ordenada están conectados?",
+   "si": "Pocos nodos con un orden natural (años, entidades de norte a sur).",
+   "no": "Muchos enlaces: matriz de adyacencia.",
+   "datosForma": "[{origen, destino, valor}]",
+   "fuentes": [
+    {
+     "texto": "Martin Wattenberg; Observable Plot",
+     "url": "https://observablehq.com/@observablehq/plot-arc-diagram"
+    }
+   ],
+   "componente": "src/components/formas/arcos.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "arcos",
+   "destino": "galeria/flujo#arcos",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/arcos.png",
+    "oscuro": "catalogo/miniaturas/arcos-oscuro.png",
+    "ancho": 1320,
+    "alto": 658,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "treemap",
+   "nombre": "Treemap",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "jerarquia"
+   ],
+   "funcion": [
+    "jerarquia",
+    "parte-todo"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo se reparte un total entre muchas partes?",
+   "si": "Diez o más partes agrupadas en pocas categorías.",
+   "no": "Menos de 12 partes sin jerarquía: barras ordenadas.",
+   "datosForma": "[{grupo, rubro, valor}]",
+   "fuentes": [
+    {
+     "texto": "Ben Shneiderman (1990); galería de D3",
+     "url": "https://observablehq.com/@d3/treemap/2"
+    }
+   ],
+   "componente": "src/components/formas/treemap.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "reparto",
+   "destino": "galeria/parte-todo#reparto",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/treemap.png",
+    "oscuro": "catalogo/miniaturas/treemap-oscuro.png",
+    "ancho": 1320,
+    "alto": 804,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "icicle",
+   "nombre": "Icicle",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "jerarquia"
+   ],
+   "funcion": [
+    "jerarquia"
+   ],
+   "forma": [
+    "cuadrado",
+    "barras"
+   ],
+   "pregunta": "¿Qué contiene qué, y cuánto pesa cada parte?",
+   "si": "Dos o tres niveles de jerarquía y la estructura importa.",
+   "no": "Solo importan las proporciones: treemap.",
+   "datosForma": "[{nivel1, nivel2, valor}]",
+   "fuentes": [
+    {
+     "texto": "Kruskal y Landwehr (1983); galería de D3",
+     "url": "https://observablehq.com/@d3/icicle/2"
+    }
+   ],
+   "componente": "src/components/formas/icicle.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "icicle",
+   "destino": "galeria/parte-todo#icicle",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/icicle.png",
+    "oscuro": "catalogo/miniaturas/icicle-oscuro.png",
+    "ancho": 1320,
+    "alto": 1010,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "destacadas",
+   "nombre": "Líneas con grupo destacado",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo",
+    "comparacion"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Dónde queda un grupo respecto de todos los demás, año tras año?",
+   "si": "Muchas series como contexto en gris y un grupo elegido en color; el tiempo puede correr hacia abajo para una columna angosta.",
+   "no": "Menos de cinco puntos por serie (pendiente o dumbbell) o más de unas diez series destacadas a la vez.",
+   "datosForma": "[{tiempo, valor, serie}]  destacada(serie) elige el grupo",
+   "fuentes": [
+    {
+     "texto": "The New York Times, Data Vis Dispatch del 10 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-10-2026-a-blue-wave-pi-and-the-pancake-index"
+    }
+   ],
+   "componente": "src/components/formas/destacadas.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "destacadas",
+   "destino": "galeria/tiempo#destacadas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/destacadas.png",
+    "oscuro": "catalogo/miniaturas/destacadas-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "riel",
+   "nombre": "Riel de trayectoria con flecha final",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Cómo se movió cada grupo en tres o más cortes y hacia dónde terminó?",
+   "si": "De tres a cinco cortes y hasta unas quince unidades; importa si el valor dio la vuelta.",
+   "no": "Series largas (líneas), más de unas quince unidades (mosaico o lollipop) o magnitudes sin un eje común.",
+   "datosForma": "[{unidad, corte, valor}]",
+   "fuentes": [
+    {
+     "texto": "The New York Times, Data Vis Dispatch del 27 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/riel.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "riel",
+   "destino": "galeria/tiempo#riel",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/riel.png",
+    "oscuro": "catalogo/miniaturas/riel-oscuro.png",
+    "ancho": 1320,
+    "alto": 966,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "areas-superpuestas",
+   "nombre": "Áreas superpuestas en paneles",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-series",
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "comparacion",
+    "tiempo"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿Cómo evolucionan dos series en varios grupos a la vez, y en cuáles se separan?",
+   "si": "Dos series por grupo a lo largo del tiempo, con la misma escala vertical en todos los paneles.",
+   "no": "Más de dos series por panel, más de unos diez paneles o grupos de magnitudes muy distintas.",
+   "datosForma": "[{tiempo, valor, serie, panel}]",
+   "fuentes": [
+    {
+     "texto": "Bloomberg, Data Vis Dispatch del 3 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-3-2026-midterm-elections-halloween-candies-and-the-30daymapchallenge"
+    }
+   ],
+   "componente": "src/components/formas/areas-superpuestas.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "areas",
+   "destino": "galeria/tiempo#areas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/areas-superpuestas.png",
+    "oscuro": "catalogo/miniaturas/areas-superpuestas-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "franjas-mediana",
+   "nombre": "Franjas con mediana",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "puntos"
+   ],
+   "pregunta": "¿Qué tan parejo es un grupo por dentro?",
+   "si": "Un renglón por grupo (entidad) con sus unidades (municipios) como puntos, la mitad central y la mediana.",
+   "no": "Grupos con menos de unas ocho unidades: basta listar los valores.",
+   "datosForma": "[{grupo, valor, id}]",
+   "fuentes": [],
+   "componente": "src/components/formas/franjas.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "franjas",
+   "destino": "galeria/distribucion#franjas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/franjas-mediana.png",
+    "oscuro": "catalogo/miniaturas/franjas-mediana-oscuro.png",
+    "ancho": 1320,
+    "alto": 782,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "enjambre-burbujas",
+   "nombre": "Enjambre de burbujas",
+   "nivel": 2,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion"
+   ],
+   "forma": [
+    "circulo"
+   ],
+   "pregunta": "¿Dónde cae cada unidad sobre el indicador y cuánto pesa?",
+   "si": "Hasta unas 500 unidades con su población: la posición es el indicador y el área, las personas.",
+   "no": "Más de unas 500 unidades o indicadores que no comparten universo.",
+   "datosForma": "[{id, nombre, valor, tamano}]",
+   "fuentes": [
+    {
+     "texto": "The New York Times, Data Vis Dispatch del 3 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-3-2026-midterm-elections-halloween-candies-and-the-30daymapchallenge"
+    }
+   ],
+   "componente": "src/components/formas/enjambre.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "enjambre",
+   "destino": "galeria/distribucion#enjambre",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/enjambre-burbujas.png",
+    "oscuro": "catalogo/miniaturas/enjambre-burbujas-oscuro.png",
+    "ancho": 1320,
+    "alto": 954,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "fraccion",
+   "nombre": "Fracción de figuras",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "partes",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "unidades",
+    "parte-todo"
+   ],
+   "forma": [
+    "figura"
+   ],
+   "pregunta": "¿Cuántas de cada cien?",
+   "si": "De uno a cuatro grupos; la base cambia sola a 1,000 o 10,000 si alguna proporción es menor a 1 de cada 100.",
+   "no": "Más de cuatro grupos o comparar décimas (dumbbell).",
+   "datosForma": "[{grupo, valor}]  valor de 0 a 100",
+   "fuentes": [
+    {
+     "texto": "Reuters, Data Vis Dispatch del 20 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-20-2026-work-friendships-heat-storms-and-expensive-stamps"
+    }
+   ],
+   "componente": "src/components/formas/fraccion.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "fraccion",
+   "destino": "galeria/unidades#fraccion",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/fraccion.png",
+    "oscuro": "catalogo/miniaturas/fraccion-oscuro.png",
+    "ancho": 1320,
+    "alto": 574,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "multitud",
+   "nombre": "Multitud con subgrupos",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo"
+   ],
+   "funcion": [
+    "unidades",
+    "parte-todo"
+   ],
+   "forma": [
+    "figura"
+   ],
+   "pregunta": "De un total de personas, ¿cuántas están en cada situación?",
+   "si": "De dos a cuatro subgrupos que se pueden contar; cada figura vale un número fijo de personas.",
+   "no": "Más de cuatro subgrupos, una proporción menor a una figura (fracción) o unidades que no se cuentan.",
+   "datosForma": "[{grupo, personas}]",
+   "fuentes": [
+    {
+     "texto": "Reuters, «Finding closure», Data Vis Dispatch del 29 de septiembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-september-29-2026-marine-heatwaves-interactive-maps-and-the-wnba"
+    }
+   ],
+   "componente": "src/components/formas/multitud.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "multitud",
+   "destino": "galeria/unidades#multitud",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/multitud.png",
+    "oscuro": "catalogo/miniaturas/multitud-oscuro.png",
+    "ancho": 1320,
+    "alto": 976,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "histograma-unidades",
+   "nombre": "Histograma de unidades",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo",
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion",
+    "unidades"
+   ],
+   "forma": [
+    "figura"
+   ],
+   "pregunta": "¿Cómo se reparten las personas a lo largo de una magnitud y dónde cae la mitad?",
+   "si": "Una magnitud con seis clases o más (edad, grados) y personas que se pueden contar.",
+   "no": "Menos de unas seis clases (pila) o porcentajes en el eje vertical.",
+   "datosForma": "[{valor, peso}]  peso = personas que representa la fila",
+   "fuentes": [
+    {
+     "texto": "Domestic Data Streamers y Cedra, Data Vis Dispatch del 27 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/histograma-unidades.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "histograma-unidades",
+   "destino": "galeria/unidades#histograma-unidades",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/histograma-unidades.png",
+    "oscuro": "catalogo/miniaturas/histograma-unidades-oscuro.png",
+    "ancho": 1320,
+    "alto": 746,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "pila",
+   "nombre": "Pila de figuras",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo"
+   ],
+   "funcion": [
+    "unidades",
+    "comparacion",
+    "tiempo"
+   ],
+   "forma": [
+    "figura"
+   ],
+   "pregunta": "¿Cuánto más o cuánto menos hay ahora que antes?",
+   "si": "De dos a seis cantidades que se cuentan, con la diferencia entre la primera y la última anotada.",
+   "no": "Tasas o porcentajes, o más de seis cantidades (histograma de unidades o líneas).",
+   "datosForma": "[{etiqueta, personas}]  en orden",
+   "fuentes": [
+    {
+     "texto": "CORRECTIV, «The Pancake Index», Data Vis Dispatch del 10 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-10-2026-a-blue-wave-pi-and-the-pancake-index"
+    }
+   ],
+   "componente": "src/components/formas/pila.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "pila",
+   "destino": "galeria/unidades#pila",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/pila.png",
+    "oscuro": "catalogo/miniaturas/pila-oscuro.png",
+    "ancho": 1320,
+    "alto": 866,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "escalones",
+   "nombre": "Escalones con umbral",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "intervalos",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "figura",
+    "barras"
+   ],
+   "pregunta": "¿En qué lugar queda cada grupo con orden, y qué parte pasa un umbral?",
+   "si": "Grupos con orden (edades, deciles), con su valor, la banda en que se mueven y un umbral que cruza todos.",
+   "no": "Grupos sin orden (lollipop) o más de unos diez escalones.",
+   "datosForma": "[{grupo, valor, bajo, alto}]",
+   "fuentes": [
+    {
+     "texto": "FlowingData, Data Vis Dispatch del 27 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/escalones.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "escalones",
+   "destino": "galeria/unidades#escalones",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/escalones.png",
+    "oscuro": "catalogo/miniaturas/escalones-oscuro.png",
+    "ancho": 1320,
+    "alto": 943,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "unidades-espejo",
+   "nombre": "Unidades a ambos lados del eje",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo",
+    "categoria-series"
+   ],
+   "funcion": [
+    "unidades",
+    "comparacion",
+    "distribucion"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cuántas personas hay de cada lado (sexo, situación) en cada categoría ordenada?",
+   "si": "Dos lados y categorías con orden (edad, año); cada cuadro vale un número fijo de personas.",
+   "no": "Más de dos lados, más de unas diez categorías sin orden o tasas.",
+   "datosForma": "[{categoria, lado, personas}]",
+   "fuentes": [
+    {
+     "texto": "The New York Times, Data Vis Dispatch del 10 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-10-2026-a-blue-wave-pi-and-the-pancake-index"
+    }
+   ],
+   "componente": "src/components/formas/unidades-espejo.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "espejo",
+   "destino": "galeria/unidades#espejo",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/unidades-espejo.png",
+    "oscuro": "catalogo/miniaturas/unidades-espejo-oscuro.png",
+    "ancho": 1320,
+    "alto": 872,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "apiladas-flujo",
+   "nombre": "Barras apiladas unidas por flujos",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "tiempo"
+   ],
+   "forma": [
+    "barras",
+    "area"
+   ],
+   "pregunta": "¿Cómo se recompone un total entre dos o más cortes?",
+   "si": "Hasta cinco categorías en varios cortes independientes; las cintas unen siempre la misma categoría.",
+   "no": "Datos de transición reales entre categorías (aluvial), más de cinco categorías o más de unos ocho cortes.",
+   "datosForma": "[{corte, categoria, valor}]",
+   "fuentes": [
+    {
+     "texto": "The Economist, Data Vis Dispatch del 6 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-6-2026-brazil-elections-flydubai-plane-ice-melting"
+    }
+   ],
+   "componente": "src/components/formas/apiladas-flujo.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "cortes",
+   "destino": "galeria/flujo#cortes",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/apiladas-flujo.png",
+    "oscuro": "catalogo/miniaturas/apiladas-flujo-oscuro.png",
+    "ancho": 1320,
+    "alto": 652,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "ternario",
+   "nombre": "Triángulo ternario con estelas",
+   "nivel": 3,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "tres-partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "tiempo"
+   ],
+   "forma": [
+    "triangulo",
+    "puntos"
+   ],
+   "pregunta": "¿Hacia cuál de tres partes se movió la composición de cada unidad?",
+   "si": "Tres partes que suman un todo, en dos o más cortes, con una unidad destacada.",
+   "no": "Más de tres partes, partes que no suman un todo o comparar cifras exactas (van en la tabla).",
+   "datosForma": "[{unidad, corte, partes: [a, b, c]}]",
+   "fuentes": [
+    {
+     "texto": "USAFacts, reseñado por FlowingData, Data Vis Dispatch del 2 de junio de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-june-2-2026-extreme-weather-gambling-and-the-swiss-alps"
+    }
+   ],
+   "componente": "src/components/formas/ternario.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "ternario",
+   "destino": "galeria/parte-todo#ternario",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/ternario.png",
+    "oscuro": "catalogo/miniaturas/ternario-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "silueta-puntos",
+   "nombre": "Silueta rellena de puntos",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo"
+   ],
+   "funcion": [
+    "unidades",
+    "parte-todo"
+   ],
+   "forma": [
+    "puntos",
+    "mapa"
+   ],
+   "pregunta": "¿Cómo se reparte un total contable entre categorías, dentro de una figura con significado?",
+   "si": "Hasta cinco o seis categorías; cada punto vale N personas y la silueta significa algo para el tema.",
+   "no": "Más de seis categorías, una categoría menor a un punto sin rótulo o una silueta que solo adorna.",
+   "datosForma": "[{categoria, personas}]  más la silueta (GeoJSON)",
+   "fuentes": [
+    {
+     "texto": "Georgios Karamanis, «One frog, 8,018 species», Data Vis Dispatch del 20 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-20-2026-work-friendships-heat-storms-and-expensive-stamps"
+    }
+   ],
+   "componente": "src/components/formas/silueta-puntos.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "silueta",
+   "destino": "galeria/mapas#silueta",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/silueta-puntos.png",
+    "oscuro": "catalogo/miniaturas/silueta-puntos-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "mosaico-fracciones",
+   "nombre": "Mosaico de fracciones",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "parte-todo"
+   ],
+   "forma": [
+    "puntos",
+    "cuadrado"
+   ],
+   "pregunta": "¿Qué parte de la población cumple la condición en cada entidad, con el mismo peso visual?",
+   "si": "Una proporción por entidad, contada como «k de cada 100» dentro de cada cuadro del mosaico.",
+   "no": "Comparar décimas entre entidades (tabla o lollipop) o valores que no son parte de un todo.",
+   "datosForma": "Map(clave → {pct})",
+   "fuentes": [
+    {
+     "texto": "The European Correspondent, Data Vis Dispatch del 27 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/mosaico-fracciones.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "fracciones",
+   "destino": "galeria/parte-todo#fracciones",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/mosaico-fracciones.png",
+    "oscuro": "catalogo/miniaturas/mosaico-fracciones-oscuro.png",
+    "ancho": 1320,
+    "alto": 1050,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "mosaico-triangulos",
+   "nombre": "Mosaico de triángulos partidos",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor",
+    "dos-cortes"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "comparacion",
+    "tiempo"
+   ],
+   "forma": [
+    "triangulo",
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo se comparan dos cortes o dos grupos en las 32 entidades a la vez?",
+   "si": "Dos valores por entidad con la misma escala; un cuadro de dos tonos salta a la vista.",
+   "no": "Más de dos valores por entidad o conteos (la rampa es de tasas).",
+   "datosForma": "Map(clave → {a, b})",
+   "fuentes": [
+    {
+     "texto": "The Wall Street Journal, Data Vis Dispatch del 20 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-20-2026-work-friendships-heat-storms-and-expensive-stamps"
+    }
+   ],
+   "componente": "src/components/formas/mosaico-triangulos.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "mosaico-sexo",
+   "destino": "galeria/comparacion#mosaico-sexo",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/mosaico-triangulos.png",
+    "oscuro": "catalogo/miniaturas/mosaico-triangulos-oscuro.png",
+    "ancho": 1320,
+    "alto": 914,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "flechas-cambio",
+   "nombre": "Mapa de flechas inclinadas",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-puntos",
+    "dos-cortes"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "tiempo"
+   ],
+   "forma": [
+    "linea",
+    "mapa"
+   ],
+   "pregunta": "¿En qué unidades subió o bajó un indicador entre dos cortes, y cuánto?",
+   "si": "Cientos o miles de municipios; la inclinación y el largo crecen con el cambio y se leen como un viento.",
+   "no": "Niveles (coropleta), conteos (picos o burbujas), más de unas 2,500 unidades o ediciones no comparables.",
+   "datosForma": "[{lon, lat, cambio, casos}]",
+   "fuentes": [
+    {
+     "texto": "The Washington Post, Data Vis Dispatch del 10 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-10-2026-a-blue-wave-pi-and-the-pancake-index"
+    }
+   ],
+   "componente": "src/components/formas/flechas-cambio.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "flechas-cambio",
+   "destino": "galeria/mapas#flechas-cambio",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/flechas-cambio.png",
+    "oscuro": "catalogo/miniaturas/flechas-cambio-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "semitonos",
+   "nombre": "Mapa de semitonos",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-puntos"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "distribucion"
+   ],
+   "forma": [
+    "hexagono",
+    "puntos"
+   ],
+   "pregunta": "¿Dónde se concentra una cantidad dentro del territorio?",
+   "si": "Una cantidad o densidad con centroides ponderados; las concentraciones se ven como manchas.",
+   "no": "Tasas o porcentajes (coropleta) o conteos que se comparan lugar por lugar (picos).",
+   "datosForma": "[{lon, lat, valor, area}]",
+   "fuentes": [
+    {
+     "texto": "IGN de Francia, #30DayMapChallenge, Data Vis Dispatch del 3 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-3-2026-midterm-elections-halloween-candies-and-the-30daymapchallenge"
+    }
+   ],
+   "componente": "src/components/formas/semitonos.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "semitonos",
+   "destino": "galeria/mapas#semitonos",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/semitonos.png",
+    "oscuro": "catalogo/miniaturas/semitonos-oscuro.png",
+    "ancho": 1320,
+    "alto": 989,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "aluvial",
+   "nombre": "Aluvial entre dos lados",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo"
+   ],
+   "forma": [
+    "area"
+   ],
+   "pregunta": "¿Quién envía y quién recibe?",
+   "si": "La fuente observa a las mismas personas en los dos lados (de dónde salió y a dónde llegó cada una).",
+   "no": "Dos levantamientos independientes (barras apiladas unidas por flujos) o más de unos nueve nodos por lado.",
+   "datosForma": "[{origen, destino, valor, casos}]",
+   "fuentes": [
+    {
+     "texto": "Reuters, Data Vis Dispatch del 27 de octubre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/aluvial.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "aluvial",
+   "destino": "galeria/flujo#aluvial",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/aluvial.png",
+    "oscuro": "catalogo/miniaturas/aluvial-oscuro.png",
+    "ancho": 1320,
+    "alto": 909,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "flechas",
+   "nombre": "Mapa de flujos con flechas anchas",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo",
+    "geolocalizacion"
+   ],
+   "forma": [
+    "linea",
+    "mapa"
+   ],
+   "pregunta": "¿De dónde a dónde se mueven las personas sobre el territorio?",
+   "si": "Hasta unos 12 flujos en color, con un lugar elegido; el ancho es el número de personas.",
+   "no": "Tasas o porcentajes, flujos entre lugares casi pegados o más de unos 12 flujos en color.",
+   "datosForma": "[{origen, destino, personas, casos}]",
+   "fuentes": [
+    {
+     "texto": "Datawrapper, flechas en mapas localizadores (11 de junio de 2026)",
+     "url": "https://www.datawrapper.de/blog/fifa-world-cup-locator-map-arrows"
+    }
+   ],
+   "componente": "src/components/formas/flechas.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "flechas",
+   "destino": "galeria/flujo#flechas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/flechas.png",
+    "oscuro": "catalogo/miniaturas/flechas-oscuro.png",
+    "ancho": 1320,
+    "alto": 971,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "barra-mapa",
+   "nombre": "Flujos de una barra al mapa",
+   "nivel": 3,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo",
+    "geolocalizacion",
+    "parte-todo"
+   ],
+   "forma": [
+    "barras",
+    "mapa"
+   ],
+   "pregunta": "¿De qué se compone un total y a qué lugares llega cada parte?",
+   "si": "Un lugar de salida, hasta unas cuatro categorías y hasta 12 destinos con cinta propia.",
+   "no": "Más de cuatro categorías, más de 12 destinos con cinta o tasas (el ancho es un conteo).",
+   "datosForma": "[{origen, destino, categoria, personas}]",
+   "fuentes": [
+    {
+     "texto": "The Guardian, Data Vis Dispatch del 3 de noviembre de 2026",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-3-2026-midterm-elections-halloween-candies-and-the-30daymapchallenge"
+    }
+   ],
+   "componente": "src/components/formas/barra-mapa.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "barra-mapa",
+   "destino": "galeria/flujo#barra-mapa",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/barra-mapa.png",
+    "oscuro": "catalogo/miniaturas/barra-mapa-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "mapa-categorias",
+   "nombre": "Mapa de categorías",
+   "nivel": 1,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "comparacion"
+   ],
+   "forma": [
+    "mapa"
+   ],
+   "pregunta": "¿En qué clase cae cada lugar?",
+   "si": "Una clasificación con tres clases y gris (sube, baja, sin cambio claro; arriba o abajo de una referencia).",
+   "no": "Una magnitud continua (coropleta) o más de tres clases con color: el cuarto tono falla en deuteranopía.",
+   "datosForma": "[{id, clase}]  id igual al del geojson",
+   "fuentes": [],
+   "componente": "src/components/formas/mapa-plano.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "mapa-categorias",
+   "destino": "galeria/mapas#mapa-categorias",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/mapa-categorias.png",
+    "oscuro": "catalogo/miniaturas/mapa-categorias-oscuro.png",
+    "ancho": 1320,
+    "alto": 908,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "tabla-barras",
+   "nombre": "Tabla con barras en la celda",
+   "nivel": 0,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "barras",
+    "cuadrado"
+   ],
+   "pregunta": "¿Cuánto vale cada fila, con la cifra exacta y su tamaño a la vista?",
+   "si": "De 8 a 40 filas que el lector busca por nombre, con una o dos columnas de cifras.",
+   "no": "Menos de seis filas (barras) o varias medidas que se cruzan (tabla de calor).",
+   "datosForma": "[{nombre, valor, num}]  valor en %, num = personas",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Table Chart",
+     "url": "https://datavizproject.com/data-type/table-chart/"
+    },
+    {
+     "texto": "Datawrapper, tablas con barras y mapas de calor",
+     "url": "https://www.datawrapper.de/tables"
+    }
+   ],
+   "componente": "src/components/formas/tabla-barras.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tablas",
+   "paginaNombre": "Tablas",
+   "ancla": "tabla-barras",
+   "destino": "galeria/tablas#tabla-barras",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/tabla-barras.png",
+    "oscuro": "catalogo/miniaturas/tabla-barras-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "tabla-calor",
+   "nombre": "Tabla de calor",
+   "nivel": 1,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "cruce"
+   ],
+   "funcion": [
+    "comparacion",
+    "distribucion"
+   ],
+   "forma": [
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo se comparan varias medidas de la misma escala en cada fila, leyendo la cifra exacta?",
+   "si": "Filas con nombre y de dos a seis columnas que comparten unidad (porcentajes de 0 a 100).",
+   "no": "Columnas con unidades distintas: cada una pediría su propia rampa y el color dejaría de compararse.",
+   "datosForma": "[{nombre, indicador, valor, num}]  valor null = sin dato",
+   "fuentes": [
+    {
+     "texto": "Datawrapper, tablas con mapa de calor",
+     "url": "https://www.datawrapper.de/tables"
+    },
+    {
+     "texto": "Data Viz Project, Heat Map",
+     "url": "https://datavizproject.com/data-type/heat-map/"
+    }
+   ],
+   "componente": "src/components/formas/tabla-calor.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tablas",
+   "paginaNombre": "Tablas",
+   "ancla": "tabla-calor",
+   "destino": "galeria/tablas#tabla-calor",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/tabla-calor.png",
+    "oscuro": "catalogo/miniaturas/tabla-calor-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "tabla-minigraficas",
+   "nombre": "Tabla con minigráficas",
+   "nivel": 1,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "serie-tiempo",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "tiempo",
+    "comparacion"
+   ],
+   "forma": [
+    "linea",
+    "cuadrado"
+   ],
+   "pregunta": "¿Cómo le fue a cada fila en el tiempo, con su último valor y su cambio escritos?",
+   "si": "Entre 6 y 32 filas con cinco o más cortes cada una; el lector busca su entidad y compara la forma de la serie.",
+   "no": "Dos o tres cortes (una línea sugiere continuidad que no se midió: pendiente o flechas).",
+   "datosForma": "[{nombre, serie: [{anio, valor}], num}]",
+   "fuentes": [
+    {
+     "texto": "Edward Tufte, sparklines (Data Viz Project)",
+     "url": "https://datavizproject.com/data-type/sparkline/"
+    },
+    {
+     "texto": "Datawrapper, tablas con minigráficas",
+     "url": "https://www.datawrapper.de/tables"
+    }
+   ],
+   "componente": "src/components/formas/tabla-minigraficas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tablas",
+   "paginaNombre": "Tablas",
+   "ancla": "tabla-minigraficas",
+   "destino": "galeria/tablas#tabla-minigraficas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/tabla-minigraficas.png",
+    "oscuro": "catalogo/miniaturas/tabla-minigraficas-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "tabla-precision",
+   "nombre": "Tabla de estimaciones con su precisión",
+   "nivel": 1,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "intervalos",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion",
+    "distribucion"
+   ],
+   "forma": [
+    "linea",
+    "puntos",
+    "cuadrado"
+   ],
+   "pregunta": "¿Qué tan confiable es cada cifra de la encuesta antes de compararla?",
+   "si": "Estimaciones de grupos pequeños (entidades, subgrupos) con error de diseño; acompaña o sustituye a la tabla de respaldo.",
+   "no": "Cifras censales o de registro, que no tienen error de muestreo.",
+   "datosForma": "[{nombre, valor, ee, num}]  ee = error estándar de diseño, en puntos",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Error Bars",
+     "url": "https://datavizproject.com/data-type/error-bars/"
+    },
+    {
+     "texto": "INEGI, ENOE, documentación de la encuesta (los rangos de precisión por coeficiente de variación, verificación pendiente)",
+     "url": "https://www.inegi.org.mx/programas/enoe/15ymas/"
+    }
+   ],
+   "componente": "src/components/formas/tabla-precision.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "tabla-precision",
+   "destino": "galeria/precision#tabla-precision",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/tabla-precision.png",
+    "oscuro": "catalogo/miniaturas/tabla-precision-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "tabla-od",
+   "nombre": "Tabla origen-destino con totales",
+   "nivel": 2,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo",
+    "comparacion"
+   ],
+   "forma": [
+    "cuadrado",
+    "barras"
+   ],
+   "pregunta": "¿Cuántas personas se mueven entre cada par de lugares, y cuántas salen y llegan en total?",
+   "si": "De cuatro a ocho lugares, cuando se quiere leer la cifra de cada par y los totales de salida y llegada en el mismo cuadro.",
+   "no": "Más de ocho lugares: la matriz de adyacencia o el ranking de la entidad elegida.",
+   "datosForma": "[{origen, destino, personas}]  origen = destino se omite",
+   "fuentes": [
+    {
+     "texto": "INEGI, tabulados de migración interna (matriz entidad de residencia anterior × actual)",
+     "url": "https://www.inegi.org.mx/temas/migracion/"
+    },
+    {
+     "texto": "Datawrapper, tablas con mapa de calor",
+     "url": "https://www.datawrapper.de/tables"
+    }
+   ],
+   "componente": "src/components/formas/tabla-od.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "tabla-od",
+   "destino": "galeria/flujo#tabla-od",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/tabla-od.png",
+    "oscuro": "catalogo/miniaturas/tabla-od-oscuro.png",
+    "ancho": 1320,
+    "alto": 807,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "puntos-intervalo",
+   "nombre": "Puntos con intervalo de confianza",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "intervalos",
+    "categoria-valor"
+   ],
+   "funcion": [
+    "comparacion",
+    "distribucion"
+   ],
+   "forma": [
+    "puntos",
+    "linea"
+   ],
+   "pregunta": "¿Cuánto vale cada grupo y con qué margen lo sabemos?",
+   "si": "Estimaciones de encuesta por entidad o subgrupo, donde algunos intervalos son anchos y el lector no debe ordenar lo que no se distingue.",
+   "no": "Cifras sin error muestral, o cuando el público solo necesita el valor (barras con la tabla de precisión al lado).",
+   "datosForma": "[{nombre, corto, valor, ee, num}]  ee en puntos; intervalo = valor ± 1.96 ee",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Dot Plot",
+     "url": "https://datavizproject.com/data-type/dot-plot/"
+    },
+    {
+     "texto": "Datawrapper, range plots (dot plots)",
+     "url": "https://www.datawrapper.de/docs/category/dot-plots"
+    }
+   ],
+   "componente": "src/components/formas/puntos-intervalo.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "puntos-intervalo",
+   "destino": "galeria/precision#puntos-intervalo",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/puntos-intervalo.png",
+    "oscuro": "catalogo/miniaturas/puntos-intervalo-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "diferencia-margen",
+   "nombre": "Diferencia con su margen de error",
+   "nivel": 2,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "intervalos"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "puntos",
+    "linea"
+   ],
+   "pregunta": "¿Qué grupos están de verdad por encima o por debajo de la referencia, y cuáles no se distinguen?",
+   "si": "Diferencias contra el nacional o entre dos grupos, con error de diseño; el gris dice «no se distingue del margen».",
+   "no": "Sin error muestral (el gris quedaría para diferencias menores a 0.05 puntos, y basta un lollipop centrado).",
+   "datosForma": "[{nombre, corto, dif, ee}]  dif en puntos frente a la referencia",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Error Bars",
+     "url": "https://datavizproject.com/data-type/error-bars/"
+    },
+    {
+     "texto": "Financial Times, Visual Vocabulary (desviación)",
+     "url": "https://ft-interactive.github.io/visual-vocabulary/"
+    }
+   ],
+   "componente": "src/components/formas/diferencia-margen.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "diferencia-margen",
+   "destino": "galeria/precision#diferencia-margen",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/diferencia-margen.png",
+    "oscuro": "catalogo/miniaturas/diferencia-margen-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "rango",
+   "nombre": "Gráfico de rango",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "intervalos",
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Qué tan distintos son los lugares dentro de cada grupo, del mínimo al máximo?",
+   "si": "Una cifra por entidad y el rango de sus municipios; muestra que el promedio estatal esconde extremos.",
+   "no": "Interesa cómo se reparten los municipios entre los extremos (franjas con mediana o enjambre).",
+   "datosForma": "[{nombre, corto, valor, min, max, num}]",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Span Chart",
+     "url": "https://datavizproject.com/data-type/span-chart/"
+    }
+   ],
+   "componente": "src/components/formas/rango.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "rango",
+   "destino": "galeria/precision#rango",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/rango.png",
+    "oscuro": "catalogo/miniaturas/rango-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "puntos-series",
+   "nombre": "Puntos de tres series por fila",
+   "nivel": 1,
+   "familia": [
+    "trazado"
+   ],
+   "entrada": [
+    "categoria-series"
+   ],
+   "funcion": [
+    "comparacion"
+   ],
+   "forma": [
+    "puntos",
+    "linea"
+   ],
+   "pregunta": "¿Dónde queda cada uno de tres grupos en cada categoría, y cuánto los separa?",
+   "si": "Tres grupos y de 5 a 20 filas; el dumbbell no alcanza y las barras agrupadas se vuelven un bosque.",
+   "no": "Dos grupos (dumbbell) o más de tres (heatmap). Diferencias de décimas.",
+   "datosForma": "[{fila, serie, valor, num}]",
+   "fuentes": [
+    {
+     "texto": "William Cleveland, dot plot (Data Viz Project, Dot Chart)",
+     "url": "https://datavizproject.com/data-type/dot-chart/"
+    },
+    {
+     "texto": "Datawrapper, dot plots",
+     "url": "https://www.datawrapper.de/docs/category/dot-plots"
+    }
+   ],
+   "componente": "src/components/formas/puntos-series.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/comparacion",
+   "paginaNombre": "Comparación",
+   "ancla": "puntos-series",
+   "destino": "galeria/comparacion#puntos-series",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/puntos-series.png",
+    "oscuro": "catalogo/miniaturas/puntos-series-oscuro.png",
+    "ancho": 1320,
+    "alto": 868,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "saldo",
+   "nombre": "Entradas y salidas con saldo",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "categoria-series",
+    "origen-destino"
+   ],
+   "funcion": [
+    "flujo",
+    "comparacion"
+   ],
+   "forma": [
+    "barras"
+   ],
+   "pregunta": "¿Cuántas personas salen y cuántas llegan a cada lugar, y cuál es su saldo?",
+   "si": "Migración por entidad cuando importa ver los dos sentidos y no solo el saldo neto, que puede esconder flujos grandes que se cancelan.",
+   "no": "Interesa de dónde a dónde (sankey, mapa de flujos) o el saldo es una tasa por cada mil habitantes (barras divergentes).",
+   "datosForma": "[{nombre, corto, salen, llegan}]  personas",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Butterfly Chart",
+     "url": "https://datavizproject.com/data-type/butterfly-chart/"
+    },
+    {
+     "texto": "Financial Times, Visual Vocabulary (desviación)",
+     "url": "https://ft-interactive.github.io/visual-vocabulary/"
+    }
+   ],
+   "componente": "src/components/formas/saldo.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/flujo",
+   "paginaNombre": "Flujo",
+   "ancla": "saldo",
+   "destino": "galeria/flujo#saldo",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/saldo.png",
+    "oscuro": "catalogo/miniaturas/saldo-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "curvas-acumuladas",
+   "nombre": "Curvas acumuladas de dos grupos con flechas",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "distribucion"
+   ],
+   "funcion": [
+    "distribucion",
+    "comparacion"
+   ],
+   "forma": [
+    "linea"
+   ],
+   "pregunta": "¿Qué parte de cada grupo queda por debajo de cualquier umbral, y cuánto los separa en cada uno?",
+   "si": "Una medida con varios umbrales razonables (años de escolaridad, ingreso) y dos grupos o dos cortes.",
+   "no": "Un solo umbral reconocido (basta una barra) o más de dos grupos.",
+   "datosForma": "[{grupo, x, pct, num}]  pct = % del grupo con menos de x",
+   "fuentes": [
+    {
+     "texto": "Our World in Data en el Data Vis Dispatch del 27 de octubre de 2026 (formas-novedosas, D11)",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/curvas-acumuladas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "curvas-acumuladas",
+   "destino": "galeria/distribucion#curvas-acumuladas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/curvas-acumuladas.png",
+    "oscuro": "catalogo/miniaturas/curvas-acumuladas-oscuro.png",
+    "ancho": 1320,
+    "alto": 754,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "concentracion",
+   "nombre": "Curva de concentración",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "distribucion",
+    "geo-valor"
+   ],
+   "funcion": [
+    "distribucion",
+    "geolocalizacion"
+   ],
+   "forma": [
+    "linea",
+    "area"
+   ],
+   "pregunta": "¿Qué tan concentrado está un total en pocos lugares?",
+   "si": "Muchos lugares (municipios) y una cantidad que se suma; frases como «el 10 % de los municipios reúne la mitad».",
+   "no": "Pocos lugares (barras ordenadas) o tasas que no se suman.",
+   "datosForma": "[{grupo, x, y}]  x = % acumulado de municipios, y = % acumulado del total",
+   "fuentes": [
+    {
+     "texto": "Max O. Lorenz (1905), curva de Lorenz",
+     "url": "https://es.wikipedia.org/wiki/Curva_de_Lorenz"
+    },
+    {
+     "texto": "Financial Times, Visual Vocabulary (distribución)",
+     "url": "https://ft-interactive.github.io/visual-vocabulary/"
+    }
+   ],
+   "componente": "src/components/formas/concentracion.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/distribucion",
+   "paginaNombre": "Distribución",
+   "ancla": "concentracion",
+   "destino": "galeria/distribucion#concentracion",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/concentracion.png",
+    "oscuro": "catalogo/miniaturas/concentracion-oscuro.png",
+    "ancho": 1320,
+    "alto": 738,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "linea-banda",
+   "nombre": "Línea con banda de confianza",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "serie-tiempo",
+    "intervalos"
+   ],
+   "funcion": [
+    "tiempo",
+    "distribucion"
+   ],
+   "forma": [
+    "linea",
+    "area"
+   ],
+   "pregunta": "¿Cómo evoluciona una estimación de encuesta y qué cambios caben dentro del error?",
+   "si": "Series trimestrales o anuales de una encuesta (ENOE) con cinco o más cortes y su error de diseño.",
+   "no": "Dos o tres cortes (puntos con intervalo) o cifras censales sin error.",
+   "datosForma": "[{fecha, valor, ee, num}]  valor null = sin dato",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Range Area Chart",
+     "url": "https://datavizproject.com/data-type/range-area-chart/"
+    },
+    {
+     "texto": "Data Viz Project, Fan Chart (Time Series)",
+     "url": "https://datavizproject.com/data-type/fan-chart-time-series/"
+    }
+   ],
+   "componente": "src/components/formas/linea-banda.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/precision",
+   "paginaNombre": "Precisión e incertidumbre",
+   "ancla": "linea-banda",
+   "destino": "galeria/precision#linea-banda",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/linea-banda.png",
+    "oscuro": "catalogo/miniaturas/linea-banda-oscuro.png",
+    "ancho": 1320,
+    "alto": 626,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "cortes-comparables",
+   "nombre": "Línea de vida de cortes comparables",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "intervalos",
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo",
+    "concepto"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Qué ediciones de cada fuente se pueden comparar entre sí, y dónde se rompe la serie?",
+   "si": "Al abrir un capítulo o en Metodología, cuando el libro cruza varias encuestas con cambios de definición o de diseño.",
+   "no": "Como figura de un resultado: no lleva cifras del tema, solo la cobertura de las fuentes.",
+   "datosForma": "[{indicador, fuente, tramos: [[años comparables], …], motivo}]",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Gantt Chart",
+     "url": "https://datavizproject.com/data-type/gannt-chart/"
+    },
+    {
+     "texto": "Data Viz Project, Timeline",
+     "url": "https://datavizproject.com/data-type/timeline/"
+    }
+   ],
+   "componente": "src/components/formas/cortes-comparables.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "cortes-comparables",
+   "destino": "galeria/tiempo#cortes-comparables",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/cortes-comparables.png",
+    "oscuro": "catalogo/miniaturas/cortes-comparables-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "fichas-rango",
+   "nombre": "Fichas por rango con marca de cambio",
+   "nivel": 1,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "geo-valor",
+    "dos-cortes"
+   ],
+   "funcion": [
+    "unidades",
+    "comparacion"
+   ],
+   "forma": [
+    "hexagono"
+   ],
+   "pregunta": "¿Cuántas entidades hay en cada rango, cuáles son y cuáles cambiaron de rango?",
+   "si": "Las 32 entidades en cuatro a seis rangos ordenados, cuando el lector busca su entidad por nombre y le importa el rango más que la décima.",
+   "no": "Comparar valores exactos (lollipop) o ubicar en el territorio (mosaico de entidades).",
+   "datosForma": "[{id, nombre, corto, valor, antes}]  valor y antes en %",
+   "fuentes": [
+    {
+     "texto": "The Guardian en el Data Vis Dispatch del 10 de noviembre de 2026 (formas-novedosas, D10)",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-november-10-2026-a-blue-wave-pi-and-the-pancake-index"
+    }
+   ],
+   "componente": "src/components/formas/fichas-rango.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/unidades",
+   "paginaNombre": "Unidades",
+   "ancla": "fichas-rango",
+   "destino": "galeria/unidades#fichas-rango",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/fichas-rango.png",
+    "oscuro": "catalogo/miniaturas/fichas-rango-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "combinaciones",
+   "nombre": "Combinaciones de condiciones (UpSet)",
+   "nivel": 2,
+   "familia": [
+    "grafica"
+   ],
+   "entrada": [
+    "conteo",
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "comparacion"
+   ],
+   "forma": [
+    "barras",
+    "puntos"
+   ],
+   "pregunta": "¿Cuántos tienen cada combinación de tres o cuatro condiciones a la vez?",
+   "si": "Carencias o condiciones que se acumulan (sin internet, hacinamiento, rezago) y la pregunta es cuántos tienen dos o tres juntas.",
+   "no": "Dos condiciones (diagrama de Euler) o más de cuatro: las combinaciones crecen al doble con cada una.",
+   "datosForma": "[{combo: [condiciones], valor, num}]  las combinaciones suman 100",
+   "fuentes": [
+    {
+     "texto": "Lex, Gehlenborg, Strobelt, Vuillemot y Pfister (2014), UpSet",
+     "url": "https://upset.app/"
+    }
+   ],
+   "componente": "src/components/formas/combinaciones.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "combinaciones",
+   "destino": "galeria/parte-todo#combinaciones",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/combinaciones.png",
+    "oscuro": "catalogo/miniaturas/combinaciones-oscuro.png",
+    "ancho": 1320,
+    "alto": 800,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "euler",
+   "nombre": "Diagrama de Euler de dos conjuntos",
+   "nivel": 2,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "conteo",
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "concepto"
+   ],
+   "forma": [
+    "circulo"
+   ],
+   "pregunta": "¿Cuántas personas cumplen una condición, la otra o las dos?",
+   "si": "Dos definiciones que se traslapan y el traslape es la historia (habla una lengua indígena y se considera indígena).",
+   "no": "Tres o más conjuntos: las áreas ya no pueden ser proporcionales (combinaciones, UpSet).",
+   "datosForma": "{a: {nombre, n}, b: {nombre, n}, ambos}  personas; las áreas son proporcionales",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Euler Diagram",
+     "url": "https://datavizproject.com/data-type/euler-diagram/"
+    },
+    {
+     "texto": "Data Viz Project, Venn Diagram",
+     "url": "https://datavizproject.com/data-type/venn-diagram/"
+    }
+   ],
+   "componente": "src/components/formas/euler.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/conceptos",
+   "paginaNombre": "Conceptos y diagramas",
+   "ancla": "euler",
+   "destino": "galeria/conceptos#euler",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/euler.png",
+    "oscuro": "catalogo/miniaturas/euler-oscuro.png",
+    "ancho": 1320,
+    "alto": 948,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "arbol-pregunta",
+   "nombre": "Árbol de la pregunta",
+   "nivel": 1,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "conteo",
+    "jerarquia"
+   ],
+   "funcion": [
+    "concepto",
+    "parte-todo"
+   ],
+   "forma": [
+    "cuadrado",
+    "linea"
+   ],
+   "pregunta": "¿Quién cuenta en el indicador, según las preguntas del cuestionario?",
+   "si": "Al presentar un indicador que se construye con dos o tres preguntas encadenadas (quién cuenta como migrante por violencia).",
+   "no": "Para comparar grupos: es una figura de definición, va una vez por capítulo.",
+   "datosForma": "[{id, texto, n, tipo, fila, lado}]  tipo: universo | pregunta | sale | cuenta",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Flow Chart",
+     "url": "https://datavizproject.com/data-type/flow-chart/"
+    }
+   ],
+   "componente": "src/components/formas/arbol-pregunta.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/conceptos",
+   "paginaNombre": "Conceptos y diagramas",
+   "ancla": "arbol-pregunta",
+   "destino": "galeria/conceptos#arbol-pregunta",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/arbol-pregunta.png",
+    "oscuro": "catalogo/miniaturas/arbol-pregunta-oscuro.png",
+    "ancho": 1320,
+    "alto": 1037,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "embudo",
+   "nombre": "Embudo de universos",
+   "nivel": 1,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "conteo",
+    "partes"
+   ],
+   "funcion": [
+    "parte-todo",
+    "concepto"
+   ],
+   "forma": [
+    "barras",
+    "area"
+   ],
+   "pregunta": "¿Cómo se achica el universo paso a paso hasta el grupo que mide el indicador?",
+   "si": "Dos a cuatro pasos anidados donde cada denominador es el paso anterior; explica por qué la cifra final es pequeña.",
+   "no": "Grupos que no están contenidos uno en otro (barras) o pasos que no se anidan.",
+   "datosForma": "[{paso, n}]  cada paso está contenido en el anterior",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Funnel Chart",
+     "url": "https://datavizproject.com/data-type/funnel-chart/"
+    }
+   ],
+   "componente": "src/components/formas/embudo.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/conceptos",
+   "paginaNombre": "Conceptos y diagramas",
+   "ancla": "embudo",
+   "destino": "galeria/conceptos#embudo",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/embudo.png",
+    "oscuro": "catalogo/miniaturas/embudo-oscuro.png",
+    "ancho": 1320,
+    "alto": 682,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "arbol-clasificacion",
+   "nombre": "Árbol de clasificación",
+   "nivel": 1,
+   "familia": [
+    "diagrama"
+   ],
+   "entrada": [
+    "jerarquia"
+   ],
+   "funcion": [
+    "jerarquia",
+    "concepto"
+   ],
+   "forma": [
+    "linea",
+    "puntos"
+   ],
+   "pregunta": "¿Cómo se organiza una clasificación oficial y cuánto pesa cada rama?",
+   "si": "Catálogos de dos o tres niveles con nombres que el lector reconoce (familias y agrupaciones lingüísticas de INALI).",
+   "no": "Comparar tamaños con precisión (treemap o barras) o más de unas 30 hojas.",
+   "datosForma": "[{ruta: \"Raíz/Familia/Agrupación\", n}]  también los nodos internos",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Dendrogram",
+     "url": "https://datavizproject.com/data-type/dendrogram/"
+    },
+    {
+     "texto": "Observable Plot, tree mark",
+     "url": "https://observablehq.github.io/plot/marks/tree"
+    }
+   ],
+   "componente": "src/components/formas/arbol-clasificacion.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/parte-todo",
+   "paginaNombre": "Parte de un todo",
+   "ancla": "arbol-clasificacion",
+   "destino": "galeria/parte-todo#arbol-clasificacion",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/arbol-clasificacion.png",
+    "oscuro": "catalogo/miniaturas/arbol-clasificacion-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "mosaico-series",
+   "nombre": "Mosaico de mini-series",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor",
+    "serie-tiempo"
+   ],
+   "funcion": [
+    "tiempo",
+    "geolocalizacion"
+   ],
+   "forma": [
+    "linea",
+    "cuadrado",
+    "mapa"
+   ],
+   "pregunta": "¿Cómo evolucionó cada entidad, todas a la vez y acomodadas como el país?",
+   "si": "Las 32 entidades con cinco o más cortes; se busca el patrón regional (el sur sube más lento).",
+   "no": "Menos de cinco cortes por entidad (mosaico de triángulos) o importa el valor exacto de un año (tabla con minigráficas).",
+   "datosForma": "[{id, nombre, corto, col, fila, anio, valor, num}]",
+   "fuentes": [
+    {
+     "texto": "Ryan Hafen, geofacet",
+     "url": "https://hafen.github.io/geofacet/"
+    },
+    {
+     "texto": "Data Viz Project, Cartogram",
+     "url": "https://datavizproject.com/data-type/cartogram/"
+    }
+   ],
+   "componente": "src/components/formas/mosaico-series.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/tiempo",
+   "paginaNombre": "Tiempo",
+   "ancla": "mosaico-series",
+   "destino": "galeria/tiempo#mosaico-series",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/mosaico-series.png",
+    "oscuro": "catalogo/miniaturas/mosaico-series-oscuro.png",
+    "ancho": 1320,
+    "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "mosaico-burbujas",
+   "nombre": "Mosaico de burbujas con dos medidas",
+   "nivel": 2,
+   "familia": [
+    "mapa"
+   ],
+   "entrada": [
+    "geo-valor",
+    "conteo"
+   ],
+   "funcion": [
+    "geolocalizacion",
+    "comparacion"
+   ],
+   "forma": [
+    "circulo",
+    "mapa"
+   ],
+   "pregunta": "¿Dónde hay más personas en una condición y dónde pesa más esa condición sobre su población?",
+   "si": "Las 32 entidades con un conteo (tamaño) y su tasa (color); evita que el Estado de México domine por volumen y Chiapas solo por tasa.",
+   "no": "Una sola medida (mosaico de entidades o burbujas) o se necesita la forma real del territorio.",
+   "datosForma": "[{id, nombre, corto, col, fila, tasa, conteo}]",
+   "fuentes": [
+    {
+     "texto": "Data Viz Project, Bubble Map",
+     "url": "https://datavizproject.com/data-type/bubble-map-chart/"
+    },
+    {
+     "texto": "Arthur Welle en el Data Vis Dispatch del 27 de octubre de 2026 (formas-novedosas, D12)",
+     "url": "https://www.datawrapper.de/blog/data-vis-dispatch-october-27-2026-brazil-elections-apple-s-iphone-duo-and-coffee-prices"
+    }
+   ],
+   "componente": "src/components/formas/mosaico-burbujas.js",
+   "receta": true,
+   "enGaleria": true,
+   "pagina": "/galeria/mapas",
+   "paginaNombre": "Mapas",
+   "ancla": "mosaico-burbujas",
+   "destino": "galeria/mapas#mosaico-burbujas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/mosaico-burbujas.png",
+    "oscuro": "catalogo/miniaturas/mosaico-burbujas-oscuro.png",
+    "ancho": 1320,
+    "alto": 860,
+    "origen": "galeria"
+   }
+  }
+ ]
+}

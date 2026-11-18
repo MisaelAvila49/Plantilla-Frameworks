@@ -1,0 +1,121 @@
+grupo,anio,fuente,subfuente,monto,ee,hogares,casos
+Todos los hogares,2018,Trabajo,Trabajo subordinado,32084,879,34700000,84381
+Todos los hogares,2018,Trabajo,Trabajo independiente,9520,256,34700000,84381
+Todos los hogares,2018,Trabajo,Otros ingresos del trabajo,1516,46,34700000,84381
+Todos los hogares,2018,Renta de la propiedad,Renta de la propiedad,1645,25,34700000,84381
+Todos los hogares,2018,Transferencias,Jubilaciones y pensiones,5307,69,34700000,84381
+Todos los hogares,2018,Transferencias,Programas sociales,1415,23,34700000,84381
+Todos los hogares,2018,Transferencias,Remesas y ayuda de otros hogares,1361,28,34700000,84381
+Todos los hogares,2018,Transferencias,Becas y donativos,1477,38,34700000,84381
+Todos los hogares,2018,Estimación del alquiler,Estimación del alquiler,8120,220,34700000,84381
+Todos los hogares,2018,Otros ingresos,Otros ingresos corrientes,106,3,34700000,84381
+Todos los hogares,2020,Trabajo,Trabajo subordinado,30911,779,35700000,92553
+Todos los hogares,2020,Trabajo,Trabajo independiente,8291,148,35700000,92553
+Todos los hogares,2020,Trabajo,Otros ingresos del trabajo,1340,33,35700000,92553
+Todos los hogares,2020,Renta de la propiedad,Renta de la propiedad,1233,32,35700000,92553
+Todos los hogares,2020,Transferencias,Jubilaciones y pensiones,5748,138,35700000,92553
+Todos los hogares,2020,Transferencias,Programas sociales,2148,27,35700000,92553
+Todos los hogares,2020,Transferencias,Remesas y ayuda de otros hogares,1419,37,35700000,92553
+Todos los hogares,2020,Transferencias,Becas y donativos,1300,22,35700000,92553
+Todos los hogares,2020,Estimación del alquiler,Estimación del alquiler,8225,106,35700000,92553
+Todos los hogares,2020,Otros ingresos,Otros ingresos corrientes,99,2,35700000,92553
+Todos los hogares,2022,Trabajo,Trabajo subordinado,33963,1000,37800000,83132
+Todos los hogares,2022,Trabajo,Trabajo independiente,9339,156,37800000,83132
+Todos los hogares,2022,Trabajo,Otros ingresos del trabajo,1514,31,37800000,83132
+Todos los hogares,2022,Renta de la propiedad,Renta de la propiedad,1420,20,37800000,83132
+Todos los hogares,2022,Transferencias,Jubilaciones y pensiones,5748,146,37800000,83132
+Todos los hogares,2022,Transferencias,Programas sociales,2904,40,37800000,83132
+Todos los hogares,2022,Transferencias,Remesas y ayuda de otros hogares,1543,42,37800000,83132
+Todos los hogares,2022,Transferencias,Becas y donativos,1338,24,37800000,83132
+Todos los hogares,2022,Estimación del alquiler,Estimación del alquiler,8573,112,37800000,83132
+Todos los hogares,2022,Otros ingresos,Otros ingresos corrientes,95,3,37800000,83132
+Todos los hogares,2024,Trabajo,Trabajo subordinado,39158,544,38800000,89159
+Todos los hogares,2024,Trabajo,Trabajo independiente,9761,137,38800000,89159
+Todos los hogares,2024,Trabajo,Otros ingresos del trabajo,1652,51,38800000,89159
+Todos los hogares,2024,Renta de la propiedad,Renta de la propiedad,1295,39,38800000,89159
+Todos los hogares,2024,Transferencias,Jubilaciones y pensiones,6394,97,38800000,89159
+Todos los hogares,2024,Transferencias,Programas sociales,3774,75,38800000,89159
+Todos los hogares,2024,Transferencias,Remesas y ayuda de otros hogares,1501,40,38800000,89159
+Todos los hogares,2024,Transferencias,Becas y donativos,1335,34,38800000,89159
+Todos los hogares,2024,Estimación del alquiler,Estimación del alquiler,8733,118,38800000,89159
+Todos los hogares,2024,Otros ingresos,Otros ingresos corrientes,87,1,38800000,89159
+Decil I,2018,Trabajo,Trabajo subordinado,3928,178,3470000,8363
+Decil I,2018,Trabajo,Trabajo independiente,2238,123,3470000,8363
+Decil I,2018,Trabajo,Otros ingresos del trabajo,163,12,3470000,8363
+Decil I,2018,Renta de la propiedad,Renta de la propiedad,31,1,3470000,8363
+Decil I,2018,Transferencias,Jubilaciones y pensiones,497,19,3470000,8363
+Decil I,2018,Transferencias,Programas sociales,1489,78,3470000,8363
+Decil I,2018,Transferencias,Remesas y ayuda de otros hogares,815,29,3470000,8363
+Decil I,2018,Transferencias,Becas y donativos,341,25,3470000,8363
+Decil I,2018,Estimación del alquiler,Estimación del alquiler,2845,181,3470000,8363
+Decil I,2018,Otros ingresos,Otros ingresos corrientes,12,1,3470000,8363
+Decil I,2020,Trabajo,Trabajo subordinado,3728,141,3570000,8341
+Decil I,2020,Trabajo,Trabajo independiente,1930,83,3570000,8341
+Decil I,2020,Trabajo,Otros ingresos del trabajo,146,8,3570000,8341
+Decil I,2020,Renta de la propiedad,Renta de la propiedad,24,2,3570000,8341
+Decil I,2020,Transferencias,Jubilaciones y pensiones,547,17,3570000,8341
+Decil I,2020,Transferencias,Programas sociales,2244,120,3570000,8341
+Decil I,2020,Transferencias,Remesas y ayuda de otros hogares,868,52,3570000,8341
+Decil I,2020,Transferencias,Becas y donativos,293,20,3570000,8341
+Decil I,2020,Estimación del alquiler,Estimación del alquiler,2974,218,3570000,8341
+Decil I,2020,Otros ingresos,Otros ingresos corrientes,11,1,3570000,8341
+Decil I,2022,Trabajo,Trabajo subordinado,4104,206,3780000,9435
+Decil I,2022,Trabajo,Trabajo independiente,2126,92,3780000,9435
+Decil I,2022,Trabajo,Otros ingresos del trabajo,164,6,3780000,9435
+Decil I,2022,Renta de la propiedad,Renta de la propiedad,26,1,3780000,9435
+Decil I,2022,Transferencias,Jubilaciones y pensiones,549,19,3780000,9435
+Decil I,2022,Transferencias,Programas sociales,3104,141,3780000,9435
+Decil I,2022,Transferencias,Remesas y ayuda de otros hogares,923,28,3780000,9435
+Decil I,2022,Transferencias,Becas y donativos,311,19,3780000,9435
+Decil I,2022,Estimación del alquiler,Estimación del alquiler,2925,201,3780000,9435
+Decil I,2022,Otros ingresos,Otros ingresos corrientes,10,0,3780000,9435
+Decil I,2024,Trabajo,Trabajo subordinado,4662,299,3880000,8375
+Decil I,2024,Trabajo,Trabajo independiente,2339,81,3880000,8375
+Decil I,2024,Trabajo,Otros ingresos del trabajo,179,7,3880000,8375
+Decil I,2024,Renta de la propiedad,Renta de la propiedad,25,1,3880000,8375
+Decil I,2024,Transferencias,Jubilaciones y pensiones,602,33,3880000,8375
+Decil I,2024,Transferencias,Programas sociales,3906,242,3880000,8375
+Decil I,2024,Transferencias,Remesas y ayuda de otros hogares,901,68,3880000,8375
+Decil I,2024,Transferencias,Becas y donativos,309,12,3880000,8375
+Decil I,2024,Estimación del alquiler,Estimación del alquiler,3160,173,3880000,8375
+Decil I,2024,Otros ingresos,Otros ingresos corrientes,10,0,3880000,8375
+Decil X,2018,Trabajo,Trabajo subordinado,108177,6910,3470000,8956
+Decil X,2018,Trabajo,Trabajo independiente,29406,2007,3470000,8956
+Decil X,2018,Trabajo,Otros ingresos del trabajo,4901,255,3470000,8956
+Decil X,2018,Renta de la propiedad,Renta de la propiedad,12131,371,3470000,8956
+Decil X,2018,Transferencias,Jubilaciones y pensiones,17917,1002,3470000,8956
+Decil X,2018,Transferencias,Programas sociales,725,29,3470000,8956
+Decil X,2018,Transferencias,Remesas y ayuda de otros hogares,1534,47,3470000,8956
+Decil X,2018,Transferencias,Becas y donativos,2418,109,3470000,8956
+Decil X,2018,Estimación del alquiler,Estimación del alquiler,27640,1841,3470000,8956
+Decil X,2018,Otros ingresos,Otros ingresos corrientes,727,43,3470000,8956
+Decil X,2020,Trabajo,Trabajo subordinado,102414,5729,3570000,9304
+Decil X,2020,Trabajo,Trabajo independiente,26273,1670,3570000,9304
+Decil X,2020,Trabajo,Otros ingresos del trabajo,4414,273,3570000,9304
+Decil X,2020,Renta de la propiedad,Renta de la propiedad,9235,464,3570000,9304
+Decil X,2020,Transferencias,Jubilaciones y pensiones,19452,671,3570000,9304
+Decil X,2020,Transferencias,Programas sociales,1090,60,3570000,9304
+Decil X,2020,Transferencias,Remesas y ayuda de otros hogares,1601,98,3570000,9304
+Decil X,2020,Transferencias,Becas y donativos,2089,128,3570000,9304
+Decil X,2020,Estimación del alquiler,Estimación del alquiler,28192,817,3570000,9304
+Decil X,2020,Otros ingresos,Otros ingresos corrientes,651,45,3570000,9304
+Decil X,2022,Trabajo,Trabajo subordinado,118108,3769,3780000,9288
+Decil X,2022,Trabajo,Trabajo independiente,28945,965,3780000,9288
+Decil X,2022,Trabajo,Otros ingresos del trabajo,5015,184,3780000,9288
+Decil X,2022,Renta de la propiedad,Renta de la propiedad,10896,732,3780000,9288
+Decil X,2022,Transferencias,Jubilaciones y pensiones,19530,706,3780000,9288
+Decil X,2022,Transferencias,Programas sociales,1537,45,3780000,9288
+Decil X,2022,Transferencias,Remesas y ayuda de otros hogares,1765,116,3780000,9288
+Decil X,2022,Transferencias,Becas y donativos,2180,71,3780000,9288
+Decil X,2022,Estimación del alquiler,Estimación del alquiler,28320,1352,3780000,9288
+Decil X,2022,Otros ingresos,Otros ingresos corrientes,631,40,3780000,9288
+Decil X,2024,Trabajo,Trabajo subordinado,128927,4655,3880000,9359
+Decil X,2024,Trabajo,Trabajo independiente,30613,966,3880000,9359
+Decil X,2024,Trabajo,Otros ingresos del trabajo,5387,284,3880000,9359
+Decil X,2024,Renta de la propiedad,Renta de la propiedad,9767,563,3880000,9359
+Decil X,2024,Transferencias,Jubilaciones y pensiones,22166,1075,3880000,9359
+Decil X,2024,Transferencias,Programas sociales,1901,78,3880000,9359
+Decil X,2024,Transferencias,Remesas y ayuda de otros hogares,1702,103,3880000,9359
+Decil X,2024,Transferencias,Becas y donativos,2227,86,3880000,9359
+Decil X,2024,Estimación del alquiler,Estimación del alquiler,29717,2032,3880000,9359
+Decil X,2024,Otros ingresos,Otros ingresos corrientes,603,30,3880000,9359

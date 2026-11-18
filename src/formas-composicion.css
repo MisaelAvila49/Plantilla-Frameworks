@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Estilos del riel de trayectoria, los mosaicos partidos y de fracciones, el
+   triángulo ternario y las unidades en espejo (src/components/formas/riel.js,
+   mosaico-triangulos.js, mosaico-fracciones.js, ternario.js y
+   unidades-espejo.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella; aquí solo van la entrada animada, el foco de teclado, el realce al
+   pasar el puntero y el acomodo de las leyendas.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-composicion.css">
+   ========================================================================== */
+
+/* Leyendas: la clave del mosaico partido lleva dos renglones. */
+.mt-clave .leyenda-item { align-items: center; }
+.mt-clave-texto { line-height: 1.35; }
+.riel-leyenda .leyenda-item { flex-wrap: wrap; row-gap: 0.25rem; }
+.riel-leyenda .leyenda-item svg { overflow: visible; }
+.tr-nota { margin: 0; font: 0.8rem/1.4 var(--sans-serif); color: var(--tinta-2); max-width: 46rem; }
+
+/* Foco de teclado y realce. Cada renglón del riel, cada cuadro del mosaico
+   partido y cada pila del espejo toman el foco como una sola pieza. */
+.riel-fila { outline: none; }
+.riel-fila:focus-visible > .riel-marco { stroke: var(--tinta); stroke-width: 2px; }
+.riel .marca-viva:hover, .riel .marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 2px; }
+.mt-celda { outline: none; }
+.mt-celda:focus-visible .mt-marco { stroke: var(--tinta); stroke-width: 3px; }
+.mosaico-triangulos path.marca-viva:hover { stroke: var(--tinta); stroke-width: 2px; }
+.mf-celda:hover > .mf-fondo, .mf-celda:focus-visible > .mf-fondo { stroke: var(--tinta); stroke-width: 1.6px; }
+.ternario .tr-punto:focus-visible, .ternario .tr-punto:hover { stroke: var(--tinta); stroke-width: 2px; }
+.ue-pila.marca-viva:hover, .ue-pila.marca-viva:focus-visible { stroke: none; }
+.ue-pila:hover > .ue-zona, .ue-pila:focus-visible > .ue-zona { stroke: var(--tinta); stroke-width: 1.6px; }
+
+/* Entrada: UNA vez, al dibujarse la sección por primera vez, con el mismo
+   interruptor de src/estilo.css (`.en-vista` y todavía no `.animada`, 1.2 s).
+   Un repintado por filtro ya no anima. Todas terminan antes de ese plazo y
+   ninguna es un bucle. */
+@keyframes fc-aparecer { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fc-trazar { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.seccion-cuerpo.en-vista:not(.animada) .fc-aparece { animation: fc-aparecer 0.4s ease both; animation-delay: calc(0.1s + var(--i, 0) * 35ms); }
+.seccion-cuerpo.en-vista:not(.animada) .fc-traza { stroke-dasharray: 1; animation: fc-trazar 0.7s ease-out both; animation-delay: 0.25s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) .fc-aparece,
+  .seccion-cuerpo.en-vista:not(.animada) .fc-traza { animation: none; stroke-dasharray: none; }
+}

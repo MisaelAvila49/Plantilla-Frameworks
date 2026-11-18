@@ -1,0 +1,401 @@
+anio,ambito,servicio,respuesta,orden,num,den,pct,ee,casos
+2021,Todo el país,Recolección de basura,Muy insatisfecho,0,1567211,37600000,4.168,0.172,1073
+2021,Todo el país,Recolección de basura,Insatisfecho,1,3170559,37600000,8.432,0.239,2170
+2021,Todo el país,Recolección de basura,Ni satisfecho ni insatisfecho,2,4896540,37600000,13.023,0.289,3351
+2021,Todo el país,Recolección de basura,Satisfecho,3,23000521,37600000,61.172,0.419,15741
+2021,Todo el país,Recolección de basura,Muy satisfecho,4,4965169,37600000,13.205,0.291,3398
+2021,Todo el país,Agua potable,Muy insatisfecho,0,4650891,37600000,12.369,0.295,2936
+2021,Todo el país,Agua potable,Insatisfecho,1,9091972,37600000,24.181,0.383,5740
+2021,Todo el país,Agua potable,Ni satisfecho ni insatisfecho,2,3382517,37600000,8.996,0.256,2135
+2021,Todo el país,Agua potable,Satisfecho,3,16494200,37600000,43.868,0.444,10412
+2021,Todo el país,Agua potable,Muy satisfecho,4,3980419,37600000,10.586,0.275,2513
+2021,Todo el país,Drenaje y alcantarillado,Muy insatisfecho,0,4996525,37600000,13.289,0.284,3615
+2021,Todo el país,Drenaje y alcantarillado,Insatisfecho,1,10587580,37600000,28.158,0.376,7661
+2021,Todo el país,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,4208061,37600000,11.192,0.263,3045
+2021,Todo el país,Drenaje y alcantarillado,Satisfecho,3,14856784,37600000,39.513,0.409,10749
+2021,Todo el país,Drenaje y alcantarillado,Muy satisfecho,4,2951051,37600000,7.849,0.225,2135
+2021,Todo el país,Transporte público,Muy insatisfecho,0,7271585,37600000,19.339,0.345,4823
+2021,Todo el país,Transporte público,Insatisfecho,1,10342477,37600000,27.507,0.39,6860
+2021,Todo el país,Transporte público,Ni satisfecho ni insatisfecho,2,4171618,37600000,11.095,0.274,2767
+2021,Todo el país,Transporte público,Satisfecho,3,12957378,37600000,34.461,0.415,8594
+2021,Todo el país,Transporte público,Muy satisfecho,4,2856943,37600000,7.598,0.231,1895
+2021,Todo el país,Parques y jardines,Muy insatisfecho,0,6739148,37600000,17.923,0.339,4371
+2021,Todo el país,Parques y jardines,Insatisfecho,1,10535444,37600000,28.02,0.396,6833
+2021,Todo el país,Parques y jardines,Ni satisfecho ni insatisfecho,2,4202945,37600000,11.178,0.278,2726
+2021,Todo el país,Parques y jardines,Satisfecho,3,13350708,37600000,35.507,0.422,8659
+2021,Todo el país,Parques y jardines,Muy satisfecho,4,2771754,37600000,7.372,0.231,1798
+2021,Todo el país,Alumbrado público,Muy insatisfecho,0,6595074,37600000,17.54,0.316,4812
+2021,Todo el país,Alumbrado público,Insatisfecho,1,12486869,37600000,33.21,0.392,9111
+2021,Todo el país,Alumbrado público,Ni satisfecho ni insatisfecho,2,3322881,37600000,8.837,0.236,2425
+2021,Todo el país,Alumbrado público,Satisfecho,3,12964711,37600000,34.481,0.396,9460
+2021,Todo el país,Alumbrado público,Muy satisfecho,4,2230465,37600000,5.932,0.197,1628
+2021,Todo el país,Policía,Muy insatisfecho,0,7969605,37600000,21.196,0.351,5465
+2021,Todo el país,Policía,Insatisfecho,1,13556067,37600000,36.053,0.412,9295
+2021,Todo el país,Policía,Ni satisfecho ni insatisfecho,2,4834427,37600000,12.858,0.287,3315
+2021,Todo el país,Policía,Satisfecho,3,9166091,37600000,24.378,0.369,6285
+2021,Todo el país,Policía,Muy satisfecho,4,2073810,37600000,5.515,0.196,1422
+2021,Todo el país,Calles y avenidas,Muy insatisfecho,0,8753829,37600000,23.281,0.361,6053
+2021,Todo el país,Calles y avenidas,Insatisfecho,1,16770197,37600000,44.602,0.425,11596
+2021,Todo el país,Calles y avenidas,Ni satisfecho ni insatisfecho,2,4703441,37600000,12.509,0.283,3252
+2021,Todo el país,Calles y avenidas,Satisfecho,3,6198111,37600000,16.484,0.317,4286
+2021,Todo el país,Calles y avenidas,Muy satisfecho,4,1174423,37600000,3.123,0.149,812
+2021,Norte,Recolección de basura,Muy insatisfecho,0,454924,9900000,4.595,0.383,261
+2021,Norte,Recolección de basura,Insatisfecho,1,672501,9900000,6.793,0.46,386
+2021,Norte,Recolección de basura,Ni satisfecho ni insatisfecho,2,1138201,9900000,11.497,0.583,653
+2021,Norte,Recolección de basura,Satisfecho,3,6156801,9900000,62.19,0.887,3532
+2021,Norte,Recolección de basura,Muy satisfecho,4,1477573,9900000,14.925,0.652,848
+2021,Norte,Agua potable,Muy insatisfecho,0,931560,9900000,9.41,0.51,585
+2021,Norte,Agua potable,Insatisfecho,1,1610047,9900000,16.263,0.645,1011
+2021,Norte,Agua potable,Ni satisfecho ni insatisfecho,2,1214187,9900000,12.265,0.574,762
+2021,Norte,Agua potable,Satisfecho,3,5111589,9900000,51.632,0.874,3209
+2021,Norte,Agua potable,Muy satisfecho,4,1032618,9900000,10.43,0.534,648
+2021,Norte,Drenaje y alcantarillado,Muy insatisfecho,0,1206634,9900000,12.188,0.586,722
+2021,Norte,Drenaje y alcantarillado,Insatisfecho,1,1804974,9900000,18.232,0.691,1080
+2021,Norte,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,1237652,9900000,12.502,0.592,741
+2021,Norte,Drenaje y alcantarillado,Satisfecho,3,4794582,9900000,48.43,0.895,2869
+2021,Norte,Drenaje y alcantarillado,Muy satisfecho,4,856159,9900000,8.648,0.503,512
+2021,Norte,Transporte público,Muy insatisfecho,0,1414689,9900000,14.29,0.598,931
+2021,Norte,Transporte público,Insatisfecho,1,2633435,9900000,26.6,0.755,1733
+2021,Norte,Transporte público,Ni satisfecho ni insatisfecho,2,1008093,9900000,10.183,0.516,664
+2021,Norte,Transporte público,Satisfecho,3,4100448,9900000,41.419,0.841,2699
+2021,Norte,Transporte público,Muy satisfecho,4,743336,9900000,7.508,0.45,489
+2021,Norte,Parques y jardines,Muy insatisfecho,0,1575600,9900000,15.915,0.675,888
+2021,Norte,Parques y jardines,Insatisfecho,1,2547308,9900000,25.73,0.807,1436
+2021,Norte,Parques y jardines,Ni satisfecho ni insatisfecho,2,1313103,9900000,13.264,0.626,740
+2021,Norte,Parques y jardines,Satisfecho,3,3574269,9900000,36.104,0.886,2015
+2021,Norte,Parques y jardines,Muy satisfecho,4,889721,9900000,8.987,0.528,502
+2021,Norte,Alumbrado público,Muy insatisfecho,0,1632173,9900000,16.487,0.651,1018
+2021,Norte,Alumbrado público,Insatisfecho,1,2680172,9900000,27.072,0.779,1672
+2021,Norte,Alumbrado público,Ni satisfecho ni insatisfecho,2,1196827,9900000,12.089,0.572,747
+2021,Norte,Alumbrado público,Satisfecho,3,3513166,9900000,35.487,0.839,2192
+2021,Norte,Alumbrado público,Muy satisfecho,4,877663,9900000,8.865,0.499,548
+2021,Norte,Policía,Muy insatisfecho,0,1997230,9900000,20.174,0.672,1365
+2021,Norte,Policía,Insatisfecho,1,3221580,9900000,32.541,0.785,2202
+2021,Norte,Policía,Ni satisfecho ni insatisfecho,2,1143177,9900000,11.547,0.536,781
+2021,Norte,Policía,Satisfecho,3,3022200,9900000,30.527,0.772,2065
+2021,Norte,Policía,Muy satisfecho,4,515814,9900000,5.21,0.372,353
+2021,Norte,Calles y avenidas,Muy insatisfecho,0,2000236,9900000,20.204,0.713,1217
+2021,Norte,Calles y avenidas,Insatisfecho,1,3669907,9900000,37.07,0.858,2232
+2021,Norte,Calles y avenidas,Ni satisfecho ni insatisfecho,2,1195587,9900000,12.077,0.579,727
+2021,Norte,Calles y avenidas,Satisfecho,3,2555458,9900000,25.813,0.777,1554
+2021,Norte,Calles y avenidas,Muy satisfecho,4,478811,9900000,4.836,0.381,291
+2021,Centro-Occidente,Recolección de basura,Muy insatisfecho,0,365794,7400000,4.943,0.391,289
+2021,Centro-Occidente,Recolección de basura,Insatisfecho,1,506613,7400000,6.846,0.455,400
+2021,Centro-Occidente,Recolección de basura,Ni satisfecho ni insatisfecho,2,1020065,7400000,13.785,0.622,805
+2021,Centro-Occidente,Recolección de basura,Satisfecho,3,4433295,7400000,59.909,0.884,3499
+2021,Centro-Occidente,Recolección de basura,Muy satisfecho,4,1074234,7400000,14.517,0.635,848
+2021,Centro-Occidente,Agua potable,Muy insatisfecho,0,966370,7400000,13.059,0.615,744
+2021,Centro-Occidente,Agua potable,Insatisfecho,1,1789918,7400000,24.188,0.782,1378
+2021,Centro-Occidente,Agua potable,Ni satisfecho ni insatisfecho,2,772844,7400000,10.444,0.559,595
+2021,Centro-Occidente,Agua potable,Satisfecho,3,3100649,7400000,41.901,0.901,2387
+2021,Centro-Occidente,Agua potable,Muy satisfecho,4,770218,7400000,10.408,0.558,593
+2021,Centro-Occidente,Drenaje y alcantarillado,Muy insatisfecho,0,1140239,7400000,15.409,0.647,912
+2021,Centro-Occidente,Drenaje y alcantarillado,Insatisfecho,1,1755835,7400000,23.728,0.762,1404
+2021,Centro-Occidente,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,884328,7400000,11.95,0.581,707
+2021,Centro-Occidente,Drenaje y alcantarillado,Satisfecho,3,2933991,7400000,39.649,0.876,2347
+2021,Centro-Occidente,Drenaje y alcantarillado,Muy satisfecho,4,685607,7400000,9.265,0.519,548
+2021,Centro-Occidente,Transporte público,Muy insatisfecho,0,1145387,7400000,15.478,0.611,1032
+2021,Centro-Occidente,Transporte público,Insatisfecho,1,2076735,7400000,28.064,0.759,1871
+2021,Centro-Occidente,Transporte público,Ni satisfecho ni insatisfecho,2,778336,7400000,10.518,0.518,701
+2021,Centro-Occidente,Transporte público,Satisfecho,3,2838165,7400000,38.354,0.821,2557
+2021,Centro-Occidente,Transporte público,Muy satisfecho,4,561377,7400000,7.586,0.447,506
+2021,Centro-Occidente,Parques y jardines,Muy insatisfecho,0,1192160,7400000,16.11,0.637,1020
+2021,Centro-Occidente,Parques y jardines,Insatisfecho,1,2303334,7400000,31.126,0.802,1971
+2021,Centro-Occidente,Parques y jardines,Ni satisfecho ni insatisfecho,2,596705,7400000,8.064,0.472,511
+2021,Centro-Occidente,Parques y jardines,Satisfecho,3,2804027,7400000,37.892,0.84,2399
+2021,Centro-Occidente,Parques y jardines,Muy satisfecho,4,503774,7400000,6.808,0.436,431
+2021,Centro-Occidente,Alumbrado público,Muy insatisfecho,0,1527234,7400000,20.638,0.69,1348
+2021,Centro-Occidente,Alumbrado público,Insatisfecho,1,2150666,7400000,29.063,0.775,1898
+2021,Centro-Occidente,Alumbrado público,Ni satisfecho ni insatisfecho,2,650051,7400000,8.784,0.483,574
+2021,Centro-Occidente,Alumbrado público,Satisfecho,3,2624834,7400000,35.471,0.816,2316
+2021,Centro-Occidente,Alumbrado público,Muy satisfecho,4,447215,7400000,6.043,0.406,395
+2021,Centro-Occidente,Policía,Muy insatisfecho,0,1412546,7400000,19.088,0.72,1079
+2021,Centro-Occidente,Policía,Insatisfecho,1,2809795,7400000,37.97,0.89,2147
+2021,Centro-Occidente,Policía,Ni satisfecho ni insatisfecho,2,1035998,7400000,14,0.636,792
+2021,Centro-Occidente,Policía,Satisfecho,3,1828320,7400000,24.707,0.791,1397
+2021,Centro-Occidente,Policía,Muy satisfecho,4,313341,7400000,4.234,0.369,239
+2021,Centro-Occidente,Calles y avenidas,Muy insatisfecho,0,1567285,7400000,21.18,0.721,1292
+2021,Centro-Occidente,Calles y avenidas,Insatisfecho,1,3084908,7400000,41.688,0.87,2543
+2021,Centro-Occidente,Calles y avenidas,Ni satisfecho ni insatisfecho,2,866039,7400000,11.703,0.567,714
+2021,Centro-Occidente,Calles y avenidas,Satisfecho,3,1551942,7400000,20.972,0.718,1279
+2021,Centro-Occidente,Calles y avenidas,Muy satisfecho,4,329826,7400000,4.457,0.364,272
+2021,Centro,Recolección de basura,Muy insatisfecho,0,1034132,13800000,7.494,0.48,428
+2021,Centro,Recolección de basura,Insatisfecho,1,2092458,13800000,15.163,0.654,866
+2021,Centro,Recolección de basura,Ni satisfecho ni insatisfecho,2,1545563,13800000,11.2,0.575,640
+2021,Centro,Recolección de basura,Satisfecho,3,7393085,13800000,53.573,0.91,3060
+2021,Centro,Recolección de basura,Muy satisfecho,4,1734762,13800000,12.571,0.605,718
+2021,Centro,Agua potable,Muy insatisfecho,0,2107378,13800000,15.271,0.647,898
+2021,Centro,Agua potable,Insatisfecho,1,3801770,13800000,27.549,0.803,1620
+2021,Centro,Agua potable,Ni satisfecho ni insatisfecho,2,1532490,13800000,11.105,0.565,653
+2021,Centro,Agua potable,Satisfecho,3,5444370,13800000,39.452,0.878,2320
+2021,Centro,Agua potable,Muy satisfecho,4,913992,13800000,6.623,0.447,390
+2021,Centro,Drenaje y alcantarillado,Muy insatisfecho,0,2120563,13800000,15.366,0.606,1035
+2021,Centro,Drenaje y alcantarillado,Insatisfecho,1,3093181,13800000,22.414,0.7,1510
+2021,Centro,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,1901525,13800000,13.779,0.579,928
+2021,Centro,Drenaje y alcantarillado,Satisfecho,3,5379725,13800000,38.984,0.819,2627
+2021,Centro,Drenaje y alcantarillado,Muy satisfecho,4,1305006,13800000,9.457,0.491,637
+2021,Centro,Transporte público,Muy insatisfecho,0,2830095,13800000,20.508,0.708,1266
+2021,Centro,Transporte público,Insatisfecho,1,3966744,13800000,28.745,0.794,1775
+2021,Centro,Transporte público,Ni satisfecho ni insatisfecho,2,1791644,13800000,12.983,0.59,802
+2021,Centro,Transporte público,Satisfecho,3,4235283,13800000,30.69,0.809,1895
+2021,Centro,Transporte público,Muy satisfecho,4,976233,13800000,7.074,0.45,437
+2021,Centro,Parques y jardines,Muy insatisfecho,0,2966103,13800000,21.493,0.69,1448
+2021,Centro,Parques y jardines,Insatisfecho,1,4610437,13800000,33.409,0.792,2250
+2021,Centro,Parques y jardines,Ni satisfecho ni insatisfecho,2,1184186,13800000,8.581,0.47,578
+2021,Centro,Parques y jardines,Satisfecho,3,4177783,13800000,30.274,0.772,2039
+2021,Centro,Parques y jardines,Muy satisfecho,4,861491,13800000,6.243,0.406,421
+2021,Centro,Alumbrado público,Muy insatisfecho,0,2657967,13800000,19.261,0.681,1226
+2021,Centro,Alumbrado público,Insatisfecho,1,4367279,13800000,31.647,0.804,2014
+2021,Centro,Alumbrado público,Ni satisfecho ni insatisfecho,2,1830230,13800000,13.263,0.586,844
+2021,Centro,Alumbrado público,Satisfecho,3,3981279,13800000,28.85,0.783,1836
+2021,Centro,Alumbrado público,Muy satisfecho,4,963245,13800000,6.98,0.44,444
+2021,Centro,Policía,Muy insatisfecho,0,3412275,13800000,24.727,0.725,1664
+2021,Centro,Policía,Insatisfecho,1,5162381,13800000,37.409,0.813,2517
+2021,Centro,Policía,Ni satisfecho ni insatisfecho,2,1325804,13800000,9.607,0.495,646
+2021,Centro,Policía,Satisfecho,3,3217613,13800000,23.316,0.711,1569
+2021,Centro,Policía,Muy satisfecho,4,681926,13800000,4.941,0.364,332
+2021,Centro,Calles y avenidas,Muy insatisfecho,0,3366593,13800000,24.396,0.746,1538
+2021,Centro,Calles y avenidas,Insatisfecho,1,6392388,13800000,46.322,0.866,2920
+2021,Centro,Calles y avenidas,Ni satisfecho ni insatisfecho,2,1434230,13800000,10.393,0.53,655
+2021,Centro,Calles y avenidas,Satisfecho,3,2203723,13800000,15.969,0.636,1007
+2021,Centro,Calles y avenidas,Muy satisfecho,4,403065,13800000,2.921,0.292,184
+2021,Sur-Sureste,Recolección de basura,Muy insatisfecho,0,361310,6500000,5.559,0.395,356
+2021,Sur-Sureste,Recolección de basura,Insatisfecho,1,533580,6500000,8.209,0.473,525
+2021,Sur-Sureste,Recolección de basura,Ni satisfecho ni insatisfecho,2,834917,6500000,12.845,0.577,822
+2021,Sur-Sureste,Recolección de basura,Satisfecho,3,4043240,6500000,62.204,0.836,3980
+2021,Sur-Sureste,Recolección de basura,Muy satisfecho,4,726954,6500000,11.184,0.543,716
+2021,Sur-Sureste,Agua potable,Muy insatisfecho,0,991073,6500000,15.247,0.632,938
+2021,Sur-Sureste,Agua potable,Insatisfecho,1,1448089,6500000,22.278,0.731,1370
+2021,Sur-Sureste,Agua potable,Ni satisfecho ni insatisfecho,2,697443,6500000,10.73,0.544,660
+2021,Sur-Sureste,Agua potable,Satisfecho,3,2755844,6500000,42.398,0.869,2607
+2021,Sur-Sureste,Agua potable,Muy satisfecho,4,607552,6500000,9.347,0.512,575
+2021,Sur-Sureste,Drenaje y alcantarillado,Muy insatisfecho,0,1145387,6500000,17.621,0.652,1143
+2021,Sur-Sureste,Drenaje y alcantarillado,Insatisfecho,1,1669161,6500000,25.679,0.748,1666
+2021,Sur-Sureste,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,857083,6500000,13.186,0.579,856
+2021,Sur-Sureste,Drenaje y alcantarillado,Satisfecho,3,2398013,6500000,36.893,0.826,2394
+2021,Sur-Sureste,Drenaje y alcantarillado,Muy satisfecho,4,430356,6500000,6.621,0.426,430
+2021,Sur-Sureste,Transporte público,Muy insatisfecho,0,1273643,6500000,19.595,0.732,1095
+2021,Sur-Sureste,Transporte público,Insatisfecho,1,1864479,6500000,28.684,0.834,1603
+2021,Sur-Sureste,Transporte público,Ni satisfecho ni insatisfecho,2,686539,6500000,10.562,0.567,590
+2021,Sur-Sureste,Transporte público,Satisfecho,3,2218815,6500000,34.136,0.874,1907
+2021,Sur-Sureste,Transporte público,Muy satisfecho,4,456524,6500000,7.023,0.471,392
+2021,Sur-Sureste,Parques y jardines,Muy insatisfecho,0,1334789,6500000,20.535,0.695,1317
+2021,Sur-Sureste,Parques y jardines,Insatisfecho,1,2043983,6500000,31.446,0.799,2017
+2021,Sur-Sureste,Parques y jardines,Ni satisfecho ni insatisfecho,2,546485,6500000,8.407,0.478,539
+2021,Sur-Sureste,Parques y jardines,Satisfecho,3,2061289,6500000,31.712,0.801,2034
+2021,Sur-Sureste,Parques y jardines,Muy satisfecho,4,513454,6500000,7.899,0.464,507
+2021,Sur-Sureste,Alumbrado público,Muy insatisfecho,0,1287362,6500000,19.806,0.684,1277
+2021,Sur-Sureste,Alumbrado público,Insatisfecho,1,2070771,6500000,31.858,0.8,2055
+2021,Sur-Sureste,Alumbrado público,Ni satisfecho ni insatisfecho,2,624400,6500000,9.606,0.506,620
+2021,Sur-Sureste,Alumbrado público,Satisfecho,3,2098087,6500000,32.278,0.803,2082
+2021,Sur-Sureste,Alumbrado público,Muy satisfecho,4,419380,6500000,6.452,0.422,416
+2021,Sur-Sureste,Policía,Muy insatisfecho,0,1674950,6500000,25.768,0.78,1541
+2021,Sur-Sureste,Policía,Insatisfecho,1,2553619,6500000,39.286,0.871,2349
+2021,Sur-Sureste,Policía,Ni satisfecho ni insatisfecho,2,534264,6500000,8.219,0.49,492
+2021,Sur-Sureste,Policía,Satisfecho,3,1399372,6500000,21.529,0.733,1287
+2021,Sur-Sureste,Policía,Muy satisfecho,4,337795,6500000,5.197,0.396,311
+2021,Sur-Sureste,Calles y avenidas,Muy insatisfecho,0,1664162,6500000,25.602,0.76,1606
+2021,Sur-Sureste,Calles y avenidas,Insatisfecho,1,2560093,6500000,39.386,0.85,2470
+2021,Sur-Sureste,Calles y avenidas,Ni satisfecho ni insatisfecho,2,823652,6500000,12.672,0.579,795
+2021,Sur-Sureste,Calles y avenidas,Satisfecho,3,1210304,6500000,18.62,0.678,1168
+2021,Sur-Sureste,Calles y avenidas,Muy satisfecho,4,241789,6500000,3.72,0.329,233
+2023,Todo el país,Recolección de basura,Muy insatisfecho,0,1195836,38728000,3.088,0.153,749
+2023,Todo el país,Recolección de basura,Insatisfecho,1,2413035,38728000,6.231,0.214,1512
+2023,Todo el país,Recolección de basura,Ni satisfecho ni insatisfecho,2,4642378,38728000,11.987,0.287,2908
+2023,Todo el país,Recolección de basura,Satisfecho,3,25539879,38728000,65.947,0.419,15998
+2023,Todo el país,Recolección de basura,Muy satisfecho,4,4936873,38728000,12.748,0.295,3092
+2023,Todo el país,Agua potable,Muy insatisfecho,0,4141646,38728000,10.694,0.264,2785
+2023,Todo el país,Agua potable,Insatisfecho,1,8142912,38728000,21.026,0.348,5476
+2023,Todo el país,Agua potable,Ni satisfecho ni insatisfecho,2,5125058,38728000,13.233,0.289,3447
+2023,Todo el país,Agua potable,Satisfecho,3,17278908,38728000,44.616,0.425,11620
+2023,Todo el país,Agua potable,Muy satisfecho,4,4039475,38728000,10.43,0.261,2716
+2023,Todo el país,Drenaje y alcantarillado,Muy insatisfecho,0,4545252,38728000,11.736,0.29,2747
+2023,Todo el país,Drenaje y alcantarillado,Insatisfecho,1,8805097,38728000,22.736,0.378,5322
+2023,Todo el país,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,4269414,38728000,11.024,0.282,2580
+2023,Todo el país,Drenaje y alcantarillado,Satisfecho,3,17546143,38728000,45.306,0.448,10604
+2023,Todo el país,Drenaje y alcantarillado,Muy satisfecho,4,3562094,38728000,9.198,0.26,2153
+2023,Todo el país,Transporte público,Muy insatisfecho,0,6234396,38728000,16.098,0.309,4329
+2023,Todo el país,Transporte público,Insatisfecho,1,10748786,38728000,27.755,0.376,7463
+2023,Todo el país,Transporte público,Ni satisfecho ni insatisfecho,2,3664772,38728000,9.463,0.246,2545
+2023,Todo el país,Transporte público,Satisfecho,3,15203231,38728000,39.256,0.41,10556
+2023,Todo el país,Transporte público,Muy satisfecho,4,2876815,38728000,7.428,0.22,1997
+2023,Todo el país,Parques y jardines,Muy insatisfecho,0,6232796,38728000,16.094,0.334,3693
+2023,Todo el país,Parques y jardines,Insatisfecho,1,12305430,38728000,31.774,0.424,7290
+2023,Todo el país,Parques y jardines,Ni satisfecho ni insatisfecho,2,4327743,38728000,11.175,0.287,2564
+2023,Todo el país,Parques y jardines,Satisfecho,3,13137449,38728000,33.922,0.431,7783
+2023,Todo el país,Parques y jardines,Muy satisfecho,4,2724581,38728000,7.035,0.233,1614
+2023,Todo el país,Alumbrado público,Muy insatisfecho,0,5868657,38728000,15.154,0.31,3863
+2023,Todo el país,Alumbrado público,Insatisfecho,1,11759207,38728000,30.364,0.397,7741
+2023,Todo el país,Alumbrado público,Ni satisfecho ni insatisfecho,2,5006255,38728000,12.927,0.29,3296
+2023,Todo el país,Alumbrado público,Satisfecho,3,13043094,38728000,33.679,0.408,8586
+2023,Todo el país,Alumbrado público,Muy satisfecho,4,3050787,38728000,7.877,0.233,2008
+2023,Todo el país,Policía,Muy insatisfecho,0,8176617,38728000,21.113,0.36,5168
+2023,Todo el país,Policía,Insatisfecho,1,12466331,38728000,32.189,0.412,7879
+2023,Todo el país,Policía,Ni satisfecho ni insatisfecho,2,5197186,38728000,13.42,0.3,3285
+2023,Todo el país,Policía,Satisfecho,3,11044371,38728000,28.518,0.398,6981
+2023,Todo el país,Policía,Muy satisfecho,4,1843496,38728000,4.76,0.188,1165
+2023,Todo el país,Calles y avenidas,Muy insatisfecho,0,8766260,38728000,22.635,0.367,5577
+2023,Todo el país,Calles y avenidas,Insatisfecho,1,14088823,38728000,36.379,0.422,8963
+2023,Todo el país,Calles y avenidas,Ni satisfecho ni insatisfecho,2,4577955,38728000,11.821,0.284,2913
+2023,Todo el país,Calles y avenidas,Satisfecho,3,9258544,38728000,23.907,0.375,5890
+2023,Todo el país,Calles y avenidas,Muy satisfecho,4,2036418,38728000,5.258,0.196,1296
+2023,Norte,Recolección de basura,Muy insatisfecho,0,338784,10197000,3.322,0.314,206
+2023,Norte,Recolección de basura,Insatisfecho,1,628160,10197000,6.16,0.421,381
+2023,Norte,Recolección de basura,Ni satisfecho ni insatisfecho,2,1018634,10197000,9.99,0.525,618
+2023,Norte,Recolección de basura,Satisfecho,3,6713413,10197000,65.837,0.831,4076
+2023,Norte,Recolección de basura,Muy satisfecho,4,1498009,10197000,14.691,0.62,910
+2023,Norte,Agua potable,Muy insatisfecho,0,826690,10197000,8.107,0.502,455
+2023,Norte,Agua potable,Insatisfecho,1,1675421,10197000,16.431,0.682,922
+2023,Norte,Agua potable,Ni satisfecho ni insatisfecho,2,1332299,10197000,13.066,0.62,734
+2023,Norte,Agua potable,Satisfecho,3,5441302,10197000,53.362,0.918,2996
+2023,Norte,Agua potable,Muy satisfecho,4,921288,10197000,9.035,0.527,507
+2023,Norte,Drenaje y alcantarillado,Muy insatisfecho,0,1238252,10197000,12.143,0.559,788
+2023,Norte,Drenaje y alcantarillado,Insatisfecho,1,2332849,10197000,22.878,0.719,1484
+2023,Norte,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,921297,10197000,9.035,0.491,586
+2023,Norte,Drenaje y alcantarillado,Satisfecho,3,4649708,10197000,45.599,0.852,2958
+2023,Norte,Drenaje y alcantarillado,Muy satisfecho,4,1054894,10197000,10.345,0.521,671
+2023,Norte,Transporte público,Muy insatisfecho,0,1529030,10197000,14.995,0.607,984
+2023,Norte,Transporte público,Insatisfecho,1,2376836,10197000,23.309,0.719,1530
+2023,Norte,Transporte público,Ni satisfecho ni insatisfecho,2,1221690,10197000,11.981,0.553,786
+2023,Norte,Transporte público,Satisfecho,3,4173217,10197000,40.926,0.837,2686
+2023,Norte,Transporte público,Muy satisfecho,4,896227,10197000,8.789,0.482,577
+2023,Norte,Parques y jardines,Muy insatisfecho,0,1162468,10197000,11.4,0.544,739
+2023,Norte,Parques y jardines,Insatisfecho,1,2389616,10197000,23.434,0.725,1519
+2023,Norte,Parques y jardines,Ni satisfecho ni insatisfecho,2,1211530,10197000,11.881,0.554,770
+2023,Norte,Parques y jardines,Satisfecho,3,4582113,10197000,44.936,0.852,2914
+2023,Norte,Parques y jardines,Muy satisfecho,4,851274,10197000,8.348,0.474,541
+2023,Norte,Alumbrado público,Muy insatisfecho,0,1315641,10197000,12.902,0.561,874
+2023,Norte,Alumbrado público,Insatisfecho,1,2264974,10197000,22.212,0.696,1505
+2023,Norte,Alumbrado público,Ni satisfecho ni insatisfecho,2,1405402,10197000,13.783,0.577,934
+2023,Norte,Alumbrado público,Satisfecho,3,4278165,10197000,41.955,0.826,2843
+2023,Norte,Alumbrado público,Muy satisfecho,4,932818,10197000,9.148,0.483,620
+2023,Norte,Policía,Muy insatisfecho,0,2184007,10197000,21.418,0.715,1340
+2023,Norte,Policía,Insatisfecho,1,3233746,10197000,31.713,0.811,1984
+2023,Norte,Policía,Ni satisfecho ni insatisfecho,2,1024550,10197000,10.048,0.524,629
+2023,Norte,Policía,Satisfecho,3,3092280,10197000,30.325,0.801,1897
+2023,Norte,Policía,Muy satisfecho,4,662418,10197000,6.496,0.43,406
+2023,Norte,Calles y avenidas,Muy insatisfecho,0,2153356,10197000,21.118,0.69,1403
+2023,Norte,Calles y avenidas,Insatisfecho,1,3481446,10197000,34.142,0.802,2269
+2023,Norte,Calles y avenidas,Ni satisfecho ni insatisfecho,2,989404,10197000,9.703,0.501,645
+2023,Norte,Calles y avenidas,Satisfecho,3,2892924,10197000,28.37,0.762,1885
+2023,Norte,Calles y avenidas,Muy satisfecho,4,679870,10197000,6.667,0.422,443
+2023,Centro-Occidente,Recolección de basura,Muy insatisfecho,0,420261,7622000,5.514,0.387,364
+2023,Centro-Occidente,Recolección de basura,Insatisfecho,1,711477,7622000,9.335,0.494,616
+2023,Centro-Occidente,Recolección de basura,Ni satisfecho ni insatisfecho,2,613024,7622000,8.043,0.462,530
+2023,Centro-Occidente,Recolección de basura,Satisfecho,3,4752400,7622000,62.351,0.822,4111
+2023,Centro-Occidente,Recolección de basura,Muy satisfecho,4,1124838,7622000,14.758,0.602,973
+2023,Centro-Occidente,Agua potable,Muy insatisfecho,0,871989,7622000,11.44,0.549,730
+2023,Centro-Occidente,Agua potable,Insatisfecho,1,1525292,7622000,20.012,0.691,1276
+2023,Centro-Occidente,Agua potable,Ni satisfecho ni insatisfecho,2,797738,7622000,10.466,0.528,668
+2023,Centro-Occidente,Agua potable,Satisfecho,3,3724989,7622000,48.872,0.863,3117
+2023,Centro-Occidente,Agua potable,Muy satisfecho,4,701991,7622000,9.21,0.499,587
+2023,Centro-Occidente,Drenaje y alcantarillado,Muy insatisfecho,0,808289,7622000,10.605,0.518,713
+2023,Centro-Occidente,Drenaje y alcantarillado,Insatisfecho,1,1535971,7622000,20.152,0.674,1354
+2023,Centro-Occidente,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,989071,7622000,12.977,0.565,872
+2023,Centro-Occidente,Drenaje y alcantarillado,Satisfecho,3,3655272,7622000,47.957,0.84,3223
+2023,Centro-Occidente,Drenaje y alcantarillado,Muy satisfecho,4,633397,7622000,8.31,0.464,559
+2023,Centro-Occidente,Transporte público,Muy insatisfecho,0,1218138,7622000,15.982,0.653,958
+2023,Centro-Occidente,Transporte público,Insatisfecho,1,2241180,7622000,29.404,0.811,1762
+2023,Centro-Occidente,Transporte público,Ni satisfecho ni insatisfecho,2,682992,7622000,8.961,0.509,537
+2023,Centro-Occidente,Transporte público,Satisfecho,3,2849283,7622000,37.382,0.862,2240
+2023,Centro-Occidente,Transporte público,Muy satisfecho,4,630407,7622000,8.271,0.49,496
+2023,Centro-Occidente,Parques y jardines,Muy insatisfecho,0,1190266,7622000,15.616,0.633,976
+2023,Centro-Occidente,Parques y jardines,Insatisfecho,1,2001014,7622000,26.253,0.767,1640
+2023,Centro-Occidente,Parques y jardines,Ni satisfecho ni insatisfecho,2,704895,7622000,9.248,0.505,578
+2023,Centro-Occidente,Parques y jardines,Satisfecho,3,3049443,7622000,40.008,0.854,2500
+2023,Centro-Occidente,Parques y jardines,Muy satisfecho,4,676382,7622000,8.874,0.496,554
+2023,Centro-Occidente,Alumbrado público,Muy insatisfecho,0,1365300,7622000,17.913,0.686,1063
+2023,Centro-Occidente,Alumbrado público,Insatisfecho,1,2274941,7622000,29.847,0.819,1771
+2023,Centro-Occidente,Alumbrado público,Ni satisfecho ni insatisfecho,2,698275,7622000,9.161,0.516,543
+2023,Centro-Occidente,Alumbrado público,Satisfecho,3,2678525,7622000,35.142,0.854,2085
+2023,Centro-Occidente,Alumbrado público,Muy satisfecho,4,604959,7622000,7.937,0.484,471
+2023,Centro-Occidente,Policía,Muy insatisfecho,0,1536656,7622000,20.161,0.725,1172
+2023,Centro-Occidente,Policía,Insatisfecho,1,2621822,7622000,34.398,0.859,2000
+2023,Centro-Occidente,Policía,Ni satisfecho ni insatisfecho,2,726887,7622000,9.537,0.531,554
+2023,Centro-Occidente,Policía,Satisfecho,3,2333284,7622000,30.612,0.833,1780
+2023,Centro-Occidente,Policía,Muy satisfecho,4,403351,7622000,5.292,0.405,308
+2023,Centro-Occidente,Calles y avenidas,Muy insatisfecho,0,1584336,7622000,20.786,0.745,1172
+2023,Centro-Occidente,Calles y avenidas,Insatisfecho,1,3084160,7622000,40.464,0.901,2281
+2023,Centro-Occidente,Calles y avenidas,Ni satisfecho ni insatisfecho,2,829888,7622000,10.888,0.572,614
+2023,Centro-Occidente,Calles y avenidas,Satisfecho,3,1699763,7622000,22.301,0.764,1257
+2023,Centro-Occidente,Calles y avenidas,Muy satisfecho,4,423853,7622000,5.561,0.421,313
+2023,Centro,Recolección de basura,Muy insatisfecho,0,1254670,14214000,8.827,0.501,538
+2023,Centro,Recolección de basura,Insatisfecho,1,2577272,14214000,18.132,0.68,1106
+2023,Centro,Recolección de basura,Ni satisfecho ni insatisfecho,2,1166976,14214000,8.21,0.485,501
+2023,Centro,Recolección de basura,Satisfecho,3,7657640,14214000,53.874,0.88,3285
+2023,Centro,Recolección de basura,Muy satisfecho,4,1557442,14214000,10.957,0.551,668
+2023,Centro,Agua potable,Muy insatisfecho,0,1954961,14214000,13.754,0.608,839
+2023,Centro,Agua potable,Insatisfecho,1,3359323,14214000,23.634,0.75,1441
+2023,Centro,Agua potable,Ni satisfecho ni insatisfecho,2,1621841,14214000,11.41,0.561,696
+2023,Centro,Agua potable,Satisfecho,3,6040740,14214000,42.499,0.873,2592
+2023,Centro,Agua potable,Muy satisfecho,4,1237135,14214000,8.704,0.498,531
+2023,Centro,Drenaje y alcantarillado,Muy insatisfecho,0,2234252,14214000,15.719,0.668,886
+2023,Centro,Drenaje y alcantarillado,Insatisfecho,1,4315174,14214000,30.359,0.844,1711
+2023,Centro,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,1496092,14214000,10.525,0.564,593
+2023,Centro,Drenaje y alcantarillado,Satisfecho,3,5007371,14214000,35.228,0.877,1985
+2023,Centro,Drenaje y alcantarillado,Muy satisfecho,4,1161111,14214000,8.169,0.503,460
+2023,Centro,Transporte público,Muy insatisfecho,0,2845333,14214000,20.018,0.71,1207
+2023,Centro,Transporte público,Insatisfecho,1,3995876,14214000,28.112,0.798,1696
+2023,Centro,Transporte público,Ni satisfecho ni insatisfecho,2,1896907,14214000,13.345,0.604,805
+2023,Centro,Transporte público,Satisfecho,3,4396840,14214000,30.933,0.82,1866
+2023,Centro,Transporte público,Muy satisfecho,4,1079044,14214000,7.591,0.47,458
+2023,Centro,Parques y jardines,Muy insatisfecho,0,2258601,14214000,15.89,0.674,889
+2023,Centro,Parques y jardines,Insatisfecho,1,4794337,14214000,33.73,0.871,1887
+2023,Centro,Parques y jardines,Ni satisfecho ni insatisfecho,2,1541108,14214000,10.842,0.573,607
+2023,Centro,Parques y jardines,Satisfecho,3,4669387,14214000,32.851,0.866,1838
+2023,Centro,Parques y jardines,Muy satisfecho,4,950567,14214000,6.688,0.46,374
+2023,Centro,Alumbrado público,Muy insatisfecho,0,2541952,14214000,17.883,0.689,1051
+2023,Centro,Alumbrado público,Insatisfecho,1,4674796,14214000,32.889,0.845,1932
+2023,Centro,Alumbrado público,Ni satisfecho ni insatisfecho,2,1419522,14214000,9.987,0.539,587
+2023,Centro,Alumbrado público,Satisfecho,3,4611207,14214000,32.441,0.842,1906
+2023,Centro,Alumbrado público,Muy satisfecho,4,966523,14214000,6.8,0.453,399
+2023,Centro,Policía,Muy insatisfecho,0,3250291,14214000,22.867,0.769,1297
+2023,Centro,Policía,Insatisfecho,1,5720159,14214000,40.243,0.898,2282
+2023,Centro,Policía,Ni satisfecho ni insatisfecho,2,1175276,14214000,8.268,0.504,469
+2023,Centro,Policía,Satisfecho,3,3379736,14214000,23.778,0.779,1348
+2023,Centro,Policía,Muy satisfecho,4,688538,14214000,4.844,0.393,275
+2023,Centro,Calles y avenidas,Muy insatisfecho,0,4086124,14214000,28.747,0.78,1837
+2023,Centro,Calles y avenidas,Insatisfecho,1,5890553,14214000,41.442,0.85,2648
+2023,Centro,Calles y avenidas,Ni satisfecho ni insatisfecho,2,1664694,14214000,11.712,0.555,748
+2023,Centro,Calles y avenidas,Satisfecho,3,2163084,14214000,15.218,0.619,972
+2023,Centro,Calles y avenidas,Muy satisfecho,4,409545,14214000,2.881,0.288,184
+2023,Sur-Sureste,Recolección de basura,Muy insatisfecho,0,540344,6695000,8.071,0.474,507
+2023,Sur-Sureste,Recolección de basura,Insatisfecho,1,888096,6695000,13.265,0.59,833
+2023,Sur-Sureste,Recolección de basura,Ni satisfecho ni insatisfecho,2,678718,6695000,10.138,0.525,636
+2023,Sur-Sureste,Recolección de basura,Satisfecho,3,3678216,6695000,54.94,0.866,3449
+2023,Sur-Sureste,Recolección de basura,Muy satisfecho,4,909626,6695000,13.587,0.596,853
+2023,Sur-Sureste,Agua potable,Muy insatisfecho,0,867427,6695000,12.956,0.611,743
+2023,Sur-Sureste,Agua potable,Insatisfecho,1,1274229,6695000,19.033,0.714,1092
+2023,Sur-Sureste,Agua potable,Ni satisfecho ni insatisfecho,2,790107,6695000,11.801,0.587,677
+2023,Sur-Sureste,Agua potable,Satisfecho,3,3057226,6695000,45.664,0.906,2620
+2023,Sur-Sureste,Agua potable,Muy satisfecho,4,706011,6695000,10.545,0.559,605
+2023,Sur-Sureste,Drenaje y alcantarillado,Muy insatisfecho,0,814791,6695000,12.17,0.59,710
+2023,Sur-Sureste,Drenaje y alcantarillado,Insatisfecho,1,1649030,6695000,24.631,0.777,1437
+2023,Sur-Sureste,Drenaje y alcantarillado,Ni satisfecho ni insatisfecho,2,602083,6695000,8.993,0.516,525
+2023,Sur-Sureste,Drenaje y alcantarillado,Satisfecho,3,3105974,6695000,46.392,0.9,2707
+2023,Sur-Sureste,Drenaje y alcantarillado,Muy satisfecho,4,523123,6695000,7.814,0.484,456
+2023,Sur-Sureste,Transporte público,Muy insatisfecho,0,1030804,6695000,15.397,0.65,902
+2023,Sur-Sureste,Transporte público,Insatisfecho,1,2008692,6695000,30.003,0.825,1758
+2023,Sur-Sureste,Transporte público,Ni satisfecho ni insatisfecho,2,801280,6695000,11.968,0.585,701
+2023,Sur-Sureste,Transporte público,Satisfecho,3,2425489,6695000,36.228,0.866,2122
+2023,Sur-Sureste,Transporte público,Muy satisfecho,4,428734,6695000,6.404,0.441,375
+2023,Sur-Sureste,Parques y jardines,Muy insatisfecho,0,1149529,6695000,17.17,0.659,1067
+2023,Sur-Sureste,Parques y jardines,Insatisfecho,1,1890709,6695000,28.241,0.787,1755
+2023,Sur-Sureste,Parques y jardines,Ni satisfecho ni insatisfecho,2,820177,6695000,12.251,0.573,761
+2023,Sur-Sureste,Parques y jardines,Satisfecho,3,2419896,6695000,36.145,0.84,2246
+2023,Sur-Sureste,Parques y jardines,Muy satisfecho,4,414690,6695000,6.194,0.422,385
+2023,Sur-Sureste,Alumbrado público,Muy insatisfecho,0,1152650,6695000,17.217,0.647,1112
+2023,Sur-Sureste,Alumbrado público,Insatisfecho,1,1933027,6695000,28.873,0.777,1865
+2023,Sur-Sureste,Alumbrado público,Ni satisfecho ni insatisfecho,2,932065,6695000,13.922,0.594,899
+2023,Sur-Sureste,Alumbrado público,Satisfecho,3,2261971,6695000,33.786,0.811,2183
+2023,Sur-Sureste,Alumbrado público,Muy satisfecho,4,415286,6695000,6.203,0.414,401
+2023,Sur-Sureste,Policía,Muy insatisfecho,0,1683754,6695000,25.149,0.728,1699
+2023,Sur-Sureste,Policía,Insatisfecho,1,2480943,6695000,37.057,0.81,2503
+2023,Sur-Sureste,Policía,Ni satisfecho ni insatisfecho,2,644988,6695000,9.634,0.495,651
+2023,Sur-Sureste,Policía,Satisfecho,3,1586237,6695000,23.693,0.713,1600
+2023,Sur-Sureste,Policía,Muy satisfecho,4,299078,6695000,4.467,0.346,302
+2023,Sur-Sureste,Calles y avenidas,Muy insatisfecho,0,1448682,6695000,21.638,0.738,1279
+2023,Sur-Sureste,Calles y avenidas,Insatisfecho,1,2972697,6695000,44.402,0.891,2624
+2023,Sur-Sureste,Calles y avenidas,Ni satisfecho ni insatisfecho,2,719022,6695000,10.74,0.555,635
+2023,Sur-Sureste,Calles y avenidas,Satisfecho,3,1316770,6695000,19.668,0.713,1162
+2023,Sur-Sureste,Calles y avenidas,Muy satisfecho,4,237829,6695000,3.552,0.332,210

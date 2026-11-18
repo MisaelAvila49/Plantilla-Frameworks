@@ -1,0 +1,397 @@
+cve_ent,entidad,region,anio,sexo,num,den,pct,ee,casos
+01,Aguascalientes,Centro-Occidente,2018,Mujeres,32749,86532,37.846,8.405,72
+01,Aguascalientes,Centro-Occidente,2018,Hombres,31193,86532,36.048,8.306,72
+01,Aguascalientes,Centro-Occidente,2018,Total,63942,173064,36.947,5.966,144
+02,Baja California,Norte,2018,Mujeres,104399,228130,45.763,6.046,148
+02,Baja California,Norte,2018,Hombres,98172,228130,43.033,6.015,148
+02,Baja California,Norte,2018,Total,202571,456260,44.398,4.283,296
+03,Baja California Sur,Norte,2018,Mujeres,18115,48410,37.421,9.39,58
+03,Baja California Sur,Norte,2018,Hombres,15319,48410,31.645,9.286,58
+03,Baja California Sur,Norte,2018,Total,33434,96820,34.532,6.548,116
+04,Campeche,Sur-Sureste,2018,Mujeres,17464,56276,31.033,8.763,61
+04,Campeche,Sur-Sureste,2018,Hombres,14907,56276,26.49,8.616,61
+04,Campeche,Sur-Sureste,2018,Total,32371,112552,28.761,6.078,122
+05,Coahuila,Norte,2018,Mujeres,84546,190613,44.355,6.036,150
+05,Coahuila,Norte,2018,Hombres,90543,190613,47.501,6.014,150
+05,Coahuila,Norte,2018,Total,175089,381226,45.928,4.268,300
+06,Colima,Centro-Occidente,2018,Mujeres,12783,44174,28.939,10.236,46
+06,Colima,Centro-Occidente,2018,Hombres,14839,44174,33.592,10.087,46
+06,Colima,Centro-Occidente,2018,Total,27622,88348,31.265,7.169,92
+07,Chiapas,Sur-Sureste,2018,Mujeres,53544,335236,15.972,3.793,224
+07,Chiapas,Sur-Sureste,2018,Hombres,59637,335236,17.789,3.635,224
+07,Chiapas,Sur-Sureste,2018,Total,113181,670472,16.881,2.625,448
+08,Chihuahua,Norte,2018,Mujeres,81426,226315,35.979,5.702,156
+08,Chihuahua,Norte,2018,Hombres,79712,226315,35.222,5.635,156
+08,Chihuahua,Norte,2018,Total,161138,452630,35.6,4.021,312
+09,Ciudad de México,Centro,2018,Mujeres,287526,557316,51.591,3.781,383
+09,Ciudad de México,Centro,2018,Hombres,298149,557316,53.497,3.787,383
+09,Ciudad de México,Centro,2018,Total,585675,1114632,52.544,2.676,766
+10,Durango,Norte,2018,Mujeres,37525,110737,33.886,7.246,96
+10,Durango,Norte,2018,Hombres,43324,110737,39.124,7.159,96
+10,Durango,Norte,2018,Total,80849,221474,36.505,5.154,192
+11,Guanajuato,Centro-Occidente,2018,Mujeres,126370,373359,33.847,4.023,293
+11,Guanajuato,Centro-Occidente,2018,Hombres,111728,373359,29.925,3.957,293
+11,Guanajuato,Centro-Occidente,2018,Total,238098,746718,31.886,2.855,586
+12,Guerrero,Sur-Sureste,2018,Mujeres,50545,214212,23.596,4.7,171
+12,Guerrero,Sur-Sureste,2018,Hombres,41583,214212,19.412,4.555,171
+12,Guerrero,Sur-Sureste,2018,Total,92128,428424,21.504,3.295,342
+13,Hidalgo,Centro,2018,Mujeres,68161,186377,36.572,5.613,155
+13,Hidalgo,Centro,2018,Hombres,58592,186377,31.437,5.533,155
+13,Hidalgo,Centro,2018,Total,126753,372754,34.004,3.991,310
+14,Jalisco,Centro-Occidente,2018,Mujeres,204970,505275,40.566,3.874,355
+14,Jalisco,Centro-Occidente,2018,Hombres,200175,505275,39.617,3.846,355
+14,Jalisco,Centro-Occidente,2018,Total,405145,1010550,40.092,2.728,710
+15,Estado de México,Centro,2018,Mujeres,384899,1028099,37.438,2.597,756
+15,Estado de México,Centro,2018,Hombres,363174,1028099,35.325,2.567,756
+15,Estado de México,Centro,2018,Total,748073,2056198,36.381,1.835,1512
+16,Michoacán,Centro-Occidente,2018,Mujeres,82455,287432,28.687,4.768,189
+16,Michoacán,Centro-Occidente,2018,Hombres,66501,287432,23.136,4.66,189
+16,Michoacán,Centro-Occidente,2018,Total,148956,574864,25.912,3.343,378
+17,Morelos,Centro,2018,Mujeres,40546,119209,34.013,7.015,97
+17,Morelos,Centro,2018,Hombres,38194,119209,32.04,6.902,97
+17,Morelos,Centro,2018,Total,78740,238418,33.026,5.008,194
+18,Nayarit,Centro-Occidente,2018,Mujeres,21311,75035,28.402,8.244,66
+18,Nayarit,Centro-Occidente,2018,Hombres,20465,75035,27.275,8.08,66
+18,Nayarit,Centro-Occidente,2018,Total,41776,150070,27.838,5.786,132
+19,Nuevo León,Norte,2018,Mujeres,132178,349759,37.791,4.557,254
+19,Nuevo León,Norte,2018,Hombres,134330,349759,38.406,4.519,254
+19,Nuevo León,Norte,2018,Total,266508,699518,38.099,3.196,508
+20,Oaxaca,Sur-Sureste,2018,Mujeres,51899,249915,20.767,4.873,171
+20,Oaxaca,Sur-Sureste,2018,Hombres,61451,249915,24.589,4.745,171
+20,Oaxaca,Sur-Sureste,2018,Total,113350,499830,22.678,3.359,342
+21,Puebla,Centro,2018,Mujeres,109697,398169,27.55,4.135,260
+21,Puebla,Centro,2018,Hombres,116945,398169,29.371,4.05,260
+21,Puebla,Centro,2018,Total,226642,796338,28.461,2.935,520
+22,Querétaro,Centro,2018,Mujeres,54254,143413,37.83,6.965,107
+22,Querétaro,Centro,2018,Hombres,47789,143413,33.322,6.895,107
+22,Querétaro,Centro,2018,Total,102043,286826,35.577,4.854,214
+23,Quintana Roo,Sur-Sureste,2018,Mujeres,44297,112552,39.357,8.144,79
+23,Quintana Roo,Sur-Sureste,2018,Hombres,45675,112552,40.582,8.072,79
+23,Quintana Roo,Sur-Sureste,2018,Total,89972,225104,39.969,5.78,158
+24,San Luis Potosí,Centro-Occidente,2018,Mujeres,49183,170644,28.822,6.412,122
+24,San Luis Potosí,Centro-Occidente,2018,Hombres,57026,170644,33.418,6.333,122
+24,San Luis Potosí,Centro-Occidente,2018,Total,106209,341288,31.12,4.396,244
+25,Sinaloa,Norte,2018,Mujeres,70144,183351,38.257,5.877,149
+25,Sinaloa,Norte,2018,Hombres,58783,183351,32.06,5.815,149
+25,Sinaloa,Norte,2018,Total,128927,366702,35.159,4.102,298
+26,Sonora,Norte,2018,Mujeres,68934,177905,38.748,6.383,128
+26,Sonora,Norte,2018,Hombres,65335,177905,36.725,6.322,128
+26,Sonora,Norte,2018,Total,134269,355810,37.736,4.494,256
+27,Tabasco,Sur-Sureste,2018,Mujeres,40678,145229,28.009,6.692,105
+27,Tabasco,Sur-Sureste,2018,Hombres,40209,145229,27.687,6.578,105
+27,Tabasco,Sur-Sureste,2018,Total,80887,290458,27.848,4.588,210
+28,Tamaulipas,Norte,2018,Mujeres,76573,213607,35.848,5.63,158
+28,Tamaulipas,Norte,2018,Hombres,74742,213607,34.991,5.56,158
+28,Tamaulipas,Norte,2018,Total,151315,427214,35.419,3.991,316
+29,Tlaxcala,Centro,2018,Mujeres,22295,81086,27.496,7.793,74
+29,Tlaxcala,Centro,2018,Hombres,20425,81086,25.189,7.642,74
+29,Tlaxcala,Centro,2018,Total,42720,162172,26.342,5.371,148
+30,Veracruz,Sur-Sureste,2018,Mujeres,119745,487727,24.552,3.498,329
+30,Veracruz,Sur-Sureste,2018,Hombres,113759,487727,23.324,3.405,329
+30,Veracruz,Sur-Sureste,2018,Total,233504,975454,23.938,2.467,658
+31,Yucatán,Sur-Sureste,2018,Mujeres,54919,140388,39.12,6.636,115
+31,Yucatán,Sur-Sureste,2018,Hombres,49301,140388,35.118,6.559,115
+31,Yucatán,Sur-Sureste,2018,Total,104220,280776,37.119,4.725,230
+32,Zacatecas,Centro-Occidente,2018,Mujeres,28225,98029,28.792,7.164,89
+32,Zacatecas,Centro-Occidente,2018,Hombres,29572,98029,30.166,7.031,89
+32,Zacatecas,Centro-Occidente,2018,Total,57797,196058,29.48,5.069,178
+00,Nacional,Nacional,2018,Mujeres,2632355,7624511,34.525,0.941,5616
+00,Nacional,Nacional,2018,Hombres,2561549,7624511,33.596,0.935,5616
+00,Nacional,Nacional,2018,Total,5193904,15249022,34.061,0.663,11232
+01,Aguascalientes,Centro-Occidente,2020,Mujeres,31181,87230,35.746,7.954,78
+01,Aguascalientes,Centro-Occidente,2020,Hombres,27996,87230,32.095,7.844,78
+01,Aguascalientes,Centro-Occidente,2020,Total,59177,174460,33.92,5.622,156
+02,Baja California,Norte,2020,Mujeres,91716,229970,39.882,5.671,166
+02,Baja California,Norte,2020,Hombres,94023,229970,40.885,5.633,166
+02,Baja California,Norte,2020,Total,185739,459940,40.383,3.994,332
+03,Baja California Sur,Norte,2020,Mujeres,18072,48800,37.033,9.687,53
+03,Baja California Sur,Norte,2020,Hombres,16958,48800,34.749,9.561,53
+03,Baja California Sur,Norte,2020,Total,35030,97600,35.891,6.911,106
+04,Campeche,Sur-Sureste,2020,Mujeres,14601,56730,25.738,8.666,60
+04,Campeche,Sur-Sureste,2020,Hombres,17287,56730,30.472,8.498,60
+04,Campeche,Sur-Sureste,2020,Total,31888,113460,28.105,6.086,120
+05,Coahuila,Norte,2020,Mujeres,82418,192150,42.892,6.327,135
+05,Coahuila,Norte,2020,Hombres,87294,192150,45.43,6.294,135
+05,Coahuila,Norte,2020,Total,169712,384300,44.161,4.482,270
+06,Colima,Centro-Occidente,2020,Mujeres,13133,44530,29.492,9.336,54
+06,Colima,Centro-Occidente,2020,Hombres,13309,44530,29.888,9.178,54
+06,Colima,Centro-Occidente,2020,Total,26442,89060,29.69,6.521,108
+07,Chiapas,Sur-Sureste,2020,Mujeres,49883,337940,14.761,3.413,250
+07,Chiapas,Sur-Sureste,2020,Hombres,44468,337940,13.159,3.246,250
+07,Chiapas,Sur-Sureste,2020,Total,94351,675880,13.96,2.299,500
+08,Chihuahua,Norte,2020,Mujeres,75524,228140,33.104,5.663,154
+08,Chihuahua,Norte,2020,Hombres,75205,228140,32.965,5.585,154
+08,Chihuahua,Norte,2020,Total,150729,456280,33.034,3.975,308
+09,Ciudad de México,Centro,2020,Mujeres,283258,561810,50.419,3.647,413
+09,Ciudad de México,Centro,2020,Hombres,271338,561810,48.297,3.647,413
+09,Ciudad de México,Centro,2020,Total,554596,1123620,49.358,2.58,826
+10,Durango,Norte,2020,Mujeres,41889,111630,37.525,6.938,102
+10,Durango,Norte,2020,Hombres,38177,111630,34.2,6.84,102
+10,Durango,Norte,2020,Total,80066,223260,35.862,4.98,204
+11,Guanajuato,Centro-Occidente,2020,Mujeres,102278,376370,27.175,4.309,246
+11,Guanajuato,Centro-Occidente,2020,Hombres,107380,376370,28.53,4.228,246
+11,Guanajuato,Centro-Occidente,2020,Total,209658,752740,27.853,2.998,492
+12,Guerrero,Sur-Sureste,2020,Mujeres,49254,215940,22.809,4.683,160
+12,Guerrero,Sur-Sureste,2020,Hombres,35758,215940,16.559,4.516,160
+12,Guerrero,Sur-Sureste,2020,Total,85012,431880,19.684,3.297,320
+13,Hidalgo,Centro,2020,Mujeres,54844,187880,29.191,5.592,151
+13,Hidalgo,Centro,2020,Hombres,55658,187880,29.624,5.5,151
+13,Hidalgo,Centro,2020,Total,110502,375760,29.408,3.889,302
+14,Jalisco,Centro-Occidente,2020,Mujeres,209288,509350,41.089,3.964,333
+14,Jalisco,Centro-Occidente,2020,Hombres,185276,509350,36.375,3.929,333
+14,Jalisco,Centro-Occidente,2020,Total,394564,1018700,38.732,2.8,666
+15,Estado de México,Centro,2020,Mujeres,345214,1036390,33.309,2.611,728
+15,Estado de México,Centro,2020,Hombres,334838,1036390,32.308,2.576,728
+15,Estado de México,Centro,2020,Total,680052,2072780,32.809,1.825,1456
+16,Michoacán,Centro-Occidente,2020,Mujeres,70025,289750,24.168,4.25,225
+16,Michoacán,Centro-Occidente,2020,Hombres,61088,289750,21.083,4.139,225
+16,Michoacán,Centro-Occidente,2020,Total,131113,579500,22.625,2.926,450
+17,Morelos,Centro,2020,Mujeres,37624,120170,31.309,7.215,88
+17,Morelos,Centro,2020,Hombres,36030,120170,29.982,7.081,88
+17,Morelos,Centro,2020,Total,73654,240340,30.646,5.154,176
+18,Nayarit,Centro-Occidente,2020,Mujeres,19367,75640,25.604,8.312,62
+18,Nayarit,Centro-Occidente,2020,Hombres,19933,75640,26.352,8.122,62
+18,Nayarit,Centro-Occidente,2020,Total,39300,151280,25.978,5.841,124
+19,Nuevo León,Norte,2020,Mujeres,143158,352580,40.603,4.438,263
+19,Nuevo León,Norte,2020,Hombres,120753,352580,34.248,4.393,263
+19,Nuevo León,Norte,2020,Total,263911,705160,37.426,3.13,526
+20,Oaxaca,Sur-Sureste,2020,Mujeres,51278,251930,20.354,4.374,199
+20,Oaxaca,Sur-Sureste,2020,Hombres,53827,251930,21.366,4.243,199
+20,Oaxaca,Sur-Sureste,2020,Total,105105,503860,20.86,3.021,398
+21,Puebla,Centro,2020,Mujeres,101728,401380,25.345,4.094,252
+21,Puebla,Centro,2020,Hombres,101256,401380,25.227,3.998,252
+21,Puebla,Centro,2020,Total,202984,802760,25.286,2.872,504
+22,Querétaro,Centro,2020,Mujeres,45926,144570,31.767,6.349,125
+22,Querétaro,Centro,2020,Hombres,45268,144570,31.312,6.272,125
+22,Querétaro,Centro,2020,Total,91194,289140,31.54,4.359,250
+23,Quintana Roo,Sur-Sureste,2020,Mujeres,39281,113460,34.621,7.573,90
+23,Quintana Roo,Sur-Sureste,2020,Hombres,39153,113460,34.508,7.492,90
+23,Quintana Roo,Sur-Sureste,2020,Total,78434,226920,34.565,5.258,180
+24,San Luis Potosí,Centro-Occidente,2020,Mujeres,47143,172020,27.406,6.549,114
+24,San Luis Potosí,Centro-Occidente,2020,Hombres,56280,172020,32.717,6.455,114
+24,San Luis Potosí,Centro-Occidente,2020,Total,103423,344040,30.061,4.504,228
+25,Sinaloa,Norte,2020,Mujeres,67447,184830,36.492,5.759,151
+25,Sinaloa,Norte,2020,Hombres,65956,184830,35.685,5.687,151
+25,Sinaloa,Norte,2020,Total,133403,369660,36.088,4.099,302
+26,Sonora,Norte,2020,Mujeres,58103,179340,32.398,6.313,128
+26,Sonora,Norte,2020,Hombres,66231,179340,36.931,6.24,128
+26,Sonora,Norte,2020,Total,124334,358680,34.664,4.412,256
+27,Tabasco,Sur-Sureste,2020,Mujeres,41222,146400,28.157,6.267,115
+27,Tabasco,Sur-Sureste,2020,Hombres,38246,146400,26.124,6.144,115
+27,Tabasco,Sur-Sureste,2020,Total,79468,292800,27.141,4.349,230
+28,Tamaulipas,Norte,2020,Mujeres,77649,215330,36.06,5.985,136
+28,Tamaulipas,Norte,2020,Hombres,72831,215330,33.823,5.898,136
+28,Tamaulipas,Norte,2020,Total,150480,430660,34.942,4.288,272
+29,Tlaxcala,Centro,2020,Mujeres,22522,81740,27.554,7.934,69
+29,Tlaxcala,Centro,2020,Hombres,22770,81740,27.856,7.757,69
+29,Tlaxcala,Centro,2020,Total,45292,163480,27.705,5.651,138
+30,Veracruz,Sur-Sureste,2020,Mujeres,109114,491660,22.193,3.348,337
+30,Veracruz,Sur-Sureste,2020,Hombres,95121,491660,19.347,3.245,337
+30,Veracruz,Sur-Sureste,2020,Total,204235,983320,20.77,2.318,674
+31,Yucatán,Sur-Sureste,2020,Mujeres,49746,141520,35.151,6.833,106
+31,Yucatán,Sur-Sureste,2020,Hombres,44057,141520,31.131,6.74,106
+31,Yucatán,Sur-Sureste,2020,Total,93803,283040,33.141,4.795,212
+32,Zacatecas,Centro-Occidente,2020,Mujeres,31426,98820,31.802,7.637,75
+32,Zacatecas,Centro-Occidente,2020,Hombres,28312,98820,28.65,7.473,75
+32,Zacatecas,Centro-Occidente,2020,Total,59738,197640,30.226,5.562,150
+00,Nacional,Nacional,2020,Mujeres,2475312,7686000,32.205,0.925,5618
+00,Nacional,Nacional,2020,Hombres,2372077,7686000,30.862,0.914,5618
+00,Nacional,Nacional,2020,Total,4847389,15372000,31.534,0.65,11236
+01,Aguascalientes,Centro-Occidente,2022,Mujeres,28792,87928,32.745,8.498,71
+01,Aguascalientes,Centro-Occidente,2022,Hombres,31091,87928,35.359,8.402,71
+01,Aguascalientes,Centro-Occidente,2022,Total,59883,175856,34.052,5.898,142
+02,Baja California,Norte,2022,Mujeres,105657,231810,45.579,6.004,151
+02,Baja California,Norte,2022,Hombres,97236,231810,41.946,5.975,151
+02,Baja California,Norte,2022,Total,202893,463620,43.763,4.234,302
+03,Baja California Sur,Norte,2022,Mujeres,17979,49190,36.55,10.746,45
+03,Baja California Sur,Norte,2022,Hombres,16280,49190,33.096,10.633,45
+03,Baja California Sur,Norte,2022,Total,34259,98380,34.823,7.449,90
+04,Campeche,Sur-Sureste,2022,Mujeres,16904,57184,29.561,9.545,52
+04,Campeche,Sur-Sureste,2022,Hombres,15042,57184,26.305,9.39,52
+04,Campeche,Sur-Sureste,2022,Total,31946,114368,27.933,6.526,104
+05,Coahuila,Norte,2022,Mujeres,89843,193687,46.386,5.996,152
+05,Coahuila,Norte,2022,Hombres,88054,193687,45.462,5.976,152
+05,Coahuila,Norte,2022,Total,177897,387374,45.924,4.239,304
+06,Colima,Centro-Occidente,2022,Mujeres,16648,44886,37.089,9.65,53
+06,Colima,Centro-Occidente,2022,Hombres,14963,44886,33.336,9.514,53
+06,Colima,Centro-Occidente,2022,Total,31611,89772,35.213,6.881,106
+07,Chiapas,Sur-Sureste,2022,Mujeres,68768,340644,20.188,4.061,200
+07,Chiapas,Sur-Sureste,2022,Hombres,52143,340644,15.307,3.898,200
+07,Chiapas,Sur-Sureste,2022,Total,120911,681288,17.747,2.834,400
+08,Chihuahua,Norte,2022,Mujeres,81448,229965,35.418,6.031,140
+08,Chihuahua,Norte,2022,Hombres,74178,229965,32.256,5.963,140
+08,Chihuahua,Norte,2022,Total,155626,459930,33.837,4.194,280
+09,Ciudad de México,Centro,2022,Mujeres,298783,566304,52.76,3.828,373
+09,Ciudad de México,Centro,2022,Hombres,299920,566304,52.961,3.835,373
+09,Ciudad de México,Centro,2022,Total,598703,1132608,52.861,2.711,746
+10,Durango,Norte,2022,Mujeres,43693,112523,38.83,7.172,99
+10,Durango,Norte,2022,Hombres,37622,112523,33.435,7.089,99
+10,Durango,Norte,2022,Total,81315,225046,36.133,5.064,198
+11,Guanajuato,Centro-Occidente,2022,Mujeres,114837,379381,30.269,4.585,228
+11,Guanajuato,Centro-Occidente,2022,Hombres,116900,379381,30.813,4.513,228
+11,Guanajuato,Centro-Occidente,2022,Total,231737,758762,30.541,3.199,456
+12,Guerrero,Sur-Sureste,2022,Mujeres,42803,217668,19.664,5.065,150
+12,Guerrero,Sur-Sureste,2022,Hombres,45567,217668,20.934,4.914,150
+12,Guerrero,Sur-Sureste,2022,Total,88370,435336,20.299,3.444,300
+13,Hidalgo,Centro,2022,Mujeres,62181,189383,32.833,6.009,137
+13,Hidalgo,Centro,2022,Hombres,57825,189383,30.533,5.926,137
+13,Hidalgo,Centro,2022,Total,120006,378766,31.683,4.169,274
+14,Jalisco,Centro-Occidente,2022,Mujeres,204302,513425,39.792,4.25,296
+14,Jalisco,Centro-Occidente,2022,Hombres,197714,513425,38.509,4.221,296
+14,Jalisco,Centro-Occidente,2022,Total,402016,1026850,39.15,2.975,592
+15,Estado de México,Centro,2022,Mujeres,361564,1044681,34.61,2.984,575
+15,Estado de México,Centro,2022,Hombres,366221,1044681,35.056,2.952,575
+15,Estado de México,Centro,2022,Total,727785,2089362,34.833,2.084,1150
+16,Michoacán,Centro-Occidente,2022,Mujeres,86809,292068,29.722,4.695,197
+16,Michoacán,Centro-Occidente,2022,Hombres,76428,292068,26.168,4.592,197
+16,Michoacán,Centro-Occidente,2022,Total,163237,584136,27.945,3.353,394
+17,Morelos,Centro,2022,Mujeres,39041,121131,32.23,6.896,101
+17,Morelos,Centro,2022,Hombres,37795,121131,31.202,6.789,101
+17,Morelos,Centro,2022,Total,76836,242262,31.716,4.857,202
+18,Nayarit,Centro-Occidente,2022,Mujeres,20980,76245,27.517,8.108,69
+18,Nayarit,Centro-Occidente,2022,Hombres,20504,76245,26.892,7.952,69
+18,Nayarit,Centro-Occidente,2022,Total,41484,152490,27.204,5.619,138
+19,Nuevo León,Norte,2022,Mujeres,145908,355401,41.055,5.081,205
+19,Nuevo León,Norte,2022,Hombres,139822,355401,39.342,5.041,205
+19,Nuevo León,Norte,2022,Total,285730,710802,40.198,3.592,410
+20,Oaxaca,Sur-Sureste,2022,Mujeres,61553,253945,24.239,4.514,202
+20,Oaxaca,Sur-Sureste,2022,Hombres,56746,253945,22.346,4.4,202
+20,Oaxaca,Sur-Sureste,2022,Total,118299,507890,23.292,3.119,404
+21,Puebla,Centro,2022,Mujeres,109819,404591,27.143,3.982,283
+21,Puebla,Centro,2022,Hombres,112052,404591,27.695,3.903,283
+21,Puebla,Centro,2022,Total,221871,809182,27.419,2.781,566
+22,Querétaro,Centro,2022,Mujeres,60333,145727,41.402,7.428,94
+22,Querétaro,Centro,2022,Hombres,53326,145727,36.593,7.356,94
+22,Querétaro,Centro,2022,Total,113659,291454,38.997,5.276,188
+23,Quintana Roo,Sur-Sureste,2022,Mujeres,46749,114368,40.876,8.202,78
+23,Quintana Roo,Sur-Sureste,2022,Hombres,40877,114368,35.741,8.133,78
+23,Quintana Roo,Sur-Sureste,2022,Total,87626,228736,38.309,5.773,156
+24,San Luis Potosí,Centro-Occidente,2022,Mujeres,60499,173396,34.891,6.11,136
+24,San Luis Potosí,Centro-Occidente,2022,Hombres,54509,173396,31.436,6.038,136
+24,San Luis Potosí,Centro-Occidente,2022,Total,115008,346792,33.163,4.234,272
+25,Sinaloa,Norte,2022,Mujeres,72237,186309,38.773,6.057,141
+25,Sinaloa,Norte,2022,Hombres,63708,186309,34.195,5.996,141
+25,Sinaloa,Norte,2022,Total,135945,372618,36.484,4.252,282
+26,Sonora,Norte,2022,Mujeres,76227,180775,42.167,6.088,141
+26,Sonora,Norte,2022,Hombres,67051,180775,37.091,6.032,141
+26,Sonora,Norte,2022,Total,143278,361550,39.629,4.32,282
+27,Tabasco,Sur-Sureste,2022,Mujeres,37446,147571,25.375,7.035,96
+27,Tabasco,Sur-Sureste,2022,Hombres,43491,147571,29.471,6.919,96
+27,Tabasco,Sur-Sureste,2022,Total,80937,295142,27.423,4.775,192
+28,Tamaulipas,Norte,2022,Mujeres,73352,217053,33.795,5.51,166
+28,Tamaulipas,Norte,2022,Hombres,76723,217053,35.348,5.443,166
+28,Tamaulipas,Norte,2022,Total,150075,434106,34.571,3.872,332
+29,Tlaxcala,Centro,2022,Mujeres,22671,82394,27.516,7.992,72
+29,Tlaxcala,Centro,2022,Hombres,23723,82394,28.792,7.842,72
+29,Tlaxcala,Centro,2022,Total,46394,164788,28.154,5.559,144
+30,Veracruz,Sur-Sureste,2022,Mujeres,124684,495593,25.158,3.764,288
+30,Veracruz,Sur-Sureste,2022,Hombres,113929,495593,22.988,3.666,288
+30,Veracruz,Sur-Sureste,2022,Total,238613,991186,24.073,2.642,576
+31,Yucatán,Sur-Sureste,2022,Mujeres,45050,142652,31.58,7.135,100
+31,Yucatán,Sur-Sureste,2022,Hombres,48422,142652,33.944,7.055,100
+31,Yucatán,Sur-Sureste,2022,Total,93472,285304,32.762,4.923,200
+32,Zacatecas,Centro-Occidente,2022,Mujeres,32170,99611,32.296,7.489,83
+32,Zacatecas,Centro-Occidente,2022,Hombres,28592,99611,28.704,7.355,83
+32,Zacatecas,Centro-Occidente,2022,Total,60762,199222,30.5,5.3,166
+00,Nacional,Nacional,2022,Mujeres,2669730,7747489,34.459,0.98,5174
+00,Nacional,Nacional,2022,Hombres,2568454,7747489,33.152,0.971,5174
+00,Nacional,Nacional,2022,Total,5238184,15494978,33.806,0.69,10348
+01,Aguascalientes,Centro-Occidente,2024,Mujeres,32541,88626,36.718,8.67,68
+01,Aguascalientes,Centro-Occidente,2024,Hombres,29996,88626,33.846,8.576,68
+01,Aguascalientes,Centro-Occidente,2024,Total,62537,177252,35.281,6.078,136
+02,Baja California,Norte,2024,Mujeres,107569,233650,46.039,6.166,143
+02,Baja California,Norte,2024,Hombres,88034,233650,37.678,6.139,143
+02,Baja California,Norte,2024,Total,195603,467300,41.858,4.327,286
+03,Baja California Sur,Norte,2024,Mujeres,20096,49581,40.531,10.617,46
+03,Baja California Sur,Norte,2024,Hombres,17540,49581,35.376,10.51,46
+03,Baja California Sur,Norte,2024,Total,37636,99162,37.954,7.504,92
+04,Campeche,Sur-Sureste,2024,Mujeres,21113,57638,36.631,9.092,58
+04,Campeche,Sur-Sureste,2024,Hombres,16703,57638,28.978,8.951,58
+04,Campeche,Sur-Sureste,2024,Total,37816,115276,32.805,6.466,116
+05,Coahuila,Norte,2024,Mujeres,89865,195224,46.032,6.013,152
+05,Coahuila,Norte,2024,Hombres,82777,195224,42.401,5.996,152
+05,Coahuila,Norte,2024,Total,172642,390448,44.216,4.225,304
+06,Colima,Centro-Occidente,2024,Mujeres,13760,45242,30.413,10.009,49
+06,Colima,Centro-Occidente,2024,Hombres,14178,45242,31.337,9.874,49
+06,Colima,Centro-Occidente,2024,Total,27938,90484,30.876,6.922,98
+07,Chiapas,Sur-Sureste,2024,Mujeres,65001,343347,18.932,4.12,199
+07,Chiapas,Sur-Sureste,2024,Hombres,64487,343347,18.782,3.962,199
+07,Chiapas,Sur-Sureste,2024,Total,129488,686694,18.857,2.908,398
+08,Chihuahua,Norte,2024,Mujeres,86777,231790,37.438,5.276,184
+08,Chihuahua,Norte,2024,Hombres,84560,231790,36.481,5.219,184
+08,Chihuahua,Norte,2024,Total,171337,463580,36.96,3.732,368
+09,Ciudad de México,Centro,2024,Mujeres,309119,570799,54.156,3.729,393
+09,Ciudad de México,Centro,2024,Hombres,293455,570799,51.411,3.738,393
+09,Ciudad de México,Centro,2024,Total,602574,1141598,52.783,2.641,786
+10,Durango,Norte,2024,Mujeres,42957,113416,37.875,7.507,91
+10,Durango,Norte,2024,Hombres,40827,113416,35.998,7.425,91
+10,Durango,Norte,2024,Total,83784,226832,36.937,5.306,182
+11,Guanajuato,Centro-Occidente,2024,Mujeres,132261,382392,34.588,4.706,218
+11,Guanajuato,Centro-Occidente,2024,Hombres,122424,382392,32.015,4.635,218
+11,Guanajuato,Centro-Occidente,2024,Total,254685,764784,33.302,3.348,436
+12,Guerrero,Sur-Sureste,2024,Mujeres,55847,219395,25.455,5.09,151
+12,Guerrero,Sur-Sureste,2024,Hombres,46178,219395,21.048,4.944,151
+12,Guerrero,Sur-Sureste,2024,Total,102025,438790,23.251,3.606,302
+13,Hidalgo,Centro,2024,Mujeres,71290,190886,37.347,6.302,125
+13,Hidalgo,Centro,2024,Hombres,57627,190886,30.189,6.22,125
+13,Hidalgo,Centro,2024,Total,128917,381772,33.768,4.436,250
+14,Jalisco,Centro-Occidente,2024,Mujeres,206897,517500,39.98,4.224,301
+14,Jalisco,Centro-Occidente,2024,Hombres,215432,517500,41.629,4.197,301
+14,Jalisco,Centro-Occidente,2024,Total,422329,1035000,40.805,2.971,602
+15,Estado de México,Centro,2024,Mujeres,397652,1052972,37.765,2.938,597
+15,Estado de México,Centro,2024,Hombres,360801,1052972,34.265,2.908,597
+15,Estado de México,Centro,2024,Total,758453,2105944,36.015,2.061,1194
+16,Michoacán,Centro-Occidente,2024,Mujeres,83017,294386,28.2,4.412,226
+16,Michoacán,Centro-Occidente,2024,Hombres,77562,294386,26.347,4.319,226
+16,Michoacán,Centro-Occidente,2024,Total,160579,588772,27.274,3.107,452
+17,Morelos,Centro,2024,Mujeres,41498,122093,33.989,7.111,96
+17,Morelos,Centro,2024,Hombres,37647,122093,30.835,7.005,96
+17,Morelos,Centro,2024,Total,79145,244186,32.412,5.01,192
+18,Nayarit,Centro-Occidente,2024,Mujeres,24719,76850,32.166,8.824,59
+18,Nayarit,Centro-Occidente,2024,Hombres,20727,76850,26.97,8.661,59
+18,Nayarit,Centro-Occidente,2024,Total,45446,153700,29.568,6.231,118
+19,Nuevo León,Norte,2024,Mujeres,150220,358221,41.935,4.416,273
+19,Nuevo León,Norte,2024,Hombres,133165,358221,37.174,4.384,273
+19,Nuevo León,Norte,2024,Total,283385,716442,39.554,3.104,546
+20,Oaxaca,Sur-Sureste,2024,Mujeres,68939,255961,26.933,5.241,152
+20,Oaxaca,Sur-Sureste,2024,Hombres,61173,255961,23.899,5.114,152
+20,Oaxaca,Sur-Sureste,2024,Total,130112,511922,25.416,3.704,304
+21,Puebla,Centro,2024,Mujeres,119203,407802,29.231,3.931,294
+21,Puebla,Centro,2024,Hombres,102556,407802,25.149,3.856,294
+21,Puebla,Centro,2024,Total,221759,815604,27.19,2.722,588
+22,Querétaro,Centro,2024,Mujeres,54668,146883,37.218,7.298,98
+22,Querétaro,Centro,2024,Hombres,55499,146883,37.785,7.232,98
+22,Querétaro,Centro,2024,Total,110167,293766,37.502,5.129,196
+23,Quintana Roo,Sur-Sureste,2024,Mujeres,41173,115275,35.717,7.176,103
+23,Quintana Roo,Sur-Sureste,2024,Hombres,44833,115275,38.892,7.12,103
+23,Quintana Roo,Sur-Sureste,2024,Total,86006,230550,37.305,4.998,206
+24,San Luis Potosí,Centro-Occidente,2024,Mujeres,61501,174772,35.189,6.235,131
+24,San Luis Potosí,Centro-Occidente,2024,Hombres,56449,174772,32.299,6.165,131
+24,San Luis Potosí,Centro-Occidente,2024,Total,117950,349544,33.744,4.333,262
+25,Sinaloa,Norte,2024,Mujeres,71096,187787,37.86,6.131,138
+25,Sinaloa,Norte,2024,Hombres,68172,187787,36.303,6.073,138
+25,Sinaloa,Norte,2024,Total,139268,375574,37.081,4.312,276
+26,Sonora,Norte,2024,Mujeres,67914,182209,37.272,6.631,119
+26,Sonora,Norte,2024,Hombres,66195,182209,36.329,6.574,119
+26,Sonora,Norte,2024,Total,134109,364418,36.801,4.637,238
+27,Tabasco,Sur-Sureste,2024,Mujeres,48040,148742,32.297,6.776,104
+27,Tabasco,Sur-Sureste,2024,Hombres,41327,148742,27.784,6.669,104
+27,Tabasco,Sur-Sureste,2024,Total,89367,297484,30.041,4.715,208
+28,Tamaulipas,Norte,2024,Mujeres,75781,218775,34.639,6.01,141
+28,Tamaulipas,Norte,2024,Hombres,81355,218775,37.186,5.94,141
+28,Tamaulipas,Norte,2024,Total,157136,437550,35.913,4.237,282
+29,Tlaxcala,Centro,2024,Mujeres,26155,83048,31.494,8.369,66
+29,Tlaxcala,Centro,2024,Hombres,25778,83048,31.04,8.218,66
+29,Tlaxcala,Centro,2024,Total,51933,166096,31.267,5.985,132
+30,Veracruz,Sur-Sureste,2024,Mujeres,134893,499527,27.004,3.608,319
+30,Veracruz,Sur-Sureste,2024,Hombres,121750,499527,24.373,3.519,319
+30,Veracruz,Sur-Sureste,2024,Total,256643,999054,25.689,2.566,638
+31,Yucatán,Sur-Sureste,2024,Mujeres,56740,143784,39.462,6.707,114
+31,Yucatán,Sur-Sureste,2024,Hombres,39684,143784,27.6,6.636,114
+31,Yucatán,Sur-Sureste,2024,Total,96424,287568,33.531,4.637,228
+32,Zacatecas,Centro-Occidente,2024,Mujeres,25483,100401,25.381,7.437,85
+32,Zacatecas,Centro-Occidente,2024,Hombres,27160,100401,27.052,7.309,85
+32,Zacatecas,Centro-Occidente,2024,Total,52643,200802,26.216,5.003,170
+00,Nacional,Nacional,2024,Mujeres,2803785,7808974,35.905,0.978,5293
+00,Nacional,Nacional,2024,Hombres,2596051,7808974,33.244,0.96,5293
+00,Nacional,Nacional,2024,Total,5399836,15617948,34.575,0.686,10586

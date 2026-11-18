@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Estilos del calendario, el mosaico de mini-series, el icicle y las franjas
+   de tiempo (src/components/formas/calendario.js, mosaico-series.js,
+   icicle.js y franjas-tiempo.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella; aquí solo van el foco de teclado, el realce al pasar el puntero, el
+   acomodo de la leyenda y la entrada, que cambia SOLO la opacidad (R167).
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-gD.css">
+   ========================================================================== */
+
+/* Calendario: el mes es la parada de teclado; el día, la marca. */
+.calendario .cal-mes { outline: none; }
+.calendario .cal-mes:focus-visible > .cal-marco { stroke: var(--tinta); stroke-width: 2px; }
+.calendario .cal-dia.marca-viva:hover { stroke: var(--tinta); stroke-width: 1.8px; }
+
+/* Mosaico de mini-series: la casilla entera es una marca. El contorno va en
+   el fondo de la casilla, no en las líneas ni en los textos de adentro. */
+.ms-celda.marca-viva:hover, .ms-celda.marca-viva:focus-visible { stroke: none; }
+.ms-celda:hover > .ms-fondo, .ms-celda:focus-visible > .ms-fondo { stroke: var(--tinta); stroke-width: 1.6px; }
+.ms-clave { flex-basis: 100%; font: 0.8rem/1.4 var(--sans-serif); color: var(--tinta-2); }
+
+/* Icicle: el contorno va en el bloque, no en sus rótulos. */
+.ic-bloque.marca-viva:hover, .ic-bloque.marca-viva:focus-visible { stroke: none; }
+.ic-bloque:hover > rect, .ic-bloque:focus-visible > rect { stroke: var(--tinta); stroke-width: 2px; }
+
+/* Franjas de tiempo: la franja y la línea de valores van pegadas. */
+.franjas-tiempo { gap: 0.15rem; }
+.franjas-tiempo > .leyenda-continua, .franjas-tiempo > .leyenda-items { margin-bottom: 0.35rem; }
+
+/* Entrada: UNA vez, al dibujarse la sección por primera vez, con el mismo
+   interruptor de src/estilo.css (`.en-vista` y todavía no `.animada`, 1.2 s).
+   Solo opacidad: nada de transform ni de posición. */
+@keyframes gd-aparecer { from { opacity: 0; } to { opacity: 1; } }
+.seccion-cuerpo.en-vista:not(.animada) .ms-celda,
+.seccion-cuerpo.en-vista:not(.animada) .ic-bloque { animation: gd-aparecer 0.4s ease both; animation-delay: calc(0.05s + var(--i, 0) * 18ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) .ms-celda,
+  .seccion-cuerpo.en-vista:not(.animada) .ic-bloque { animation: none; }
+}

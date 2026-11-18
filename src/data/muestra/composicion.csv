@@ -1,0 +1,101 @@
+region,anio,categoria,personas
+Centro-Occidente,2000,Categoría A,369811
+Centro-Occidente,2000,Categoría B,202236
+Centro-Occidente,2000,Categoría C,110136
+Centro-Occidente,2000,Otras,97817
+Centro-Occidente,2005,Categoría A,369557
+Centro-Occidente,2005,Categoría B,269514
+Centro-Occidente,2005,Categoría C,106924
+Centro-Occidente,2005,Otras,80805
+Centro-Occidente,2010,Categoría A,360695
+Centro-Occidente,2010,Categoría B,357941
+Centro-Occidente,2010,Categoría C,99945
+Centro-Occidente,2010,Otras,55019
+Centro-Occidente,2015,Categoría A,338155
+Centro-Occidente,2015,Categoría B,475025
+Centro-Occidente,2015,Categoría C,87213
+Centro-Occidente,2015,Otras,20007
+Centro-Occidente,2020,Categoría A,280343
+Centro-Occidente,2020,Categoría B,601037
+Centro-Occidente,2020,Categoría C,62662
+Centro-Occidente,2020,Otras,23158
+Norte,2000,Categoría A,1114148
+Norte,2000,Categoría B,729500
+Norte,2000,Categoría C,239955
+Norte,2000,Otras,238397
+Norte,2005,Categoría A,1263849
+Norte,2005,Categoría B,690283
+Norte,2005,Categoría C,257877
+Norte,2005,Otras,249311
+Norte,2010,Categoría A,1418263
+Norte,2010,Categoría B,646346
+Norte,2010,Categoría C,275999
+Norte,2010,Otras,260032
+Norte,2015,Categoría A,1577021
+Norte,2015,Categoría B,598057
+Norte,2015,Categoría C,294306
+Norte,2015,Otras,270575
+Norte,2020,Categoría A,1739795
+Norte,2020,Categoría B,545746
+Norte,2020,Categoría C,312784
+Norte,2020,Otras,280954
+Sur-Sureste,2000,Categoría A,555185
+Sur-Sureste,2000,Categoría B,1016719
+Sur-Sureste,2000,Categoría C,334960
+Sur-Sureste,2000,Otras,188136
+Sur-Sureste,2005,Categoría A,594611
+Sur-Sureste,2005,Categoría B,1206612
+Sur-Sureste,2005,Categoría C,253995
+Sur-Sureste,2005,Otras,165481
+Sur-Sureste,2010,Categoría A,633901
+Sur-Sureste,2010,Categoría B,1393634
+Sur-Sureste,2010,Categoría C,175282
+Sur-Sureste,2010,Otras,143583
+Sur-Sureste,2015,Categoría A,673079
+Sur-Sureste,2015,Categoría B,1578303
+Sur-Sureste,2015,Categoría C,98413
+Sur-Sureste,2015,Otras,122304
+Sur-Sureste,2020,Categoría A,709820
+Sur-Sureste,2020,Categoría B,1755222
+Sur-Sureste,2020,Categoría C,31552
+Sur-Sureste,2020,Otras,101205
+Centro,2000,Categoría A,276304
+Centro,2000,Categoría B,264829
+Centro,2000,Categoría C,355559
+Centro,2000,Otras,88307
+Centro,2005,Categoría A,258742
+Centro,2005,Categoría B,249616
+Centro,2005,Categoría C,450102
+Centro,2005,Otras,85640
+Centro,2010,Categoría A,239592
+Centro,2010,Categoría B,232956
+Centro,2010,Categoría C,548049
+Centro,2010,Otras,82603
+Centro,2015,Categoría A,219001
+Centro,2015,Categoría B,214984
+Centro,2015,Categoría C,649086
+Centro,2015,Otras,79229
+Centro,2020,Categoría A,197097
+Centro,2020,Categoría B,195815
+Centro,2020,Categoría C,752938
+Centro,2020,Otras,75550
+Nacional,2000,Categoría A,558385
+Nacional,2000,Categoría B,359308
+Nacional,2000,Categoría C,208477
+Nacional,2000,Otras,82829
+Nacional,2005,Categoría A,594902
+Nacional,2005,Categoría B,398987
+Nacional,2005,Categoría C,205020
+Nacional,2005,Otras,82630
+Nacional,2010,Categoría A,631609
+Nacional,2010,Categoría B,439803
+Nacional,2010,Categoría C,200561
+Nacional,2010,Otras,82107
+Nacional,2015,Categoría A,668492
+Nacional,2015,Categoría B,481678
+Nacional,2015,Categoría C,195169
+Nacional,2015,Otras,81281
+Nacional,2020,Categoría A,705539
+Nacional,2020,Categoría B,524539
+Nacional,2020,Categoría C,188908
+Nacional,2020,Otras,80174

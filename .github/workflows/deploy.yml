@@ -1,0 +1,58 @@
+# Despliegue a GitHub Pages.
+#
+# El sitio se construye en el runner con `npm run build` y se publica dist/.
+# No corre ningún data loader: los datos van versionados en src/data/. La
+# ruta base (/<repo>/) la resuelve observablehq.config.js leyendo
+# GITHUB_REPOSITORY.
+#
+# Requisito de una sola vez en GitHub: Settings → Pages → Source = "GitHub
+# Actions".
+
+name: Publicar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Las paletas se validan en cada publicación: no necesita navegador.
+      - run: npm run verificar:paleta
+      # La imagen Open Graph se referencia por URL absoluta: Framework no la
+      # copia a dist/ porque ninguna página la usa en un href o src. Se copia
+      # todo archivo og-*.png, para que cambiar su nombre no rompa este paso.
+      - run: mkdir -p dist/images && cp src/images/og-*.png dist/images/
+      # Sin Jekyll: Pages ignora las carpetas con guion bajo de Framework.
+      - run: touch dist/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

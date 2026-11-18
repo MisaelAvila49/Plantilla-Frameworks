@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Estilos de las formas de territorio y flujo: flechas de cambio, semitonos,
+   silueta de puntos y barra al mapa (src/components/formas/flechas-cambio.js,
+   semitonos.js, silueta-puntos.js y barra-mapa.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella. Aquí solo van la entrada animada, el realce al pasar el puntero y el
+   acomodo de las leyendas.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-territorio.css">
+   ========================================================================== */
+
+/* ------------------------------------------------------------- leyendas */
+.fc-leyenda, .st-leyenda { align-items: flex-end; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
+.fc-leyenda-titulo, .st-leyenda-titulo { flex-basis: 100%; font: 600 0.84rem var(--sans-serif); color: var(--tinta-2); }
+.fc-llave { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+.st-leyenda svg { overflow: visible; }
+.st-leyenda-nota, .bm-nota { font: 0.82rem/1.35 var(--sans-serif); color: var(--tinta-2); padding-bottom: 0.2rem; }
+
+/* --------------------------------------------- realce al pasar o enfocar */
+/* Flechas: la flecha bajo el puntero gana un contorno delgado. */
+.flechas-cambio .fc-flecha.marca-viva:hover, .flechas-cambio .fc-flecha.marca-viva:focus-visible,
+.flechas-cambio .fc-punto.marca-viva:hover, .flechas-cambio .fc-punto.marca-viva:focus-visible { stroke: none; }
+.flechas-cambio .fc-flecha:hover .fc-trazo, .flechas-cambio .fc-flecha:focus-visible .fc-trazo { stroke: var(--tinta); stroke-width: 0.9px; fill-opacity: 1; }
+.flechas-cambio .fc-punto:hover circle:last-child { stroke: var(--tinta); stroke-width: 1px; }
+
+/* Silueta: la franja elegida se queda y las demás se apagan. */
+.silueta-puntos .sp-franja.marca-viva:hover, .silueta-puntos .sp-franja.marca-viva:focus-visible { stroke: none; }
+.silueta-puntos:has(.sp-franja:hover) .sp-franja:not(:hover),
+.silueta-puntos:has(.sp-franja:focus-visible) .sp-franja:not(:focus-visible) { opacity: 0.3; }
+.silueta-puntos .sp-franja { transition: opacity 0.15s ease; }
+
+/* Barra al mapa: la cinta elegida se queda y las demás bajan. */
+.barra-mapa:has(.bm-cinta:hover) .bm-cinta:not(:hover) { opacity: 0.5; }
+.barra-mapa .bm-cinta, .barra-mapa .bm-resto { transition: opacity 0.15s ease; }
+.barra-mapa .bm-tramo.marca-viva:hover, .barra-mapa .bm-tramo.marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 1.6px; }
+
+/* ---------------------------------------------------------- la entrada */
+/* UNA vez, al dibujarse la sección por primera vez: mismo interruptor que
+   src/estilo.css (la sección está `.en-vista` y todavía no `.animada`, 1.2 s).
+   Un repintado por filtro ya no anima. Todas terminan antes de ese plazo.
+   Sin bucles. */
+@keyframes ter-crecer { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes ter-ancho { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes ter-aparecer { from { opacity: 0; } to { opacity: 1; } }
+
+/* Flechas: crecen desde su cola, en barrido de oeste a este. */
+.flechas-cambio .fc-flecha { transform-box: fill-box; }
+.flechas-cambio .fc-der { transform-origin: 0% 100%; }
+.flechas-cambio .fc-izq { transform-origin: 100% 100%; }
+.seccion-cuerpo.en-vista:not(.animada) .fc-flecha { animation: ter-crecer 0.42s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(0.1s + var(--i, 0) * 18ms); }
+.seccion-cuerpo.en-vista:not(.animada) .fc-punto { animation: ter-aparecer 0.4s ease both; animation-delay: calc(0.1s + var(--i, 0) * 18ms); }
+
+/* Semitonos y silueta: cada punto se infla, en barrido. */
+.semitonos .st-punto, .silueta-puntos .sp-punto { transform-box: fill-box; transform-origin: 50% 50%; }
+.seccion-cuerpo.en-vista:not(.animada) .st-punto { animation: ter-crecer 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(0.05s + var(--i, 0) * 20ms); }
+.seccion-cuerpo.en-vista:not(.animada) .sp-punto { animation: ter-crecer 0.38s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(0.05s + var(--i, 0) * 20ms); }
+
+/* Barra al mapa: la barra se extiende, luego bajan las cintas y aterrizan. */
+.barra-mapa .bm-tramo { transform-box: fill-box; transform-origin: 0% 50%; }
+.seccion-cuerpo.en-vista:not(.animada) .bm-tramo { animation: ter-ancho 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: 0.05s; }
+.seccion-cuerpo.en-vista:not(.animada) .bm-cinta,
+.seccion-cuerpo.en-vista:not(.animada) .bm-resto { animation: ter-aparecer 0.35s ease both; animation-delay: calc(0.35s + var(--i, 0) * 14ms); }
+.seccion-cuerpo.en-vista:not(.animada) .bm-aterriza { animation: ter-aparecer 0.3s ease both; animation-delay: 0.8s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) .fc-flecha,
+  .seccion-cuerpo.en-vista:not(.animada) .fc-punto,
+  .seccion-cuerpo.en-vista:not(.animada) .st-punto,
+  .seccion-cuerpo.en-vista:not(.animada) .sp-punto,
+  .seccion-cuerpo.en-vista:not(.animada) .bm-tramo,
+  .seccion-cuerpo.en-vista:not(.animada) .bm-cinta,
+  .seccion-cuerpo.en-vista:not(.animada) .bm-resto,
+  .seccion-cuerpo.en-vista:not(.animada) .bm-aterriza { animation: none; }
+  .silueta-puntos .sp-franja, .barra-mapa .bm-cinta, .barra-mapa .bm-resto { transition: none; }
+}

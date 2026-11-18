@@ -1,0 +1,29 @@
+# Plantilla de cita. Enciende el botón «Cite this repository» de GitHub y
+# alimenta los metadatos de Zenodo. Los valores tienen que coincidir con el
+# bloque LIBRO de observablehq.config.js: título, autores, año y, sobre todo,
+# `abstract`, que es el MISMO párrafo que LIBRO.descripcion.
+cff-version: 1.2.0
+message: "Si usas esta plataforma, cítala con los datos de este archivo."
+title: "Plantilla de libro de datos"
+type: dataset
+authors:
+  - family-names: "Apellido Apellido"
+    given-names: "Nombre"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Social Data IBERO, Universidad Iberoamericana"
+    email: "correo@ibero.mx"
+  - family-names: "Segundo Autor"
+    given-names: "Nombre"
+    affiliation: "Social Data IBERO, Universidad Iberoamericana"
+date-released: "2026-01-01"
+version: "0.1.0"
+# doi: "10.5281/zenodo.0000000"   # se emite al publicar un release con el repo activado en Zenodo
+# license: "CC-BY-4.0"            # cuando se defina
+keywords:
+  - libro de datos
+  - Observable Framework
+abstract: >-
+  Esta plantilla reúne la estructura, los componentes y las formas de gráfica
+  con que se construyen los libros de datos de Social Data IBERO. Todas las
+  cifras que muestra son datos de muestra generados con una semilla fija; se
+  sustituyen por los datos del libro.

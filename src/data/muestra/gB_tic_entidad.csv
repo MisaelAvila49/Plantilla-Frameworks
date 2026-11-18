@@ -1,0 +1,661 @@
+cve_ent,entidad,region,anio,indicador,num,den,pct,ee,casos
+00,Nacional,Nacional,2016,Internet,15755690,33320000,47.286,0.276,71799
+01,Aguascalientes,Centro-Occidente,2016,Internet,201232,378156,53.214,1.604,2130
+02,Baja California,Norte,2016,Internet,554881,996956,55.658,1.692,1886
+03,Baja California Sur,Norte,2016,Internet,119364,211556,56.422,1.578,2172
+04,Campeche,Sur-Sureste,2016,Internet,106113,245933,43.147,1.6,2111
+05,Coahuila,Norte,2016,Internet,433661,833000,52.06,1.763,1766
+06,Colima,Centro-Occidente,2016,Internet,96896,193044,50.194,1.443,2642
+07,Chiapas,Sur-Sureste,2016,Internet,443412,1465022,30.267,1.698,1621
+08,Chihuahua,Norte,2016,Internet,500870,989022,50.643,1.375,2908
+09,Ciudad de México,Centro,2016,Internet,1503640,2435533,61.738,1.502,2324
+10,Durango,Norte,2016,Internet,227712,483933,47.054,1.526,2353
+11,Guanajuato,Centro-Occidente,2016,Internet,728336,1631622,44.639,1.366,2921
+12,Guerrero,Sur-Sureste,2016,Internet,334651,936133,35.748,1.686,1788
+13,Hidalgo,Centro,2016,Internet,342000,814489,41.99,1.538,2268
+14,Jalisco,Centro-Occidente,2016,Internet,1126706,2208111,51.026,1.564,2250
+15,Estado de México,Centro,2016,Internet,2224987,4492911,49.522,1.425,2709
+16,Michoacán,Centro-Occidente,2016,Internet,559294,1256111,44.526,1.376,2866
+17,Morelos,Centro,2016,Internet,241761,520956,46.407,1.464,2559
+18,Nayarit,Centro-Occidente,2016,Internet,132037,327911,40.266,1.8,1643
+19,Nuevo León,Norte,2016,Internet,820341,1528489,53.67,1.708,1877
+20,Oaxaca,Sur-Sureste,2016,Internet,351652,1092156,32.198,1.393,2486
+21,Puebla,Centro,2016,Internet,738519,1740044,42.443,1.328,3032
+22,Querétaro,Centro,2016,Internet,314212,626733,50.135,1.795,1706
+23,Quintana Roo,Sur-Sureste,2016,Internet,268448,491867,54.577,1.493,2446
+24,San Luis Potosí,Centro-Occidente,2016,Internet,302086,745733,40.509,1.57,2144
+25,Sinaloa,Norte,2016,Internet,422365,801267,52.712,1.376,2899
+26,Sonora,Norte,2016,Internet,415499,777467,53.443,1.448,2604
+27,Tabasco,Sur-Sureste,2016,Internet,284816,634667,44.877,1.668,1962
+28,Tamaulipas,Norte,2016,Internet,460126,933489,49.291,1.44,2652
+29,Tlaxcala,Centro,2016,Internet,164852,354356,46.522,1.844,1607
+30,Veracruz,Sur-Sureste,2016,Internet,859826,2131422,40.341,1.872,1504
+31,Yucatán,Sur-Sureste,2016,Internet,285379,613511,46.516,1.89,1531
+32,Zacatecas,Centro-Occidente,2016,Internet,190016,428400,44.355,1.494,2432
+00,Nacional,Nacional,2018,Internet,18164471,34160002,53.175,0.269,75477
+01,Aguascalientes,Centro-Occidente,2018,Internet,226779,387689,58.495,1.452,2523
+02,Baja California,Norte,2018,Internet,646728,1022089,63.275,1.453,2439
+03,Baja California Sur,Norte,2018,Internet,135814,216889,62.619,1.459,2426
+04,Campeche,Sur-Sureste,2018,Internet,125213,252133,49.661,1.573,2224
+05,Coahuila,Norte,2018,Internet,492088,854000,57.622,1.375,2838
+06,Colima,Centro-Occidente,2018,Internet,110774,197911,55.972,1.777,1712
+07,Chiapas,Sur-Sureste,2018,Internet,541779,1501956,36.072,1.342,2833
+08,Chihuahua,Norte,2018,Internet,578811,1013956,57.084,1.555,2234
+09,Ciudad de México,Centro,2018,Internet,1670867,2496933,66.917,1.571,1978
+10,Durango,Norte,2018,Internet,261966,496133,52.802,1.47,2538
+11,Guanajuato,Centro-Occidente,2018,Internet,848887,1672756,50.748,1.533,2338
+12,Guerrero,Sur-Sureste,2018,Internet,404701,959733,42.168,1.395,2757
+13,Hidalgo,Centro,2018,Internet,403119,835022,48.276,1.726,1843
+14,Jalisco,Centro-Occidente,2018,Internet,1269957,2263778,56.099,1.518,2358
+15,Estado de México,Centro,2018,Internet,2580892,4606178,56.031,1.376,2870
+16,Michoacán,Centro-Occidente,2018,Internet,648225,1287778,50.337,1.489,2481
+17,Morelos,Centro,2018,Internet,280013,534089,52.428,1.789,1712
+18,Nayarit,Centro-Occidente,2018,Internet,159069,336178,47.317,1.363,2949
+19,Nuevo León,Norte,2018,Internet,932253,1567022,59.492,1.543,2235
+20,Oaxaca,Sur-Sureste,2018,Internet,425834,1119689,38.031,1.664,1880
+21,Puebla,Centro,2018,Internet,866974,1783911,48.6,1.418,2728
+22,Querétaro,Centro,2018,Internet,357011,642533,55.563,1.407,2733
+23,Quintana Roo,Sur-Sureste,2018,Internet,304103,504267,60.306,1.61,2030
+24,San Luis Potosí,Centro-Occidente,2018,Internet,355278,764533,46.47,1.349,3001
+25,Sinaloa,Norte,2018,Internet,478386,821467,58.236,1.365,2876
+26,Sonora,Norte,2018,Internet,478746,797067,60.064,1.339,2943
+27,Tabasco,Sur-Sureste,2018,Internet,331796,650667,50.993,1.702,1898
+28,Tamaulipas,Norte,2018,Internet,520075,957022,54.343,1.496,2435
+29,Tlaxcala,Centro,2018,Internet,192048,363289,52.864,1.649,2019
+30,Veracruz,Sur-Sureste,2018,Internet,990205,2185156,45.315,1.898,1516
+31,Yucatán,Sur-Sureste,2018,Internet,325286,628978,51.717,1.537,2325
+32,Zacatecas,Centro-Occidente,2018,Internet,220794,439200,50.272,1.746,1805
+00,Nacional,Nacional,2020,Internet,21276940,34999998,60.791,0.266,73857
+01,Aguascalientes,Centro-Occidente,2020,Internet,261210,397222,65.759,1.756,1585
+02,Baja California,Norte,2020,Internet,731922,1047222,69.892,1.719,1554
+03,Baja California Sur,Norte,2020,Internet,156173,222222,70.278,1.248,2962
+04,Campeche,Sur-Sureste,2020,Internet,145970,258333,56.504,1.363,2903
+05,Coahuila,Norte,2020,Internet,584792,875000,66.833,1.327,2817
+06,Colima,Centro-Occidente,2020,Internet,131325,202778,64.763,1.298,2997
+07,Chiapas,Sur-Sureste,2020,Internet,689415,1538889,44.8,1.698,1883
+08,Chihuahua,Norte,2020,Internet,679963,1038889,65.451,1.42,2503
+09,Ciudad de México,Centro,2020,Internet,1910363,2558333,74.672,1.321,2397
+10,Durango,Norte,2020,Internet,305285,508333,60.056,1.31,3063
+11,Guanajuato,Centro-Occidente,2020,Internet,1002857,1713889,58.514,1.428,2614
+12,Guerrero,Sur-Sureste,2020,Internet,487359,983333,49.562,1.881,1555
+13,Hidalgo,Centro,2020,Internet,475044,855556,55.525,1.864,1561
+14,Jalisco,Centro-Occidente,2020,Internet,1441529,2319444,62.15,1.519,2215
+15,Estado de México,Centro,2020,Internet,2996563,4719444,63.494,1.462,2390
+16,Michoacán,Centro-Occidente,2020,Internet,761699,1319444,57.729,1.343,2975
+17,Morelos,Centro,2020,Internet,338204,547222,61.804,1.607,2031
+18,Nayarit,Centro-Occidente,2020,Internet,187639,344444,54.476,1.335,3058
+19,Nuevo León,Norte,2020,Internet,1067803,1605556,66.507,1.706,1676
+20,Oaxaca,Sur-Sureste,2020,Internet,532820,1147222,46.444,1.508,2402
+21,Puebla,Centro,2020,Internet,1006745,1827778,55.08,1.38,2856
+22,Querétaro,Centro,2020,Internet,424598,658333,64.496,1.558,2083
+23,Quintana Roo,Sur-Sureste,2020,Internet,355266,516667,68.761,1.414,2391
+24,San Luis Potosí,Centro-Occidente,2020,Internet,417463,783333,53.293,1.687,1923
+25,Sinaloa,Norte,2020,Internet,557893,841667,66.284,1.752,1616
+26,Sonora,Norte,2020,Internet,558174,816667,68.348,1.431,2347
+27,Tabasco,Sur-Sureste,2020,Internet,393790,666667,59.068,1.641,1973
+28,Tamaulipas,Norte,2020,Internet,615532,980556,62.774,1.392,2659
+29,Tlaxcala,Centro,2020,Internet,222209,372222,59.698,1.568,2158
+30,Veracruz,Sur-Sureste,2020,Internet,1198351,2238889,53.524,1.339,3052
+31,Yucatán,Sur-Sureste,2020,Internet,381674,644444,59.225,1.844,1557
+32,Zacatecas,Centro-Occidente,2020,Internet,257310,450000,57.18,1.598,2101
+00,Nacional,Nacional,2022,Internet,24637384,35840000,68.743,0.259,70555
+01,Aguascalientes,Centro-Occidente,2022,Internet,303694,406756,74.663,1.654,1522
+02,Baja California,Norte,2022,Internet,831091,1072356,77.501,1.529,1601
+03,Baja California Sur,Norte,2022,Internet,177475,227556,77.992,1.151,2855
+04,Campeche,Sur-Sureste,2022,Internet,172178,264533,65.088,1.806,1534
+05,Coahuila,Norte,2022,Internet,665518,896000,74.277,1.472,1974
+06,Colima,Centro-Occidente,2022,Internet,150721,207644,72.586,1.257,2796
+07,Chiapas,Sur-Sureste,2022,Internet,812372,1575822,51.552,1.663,1986
+08,Chihuahua,Norte,2022,Internet,769532,1063822,72.337,1.386,2296
+09,Ciudad de México,Centro,2022,Internet,2158530,2619733,82.395,1.024,3048
+10,Durango,Norte,2022,Internet,355282,520533,68.253,1.672,1698
+11,Guanajuato,Centro-Occidente,2022,Internet,1178080,1755022,67.126,1.3,2891
+12,Guerrero,Sur-Sureste,2022,Internet,589319,1006933,58.526,1.689,1881
+13,Hidalgo,Centro,2022,Internet,562972,876089,64.26,1.771,1621
+14,Jalisco,Centro-Occidente,2022,Internet,1677937,2375111,70.647,1.219,3038
+15,Estado de México,Centro,2022,Internet,3443264,4832711,71.249,1.685,1589
+16,Michoacán,Centro-Occidente,2022,Internet,880520,1351111,65.17,1.481,2257
+17,Morelos,Centro,2022,Internet,384367,560356,68.593,1.253,3014
+18,Nayarit,Centro-Occidente,2022,Internet,215654,352711,61.142,1.752,1680
+19,Nuevo León,Norte,2022,Internet,1238322,1644089,75.32,1.31,2422
+20,Oaxaca,Sur-Sureste,2022,Internet,648331,1174756,55.189,1.547,2284
+21,Puebla,Centro,2022,Internet,1169361,1871644,62.478,1.807,1565
+22,Querétaro,Centro,2022,Internet,490909,674133,72.821,1.716,1504
+23,Quintana Roo,Sur-Sureste,2022,Internet,401740,529067,75.934,1.381,2104
+24,San Luis Potosí,Centro-Occidente,2022,Internet,501078,802133,62.468,1.515,2269
+25,Sinaloa,Norte,2022,Internet,639125,861867,74.156,1.593,1685
+26,Sonora,Norte,2022,Internet,639524,836267,76.474,1.338,2264
+27,Tabasco,Sur-Sureste,2022,Internet,455169,682667,66.675,1.499,2159
+28,Tamaulipas,Norte,2022,Internet,714516,1004089,71.161,1.478,2099
+29,Tlaxcala,Centro,2022,Internet,256644,381156,67.333,1.253,3080
+30,Veracruz,Sur-Sureste,2022,Internet,1402438,2292622,61.172,1.301,3085
+31,Yucatán,Sur-Sureste,2022,Internet,449166,659911,68.065,1.326,2744
+32,Zacatecas,Centro-Occidente,2022,Internet,302555,460800,65.659,1.571,2010
+00,Nacional,Nacional,2024,Internet,27063066,36680002,73.782,0.243,72074
+01,Aguascalientes,Centro-Occidente,2024,Internet,330415,416289,79.372,1.175,2576
+02,Baja California,Norte,2024,Internet,919848,1097489,83.814,1.022,2920
+03,Baja California Sur,Norte,2024,Internet,191803,232889,82.358,1.191,2185
+04,Campeche,Sur-Sureste,2024,Internet,190106,270733,70.219,1.51,2023
+05,Coahuila,Norte,2024,Internet,714936,917000,77.965,1.472,1706
+06,Colima,Centro-Occidente,2024,Internet,164883,212511,77.588,1.256,2446
+07,Chiapas,Sur-Sureste,2024,Internet,926055,1612756,57.421,1.662,1949
+08,Chihuahua,Norte,2024,Internet,837860,1088756,76.956,1.445,1845
+09,Ciudad de México,Centro,2024,Internet,2358586,2681133,87.97,1.224,1609
+10,Durango,Norte,2024,Internet,392441,532733,73.665,1.186,3037
+11,Guanajuato,Centro-Occidente,2024,Internet,1296917,1796156,72.205,1.568,1809
+12,Guerrero,Sur-Sureste,2024,Internet,645781,1030533,62.665,1.299,3047
+13,Hidalgo,Centro,2024,Internet,610299,896622,68.066,1.706,1622
+14,Jalisco,Centro-Occidente,2024,Internet,1861432,2430778,76.578,1.359,2156
+15,Estado de México,Centro,2024,Internet,3752254,4945978,75.865,1.173,2892
+16,Michoacán,Centro-Occidente,2024,Internet,983222,1382778,71.105,1.36,2453
+17,Morelos,Centro,2024,Internet,429341,573489,74.865,1.321,2439
+18,Nayarit,Centro-Occidente,2024,Internet,243528,360978,67.463,1.272,2976
+19,Nuevo León,Norte,2024,Internet,1342232,1682622,79.77,1.271,2197
+20,Oaxaca,Sur-Sureste,2024,Internet,714446,1202289,59.424,1.718,1802
+21,Puebla,Centro,2024,Internet,1300733,1915511,67.905,1.514,2075
+22,Querétaro,Centro,2024,Internet,535503,689933,77.617,1.259,2444
+23,Quintana Roo,Sur-Sureste,2024,Internet,435394,541467,80.41,1.227,2238
+24,San Luis Potosí,Centro-Occidente,2024,Internet,541935,820933,66.015,1.615,1875
+25,Sinaloa,Norte,2024,Internet,697830,882067,79.113,1.206,2540
+26,Sonora,Norte,2024,Internet,689057,855867,80.51,1.171,2494
+27,Tabasco,Sur-Sureste,2024,Internet,501717,698667,71.811,1.525,1896
+28,Tamaulipas,Norte,2024,Internet,773492,1027622,75.27,1.547,1700
+29,Tlaxcala,Centro,2024,Internet,283443,390089,72.661,1.466,2044
+30,Veracruz,Sur-Sureste,2024,Internet,1577434,2346356,67.229,1.399,2508
+31,Yucatán,Sur-Sureste,2024,Internet,485628,675378,71.905,1.317,2524
+32,Zacatecas,Centro-Occidente,2024,Internet,334515,471600,70.932,1.491,2047
+00,Nacional,Nacional,2016,Computadora,15279360,33320000,45.856,0.265,77847
+01,Aguascalientes,Centro-Occidente,2016,Computadora,195414,378156,51.676,1.348,3022
+02,Baja California,Norte,2016,Computadora,554393,996956,55.609,1.833,1610
+03,Baja California Sur,Norte,2016,Computadora,118220,211556,55.881,1.425,2669
+04,Campeche,Sur-Sureste,2016,Computadora,101107,245933,41.112,1.523,2309
+05,Coahuila,Norte,2016,Computadora,425224,833000,51.047,1.537,2328
+06,Colima,Centro-Occidente,2016,Computadora,97554,193044,50.534,1.514,2399
+07,Chiapas,Sur-Sureste,2016,Computadora,404446,1465022,27.607,1.365,2363
+08,Chihuahua,Norte,2016,Computadora,491506,989022,49.696,1.402,2797
+09,Ciudad de México,Centro,2016,Computadora,1485138,2435533,60.978,1.551,2176
+10,Durango,Norte,2016,Computadora,218551,483933,45.161,1.394,2809
+11,Guanajuato,Centro-Occidente,2016,Computadora,713921,1631622,43.755,1.56,2225
+12,Guerrero,Sur-Sureste,2016,Computadora,320340,936133,34.219,1.282,2991
+13,Hidalgo,Centro,2016,Computadora,318994,814489,39.165,1.645,1958
+14,Jalisco,Centro-Occidente,2016,Computadora,1066714,2208111,48.309,1.348,3024
+15,Estado de México,Centro,2016,Computadora,2184531,4492911,48.622,1.583,2192
+16,Michoacán,Centro-Occidente,2016,Computadora,524318,1256111,41.741,1.353,2937
+17,Morelos,Centro,2016,Computadora,237268,520956,45.545,1.356,2974
+18,Nayarit,Centro-Occidente,2016,Computadora,128136,327911,39.076,1.489,2372
+19,Nuevo León,Norte,2016,Computadora,821814,1528489,53.766,1.562,2247
+20,Oaxaca,Sur-Sureste,2016,Computadora,330301,1092156,30.243,1.31,2680
+21,Puebla,Centro,2016,Computadora,695511,1740044,39.971,1.59,2085
+22,Querétaro,Centro,2016,Computadora,313229,626733,49.978,1.408,2772
+23,Quintana Roo,Sur-Sureste,2016,Computadora,260111,491867,52.882,1.681,1937
+24,San Luis Potosí,Centro-Occidente,2016,Computadora,287404,745733,38.54,1.371,2769
+25,Sinaloa,Norte,2016,Computadora,416471,801267,51.977,1.393,2832
+26,Sonora,Norte,2016,Computadora,413916,777467,53.239,1.617,2093
+27,Tabasco,Sur-Sureste,2016,Computadora,282777,634667,44.555,1.558,2234
+28,Tamaulipas,Norte,2016,Computadora,449739,933489,48.178,1.426,2701
+29,Tlaxcala,Centro,2016,Computadora,154933,354356,43.722,1.425,2671
+30,Veracruz,Sur-Sureste,2016,Computadora,804002,2131422,37.721,1.729,1728
+31,Yucatán,Sur-Sureste,2016,Computadora,279299,613511,45.525,1.863,1568
+32,Zacatecas,Centro-Occidente,2016,Computadora,184078,428400,42.969,1.504,2375
+00,Nacional,Nacional,2018,Computadora,15422839,34160002,45.149,0.274,72515
+01,Aguascalientes,Centro-Occidente,2018,Computadora,201101,387689,51.872,1.513,2400
+02,Baja California,Norte,2018,Computadora,576479,1022089,56.402,1.814,1650
+03,Baja California Sur,Norte,2018,Computadora,119450,216889,55.074,1.344,3010
+04,Campeche,Sur-Sureste,2018,Computadora,104883,252133,41.598,1.739,1762
+05,Coahuila,Norte,2018,Computadora,433021,854000,50.705,1.566,2241
+06,Colima,Centro-Occidente,2018,Computadora,96010,197911,48.511,1.754,1788
+07,Chiapas,Sur-Sureste,2018,Computadora,400731,1501956,26.681,1.498,1930
+08,Chihuahua,Norte,2018,Computadora,510873,1013956,50.384,1.359,2978
+09,Ciudad de México,Centro,2018,Computadora,1506005,2496933,60.314,1.454,2494
+10,Durango,Norte,2018,Computadora,221332,496133,44.611,1.501,2416
+11,Guanajuato,Centro-Occidente,2018,Computadora,703109,1672756,42.033,1.366,2888
+12,Guerrero,Sur-Sureste,2018,Computadora,321550,959733,33.504,1.54,2049
+13,Hidalgo,Centro,2018,Computadora,331512,835022,39.701,1.383,2753
+14,Jalisco,Centro-Occidente,2018,Computadora,1109412,2263778,49.007,1.571,2226
+15,Estado de México,Centro,2018,Computadora,2174712,4606178,47.213,1.804,1686
+16,Michoacán,Centro-Occidente,2018,Computadora,533402,1287778,41.42,1.861,1544
+17,Morelos,Centro,2018,Computadora,234187,534089,43.848,1.676,1940
+18,Nayarit,Centro-Occidente,2018,Computadora,131966,336178,39.255,1.474,2405
+19,Nuevo León,Norte,2018,Computadora,813882,1567022,51.938,1.344,3037
+20,Oaxaca,Sur-Sureste,2018,Computadora,317864,1119689,28.389,1.349,2495
+21,Puebla,Centro,2018,Computadora,700409,1783911,39.263,1.446,2506
+22,Querétaro,Centro,2018,Computadora,316536,642533,49.264,1.521,2378
+23,Quintana Roo,Sur-Sureste,2018,Computadora,264262,504267,52.405,1.494,2454
+24,San Luis Potosí,Centro-Occidente,2018,Computadora,291308,764533,38.103,1.675,1842
+25,Sinaloa,Norte,2018,Computadora,418373,821467,50.93,1.427,2700
+26,Sonora,Norte,2018,Computadora,421935,797067,52.936,1.503,2426
+27,Tabasco,Sur-Sureste,2018,Computadora,287229,650667,44.144,1.661,1959
+28,Tamaulipas,Norte,2018,Computadora,454098,957022,47.449,1.883,1546
+29,Tlaxcala,Centro,2018,Computadora,161512,363289,44.458,1.459,2541
+30,Veracruz,Sur-Sureste,2018,Computadora,805925,2185156,36.882,1.377,2704
+31,Yucatán,Sur-Sureste,2018,Computadora,282146,628978,44.858,1.844,1593
+32,Zacatecas,Centro-Occidente,2018,Computadora,177625,439200,40.443,1.568,2174
+00,Nacional,Nacional,2020,Computadora,15611387,34999998,44.604,0.277,70788
+01,Aguascalientes,Centro-Occidente,2020,Computadora,204116,397222,51.386,1.421,2725
+02,Baja California,Norte,2020,Computadora,573610,1047222,54.774,1.813,1656
+03,Baja California Sur,Norte,2020,Computadora,121622,222222,54.73,1.505,2409
+04,Campeche,Sur-Sureste,2020,Computadora,102556,258333,39.699,1.688,1861
+05,Coahuila,Norte,2020,Computadora,438215,875000,50.082,1.664,1986
+06,Colima,Centro-Occidente,2020,Computadora,99465,202778,49.051,1.365,2947
+07,Chiapas,Sur-Sureste,2020,Computadora,401753,1538889,26.107,1.473,1963
+08,Chihuahua,Norte,2020,Computadora,513059,1038889,49.385,1.567,2237
+09,Ciudad de México,Centro,2020,Computadora,1538096,2558333,60.121,1.71,1813
+10,Durango,Norte,2020,Computadora,227409,508333,44.736,1.418,2699
+11,Guanajuato,Centro-Occidente,2020,Computadora,725251,1713889,42.316,1.548,2241
+12,Guerrero,Sur-Sureste,2020,Computadora,319262,983333,32.467,1.654,1758
+13,Hidalgo,Centro,2020,Computadora,325102,855556,37.999,1.746,1719
+14,Jalisco,Centro-Occidente,2020,Computadora,1092223,2319444,47.09,1.62,2090
+15,Estado de México,Centro,2020,Computadora,2221810,4719444,47.078,1.82,1656
+16,Michoacán,Centro-Occidente,2020,Computadora,551525,1319444,41.8,1.484,2417
+17,Morelos,Centro,2020,Computadora,241202,547222,44.078,1.474,2503
+18,Nayarit,Centro-Occidente,2020,Computadora,125503,344444,36.436,1.629,1956
+19,Nuevo León,Norte,2020,Computadora,831874,1605556,51.812,1.358,2978
+20,Oaxaca,Sur-Sureste,2020,Computadora,335788,1147222,29.27,1.509,1963
+21,Puebla,Centro,2020,Computadora,696764,1827778,38.121,1.414,2603
+22,Querétaro,Centro,2020,Computadora,317148,658333,48.174,1.4,2805
+23,Quintana Roo,Sur-Sureste,2020,Computadora,265293,516667,51.347,1.745,1802
+24,San Luis Potosí,Centro-Occidente,2020,Computadora,295219,783333,37.688,1.539,2165
+25,Sinaloa,Norte,2020,Computadora,424619,841667,50.45,1.485,2493
+26,Sonora,Norte,2020,Computadora,430644,816667,52.732,1.762,1768
+27,Tabasco,Sur-Sureste,2020,Computadora,280835,666667,42.125,1.347,2967
+28,Tamaulipas,Norte,2020,Computadora,462810,980556,47.199,1.56,2248
+29,Tlaxcala,Centro,2020,Computadora,159324,372222,42.804,1.807,1649
+30,Veracruz,Sur-Sureste,2020,Computadora,820776,2238889,36.66,1.603,1979
+31,Yucatán,Sur-Sureste,2020,Computadora,285542,644444,44.308,1.717,1831
+32,Zacatecas,Centro-Occidente,2020,Computadora,182972,450000,40.66,1.354,2901
+00,Nacional,Nacional,2022,Computadora,15859243,35840000,44.25,0.268,75589
+01,Aguascalientes,Centro-Occidente,2022,Computadora,204133,406756,50.186,1.572,2225
+02,Baja California,Norte,2022,Computadora,587832,1072356,54.817,1.745,1791
+03,Baja California Sur,Norte,2022,Computadora,123575,227556,54.306,1.4,2788
+04,Campeche,Sur-Sureste,2022,Computadora,106312,264533,40.188,1.72,1787
+05,Coahuila,Norte,2022,Computadora,447454,896000,49.939,1.56,2259
+06,Colima,Centro-Occidente,2022,Computadora,100031,207644,48.174,1.348,3022
+07,Chiapas,Sur-Sureste,2022,Computadora,412724,1575822,26.191,1.482,1921
+08,Chihuahua,Norte,2022,Computadora,510127,1063822,47.952,1.884,1547
+09,Ciudad de México,Centro,2022,Computadora,1542197,2619733,58.868,1.356,2892
+10,Durango,Norte,2022,Computadora,231663,520533,44.505,1.323,3096
+11,Guanajuato,Centro-Occidente,2022,Computadora,749714,1755022,42.718,1.75,1748
+12,Guerrero,Sur-Sureste,2022,Computadora,308734,1006933,30.661,1.33,2699
+13,Hidalgo,Centro,2022,Computadora,338921,876089,38.686,1.356,2836
+14,Jalisco,Centro-Occidente,2022,Computadora,1112818,2375111,46.853,1.421,2715
+15,Estado de México,Centro,2022,Computadora,2287746,4832711,47.339,1.76,1768
+16,Michoacán,Centro-Occidente,2022,Computadora,562800,1351111,41.655,1.397,2718
+17,Morelos,Centro,2022,Computadora,252048,560356,44.98,1.695,1888
+18,Nayarit,Centro-Occidente,2022,Computadora,133721,352711,37.912,1.379,2716
+19,Nuevo León,Norte,2022,Computadora,847520,1644089,51.55,1.404,2787
+20,Oaxaca,Sur-Sureste,2022,Computadora,335569,1174756,28.565,1.488,2003
+21,Puebla,Centro,2022,Computadora,715117,1871644,38.208,1.375,2743
+22,Querétaro,Centro,2022,Computadora,317434,674133,47.088,1.851,1603
+23,Quintana Roo,Sur-Sureste,2022,Computadora,275538,529067,52.08,1.364,2954
+24,San Luis Potosí,Centro-Occidente,2022,Computadora,299777,802133,37.373,1.51,2240
+25,Sinaloa,Norte,2022,Computadora,427862,861867,49.644,1.574,2219
+26,Sonora,Norte,2022,Computadora,429269,836267,51.332,1.79,1715
+27,Tabasco,Sur-Sureste,2022,Computadora,285599,682667,41.836,1.326,3056
+28,Tamaulipas,Norte,2022,Computadora,465504,1004089,46.361,1.375,2891
+29,Tlaxcala,Centro,2022,Computadora,165578,381156,43.441,1.413,2692
+30,Veracruz,Sur-Sureste,2022,Computadora,813639,2292622,35.489,1.297,3007
+31,Yucatán,Sur-Sureste,2022,Computadora,283512,659911,42.962,1.753,1754
+32,Zacatecas,Centro-Occidente,2022,Computadora,184775,460800,40.099,1.874,1509
+00,Nacional,Nacional,2024,Computadora,15971611,36680002,43.543,0.26,80078
+01,Aguascalientes,Centro-Occidente,2024,Computadora,211551,416289,50.818,1.503,2434
+02,Baja California,Norte,2024,Computadora,585710,1097489,53.368,1.376,2887
+03,Baja California Sur,Norte,2024,Computadora,125015,232889,53.68,1.341,3044
+04,Campeche,Sur-Sureste,2024,Computadora,107620,270733,39.751,1.851,1536
+05,Coahuila,Norte,2024,Computadora,448449,917000,48.904,1.412,2756
+06,Colima,Centro-Occidente,2024,Computadora,100172,212511,47.137,1.397,2810
+07,Chiapas,Sur-Sureste,2024,Computadora,428689,1612756,26.581,1.171,3037
+08,Chihuahua,Norte,2024,Computadora,515445,1088756,47.343,1.437,2656
+09,Ciudad de México,Centro,2024,Computadora,1568319,2681133,58.495,1.415,2666
+10,Durango,Norte,2024,Computadora,231333,532733,43.424,1.528,2312
+11,Guanajuato,Centro-Occidente,2024,Computadora,723132,1796156,40.26,1.699,1850
+12,Guerrero,Sur-Sureste,2024,Computadora,326549,1030533,31.687,1.304,2784
+13,Hidalgo,Centro,2024,Computadora,352053,896622,39.264,1.704,1788
+14,Jalisco,Centro-Occidente,2024,Computadora,1132405,2430778,46.586,1.331,3090
+15,Estado de México,Centro,2024,Computadora,2270482,4945978,45.906,1.528,2345
+16,Michoacán,Centro-Occidente,2024,Computadora,549466,1382778,39.736,1.331,2982
+17,Morelos,Centro,2024,Computadora,258004,573489,44.988,1.455,2557
+18,Nayarit,Centro-Occidente,2024,Computadora,131454,360978,36.416,1.415,2569
+19,Nuevo León,Norte,2024,Computadora,848868,1682622,50.449,1.518,2388
+20,Oaxaca,Sur-Sureste,2024,Computadora,331140,1202289,27.542,1.495,1963
+21,Puebla,Centro,2024,Computadora,718239,1915511,37.496,1.473,2378
+22,Querétaro,Centro,2024,Computadora,330391,689933,47.887,1.62,2091
+23,Quintana Roo,Sur-Sureste,2024,Computadora,277362,541467,51.224,1.397,2818
+24,San Luis Potosí,Centro-Occidente,2024,Computadora,299512,820933,36.484,1.402,2582
+25,Sinaloa,Norte,2024,Computadora,427849,882067,48.505,1.438,2657
+26,Sonora,Norte,2024,Computadora,435711,855867,50.909,1.607,2128
+27,Tabasco,Sur-Sureste,2024,Computadora,290401,698667,41.565,1.338,2990
+28,Tamaulipas,Norte,2024,Computadora,481728,1027622,46.878,1.808,1669
+29,Tlaxcala,Centro,2024,Computadora,159214,390089,40.815,1.476,2457
+30,Veracruz,Sur-Sureste,2024,Computadora,837136,2346356,35.678,1.324,2870
+31,Yucatán,Sur-Sureste,2024,Computadora,280757,675378,41.57,1.579,2156
+32,Zacatecas,Centro-Occidente,2024,Computadora,187455,471600,39.749,1.366,2828
+00,Nacional,Nacional,2016,Teléfono celular,28355088,33320000,85.099,0.196,72706
+01,Aguascalientes,Centro-Occidente,2016,Teléfono celular,330404,378156,87.372,1.038,2207
+02,Baja California,Norte,2016,Teléfono celular,887541,996956,89.025,1.187,1506
+03,Baja California Sur,Norte,2016,Teléfono celular,187859,211556,88.799,0.954,2359
+04,Campeche,Sur-Sureste,2016,Teléfono celular,204975,245933,83.346,1.339,1678
+05,Coahuila,Norte,2016,Teléfono celular,722001,833000,86.675,0.992,2484
+06,Colima,Centro-Occidente,2016,Teléfono celular,166894,193044,86.454,0.916,3030
+07,Chiapas,Sur-Sureste,2016,Teléfono celular,1149717,1465022,78.478,1.528,1604
+08,Chihuahua,Norte,2016,Teléfono celular,857031,989022,86.654,1.163,1875
+09,Ciudad de México,Centro,2016,Teléfono celular,2223101,2435533,91.278,0.973,1913
+10,Durango,Norte,2016,Teléfono celular,412313,483933,85.2,1.156,2087
+11,Guanajuato,Centro-Occidente,2016,Teléfono celular,1380568,1631622,84.613,1.211,1978
+12,Guerrero,Sur-Sureste,2016,Teléfono celular,751654,936133,80.293,1.347,1899
+13,Hidalgo,Centro,2016,Teléfono celular,678275,814489,83.276,1.378,1624
+14,Jalisco,Centro-Occidente,2016,Teléfono celular,1902211,2208111,86.147,1.016,2523
+15,Estado de México,Centro,2016,Teléfono celular,3843715,4492911,85.551,1.022,2500
+16,Michoacán,Centro-Occidente,2016,Teléfono celular,1052527,1256111,83.793,1.229,1964
+17,Morelos,Centro,2016,Teléfono celular,443871,520956,85.203,1.15,2097
+18,Nayarit,Centro-Occidente,2016,Teléfono celular,271099,327911,82.675,1.08,2702
+19,Nuevo León,Norte,2016,Teléfono celular,1342660,1528489,87.842,0.908,2861
+20,Oaxaca,Sur-Sureste,2016,Teléfono celular,864030,1092156,79.112,1.283,2215
+21,Puebla,Centro,2016,Teléfono celular,1437481,1740044,82.612,1.222,2089
+22,Querétaro,Centro,2016,Teléfono celular,540357,626733,86.218,1.155,1905
+23,Quintana Roo,Sur-Sureste,2016,Teléfono celular,432587,491867,87.948,1.159,1706
+24,San Luis Potosí,Centro-Occidente,2016,Teléfono celular,609164,745733,81.687,1.089,2706
+25,Sinaloa,Norte,2016,Teléfono celular,698454,801267,87.169,0.991,2500
+26,Sonora,Norte,2016,Teléfono celular,686751,777467,88.332,0.93,2660
+27,Tabasco,Sur-Sureste,2016,Teléfono celular,539345,634667,84.981,1.042,2649
+28,Tamaulipas,Norte,2016,Teléfono celular,805860,933489,86.328,0.929,3080
+29,Tlaxcala,Centro,2016,Teléfono celular,299939,354356,84.643,1.105,2346
+30,Veracruz,Sur-Sureste,2016,Teléfono celular,1751149,2131422,82.159,1.107,2641
+31,Yucatán,Sur-Sureste,2016,Teléfono celular,519725,613511,84.713,1.094,2382
+32,Zacatecas,Centro-Occidente,2016,Teléfono celular,361830,428400,84.461,1.007,2936
+00,Nacional,Nacional,2018,Teléfono celular,30111999,34160002,88.15,0.178,72577
+01,Aguascalientes,Centro-Occidente,2018,Teléfono celular,351733,387689,90.726,0.851,2521
+02,Baja California,Norte,2018,Teléfono celular,937419,1022089,91.716,0.714,3035
+03,Baja California Sur,Norte,2018,Teléfono celular,200493,216889,92.44,0.805,2428
+04,Campeche,Sur-Sureste,2018,Teléfono celular,217104,252133,86.107,1.049,2282
+05,Coahuila,Norte,2018,Teléfono celular,766138,854000,89.712,1.122,1509
+06,Colima,Centro-Occidente,2018,Teléfono celular,178528,197911,90.206,0.942,2256
+07,Chiapas,Sur-Sureste,2018,Teléfono celular,1215959,1501956,80.958,1.137,2573
+08,Chihuahua,Norte,2018,Teléfono celular,914549,1013956,90.196,0.963,2152
+09,Ciudad de México,Centro,2018,Teléfono celular,2361465,2496933,94.575,0.835,1741
+10,Durango,Norte,2018,Teléfono celular,436259,496133,87.932,0.878,2950
+11,Guanajuato,Centro-Occidente,2018,Teléfono celular,1459911,1672756,87.276,1.107,1955
+12,Guerrero,Sur-Sureste,2018,Teléfono celular,807379,959733,84.125,1.185,2133
+13,Hidalgo,Centro,2018,Teléfono celular,723205,835022,86.609,0.997,2616
+14,Jalisco,Centro-Occidente,2018,Teléfono celular,2030895,2263778,89.713,1.075,1793
+15,Estado de México,Centro,2018,Teléfono celular,4066737,4606178,88.289,1.152,1565
+16,Michoacán,Centro-Occidente,2018,Teléfono celular,1117446,1287778,86.773,1.109,2006
+17,Morelos,Centro,2018,Teléfono celular,469675,534089,87.939,0.93,2609
+18,Nayarit,Centro-Occidente,2018,Teléfono celular,290450,336178,86.398,1.025,2536
+19,Nuevo León,Norte,2018,Teléfono celular,1422432,1567022,90.773,1.069,1577
+20,Oaxaca,Sur-Sureste,2018,Teléfono celular,924615,1119689,82.578,1.33,1816
+21,Puebla,Centro,2018,Teléfono celular,1531430,1783911,85.847,1.188,1868
+22,Querétaro,Centro,2018,Teléfono celular,577185,642533,89.83,1.048,1824
+23,Quintana Roo,Sur-Sureste,2018,Teléfono celular,460296,504267,91.28,0.943,1943
+24,San Luis Potosí,Centro-Occidente,2018,Teléfono celular,648381,764533,84.807,0.944,3064
+25,Sinaloa,Norte,2018,Teléfono celular,742542,821467,90.392,0.94,2161
+26,Sonora,Norte,2018,Teléfono celular,728205,797067,91.361,0.808,2671
+27,Tabasco,Sur-Sureste,2018,Teléfono celular,571417,650667,87.82,0.984,2448
+28,Tamaulipas,Norte,2018,Teléfono celular,850544,957022,88.874,1.043,1959
+29,Tlaxcala,Centro,2018,Teléfono celular,317794,363289,87.477,0.876,3074
+30,Veracruz,Sur-Sureste,2018,Teléfono celular,1856651,2185156,84.967,1.089,2328
+31,Yucatán,Sur-Sureste,2018,Teléfono celular,552170,628978,87.789,1.023,2234
+32,Zacatecas,Centro-Occidente,2018,Teléfono celular,382992,439200,87.202,0.916,2950
+00,Nacional,Nacional,2020,Teléfono celular,31936621,34999998,91.247,0.16,68356
+01,Aguascalientes,Centro-Occidente,2020,Teléfono celular,371336,397222,93.483,0.729,2417
+02,Baja California,Norte,2020,Teléfono celular,999160,1047222,95.41,0.607,2677
+03,Baja California Sur,Norte,2020,Teléfono celular,211310,222222,95.089,0.658,2346
+04,Campeche,Sur-Sureste,2020,Teléfono celular,233304,258333,90.311,1.092,1696
+05,Coahuila,Norte,2020,Teléfono celular,810778,875000,92.66,0.919,1614
+06,Colima,Centro-Occidente,2020,Teléfono celular,188055,202778,92.739,0.823,2176
+07,Chiapas,Sur-Sureste,2020,Teléfono celular,1296063,1538889,84.221,1.124,2300
+08,Chihuahua,Norte,2020,Teléfono celular,962818,1038889,92.678,0.713,2888
+09,Ciudad de México,Centro,2020,Teléfono celular,2486605,2558333,97.196,0.591,1806
+10,Durango,Norte,2020,Teléfono celular,461029,508333,90.694,0.755,3099
+11,Guanajuato,Centro-Occidente,2020,Teléfono celular,1566820,1713889,91.419,1.105,1553
+12,Guerrero,Sur-Sureste,2020,Teléfono celular,849694,983333,86.41,1.008,2503
+13,Hidalgo,Centro,2020,Teléfono celular,767374,855556,89.693,1.085,1797
+14,Jalisco,Centro-Occidente,2020,Teléfono celular,2139759,2319444,92.253,0.975,1628
+15,Estado de México,Centro,2020,Teléfono celular,4349906,4719444,92.17,0.773,2599
+16,Michoacán,Centro-Occidente,2020,Teléfono celular,1191369,1319444,90.293,0.909,2392
+17,Morelos,Centro,2020,Teléfono celular,502455,547222,91.819,0.917,2077
+18,Nayarit,Centro-Occidente,2020,Teléfono celular,307534,344444,89.284,1.044,2010
+19,Nuevo León,Norte,2020,Teléfono celular,1508611,1605556,93.962,0.817,1889
+20,Oaxaca,Sur-Sureste,2020,Teléfono celular,976298,1147222,85.101,1.03,2623
+21,Puebla,Centro,2020,Teléfono celular,1626332,1827778,88.979,1,2156
+22,Querétaro,Centro,2020,Teléfono celular,614461,658333,93.336,0.922,1736
+23,Quintana Roo,Sur-Sureste,2020,Teléfono celular,487658,516667,94.385,0.873,1550
+24,San Luis Potosí,Centro-Occidente,2020,Teléfono celular,692638,783333,88.422,1.185,1609
+25,Sinaloa,Norte,2020,Teléfono celular,784939,841667,93.26,0.825,2017
+26,Sonora,Norte,2020,Teléfono celular,771244,816667,94.438,0.761,2069
+27,Tabasco,Sur-Sureste,2020,Teléfono celular,602793,666667,90.419,1.062,1658
+28,Tamaulipas,Norte,2020,Teléfono celular,897633,980556,91.543,0.787,2605
+29,Tlaxcala,Centro,2020,Teléfono celular,336270,372222,90.341,0.852,2556
+30,Veracruz,Sur-Sureste,2020,Teléfono celular,1951816,2238889,87.178,0.953,2528
+31,Yucatán,Sur-Sureste,2020,Teléfono celular,585769,644444,90.895,0.91,2214
+32,Zacatecas,Centro-Occidente,2020,Teléfono celular,404790,450000,89.953,1.126,1568
+00,Nacional,Nacional,2022,Teléfono celular,33510860,35840000,93.501,0.134,74231
+01,Aguascalientes,Centro-Occidente,2022,Teléfono celular,391640,406756,96.284,0.588,2397
+02,Baja California,Norte,2022,Teléfono celular,1045556,1072356,97.501,0.541,1763
+03,Baja California Sur,Norte,2022,Teléfono celular,221866,227556,97.5,0.58,1625
+04,Campeche,Sur-Sureste,2022,Teléfono celular,244339,264533,92.366,0.776,2671
+05,Coahuila,Norte,2022,Teléfono celular,860054,896000,95.988,0.579,2728
+06,Colima,Centro-Occidente,2022,Teléfono celular,196927,207644,94.839,0.625,2640
+07,Chiapas,Sur-Sureste,2022,Teléfono celular,1351517,1575822,85.766,1.006,2518
+08,Chihuahua,Norte,2022,Teléfono celular,1008304,1063822,94.781,0.618,2673
+09,Ciudad de México,Centro,2022,Teléfono celular,2586838,2619733,98.744,0.382,1790
+10,Durango,Norte,2022,Teléfono celular,484809,520533,93.137,0.937,1523
+11,Guanajuato,Centro-Occidente,2022,Teléfono celular,1625605,1755022,92.626,0.723,2824
+12,Guerrero,Sur-Sureste,2022,Teléfono celular,893893,1006933,88.774,1.072,1883
+13,Hidalgo,Centro,2022,Teléfono celular,798516,876089,91.146,0.844,2395
+14,Jalisco,Centro-Occidente,2022,Teléfono celular,2244741,2375111,94.511,0.644,2672
+15,Estado de México,Centro,2022,Teléfono celular,4573485,4832711,94.636,0.766,1896
+16,Michoacán,Centro-Occidente,2022,Teléfono celular,1249532,1351111,92.482,0.725,2965
+17,Morelos,Centro,2022,Teléfono celular,525064,560356,93.702,0.734,2441
+18,Nayarit,Centro-Occidente,2022,Teléfono celular,320279,352711,90.805,0.82,2658
+19,Nuevo León,Norte,2022,Teléfono celular,1582456,1644089,96.251,0.643,1948
+20,Oaxaca,Sur-Sureste,2022,Teléfono celular,1034808,1174756,88.087,1.057,2165
+21,Puebla,Centro,2022,Teléfono celular,1709682,1871644,91.347,0.841,2472
+22,Querétaro,Centro,2022,Teléfono celular,639687,674133,94.89,0.598,2880
+23,Quintana Roo,Sur-Sureste,2022,Teléfono celular,512229,529067,96.817,0.596,2035
+24,San Luis Potosí,Centro-Occidente,2022,Teléfono celular,727923,802133,90.748,1.016,1803
+25,Sinaloa,Norte,2022,Teléfono celular,819899,861867,95.131,0.714,1816
+26,Sonora,Norte,2022,Teléfono celular,809136,836267,96.756,0.53,2626
+27,Tabasco,Sur-Sureste,2022,Teléfono celular,631869,682667,92.559,0.95,1603
+28,Tamaulipas,Norte,2022,Teléfono celular,946755,1004089,94.29,0.749,2100
+29,Tlaxcala,Centro,2022,Teléfono celular,354037,381156,92.885,0.78,2357
+30,Veracruz,Sur-Sureste,2022,Teléfono celular,2080351,2292622,90.741,0.836,2716
+31,Yucatán,Sur-Sureste,2022,Teléfono celular,615305,659911,93.241,0.707,2820
+32,Zacatecas,Centro-Occidente,2022,Teléfono celular,423758,460800,91.961,0.745,2828
+00,Nacional,Nacional,2024,Teléfono celular,34813286,36680002,94.911,0.121,72866
+01,Aguascalientes,Centro-Occidente,2024,Teléfono celular,407005,416289,97.77,0.525,1889
+02,Baja California,Norte,2024,Teléfono celular,1085201,1097489,98.88,0.365,1955
+03,Baja California Sur,Norte,2024,Teléfono celular,229854,232889,98.697,0.377,1838
+04,Campeche,Sur-Sureste,2024,Teléfono celular,253351,270733,93.58,0.655,3091
+05,Coahuila,Norte,2024,Teléfono celular,890932,917000,97.157,0.451,2983
+06,Colima,Centro-Occidente,2024,Teléfono celular,205041,212511,96.485,0.563,2293
+07,Chiapas,Sur-Sureste,2024,Teléfono celular,1425576,1612756,88.394,1.182,1648
+08,Chihuahua,Norte,2024,Teléfono celular,1056188,1088756,97.009,0.629,1821
+09,Ciudad de México,Centro,2024,Teléfono celular,2647594,2681133,98.749,0.308,2743
+10,Durango,Norte,2024,Teléfono celular,504512,532733,94.703,0.629,2642
+11,Guanajuato,Centro-Occidente,2024,Teléfono celular,1690802,1796156,94.134,0.706,2383
+12,Guerrero,Sur-Sureste,2024,Teléfono celular,933068,1030533,90.542,1.114,1532
+13,Hidalgo,Centro,2024,Teléfono celular,830566,896622,92.633,0.814,2156
+14,Jalisco,Centro-Occidente,2024,Teléfono celular,2333520,2430778,95.999,0.589,2336
+15,Estado de México,Centro,2024,Teléfono celular,4746350,4945978,95.964,0.546,2736
+16,Michoacán,Centro-Occidente,2024,Teléfono celular,1293863,1382778,93.57,0.914,1528
+17,Morelos,Centro,2024,Teléfono celular,547913,573489,95.54,0.723,1956
+18,Nayarit,Centro-Occidente,2024,Teléfono celular,334496,360978,92.664,0.718,2929
+19,Nuevo León,Norte,2024,Teléfono celular,1646421,1682622,97.849,0.416,2853
+20,Oaxaca,Sur-Sureste,2024,Teléfono celular,1066816,1202289,88.732,0.897,2692
+21,Puebla,Centro,2024,Teléfono celular,1777559,1915511,92.798,0.833,2119
+22,Querétaro,Centro,2024,Teléfono celular,665705,689933,96.488,0.66,1672
+23,Quintana Roo,Sur-Sureste,2024,Teléfono celular,530530,541467,97.98,0.412,2419
+24,San Luis Potosí,Centro-Occidente,2024,Teléfono celular,759257,820933,92.487,0.939,1798
+25,Sinaloa,Norte,2024,Teléfono celular,855710,882067,97.012,0.575,1870
+26,Sonora,Norte,2024,Teléfono celular,837549,855867,97.86,0.383,2899
+27,Tabasco,Sur-Sureste,2024,Teléfono celular,660374,698667,94.519,0.647,2764
+28,Tamaulipas,Norte,2024,Teléfono celular,985067,1027622,95.859,0.546,2954
+29,Tlaxcala,Centro,2024,Teléfono celular,368067,390089,94.355,0.687,2423
+30,Veracruz,Sur-Sureste,2024,Teléfono celular,2166956,2346356,92.354,0.946,1817
+31,Yucatán,Sur-Sureste,2024,Teléfono celular,636172,675378,94.195,0.846,1566
+32,Zacatecas,Centro-Occidente,2024,Teléfono celular,441271,471600,93.569,0.709,2561
+00,Nacional,Nacional,2016,Televisión de paga,14526383,33074067,43.921,0.279,69521
+01,Aguascalientes,Centro-Occidente,2016,Televisión de paga,182897,378156,48.366,1.583,2193
+02,Baja California,Norte,2016,Televisión de paga,509174,996956,51.073,1.507,2420
+03,Baja California Sur,Norte,2016,Televisión de paga,108502,211556,51.288,1.351,3011
+04,Campeche,Sur-Sureste,2016,Televisión de paga,,245933,,,21
+05,Coahuila,Norte,2016,Televisión de paga,394431,833000,47.351,1.488,2476
+06,Colima,Centro-Occidente,2016,Televisión de paga,90577,193044,46.92,1.882,1546
+07,Chiapas,Sur-Sureste,2016,Televisión de paga,473651,1465022,32.331,1.404,2449
+08,Chihuahua,Norte,2016,Televisión de paga,448262,989022,45.324,1.558,2253
+09,Ciudad de México,Centro,2016,Televisión de paga,1301363,2435533,53.432,1.424,2697
+10,Durango,Norte,2016,Televisión de paga,213431,483933,44.103,1.347,2989
+11,Guanajuato,Centro-Occidente,2016,Televisión de paga,682205,1631622,41.811,1.543,2264
+12,Guerrero,Sur-Sureste,2016,Televisión de paga,342378,936133,36.574,1.688,1795
+13,Hidalgo,Centro,2016,Televisión de paga,328153,814489,40.289,1.471,2452
+14,Jalisco,Centro-Occidente,2016,Televisión de paga,985372,2208111,44.625,1.801,1680
+15,Estado de México,Centro,2016,Televisión de paga,2062582,4492911,45.907,1.495,2444
+16,Michoacán,Centro-Occidente,2016,Televisión de paga,537139,1256111,42.762,1.402,2741
+17,Morelos,Centro,2016,Televisión de paga,225483,520956,43.283,1.853,1578
+18,Nayarit,Centro-Occidente,2016,Televisión de paga,128707,327911,39.25,1.819,1573
+19,Nuevo León,Norte,2016,Televisión de paga,714387,1528489,46.738,1.517,2383
+20,Oaxaca,Sur-Sureste,2016,Televisión de paga,373267,1092156,34.177,1.385,2554
+21,Puebla,Centro,2016,Televisión de paga,720654,1740044,41.416,1.631,1995
+22,Querétaro,Centro,2016,Televisión de paga,293159,626733,46.776,1.623,2074
+23,Quintana Roo,Sur-Sureste,2016,Televisión de paga,250147,491867,50.857,1.801,1695
+24,San Luis Potosí,Centro-Occidente,2016,Televisión de paga,283883,745733,38.068,1.678,1841
+25,Sinaloa,Norte,2016,Televisión de paga,385513,801267,48.113,1.467,2550
+26,Sonora,Norte,2016,Televisión de paga,375894,777467,48.349,1.536,2330
+27,Tabasco,Sur-Sureste,2016,Televisión de paga,278776,634667,43.925,1.416,2693
+28,Tamaulipas,Norte,2016,Televisión de paga,422819,933489,45.294,1.53,2326
+29,Tlaxcala,Centro,2016,Televisión de paga,154483,354356,43.595,1.629,2042
+30,Veracruz,Sur-Sureste,2016,Televisión de paga,811430,2131422,38.07,1.506,2310
+31,Yucatán,Sur-Sureste,2016,Televisión de paga,264396,613511,43.095,1.536,2285
+32,Zacatecas,Centro-Occidente,2016,Televisión de paga,183268,428400,42.78,1.692,1882
+00,Nacional,Nacional,2018,Televisión de paga,16097773,34160002,47.125,0.274,72856
+01,Aguascalientes,Centro-Occidente,2018,Televisión de paga,197586,387689,50.965,1.656,2004
+02,Baja California,Norte,2018,Televisión de paga,559425,1022089,54.733,1.683,1929
+03,Baja California Sur,Norte,2018,Televisión de paga,118583,216889,54.674,1.736,1814
+04,Campeche,Sur-Sureste,2018,Televisión de paga,110303,252133,43.748,1.329,3071
+05,Coahuila,Norte,2018,Televisión de paga,431069,854000,50.476,1.632,2066
+06,Colima,Centro-Occidente,2018,Televisión de paga,97891,197911,49.462,1.506,2426
+07,Chiapas,Sur-Sureste,2018,Televisión de paga,530041,1501956,35.29,1.295,3001
+08,Chihuahua,Norte,2018,Televisión de paga,491105,1013956,48.435,1.615,2108
+09,Ciudad de México,Centro,2018,Televisión de paga,1414545,2496933,56.651,1.477,2478
+10,Durango,Norte,2018,Televisión de paga,236526,496133,47.674,1.595,2154
+11,Guanajuato,Centro-Occidente,2018,Televisión de paga,770265,1672756,46.048,1.479,2496
+12,Guerrero,Sur-Sureste,2018,Televisión de paga,387391,959733,40.364,1.407,2660
+13,Hidalgo,Centro,2018,Televisión de paga,370940,835022,44.423,1.7,1869
+14,Jalisco,Centro-Occidente,2018,Televisión de paga,1093567,2263778,48.307,1.399,2806
+15,Estado de México,Centro,2018,Televisión de paga,2262319,4606178,49.115,1.573,2222
+16,Michoacán,Centro-Occidente,2018,Televisión de paga,584205,1287778,45.365,1.536,2315
+17,Morelos,Centro,2018,Televisión de paga,250157,534089,46.838,1.865,1574
+18,Nayarit,Centro-Occidente,2018,Televisión de paga,137958,336178,41.037,1.518,2316
+19,Nuevo León,Norte,2018,Televisión de paga,780793,1567022,49.827,1.599,2150
+20,Oaxaca,Sur-Sureste,2018,Televisión de paga,405713,1119689,36.234,1.836,1511
+21,Puebla,Centro,2018,Televisión de paga,771359,1783911,43.24,1.437,2618
+22,Querétaro,Centro,2018,Televisión de paga,319006,642533,49.648,1.738,1819
+23,Quintana Roo,Sur-Sureste,2018,Televisión de paga,266665,504267,52.882,1.606,2124
+24,San Luis Potosí,Centro-Occidente,2018,Televisión de paga,317617,764533,41.544,1.373,2822
+25,Sinaloa,Norte,2018,Televisión de paga,415419,821467,50.57,1.639,2047
+26,Sonora,Norte,2018,Televisión de paga,409934,797067,51.43,1.533,2337
+27,Tabasco,Sur-Sureste,2018,Televisión de paga,301960,650667,46.408,1.471,2527
+28,Tamaulipas,Norte,2018,Televisión de paga,469659,957022,49.075,1.391,2838
+29,Tlaxcala,Centro,2018,Televisión de paga,169255,363289,46.59,1.52,2372
+30,Veracruz,Sur-Sureste,2018,Televisión de paga,931393,2185156,42.624,1.689,1880
+31,Yucatán,Sur-Sureste,2018,Televisión de paga,293023,628978,46.587,1.412,2741
+32,Zacatecas,Centro-Occidente,2018,Televisión de paga,202101,439200,46.016,1.761,1761
+00,Nacional,Nacional,2020,Televisión de paga,16146931,34999998,46.134,0.273,73545
+01,Aguascalientes,Centro-Occidente,2020,Televisión de paga,200179,397222,50.395,1.794,1709
+02,Baja California,Norte,2020,Televisión de paga,568116,1047222,54.25,1.428,2686
+03,Baja California Sur,Norte,2020,Televisión de paga,116623,222222,52.48,1.515,2388
+04,Campeche,Sur-Sureste,2020,Televisión de paga,111202,258333,43.046,1.851,1576
+05,Coahuila,Norte,2020,Televisión de paga,434812,875000,49.693,1.484,2496
+06,Colima,Centro-Occidente,2020,Televisión de paga,98543,202778,48.597,1.832,1637
+07,Chiapas,Sur-Sureste,2020,Televisión de paga,532844,1538889,34.625,1.287,3004
+08,Chihuahua,Norte,2020,Televisión de paga,502057,1038889,48.326,1.781,1731
+09,Ciudad de México,Centro,2020,Televisión de paga,1431357,2558333,55.949,1.354,2958
+10,Durango,Norte,2020,Televisión de paga,234590,508333,46.149,1.678,1943
+11,Guanajuato,Centro-Occidente,2020,Televisión de paga,775647,1713889,45.257,1.33,3078
+12,Guerrero,Sur-Sureste,2020,Televisión de paga,373614,983333,37.995,1.597,2050
+13,Hidalgo,Centro,2020,Televisión de paga,363171,855556,42.449,1.44,2596
+14,Jalisco,Centro-Occidente,2020,Televisión de paga,1116055,2319444,48.117,1.838,1624
+15,Estado de México,Centro,2020,Televisión de paga,2255012,4719444,47.781,1.607,2127
+16,Michoacán,Centro-Occidente,2020,Televisión de paga,599818,1319444,45.46,1.549,2270
+17,Morelos,Centro,2020,Televisión de paga,246318,547222,45.013,1.404,2774
+18,Nayarit,Centro-Occidente,2020,Televisión de paga,141785,344444,41.163,1.343,2939
+19,Nuevo León,Norte,2020,Televisión de paga,778059,1605556,48.46,1.544,2305
+20,Oaxaca,Sur-Sureste,2020,Televisión de paga,410179,1147222,35.754,1.667,1816
+21,Puebla,Centro,2020,Televisión de paga,791622,1827778,43.311,1.824,1618
+22,Querétaro,Centro,2020,Televisión de paga,314467,658333,47.767,1.894,1530
+23,Quintana Roo,Sur-Sureste,2020,Televisión de paga,271368,516667,52.523,1.359,2969
+24,San Luis Potosí,Centro-Occidente,2020,Televisión de paga,311359,783333,39.748,1.652,1935
+25,Sinaloa,Norte,2020,Televisión de paga,421408,841667,50.068,1.513,2402
+26,Sonora,Norte,2020,Televisión de paga,410362,816667,50.248,1.43,2689
+27,Tabasco,Sur-Sureste,2020,Televisión de paga,306565,666667,45.985,1.412,2736
+28,Tamaulipas,Norte,2020,Televisión de paga,460583,980556,46.972,1.556,2264
+29,Tlaxcala,Centro,2020,Televisión de paga,170669,372222,45.851,1.387,2840
+30,Veracruz,Sur-Sureste,2020,Televisión de paga,913529,2238889,40.803,1.603,2074
+31,Yucatán,Sur-Sureste,2020,Televisión de paga,284549,644444,44.154,1.628,2054
+32,Zacatecas,Centro-Occidente,2020,Televisión de paga,200469,450000,44.549,1.413,2727
+00,Nacional,Nacional,2022,Televisión de paga,15298345,35840000,42.685,0.272,72829
+01,Aguascalientes,Centro-Occidente,2022,Televisión de paga,190677,406756,46.877,1.416,2735
+02,Baja California,Norte,2022,Televisión de paga,536090,1072356,49.992,1.53,2350
+03,Baja California Sur,Norte,2022,Televisión de paga,114246,227556,50.206,1.392,2838
+04,Campeche,Sur-Sureste,2022,Televisión de paga,108071,264533,40.853,1.361,2849
+05,Coahuila,Norte,2022,Televisión de paga,415945,896000,46.422,1.749,1786
+06,Colima,Centro-Occidente,2022,Televisión de paga,92554,207644,44.573,1.786,1709
+07,Chiapas,Sur-Sureste,2022,Televisión de paga,505179,1575822,32.058,1.336,2649
+08,Chihuahua,Norte,2022,Televisión de paga,489587,1063822,46.022,1.513,2379
+09,Ciudad de México,Centro,2022,Televisión de paga,1371853,2619733,52.366,1.758,1775
+10,Durango,Norte,2022,Televisión de paga,221783,520533,42.607,1.334,3032
+11,Guanajuato,Centro-Occidente,2022,Televisión de paga,726717,1755022,41.408,1.711,1827
+12,Guerrero,Sur-Sureste,2022,Televisión de paga,354918,1006933,35.247,1.318,2900
+13,Hidalgo,Centro,2022,Televisión de paga,335491,876089,38.294,1.463,2451
+14,Jalisco,Centro-Occidente,2022,Televisión de paga,1036834,2375111,43.654,1.863,1561
+15,Estado de México,Centro,2022,Televisión de paga,2129333,4832711,44.061,1.536,2303
+16,Michoacán,Centro-Occidente,2022,Televisión de paga,551235,1351111,40.799,1.544,2245
+17,Morelos,Centro,2022,Televisión de paga,238388,560356,42.542,1.412,2699
+18,Nayarit,Centro-Occidente,2022,Televisión de paga,131811,352711,37.371,1.596,2019
+19,Nuevo León,Norte,2022,Televisión de paga,765397,1644089,46.554,1.585,2175
+20,Oaxaca,Sur-Sureste,2022,Televisión de paga,384851,1174756,32.76,1.69,1684
+21,Puebla,Centro,2022,Televisión de paga,738646,1871644,39.465,1.515,2290
+22,Querétaro,Centro,2022,Televisión de paga,303836,674133,45.071,1.374,2879
+23,Quintana Roo,Sur-Sureste,2022,Televisión de paga,259860,529067,49.117,1.614,2110
+24,San Luis Potosí,Centro-Occidente,2022,Televisión de paga,290960,802133,36.273,1.549,2131
+25,Sinaloa,Norte,2022,Televisión de paga,408310,861867,47.375,1.78,1729
+26,Sonora,Norte,2022,Televisión de paga,390346,836267,46.677,1.707,1883
+27,Tabasco,Sur-Sureste,2022,Televisión de paga,284346,682667,41.652,1.327,3047
+28,Tamaulipas,Norte,2022,Televisión de paga,442198,1004089,44.04,1.852,1580
+29,Tlaxcala,Centro,2022,Televisión de paga,160062,381156,41.994,1.856,1561
+30,Veracruz,Sur-Sureste,2022,Televisión de paga,852308,2292622,37.176,1.428,2540
+31,Yucatán,Sur-Sureste,2022,Televisión de paga,276402,659911,41.885,1.337,2992
+32,Zacatecas,Centro-Occidente,2022,Televisión de paga,190111,460800,41.257,1.587,2121
+00,Nacional,Nacional,2024,Televisión de paga,15069174,36680002,41.083,0.274,70776
+01,Aguascalientes,Centro-Occidente,2024,Televisión de paga,192002,416289,46.122,1.402,2773
+02,Baja California,Norte,2024,Televisión de paga,521840,1097489,47.549,1.76,1773
+03,Baja California Sur,Norte,2024,Televisión de paga,111981,232889,48.083,1.432,2677
+04,Campeche,Sur-Sureste,2024,Televisión de paga,101255,270733,37.4,1.836,1540
+05,Coahuila,Norte,2024,Televisión de paga,409356,917000,44.641,1.652,1987
+06,Colima,Centro-Occidente,2024,Televisión de paga,94467,212511,44.453,1.456,2552
+07,Chiapas,Sur-Sureste,2024,Televisión de paga,478765,1612756,29.686,1.447,2186
+08,Chihuahua,Norte,2024,Televisión de paga,467042,1088756,42.897,1.479,2470
+09,Ciudad de México,Centro,2024,Televisión de paga,1368086,2681133,51.026,1.347,3030
+10,Durango,Norte,2024,Televisión de paga,223656,532733,41.983,1.643,1973
+11,Guanajuato,Centro-Occidente,2024,Televisión de paga,713740,1796156,39.737,1.536,2237
+12,Guerrero,Sur-Sureste,2024,Televisión de paga,335128,1030533,32.52,1.569,1998
+13,Hidalgo,Centro,2024,Televisión de paga,327007,896622,36.471,1.824,1549
+14,Jalisco,Centro-Occidente,2024,Televisión de paga,1023627,2430778,42.111,1.855,1560
+15,Estado de México,Centro,2024,Televisión de paga,2142085,4945978,43.31,1.432,2625
+16,Michoacán,Centro-Occidente,2024,Televisión de paga,536759,1382778,38.817,1.478,2415
+17,Morelos,Centro,2024,Televisión de paga,233314,573489,40.683,1.356,2894
+18,Nayarit,Centro-Occidente,2024,Televisión de paga,128298,360978,35.542,1.369,2685
+19,Nuevo León,Norte,2024,Televisión de paga,738117,1682622,43.867,1.849,1586
+20,Oaxaca,Sur-Sureste,2024,Televisión de paga,374226,1202289,31.126,1.634,1746
+21,Puebla,Centro,2024,Televisión de paga,726669,1915511,37.936,1.739,1709
+22,Querétaro,Centro,2024,Televisión de paga,300549,689933,43.562,1.647,1986
+23,Quintana Roo,Sur-Sureste,2024,Televisión de paga,255408,541467,47.17,1.54,2313
+24,San Luis Potosí,Centro-Occidente,2024,Televisión de paga,289094,820933,35.215,1.745,1644
+25,Sinaloa,Norte,2024,Televisión de paga,401271,882067,45.492,1.339,3039
+26,Sonora,Norte,2024,Televisión de paga,399162,855867,46.638,1.604,2122
+27,Tabasco,Sur-Sureste,2024,Televisión de paga,281981,698667,40.36,1.656,1932
+28,Tamaulipas,Norte,2024,Televisión de paga,432236,1027622,42.062,1.331,3029
+29,Tlaxcala,Centro,2024,Televisión de paga,159174,390089,40.805,1.349,2918
+30,Veracruz,Sur-Sureste,2024,Televisión de paga,850395,2346356,36.243,1.658,1848
+31,Yucatán,Sur-Sureste,2024,Televisión de paga,266850,675378,39.511,1.723,1777
+32,Zacatecas,Centro-Occidente,2024,Televisión de paga,185634,471600,39.363,1.547,2203

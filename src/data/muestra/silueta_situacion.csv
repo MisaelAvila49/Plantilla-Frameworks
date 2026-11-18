@@ -1,0 +1,65 @@
+region,periodo,sexo,situacion,personas,casos
+Norte,2015 a 2020,Mujeres,Dejó de cumplir,632114,671
+Norte,2015 a 2020,Mujeres,Empezó a cumplir,754066,815
+Norte,2015 a 2020,Mujeres,Cumple en los dos años,2660220,2136
+Norte,2015 a 2020,Mujeres,No cumple en ninguno,9240600,8429
+Norte,2015 a 2020,Hombres,Dejó de cumplir,512525,425
+Norte,2015 a 2020,Hombres,Empezó a cumplir,927576,1099
+Norte,2015 a 2020,Hombres,Cumple en los dos años,2509160,2419
+Norte,2015 a 2020,Hombres,No cumple en ninguno,8563739,9043
+Norte,2020 a 2025,Mujeres,Dejó de cumplir,1143689,989
+Norte,2020 a 2025,Mujeres,Empezó a cumplir,734807,660
+Norte,2020 a 2025,Mujeres,Cumple en los dos años,2958676,2713
+Norte,2020 a 2025,Mujeres,No cumple en ninguno,8981308,8218
+Norte,2020 a 2025,Hombres,Dejó de cumplir,1011225,1028
+Norte,2020 a 2025,Hombres,Empezó a cumplir,880445,1192
+Norte,2020 a 2025,Hombres,Cumple en los dos años,2246627,2243
+Norte,2020 a 2025,Hombres,No cumple en ninguno,8875223,9143
+Centro-Occidente,2015 a 2020,Mujeres,Dejó de cumplir,486259,445
+Centro-Occidente,2015 a 2020,Mujeres,Empezó a cumplir,707115,803
+Centro-Occidente,2015 a 2020,Mujeres,Cumple en los dos años,2566886,2795
+Centro-Occidente,2015 a 2020,Mujeres,No cumple en ninguno,9166240,10697
+Centro-Occidente,2015 a 2020,Hombres,Dejó de cumplir,471725,618
+Centro-Occidente,2015 a 2020,Hombres,Empezó a cumplir,1011160,1416
+Centro-Occidente,2015 a 2020,Hombres,Cumple en los dos años,2668502,2555
+Centro-Occidente,2015 a 2020,Hombres,No cumple en ninguno,8022113,9787
+Centro-Occidente,2020 a 2025,Mujeres,Dejó de cumplir,846042,736
+Centro-Occidente,2020 a 2025,Mujeres,Empezó a cumplir,1280773,1442
+Centro-Occidente,2020 a 2025,Mujeres,Cumple en los dos años,2114521,2943
+Centro-Occidente,2020 a 2025,Mujeres,No cumple en ninguno,9202224,7432
+Centro-Occidente,2020 a 2025,Hombres,Dejó de cumplir,706294,878
+Centro-Occidente,2020 a 2025,Hombres,Empezó a cumplir,407910,399
+Centro-Occidente,2020 a 2025,Hombres,Cumple en los dos años,1867170,1976
+Centro-Occidente,2020 a 2025,Hombres,No cumple en ninguno,9679066,9609
+Centro,2015 a 2020,Mujeres,Dejó de cumplir,995063,1024
+Centro,2015 a 2020,Mujeres,Empezó a cumplir,882634,1030
+Centro,2015 a 2020,Mujeres,Cumple en los dos años,5435959,5287
+Centro,2015 a 2020,Mujeres,No cumple en ninguno,12565344,12392
+Centro,2015 a 2020,Hombres,Dejó de cumplir,1355437,1115
+Centro,2015 a 2020,Hombres,Empezó a cumplir,709121,931
+Centro,2015 a 2020,Hombres,Cumple en los dos años,4537562,6124
+Centro,2015 a 2020,Hombres,No cumple en ninguno,12118880,12164
+Centro,2020 a 2025,Mujeres,Dejó de cumplir,1343669,1637
+Centro,2020 a 2025,Mujeres,Empezó a cumplir,941726,761
+Centro,2020 a 2025,Mujeres,Cumple en los dos años,5336228,5544
+Centro,2020 a 2025,Mujeres,No cumple en ninguno,13052537,13097
+Centro,2020 a 2025,Hombres,Dejó de cumplir,1203090,1233
+Centro,2020 a 2025,Hombres,Empezó a cumplir,961488,896
+Centro,2020 a 2025,Hombres,Cumple en los dos años,5188529,4090
+Centro,2020 a 2025,Hombres,No cumple en ninguno,12116733,14961
+Sur-Sureste,2015 a 2020,Mujeres,Dejó de cumplir,798145,904
+Sur-Sureste,2015 a 2020,Mujeres,Empezó a cumplir,739019,666
+Sur-Sureste,2015 a 2020,Mujeres,Cumple en los dos años,4514867,4811
+Sur-Sureste,2015 a 2020,Mujeres,No cumple en ninguno,8573969,9115
+Sur-Sureste,2015 a 2020,Hombres,Dejó de cumplir,1053537,826
+Sur-Sureste,2015 a 2020,Hombres,Empezó a cumplir,840566,712
+Sur-Sureste,2015 a 2020,Hombres,Cumple en los dos años,3788461,3318
+Sur-Sureste,2015 a 2020,Hombres,No cumple en ninguno,8091436,8985
+Sur-Sureste,2020 a 2025,Mujeres,Dejó de cumplir,1520645,1976
+Sur-Sureste,2020 a 2025,Mujeres,Empezó a cumplir,635763,599
+Sur-Sureste,2020 a 2025,Mujeres,Cumple en los dos años,3233070,3218
+Sur-Sureste,2020 a 2025,Mujeres,No cumple en ninguno,9821562,11275
+Sur-Sureste,2020 a 2025,Hombres,Dejó de cumplir,1317253,1445
+Sur-Sureste,2020 a 2025,Hombres,Empezó a cumplir,648800,563
+Sur-Sureste,2020 a 2025,Hombres,Cumple en los dos años,3355539,4179
+Sur-Sureste,2020 a 2025,Hombres,No cumple en ninguno,9003368,7533

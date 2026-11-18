@@ -1,0 +1,993 @@
+cve_origen,origen,cve_destino,destino,personas,casos
+01,Aguascalientes,02,Baja California,20691,150
+01,Aguascalientes,03,Baja California Sur,4583,30
+01,Aguascalientes,04,Campeche,1899,16
+01,Aguascalientes,05,Coahuila,4673,40
+01,Aguascalientes,06,Colima,2322,15
+01,Aguascalientes,07,Chiapas,416,3
+01,Aguascalientes,08,Chihuahua,2209,18
+01,Aguascalientes,09,Ciudad de México,2904,23
+01,Aguascalientes,10,Durango,5021,45
+01,Aguascalientes,11,Guanajuato,3179,19
+01,Aguascalientes,12,Guerrero,1792,15
+01,Aguascalientes,13,Hidalgo,2863,18
+01,Aguascalientes,14,Jalisco,7653,66
+01,Aguascalientes,15,Estado de México,11295,76
+01,Aguascalientes,16,Michoacán,1751,12
+01,Aguascalientes,17,Morelos,2228,16
+01,Aguascalientes,18,Nayarit,7990,49
+01,Aguascalientes,19,Nuevo León,15009,101
+01,Aguascalientes,20,Oaxaca,2896,26
+01,Aguascalientes,21,Puebla,1448,11
+01,Aguascalientes,22,Querétaro,13439,117
+01,Aguascalientes,23,Quintana Roo,10860,72
+01,Aguascalientes,24,San Luis Potosí,6768,50
+01,Aguascalientes,25,Sinaloa,1378,11
+01,Aguascalientes,26,Sonora,1373,8
+01,Aguascalientes,27,Tabasco,668,6
+01,Aguascalientes,28,Tamaulipas,1658,15
+01,Aguascalientes,29,Tlaxcala,4247,26
+01,Aguascalientes,30,Veracruz,538,4
+01,Aguascalientes,31,Yucatán,346,2
+01,Aguascalientes,32,Zacatecas,27884,220
+02,Baja California,01,Aguascalientes,945,6
+02,Baja California,03,Baja California Sur,1951,14
+02,Baja California,04,Campeche,304,2
+02,Baja California,05,Coahuila,956,6
+02,Baja California,06,Colima,235,2
+02,Baja California,07,Chiapas,104,1
+02,Baja California,08,Chihuahua,1585,12
+02,Baja California,09,Ciudad de México,434,4
+02,Baja California,10,Durango,634,6
+02,Baja California,11,Guanajuato,667,4
+02,Baja California,12,Guerrero,377,2
+02,Baja California,13,Hidalgo,221,2
+02,Baja California,14,Jalisco,868,5
+02,Baja California,15,Estado de México,1456,12
+02,Baja California,16,Michoacán,367,2
+02,Baja California,17,Morelos,334,2
+02,Baja California,18,Nayarit,1127,7
+02,Baja California,19,Nuevo León,2126,15
+02,Baja California,20,Oaxaca,1046,7
+02,Baja California,21,Puebla,271,2
+02,Baja California,22,Querétaro,1468,13
+02,Baja California,23,Quintana Roo,1356,9
+02,Baja California,24,San Luis Potosí,511,3
+02,Baja California,25,Sinaloa,310,2
+02,Baja California,26,Sonora,1201,10
+02,Baja California,27,Tabasco,250,1
+02,Baja California,28,Tamaulipas,719,6
+02,Baja California,29,Tlaxcala,783,7
+02,Baja California,30,Veracruz,78,1
+02,Baja California,31,Yucatán,254,2
+02,Baja California,32,Zacatecas,3277,23
+03,Baja California Sur,01,Aguascalientes,2460,18
+03,Baja California Sur,02,Baja California,27885,201
+03,Baja California Sur,04,Campeche,483,3
+03,Baja California Sur,05,Coahuila,2887,18
+03,Baja California Sur,06,Colima,476,3
+03,Baja California Sur,07,Chiapas,250,2
+03,Baja California Sur,08,Chihuahua,2871,22
+03,Baja California Sur,09,Ciudad de México,1692,11
+03,Baja California Sur,10,Durango,5290,46
+03,Baja California Sur,11,Guanajuato,1109,8
+03,Baja California Sur,12,Guerrero,1173,8
+03,Baja California Sur,13,Hidalgo,743,5
+03,Baja California Sur,14,Jalisco,1484,13
+03,Baja California Sur,15,Estado de México,2018,16
+03,Baja California Sur,16,Michoacán,1034,8
+03,Baja California Sur,17,Morelos,1217,9
+03,Baja California Sur,18,Nayarit,3157,20
+03,Baja California Sur,19,Nuevo León,9141,66
+03,Baja California Sur,20,Oaxaca,574,4
+03,Baja California Sur,21,Puebla,737,6
+03,Baja California Sur,22,Querétaro,2434,20
+03,Baja California Sur,23,Quintana Roo,5833,35
+03,Baja California Sur,24,San Luis Potosí,1948,13
+03,Baja California Sur,25,Sinaloa,659,4
+03,Baja California Sur,26,Sonora,2169,13
+03,Baja California Sur,27,Tabasco,326,3
+03,Baja California Sur,28,Tamaulipas,1921,13
+03,Baja California Sur,29,Tlaxcala,1197,7
+03,Baja California Sur,30,Veracruz,171,1
+03,Baja California Sur,31,Yucatán,853,6
+03,Baja California Sur,32,Zacatecas,4886,31
+04,Campeche,01,Aguascalientes,1987,15
+04,Campeche,02,Baja California,15824,93
+04,Campeche,03,Baja California Sur,1649,13
+04,Campeche,05,Coahuila,2306,15
+04,Campeche,06,Colima,447,4
+04,Campeche,07,Chiapas,602,4
+04,Campeche,08,Chihuahua,856,5
+04,Campeche,09,Ciudad de México,632,5
+04,Campeche,10,Durango,1767,16
+04,Campeche,11,Guanajuato,860,5
+04,Campeche,12,Guerrero,1792,12
+04,Campeche,13,Hidalgo,2211,17
+04,Campeche,14,Jalisco,4795,34
+04,Campeche,15,Estado de México,10052,74
+04,Campeche,16,Michoacán,1318,10
+04,Campeche,17,Morelos,2893,18
+04,Campeche,18,Nayarit,2028,12
+04,Campeche,19,Nuevo León,3251,20
+04,Campeche,20,Oaxaca,1661,13
+04,Campeche,21,Puebla,788,6
+04,Campeche,22,Querétaro,6619,49
+04,Campeche,23,Quintana Roo,80267,642
+04,Campeche,24,San Luis Potosí,2489,16
+04,Campeche,25,Sinaloa,228,2
+04,Campeche,26,Sonora,825,7
+04,Campeche,27,Tabasco,2604,18
+04,Campeche,28,Tamaulipas,3009,24
+04,Campeche,29,Tlaxcala,5386,48
+04,Campeche,30,Veracruz,270,2
+04,Campeche,31,Yucatán,2790,23
+04,Campeche,32,Zacatecas,4531,41
+05,Coahuila,01,Aguascalientes,3058,23
+05,Coahuila,02,Baja California,2246,15
+05,Coahuila,03,Baja California Sur,276,2
+05,Coahuila,04,Campeche,211,2
+05,Coahuila,06,Colima,120,1
+05,Coahuila,07,Chiapas,161,1
+05,Coahuila,08,Chihuahua,617,4
+05,Coahuila,09,Ciudad de México,615,4
+05,Coahuila,10,Durango,2250,14
+05,Coahuila,11,Guanajuato,646,6
+05,Coahuila,12,Guerrero,808,6
+05,Coahuila,13,Hidalgo,682,6
+05,Coahuila,14,Jalisco,1756,12
+05,Coahuila,15,Estado de México,1643,13
+05,Coahuila,16,Michoacán,458,3
+05,Coahuila,17,Morelos,437,3
+05,Coahuila,18,Nayarit,379,3
+05,Coahuila,19,Nuevo León,5314,33
+05,Coahuila,20,Oaxaca,317,3
+05,Coahuila,21,Puebla,215,2
+05,Coahuila,22,Querétaro,2136,13
+05,Coahuila,23,Quintana Roo,2629,16
+05,Coahuila,24,San Luis Potosí,1923,15
+05,Coahuila,25,Sinaloa,148,1
+05,Coahuila,26,Sonora,304,2
+05,Coahuila,27,Tabasco,168,1
+05,Coahuila,28,Tamaulipas,443,4
+05,Coahuila,29,Tlaxcala,1263,10
+05,Coahuila,30,Veracruz,90,1
+05,Coahuila,31,Yucatán,390,2
+05,Coahuila,32,Zacatecas,7028,47
+06,Colima,01,Aguascalientes,1016,7
+06,Colima,02,Baja California,3556,21
+06,Colima,03,Baja California Sur,343,2
+06,Colima,04,Campeche,199,1
+06,Colima,05,Coahuila,347,3
+06,Colima,07,Chiapas,85,1
+06,Colima,08,Chihuahua,740,6
+06,Colima,09,Ciudad de México,538,3
+06,Colima,10,Durango,439,3
+06,Colima,11,Guanajuato,852,7
+06,Colima,12,Guerrero,1796,14
+06,Colima,13,Hidalgo,216,1
+06,Colima,14,Jalisco,4412,36
+06,Colima,15,Estado de México,3784,25
+06,Colima,16,Michoacán,295,2
+06,Colima,17,Morelos,688,4
+06,Colima,18,Nayarit,898,7
+06,Colima,19,Nuevo León,2711,22
+06,Colima,20,Oaxaca,481,4
+06,Colima,21,Puebla,196,1
+06,Colima,22,Querétaro,1508,13
+06,Colima,23,Quintana Roo,1547,14
+06,Colima,24,San Luis Potosí,1613,10
+06,Colima,25,Sinaloa,92,1
+06,Colima,26,Sonora,243,1
+06,Colima,27,Tabasco,187,1
+06,Colima,28,Tamaulipas,788,7
+06,Colima,29,Tlaxcala,1534,10
+06,Colima,30,Veracruz,63,1
+06,Colima,31,Yucatán,104,1
+06,Colima,32,Zacatecas,7496,62
+07,Chiapas,01,Aguascalientes,2747,18
+07,Chiapas,02,Baja California,10527,66
+07,Chiapas,03,Baja California Sur,2275,15
+07,Chiapas,04,Campeche,2086,17
+07,Chiapas,05,Coahuila,1320,10
+07,Chiapas,06,Colima,1346,12
+07,Chiapas,08,Chihuahua,3469,22
+07,Chiapas,09,Ciudad de México,2993,22
+07,Chiapas,10,Durango,3784,22
+07,Chiapas,11,Guanajuato,3571,24
+07,Chiapas,12,Guerrero,3113,20
+07,Chiapas,13,Hidalgo,1715,11
+07,Chiapas,14,Jalisco,7205,54
+07,Chiapas,15,Estado de México,15223,96
+07,Chiapas,16,Michoacán,1400,9
+07,Chiapas,17,Morelos,1232,8
+07,Chiapas,18,Nayarit,1008,7
+07,Chiapas,19,Nuevo León,21229,141
+07,Chiapas,20,Oaxaca,2844,25
+07,Chiapas,21,Puebla,1238,8
+07,Chiapas,22,Querétaro,4281,26
+07,Chiapas,23,Quintana Roo,35056,311
+07,Chiapas,24,San Luis Potosí,2980,26
+07,Chiapas,25,Sinaloa,764,5
+07,Chiapas,26,Sonora,477,4
+07,Chiapas,27,Tabasco,6766,43
+07,Chiapas,28,Tamaulipas,2248,15
+07,Chiapas,29,Tlaxcala,6192,39
+07,Chiapas,30,Veracruz,514,4
+07,Chiapas,31,Yucatán,4315,26
+07,Chiapas,32,Zacatecas,4647,31
+08,Chihuahua,01,Aguascalientes,1725,16
+08,Chihuahua,02,Baja California,10659,82
+08,Chihuahua,03,Baja California Sur,4210,27
+08,Chihuahua,04,Campeche,743,5
+08,Chihuahua,05,Coahuila,1144,7
+08,Chihuahua,06,Colima,440,3
+08,Chihuahua,07,Chiapas,169,1
+08,Chihuahua,09,Ciudad de México,1213,10
+08,Chihuahua,10,Durango,3601,22
+08,Chihuahua,11,Guanajuato,737,5
+08,Chihuahua,12,Guerrero,490,3
+08,Chihuahua,13,Hidalgo,957,7
+08,Chihuahua,14,Jalisco,1942,14
+08,Chihuahua,15,Estado de México,1609,10
+08,Chihuahua,16,Michoacán,1226,8
+08,Chihuahua,17,Morelos,685,6
+08,Chihuahua,18,Nayarit,1680,12
+08,Chihuahua,19,Nuevo León,8719,67
+08,Chihuahua,20,Oaxaca,1330,11
+08,Chihuahua,21,Puebla,326,3
+08,Chihuahua,22,Querétaro,6910,50
+08,Chihuahua,23,Quintana Roo,9994,67
+08,Chihuahua,24,San Luis Potosí,3204,19
+08,Chihuahua,25,Sinaloa,732,6
+08,Chihuahua,26,Sonora,1487,12
+08,Chihuahua,27,Tabasco,541,3
+08,Chihuahua,28,Tamaulipas,1821,13
+08,Chihuahua,29,Tlaxcala,978,6
+08,Chihuahua,30,Veracruz,295,2
+08,Chihuahua,31,Yucatán,379,3
+08,Chihuahua,32,Zacatecas,7361,50
+09,Ciudad de México,01,Aguascalientes,3377,29
+09,Ciudad de México,02,Baja California,13965,100
+09,Ciudad de México,03,Baja California Sur,1820,12
+09,Ciudad de México,04,Campeche,925,6
+09,Ciudad de México,05,Coahuila,3456,27
+09,Ciudad de México,06,Colima,1108,8
+09,Ciudad de México,07,Chiapas,420,3
+09,Ciudad de México,08,Chihuahua,1722,11
+09,Ciudad de México,10,Durango,1212,7
+09,Ciudad de México,11,Guanajuato,2841,25
+09,Ciudad de México,12,Guerrero,6293,42
+09,Ciudad de México,13,Hidalgo,1693,12
+09,Ciudad de México,14,Jalisco,7574,59
+09,Ciudad de México,15,Estado de México,11123,98
+09,Ciudad de México,16,Michoacán,4247,28
+09,Ciudad de México,17,Morelos,8339,69
+09,Ciudad de México,18,Nayarit,3500,21
+09,Ciudad de México,19,Nuevo León,10869,65
+09,Ciudad de México,20,Oaxaca,3101,21
+09,Ciudad de México,21,Puebla,927,7
+09,Ciudad de México,22,Querétaro,11094,73
+09,Ciudad de México,23,Quintana Roo,11296,80
+09,Ciudad de México,24,San Luis Potosí,9296,56
+09,Ciudad de México,25,Sinaloa,547,4
+09,Ciudad de México,26,Sonora,494,4
+09,Ciudad de México,27,Tabasco,1174,10
+09,Ciudad de México,28,Tamaulipas,2648,19
+09,Ciudad de México,29,Tlaxcala,14858,120
+09,Ciudad de México,30,Veracruz,1181,10
+09,Ciudad de México,31,Yucatán,1394,11
+09,Ciudad de México,32,Zacatecas,30115,243
+10,Durango,01,Aguascalientes,2240,20
+10,Durango,02,Baja California,7070,50
+10,Durango,03,Baja California Sur,2517,21
+10,Durango,04,Campeche,419,3
+10,Durango,05,Coahuila,2036,17
+10,Durango,06,Colima,300,2
+10,Durango,07,Chiapas,94,1
+10,Durango,08,Chihuahua,1104,8
+10,Durango,09,Ciudad de México,464,3
+10,Durango,11,Guanajuato,1089,7
+10,Durango,12,Guerrero,884,6
+10,Durango,13,Hidalgo,467,3
+10,Durango,14,Jalisco,4969,41
+10,Durango,15,Estado de México,1289,8
+10,Durango,16,Michoacán,786,5
+10,Durango,17,Morelos,565,4
+10,Durango,18,Nayarit,2791,19
+10,Durango,19,Nuevo León,5743,52
+10,Durango,20,Oaxaca,575,4
+10,Durango,21,Puebla,248,2
+10,Durango,22,Querétaro,1316,11
+10,Durango,23,Quintana Roo,2915,25
+10,Durango,24,San Luis Potosí,3036,26
+10,Durango,25,Sinaloa,681,4
+10,Durango,26,Sonora,299,2
+10,Durango,27,Tabasco,399,2
+10,Durango,28,Tamaulipas,1242,9
+10,Durango,29,Tlaxcala,655,5
+10,Durango,30,Veracruz,152,1
+10,Durango,31,Yucatán,274,2
+10,Durango,32,Zacatecas,4643,38
+11,Guanajuato,01,Aguascalientes,4744,36
+11,Guanajuato,02,Baja California,4822,38
+11,Guanajuato,03,Baja California Sur,764,7
+11,Guanajuato,04,Campeche,457,4
+11,Guanajuato,05,Coahuila,838,7
+11,Guanajuato,06,Colima,383,3
+11,Guanajuato,07,Chiapas,440,3
+11,Guanajuato,08,Chihuahua,1021,9
+11,Guanajuato,09,Ciudad de México,3167,24
+11,Guanajuato,10,Durango,414,3
+11,Guanajuato,12,Guerrero,1167,9
+11,Guanajuato,13,Hidalgo,1397,8
+11,Guanajuato,14,Jalisco,1608,11
+11,Guanajuato,15,Estado de México,2800,25
+11,Guanajuato,16,Michoacán,1365,10
+11,Guanajuato,17,Morelos,1245,8
+11,Guanajuato,18,Nayarit,2607,22
+11,Guanajuato,19,Nuevo León,5891,38
+11,Guanajuato,20,Oaxaca,1623,10
+11,Guanajuato,21,Puebla,664,4
+11,Guanajuato,22,Querétaro,12735,91
+11,Guanajuato,23,Quintana Roo,3152,26
+11,Guanajuato,24,San Luis Potosí,4313,37
+11,Guanajuato,25,Sinaloa,120,1
+11,Guanajuato,26,Sonora,653,4
+11,Guanajuato,27,Tabasco,315,2
+11,Guanajuato,28,Tamaulipas,1836,15
+11,Guanajuato,29,Tlaxcala,2355,19
+11,Guanajuato,30,Veracruz,183,2
+11,Guanajuato,31,Yucatán,332,3
+11,Guanajuato,32,Zacatecas,14522,90
+12,Guerrero,01,Aguascalientes,6005,43
+12,Guerrero,02,Baja California,25064,177
+12,Guerrero,03,Baja California Sur,1951,15
+12,Guerrero,04,Campeche,1706,15
+12,Guerrero,05,Coahuila,3538,28
+12,Guerrero,06,Colima,795,6
+12,Guerrero,07,Chiapas,508,3
+12,Guerrero,08,Chihuahua,2418,14
+12,Guerrero,09,Ciudad de México,7297,45
+12,Guerrero,10,Durango,2848,17
+12,Guerrero,11,Guanajuato,5203,32
+12,Guerrero,13,Hidalgo,6673,49
+12,Guerrero,14,Jalisco,3564,25
+12,Guerrero,15,Estado de México,12553,82
+12,Guerrero,16,Michoacán,6025,38
+12,Guerrero,17,Morelos,7484,62
+12,Guerrero,18,Nayarit,5054,31
+12,Guerrero,19,Nuevo León,12661,114
+12,Guerrero,20,Oaxaca,5841,36
+12,Guerrero,21,Puebla,2211,15
+12,Guerrero,22,Querétaro,18504,123
+12,Guerrero,23,Quintana Roo,39357,271
+12,Guerrero,24,San Luis Potosí,6898,61
+12,Guerrero,25,Sinaloa,857,5
+12,Guerrero,26,Sonora,1344,10
+12,Guerrero,27,Tabasco,4121,27
+12,Guerrero,28,Tamaulipas,3294,22
+12,Guerrero,29,Tlaxcala,4626,30
+12,Guerrero,30,Veracruz,807,6
+12,Guerrero,31,Yucatán,3866,29
+12,Guerrero,32,Zacatecas,18629,144
+13,Hidalgo,01,Aguascalientes,3046,21
+13,Hidalgo,02,Baja California,2629,24
+13,Hidalgo,03,Baja California Sur,530,4
+13,Hidalgo,04,Campeche,171,2
+13,Hidalgo,05,Coahuila,351,2
+13,Hidalgo,06,Colima,204,2
+13,Hidalgo,07,Chiapas,52,1
+13,Hidalgo,08,Chihuahua,1004,6
+13,Hidalgo,09,Ciudad de México,1418,11
+13,Hidalgo,10,Durango,632,5
+13,Hidalgo,11,Guanajuato,984,6
+13,Hidalgo,12,Guerrero,812,5
+13,Hidalgo,14,Jalisco,835,5
+13,Hidalgo,15,Estado de México,2069,15
+13,Hidalgo,16,Michoacán,535,3
+13,Hidalgo,17,Morelos,1093,7
+13,Hidalgo,18,Nayarit,1047,7
+13,Hidalgo,19,Nuevo León,5742,40
+13,Hidalgo,20,Oaxaca,634,5
+13,Hidalgo,21,Puebla,240,2
+13,Hidalgo,22,Querétaro,7255,56
+13,Hidalgo,23,Quintana Roo,2781,21
+13,Hidalgo,24,San Luis Potosí,686,4
+13,Hidalgo,25,Sinaloa,98,1
+13,Hidalgo,26,Sonora,114,1
+13,Hidalgo,27,Tabasco,219,2
+13,Hidalgo,28,Tamaulipas,478,3
+13,Hidalgo,29,Tlaxcala,2254,18
+13,Hidalgo,30,Veracruz,497,4
+13,Hidalgo,31,Yucatán,174,2
+13,Hidalgo,32,Zacatecas,4693,29
+14,Jalisco,01,Aguascalientes,14764,90
+14,Jalisco,02,Baja California,18920,162
+14,Jalisco,03,Baja California Sur,2715,22
+14,Jalisco,04,Campeche,1264,8
+14,Jalisco,05,Coahuila,3590,21
+14,Jalisco,06,Colima,2063,14
+14,Jalisco,07,Chiapas,237,1
+14,Jalisco,08,Chihuahua,4475,33
+14,Jalisco,09,Ciudad de México,3574,22
+14,Jalisco,10,Durango,6038,39
+14,Jalisco,11,Guanajuato,4157,37
+14,Jalisco,12,Guerrero,4437,38
+14,Jalisco,13,Hidalgo,1366,10
+14,Jalisco,15,Estado de México,5219,35
+14,Jalisco,16,Michoacán,5552,33
+14,Jalisco,17,Morelos,3123,22
+14,Jalisco,18,Nayarit,7207,52
+14,Jalisco,19,Nuevo León,12447,86
+14,Jalisco,20,Oaxaca,2875,19
+14,Jalisco,21,Puebla,508,4
+14,Jalisco,22,Querétaro,8181,74
+14,Jalisco,23,Quintana Roo,6441,38
+14,Jalisco,24,San Luis Potosí,3142,27
+14,Jalisco,25,Sinaloa,757,5
+14,Jalisco,26,Sonora,1290,11
+14,Jalisco,27,Tabasco,685,5
+14,Jalisco,28,Tamaulipas,3847,25
+14,Jalisco,29,Tlaxcala,2463,18
+14,Jalisco,30,Veracruz,519,4
+14,Jalisco,31,Yucatán,628,5
+14,Jalisco,32,Zacatecas,32358,273
+15,Estado de México,01,Aguascalientes,348,3
+15,Estado de México,02,Baja California,3327,29
+15,Estado de México,03,Baja California Sur,464,4
+15,Estado de México,04,Campeche,391,3
+15,Estado de México,05,Coahuila,607,4
+15,Estado de México,06,Colima,288,2
+15,Estado de México,07,Chiapas,145,1
+15,Estado de México,08,Chihuahua,263,2
+15,Estado de México,09,Ciudad de México,1267,9
+15,Estado de México,10,Durango,426,3
+15,Estado de México,11,Guanajuato,440,3
+15,Estado de México,12,Guerrero,1469,13
+15,Estado de México,13,Hidalgo,1198,8
+15,Estado de México,14,Jalisco,717,6
+15,Estado de México,16,Michoacán,742,6
+15,Estado de México,17,Morelos,1132,7
+15,Estado de México,18,Nayarit,401,3
+15,Estado de México,19,Nuevo León,2990,22
+15,Estado de México,20,Oaxaca,547,3
+15,Estado de México,21,Puebla,680,6
+15,Estado de México,22,Querétaro,4926,40
+15,Estado de México,23,Quintana Roo,2644,22
+15,Estado de México,24,San Luis Potosí,1350,8
+15,Estado de México,25,Sinaloa,99,1
+15,Estado de México,26,Sonora,79,1
+15,Estado de México,27,Tabasco,211,2
+15,Estado de México,28,Tamaulipas,567,5
+15,Estado de México,29,Tlaxcala,1617,10
+15,Estado de México,30,Veracruz,299,2
+15,Estado de México,31,Yucatán,199,2
+15,Estado de México,32,Zacatecas,1899,17
+16,Michoacán,01,Aguascalientes,4171,27
+16,Michoacán,02,Baja California,7815,59
+16,Michoacán,03,Baja California Sur,550,3
+16,Michoacán,04,Campeche,417,3
+16,Michoacán,05,Coahuila,645,4
+16,Michoacán,06,Colima,767,5
+16,Michoacán,07,Chiapas,197,1
+16,Michoacán,08,Chihuahua,1566,11
+16,Michoacán,09,Ciudad de México,1811,11
+16,Michoacán,10,Durango,2439,21
+16,Michoacán,11,Guanajuato,1999,13
+16,Michoacán,12,Guerrero,3062,23
+16,Michoacán,13,Hidalgo,1683,14
+16,Michoacán,14,Jalisco,5018,44
+16,Michoacán,15,Estado de México,3083,20
+16,Michoacán,17,Morelos,1402,8
+16,Michoacán,18,Nayarit,1773,11
+16,Michoacán,19,Nuevo León,6721,48
+16,Michoacán,20,Oaxaca,743,5
+16,Michoacán,21,Puebla,472,4
+16,Michoacán,22,Querétaro,8551,53
+16,Michoacán,23,Quintana Roo,3432,28
+16,Michoacán,24,San Luis Potosí,9359,78
+16,Michoacán,25,Sinaloa,504,4
+16,Michoacán,26,Sonora,361,2
+16,Michoacán,27,Tabasco,641,4
+16,Michoacán,28,Tamaulipas,798,5
+16,Michoacán,29,Tlaxcala,2082,13
+16,Michoacán,30,Veracruz,247,2
+16,Michoacán,31,Yucatán,176,1
+16,Michoacán,32,Zacatecas,5580,47
+17,Morelos,01,Aguascalientes,2237,15
+17,Morelos,02,Baja California,7768,47
+17,Morelos,03,Baja California Sur,1026,7
+17,Morelos,04,Campeche,496,3
+17,Morelos,05,Coahuila,1321,9
+17,Morelos,06,Colima,570,4
+17,Morelos,07,Chiapas,234,2
+17,Morelos,08,Chihuahua,630,4
+17,Morelos,09,Ciudad de México,13045,91
+17,Morelos,10,Durango,1434,9
+17,Morelos,11,Guanajuato,3968,27
+17,Morelos,12,Guerrero,7806,50
+17,Morelos,13,Hidalgo,2448,17
+17,Morelos,14,Jalisco,6043,54
+17,Morelos,15,Estado de México,35433,230
+17,Morelos,16,Michoacán,2715,18
+17,Morelos,18,Nayarit,2247,20
+17,Morelos,19,Nuevo León,9481,74
+17,Morelos,20,Oaxaca,1992,13
+17,Morelos,21,Puebla,1676,10
+17,Morelos,22,Querétaro,3766,23
+17,Morelos,23,Quintana Roo,4735,29
+17,Morelos,24,San Luis Potosí,2676,23
+17,Morelos,25,Sinaloa,413,3
+17,Morelos,26,Sonora,200,1
+17,Morelos,27,Tabasco,1204,10
+17,Morelos,28,Tamaulipas,1918,12
+17,Morelos,29,Tlaxcala,8959,61
+17,Morelos,30,Veracruz,994,8
+17,Morelos,31,Yucatán,1413,11
+17,Morelos,32,Zacatecas,9451,79
+18,Nayarit,01,Aguascalientes,774,7
+18,Nayarit,02,Baja California,2660,24
+18,Nayarit,03,Baja California Sur,1260,9
+18,Nayarit,04,Campeche,96,1
+18,Nayarit,05,Coahuila,537,5
+18,Nayarit,06,Colima,64,1
+18,Nayarit,07,Chiapas,89,1
+18,Nayarit,08,Chihuahua,261,2
+18,Nayarit,09,Ciudad de México,444,3
+18,Nayarit,10,Durango,848,6
+18,Nayarit,11,Guanajuato,472,4
+18,Nayarit,12,Guerrero,594,4
+18,Nayarit,13,Hidalgo,385,3
+18,Nayarit,14,Jalisco,2797,19
+18,Nayarit,15,Estado de México,1509,13
+18,Nayarit,16,Michoacán,474,3
+18,Nayarit,17,Morelos,257,2
+18,Nayarit,19,Nuevo León,3341,23
+18,Nayarit,20,Oaxaca,243,2
+18,Nayarit,21,Puebla,475,4
+18,Nayarit,22,Querétaro,1894,17
+18,Nayarit,23,Quintana Roo,974,8
+18,Nayarit,24,San Luis Potosí,1988,12
+18,Nayarit,25,Sinaloa,111,1
+18,Nayarit,26,Sonora,362,2
+18,Nayarit,27,Tabasco,196,1
+18,Nayarit,28,Tamaulipas,557,4
+18,Nayarit,29,Tlaxcala,558,4
+18,Nayarit,30,Veracruz,80,1
+18,Nayarit,31,Yucatán,235,1
+18,Nayarit,32,Zacatecas,3152,20
+19,Nuevo León,01,Aguascalientes,297,2
+19,Nuevo León,02,Baja California,3433,24
+19,Nuevo León,03,Baja California Sur,611,5
+19,Nuevo León,04,Campeche,259,2
+19,Nuevo León,05,Coahuila,2067,13
+19,Nuevo León,06,Colima,219,2
+19,Nuevo León,07,Chiapas,90,1
+19,Nuevo León,08,Chihuahua,345,2
+19,Nuevo León,09,Ciudad de México,1001,6
+19,Nuevo León,10,Durango,884,5
+19,Nuevo León,11,Guanajuato,920,7
+19,Nuevo León,12,Guerrero,430,4
+19,Nuevo León,13,Hidalgo,395,3
+19,Nuevo León,14,Jalisco,1098,7
+19,Nuevo León,15,Estado de México,931,6
+19,Nuevo León,16,Michoacán,311,2
+19,Nuevo León,17,Morelos,395,3
+19,Nuevo León,18,Nayarit,706,5
+19,Nuevo León,20,Oaxaca,378,2
+19,Nuevo León,21,Puebla,204,1
+19,Nuevo León,22,Querétaro,1586,11
+19,Nuevo León,23,Quintana Roo,2372,18
+19,Nuevo León,24,San Luis Potosí,2825,18
+19,Nuevo León,25,Sinaloa,172,1
+19,Nuevo León,26,Sonora,152,1
+19,Nuevo León,27,Tabasco,335,2
+19,Nuevo León,28,Tamaulipas,1320,12
+19,Nuevo León,29,Tlaxcala,2130,16
+19,Nuevo León,30,Veracruz,126,1
+19,Nuevo León,31,Yucatán,186,2
+19,Nuevo León,32,Zacatecas,3348,26
+20,Oaxaca,01,Aguascalientes,1906,16
+20,Oaxaca,02,Baja California,9846,66
+20,Oaxaca,03,Baja California Sur,2329,19
+20,Oaxaca,04,Campeche,1126,8
+20,Oaxaca,05,Coahuila,566,4
+20,Oaxaca,06,Colima,823,5
+20,Oaxaca,07,Chiapas,603,4
+20,Oaxaca,08,Chihuahua,1274,10
+20,Oaxaca,09,Ciudad de México,4737,31
+20,Oaxaca,10,Durango,1152,7
+20,Oaxaca,11,Guanajuato,1938,15
+20,Oaxaca,12,Guerrero,5259,34
+20,Oaxaca,13,Hidalgo,1522,11
+20,Oaxaca,14,Jalisco,2863,18
+20,Oaxaca,15,Estado de México,29521,249
+20,Oaxaca,16,Michoacán,2372,16
+20,Oaxaca,17,Morelos,4026,29
+20,Oaxaca,18,Nayarit,3314,21
+20,Oaxaca,19,Nuevo León,8460,64
+20,Oaxaca,21,Puebla,918,6
+20,Oaxaca,22,Querétaro,8949,56
+20,Oaxaca,23,Quintana Roo,23461,147
+20,Oaxaca,24,San Luis Potosí,3883,35
+20,Oaxaca,25,Sinaloa,259,2
+20,Oaxaca,26,Sonora,622,4
+20,Oaxaca,27,Tabasco,1154,7
+20,Oaxaca,28,Tamaulipas,2151,15
+20,Oaxaca,29,Tlaxcala,8197,59
+20,Oaxaca,30,Veracruz,1478,11
+20,Oaxaca,31,Yucatán,914,8
+20,Oaxaca,32,Zacatecas,18202,159
+21,Puebla,01,Aguascalientes,1221,8
+21,Puebla,02,Baja California,4564,31
+21,Puebla,03,Baja California Sur,1127,9
+21,Puebla,04,Campeche,667,4
+21,Puebla,05,Coahuila,1638,10
+21,Puebla,06,Colima,376,3
+21,Puebla,07,Chiapas,572,4
+21,Puebla,08,Chihuahua,990,6
+21,Puebla,09,Ciudad de México,6211,44
+21,Puebla,10,Durango,571,4
+21,Puebla,11,Guanajuato,1512,12
+21,Puebla,12,Guerrero,1585,12
+21,Puebla,13,Hidalgo,4164,26
+21,Puebla,14,Jalisco,1356,8
+21,Puebla,15,Estado de México,11763,106
+21,Puebla,16,Michoacán,676,6
+21,Puebla,17,Morelos,2582,20
+21,Puebla,18,Nayarit,1246,9
+21,Puebla,19,Nuevo León,10577,75
+21,Puebla,20,Oaxaca,1724,16
+21,Puebla,22,Querétaro,4365,27
+21,Puebla,23,Quintana Roo,7534,48
+21,Puebla,24,San Luis Potosí,2875,18
+21,Puebla,25,Sinaloa,72,1
+21,Puebla,26,Sonora,163,1
+21,Puebla,27,Tabasco,904,6
+21,Puebla,28,Tamaulipas,3765,27
+21,Puebla,29,Tlaxcala,7691,62
+21,Puebla,30,Veracruz,864,6
+21,Puebla,31,Yucatán,394,3
+21,Puebla,32,Zacatecas,2622,17
+22,Querétaro,01,Aguascalientes,3463,24
+22,Querétaro,02,Baja California,6074,51
+22,Querétaro,03,Baja California Sur,1074,8
+22,Querétaro,04,Campeche,686,4
+22,Querétaro,05,Coahuila,1799,13
+22,Querétaro,06,Colima,334,2
+22,Querétaro,07,Chiapas,406,3
+22,Querétaro,08,Chihuahua,1378,9
+22,Querétaro,09,Ciudad de México,3524,23
+22,Querétaro,10,Durango,629,6
+22,Querétaro,11,Guanajuato,6163,54
+22,Querétaro,12,Guerrero,1560,13
+22,Querétaro,13,Hidalgo,4370,38
+22,Querétaro,14,Jalisco,5197,39
+22,Querétaro,15,Estado de México,8576,52
+22,Querétaro,16,Michoacán,1382,10
+22,Querétaro,17,Morelos,3849,23
+22,Querétaro,18,Nayarit,952,6
+22,Querétaro,19,Nuevo León,6015,45
+22,Querétaro,20,Oaxaca,899,6
+22,Querétaro,21,Puebla,516,4
+22,Querétaro,23,Quintana Roo,7097,43
+22,Querétaro,24,San Luis Potosí,8389,61
+22,Querétaro,25,Sinaloa,145,1
+22,Querétaro,26,Sonora,855,6
+22,Querétaro,27,Tabasco,586,5
+22,Querétaro,28,Tamaulipas,1090,7
+22,Querétaro,29,Tlaxcala,5883,40
+22,Querétaro,30,Veracruz,250,2
+22,Querétaro,31,Yucatán,221,2
+22,Querétaro,32,Zacatecas,10598,76
+23,Quintana Roo,01,Aguascalientes,616,4
+23,Quintana Roo,02,Baja California,3413,22
+23,Quintana Roo,03,Baja California Sur,1041,7
+23,Quintana Roo,04,Campeche,1478,10
+23,Quintana Roo,05,Coahuila,949,8
+23,Quintana Roo,06,Colima,194,1
+23,Quintana Roo,07,Chiapas,402,3
+23,Quintana Roo,08,Chihuahua,909,8
+23,Quintana Roo,09,Ciudad de México,1330,9
+23,Quintana Roo,10,Durango,846,7
+23,Quintana Roo,11,Guanajuato,892,7
+23,Quintana Roo,12,Guerrero,691,5
+23,Quintana Roo,13,Hidalgo,1198,8
+23,Quintana Roo,14,Jalisco,1789,16
+23,Quintana Roo,15,Estado de México,1946,17
+23,Quintana Roo,16,Michoacán,395,3
+23,Quintana Roo,17,Morelos,1235,9
+23,Quintana Roo,18,Nayarit,492,4
+23,Quintana Roo,19,Nuevo León,1874,11
+23,Quintana Roo,20,Oaxaca,1808,13
+23,Quintana Roo,21,Puebla,730,6
+23,Quintana Roo,22,Querétaro,3718,25
+23,Quintana Roo,24,San Luis Potosí,3381,29
+23,Quintana Roo,25,Sinaloa,92,1
+23,Quintana Roo,26,Sonora,306,2
+23,Quintana Roo,27,Tabasco,1070,9
+23,Quintana Roo,28,Tamaulipas,802,6
+23,Quintana Roo,29,Tlaxcala,2088,16
+23,Quintana Roo,30,Veracruz,182,2
+23,Quintana Roo,31,Yucatán,2039,16
+23,Quintana Roo,32,Zacatecas,5040,31
+24,San Luis Potosí,01,Aguascalientes,6988,45
+24,San Luis Potosí,02,Baja California,22358,140
+24,San Luis Potosí,03,Baja California Sur,3251,20
+24,San Luis Potosí,04,Campeche,458,3
+24,San Luis Potosí,05,Coahuila,4346,31
+24,San Luis Potosí,06,Colima,414,4
+24,San Luis Potosí,07,Chiapas,178,1
+24,San Luis Potosí,08,Chihuahua,3019,22
+24,San Luis Potosí,09,Ciudad de México,3291,28
+24,San Luis Potosí,10,Durango,4017,25
+24,San Luis Potosí,11,Guanajuato,5184,35
+24,San Luis Potosí,12,Guerrero,3197,23
+24,San Luis Potosí,13,Hidalgo,1245,9
+24,San Luis Potosí,14,Jalisco,6003,53
+24,San Luis Potosí,15,Estado de México,8930,72
+24,San Luis Potosí,16,Michoacán,1694,10
+24,San Luis Potosí,17,Morelos,1590,10
+24,San Luis Potosí,18,Nayarit,8058,48
+24,San Luis Potosí,19,Nuevo León,21790,154
+24,San Luis Potosí,20,Oaxaca,3465,22
+24,San Luis Potosí,21,Puebla,1748,15
+24,San Luis Potosí,22,Querétaro,12797,92
+24,San Luis Potosí,23,Quintana Roo,8327,58
+24,San Luis Potosí,25,Sinaloa,397,2
+24,San Luis Potosí,26,Sonora,2235,16
+24,San Luis Potosí,27,Tabasco,1714,11
+24,San Luis Potosí,28,Tamaulipas,2765,24
+24,San Luis Potosí,29,Tlaxcala,5107,42
+24,San Luis Potosí,30,Veracruz,1084,8
+24,San Luis Potosí,31,Yucatán,900,6
+24,San Luis Potosí,32,Zacatecas,14604,92
+25,Sinaloa,01,Aguascalientes,3489,27
+25,Sinaloa,02,Baja California,27350,176
+25,Sinaloa,03,Baja California Sur,3967,26
+25,Sinaloa,04,Campeche,510,3
+25,Sinaloa,05,Coahuila,1910,12
+25,Sinaloa,06,Colima,385,3
+25,Sinaloa,07,Chiapas,229,1
+25,Sinaloa,08,Chihuahua,2635,22
+25,Sinaloa,09,Ciudad de México,2007,12
+25,Sinaloa,10,Durango,6734,51
+25,Sinaloa,11,Guanajuato,2523,18
+25,Sinaloa,12,Guerrero,1903,16
+25,Sinaloa,13,Hidalgo,819,5
+25,Sinaloa,14,Jalisco,4333,30
+25,Sinaloa,15,Estado de México,4782,43
+25,Sinaloa,16,Michoacán,512,4
+25,Sinaloa,17,Morelos,623,4
+25,Sinaloa,18,Nayarit,2976,18
+25,Sinaloa,19,Nuevo León,3211,22
+25,Sinaloa,20,Oaxaca,2033,16
+25,Sinaloa,21,Puebla,238,2
+25,Sinaloa,22,Querétaro,3279,23
+25,Sinaloa,23,Quintana Roo,2585,21
+25,Sinaloa,24,San Luis Potosí,3029,27
+25,Sinaloa,26,Sonora,2520,21
+25,Sinaloa,27,Tabasco,1258,8
+25,Sinaloa,28,Tamaulipas,1482,9
+25,Sinaloa,29,Tlaxcala,2359,20
+25,Sinaloa,30,Veracruz,388,3
+25,Sinaloa,31,Yucatán,449,3
+25,Sinaloa,32,Zacatecas,24060,144
+26,Sonora,01,Aguascalientes,891,6
+26,Sonora,02,Baja California,36852,285
+26,Sonora,03,Baja California Sur,1629,10
+26,Sonora,04,Campeche,375,3
+26,Sonora,05,Coahuila,1481,9
+26,Sonora,06,Colima,257,2
+26,Sonora,07,Chiapas,98,1
+26,Sonora,08,Chihuahua,2659,16
+26,Sonora,09,Ciudad de México,2456,19
+26,Sonora,10,Durango,1592,10
+26,Sonora,11,Guanajuato,779,7
+26,Sonora,12,Guerrero,1183,8
+26,Sonora,13,Hidalgo,609,4
+26,Sonora,14,Jalisco,2733,23
+26,Sonora,15,Estado de México,1671,14
+26,Sonora,16,Michoacán,411,3
+26,Sonora,17,Morelos,1126,8
+26,Sonora,18,Nayarit,1355,10
+26,Sonora,19,Nuevo León,3186,22
+26,Sonora,20,Oaxaca,538,5
+26,Sonora,21,Puebla,279,2
+26,Sonora,22,Querétaro,1976,17
+26,Sonora,23,Quintana Roo,6270,51
+26,Sonora,24,San Luis Potosí,2755,21
+26,Sonora,25,Sinaloa,671,6
+26,Sonora,27,Tabasco,804,5
+26,Sonora,28,Tamaulipas,481,4
+26,Sonora,29,Tlaxcala,1980,16
+26,Sonora,30,Veracruz,96,1
+26,Sonora,31,Yucatán,488,3
+26,Sonora,32,Zacatecas,4210,34
+27,Tabasco,01,Aguascalientes,704,5
+27,Tabasco,02,Baja California,7632,45
+27,Tabasco,03,Baja California Sur,419,3
+27,Tabasco,04,Campeche,1174,9
+27,Tabasco,05,Coahuila,724,5
+27,Tabasco,06,Colima,150,1
+27,Tabasco,07,Chiapas,289,2
+27,Tabasco,08,Chihuahua,368,2
+27,Tabasco,09,Ciudad de México,900,7
+27,Tabasco,10,Durango,694,6
+27,Tabasco,11,Guanajuato,433,3
+27,Tabasco,12,Guerrero,600,4
+27,Tabasco,13,Hidalgo,1241,8
+27,Tabasco,14,Jalisco,853,6
+27,Tabasco,15,Estado de México,1570,12
+27,Tabasco,16,Michoacán,304,2
+27,Tabasco,17,Morelos,923,6
+27,Tabasco,18,Nayarit,1362,8
+27,Tabasco,19,Nuevo León,3620,29
+27,Tabasco,20,Oaxaca,2388,18
+27,Tabasco,21,Puebla,383,3
+27,Tabasco,22,Querétaro,1759,12
+27,Tabasco,23,Quintana Roo,9092,81
+27,Tabasco,24,San Luis Potosí,1788,12
+27,Tabasco,25,Sinaloa,95,1
+27,Tabasco,26,Sonora,248,2
+27,Tabasco,28,Tamaulipas,811,5
+27,Tabasco,29,Tlaxcala,1163,8
+27,Tabasco,30,Veracruz,226,2
+27,Tabasco,31,Yucatán,885,7
+27,Tabasco,32,Zacatecas,2160,14
+28,Tamaulipas,01,Aguascalientes,3991,27
+28,Tamaulipas,02,Baja California,9690,66
+28,Tamaulipas,03,Baja California Sur,1077,8
+28,Tamaulipas,04,Campeche,385,3
+28,Tamaulipas,05,Coahuila,1556,14
+28,Tamaulipas,06,Colima,243,2
+28,Tamaulipas,07,Chiapas,181,2
+28,Tamaulipas,08,Chihuahua,1067,8
+28,Tamaulipas,09,Ciudad de México,1264,9
+28,Tamaulipas,10,Durango,1229,10
+28,Tamaulipas,11,Guanajuato,1789,12
+28,Tamaulipas,12,Guerrero,790,5
+28,Tamaulipas,13,Hidalgo,902,7
+28,Tamaulipas,14,Jalisco,1157,9
+28,Tamaulipas,15,Estado de México,15426,120
+28,Tamaulipas,16,Michoacán,1443,9
+28,Tamaulipas,17,Morelos,542,4
+28,Tamaulipas,18,Nayarit,1124,7
+28,Tamaulipas,19,Nuevo León,23790,167
+28,Tamaulipas,20,Oaxaca,718,5
+28,Tamaulipas,21,Puebla,734,6
+28,Tamaulipas,22,Querétaro,4760,38
+28,Tamaulipas,23,Quintana Roo,4523,36
+28,Tamaulipas,24,San Luis Potosí,1426,11
+28,Tamaulipas,25,Sinaloa,258,2
+28,Tamaulipas,26,Sonora,1288,8
+28,Tamaulipas,27,Tabasco,621,5
+28,Tamaulipas,29,Tlaxcala,2082,13
+28,Tamaulipas,30,Veracruz,310,2
+28,Tamaulipas,31,Yucatán,517,3
+28,Tamaulipas,32,Zacatecas,15098,99
+29,Tlaxcala,01,Aguascalientes,5478,45
+29,Tlaxcala,02,Baja California,24838,206
+29,Tlaxcala,03,Baja California Sur,651,6
+29,Tlaxcala,04,Campeche,1643,11
+29,Tlaxcala,05,Coahuila,4691,39
+29,Tlaxcala,06,Colima,646,5
+29,Tlaxcala,07,Chiapas,949,7
+29,Tlaxcala,08,Chihuahua,2196,14
+29,Tlaxcala,09,Ciudad de México,4347,38
+29,Tlaxcala,10,Durango,3499,31
+29,Tlaxcala,11,Guanajuato,3004,22
+29,Tlaxcala,12,Guerrero,5556,36
+29,Tlaxcala,13,Hidalgo,7898,71
+29,Tlaxcala,14,Jalisco,5760,46
+29,Tlaxcala,15,Estado de México,18214,124
+29,Tlaxcala,16,Michoacán,2897,18
+29,Tlaxcala,17,Morelos,6592,43
+29,Tlaxcala,18,Nayarit,4630,33
+29,Tlaxcala,19,Nuevo León,15326,90
+29,Tlaxcala,20,Oaxaca,2508,20
+29,Tlaxcala,21,Puebla,5257,31
+29,Tlaxcala,22,Querétaro,6817,40
+29,Tlaxcala,23,Quintana Roo,8041,55
+29,Tlaxcala,24,San Luis Potosí,6907,51
+29,Tlaxcala,25,Sinaloa,759,6
+29,Tlaxcala,26,Sonora,1831,11
+29,Tlaxcala,27,Tabasco,1024,7
+29,Tlaxcala,28,Tamaulipas,5657,46
+29,Tlaxcala,30,Veracruz,1925,14
+29,Tlaxcala,31,Yucatán,1043,8
+29,Tlaxcala,32,Zacatecas,17139,112
+30,Veracruz,01,Aguascalientes,4110,26
+30,Veracruz,02,Baja California,5944,52
+30,Veracruz,03,Baja California Sur,1187,10
+30,Veracruz,04,Campeche,1258,10
+30,Veracruz,05,Coahuila,2030,13
+30,Veracruz,06,Colima,1256,8
+30,Veracruz,07,Chiapas,463,3
+30,Veracruz,08,Chihuahua,1639,11
+30,Veracruz,09,Ciudad de México,5340,34
+30,Veracruz,10,Durango,1066,7
+30,Veracruz,11,Guanajuato,3051,23
+30,Veracruz,12,Guerrero,3792,23
+30,Veracruz,13,Hidalgo,2077,14
+30,Veracruz,14,Jalisco,2626,21
+30,Veracruz,15,Estado de México,8534,54
+30,Veracruz,16,Michoacán,1256,8
+30,Veracruz,17,Morelos,5413,40
+30,Veracruz,18,Nayarit,3438,21
+30,Veracruz,19,Nuevo León,5147,33
+30,Veracruz,20,Oaxaca,4744,36
+30,Veracruz,21,Puebla,1641,15
+30,Veracruz,22,Querétaro,7651,66
+30,Veracruz,23,Quintana Roo,16889,151
+30,Veracruz,24,San Luis Potosí,4538,35
+30,Veracruz,25,Sinaloa,113,1
+30,Veracruz,26,Sonora,1153,9
+30,Veracruz,27,Tabasco,2341,14
+30,Veracruz,28,Tamaulipas,4078,27
+30,Veracruz,29,Tlaxcala,22905,157
+30,Veracruz,31,Yucatán,1834,11
+30,Veracruz,32,Zacatecas,17052,111
+31,Yucatán,01,Aguascalientes,200,2
+31,Yucatán,02,Baja California,7476,56
+31,Yucatán,03,Baja California Sur,1035,6
+31,Yucatán,04,Campeche,2943,27
+31,Yucatán,05,Coahuila,904,6
+31,Yucatán,06,Colima,248,2
+31,Yucatán,07,Chiapas,560,4
+31,Yucatán,08,Chihuahua,1689,12
+31,Yucatán,09,Ciudad de México,1456,11
+31,Yucatán,10,Durango,1178,8
+31,Yucatán,11,Guanajuato,757,4
+31,Yucatán,12,Guerrero,1815,16
+31,Yucatán,13,Hidalgo,810,7
+31,Yucatán,14,Jalisco,2940,25
+31,Yucatán,15,Estado de México,2100,14
+31,Yucatán,16,Michoacán,1301,9
+31,Yucatán,17,Morelos,257,2
+31,Yucatán,18,Nayarit,1501,12
+31,Yucatán,19,Nuevo León,5403,46
+31,Yucatán,20,Oaxaca,2103,16
+31,Yucatán,21,Puebla,241,2
+31,Yucatán,22,Querétaro,4012,32
+31,Yucatán,23,Quintana Roo,28217,229
+31,Yucatán,24,San Luis Potosí,2247,17
+31,Yucatán,25,Sinaloa,175,1
+31,Yucatán,26,Sonora,519,4
+31,Yucatán,27,Tabasco,1108,10
+31,Yucatán,28,Tamaulipas,731,5
+31,Yucatán,29,Tlaxcala,1455,10
+31,Yucatán,30,Veracruz,270,2
+31,Yucatán,32,Zacatecas,3694,24
+32,Zacatecas,01,Aguascalientes,4374,28
+32,Zacatecas,02,Baja California,9355,56
+32,Zacatecas,03,Baja California Sur,3202,25
+32,Zacatecas,04,Campeche,617,4
+32,Zacatecas,05,Coahuila,2462,15
+32,Zacatecas,06,Colima,300,2
+32,Zacatecas,07,Chiapas,287,2
+32,Zacatecas,08,Chihuahua,3967,31
+32,Zacatecas,09,Ciudad de México,3984,24
+32,Zacatecas,10,Durango,6344,52
+32,Zacatecas,11,Guanajuato,4069,25
+32,Zacatecas,12,Guerrero,2541,17
+32,Zacatecas,13,Hidalgo,1162,10
+32,Zacatecas,14,Jalisco,10594,81
+32,Zacatecas,15,Estado de México,2385,21
+32,Zacatecas,16,Michoacán,1491,11
+32,Zacatecas,17,Morelos,2160,14
+32,Zacatecas,18,Nayarit,4077,35
+32,Zacatecas,19,Nuevo León,11071,67
+32,Zacatecas,20,Oaxaca,2217,19
+32,Zacatecas,21,Puebla,671,5
+32,Zacatecas,22,Querétaro,9112,80
+32,Zacatecas,23,Quintana Roo,6230,37
+32,Zacatecas,24,San Luis Potosí,12496,80
+32,Zacatecas,25,Sinaloa,990,6
+32,Zacatecas,26,Sonora,601,5
+32,Zacatecas,27,Tabasco,918,6
+32,Zacatecas,28,Tamaulipas,2257,18
+32,Zacatecas,29,Tlaxcala,3045,22
+32,Zacatecas,30,Veracruz,710,5
+32,Zacatecas,31,Yucatán,701,5

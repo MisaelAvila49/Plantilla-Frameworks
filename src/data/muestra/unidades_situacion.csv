@@ -1,0 +1,33 @@
+region,periodo,situacion,personas
+Norte,2000 a 2010,Dejó de cumplir,453163
+Norte,2000 a 2010,Empezó a cumplir,636638
+Norte,2000 a 2010,Cumple en los dos años,1556327
+Norte,2000 a 2010,No cumple en ninguno,6459872
+Norte,2010 a 2020,Dejó de cumplir,553759
+Norte,2010 a 2020,Empezó a cumplir,359543
+Norte,2010 a 2020,Cumple en los dos años,2601957
+Norte,2010 a 2020,No cumple en ninguno,6410281
+Centro-Occidente,2000 a 2010,Dejó de cumplir,409791
+Centro-Occidente,2000 a 2010,Empezó a cumplir,416368
+Centro-Occidente,2000 a 2010,Cumple en los dos años,1759629
+Centro-Occidente,2000 a 2010,No cumple en ninguno,5126212
+Centro-Occidente,2010 a 2020,Dejó de cumplir,407816
+Centro-Occidente,2010 a 2020,Empezó a cumplir,267527
+Centro-Occidente,2010 a 2020,Cumple en los dos años,1583718
+Centro-Occidente,2010 a 2020,No cumple en ninguno,6147019
+Centro,2000 a 2010,Dejó de cumplir,577713
+Centro,2000 a 2010,Empezó a cumplir,198726
+Centro,2000 a 2010,Cumple en los dos años,1621837
+Centro,2000 a 2010,No cumple en ninguno,4060724
+Centro,2010 a 2020,Dejó de cumplir,425280
+Centro,2010 a 2020,Empezó a cumplir,212981
+Centro,2010 a 2020,Cumple en los dos años,1975794
+Centro,2010 a 2020,No cumple en ninguno,4426255
+Sur-Sureste,2000 a 2010,Dejó de cumplir,632532
+Sur-Sureste,2000 a 2010,Empezó a cumplir,228758
+Sur-Sureste,2000 a 2010,Cumple en los dos años,1437465
+Sur-Sureste,2000 a 2010,No cumple en ninguno,4768245
+Sur-Sureste,2010 a 2020,Dejó de cumplir,540710
+Sur-Sureste,2010 a 2020,Empezó a cumplir,464522
+Sur-Sureste,2010 a 2020,Cumple en los dos años,1350200
+Sur-Sureste,2010 a 2020,No cumple en ninguno,5347598

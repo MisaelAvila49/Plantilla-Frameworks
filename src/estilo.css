@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Hoja de estilos de la Plantilla de libro de datos (Social Data IBERO).
+
+   REGLA: esta hoja no escribe ningún color (la única excepción son las
+   sombras, en negro translúcido). Todos salen de las variables que
+   genera src/components/paleta.js (tokensCss) y que la configuración inyecta
+   en la cabecera, en claro y en oscuro: --fondo, --fondo-2, --fondo-3,
+   --tinta, --tinta-2, --tinta-3, --borde, --borde-fuerte, --rojo,
+   --rojo-fuerte, --azul, --tono, --tono-texto, --tono-suave, --sin-dato,
+   --apagado, --blanco, --tapa-* y --placa-logo.
+
+   El libro es CLARO por omisión; el modo oscuro lo elige el lector con el
+   botón del menú (data-tema en <html>), no el sistema operativo.
+
+   Índice: 1 base · 2 chrome de Framework · 3 textos · 4 sección ·
+   5 filtros · 6 cifras y figura · 7 desplegables y tabla · 8 globo ·
+   9 portada · 10 accesibilidad y movimiento
+   ========================================================================== */
+
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css");
+@import url("observablehq:theme-wide.css");
+
+/* ------------------------------------------------------------------ 1. base */
+:root {
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans-serif: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --monospace: ui-monospace, Consolas, Menlo, monospace;
+  /* Tokens de Framework apuntados a los propios, para que el menú, el índice
+     y el pie sigan el tema del botón. */
+  --theme-foreground: var(--tinta);
+  --theme-foreground-focus: var(--rojo);
+  --theme-background-a: var(--fondo);
+  --theme-background-b: var(--fondo-2);
+  --theme-foreground-muted: var(--tinta-2);
+  --theme-foreground-faint: var(--tinta-3);
+  --theme-foreground-fainter: var(--borde-fuerte);
+  --theme-foreground-faintest: var(--borde);
+  /* Ancho común de figura, panel de filtros, cifras y desplegables. */
+  --ancho-figura: 1320px;
+  --radio: 8px;
+}
+
+body {
+  /* Tamaño relativo: acompaña a quien sube la letra en su navegador. */
+  font: 1rem/1.6 var(--sans-serif);
+  background: var(--fondo);
+  color: var(--tinta);
+}
+
+/* Framework declara container-type en el contenedor principal, y eso anula
+   position: sticky en todos sus descendientes (los paneles de filtros). */
+#observablehq-main { container-type: normal; }
+
+#observablehq-main h1, #observablehq-main h2, #observablehq-main h3 { font-family: var(--sans-serif); letter-spacing: -0.01em; color: var(--tinta); }
+#observablehq-main a[href] { color: var(--rojo); text-underline-offset: 0.16em; }
+#observablehq-main p a[href], #observablehq-main li a[href], #observablehq-main dd a[href] { text-decoration: underline; }
+/* Una sola línea entre secciones (Framework dibuja la suya con un fondo). */
+#observablehq-main hr { border: 0; border-top: 1px solid var(--borde); background: none; height: 0; padding: 0; margin: 3rem 0 2.6rem; max-width: var(--ancho-figura); }
+::selection { background: var(--tono-suave); color: var(--tinta); }
+
+/* ------------------------------------------------------- 2. chrome del sitio */
+#observablehq-sidebar { background: var(--fondo-2); color: var(--tinta); font-family: var(--sans-serif); }
+#observablehq-sidebar a[href] { color: var(--tinta-2); }
+#observablehq-sidebar .observablehq-link-active a[href], #observablehq-sidebar a[href]:hover { color: var(--rojo); }
+#observablehq-sidebar summary { color: var(--tinta-2); }
+#observablehq-toc, #observablehq-toc a { color: var(--tinta-2); font-family: var(--sans-serif); }
+#observablehq-toc .observablehq-secondary-link-active a, #observablehq-toc a:hover { color: var(--rojo); }
+#observablehq-search input { background: var(--fondo); color: var(--tinta); border: 1px solid var(--borde-fuerte); }
+
+/* La marca del menú ocupa el alto que necesita (Framework le fija uno). */
+#observablehq-sidebar > ol:first-child > li > a { height: auto; display: block; padding-top: 0.2rem; padding-bottom: 0.4rem; white-space: normal; }
+.sidebar-brand { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.3rem 0 0.2rem; }
+.sidebar-brand-logo svg { display: block; width: 9.2rem; height: auto; }
+:root[data-tema="oscuro"] .sidebar-brand-logo { background: var(--placa-logo); border-radius: 6px; padding: 0.35rem 0.5rem; width: fit-content; }
+.sidebar-brand-title { font: 600 0.98rem/1.25 var(--serif); color: var(--tinta); }
+
+.boton-tema-caja { list-style: none; margin: 0.5rem 0 0.2rem; }
+.boton-tema {
+  display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.32rem 0.7rem;
+  font: 600 0.8rem var(--sans-serif); color: var(--tinta-2); background: var(--fondo);
+  border: 1px solid var(--borde-fuerte); border-radius: 999px; cursor: pointer;
+}
+.boton-tema[aria-pressed="true"] { color: var(--tinta); border-color: var(--rojo); }
+.boton-tema:hover { color: var(--tinta); border-color: var(--tinta-3); }
+.boton-tema-icono svg { display: block; width: 1rem; height: 1rem; }
+
+#observablehq-footer { max-width: none; color: var(--tinta-2); }
+/* Framework escribe estos rótulos en inglés desde su hoja. */
+#observablehq-footer nav a[rel="prev"]::before { content: "Página anterior"; }
+#observablehq-footer nav a[rel="next"]::before { content: "Página siguiente"; }
+.pie-libro { margin-top: 1.5rem; padding-top: 1.6rem; border-top: 1px solid var(--borde); font: 0.86rem/1.5 var(--sans-serif); color: var(--tinta-2); }
+.pie-libro a[href] { color: var(--tinta-2); text-decoration: underline; }
+.pie-libro a[href]:hover { color: var(--rojo); }
+.pie-rejilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin: 1.4rem 0; }
+.pie-rejilla p { margin: 0.15rem 0; max-width: none; }
+.pie-titulo { font-weight: 700; color: var(--tinta); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.74rem; }
+.pie-base { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; justify-content: space-between; padding: 0.9rem 0 0.4rem; border-top: 1px solid var(--borde); font-size: 0.8rem; }
+.instituciones-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1rem; }
+.instituciones-rotulo { font: 700 0.72rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-3); }
+.instituciones-chip { display: inline-flex; align-items: center; background: var(--placa-logo); border-radius: 6px; padding: 0.35rem 0.6rem; border: 1px solid var(--borde); }
+.instituciones-chip img { display: block; height: 2rem; width: auto; }
+@media (max-width: 640px) { .pie-rejilla { grid-template-columns: 1fr; gap: 0.9rem; } }
+
+/* ----------------------------------------------------------------- 3. textos */
+/* Encabezado de capítulo: claro, sin portada oscura y sin «Parte N». */
+.capitulo-cabecera { max-width: 54rem; margin: 0.6rem 0 2.2rem; }
+.capitulo-antetitulo { display: block; font: 700 0.76rem var(--sans-serif); letter-spacing: 0.1em; text-transform: uppercase; color: var(--rojo); margin-bottom: 0.5rem; }
+#observablehq-main .capitulo-cabecera h1 { font: 600 clamp(2rem, 4.2vw, 3rem)/1.08 var(--serif); letter-spacing: -0.015em; margin: 0 0 0.7rem; max-width: none; border: 0; padding: 0; }
+.capitulo-cabecera h1 .clave, .portada-titulo .clave { color: var(--rojo); }
+.capitulo-entradilla { font: 400 1.14rem/1.5 var(--serif); color: var(--tinta-2); margin: 0; max-width: 46rem; }
+
+/* Prosa del equipo: bloque de lectura con citas enlazadas. */
+.texto-largo { max-width: 46rem; font: 1.08rem/1.65 var(--serif); color: var(--tinta); }
+.texto-largo p { max-width: none; margin: 0 0 1.1rem; }
+#observablehq-main a.cita { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--rojo); }
+#observablehq-main a.cita:hover { color: var(--rojo); }
+
+/* Metodología: un apartado por método compartido, con ancla m-… */
+.metodo-cabecera { max-width: 54rem; margin: 0 0 0.8rem; }
+.metodo-sirve { display: block; font: 700 0.74rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--rojo); margin-bottom: 0.3rem; }
+.metodo-titulo { font: 600 1.6rem/1.15 var(--serif); margin: 0; color: var(--tinta); }
+
+/* Referencias en APA, con sangría francesa y resaltado al llegar por ancla. */
+ol.referencias { list-style: none; padding: 0; margin: 0 0 2rem; max-width: 54rem; }
+ol.referencias li { padding: 0.5rem 0.7rem 0.5rem 2.4rem; text-indent: -1.7rem; font: 1rem/1.5 var(--serif); border-radius: var(--radio); max-width: none; overflow-wrap: anywhere; }
+ol.referencias li:target { background: var(--tono-suave); }
+
+/* Ancla del índice: el h2 real de cada sección, escrito en el .md. Queda
+   oculto a la vista (el título visible lo pinta el componente con el mismo
+   texto) pero lo leen el índice de Framework y los lectores de pantalla. */
+#observablehq-main h2.toc-anchor {
+  position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ---------------------------------------------------------------- 4. sección */
+.analisis { margin: 0 0 1rem; max-width: var(--ancho-figura); scroll-margin-top: 1rem; }
+.seccion-cabecera { margin: 0 0 1.1rem; }
+.seccion-numero { display: block; font: 700 0.8rem var(--sans-serif); letter-spacing: 0.08em; color: var(--rojo); margin-bottom: 0.25rem; }
+.seccion-titulo { font: 600 clamp(1.5rem, 2.6vw, 2rem)/1.14 var(--serif); letter-spacing: -0.01em; color: var(--tinta); margin: 0; max-width: 46rem; }
+.seccion-entrada { font: 1.05rem/1.5 var(--serif); color: var(--tinta-2); margin: 0.5rem 0 0; max-width: 46rem; }
+.seccion-cuerpo { margin-top: 1.5rem; }
+
+/* ---------------------------------------------------------------- 5. filtros */
+/* Franja gris clara sin borde. Rótulo ARRIBA de cada control, columnas
+   alineadas entre grupos y controles del mismo alto. */
+.panel-filtros {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; flex-direction: column; align-items: stretch; gap: 0.7rem;
+  margin: 0; padding: 0.9rem 1rem 1rem; background: var(--fondo-2); color: var(--tinta); border-radius: var(--radio);
+  font-family: var(--sans-serif);
+}
+.panel-grupo { border: 0; margin: 0; padding: 0; min-width: 0; }
+.panel-grupo > legend { padding: 0; margin-bottom: 0.4rem; font: 700 0.72rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-3); }
+.panel-campos { display: grid; grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr)); gap: 0.6rem 0.9rem; align-items: end; }
+.campo { display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; }
+.campo-rotulo { font: 600 0.8rem var(--sans-serif); color: var(--tinta-2); }
+.campo select, .campo input[type="number"] {
+  box-sizing: border-box; height: 2.35rem; width: 100%; padding: 0 0.6rem;
+  font: 0.92rem var(--sans-serif); color: var(--tinta); background: var(--fondo);
+  border: 1px solid var(--borde-fuerte); border-radius: 6px;
+}
+.campo select:disabled { color: var(--tinta-2); background: var(--fondo-3); opacity: 1; }
+.campo-umbral { grid-column: span 2; }
+.campo-frase { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.92rem; }
+.campo-frase input[type="number"] { width: 4.6rem; }
+.campo-umbral input[type="range"] { accent-color: var(--tono); width: 100%; }
+.panel-boton { display: none; }
+.panel-centinela { height: 0; }
+.panel-reserva { height: 0; margin: 0; }
+
+/* Fijo arriba: solo los controles (los rótulos siguen para el lector de
+   pantalla). La reserva que sigue al panel conserva el largo de la página. */
+.panel-filtros.pegado { padding: 0.45rem 0.8rem; gap: 0.35rem; flex-direction: row; flex-wrap: wrap; border-radius: 0 0 var(--radio) var(--radio); box-shadow: 0 1px 0 var(--borde); }
+.panel-filtros.pegado .panel-grupo { flex: 1 1 auto; }
+.panel-filtros.pegado .panel-grupo > legend,
+.panel-filtros.pegado .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; margin: 0; }
+.panel-filtros.pegado .panel-campos { grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.35rem 0.5rem; }
+.panel-filtros.pegado .campo select, .panel-filtros.pegado .campo input[type="number"] { height: 2rem; font-size: 0.85rem; }
+@media (max-width: 640px) {
+  .panel-campos { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
+  .campo-umbral { grid-column: 1 / -1; }
+  .panel-filtros.pegado .panel-boton {
+    display: inline-flex; align-items: center; height: 2rem; padding: 0 0.9rem; font: 600 0.85rem var(--sans-serif);
+    color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 999px; cursor: pointer;
+  }
+  .panel-filtros.pegado:not(.abierto) .panel-grupo { display: none; }
+  .panel-filtros.pegado.abierto { flex-direction: column; }
+}
+/* `hidden` no oculta si un selector propio fija `display`. */
+.panel-filtros [hidden] { display: none !important; }
+
+/* ------------------------------------------------------- 6. cifras y figura */
+/* Estilo limpio: sin tarjetas, sin cajas ni líneas; se separa con aire. */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.2rem 2rem; margin: 0 0 1.8rem; max-width: 62rem; }
+.kpi { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
+.kpi-etiqueta { font: 600 0.8rem/1.3 var(--sans-serif); color: var(--tinta-2); }
+.kpi-cifra { font: 700 clamp(1.7rem, 2.6vw, 2.2rem)/1.1 var(--sans-serif); color: var(--tinta); }
+.kpi-principal .kpi-cifra { color: var(--rojo); }
+.kpi-nota { font: 0.82rem/1.35 var(--sans-serif); color: var(--tinta-2); }
+
+#observablehq-main figure.figura { margin: 0; max-width: var(--ancho-figura); color: var(--tinta); }
+.figura-encabezado { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.9rem; }
+#observablehq-main .figura-titulo { font: 700 1.24rem/1.25 var(--sans-serif); color: var(--tinta); margin: 0; max-width: none; }
+.figura-sello { font: 700 0.68rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-2); background: var(--fondo-2); border: 1px dashed var(--borde-fuerte); border-radius: 999px; padding: 0.14rem 0.6rem; white-space: nowrap; }
+.figura-subtitulo { font: 0.94rem/1.4 var(--sans-serif); color: var(--tinta-2); margin: 0.25rem 0 0; max-width: 62rem; }
+.figura-cuerpo { margin-top: 0.9rem; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.figura-cuerpo svg { display: block; max-width: 100%; height: auto; }
+/* Un icono SVG dentro de texto (encabezado de tabla, nota, botón) sigue en línea. */
+.figura-cuerpo :is(p, span, a, button, summary, li, th) > svg { display: inline-block; vertical-align: middle; }
+#observablehq-main .figura-pie { font: 0.84rem/1.45 var(--sans-serif); color: var(--tinta-2); margin: 0.7rem 0 0; max-width: 62rem; }
+.figura-notas { font: 0.84rem/1.45 var(--sans-serif); color: var(--tinta-2); margin: 0.4rem 0 0; max-width: 62rem; }
+.figura-vacia, .figura-error { font: 0.95rem var(--sans-serif); color: var(--tinta-2); background: var(--fondo-2); border-radius: var(--radio); padding: 1.6rem 1.2rem; margin: 0; max-width: none; }
+.figura-error { color: var(--rojo); }
+.rejilla-figuras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem 2rem; }
+@media (max-width: 900px) { .rejilla-figuras { grid-template-columns: 1fr; } }
+
+.forma { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; max-width: 100%; }
+.leyenda-items { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
+.leyenda-bivariada-caja { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.4rem; margin-bottom: 0.4rem; }
+.leyenda-bivariada-caja .leyenda-items { flex-direction: column; gap: 0.3rem; }
+.leyenda-bivariada { overflow: visible; }
+.leyenda-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+.leyenda-item svg { flex: none; }
+.leyenda-continua { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.2rem 1.2rem; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
+.leyenda-sin-dato { padding-bottom: 0.2rem; }
+
+/* Contorno al pasar el puntero o al enfocar la marca. */
+.marca-viva { cursor: default; outline: none; }
+.marca-viva:hover, .marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 1.6px; }
+g.marca-viva:hover > rect, g.marca-viva:focus-visible > rect { stroke: var(--tinta); stroke-width: 2px; }
+svg.marca-viva:hover, svg.marca-viva:focus-visible { outline: 2px solid var(--tinta); outline-offset: 3px; border-radius: 4px; }
+.sankey-cinta:hover, .sankey-cinta:focus-visible { fill-opacity: 0.75; }
+
+.waffle { display: flex; flex-wrap: wrap; gap: 1.4rem 2rem; }
+.waffle-grupo { display: flex; flex-direction: column; gap: 0.35rem; }
+.waffle-nombre { font-weight: 600; color: var(--tinta); }
+.waffle-cifra { font: 700 0.95rem var(--sans-serif); color: var(--tinta); }
+
+/* Familia de unidades (multitud, fracción, histograma de unidades, pila y
+   escalones). El subgrupo es la marca: al pasar el puntero o enfocarlo se
+   contornea su zona, no cada figura. */
+.fraccion { display: flex; flex-wrap: wrap; align-items: flex-start; max-width: 100%; }
+.fraccion-panel { flex: none; max-width: 100%; }
+.leyenda-figuras { align-items: center; }
+.unidad-grupo.marca-viva:hover, .unidad-grupo.marca-viva:focus-visible { stroke: none; }
+.unidad-grupo:hover > .unidad-zona, .unidad-grupo:focus-visible > .unidad-zona { stroke: var(--tinta); stroke-width: 1.6px; }
+
+.descarga { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.8rem; font: 0.8rem var(--sans-serif); color: var(--tinta-2); }
+.descarga-etiqueta { font-weight: 600; }
+.descarga-boton, .tabla-csv {
+  font: 600 0.78rem var(--sans-serif); color: var(--tinta-2); background: transparent;
+  border: 1px solid var(--borde-fuerte); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer;
+}
+.descarga-boton:hover, .tabla-csv:hover { color: var(--tinta); border-color: var(--tinta-3); }
+
+/* ------------------------------------------------- 7. desplegables y tabla */
+/* Tres desplegables hermanos: idénticos cerrados, marcador nativo y UNA sola
+   regla de summary. */
+.desplegables { margin-top: 1.6rem; max-width: var(--ancho-figura); border-top: 1px solid var(--borde); }
+.desplegable { border-bottom: 1px solid var(--borde); margin: 0; }
+.hueco-tabla .desplegable { border-bottom: 0; }
+.desplegable > summary { cursor: pointer; padding: 0.7rem 0.1rem; font: 600 0.95rem var(--sans-serif); color: var(--tinta); }
+.desplegable > summary:hover { color: var(--rojo); }
+.desplegable-cuerpo { padding: 0.1rem 0.1rem 1.1rem; }
+.desplegable-cuerpo p { font: 1rem/1.6 var(--serif); color: var(--tinta); max-width: 46rem; margin: 0 0 0.8rem; }
+#observablehq-main a.boton-metodo { display: inline-block; font: 600 0.86rem var(--sans-serif); color: var(--rojo); text-decoration: none; border: 1px solid var(--borde-fuerte); border-radius: 999px; padding: 0.3rem 0.85rem; }
+#observablehq-main a.boton-metodo:hover { border-color: var(--rojo); }
+
+/* Bloque de metadatos en rejilla de dos columnas (rótulo y valor), en rem. */
+dl.ficha { display: grid; grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr); gap: 0.45rem 1.2rem; margin: 0; max-width: 54rem; font: 0.92rem/1.5 var(--sans-serif); }
+dl.ficha dt { font-weight: 600; color: var(--tinta-2); }
+dl.ficha dd { margin: 0; color: var(--tinta); }
+.estado-pendiente { font-weight: 600; color: var(--tinta); }
+@media (max-width: 560px) { dl.ficha { grid-template-columns: 1fr; gap: 0.1rem; } dl.ficha dd { margin-bottom: 0.5rem; } }
+
+.tabla-marco { overflow: auto; max-height: 26rem; border: 1px solid var(--borde); border-radius: var(--radio); }
+#observablehq-main .tabla-marco table { margin: 0; max-width: none; width: 100%; border-collapse: collapse; font: 0.86rem var(--sans-serif); color: var(--tinta); }
+.tabla-marco th { position: sticky; top: 0; background: var(--fondo-2); color: var(--tinta); text-align: left; font-weight: 700; padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--borde-fuerte); white-space: nowrap; }
+.tabla-marco td { padding: 0.35rem 0.7rem; border-bottom: 1px solid var(--borde); }
+.tabla-marco .num { text-align: right; }
+.desplegable-cuerpo .tabla-pie { font: 0.8rem var(--sans-serif); color: var(--tinta-2); margin: 0.5rem 0 0; display: flex; align-items: center; gap: 0.8rem; max-width: none; }
+
+/* ------------------------------------------------------------------ 8. globo */
+/* Una sola tarjeta para todos los globos del libro (src/components/globo.js).
+   Orden fijo: contexto, grupo, cifra, frase, personas, comparación, aviso. */
+.globo-tarjeta {
+  position: absolute; z-index: 40; pointer-events: none; max-width: 17.5rem; min-width: 9rem;
+  display: flex; flex-direction: column; gap: 0.12rem; padding: 0.6rem 0.75rem 0.65rem;
+  background: var(--fondo); color: var(--tinta); border: 1px solid var(--borde-fuerte); border-radius: var(--radio);
+  box-shadow: 0 6px 22px rgb(0 0 0 / 0.16); font: 0.82rem/1.35 var(--sans-serif);
+}
+.globo-tarjeta[hidden] { display: none; }
+.gt-contexto { color: var(--tinta-2); font-size: 0.78rem; }
+.gt-grupo { display: flex; align-items: center; gap: 0.35rem; color: var(--tinta-2); font-weight: 600; }
+.gt-muestra { flex: none; width: 0.62rem; height: 0.62rem; border-radius: 50%; }
+.gt-cifra { font: 700 1.5rem/1.15 var(--sans-serif); color: var(--tinta); margin-top: 0.1rem; }
+.gt-frase { color: var(--tinta); }
+.gt-personas { color: var(--tinta-2); margin-top: 0.15rem; }
+.gt-comparacion { color: var(--tinta-2); }
+.gt-aviso { margin-top: 0.3rem; padding-top: 0.3rem; border-top: 1px dashed var(--borde-fuerte); color: var(--tinta-2); font-size: 0.76rem; }
+
+/* ---------------------------------------------------------------- 9. portada */
+.portada { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.4rem; align-items: center; margin: 1rem 0 2.6rem; max-width: var(--ancho-figura); }
+@media (min-width: 1000px) { .portada { grid-template-columns: minmax(0, 1.3fr) minmax(15rem, 0.9fr); } }
+.portada-antetitulo { display: block; font: 700 0.78rem var(--sans-serif); letter-spacing: 0.1em; text-transform: uppercase; color: var(--rojo); margin-bottom: 0.9rem; }
+#observablehq-main .portada-titulo { font: 600 clamp(2.3rem, 5.2vw, 3.9rem)/1.04 var(--serif); letter-spacing: -0.02em; margin: 0 0 1.1rem; max-width: 16ch; border: 0; padding: 0; }
+.portada-resumen { font: 1.14rem/1.55 var(--serif); color: var(--tinta-2); margin: 0 0 1.6rem; max-width: 40rem; }
+.portada-botones { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+#observablehq-main a.boton { display: inline-flex; align-items: center; font: 700 0.95rem var(--sans-serif); padding: 0.62rem 1.2rem; border-radius: 999px; text-decoration: none; border: 1px solid var(--borde-fuerte); color: var(--tinta); background: var(--fondo); }
+#observablehq-main a.boton:hover { border-color: var(--tinta-3); }
+#observablehq-main a.boton-principal { background: var(--rojo-fuerte); border-color: var(--rojo-fuerte); color: var(--blanco); }
+:root[data-tema="oscuro"] #observablehq-main a.boton-principal { color: var(--tapa-tinta); }
+#observablehq-main a.boton-principal:hover { filter: brightness(1.08); }
+
+/* Tapa del libro: un objeto claro en perspectiva, que conserva sus colores
+   en tema oscuro y se endereza al pasar el puntero. Tamaños en cqw. */
+.lugar-libro { display: flex; justify-content: center; perspective: 1500px; padding: 0.6rem 0 1.2rem; }
+.libro { --ancho: min(340px, 78vw); width: var(--ancho); aspect-ratio: 0.7; position: relative; transform-style: preserve-3d; transform: rotateY(-16deg) rotateX(3deg); transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); container-type: inline-size; }
+.lugar-libro:hover .libro { transform: rotateY(-4deg) rotateX(1deg); }
+.tapa { position: absolute; inset: 0; background: var(--tapa-papel); color: var(--tapa-tinta); border-radius: 0.8cqw 2cqw 2cqw 0.8cqw; overflow: hidden; display: flex; flex-direction: column; padding: 7cqw 7cqw 6cqw 10cqw; box-shadow: 14px 18px 38px rgb(0 0 0 / 0.26), 2px 3px 6px rgb(0 0 0 / 0.16); }
+/* Lomo: una franja más oscura a la izquierda. */
+.tapa::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4.2cqw; background: var(--tapa-lomo); box-shadow: inset -1px 0 0 rgb(0 0 0 / 0.1); }
+/* Canto de hojas: elemento propio, detrás de la tapa. */
+.hojas { position: absolute; top: 1.2%; bottom: 1.2%; right: -2.4cqw; width: 3cqw; background: repeating-linear-gradient(to right, var(--tapa-hojas) 0 1px, var(--tapa-lomo) 1px 2px); transform: translateZ(-1px); border-radius: 0 1px 1px 0; }
+.tapa-sello { font: 700 3.2cqw var(--sans-serif); letter-spacing: 0.16em; text-transform: uppercase; color: var(--tapa-gris); }
+.tapa-dibujo { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; margin: 4cqw 0; }
+.tapa-dibujo svg { width: 100%; height: 100%; display: block; }
+.tapa-titulo { font: 600 8.2cqw/1.04 var(--serif); letter-spacing: -0.02em; margin: 0; color: var(--tapa-tinta); max-width: none; }
+.tapa-titulo em { font-style: normal; color: var(--tapa-rojo); }
+.tapa-pie { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 5cqw; }
+.tapa-lugar { font: 600 3cqw var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tapa-gris); display: flex; flex-direction: column; gap: 0.6cqw; }
+.tapa-logo { width: 26cqw; height: auto; display: block; }
+
+.portada-instituciones { margin: 0 0 2.4rem; }
+
+/* Metadatos editoriales: rejilla sin cajas. */
+.meta-rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.4rem 2rem; margin: 0 0 3rem; padding: 1.6rem 0; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); max-width: var(--ancho-figura); }
+.meta-campo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.meta-campo--ancho { grid-column: 1 / -1; }
+.meta-rotulo { font: 700 0.72rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-3); }
+.meta-valor { font: 600 1.02rem/1.35 var(--sans-serif); color: var(--tinta); overflow-wrap: anywhere; }
+.meta-sub { font: 0.86rem/1.4 var(--sans-serif); color: var(--tinta-2); }
+.meta-pendiente { color: var(--tinta-2); font-weight: 400; font-style: italic; }
+ul.autores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.6rem; }
+ul.autores li { font: 600 1.02rem var(--sans-serif); color: var(--tinta); display: inline-flex; align-items: center; gap: 0.4rem; max-width: none; }
+.autor-nota { font: 400 0.8rem var(--sans-serif); color: var(--tinta-2); }
+.orcid-icono, .correo-icono { width: 1rem; height: 1rem; display: block; }
+
+/* «Cómo citar»: pestañas y botón de copiar. */
+.cita-bloque { max-width: 62rem; margin: 0 0 2rem; }
+#observablehq-main .cita-bloque h2 { font: 600 1.6rem/1.2 var(--serif); margin: 0 0 0.2rem; }
+.cita-bloque > p { color: var(--tinta-2); margin: 0 0 1rem; font-size: 0.95rem; }
+.cita-pestanas { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid var(--borde); }
+.cita-pestana { font: 600 0.88rem var(--sans-serif); color: var(--tinta-2); background: transparent; border: 0; border-bottom: 3px solid transparent; padding: 0.5rem 0.9rem; cursor: pointer; margin-bottom: -1px; }
+.cita-pestana[aria-selected="true"] { color: var(--tinta); border-bottom-color: var(--rojo); }
+.cita-panel { display: flex; gap: 1rem; align-items: flex-start; justify-content: space-between; padding: 1rem 1.1rem; background: var(--fondo-2); color: var(--tinta); border-radius: 0 0 var(--radio) var(--radio); }
+.cita-panel[hidden] { display: none; }
+.cita-texto { font: 1rem/1.55 var(--serif); margin: 0; overflow-wrap: anywhere; min-width: 0; flex: 1; }
+#observablehq-main pre.cita-texto { font: 0.84rem/1.5 var(--monospace); white-space: pre-wrap; background: transparent; color: var(--tinta); padding: 0; max-width: none; }
+.cita-copiar { flex: none; font: 600 0.8rem var(--sans-serif); color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 999px; padding: 0.3rem 0.85rem; cursor: pointer; }
+.cita-copiar:hover { border-color: var(--rojo); }
+.cita-aviso { min-height: 1.3rem; font-size: 0.84rem; color: var(--tinta-2); margin-top: 0.4rem; }
+@media (max-width: 560px) { .cita-panel { flex-direction: column; } }
+
+/* Índice de la galería en la portada. */
+.indice-libro { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem 2rem; max-width: var(--ancho-figura); margin: 0 0 3rem; padding: 0; list-style: none; }
+.indice-libro li { max-width: none; }
+#observablehq-main .indice-libro a { font: 600 1.15rem/1.25 var(--serif); color: var(--tinta); text-decoration: none; }
+#observablehq-main .indice-libro a:hover { color: var(--rojo); }
+.indice-libro span { display: block; font: 0.88rem/1.4 var(--sans-serif); color: var(--tinta-2); margin-top: 0.15rem; }
+
+/* ----------------------------------------- 10. accesibilidad y movimiento */
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.saltar-contenido { position: absolute; left: 0.5rem; top: -4rem; z-index: 100; background: var(--fondo); color: var(--tinta); border: 2px solid var(--rojo); border-radius: 6px; padding: 0.5rem 0.9rem; font: 600 0.9rem var(--sans-serif); }
+.saltar-contenido:focus { top: 0.5rem; }
+:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px; }
+#observablehq-main:focus { outline: none; }
+
+/* Animación de entrada: UNA vez, al dibujarse la sección por primera vez.
+   Los repintados por filtro no animan (.animada) y con movimiento reducido
+   no hay animación. Sin bucles ni botón de pausa. */
+/* Solo opacidad, sin `transform`: una sección que se dibuja POR ENCIMA de la
+   vista mientras el lector sube con la rueda, desplazada 10 px, hacía que
+   Chrome compensara de más el anclaje de scroll y la página brincaba hacia
+   abajo (docs/scroll-bug.md, tercer caso). */
+@keyframes entrar { from { opacity: 0; } to { opacity: 1; } }
+.seccion-cuerpo.en-vista:not(.animada) > * { animation: entrar 0.55s ease both; }
+/* Figuras de la familia de unidades: aparecen escalonadas, también UNA vez
+   (el retraso de cada una, en milisegundos, va en --i y no pasa de 600). */
+@keyframes unidad-entra { from { opacity: 0; } to { opacity: 1; } }
+.seccion-cuerpo.en-vista:not(.animada) .unidad-entra { animation: unidad-entra 0.35s ease both; animation-delay: calc(var(--i, 0) * 1ms); }
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) > * { animation: none; }
+  .seccion-cuerpo.en-vista:not(.animada) .unidad-entra { animation: none; }
+  .libro { transition: none; }
+}

@@ -1,0 +1,88 @@
+id,nombre,pagina,ancla,estado,agente
+barras,Barras verticales,/galeria/comparacion,barras,implementada,B
+agrupadas,Barras agrupadas en facetas,/galeria/comparacion,agrupadas,implementada,B
+dumbbell,Dumbbell,/galeria/comparacion,brecha,implementada,
+waffle,Waffle,/galeria/unidades,de-cada-cien,implementada,
+cifra,Cifra con tendencia,/galeria/comparacion,cifra,implementada,B
+ranking,Barras horizontales ordenadas,/galeria/comparacion,ranking,implementada,B
+lollipop,Lollipop,/galeria/comparacion,cambio,implementada,
+bump,Bump chart,/galeria/tiempo,bump,implementada,D
+histograma,Histograma,/galeria/distribucion,histograma,implementada,C
+caja,Caja (box plot),/galeria/distribucion,caja,implementada,C
+enjambre,Enjambre (beeswarm),/galeria/distribucion,enjambre-puntos,implementada,C
+piramide,Pirámide de población,/galeria/distribucion,piramide,implementada,
+crestas,Crestas (ridgeline),/galeria/distribucion,crestas,implementada,
+lluvia,Nube de lluvia (raincloud),/galeria/distribucion,lluvia,implementada,C
+cuantiles,Puntos de cuantiles,/galeria/precision,cuantiles,implementada,B
+lineas,Líneas con etiqueta al final,/galeria/tiempo,lineas,implementada,D
+pendiente,Pendiente,/galeria/tiempo,pendiente,implementada,D
+contexto,Líneas con contexto,/galeria/tiempo,contexto,implementada,D
+calendario,Calendario,/galeria/tiempo,calendario,implementada,D
+horizonte,Horizonte,/galeria/tiempo,horizonte,implementada,D
+franjas,Franjas,/galeria/tiempo,franjas,implementada,D
+conectada,Dispersión conectada,/galeria/correlacion,conectada,implementada,C
+apiladas,Barras apiladas al 100 %,/galeria/parte-todo,composicion,implementada,
+likert,Apilada divergente (Likert),/galeria/parte-todo,likert,implementada,D
+cascada,Cascada,/galeria/parte-todo,cascada,implementada,D
+marimekko,Marimekko,/galeria/parte-todo,marimekko,implementada,D
+dispersion,Dispersión,/galeria/correlacion,dispersion,implementada,C
+heatmap,Heatmap,/galeria/comparacion,cruce,implementada,
+hexbin,Hexbin,/galeria/correlacion,hexbin,implementada,C
+coropleta,Coropleta,/galeria/mapas,nivel,implementada,
+burbujas,Mapa de burbujas,/galeria/mapas,burbujas,implementada,E
+bivariado,Mapa bivariado,/galeria/mapas,bivariado,implementada,E
+teselas,Mosaico de entidades,/galeria/mapas,mosaico,implementada,
+agujas,Mapa de agujas,/galeria/mapas,picos,implementada,
+dorling,Cartograma de Dorling,/galeria/mapas,dorling,implementada,E
+densidad,Mapa de densidad de puntos,/galeria/mapas,densidad,implementada,E
+sankey,Sankey,/galeria/flujo,sankey,implementada,E
+conjuntos,Conjuntos paralelos,/galeria/flujo,conjuntos,implementada,E
+red,Red,/galeria/flujo,red,implementada,E
+matriz,Matriz de adyacencia,/galeria/flujo,matriz,implementada,E
+arcos,Diagrama de arcos,/galeria/flujo,arcos,implementada,E
+treemap,Treemap,/galeria/parte-todo,reparto,implementada,
+icicle,Icicle,/galeria/parte-todo,icicle,implementada,D
+destacadas,Líneas con grupo destacado,/galeria/tiempo,destacadas,implementada,
+riel,Riel de trayectoria con flecha final,/galeria/tiempo,riel,implementada,
+areas-superpuestas,Áreas superpuestas en paneles,/galeria/tiempo,areas,implementada,
+franjas-mediana,Franjas con mediana,/galeria/distribucion,franjas,implementada,
+enjambre-burbujas,Enjambre de burbujas,/galeria/distribucion,enjambre,implementada,
+fraccion,Fracción de figuras,/galeria/unidades,fraccion,implementada,
+multitud,Multitud con subgrupos,/galeria/unidades,multitud,implementada,
+histograma-unidades,Histograma de unidades,/galeria/unidades,histograma-unidades,implementada,
+pila,Pila de figuras,/galeria/unidades,pila,implementada,
+escalones,Escalones con umbral,/galeria/unidades,escalones,implementada,
+unidades-espejo,Unidades a ambos lados del eje,/galeria/unidades,espejo,implementada,
+apiladas-flujo,Barras apiladas unidas por flujos,/galeria/flujo,cortes,implementada,
+ternario,Triángulo ternario con estelas,/galeria/parte-todo,ternario,implementada,
+silueta-puntos,Silueta rellena de puntos,/galeria/mapas,silueta,implementada,
+mosaico-fracciones,Mosaico de fracciones,/galeria/parte-todo,fracciones,implementada,
+mosaico-triangulos,Mosaico de triángulos partidos,/galeria/comparacion,mosaico-sexo,implementada,
+flechas-cambio,Mapa de flechas inclinadas,/galeria/mapas,flechas-cambio,implementada,
+semitonos,Mapa de semitonos,/galeria/mapas,semitonos,implementada,
+aluvial,Aluvial entre dos lados,/galeria/flujo,aluvial,implementada,
+flechas,Mapa de flujos con flechas anchas,/galeria/flujo,flechas,implementada,
+barra-mapa,Flujos de una barra al mapa,/galeria/flujo,barra-mapa,implementada,
+mapa-categorias,Mapa de categorías,/galeria/mapas,mapa-categorias,implementada,E
+tabla-barras,Tabla con barras en la celda,/galeria/tablas,tabla-barras,implementada,B
+tabla-calor,Tabla de calor,/galeria/tablas,tabla-calor,implementada,B
+tabla-minigraficas,Tabla con minigráficas,/galeria/tablas,tabla-minigraficas,implementada,B
+tabla-precision,Tabla de estimaciones con su precisión,/galeria/precision,tabla-precision,implementada,B
+tabla-od,Tabla origen-destino con totales,/galeria/flujo,tabla-od,implementada,E
+puntos-intervalo,Puntos con intervalo de confianza,/galeria/precision,puntos-intervalo,implementada,B
+diferencia-margen,Diferencia con su margen de error,/galeria/precision,diferencia-margen,implementada,B
+rango,Gráfico de rango,/galeria/precision,rango,implementada,B
+puntos-series,Puntos de tres series por fila,/galeria/comparacion,puntos-series,implementada,B
+saldo,Entradas y salidas con saldo,/galeria/flujo,saldo,implementada,E
+curvas-acumuladas,Curvas acumuladas de dos grupos con flechas,/galeria/distribucion,curvas-acumuladas,implementada,C
+concentracion,Curva de concentración,/galeria/distribucion,concentracion,implementada,C
+linea-banda,Línea con banda de confianza,/galeria/precision,linea-banda,implementada,B
+cortes-comparables,Línea de vida de cortes comparables,/galeria/tiempo,cortes-comparables,implementada,D
+fichas-rango,Fichas por rango con marca de cambio,/galeria/unidades,fichas-rango,implementada,C
+combinaciones,Combinaciones de condiciones (UpSet),/galeria/parte-todo,combinaciones,implementada,D
+euler,Diagrama de Euler de dos conjuntos,/galeria/conceptos,euler,implementada,E
+arbol-pregunta,Árbol de la pregunta,/galeria/conceptos,arbol-pregunta,implementada,E
+embudo,Embudo de universos,/galeria/conceptos,embudo,implementada,E
+arbol-clasificacion,Árbol de clasificación,/galeria/parte-todo,arbol-clasificacion,implementada,D
+mosaico-series,Mosaico de mini-series,/galeria/tiempo,mosaico-series,implementada,D
+mosaico-burbujas,Mosaico de burbujas con dos medidas,/galeria/mapas,mosaico-burbujas,implementada,E

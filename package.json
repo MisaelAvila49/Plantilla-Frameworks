@@ -1,0 +1,35 @@
+{
+  "name": "plantilla-libro-de-datos",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf src/.observablehq/cache dist",
+    "prebuild": "node scripts/catalogo_datos.mjs",
+    "build": "observable build && node scripts/postbuild.mjs",
+    "predev": "node scripts/catalogo_datos.mjs",
+    "dev": "observable preview",
+    "observable": "observable",
+    "muestra": "node scripts/generar_muestra.mjs",
+    "catalogo": "node scripts/catalogo_datos.mjs",
+    "miniaturas": "node scripts/miniaturas_galeria.mjs",
+    "capturas": "node scripts/capturas.mjs",
+    "verificar:render": "node scripts/verificar_render.mjs",
+    "verificar:filtros": "node scripts/verificar_filtros.mjs",
+    "verificar:a11y": "node scripts/verificar_a11y.mjs",
+    "verificar:paleta": "node scripts/verificar_paleta.mjs",
+    "verificar:quieto": "node scripts/verificar_quieto.mjs",
+    "verificar:scroll": "node scripts/verificar_scroll.mjs",
+    "verificar:todo": "npm run clean && npm run build && npm run verificar:paleta && npm run verificar:render && npm run verificar:filtros && npm run verificar:quieto && npm run verificar:a11y && npm run verificar:scroll"
+  },
+  "dependencies": {
+    "@observablehq/framework": "^1.13.4"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0",
+    "playwright-core": "^1.49.1",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

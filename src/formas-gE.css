@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Estilos de las formas de la galería que agrega el agente E: saldo, matriz,
+   tabla origen-destino, arcos, conjuntos paralelos, red, sankey (contenedor),
+   burbujas, Dorling, densidad de puntos, mosaico de burbujas, árbol de la
+   pregunta, embudo y Euler (src/components/formas/*.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella. Aquí solo van la entrada (UNA vez y solo de opacidad, R167), el
+   realce al pasar el puntero y el acomodo de leyendas y cifras.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-gE.css">
+   ========================================================================== */
+
+/* ------------------------------------------------------------- leyendas */
+.gE-nota { font: 0.82rem/1.35 var(--sans-serif); color: var(--tinta-2); }
+.gE-leyenda-titulo { font: 600 0.84rem var(--sans-serif); color: var(--tinta-2); }
+.gE-tamanos { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
+/* Leyenda de tamaños de la red y del grosor de los arcos: en renglón. */
+.leyenda-item.gE-tamanos { flex-direction: row; align-items: flex-end; gap: 0.5rem; }
+.gE-tamanos svg { overflow: visible; }
+.gE-grosor { gap: 0.6rem; font: 0.84rem var(--sans-serif); color: var(--tinta-2); }
+
+/* Sankey de la Plantilla: sus rótulos de los extremos salen del lienzo en
+   una columna angosta. El contenedor les da aire y el lienzo los deja ver. */
+.gE-sankey { max-width: 100%; }
+.gE-sankey.gE-angosto { padding: 0 16px; }
+.gE-sankey svg.sankey { overflow: visible; }
+
+/* Euler: las cifras de cada zona, en rejilla a un lado (o debajo). */
+.gE-euler-cuerpo { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 2rem; max-width: 100%; }
+.gE-euler-cifras { display: grid; grid-template-columns: auto auto; gap: 0.35rem 1rem; margin: 0; font: 0.88rem/1.35 var(--sans-serif); }
+.gE-euler-cifras > div { display: contents; }
+.gE-euler-cifras dt { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; color: var(--tinta); }
+.gE-euler-cifras dd { margin: 0; color: var(--tinta-2); }
+@media (max-width: 560px) { .gE-euler-cifras { grid-template-columns: 1fr; gap: 0.1rem; } .gE-euler-cifras dd { margin-bottom: 0.35rem; } }
+
+/* --------------------------------------------- realce al pasar o enfocar */
+/* Arcos y enlaces son trazos: el contorno es el mismo trazo en tinta, con su
+   grosor, no la línea delgada de las demás marcas. */
+.gE-arcos .gE-arco.marca-viva:hover, .gE-arcos .gE-arco.marca-viva:focus-visible { stroke: var(--tinta); stroke-width: var(--w); stroke-opacity: 1; }
+.gE-red .gE-enlace:hover { stroke: var(--tinta); stroke-opacity: 1; }
+/* Conjuntos y sankey: el listón elegido se queda y los demás bajan. */
+.gE-conjuntos:has(.gE-liston:hover) .gE-liston:not(:hover) { opacity: 0.45; }
+.gE-conjuntos .gE-liston { transition: opacity 0.15s ease; }
+/* Zonas transparentes (densidad, Euler): solo el contorno. */
+.gE-densidad .gE-zona.marca-viva:hover, .gE-densidad .gE-zona.marca-viva:focus-visible,
+.gE-euler .gE-zona-euler.marca-viva:hover, .gE-euler .gE-zona-euler.marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 2px; }
+/* Grupos (celdas, cajas, pasos, entidades del mosaico): contorno del primer
+   rectángulo; los círculos de Dorling, contorno del círculo. */
+g.gE-dorling.marca-viva:hover > circle, g.gE-dorling.marca-viva:focus-visible > circle { stroke: var(--tinta); stroke-width: 2px; }
+g.gE-paso.marca-viva:hover > rect:last-child, g.gE-paso.marca-viva:focus-visible > rect:last-child { stroke: var(--tinta); stroke-width: 2px; }
+
+/* ---------------------------------------------------------- la entrada */
+/* UNA vez, al dibujarse la sección por primera vez: mismo interruptor que
+   src/estilo.css (la sección está `.en-vista` y todavía no `.animada`,
+   1.2 s). Solo cambia la opacidad (R167). Un repintado por filtro ya no
+   anima. Sin bucles. */
+@keyframes gE-aparecer { from { opacity: 0; } to { opacity: 1; } }
+.seccion-cuerpo.en-vista:not(.animada) :is(.gE-celda, .gE-celda-od, .gE-liston, .gE-nodo, .gE-burbuja, .gE-caja, .gE-paso, .gE-entra, svg.gE-euler) {
+  animation: gE-aparecer 0.4s ease both; animation-delay: calc(0.1s + var(--i, 0) * 18ms);
+}
+.seccion-cuerpo.en-vista:not(.animada) .gE-arco { animation: gE-aparecer 0.45s ease both; animation-delay: calc(0.15s + var(--i, 0) * 22ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) :is(.gE-celda, .gE-celda-od, .gE-liston, .gE-nodo, .gE-burbuja, .gE-caja, .gE-paso, .gE-entra, svg.gE-euler, .gE-arco) { animation: none; }
+  .gE-conjuntos .gE-liston { transition: none; }
+}

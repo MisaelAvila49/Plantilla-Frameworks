@@ -1,0 +1,615 @@
+cve_ent,entidad,region,cve_mun,nombre,anio,escolaridad,pob15,ee,casos
+01,Aguascalientes,Centro-Occidente,01001,Municipio 1 de Aguascalientes,2010,10.11,82526,0.083,558
+01,Aguascalientes,Centro-Occidente,01001,Municipio 1 de Aguascalientes,2020,11.29,95775,0.09,606
+01,Aguascalientes,Centro-Occidente,01002,Municipio 2 de Aguascalientes,2010,8.63,11893,0.115,278
+01,Aguascalientes,Centro-Occidente,01002,Municipio 2 de Aguascalientes,2020,9.39,13802,0.11,302
+01,Aguascalientes,Centro-Occidente,01003,Municipio 3 de Aguascalientes,2010,9.14,7512,0.126,162
+01,Aguascalientes,Centro-Occidente,01003,Municipio 3 de Aguascalientes,2020,9.94,8718,0.175,176
+01,Aguascalientes,Centro-Occidente,01004,Municipio 4 de Aguascalientes,2010,9.2,10016,0.141,211
+01,Aguascalientes,Centro-Occidente,01004,Municipio 4 de Aguascalientes,2020,9.98,11624,0.13,229
+01,Aguascalientes,Centro-Occidente,01005,Municipio 5 de Aguascalientes,2010,7.06,4208,0.2,134
+01,Aguascalientes,Centro-Occidente,01005,Municipio 5 de Aguascalientes,2020,8.21,4884,0.133,146
+01,Aguascalientes,Centro-Occidente,01006,Municipio 6 de Aguascalientes,2010,8.33,2273,0.272,75
+01,Aguascalientes,Centro-Occidente,01006,Municipio 6 de Aguascalientes,2020,9.42,2638,0.229,82
+01,Aguascalientes,Centro-Occidente,01007,Municipio 7 de Aguascalientes,2010,9.14,6723,0.14,141
+01,Aguascalientes,Centro-Occidente,01007,Municipio 7 de Aguascalientes,2020,10.34,7802,0.162,153
+01,Aguascalientes,Centro-Occidente,01008,Municipio 8 de Aguascalientes,2010,6.84,2627,0.257,79
+01,Aguascalientes,Centro-Occidente,01008,Municipio 8 de Aguascalientes,2020,7.88,3049,0.177,86
+01,Aguascalientes,Centro-Occidente,01009,Municipio 9 de Aguascalientes,2010,9.49,8154,0.159,162
+01,Aguascalientes,Centro-Occidente,01009,Municipio 9 de Aguascalientes,2020,10.46,9463,0.162,176
+02,Baja California,Norte,02001,Municipio 1 de Baja California,2010,7.96,34951,0.114,312
+02,Baja California,Norte,02001,Municipio 1 de Baja California,2020,9.27,40562,0.137,339
+02,Baja California,Norte,02002,Municipio 2 de Baja California,2010,8.45,2691,0.247,78
+02,Baja California,Norte,02002,Municipio 2 de Baja California,2020,9.49,3123,0.217,85
+02,Baja California,Norte,02003,Municipio 3 de Baja California,2010,11.34,78916,0.102,483
+02,Baja California,Norte,02003,Municipio 3 de Baja California,2020,12.33,91585,0.104,525
+02,Baja California,Norte,02004,Municipio 4 de Baja California,2010,9.47,4373,0.228,112
+02,Baja California,Norte,02004,Municipio 4 de Baja California,2020,10.3,5075,0.214,122
+02,Baja California,Norte,02005,Municipio 5 de Baja California,2010,10.01,577342,0.047,1225
+02,Baja California,Norte,02005,Municipio 5 de Baja California,2020,10.72,670030,0.047,1331
+02,Baja California,Norte,02006,Municipio 6 de Baja California,2010,8.57,4812,0.199,105
+02,Baja California,Norte,02006,Municipio 6 de Baja California,2020,9.21,5585,0.151,114
+03,Baja California Sur,Norte,03001,Municipio 1 de Baja California Sur,2010,7.49,12808,0.1,309
+03,Baja California Sur,Norte,03001,Municipio 1 de Baja California Sur,2020,8.73,14864,0.131,336
+03,Baja California Sur,Norte,03002,Municipio 2 de Baja California Sur,2010,10.46,87336,0.07,599
+03,Baja California Sur,Norte,03002,Municipio 2 de Baja California Sur,2020,11.13,101357,0.069,651
+03,Baja California Sur,Norte,03003,Municipio 3 de Baja California Sur,2010,8.21,15507,0.128,265
+03,Baja California Sur,Norte,03003,Municipio 3 de Baja California Sur,2020,9.25,17996,0.141,288
+03,Baja California Sur,Norte,03004,Municipio 4 de Baja California Sur,2010,10.59,145329,0.074,835
+03,Baja California Sur,Norte,03004,Municipio 4 de Baja California Sur,2020,11.61,168660,0.06,908
+03,Baja California Sur,Norte,03005,Municipio 5 de Baja California Sur,2010,9.02,6886,0.141,130
+03,Baja California Sur,Norte,03005,Municipio 5 de Baja California Sur,2020,10.38,7991,0.185,141
+03,Baja California Sur,Norte,03006,Municipio 6 de Baja California Sur,2010,8.86,16165,0.153,216
+03,Baja California Sur,Norte,03006,Municipio 6 de Baja California Sur,2020,9.8,18760,0.158,235
+03,Baja California Sur,Norte,03007,Municipio 7 de Baja California Sur,2010,9.23,7021,0.14,220
+03,Baja California Sur,Norte,03007,Municipio 7 de Baja California Sur,2020,10.13,8148,0.106,239
+04,Campeche,Sur-Sureste,04001,Municipio 1 de Campeche,2010,5.5,8355,0.172,181
+04,Campeche,Sur-Sureste,04001,Municipio 1 de Campeche,2020,6.34,9696,0.13,197
+04,Campeche,Sur-Sureste,04002,Municipio 2 de Campeche,2010,5.9,29390,0.094,397
+04,Campeche,Sur-Sureste,04002,Municipio 2 de Campeche,2020,6.94,34109,0.099,432
+04,Campeche,Sur-Sureste,04003,Municipio 3 de Campeche,2010,7.77,2584,0.218,95
+04,Campeche,Sur-Sureste,04003,Municipio 3 de Campeche,2020,9.03,2999,0.194,103
+04,Campeche,Sur-Sureste,04004,Municipio 4 de Campeche,2010,6.45,76301,0.081,730
+04,Campeche,Sur-Sureste,04004,Municipio 4 de Campeche,2020,7.49,88550,0.06,794
+04,Campeche,Sur-Sureste,04005,Municipio 5 de Campeche,2010,7.86,150762,0.083,744
+04,Campeche,Sur-Sureste,04005,Municipio 5 de Campeche,2020,8.54,174966,0.082,809
+04,Campeche,Sur-Sureste,04006,Municipio 6 de Campeche,2010,6.75,11330,0.106,228
+04,Campeche,Sur-Sureste,04006,Municipio 6 de Campeche,2020,7.84,13149,0.134,248
+04,Campeche,Sur-Sureste,04007,Municipio 7 de Campeche,2010,7.08,195507,0.099,629
+04,Campeche,Sur-Sureste,04007,Municipio 7 de Campeche,2020,7.8,226894,0.065,684
+04,Campeche,Sur-Sureste,04008,Municipio 8 de Campeche,2010,6.96,10359,0.096,285
+04,Campeche,Sur-Sureste,04008,Municipio 8 de Campeche,2020,8.31,12023,0.145,310
+04,Campeche,Sur-Sureste,04009,Municipio 9 de Campeche,2010,7.9,121028,0.07,687
+04,Campeche,Sur-Sureste,04009,Municipio 9 de Campeche,2020,8.69,140458,0.066,747
+04,Campeche,Sur-Sureste,04010,Municipio 10 de Campeche,2010,6.16,2920,0.19,75
+04,Campeche,Sur-Sureste,04010,Municipio 10 de Campeche,2020,7.03,3389,0.254,82
+04,Campeche,Sur-Sureste,04011,Municipio 11 de Campeche,2010,7.91,285057,0.057,753
+04,Campeche,Sur-Sureste,04011,Municipio 11 de Campeche,2020,9.18,330821,0.076,818
+04,Campeche,Sur-Sureste,04012,Municipio 12 de Campeche,2010,7.13,20596,0.128,336
+04,Campeche,Sur-Sureste,04012,Municipio 12 de Campeche,2020,8.08,23903,0.097,365
+04,Campeche,Sur-Sureste,04013,Municipio 13 de Campeche,2010,8.42,165174,0.085,666
+04,Campeche,Sur-Sureste,04013,Municipio 13 de Campeche,2020,9.68,191691,0.072,724
+04,Campeche,Sur-Sureste,04014,Municipio 14 de Campeche,2010,4.97,5330,0.214,117
+04,Campeche,Sur-Sureste,04014,Municipio 14 de Campeche,2020,6.01,6186,0.214,127
+04,Campeche,Sur-Sureste,04015,Municipio 15 de Campeche,2010,5.16,2266,0.273,75
+04,Campeche,Sur-Sureste,04015,Municipio 15 de Campeche,2020,6.51,2629,0.232,81
+04,Campeche,Sur-Sureste,04016,Municipio 16 de Campeche,2010,5.75,19271,0.166,215
+04,Campeche,Sur-Sureste,04016,Municipio 16 de Campeche,2020,6.69,22365,0.151,234
+04,Campeche,Sur-Sureste,04017,Municipio 17 de Campeche,2010,4.7,13570,0.117,234
+04,Campeche,Sur-Sureste,04017,Municipio 17 de Campeche,2020,6,15749,0.127,254
+05,Coahuila,Norte,05001,Municipio 1 de Coahuila,2010,8.67,12943,0.131,316
+05,Coahuila,Norte,05001,Municipio 1 de Coahuila,2020,9.74,15021,0.09,343
+05,Coahuila,Norte,05002,Municipio 2 de Coahuila,2010,8.94,2383,0.189,133
+05,Coahuila,Norte,05002,Municipio 2 de Coahuila,2020,9.54,2766,0.165,145
+05,Coahuila,Norte,05003,Municipio 3 de Coahuila,2010,9.51,6223,0.178,182
+05,Coahuila,Norte,05003,Municipio 3 de Coahuila,2020,10.35,7222,0.18,198
+05,Coahuila,Norte,05004,Municipio 4 de Coahuila,2010,10.61,6203,0.195,146
+05,Coahuila,Norte,05004,Municipio 4 de Coahuila,2020,11.44,7199,0.129,159
+05,Coahuila,Norte,05005,Municipio 5 de Coahuila,2010,10.35,6266,0.119,180
+05,Coahuila,Norte,05005,Municipio 5 de Coahuila,2020,11.23,7272,0.181,196
+05,Coahuila,Norte,05006,Municipio 6 de Coahuila,2010,8.53,2640,0.164,143
+05,Coahuila,Norte,05006,Municipio 6 de Coahuila,2020,9.2,3064,0.151,155
+05,Coahuila,Norte,05007,Municipio 7 de Coahuila,2010,9.56,34930,0.126,310
+05,Coahuila,Norte,05007,Municipio 7 de Coahuila,2020,10.5,40537,0.115,337
+05,Coahuila,Norte,05008,Municipio 8 de Coahuila,2010,7.73,4398,0.201,138
+05,Coahuila,Norte,05008,Municipio 8 de Coahuila,2020,8.83,5104,0.196,150
+05,Coahuila,Norte,05009,Municipio 9 de Coahuila,2010,8.92,21654,0.126,302
+05,Coahuila,Norte,05009,Municipio 9 de Coahuila,2020,9.82,25131,0.103,328
+06,Colima,Centro-Occidente,06001,Municipio 1 de Colima,2010,7.95,6415,0.141,123
+06,Colima,Centro-Occidente,06001,Municipio 1 de Colima,2020,8.75,7445,0.149,134
+06,Colima,Centro-Occidente,06002,Municipio 2 de Colima,2010,8.19,5224,0.189,155
+06,Colima,Centro-Occidente,06002,Municipio 2 de Colima,2020,9.17,6062,0.18,169
+06,Colima,Centro-Occidente,06003,Municipio 3 de Colima,2010,9.29,4726,0.21,119
+06,Colima,Centro-Occidente,06003,Municipio 3 de Colima,2020,10.52,5484,0.179,129
+06,Colima,Centro-Occidente,06004,Municipio 4 de Colima,2010,9.28,19476,0.115,224
+06,Colima,Centro-Occidente,06004,Municipio 4 de Colima,2020,10.41,22603,0.13,244
+06,Colima,Centro-Occidente,06005,Municipio 5 de Colima,2010,8.86,8619,0.191,170
+06,Colima,Centro-Occidente,06005,Municipio 5 de Colima,2020,10.17,10002,0.124,185
+07,Chiapas,Sur-Sureste,07001,Municipio 1 de Chiapas,2010,7.72,27107,0.111,303
+07,Chiapas,Sur-Sureste,07001,Municipio 1 de Chiapas,2020,8.53,31459,0.094,329
+07,Chiapas,Sur-Sureste,07002,Municipio 2 de Chiapas,2010,6.5,8633,0.155,150
+07,Chiapas,Sur-Sureste,07002,Municipio 2 de Chiapas,2020,7.19,10020,0.13,163
+07,Chiapas,Sur-Sureste,07003,Municipio 3 de Chiapas,2010,8.16,4100,0.207,138
+07,Chiapas,Sur-Sureste,07003,Municipio 3 de Chiapas,2020,9.38,4758,0.153,150
+07,Chiapas,Sur-Sureste,07004,Municipio 4 de Chiapas,2010,8.79,725,0.317,55
+07,Chiapas,Sur-Sureste,07004,Municipio 4 de Chiapas,2020,9.74,841,0.267,60
+07,Chiapas,Sur-Sureste,07005,Municipio 5 de Chiapas,2010,8.2,14133,0.122,190
+07,Chiapas,Sur-Sureste,07005,Municipio 5 de Chiapas,2020,9.5,16402,0.172,207
+07,Chiapas,Sur-Sureste,07006,Municipio 6 de Chiapas,2010,10.22,78335,0.081,588
+07,Chiapas,Sur-Sureste,07006,Municipio 6 de Chiapas,2020,11.05,90911,0.088,639
+07,Chiapas,Sur-Sureste,07007,Municipio 7 de Chiapas,2010,7.39,2305,0.181,75
+07,Chiapas,Sur-Sureste,07007,Municipio 7 de Chiapas,2020,8.42,2676,0.235,82
+07,Chiapas,Sur-Sureste,07008,Municipio 8 de Chiapas,2010,8.1,4913,0.144,146
+07,Chiapas,Sur-Sureste,07008,Municipio 8 de Chiapas,2020,8.85,5702,0.14,159
+07,Chiapas,Sur-Sureste,07009,Municipio 9 de Chiapas,2010,6.25,5200,0.168,152
+07,Chiapas,Sur-Sureste,07009,Municipio 9 de Chiapas,2020,7.14,6034,0.15,165
+07,Chiapas,Sur-Sureste,07010,Municipio 10 de Chiapas,2010,9.73,205910,0.065,962
+07,Chiapas,Sur-Sureste,07010,Municipio 10 de Chiapas,2020,10.9,238967,0.063,1046
+07,Chiapas,Sur-Sureste,07011,Municipio 11 de Chiapas,2010,7.55,9534,0.116,197
+07,Chiapas,Sur-Sureste,07011,Municipio 11 de Chiapas,2020,8.95,11065,0.135,214
+07,Chiapas,Sur-Sureste,07012,Municipio 12 de Chiapas,2010,8.63,14934,0.103,319
+07,Chiapas,Sur-Sureste,07012,Municipio 12 de Chiapas,2020,9.41,17331,0.094,347
+07,Chiapas,Sur-Sureste,07013,Municipio 13 de Chiapas,2010,7.43,35719,0.122,271
+07,Chiapas,Sur-Sureste,07013,Municipio 13 de Chiapas,2020,8.69,41453,0.129,295
+08,Chihuahua,Norte,08001,Municipio 1 de Chihuahua,2010,10.91,4807,0.14,132
+08,Chihuahua,Norte,08001,Municipio 1 de Chihuahua,2020,11.6,5579,0.134,144
+08,Chihuahua,Norte,08002,Municipio 2 de Chihuahua,2010,9.66,30185,0.116,398
+08,Chihuahua,Norte,08002,Municipio 2 de Chihuahua,2020,10.31,35031,0.1,433
+08,Chihuahua,Norte,08003,Municipio 3 de Chihuahua,2010,9.55,4822,0.158,170
+08,Chihuahua,Norte,08003,Municipio 3 de Chihuahua,2020,10.39,5597,0.159,185
+08,Chihuahua,Norte,08004,Municipio 4 de Chihuahua,2010,12.23,250827,0.071,1025
+08,Chihuahua,Norte,08004,Municipio 4 de Chihuahua,2020,13.29,291095,0.066,1114
+08,Chihuahua,Norte,08005,Municipio 5 de Chihuahua,2010,9.15,8577,0.115,204
+08,Chihuahua,Norte,08005,Municipio 5 de Chihuahua,2020,10.09,9954,0.124,222
+08,Chihuahua,Norte,08006,Municipio 6 de Chihuahua,2010,10.81,1199,0.199,75
+08,Chihuahua,Norte,08006,Municipio 6 de Chihuahua,2020,11.58,1391,0.195,82
+09,Ciudad de México,Centro,09001,Municipio 1 de Ciudad de México,2010,8.38,1851,0.179,92
+09,Ciudad de México,Centro,09001,Municipio 1 de Ciudad de México,2020,9.24,2148,0.205,100
+09,Ciudad de México,Centro,09002,Municipio 2 de Ciudad de México,2010,9.41,1667,0.299,55
+09,Ciudad de México,Centro,09002,Municipio 2 de Ciudad de México,2020,10.23,1935,0.222,60
+09,Ciudad de México,Centro,09003,Municipio 3 de Ciudad de México,2010,10.02,5530,0.177,172
+09,Ciudad de México,Centro,09003,Municipio 3 de Ciudad de México,2020,10.73,6417,0.157,187
+09,Ciudad de México,Centro,09004,Municipio 4 de Ciudad de México,2010,7.64,18080,0.107,326
+09,Ciudad de México,Centro,09004,Municipio 4 de Ciudad de México,2020,9.02,20983,0.122,354
+09,Ciudad de México,Centro,09005,Municipio 5 de Ciudad de México,2010,10.62,172005,0.071,789
+09,Ciudad de México,Centro,09005,Municipio 5 de Ciudad de México,2020,11.67,199619,0.06,858
+09,Ciudad de México,Centro,09006,Municipio 6 de Ciudad de México,2010,9.08,1787,0.194,117
+09,Ciudad de México,Centro,09006,Municipio 6 de Ciudad de México,2020,10.38,2074,0.149,127
+09,Ciudad de México,Centro,09007,Municipio 7 de Ciudad de México,2010,7.17,10542,0.169,141
+09,Ciudad de México,Centro,09007,Municipio 7 de Ciudad de México,2020,8.05,12234,0.18,153
+09,Ciudad de México,Centro,09008,Municipio 8 de Ciudad de México,2010,9.01,5009,0.171,141
+09,Ciudad de México,Centro,09008,Municipio 8 de Ciudad de México,2020,9.67,5813,0.187,153
+09,Ciudad de México,Centro,09009,Municipio 9 de Ciudad de México,2010,8.17,15881,0.104,339
+09,Ciudad de México,Centro,09009,Municipio 9 de Ciudad de México,2020,9.17,18431,0.083,369
+09,Ciudad de México,Centro,09010,Municipio 10 de Ciudad de México,2010,11.58,185456,0.092,618
+09,Ciudad de México,Centro,09010,Municipio 10 de Ciudad de México,2020,12.43,215230,0.078,672
+09,Ciudad de México,Centro,09011,Municipio 11 de Ciudad de México,2010,8.96,14968,0.141,247
+09,Ciudad de México,Centro,09011,Municipio 11 de Ciudad de México,2020,9.67,17371,0.135,268
+10,Durango,Norte,10001,Municipio 1 de Durango,2010,7.81,13068,0.17,169
+10,Durango,Norte,10001,Municipio 1 de Durango,2020,8.52,15166,0.127,184
+10,Durango,Norte,10002,Municipio 2 de Durango,2010,9.33,19909,0.108,331
+10,Durango,Norte,10002,Municipio 2 de Durango,2020,9.99,23105,0.129,360
+10,Durango,Norte,10003,Municipio 3 de Durango,2010,9.72,16603,0.12,299
+10,Durango,Norte,10003,Municipio 3 de Durango,2020,10.59,19269,0.114,325
+10,Durango,Norte,10004,Municipio 4 de Durango,2010,9.78,7711,0.11,237
+10,Durango,Norte,10004,Municipio 4 de Durango,2020,10.57,8949,0.118,258
+10,Durango,Norte,10005,Municipio 5 de Durango,2010,9.29,2501,0.285,75
+10,Durango,Norte,10005,Municipio 5 de Durango,2020,9.97,2902,0.238,81
+10,Durango,Norte,10006,Municipio 6 de Durango,2010,9.53,26969,0.109,442
+10,Durango,Norte,10006,Municipio 6 de Durango,2020,10.73,31299,0.11,480
+10,Durango,Norte,10007,Municipio 7 de Durango,2010,9.4,9060,0.12,231
+10,Durango,Norte,10007,Municipio 7 de Durango,2020,10.46,10515,0.104,251
+10,Durango,Norte,10008,Municipio 8 de Durango,2010,8.8,940,0.264,42
+10,Durango,Norte,10008,Municipio 8 de Durango,2020,9.88,1091,0.245,46
+10,Durango,Norte,10009,Municipio 9 de Durango,2010,8.72,3441,0.223,111
+10,Durango,Norte,10009,Municipio 9 de Durango,2020,9.82,3994,0.183,121
+11,Guanajuato,Centro-Occidente,11001,Municipio 1 de Guanajuato,2010,11.05,158735,0.05,1034
+11,Guanajuato,Centro-Occidente,11001,Municipio 1 de Guanajuato,2020,12.15,184218,0.05,1124
+11,Guanajuato,Centro-Occidente,11002,Municipio 2 de Guanajuato,2010,10.01,89591,0.073,441
+11,Guanajuato,Centro-Occidente,11002,Municipio 2 de Guanajuato,2020,11.02,103974,0.105,479
+11,Guanajuato,Centro-Occidente,11003,Municipio 3 de Guanajuato,2010,8.28,44852,0.075,586
+11,Guanajuato,Centro-Occidente,11003,Municipio 3 de Guanajuato,2020,9.1,52052,0.073,637
+11,Guanajuato,Centro-Occidente,11004,Municipio 4 de Guanajuato,2010,7.82,2948,0.137,126
+11,Guanajuato,Centro-Occidente,11004,Municipio 4 de Guanajuato,2020,8.99,3421,0.196,137
+11,Guanajuato,Centro-Occidente,11005,Municipio 5 de Guanajuato,2010,11.5,285285,0.076,906
+11,Guanajuato,Centro-Occidente,11005,Municipio 5 de Guanajuato,2020,12.28,331086,0.08,985
+11,Guanajuato,Centro-Occidente,11006,Municipio 6 de Guanajuato,2010,8.24,5578,0.128,195
+11,Guanajuato,Centro-Occidente,11006,Municipio 6 de Guanajuato,2020,9.23,6474,0.122,212
+11,Guanajuato,Centro-Occidente,11007,Municipio 7 de Guanajuato,2010,9.49,6908,0.121,196
+11,Guanajuato,Centro-Occidente,11007,Municipio 7 de Guanajuato,2020,10.38,8017,0.137,213
+11,Guanajuato,Centro-Occidente,11008,Municipio 8 de Guanajuato,2010,7.21,9386,0.142,201
+11,Guanajuato,Centro-Occidente,11008,Municipio 8 de Guanajuato,2020,8.01,10893,0.124,218
+11,Guanajuato,Centro-Occidente,11009,Municipio 9 de Guanajuato,2010,9.76,221671,0.097,665
+11,Guanajuato,Centro-Occidente,11009,Municipio 9 de Guanajuato,2020,11.05,257258,0.069,723
+12,Guerrero,Sur-Sureste,12001,Municipio 1 de Guerrero,2010,9.46,248623,0.07,806
+12,Guerrero,Sur-Sureste,12001,Municipio 1 de Guerrero,2020,10.31,288538,0.078,876
+12,Guerrero,Sur-Sureste,12002,Municipio 2 de Guerrero,2010,7.73,274411,0.059,1176
+12,Guerrero,Sur-Sureste,12002,Municipio 2 de Guerrero,2020,8.61,318465,0.049,1278
+12,Guerrero,Sur-Sureste,12003,Municipio 3 de Guerrero,2010,6.28,40715,0.101,540
+12,Guerrero,Sur-Sureste,12003,Municipio 3 de Guerrero,2020,7.66,47251,0.073,587
+12,Guerrero,Sur-Sureste,12004,Municipio 4 de Guerrero,2010,7.29,5168,0.184,163
+12,Guerrero,Sur-Sureste,12004,Municipio 4 de Guerrero,2020,8.13,5998,0.182,177
+12,Guerrero,Sur-Sureste,12005,Municipio 5 de Guerrero,2010,7.06,10161,0.117,174
+12,Guerrero,Sur-Sureste,12005,Municipio 5 de Guerrero,2020,7.89,11792,0.175,189
+12,Guerrero,Sur-Sureste,12006,Municipio 6 de Guerrero,2010,6.66,1624,0.288,70
+12,Guerrero,Sur-Sureste,12006,Municipio 6 de Guerrero,2020,7.45,1884,0.269,76
+12,Guerrero,Sur-Sureste,12007,Municipio 7 de Guerrero,2010,7.3,9176,0.189,164
+12,Guerrero,Sur-Sureste,12007,Municipio 7 de Guerrero,2020,8.32,10649,0.181,178
+12,Guerrero,Sur-Sureste,12008,Municipio 8 de Guerrero,2010,6.85,23936,0.145,231
+12,Guerrero,Sur-Sureste,12008,Municipio 8 de Guerrero,2020,7.83,27779,0.127,251
+12,Guerrero,Sur-Sureste,12009,Municipio 9 de Guerrero,2010,9.6,4794,0.175,127
+12,Guerrero,Sur-Sureste,12009,Municipio 9 de Guerrero,2020,10.98,5563,0.139,138
+12,Guerrero,Sur-Sureste,12010,Municipio 10 de Guerrero,2010,7.42,5796,0.131,155
+12,Guerrero,Sur-Sureste,12010,Municipio 10 de Guerrero,2020,8.69,6727,0.188,168
+12,Guerrero,Sur-Sureste,12011,Municipio 11 de Guerrero,2010,6.11,26907,0.108,255
+12,Guerrero,Sur-Sureste,12011,Municipio 11 de Guerrero,2020,7.37,31227,0.143,277
+12,Guerrero,Sur-Sureste,12012,Municipio 12 de Guerrero,2010,7.03,7786,0.142,201
+12,Guerrero,Sur-Sureste,12012,Municipio 12 de Guerrero,2020,7.85,9036,0.174,219
+12,Guerrero,Sur-Sureste,12013,Municipio 13 de Guerrero,2010,7.11,6989,0.145,201
+12,Guerrero,Sur-Sureste,12013,Municipio 13 de Guerrero,2020,8.5,8111,0.175,218
+12,Guerrero,Sur-Sureste,12014,Municipio 14 de Guerrero,2010,7.44,16357,0.133,324
+12,Guerrero,Sur-Sureste,12014,Municipio 14 de Guerrero,2020,8.32,18984,0.107,352
+12,Guerrero,Sur-Sureste,12015,Municipio 15 de Guerrero,2010,6.65,6644,0.158,198
+12,Guerrero,Sur-Sureste,12015,Municipio 15 de Guerrero,2020,7.29,7711,0.163,215
+12,Guerrero,Sur-Sureste,12016,Municipio 16 de Guerrero,2010,6.23,3265,0.155,134
+12,Guerrero,Sur-Sureste,12016,Municipio 16 de Guerrero,2020,7.1,3789,0.165,146
+13,Hidalgo,Centro,13001,Municipio 1 de Hidalgo,2010,8.06,1712,0.275,80
+13,Hidalgo,Centro,13001,Municipio 1 de Hidalgo,2020,8.71,1987,0.223,87
+13,Hidalgo,Centro,13002,Municipio 2 de Hidalgo,2010,8.91,9969,0.11,237
+13,Hidalgo,Centro,13002,Municipio 2 de Hidalgo,2020,9.8,11570,0.117,258
+13,Hidalgo,Centro,13003,Municipio 3 de Hidalgo,2010,10.93,327018,0.072,808
+13,Hidalgo,Centro,13003,Municipio 3 de Hidalgo,2020,12.22,379518,0.069,878
+13,Hidalgo,Centro,13004,Municipio 4 de Hidalgo,2010,10.5,22923,0.087,409
+13,Hidalgo,Centro,13004,Municipio 4 de Hidalgo,2020,11.76,26603,0.12,445
+13,Hidalgo,Centro,13005,Municipio 5 de Hidalgo,2010,7.68,16630,0.108,339
+13,Hidalgo,Centro,13005,Municipio 5 de Hidalgo,2020,8.55,19300,0.113,369
+13,Hidalgo,Centro,13006,Municipio 6 de Hidalgo,2010,6.88,6370,0.124,214
+13,Hidalgo,Centro,13006,Municipio 6 de Hidalgo,2020,7.63,7393,0.154,233
+13,Hidalgo,Centro,13007,Municipio 7 de Hidalgo,2010,8.29,2145,0.248,90
+13,Hidalgo,Centro,13007,Municipio 7 de Hidalgo,2020,9.01,2490,0.234,98
+13,Hidalgo,Centro,13008,Municipio 8 de Hidalgo,2010,8.72,12989,0.137,270
+13,Hidalgo,Centro,13008,Municipio 8 de Hidalgo,2020,9.83,15074,0.144,293
+13,Hidalgo,Centro,13009,Municipio 9 de Hidalgo,2010,9.42,314389,0.062,997
+13,Hidalgo,Centro,13009,Municipio 9 de Hidalgo,2020,10.52,364861,0.069,1084
+13,Hidalgo,Centro,13010,Municipio 10 de Hidalgo,2010,9.4,208069,0.059,1034
+13,Hidalgo,Centro,13010,Municipio 10 de Hidalgo,2020,10.64,241473,0.062,1124
+14,Jalisco,Centro-Occidente,14001,Municipio 1 de Jalisco,2010,10.47,124062,0.064,609
+14,Jalisco,Centro-Occidente,14001,Municipio 1 de Jalisco,2020,11.47,143979,0.081,662
+14,Jalisco,Centro-Occidente,14002,Municipio 2 de Jalisco,2010,7.78,32705,0.129,236
+14,Jalisco,Centro-Occidente,14002,Municipio 2 de Jalisco,2020,9.11,37956,0.157,256
+14,Jalisco,Centro-Occidente,14003,Municipio 3 de Jalisco,2010,8.93,4600,0.13,181
+14,Jalisco,Centro-Occidente,14003,Municipio 3 de Jalisco,2020,10.18,5338,0.119,197
+14,Jalisco,Centro-Occidente,14004,Municipio 4 de Jalisco,2010,6.83,7643,0.175,180
+14,Jalisco,Centro-Occidente,14004,Municipio 4 de Jalisco,2020,8.11,8870,0.12,196
+14,Jalisco,Centro-Occidente,14005,Municipio 5 de Jalisco,2010,11.6,160614,0.079,533
+14,Jalisco,Centro-Occidente,14005,Municipio 5 de Jalisco,2020,12.44,186399,0.1,579
+14,Jalisco,Centro-Occidente,14006,Municipio 6 de Jalisco,2010,7.19,7711,0.172,116
+14,Jalisco,Centro-Occidente,14006,Municipio 6 de Jalisco,2020,7.92,8949,0.175,126
+14,Jalisco,Centro-Occidente,14007,Municipio 7 de Jalisco,2010,7.98,20479,0.088,376
+14,Jalisco,Centro-Occidente,14007,Municipio 7 de Jalisco,2020,8.96,23766,0.086,409
+14,Jalisco,Centro-Occidente,14008,Municipio 8 de Jalisco,2010,8.17,25425,0.115,278
+14,Jalisco,Centro-Occidente,14008,Municipio 8 de Jalisco,2020,9.23,29507,0.105,302
+15,Estado de México,Centro,15001,Municipio 1 de Estado de México,2010,8.08,93646,0.057,810
+15,Estado de México,Centro,15001,Municipio 1 de Estado de México,2020,9.42,108680,0.061,880
+15,Estado de México,Centro,15002,Municipio 2 de Estado de México,2010,10.17,2437,0.272,77
+15,Estado de México,Centro,15002,Municipio 2 de Estado de México,2020,10.8,2828,0.251,84
+15,Estado de México,Centro,15003,Municipio 3 de Estado de México,2010,9.08,410,0.399,31
+15,Estado de México,Centro,15003,Municipio 3 de Estado de México,2020,9.78,476,0.358,34
+15,Estado de México,Centro,15004,Municipio 4 de Estado de México,2010,9.38,2362,0.181,75
+15,Estado de México,Centro,15004,Municipio 4 de Estado de México,2020,10.58,2741,0.206,81
+15,Estado de México,Centro,15005,Municipio 5 de Estado de México,2010,8.42,2454,0.185,102
+15,Estado de México,Centro,15005,Municipio 5 de Estado de México,2020,9.63,2848,0.22,111
+15,Estado de México,Centro,15006,Municipio 6 de Estado de México,2010,9.02,18693,0.099,340
+15,Estado de México,Centro,15006,Municipio 6 de Estado de México,2020,10.37,21694,0.097,370
+16,Michoacán,Centro-Occidente,16001,Municipio 1 de Michoacán,2010,10.51,194134,0.057,1173
+16,Michoacán,Centro-Occidente,16001,Municipio 1 de Michoacán,2020,11.68,225300,0.058,1275
+16,Michoacán,Centro-Occidente,16002,Municipio 2 de Michoacán,2010,9.71,7054,0.176,187
+16,Michoacán,Centro-Occidente,16002,Municipio 2 de Michoacán,2020,10.73,8186,0.163,203
+16,Michoacán,Centro-Occidente,16003,Municipio 3 de Michoacán,2010,8.57,5936,0.15,199
+16,Michoacán,Centro-Occidente,16003,Municipio 3 de Michoacán,2020,9.63,6889,0.14,216
+16,Michoacán,Centro-Occidente,16004,Municipio 4 de Michoacán,2010,11.13,259964,0.072,964
+16,Michoacán,Centro-Occidente,16004,Municipio 4 de Michoacán,2020,12.49,301699,0.064,1048
+16,Michoacán,Centro-Occidente,16005,Municipio 5 de Michoacán,2010,8.3,4023,0.171,177
+16,Michoacán,Centro-Occidente,16005,Municipio 5 de Michoacán,2020,9.18,4669,0.137,192
+16,Michoacán,Centro-Occidente,16006,Municipio 6 de Michoacán,2010,7.25,1521,0.17,92
+16,Michoacán,Centro-Occidente,16006,Municipio 6 de Michoacán,2020,8.26,1765,0.236,100
+16,Michoacán,Centro-Occidente,16007,Municipio 7 de Michoacán,2010,11.18,141478,0.094,551
+16,Michoacán,Centro-Occidente,16007,Municipio 7 de Michoacán,2020,12.51,164191,0.07,599
+16,Michoacán,Centro-Occidente,16008,Municipio 8 de Michoacán,2010,7.9,17555,0.128,176
+16,Michoacán,Centro-Occidente,16008,Municipio 8 de Michoacán,2020,8.69,20373,0.15,191
+16,Michoacán,Centro-Occidente,16009,Municipio 9 de Michoacán,2010,8.62,2499,0.22,101
+16,Michoacán,Centro-Occidente,16009,Municipio 9 de Michoacán,2020,9.4,2900,0.234,110
+16,Michoacán,Centro-Occidente,16010,Municipio 10 de Michoacán,2010,11.87,172003,0.067,903
+16,Michoacán,Centro-Occidente,16010,Municipio 10 de Michoacán,2020,13.01,199616,0.069,982
+17,Morelos,Centro,17001,Municipio 1 de Morelos,2010,10.45,9558,0.157,247
+17,Morelos,Centro,17001,Municipio 1 de Morelos,2020,11.32,11092,0.147,269
+17,Morelos,Centro,17002,Municipio 2 de Morelos,2010,9.57,11489,0.115,267
+17,Morelos,Centro,17002,Municipio 2 de Morelos,2020,10.3,13334,0.134,290
+17,Morelos,Centro,17003,Municipio 3 de Morelos,2010,7.91,14558,0.107,264
+17,Morelos,Centro,17003,Municipio 3 de Morelos,2020,9.08,16896,0.15,287
+17,Morelos,Centro,17004,Municipio 4 de Morelos,2010,10.64,15736,0.113,195
+17,Morelos,Centro,17004,Municipio 4 de Morelos,2020,11.32,18263,0.145,212
+17,Morelos,Centro,17005,Municipio 5 de Morelos,2010,9.42,1217,0.242,51
+17,Morelos,Centro,17005,Municipio 5 de Morelos,2020,10.21,1412,0.313,55
+17,Morelos,Centro,17006,Municipio 6 de Morelos,2010,8.99,5510,0.226,106
+17,Morelos,Centro,17006,Municipio 6 de Morelos,2020,9.72,6394,0.207,115
+17,Morelos,Centro,17007,Municipio 7 de Morelos,2010,9.08,30091,0.12,337
+17,Morelos,Centro,17007,Municipio 7 de Morelos,2020,9.74,34922,0.107,366
+17,Morelos,Centro,17008,Municipio 8 de Morelos,2010,8.67,31859,0.128,320
+17,Morelos,Centro,17008,Municipio 8 de Morelos,2020,9.51,36974,0.109,348
+17,Morelos,Centro,17009,Municipio 9 de Morelos,2010,9.75,3673,0.159,110
+17,Morelos,Centro,17009,Municipio 9 de Morelos,2020,10.64,4263,0.187,120
+18,Nayarit,Centro-Occidente,18001,Municipio 1 de Nayarit,2010,9.96,18132,0.085,331
+18,Nayarit,Centro-Occidente,18001,Municipio 1 de Nayarit,2020,11.29,21043,0.125,360
+18,Nayarit,Centro-Occidente,18002,Municipio 2 de Nayarit,2010,10.25,13818,0.149,180
+18,Nayarit,Centro-Occidente,18002,Municipio 2 de Nayarit,2020,11.15,16037,0.157,196
+18,Nayarit,Centro-Occidente,18003,Municipio 3 de Nayarit,2010,8.89,6612,0.153,151
+18,Nayarit,Centro-Occidente,18003,Municipio 3 de Nayarit,2020,9.84,7673,0.176,164
+18,Nayarit,Centro-Occidente,18004,Municipio 4 de Nayarit,2010,7.5,23322,0.122,362
+18,Nayarit,Centro-Occidente,18004,Municipio 4 de Nayarit,2020,8.71,27066,0.087,394
+18,Nayarit,Centro-Occidente,18005,Municipio 5 de Nayarit,2010,8.54,119682,0.07,899
+18,Nayarit,Centro-Occidente,18005,Municipio 5 de Nayarit,2020,9.51,138896,0.052,977
+18,Nayarit,Centro-Occidente,18006,Municipio 6 de Nayarit,2010,8.55,6300,0.176,130
+18,Nayarit,Centro-Occidente,18006,Municipio 6 de Nayarit,2020,9.35,7311,0.199,141
+18,Nayarit,Centro-Occidente,18007,Municipio 7 de Nayarit,2010,5.99,5478,0.123,183
+18,Nayarit,Centro-Occidente,18007,Municipio 7 de Nayarit,2020,6.91,6358,0.124,199
+18,Nayarit,Centro-Occidente,18008,Municipio 8 de Nayarit,2010,6.47,19494,0.087,358
+18,Nayarit,Centro-Occidente,18008,Municipio 8 de Nayarit,2020,7.52,22624,0.082,389
+18,Nayarit,Centro-Occidente,18009,Municipio 9 de Nayarit,2010,7.84,18318,0.112,273
+18,Nayarit,Centro-Occidente,18009,Municipio 9 de Nayarit,2020,8.89,21259,0.102,297
+19,Nuevo León,Norte,19001,Municipio 1 de Nuevo León,2010,11.9,8651,0.154,225
+19,Nuevo León,Norte,19001,Municipio 1 de Nuevo León,2020,13.02,10040,0.159,245
+19,Nuevo León,Norte,19002,Municipio 2 de Nuevo León,2010,8.53,2540,0.228,72
+19,Nuevo León,Norte,19002,Municipio 2 de Nuevo León,2020,9.49,2948,0.243,78
+19,Nuevo León,Norte,19003,Municipio 3 de Nuevo León,2010,8.95,6327,0.212,126
+19,Nuevo León,Norte,19003,Municipio 3 de Nuevo León,2020,10.29,7343,0.14,137
+19,Nuevo León,Norte,19004,Municipio 4 de Nuevo León,2010,8.09,8754,0.128,257
+19,Nuevo León,Norte,19004,Municipio 4 de Nuevo León,2020,8.75,10159,0.142,279
+19,Nuevo León,Norte,19005,Municipio 5 de Nuevo León,2010,8.24,3580,0.139,134
+19,Nuevo León,Norte,19005,Municipio 5 de Nuevo León,2020,9.23,4155,0.147,146
+19,Nuevo León,Norte,19006,Municipio 6 de Nuevo León,2010,12.55,28372,0.13,224
+19,Nuevo León,Norte,19006,Municipio 6 de Nuevo León,2020,13.33,32926,0.119,244
+19,Nuevo León,Norte,19007,Municipio 7 de Nuevo León,2010,10.12,20708,0.103,366
+19,Nuevo León,Norte,19007,Municipio 7 de Nuevo León,2020,11.16,24032,0.108,398
+19,Nuevo León,Norte,19008,Municipio 8 de Nuevo León,2010,11.93,8276,0.114,250
+19,Nuevo León,Norte,19008,Municipio 8 de Nuevo León,2020,12.53,9605,0.107,272
+20,Oaxaca,Sur-Sureste,20001,Municipio 1 de Oaxaca,2010,8.49,146624,0.068,1047
+20,Oaxaca,Sur-Sureste,20001,Municipio 1 de Oaxaca,2020,9.22,170163,0.059,1138
+20,Oaxaca,Sur-Sureste,20002,Municipio 2 de Oaxaca,2010,7.88,6618,0.142,175
+20,Oaxaca,Sur-Sureste,20002,Municipio 2 de Oaxaca,2020,9.11,7681,0.133,190
+20,Oaxaca,Sur-Sureste,20003,Municipio 3 de Oaxaca,2010,8.81,6216,0.165,123
+20,Oaxaca,Sur-Sureste,20003,Municipio 3 de Oaxaca,2020,9.7,7214,0.218,134
+20,Oaxaca,Sur-Sureste,20004,Municipio 4 de Oaxaca,2010,6.79,3734,0.179,107
+20,Oaxaca,Sur-Sureste,20004,Municipio 4 de Oaxaca,2020,7.87,4333,0.204,116
+20,Oaxaca,Sur-Sureste,20005,Municipio 5 de Oaxaca,2010,8.46,1132,0.161,93
+20,Oaxaca,Sur-Sureste,20005,Municipio 5 de Oaxaca,2020,9.23,1313,0.171,101
+20,Oaxaca,Sur-Sureste,20006,Municipio 6 de Oaxaca,2010,6.3,43095,0.095,378
+20,Oaxaca,Sur-Sureste,20006,Municipio 6 de Oaxaca,2020,7.56,50013,0.087,411
+20,Oaxaca,Sur-Sureste,20007,Municipio 7 de Oaxaca,2010,9.16,197247,0.062,694
+20,Oaxaca,Sur-Sureste,20007,Municipio 7 de Oaxaca,2020,10.18,228913,0.092,754
+20,Oaxaca,Sur-Sureste,20008,Municipio 8 de Oaxaca,2010,7.95,94174,0.077,508
+20,Oaxaca,Sur-Sureste,20008,Municipio 8 de Oaxaca,2020,8.73,109293,0.085,552
+20,Oaxaca,Sur-Sureste,20009,Municipio 9 de Oaxaca,2010,6.95,17023,0.125,305
+20,Oaxaca,Sur-Sureste,20009,Municipio 9 de Oaxaca,2020,7.55,19756,0.131,331
+20,Oaxaca,Sur-Sureste,20010,Municipio 10 de Oaxaca,2010,7.5,4404,0.178,96
+20,Oaxaca,Sur-Sureste,20010,Municipio 10 de Oaxaca,2020,8.85,5111,0.225,104
+20,Oaxaca,Sur-Sureste,20011,Municipio 11 de Oaxaca,2010,7.94,5545,0.148,130
+20,Oaxaca,Sur-Sureste,20011,Municipio 11 de Oaxaca,2020,8.66,6435,0.15,141
+20,Oaxaca,Sur-Sureste,20012,Municipio 12 de Oaxaca,2010,9.33,5530,0.166,161
+20,Oaxaca,Sur-Sureste,20012,Municipio 12 de Oaxaca,2020,10.2,6418,0.135,175
+20,Oaxaca,Sur-Sureste,20013,Municipio 13 de Oaxaca,2010,7.92,23970,0.083,405
+20,Oaxaca,Sur-Sureste,20013,Municipio 13 de Oaxaca,2020,8.53,27818,0.102,440
+20,Oaxaca,Sur-Sureste,20014,Municipio 14 de Oaxaca,2010,7.97,10140,0.174,201
+20,Oaxaca,Sur-Sureste,20014,Municipio 14 de Oaxaca,2020,8.66,11768,0.111,218
+20,Oaxaca,Sur-Sureste,20015,Municipio 15 de Oaxaca,2010,5.66,5170,0.145,184
+20,Oaxaca,Sur-Sureste,20015,Municipio 15 de Oaxaca,2020,6.86,6000,0.155,200
+20,Oaxaca,Sur-Sureste,20016,Municipio 16 de Oaxaca,2010,9.35,105775,0.069,635
+20,Oaxaca,Sur-Sureste,20016,Municipio 16 de Oaxaca,2020,10.58,122756,0.093,690
+21,Puebla,Centro,21001,Municipio 1 de Puebla,2010,7.3,19462,0.104,345
+21,Puebla,Centro,21001,Municipio 1 de Puebla,2020,8.38,22586,0.11,375
+21,Puebla,Centro,21002,Municipio 2 de Puebla,2010,10.09,2696,0.181,115
+21,Puebla,Centro,21002,Municipio 2 de Puebla,2020,11.18,3129,0.2,125
+21,Puebla,Centro,21003,Municipio 3 de Puebla,2010,8.71,24060,0.107,365
+21,Puebla,Centro,21003,Municipio 3 de Puebla,2020,9.78,27923,0.106,397
+21,Puebla,Centro,21004,Municipio 4 de Puebla,2010,9.37,21626,0.142,212
+21,Puebla,Centro,21004,Municipio 4 de Puebla,2020,10.67,25098,0.107,230
+21,Puebla,Centro,21005,Municipio 5 de Puebla,2010,6.53,9086,0.159,234
+21,Puebla,Centro,21005,Municipio 5 de Puebla,2020,7.78,10544,0.117,254
+21,Puebla,Centro,21006,Municipio 6 de Puebla,2010,8.69,19191,0.117,266
+21,Puebla,Centro,21006,Municipio 6 de Puebla,2020,9.45,22272,0.139,289
+21,Puebla,Centro,21007,Municipio 7 de Puebla,2010,9.45,111233,0.089,453
+21,Puebla,Centro,21007,Municipio 7 de Puebla,2020,10.49,129091,0.095,492
+21,Puebla,Centro,21008,Municipio 8 de Puebla,2010,9.99,8635,0.147,179
+21,Puebla,Centro,21008,Municipio 8 de Puebla,2020,11.28,10021,0.126,195
+21,Puebla,Centro,21009,Municipio 9 de Puebla,2010,8.69,7975,0.176,167
+21,Puebla,Centro,21009,Municipio 9 de Puebla,2020,9.68,9255,0.136,182
+22,Querétaro,Centro,22001,Municipio 1 de Querétaro,2010,7.27,2816,0.146,144
+22,Querétaro,Centro,22001,Municipio 1 de Querétaro,2020,8.54,3268,0.199,157
+22,Querétaro,Centro,22002,Municipio 2 de Querétaro,2010,8.04,17000,0.132,318
+22,Querétaro,Centro,22002,Municipio 2 de Querétaro,2020,9.39,19729,0.087,346
+22,Querétaro,Centro,22003,Municipio 3 de Querétaro,2010,10.48,102985,0.068,792
+22,Querétaro,Centro,22003,Municipio 3 de Querétaro,2020,11.79,119518,0.067,861
+22,Querétaro,Centro,22004,Municipio 4 de Querétaro,2010,7.68,1274,0.34,49
+22,Querétaro,Centro,22004,Municipio 4 de Querétaro,2020,8.48,1479,0.327,53
+22,Querétaro,Centro,22005,Municipio 5 de Querétaro,2010,8.35,23937,0.093,278
+22,Querétaro,Centro,22005,Municipio 5 de Querétaro,2020,9.28,27780,0.117,302
+22,Querétaro,Centro,22006,Municipio 6 de Querétaro,2010,10.37,7399,0.176,163
+22,Querétaro,Centro,22006,Municipio 6 de Querétaro,2020,11.66,8587,0.195,177
+22,Querétaro,Centro,22007,Municipio 7 de Querétaro,2010,9.25,9223,0.141,186
+22,Querétaro,Centro,22007,Municipio 7 de Querétaro,2020,10.5,10704,0.155,202
+22,Querétaro,Centro,22008,Municipio 8 de Querétaro,2010,10.16,3341,0.198,109
+22,Querétaro,Centro,22008,Municipio 8 de Querétaro,2020,10.91,3877,0.149,118
+23,Quintana Roo,Sur-Sureste,23001,Municipio 1 de Quintana Roo,2010,6.76,18880,0.164,203
+23,Quintana Roo,Sur-Sureste,23001,Municipio 1 de Quintana Roo,2020,8,21911,0.171,221
+23,Quintana Roo,Sur-Sureste,23002,Municipio 2 de Quintana Roo,2010,7.38,30996,0.125,366
+23,Quintana Roo,Sur-Sureste,23002,Municipio 2 de Quintana Roo,2020,8.25,35973,0.083,398
+23,Quintana Roo,Sur-Sureste,23003,Municipio 3 de Quintana Roo,2010,6.72,6488,0.167,155
+23,Quintana Roo,Sur-Sureste,23003,Municipio 3 de Quintana Roo,2020,7.51,7530,0.186,168
+23,Quintana Roo,Sur-Sureste,23004,Municipio 4 de Quintana Roo,2010,7.81,52025,0.079,474
+23,Quintana Roo,Sur-Sureste,23004,Municipio 4 de Quintana Roo,2020,8.93,60377,0.082,515
+23,Quintana Roo,Sur-Sureste,23005,Municipio 5 de Quintana Roo,2010,6.35,6581,0.136,184
+23,Quintana Roo,Sur-Sureste,23005,Municipio 5 de Quintana Roo,2020,6.98,7637,0.139,200
+23,Quintana Roo,Sur-Sureste,23006,Municipio 6 de Quintana Roo,2010,5.41,16434,0.164,211
+23,Quintana Roo,Sur-Sureste,23006,Municipio 6 de Quintana Roo,2020,6.26,19072,0.148,229
+23,Quintana Roo,Sur-Sureste,23007,Municipio 7 de Quintana Roo,2010,7.64,7065,0.133,169
+23,Quintana Roo,Sur-Sureste,23007,Municipio 7 de Quintana Roo,2020,8.47,8199,0.189,184
+23,Quintana Roo,Sur-Sureste,23008,Municipio 8 de Quintana Roo,2010,7.79,7952,0.16,227
+23,Quintana Roo,Sur-Sureste,23008,Municipio 8 de Quintana Roo,2020,8.75,9229,0.138,247
+24,San Luis Potosí,Centro-Occidente,24001,Municipio 1 de San Luis Potosí,2010,8.96,18296,0.151,215
+24,San Luis Potosí,Centro-Occidente,24001,Municipio 1 de San Luis Potosí,2020,9.98,21233,0.113,234
+24,San Luis Potosí,Centro-Occidente,24002,Municipio 2 de San Luis Potosí,2010,8.14,8091,0.214,126
+24,San Luis Potosí,Centro-Occidente,24002,Municipio 2 de San Luis Potosí,2020,8.75,9390,0.217,137
+24,San Luis Potosí,Centro-Occidente,24003,Municipio 3 de San Luis Potosí,2010,10.98,4206,0.156,145
+24,San Luis Potosí,Centro-Occidente,24003,Municipio 3 de San Luis Potosí,2020,11.61,4882,0.156,158
+24,San Luis Potosí,Centro-Occidente,24004,Municipio 4 de San Luis Potosí,2010,7.8,1238,0.261,89
+24,San Luis Potosí,Centro-Occidente,24004,Municipio 4 de San Luis Potosí,2020,8.53,1437,0.247,97
+24,San Luis Potosí,Centro-Occidente,24005,Municipio 5 de San Luis Potosí,2010,8.77,11869,0.103,293
+24,San Luis Potosí,Centro-Occidente,24005,Municipio 5 de San Luis Potosí,2020,9.4,13774,0.1,318
+24,San Luis Potosí,Centro-Occidente,24006,Municipio 6 de San Luis Potosí,2010,10,5744,0.201,143
+24,San Luis Potosí,Centro-Occidente,24006,Municipio 6 de San Luis Potosí,2020,10.68,6666,0.195,155
+25,Sinaloa,Norte,25001,Municipio 1 de Sinaloa,2010,8.53,1964,0.182,115
+25,Sinaloa,Norte,25001,Municipio 1 de Sinaloa,2020,9.74,2280,0.199,125
+25,Sinaloa,Norte,25002,Municipio 2 de Sinaloa,2010,11.83,72582,0.097,355
+25,Sinaloa,Norte,25002,Municipio 2 de Sinaloa,2020,12.98,84234,0.118,386
+25,Sinaloa,Norte,25003,Municipio 3 de Sinaloa,2010,11.14,251591,0.063,817
+25,Sinaloa,Norte,25003,Municipio 3 de Sinaloa,2020,12.46,291982,0.054,888
+25,Sinaloa,Norte,25004,Municipio 4 de Sinaloa,2010,9,102972,0.112,416
+25,Sinaloa,Norte,25004,Municipio 4 de Sinaloa,2020,10.38,119503,0.108,452
+25,Sinaloa,Norte,25005,Municipio 5 de Sinaloa,2010,9.81,15702,0.116,239
+25,Sinaloa,Norte,25005,Municipio 5 de Sinaloa,2020,11.06,18223,0.14,260
+25,Sinaloa,Norte,25006,Municipio 6 de Sinaloa,2010,8.06,14360,0.148,158
+25,Sinaloa,Norte,25006,Municipio 6 de Sinaloa,2020,8.73,16665,0.145,172
+25,Sinaloa,Norte,25007,Municipio 7 de Sinaloa,2010,10.34,5024,0.149,164
+25,Sinaloa,Norte,25007,Municipio 7 de Sinaloa,2020,11.31,5831,0.15,178
+25,Sinaloa,Norte,25008,Municipio 8 de Sinaloa,2010,8.26,66992,0.085,398
+25,Sinaloa,Norte,25008,Municipio 8 de Sinaloa,2020,9.65,77747,0.111,433
+26,Sonora,Norte,26001,Municipio 1 de Sonora,2010,10.13,2134,0.243,76
+26,Sonora,Norte,26001,Municipio 1 de Sonora,2020,11.4,2476,0.242,83
+26,Sonora,Norte,26002,Municipio 2 de Sonora,2010,8.98,8174,0.15,149
+26,Sonora,Norte,26002,Municipio 2 de Sonora,2020,10.22,9486,0.171,162
+26,Sonora,Norte,26003,Municipio 3 de Sonora,2010,11.73,54271,0.09,610
+26,Sonora,Norte,26003,Municipio 3 de Sonora,2020,12.64,62984,0.064,663
+26,Sonora,Norte,26004,Municipio 4 de Sonora,2010,9.27,7720,0.15,224
+26,Sonora,Norte,26004,Municipio 4 de Sonora,2020,10.11,8960,0.113,243
+26,Sonora,Norte,26005,Municipio 5 de Sonora,2010,9.92,1738,0.193,103
+26,Sonora,Norte,26005,Municipio 5 de Sonora,2020,11.07,2017,0.185,112
+27,Tabasco,Sur-Sureste,27001,Municipio 1 de Tabasco,2010,7.72,24694,0.119,307
+27,Tabasco,Sur-Sureste,27001,Municipio 1 de Tabasco,2020,9.02,28659,0.127,334
+27,Tabasco,Sur-Sureste,27002,Municipio 2 de Tabasco,2010,9.02,30918,0.13,271
+27,Tabasco,Sur-Sureste,27002,Municipio 2 de Tabasco,2020,10.11,35882,0.118,295
+27,Tabasco,Sur-Sureste,27003,Municipio 3 de Tabasco,2010,6.97,4666,0.227,120
+27,Tabasco,Sur-Sureste,27003,Municipio 3 de Tabasco,2020,8.37,5415,0.178,130
+27,Tabasco,Sur-Sureste,27004,Municipio 4 de Tabasco,2010,7.63,3415,0.166,115
+27,Tabasco,Sur-Sureste,27004,Municipio 4 de Tabasco,2020,8.49,3964,0.198,125
+27,Tabasco,Sur-Sureste,27005,Municipio 5 de Tabasco,2010,7.03,18898,0.129,331
+27,Tabasco,Sur-Sureste,27005,Municipio 5 de Tabasco,2020,7.68,21932,0.092,360
+27,Tabasco,Sur-Sureste,27006,Municipio 6 de Tabasco,2010,8.36,13185,0.141,193
+27,Tabasco,Sur-Sureste,27006,Municipio 6 de Tabasco,2020,9.03,15302,0.141,210
+27,Tabasco,Sur-Sureste,27007,Municipio 7 de Tabasco,2010,8.78,8718,0.154,132
+27,Tabasco,Sur-Sureste,27007,Municipio 7 de Tabasco,2020,10.03,10117,0.192,143
+27,Tabasco,Sur-Sureste,27008,Municipio 8 de Tabasco,2010,7.47,6270,0.176,173
+27,Tabasco,Sur-Sureste,27008,Municipio 8 de Tabasco,2020,8.84,7276,0.146,188
+27,Tabasco,Sur-Sureste,27009,Municipio 9 de Tabasco,2010,7.92,24125,0.101,402
+27,Tabasco,Sur-Sureste,27009,Municipio 9 de Tabasco,2020,9.05,27999,0.113,437
+27,Tabasco,Sur-Sureste,27010,Municipio 10 de Tabasco,2010,7.55,4401,0.159,175
+27,Tabasco,Sur-Sureste,27010,Municipio 10 de Tabasco,2020,8.71,5108,0.143,190
+27,Tabasco,Sur-Sureste,27011,Municipio 11 de Tabasco,2010,6.88,57097,0.085,603
+27,Tabasco,Sur-Sureste,27011,Municipio 11 de Tabasco,2020,8.06,66264,0.086,655
+27,Tabasco,Sur-Sureste,27012,Municipio 12 de Tabasco,2010,7.1,37901,0.076,420
+27,Tabasco,Sur-Sureste,27012,Municipio 12 de Tabasco,2020,8.22,43986,0.119,456
+27,Tabasco,Sur-Sureste,27013,Municipio 13 de Tabasco,2010,6.17,10343,0.144,190
+27,Tabasco,Sur-Sureste,27013,Municipio 13 de Tabasco,2020,7.02,12003,0.149,206
+27,Tabasco,Sur-Sureste,27014,Municipio 14 de Tabasco,2010,7.52,6216,0.138,154
+27,Tabasco,Sur-Sureste,27014,Municipio 14 de Tabasco,2020,8.33,7214,0.138,167
+28,Tamaulipas,Norte,28001,Municipio 1 de Tamaulipas,2010,13.2,122579,0.081,940
+28,Tamaulipas,Norte,28001,Municipio 1 de Tamaulipas,2020,13.8,142258,0.066,1022
+28,Tamaulipas,Norte,28002,Municipio 2 de Tamaulipas,2010,12.49,167484,0.072,1070
+28,Tamaulipas,Norte,28002,Municipio 2 de Tamaulipas,2020,13.26,194372,0.073,1163
+28,Tamaulipas,Norte,28003,Municipio 3 de Tamaulipas,2010,9.03,13805,0.155,201
+28,Tamaulipas,Norte,28003,Municipio 3 de Tamaulipas,2020,10.13,16021,0.134,219
+28,Tamaulipas,Norte,28004,Municipio 4 de Tamaulipas,2010,11.34,268754,0.066,926
+28,Tamaulipas,Norte,28004,Municipio 4 de Tamaulipas,2020,12.42,311900,0.067,1007
+28,Tamaulipas,Norte,28005,Municipio 5 de Tamaulipas,2010,10.49,5366,0.16,203
+28,Tamaulipas,Norte,28005,Municipio 5 de Tamaulipas,2020,11.52,6227,0.175,221
+28,Tamaulipas,Norte,28006,Municipio 6 de Tamaulipas,2010,9.87,3672,0.203,109
+28,Tamaulipas,Norte,28006,Municipio 6 de Tamaulipas,2020,10.6,4262,0.163,119
+28,Tamaulipas,Norte,28007,Municipio 7 de Tamaulipas,2010,9.6,8348,0.11,242
+28,Tamaulipas,Norte,28007,Municipio 7 de Tamaulipas,2020,10.85,9688,0.119,263
+28,Tamaulipas,Norte,28008,Municipio 8 de Tamaulipas,2010,9.97,794,0.284,47
+28,Tamaulipas,Norte,28008,Municipio 8 de Tamaulipas,2020,11.26,922,0.354,51
+29,Tlaxcala,Centro,29001,Municipio 1 de Tlaxcala,2010,10.12,76872,0.069,610
+29,Tlaxcala,Centro,29001,Municipio 1 de Tlaxcala,2020,11.4,89213,0.098,663
+29,Tlaxcala,Centro,29002,Municipio 2 de Tlaxcala,2010,8.14,4096,0.168,90
+29,Tlaxcala,Centro,29002,Municipio 2 de Tlaxcala,2020,9.09,4753,0.212,98
+29,Tlaxcala,Centro,29003,Municipio 3 de Tlaxcala,2010,10.92,10957,0.126,292
+29,Tlaxcala,Centro,29003,Municipio 3 de Tlaxcala,2020,11.69,12716,0.122,317
+29,Tlaxcala,Centro,29004,Municipio 4 de Tlaxcala,2010,11.66,70840,0.09,505
+29,Tlaxcala,Centro,29004,Municipio 4 de Tlaxcala,2020,12.62,82213,0.076,549
+29,Tlaxcala,Centro,29005,Municipio 5 de Tlaxcala,2010,9.91,4700,0.181,136
+29,Tlaxcala,Centro,29005,Municipio 5 de Tlaxcala,2020,10.55,5455,0.159,148
+29,Tlaxcala,Centro,29006,Municipio 6 de Tlaxcala,2010,12,166291,0.068,760
+29,Tlaxcala,Centro,29006,Municipio 6 de Tlaxcala,2020,13.27,192987,0.083,826
+29,Tlaxcala,Centro,29007,Municipio 7 de Tlaxcala,2010,11.93,94095,0.055,819
+29,Tlaxcala,Centro,29007,Municipio 7 de Tlaxcala,2020,12.94,109202,0.068,890
+29,Tlaxcala,Centro,29008,Municipio 8 de Tlaxcala,2010,9.4,1631,0.233,54
+29,Tlaxcala,Centro,29008,Municipio 8 de Tlaxcala,2020,10.43,1893,0.267,59
+29,Tlaxcala,Centro,29009,Municipio 9 de Tlaxcala,2010,10.94,3129,0.146,116
+29,Tlaxcala,Centro,29009,Municipio 9 de Tlaxcala,2020,11.82,3632,0.167,126
+29,Tlaxcala,Centro,29010,Municipio 10 de Tlaxcala,2010,10.97,8643,0.119,195
+29,Tlaxcala,Centro,29010,Municipio 10 de Tlaxcala,2020,11.78,10031,0.118,212
+30,Veracruz,Sur-Sureste,30001,Municipio 1 de Veracruz,2010,10.01,8105,0.118,204
+30,Veracruz,Sur-Sureste,30001,Municipio 1 de Veracruz,2020,10.82,9406,0.171,222
+30,Veracruz,Sur-Sureste,30002,Municipio 2 de Veracruz,2010,8.44,46684,0.086,557
+30,Veracruz,Sur-Sureste,30002,Municipio 2 de Veracruz,2020,9.1,54179,0.072,605
+30,Veracruz,Sur-Sureste,30003,Municipio 3 de Veracruz,2010,8.64,48821,0.109,314
+30,Veracruz,Sur-Sureste,30003,Municipio 3 de Veracruz,2020,9.61,56658,0.124,341
+30,Veracruz,Sur-Sureste,30004,Municipio 4 de Veracruz,2010,8.37,79666,0.079,610
+30,Veracruz,Sur-Sureste,30004,Municipio 4 de Veracruz,2020,9.07,92455,0.091,663
+30,Veracruz,Sur-Sureste,30005,Municipio 5 de Veracruz,2010,9.17,56353,0.091,408
+30,Veracruz,Sur-Sureste,30005,Municipio 5 de Veracruz,2020,10.52,65400,0.081,443
+30,Veracruz,Sur-Sureste,30006,Municipio 6 de Veracruz,2010,7.22,3186,0.237,82
+30,Veracruz,Sur-Sureste,30006,Municipio 6 de Veracruz,2020,8.46,3697,0.253,89
+30,Veracruz,Sur-Sureste,30007,Municipio 7 de Veracruz,2010,8.71,3150,0.239,101
+30,Veracruz,Sur-Sureste,30007,Municipio 7 de Veracruz,2020,9.62,3656,0.239,110
+30,Veracruz,Sur-Sureste,30008,Municipio 8 de Veracruz,2010,9.46,163047,0.075,1074
+30,Veracruz,Sur-Sureste,30008,Municipio 8 de Veracruz,2020,10.45,189222,0.068,1167
+30,Veracruz,Sur-Sureste,30009,Municipio 9 de Veracruz,2010,10.29,170433,0.072,707
+30,Veracruz,Sur-Sureste,30009,Municipio 9 de Veracruz,2020,10.9,197794,0.09,768
+30,Veracruz,Sur-Sureste,30010,Municipio 10 de Veracruz,2010,7.19,10980,0.171,156
+30,Veracruz,Sur-Sureste,30010,Municipio 10 de Veracruz,2020,8.04,12743,0.156,170
+30,Veracruz,Sur-Sureste,30011,Municipio 11 de Veracruz,2010,9.78,29173,0.131,308
+30,Veracruz,Sur-Sureste,30011,Municipio 11 de Veracruz,2020,10.97,33857,0.089,335
+30,Veracruz,Sur-Sureste,30012,Municipio 12 de Veracruz,2010,7.47,2522,0.162,119
+30,Veracruz,Sur-Sureste,30012,Municipio 12 de Veracruz,2020,8.67,2927,0.186,129
+30,Veracruz,Sur-Sureste,30013,Municipio 13 de Veracruz,2010,7.18,40217,0.106,340
+30,Veracruz,Sur-Sureste,30013,Municipio 13 de Veracruz,2020,8.56,46673,0.107,370
+31,Yucatán,Sur-Sureste,31001,Municipio 1 de Yucatán,2010,7.21,18956,0.098,347
+31,Yucatán,Sur-Sureste,31001,Municipio 1 de Yucatán,2020,7.89,21999,0.086,377
+31,Yucatán,Sur-Sureste,31002,Municipio 2 de Yucatán,2010,9.52,432,0.385,30
+31,Yucatán,Sur-Sureste,31002,Municipio 2 de Yucatán,2020,10.49,501,0.307,33
+31,Yucatán,Sur-Sureste,31003,Municipio 3 de Yucatán,2010,7.82,12048,0.112,259
+31,Yucatán,Sur-Sureste,31003,Municipio 3 de Yucatán,2020,8.91,13982,0.149,282
+31,Yucatán,Sur-Sureste,31004,Municipio 4 de Yucatán,2010,6.95,11054,0.098,290
+31,Yucatán,Sur-Sureste,31004,Municipio 4 de Yucatán,2020,7.87,12829,0.138,315
+31,Yucatán,Sur-Sureste,31005,Municipio 5 de Yucatán,2010,8.65,12857,0.121,224
+31,Yucatán,Sur-Sureste,31005,Municipio 5 de Yucatán,2020,9.43,14921,0.153,244
+31,Yucatán,Sur-Sureste,31006,Municipio 6 de Yucatán,2010,10,64350,0.077,670
+31,Yucatán,Sur-Sureste,31006,Municipio 6 de Yucatán,2020,10.99,74681,0.095,728
+31,Yucatán,Sur-Sureste,31007,Municipio 7 de Yucatán,2010,7.79,46534,0.135,325
+31,Yucatán,Sur-Sureste,31007,Municipio 7 de Yucatán,2020,8.68,54004,0.11,353
+31,Yucatán,Sur-Sureste,31008,Municipio 8 de Yucatán,2010,10.1,73991,0.081,356
+31,Yucatán,Sur-Sureste,31008,Municipio 8 de Yucatán,2020,11.23,85869,0.111,387
+31,Yucatán,Sur-Sureste,31009,Municipio 9 de Yucatán,2010,7.27,7698,0.111,231
+31,Yucatán,Sur-Sureste,31009,Municipio 9 de Yucatán,2020,8.35,8934,0.148,251
+31,Yucatán,Sur-Sureste,31010,Municipio 10 de Yucatán,2010,7.27,53099,0.076,476
+31,Yucatán,Sur-Sureste,31010,Municipio 10 de Yucatán,2020,8.42,61624,0.087,517
+31,Yucatán,Sur-Sureste,31011,Municipio 11 de Yucatán,2010,7.07,5552,0.129,144
+31,Yucatán,Sur-Sureste,31011,Municipio 11 de Yucatán,2020,7.96,6443,0.162,157
+31,Yucatán,Sur-Sureste,31012,Municipio 12 de Yucatán,2010,8.77,35478,0.14,284
+31,Yucatán,Sur-Sureste,31012,Municipio 12 de Yucatán,2020,10.01,41173,0.096,309
+31,Yucatán,Sur-Sureste,31013,Municipio 13 de Yucatán,2010,6.9,6491,0.185,160
+31,Yucatán,Sur-Sureste,31013,Municipio 13 de Yucatán,2020,7.68,7533,0.177,174
+31,Yucatán,Sur-Sureste,31014,Municipio 14 de Yucatán,2010,7.11,18169,0.103,310
+31,Yucatán,Sur-Sureste,31014,Municipio 14 de Yucatán,2020,7.74,21086,0.117,337
+32,Zacatecas,Centro-Occidente,32001,Municipio 1 de Zacatecas,2010,7.69,2066,0.216,102
+32,Zacatecas,Centro-Occidente,32001,Municipio 1 de Zacatecas,2020,8.47,2398,0.181,111
+32,Zacatecas,Centro-Occidente,32002,Municipio 2 de Zacatecas,2010,12.52,60169,0.128,339
+32,Zacatecas,Centro-Occidente,32002,Municipio 2 de Zacatecas,2020,13.42,69828,0.105,368
+32,Zacatecas,Centro-Occidente,32003,Municipio 3 de Zacatecas,2010,10.33,19783,0.101,389
+32,Zacatecas,Centro-Occidente,32003,Municipio 3 de Zacatecas,2020,11.38,22959,0.119,423
+32,Zacatecas,Centro-Occidente,32004,Municipio 4 de Zacatecas,2010,8.53,20941,0.151,196
+32,Zacatecas,Centro-Occidente,32004,Municipio 4 de Zacatecas,2020,9.24,24303,0.148,213
+32,Zacatecas,Centro-Occidente,32005,Municipio 5 de Zacatecas,2010,10.24,53616,0.096,370
+32,Zacatecas,Centro-Occidente,32005,Municipio 5 de Zacatecas,2020,11.35,62223,0.081,402
+32,Zacatecas,Centro-Occidente,32006,Municipio 6 de Zacatecas,2010,8.3,14985,0.152,189
+32,Zacatecas,Centro-Occidente,32006,Municipio 6 de Zacatecas,2020,9.01,17390,0.143,205
+32,Zacatecas,Centro-Occidente,32007,Municipio 7 de Zacatecas,2010,9.07,3548,0.222,104
+32,Zacatecas,Centro-Occidente,32007,Municipio 7 de Zacatecas,2020,9.78,4118,0.174,113
+32,Zacatecas,Centro-Occidente,32008,Municipio 8 de Zacatecas,2010,8.09,22465,0.103,247
+32,Zacatecas,Centro-Occidente,32008,Municipio 8 de Zacatecas,2020,8.77,26072,0.126,269
+32,Zacatecas,Centro-Occidente,32009,Municipio 9 de Zacatecas,2010,12.17,179855,0.063,1186
+32,Zacatecas,Centro-Occidente,32009,Municipio 9 de Zacatecas,2020,12.98,208729,0.072,1289
+32,Zacatecas,Centro-Occidente,32010,Municipio 10 de Zacatecas,2010,10.37,6460,0.112,223
+32,Zacatecas,Centro-Occidente,32010,Municipio 10 de Zacatecas,2020,11.4,7497,0.145,242
+32,Zacatecas,Centro-Occidente,32011,Municipio 11 de Zacatecas,2010,9.5,10985,0.149,234
+32,Zacatecas,Centro-Occidente,32011,Municipio 11 de Zacatecas,2020,10.49,12748,0.15,254

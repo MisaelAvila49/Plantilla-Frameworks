@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Catálogo de formas (/catalogo). Barra de pestañas, filtros y rejilla de
+   tarjetas, al estilo de Data Viz Project. Como estilo.css, no escribe ningún
+   color: todos salen de los tokens de paleta.js (--fondo, --tinta, --rojo…).
+   Estilo limpio: la tarjeta no lleva borde ni sombra; la miniatura va sobre
+   la franja gris clara de los filtros y el texto se separa con aire.
+   ========================================================================== */
+
+.cat, .cat-descartes { max-width: var(--ancho-figura); }
+.cat p, .cat ul, .cat h2, .cat h3, .cat-descartes p, .cat-descartes table { max-width: none; }
+.cat button { font-family: var(--sans-serif); }
+/* Los textos .solo-lector son absolutos: sin un ancestro posicionado escapan
+   del carril que se desplaza y ensanchan la página entera. */
+.cat-barra, .cat-carril-desliza, .cat-tarjeta { position: relative; }
+
+/* ----------------------------------------------------------- barra y pestañas */
+.cat-barra { background: var(--fondo-2); color: var(--tinta); border-radius: var(--radio); padding: 0 1rem 0.9rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.8rem; }
+.cat-barra-fila { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.3rem 1.2rem; border-bottom: 1px solid var(--borde); }
+.cat-pestanas { display: flex; flex-wrap: wrap; gap: 0 0.1rem; margin-bottom: -1px; min-width: 0; }
+.cat-pestana { font: 600 0.95rem/1 var(--sans-serif); color: var(--tinta-2); background: none; border: 0; border-bottom: 3px solid transparent; padding: 0.95rem 0.75rem 0.8rem; cursor: pointer; display: inline-flex; gap: 0.45rem; align-items: center; }
+.cat-pestana:hover { color: var(--tinta); }
+.cat-pestana[aria-selected="true"] { color: var(--tinta); border-bottom-color: var(--rojo); }
+.cat-pestana-marca { min-width: 1.4em; height: 1.4em; padding: 0 0.25rem; border-radius: 999px; background: var(--tinta); color: var(--fondo); font: 700 0.72rem/1 var(--sans-serif); display: inline-grid; place-items: center; }
+.cat-pestana-marca[hidden] { display: none; }
+.cat-cuenta { margin-left: auto; padding-bottom: 0.7rem; font: 0.88rem var(--sans-serif); color: var(--tinta-2); font-variant-numeric: tabular-nums; }
+.cat-cuenta b { color: var(--tinta); }
+
+.cat-panel { min-width: 0; }
+.cat-panel[hidden] { display: none; }
+.cat-ayuda { margin: 0 0 0.7rem; color: var(--tinta-2); font: 0.92rem/1.5 var(--sans-serif); }
+#cat-panel-todas .cat-ayuda { margin: 0; }
+
+/* Familia y función: píldoras con su cuenta. */
+.cat-opciones { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.cat-opciones li, .cat-carril-desliza li { max-width: none; margin: 0; }
+.cat-pildora, .cat-chip { font: 500 0.86rem/1 var(--sans-serif); color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 999px; padding: 0.5rem 0.8rem; cursor: pointer; display: inline-flex; gap: 0.45rem; align-items: center; }
+.cat-pildora:hover, .cat-chip:hover, .cat-icono:hover, .cat-entrada:hover { border-color: var(--tinta); }
+.cat-pildora[aria-pressed="true"], .cat-chip[aria-pressed="true"], .cat-icono[aria-pressed="true"] { background: var(--tinta); color: var(--fondo); border-color: var(--tinta); }
+.cat-cuenta-opcion { font: 500 0.76rem/1 var(--sans-serif); font-variant-numeric: tabular-nums; color: var(--tinta-2); }
+[aria-pressed="true"] > .cat-cuenta-opcion, [aria-pressed="true"] .cat-cuenta-opcion { color: inherit; }
+.cat-paneles button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* Entrada: mini tablas en un carril que se desplaza DENTRO de su caja. */
+.cat-carril { display: flex; gap: 0.5rem; align-items: center; min-width: 0; }
+.cat-carril-desliza { display: flex; gap: 0.6rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding: 3px 3px 0.6rem; margin: 0; list-style: none; min-width: 0; flex: 1 1 auto; scrollbar-width: thin; }
+.cat-carril-desliza > li { flex: 0 0 auto; scroll-snap-align: start; }
+.cat-flecha { flex: 0 0 auto; width: 2.1rem; height: 2.1rem; border-radius: 50%; border: 1px solid var(--borde-fuerte); background: var(--fondo); color: var(--tinta); cursor: pointer; font: 600 1rem/1 var(--sans-serif); display: grid; place-items: center; }
+.cat-flecha:hover { border-color: var(--tinta); }
+.cat-entrada { width: 10.75rem; height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 0.5rem; text-align: left; padding: 0.6rem; border: 1px solid var(--borde-fuerte); border-radius: var(--radio); background: var(--fondo); color: var(--tinta); cursor: pointer; font: inherit; }
+.cat-entrada[aria-pressed="true"] { border-color: var(--tinta); box-shadow: inset 0 0 0 1px var(--tinta); background: var(--fondo-3); }
+.cat-mini-tabla { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, auto)); border: 1px solid var(--borde); border-radius: 4px; overflow: hidden; background: var(--fondo); font: 500 0.66rem/1.2 var(--monospace); }
+.cat-mini-tabla span { padding: 3px 5px; border-top: 1px solid var(--borde); color: var(--tinta-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cat-mini-tabla .cab { border-top: 0; color: var(--tinta); font-weight: 600; background: var(--fondo-2); }
+.cat-entrada-pie { display: flex; justify-content: space-between; gap: 0.4rem; align-items: baseline; font: 600 0.8rem/1.25 var(--sans-serif); }
+
+/* Forma: íconos de línea fina con su nombre. */
+.cat-iconos { gap: 0.5rem; align-items: stretch; }
+.cat-icono { width: 5rem; display: grid; justify-items: center; align-content: start; gap: 0.25rem; padding: 0.6rem 0.25rem 0.5rem; border: 1px solid var(--borde-fuerte); border-radius: var(--radio); background: var(--fondo); color: var(--tinta); cursor: pointer; font: 500 0.76rem/1.2 var(--sans-serif); }
+.cat-icono svg, .cat-silueta { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.cat-icono svg { width: 2.1rem; height: 2.1rem; }
+.cat-icono svg .relleno, .cat-silueta .relleno { fill: currentColor; stroke: none; }
+
+/* Fila de nivel, búsqueda y filtros activos. */
+.cat-fila { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center; border-top: 1px solid var(--borde); padding-top: 0.8rem; }
+.cat-nivel { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; border: 0; margin: 0; padding: 0; min-width: 0; }
+.cat-nivel legend { float: left; font: 700 0.72rem/1 var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tinta-2); margin-right: 0.4rem; padding: 0; }
+.cat-chip { padding: 0.42rem 0.7rem; font-size: 0.84rem; }
+.cat-buscar { flex: 1 1 12rem; min-width: 0; max-width: 19rem; box-sizing: border-box; height: 2.35rem; font: 0.92rem var(--sans-serif); color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 6px; padding: 0 0.6rem; }
+.cat-activos { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; font: 0.82rem var(--sans-serif); color: var(--tinta-2); }
+.cat-activos[hidden] { display: none; }
+.cat-activo { font: 600 0.8rem/1 var(--sans-serif); color: var(--tinta); background: var(--fondo); border: 1px solid var(--tinta-3); border-radius: 999px; padding: 0.38rem 0.6rem; cursor: pointer; display: inline-flex; gap: 0.35rem; align-items: center; }
+.cat-activo:hover { border-color: var(--rojo); }
+.cat-boton { font: 600 0.82rem/1 var(--sans-serif); color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 999px; padding: 0.5rem 0.85rem; cursor: pointer; }
+.cat-boton:hover { border-color: var(--tinta); }
+.cat-boton:disabled { color: var(--tinta-2); cursor: default; border-color: var(--borde); }
+.cat-quitar { margin-left: auto; }
+
+/* Pips del nivel. */
+.cat-pips { display: inline-flex; gap: 3px; }
+.cat-pips i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor; display: block; box-sizing: border-box; }
+.cat-pips i.lleno { background: currentColor; }
+
+/* -------------------------------------------------------------- índice y grupos */
+.cat-indice { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; padding: 1.2rem 0 0.2rem; margin: 0; list-style: none; font: 0.9rem var(--sans-serif); }
+.cat-indice li { max-width: none; margin: 0; }
+#observablehq-main .cat-indice a[href] { color: var(--tinta); text-decoration: none; border-bottom: 1px solid var(--borde-fuerte); }
+#observablehq-main .cat-indice a[href]:hover { color: var(--rojo); border-color: var(--rojo); }
+.cat-indice span { color: var(--tinta-2); font-variant-numeric: tabular-nums; }
+
+.cat-grupo { padding: 2.2rem 0 0.4rem; scroll-margin-top: 1rem; }
+#observablehq-main .cat-grupo-titulo { font: 600 clamp(1.4rem, 2.4vw, 1.8rem)/1.15 var(--serif); letter-spacing: -0.01em; color: var(--tinta); margin: 0 0 0.25rem; padding: 0; border: 0; }
+.cat-grupo-titulo:focus { outline: none; }
+.cat-grupo-cuenta { font: 600 0.9rem var(--sans-serif); color: var(--tinta-2); font-variant-numeric: tabular-nums; vertical-align: 0.2em; }
+.cat-grupo-desc { margin: 0 0 1.2rem; color: var(--tinta-2); font: 1rem/1.5 var(--serif); }
+
+/* ------------------------------------------------------------------- tarjetas */
+.cat-rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); gap: 2.2rem 1.6rem; margin: 0; padding: 0; list-style: none; }
+.cat-item { margin: 0; max-width: none; min-width: 0; }
+.cat-tarjeta { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; scroll-margin-top: 1rem; }
+#observablehq-main a.cat-enlace[href], .cat-enlace { display: flex; flex-direction: column; gap: 0.45rem; color: inherit; text-decoration: none; border-radius: var(--radio); }
+#observablehq-main a.cat-enlace[href]:focus-visible { outline: 2px solid var(--rojo); outline-offset: 4px; }
+
+.cat-mini { display: grid; place-items: center; aspect-ratio: 8 / 5; background: var(--fondo-2); border-radius: var(--radio); padding: 0.55rem; overflow: hidden; box-sizing: border-box; transition: box-shadow 0.15s ease; }
+.cat-mini img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 4px; }
+.cat-silueta { width: 34%; height: auto; color: var(--tinta-3); }
+a.cat-enlace:hover .cat-mini { box-shadow: inset 0 0 0 2px var(--tinta-3); }
+
+.cat-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; align-items: center; font: 500 0.78rem/1.3 var(--sans-serif); color: var(--tinta-2); }
+.cat-nivel-ficha { display: inline-flex; gap: 0.4rem; align-items: center; font-weight: 600; color: var(--tinta); }
+.cat-nivel-ficha .cat-pips { color: var(--rojo); }
+.cat-sello { font: 700 0.66rem/1 var(--sans-serif); letter-spacing: 0.06em; text-transform: uppercase; border-radius: 999px; padding: 0.22rem 0.5rem; white-space: nowrap; }
+.cat-sello-galeria { color: var(--tinta); background: var(--tono-suave); }
+.cat-sello-obra { color: var(--tinta-2); border: 1px dashed var(--borde-fuerte); }
+#observablehq-main .cat-nombre { font: 700 1.06rem/1.25 var(--sans-serif); color: var(--tinta); margin: 0.2rem 0 0; letter-spacing: -0.005em; }
+a.cat-enlace:hover .cat-nombre { color: var(--rojo); }
+.cat-pregunta { margin: 0; color: var(--tinta-2); font: 0.98rem/1.45 var(--serif); }
+.cat-ir { font: 600 0.84rem var(--sans-serif); color: var(--rojo); margin-top: 0.1rem; }
+.cat-ir-pendiente { color: var(--tinta-2); font-weight: 500; }
+
+/* Desplegable de cada tarjeta: marcador nativo y una sola regla de summary. */
+.cat-detalle { border-top: 1px solid var(--borde); margin-top: 0.3rem; }
+.cat-detalle > summary { cursor: pointer; padding: 0.45rem 0.05rem; font: 600 0.84rem var(--sans-serif); color: var(--tinta); }
+.cat-detalle > summary:hover { color: var(--rojo); }
+.cat-usos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.1rem; margin: 0 0 0.6rem; font: 0.88rem/1.45 var(--sans-serif); }
+.cat-usos dt { font-weight: 700; color: var(--tinta); margin-top: 0.35rem; }
+.cat-usos dd { margin: 0; color: var(--tinta-2); }
+.cat-usos code { font: 0.82rem/1.4 var(--monospace); background: var(--fondo-2); color: var(--tinta); padding: 1px 4px; border-radius: 4px; overflow-wrap: anywhere; }
+
+.cat-vacio { padding: 2.5rem 0; color: var(--tinta-2); text-align: center; }
+
+/* -------------------------------------------------------------- pie de página */
+.cat-descartes { margin-top: 3.4rem; padding-top: 2rem; border-top: 1px solid var(--borde); }
+#observablehq-main .cat-descartes h2 { font: 600 1.6rem/1.2 var(--serif); margin: 0 0 0.3rem; }
+/* Framework envuelve el texto del h2 en un enlace a su ancla: va en tinta, no en rojo. */
+#observablehq-main .cat-descartes h2 a.observablehq-header-anchor { color: inherit; text-decoration: none; }
+.cat-descartes > p { color: var(--tinta-2); font: 1rem/1.5 var(--serif); margin: 0 0 1rem; max-width: 46rem; }
+.cat-tabla { overflow-x: auto; }
+#observablehq-main .cat-tabla table { width: 100%; min-width: 40rem; border-collapse: collapse; font: 0.9rem/1.45 var(--sans-serif); color: var(--tinta); margin: 0; }
+.cat-tabla th, .cat-tabla td { text-align: left; vertical-align: top; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--borde); }
+.cat-tabla th { font: 700 0.72rem/1.3 var(--sans-serif); letter-spacing: 0.06em; text-transform: uppercase; color: var(--tinta-2); border-bottom-color: var(--borde-fuerte); }
+.cat-tabla td:first-child { font-weight: 600; white-space: nowrap; }
+.cat-tabla td a[href] { text-decoration: underline; }
+#observablehq-main .cat-recetas { max-width: 46rem; margin: 1.6rem 0 0; font: 1rem/1.55 var(--serif); color: var(--tinta); }
+
+/* ----------------------------------------------------------------- angosto */
+@media (max-width: 760px) {
+  .cat-cuenta { margin-left: 0; width: 100%; padding: 0.2rem 0 0.6rem; }
+  .cat-quitar { margin-left: 0; }
+}
+@media (max-width: 560px) {
+  .cat-barra { padding: 0 0.7rem 0.8rem; }
+  /* Las cinco pestañas en un renglón: a 390 px «Forma» bajaba sola a otro.
+     Si las marcas de filtro activo no caben, el renglón se desplaza. */
+  .cat-pestanas { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .cat-pestana { padding: 0.85rem 0.34rem 0.7rem; font-size: 0.86rem; flex: none; position: relative; }
+  /* La marca de filtro activo pasa a punto sobre la esquina: con el «1» al
+     lado, dos marcas sacaban «Forma» del renglón. El lector de pantalla
+     sigue oyendo «filtro activo». */
+  .cat-pestana-marca { position: absolute; top: 0.55rem; right: 0; min-width: 0; width: 0.42rem; height: 0.42rem; padding: 0; font-size: 0; }
+  .cat-flecha { display: none; }
+  .cat-buscar { max-width: none; flex-basis: 100%; }
+  .cat-icono { width: 4.6rem; }
+  /* En el teléfono la tarjeta va de lado: miniatura a la izquierda y texto a
+     la derecha. Apiladas, 87 tarjetas daban una página de 40 000 px. */
+  .cat-rejilla { gap: 1.6rem; }
+  #observablehq-main a.cat-enlace[href], .cat-enlace { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); column-gap: 0.8rem; row-gap: 0.25rem; align-content: start; }
+  .cat-enlace > * { grid-column: 2; }
+  .cat-enlace > .cat-mini { grid-column: 1; grid-row: 1 / span 4; align-self: start; padding: 0.3rem; }
+  #observablehq-main .cat-nombre { font-size: 1rem; margin-top: 0; }
+  .cat-pregunta { font-size: 0.94rem; }
+}
+@media (prefers-reduced-motion: reduce) { .cat-mini { transition: none; } }

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Estilos de las formas de flujo, enjambre, picos, líneas destacadas y áreas
+   superpuestas (src/components/formas/flechas.js, apiladas-flujo.js,
+   aluvial.js, enjambre.js, picos.js, destacadas.js y areas-superpuestas.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella. Aquí solo van la entrada animada, el realce al pasar el puntero y el
+   acomodo de las leyendas.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-flujo.css">
+   o, de una vez para todo el sitio, con una línea en src/estilo.css después
+   de las hojas de Framework:
+     @import url("formas-flujo.css");
+   ========================================================================== */
+
+/* Varias leyendas de una forma (qué es cada marca y cuánto mide un tamaño),
+   en renglones fuera del lienzo. */
+.forma-leyendas { display: flex; flex-wrap: wrap; gap: 0.35rem 1.8rem; align-items: center; max-width: 100%; }
+.forma-leyendas .leyenda-item svg { overflow: visible; }
+
+/* Realce de la marca bajo el puntero o con foco de teclado. */
+.flechas .ff-flecha:hover, .flechas .ff-flecha:focus-visible { filter: saturate(1.25) brightness(0.92); }
+.enjambre .marca-viva:hover, .enjambre .marca-viva:focus-visible { fill-opacity: 1; }
+.picos .marca-viva:hover, .picos .marca-viva:focus-visible { fill-opacity: 0.95; }
+.picos .marca-viva, .flechas .marca-viva, .aluvial .marca-viva, .apiladas-flujo .marca-viva, .enjambre .marca-viva { transition: fill-opacity 0.15s ease; }
+
+/* Lista numerada de los picos anotados, en pantallas angostas. */
+ol.picos-lista { margin: 0.2rem 0 0; padding-left: 1.4rem; font: 0.86rem/1.45 var(--sans-serif); color: var(--tinta-2); }
+ol.picos-lista li { max-width: none; }
+ol.picos-lista strong { color: var(--tinta); font-weight: 600; margin-right: 0.3rem; }
+
+/* Entrada: UNA vez, al dibujarse la sección por primera vez. La regla usa
+   el mismo interruptor que src/estilo.css: mientras la sección está
+   `.en-vista` y todavía no `.animada` (1.2 s). Un repintado por filtro ya no
+   anima. Todas las entradas terminan antes de ese plazo. Sin bucles. */
+@keyframes ff-aparecer { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ff-crecer { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes ff-inflar { from { transform: scale(0.25); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes ff-trazar { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+
+.seccion-cuerpo.en-vista:not(.animada) .ff-aparece { animation: ff-aparecer 0.45s ease both; animation-delay: calc(0.2s + var(--i, 0) * 30ms); }
+.seccion-cuerpo.en-vista:not(.animada) .ff-pico { transform-box: fill-box; transform-origin: 50% 100%; animation: ff-crecer 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(0.15s + var(--i, 0) * 7ms); }
+.seccion-cuerpo.en-vista:not(.animada) .ff-burbuja { transform-box: fill-box; transform-origin: 50% 50%; animation: ff-inflar 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(0.1s + var(--i, 0) * 10ms); }
+.seccion-cuerpo.en-vista:not(.animada) .ff-traza { stroke-dasharray: 1; animation: ff-trazar 0.9s ease-out both; animation-delay: 0.15s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) .ff-aparece,
+  .seccion-cuerpo.en-vista:not(.animada) .ff-pico,
+  .seccion-cuerpo.en-vista:not(.animada) .ff-burbuja,
+  .seccion-cuerpo.en-vista:not(.animada) .ff-traza { animation: none; stroke-dasharray: none; }
+  .picos .marca-viva, .flechas .marca-viva, .aluvial .marca-viva, .apiladas-flujo .marca-viva, .enjambre .marca-viva { transition: none; }
+}

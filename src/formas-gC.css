@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Estilos del hexbin y de las fichas por rango (src/components/formas/
+   hexbin.js y fichas-rango.js).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella; aquí solo van el acomodo de leyendas y paneles, el realce al pasar el
+   puntero y el foco de teclado.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-gC.css">
+   ========================================================================== */
+
+/* Leyendas de una forma: varias piezas en un renglón que se parte. */
+.gc-leyendas { display: flex; flex-wrap: wrap; gap: 0.35rem 1.8rem; align-items: center; max-width: 100%; }
+.gc-leyendas .leyenda-item svg { overflow: visible; }
+
+/* Hexbin: el hexágono señalado se marca con la tinta, más grueso. */
+.hexbin .marca-viva:hover, .hexbin .marca-viva:focus-visible { stroke: var(--tinta); stroke-width: 2px; }
+
+/* Fichas por rango: una rejilla de paneles, cada uno con su rótulo arriba. */
+.fr-paneles { display: grid; grid-template-columns: repeat(var(--fr-columnas, 1), minmax(0, 1fr)); gap: 1.1rem 18px; max-width: 100%; }
+.fr-panel { min-width: 0; }
+.fr-titulo { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin: 0 0 0.35rem; font: 0.88rem/1.3 var(--sans-serif); color: var(--tinta); max-width: none; }
+.fr-titulo strong { font-weight: 700; }
+.fr-muestra { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; border: 1px solid var(--borde-fuerte); }
+.fichas-rango g.marca-viva { cursor: default; outline: none; }
+.fichas-rango g.marca-viva:hover > rect, .fichas-rango g.marca-viva:focus-visible > rect { stroke: var(--tinta); stroke-width: 2px; }
+
+/* Tira ordenada de los rangos: el rótulo va bajo cada tono. */
+.fr-tira { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; font: 0.8rem/1.25 var(--sans-serif); color: var(--tinta-2); }
+.fr-paso { display: flex; flex-direction: column; gap: 0.2rem; min-width: 6.4rem; }
+.fr-paso i { display: block; height: 0.75rem; border-radius: 2px; }

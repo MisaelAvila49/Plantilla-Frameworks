@@ -1,0 +1,19 @@
+etapa,desde,hasta,origen,destino,personas
+0,2000,2010,Nivel alto,Nivel alto,215156
+0,2000,2010,Nivel alto,Nivel medio,73978
+0,2000,2010,Nivel alto,Nivel bajo,20866
+0,2000,2010,Nivel medio,Nivel alto,127810
+0,2000,2010,Nivel medio,Nivel medio,314162
+0,2000,2010,Nivel medio,Nivel bajo,78028
+0,2000,2010,Nivel bajo,Nivel alto,18722
+0,2000,2010,Nivel bajo,Nivel medio,66378
+0,2000,2010,Nivel bajo,Nivel bajo,184900
+1,2010,2020,Nivel alto,Nivel alto,226282
+1,2010,2020,Nivel alto,Nivel medio,105616
+1,2010,2020,Nivel alto,Nivel bajo,29789
+1,2010,2020,Nivel medio,Nivel alto,92106
+1,2010,2020,Nivel medio,Nivel medio,311140
+1,2010,2020,Nivel medio,Nivel bajo,51272
+1,2010,2020,Nivel bajo,Nivel alto,27417
+1,2010,2020,Nivel bajo,Nivel medio,97206
+1,2010,2020,Nivel bajo,Nivel bajo,159171

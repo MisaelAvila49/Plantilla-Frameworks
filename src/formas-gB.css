@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Estilos de las formas de comparación, precisión y tablas (barras,
+   agrupadas, ranking, puntos de tres series, cifra con tendencia, tabla de
+   precisión, puntos con intervalo, diferencia con margen, rango, cuantiles,
+   línea con banda y las tablas con barras, de calor y con minigráficas).
+
+   Como src/estilo.css, esta hoja no escribe ningún color: usa las variables
+   que genera src/components/paleta.js. Las formas se dibujan completas sin
+   ella; aquí van el acomodo de las tablas y de las cifras, el foco de
+   teclado, el realce al pasar el puntero y la entrada animada.
+
+   Se enlaza desde cada página que usa estas formas con
+     <link rel="stylesheet" href="../formas-gB.css">
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- tablas */
+.gB-tabla { width: 100%; max-width: 62rem; }
+#observablehq-main .gB-tabla table {
+  width: 100%; max-width: none; margin: 0; border-collapse: collapse;
+  font: 0.86rem/1.3 var(--sans-serif); color: var(--tinta);
+}
+.gB-tabla th, .gB-tabla td { padding: 0.32rem 0.55rem; border-bottom: 1px solid var(--borde); text-align: left; vertical-align: middle; }
+.gB-tabla thead th { font-weight: 700; color: var(--tinta-2); border-bottom: 1px solid var(--borde-fuerte); vertical-align: bottom; line-height: 1.25; }
+.gB-tabla tbody th { font-weight: 600; }
+.gB-tabla .num { text-align: right; white-space: nowrap; }
+.gB-tabla .gB-fuerte { font-weight: 700; }
+.gB-th-nota { display: block; font-weight: 400; font-size: 0.76rem; color: var(--tinta-2); white-space: nowrap; }
+.figura-cuerpo .gB-th-nota svg { display: inline-block; vertical-align: middle; }
+.gB-celda-svg { line-height: 0; }
+.gB-celda-svg svg { display: block; }
+.gB-nivel { display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+.gB-tabla tr.gB-ref > * { background: var(--fondo-2); font-weight: 700; }
+.gB-tabla tr.gB-destacada > th { color: var(--tono-texto); }
+.figura-cuerpo .gB-glifo { display: inline-block; vertical-align: baseline; }
+
+/* Fila o celda con globo: realce al pasar el puntero y foco visible. */
+.gB-tabla tr.marca-viva:hover > *, .gB-tabla tr.marca-viva:focus-visible > * { background: var(--fondo-2); }
+.gB-tabla tr.marca-viva:focus-visible { outline: 2px solid var(--tinta); outline-offset: -2px; }
+
+/* Tabla de calor: el color de la celda es la misma cifra que imprime. */
+#observablehq-main .gB-tabla .tc-tabla { table-layout: fixed; }
+.tc-tabla thead th:first-child { width: 34%; }
+.tc-tabla td.tc-celda { position: relative; text-align: center; padding: 0; height: 2rem; border: 2px solid var(--fondo); }
+.tc-fondo { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.tc-cifra { position: relative; font-weight: 600; font-size: 0.84rem; }
+.tc-sin-dato .tc-cifra { font-weight: 400; font-size: 0.76rem; }
+.tc-tabla thead th.num { text-align: center; white-space: normal; }
+.tc-orden { text-decoration: none; }
+.tc-tabla td.marca-viva:hover, .tc-tabla td.marca-viva:focus-visible { outline: 2px solid var(--tinta); outline-offset: -2px; }
+.gB-tabla .leyenda-continua { margin-bottom: 0.5rem; }
+
+/* Minigráficas: el cambio con su triángulo. */
+.tm-cambio { white-space: nowrap; }
+
+@media (max-width: 560px) {
+  .gB-tabla th, .gB-tabla td { padding: 0.3rem 0.35rem; }
+  #observablehq-main .gB-tabla table { font-size: 0.8rem; }
+  .tc-tabla thead th:first-child { width: 30%; }
+  .gB-th-nota { white-space: normal; }
+}
+
+/* ------------------------------------------------------ cifras con tendencia */
+.gB-cifras { display: grid; gap: 1.4rem 2rem; width: 100%; }
+.gB-cifra { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.gB-cifra-nombre { font: 600 0.8rem/1.3 var(--sans-serif); color: var(--tinta-2); text-transform: uppercase; letter-spacing: 0.06em; }
+.gB-cifra-valor { font: 800 clamp(2rem, 3.2vw, 2.8rem)/1.05 var(--sans-serif); color: var(--tinta); }
+.gB-cifra-cambio { font: 600 0.86rem/1.4 var(--sans-serif); color: var(--tinta-2); min-height: 1.2rem; }
+
+/* -------------------------------------------------------------- cuantiles */
+.cq-fila { outline: none; }
+.cq-fila.marca-viva:hover, .cq-fila.marca-viva:focus-visible { stroke: none; }
+.cq-fila:hover > .cq-zona, .cq-fila:focus-visible > .cq-zona { stroke: var(--tinta); stroke-width: 1.6px; }
+
+/* ----------------------------------------------------------- referencia */
+.gB-referencia { margin-bottom: 0.1rem; }
+
+/* ---------------------------------------------------------------- entrada */
+/* UNA vez, al dibujarse la sección por primera vez (`.en-vista` y todavía
+   no `.animada`, 1.2 s). Solo opacidad (R167): nada se desplaza. */
+@keyframes gB-aparecer { from { opacity: 0; } to { opacity: 1; } }
+.seccion-cuerpo.en-vista:not(.animada) .gB-forma { animation: gB-aparecer 0.5s ease both; animation-delay: 0.1s; }
+@media (prefers-reduced-motion: reduce) {
+  .seccion-cuerpo.en-vista:not(.animada) .gB-forma { animation: none; }
+}

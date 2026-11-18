@@ -1,0 +1,129 @@
+cve_ent,entidad,region,anio,condicion,num,den,casos
+01,Aguascalientes,Centro-Occidente,2010,Condición frecuente,879454,3660000,1799
+01,Aguascalientes,Centro-Occidente,2020,Condición frecuente,1195458,4062600,2714
+02,Baja California,Norte,2010,Condición frecuente,1301265,3782000,2291
+02,Baja California,Norte,2020,Condición frecuente,1371846,4198020,2713
+03,Baja California Sur,Norte,2010,Condición frecuente,4464597,15683000,1243
+03,Baja California Sur,Norte,2020,Condición frecuente,5002520,17408130,1642
+04,Campeche,Sur-Sureste,2010,Condición frecuente,6330040,15491000,1484
+04,Campeche,Sur-Sureste,2020,Condición frecuente,7143148,17195010,1557
+05,Coahuila,Norte,2010,Condición frecuente,434952,2273000,2264
+05,Coahuila,Norte,2020,Condición frecuente,686587,2523030,2431
+06,Colima,Centro-Occidente,2010,Condición frecuente,2810597,10689000,3074
+06,Colima,Centro-Occidente,2020,Condición frecuente,3516772,11864790,2771
+07,Chiapas,Sur-Sureste,2010,Condición frecuente,872309,1866000,2500
+07,Chiapas,Sur-Sureste,2020,Condición frecuente,935865,2071260,1436
+08,Chihuahua,Norte,2010,Condición frecuente,3766462,15422000,1945
+08,Chihuahua,Norte,2020,Condición frecuente,3679894,17118420,1107
+09,Ciudad de México,Centro,2010,Condición frecuente,1143927,5812000,2003
+09,Ciudad de México,Centro,2020,Condición frecuente,1732977,6451320,1669
+10,Durango,Norte,2010,Condición frecuente,2526700,6976000,1698
+10,Durango,Norte,2020,Condición frecuente,2856305,7743360,910
+11,Guanajuato,Centro-Occidente,2010,Condición frecuente,3454121,8432000,1778
+11,Guanajuato,Centro-Occidente,2020,Condición frecuente,3756491,9359520,1288
+12,Guerrero,Sur-Sureste,2010,Condición frecuente,6865959,13631000,1344
+12,Guerrero,Sur-Sureste,2020,Condición frecuente,8588761,15130410,3163
+13,Hidalgo,Centro,2010,Condición frecuente,6639303,14013000,1724
+13,Hidalgo,Centro,2020,Condición frecuente,7138985,15554430,1122
+14,Jalisco,Centro-Occidente,2010,Condición frecuente,6216666,13167000,2994
+14,Jalisco,Centro-Occidente,2020,Condición frecuente,6517632,14615370,2244
+15,Estado de México,Centro,2010,Condición frecuente,1913665,10774000,1814
+15,Estado de México,Centro,2020,Condición frecuente,2031093,11959140,2442
+16,Michoacán,Centro-Occidente,2010,Condición frecuente,3230942,9812000,1550
+16,Michoacán,Centro-Occidente,2020,Condición frecuente,4188591,10891320,1844
+17,Morelos,Centro,2010,Condición frecuente,2176216,6200000,1310
+17,Morelos,Centro,2020,Condición frecuente,2631458,6882000,2289
+18,Nayarit,Centro-Occidente,2010,Condición frecuente,1198219,3327000,2765
+18,Nayarit,Centro-Occidente,2020,Condición frecuente,1440651,3692970,2775
+19,Nuevo León,Norte,2010,Condición frecuente,1199118,9680000,1793
+19,Nuevo León,Norte,2020,Condición frecuente,1345667,10744800,1908
+20,Oaxaca,Sur-Sureste,2010,Condición frecuente,4945056,14975000,2503
+20,Oaxaca,Sur-Sureste,2020,Condición frecuente,6246637,16622250,1793
+21,Puebla,Centro,2010,Condición frecuente,332866,794000,710
+21,Puebla,Centro,2020,Condición frecuente,391782,881340,2065
+22,Querétaro,Centro,2010,Condición frecuente,4827615,14815000,2062
+22,Querétaro,Centro,2020,Condición frecuente,6456319,16444650,1531
+23,Quintana Roo,Sur-Sureste,2010,Condición frecuente,3582160,9244000,3053
+23,Quintana Roo,Sur-Sureste,2020,Condición frecuente,4632135,10260840,1051
+24,San Luis Potosí,Centro-Occidente,2010,Condición frecuente,4391229,11528000,1804
+24,San Luis Potosí,Centro-Occidente,2020,Condición frecuente,5429566,12796080,789
+25,Sinaloa,Norte,2010,Condición frecuente,2671730,7362000,1299
+25,Sinaloa,Norte,2020,Condición frecuente,2897958,8171820,1833
+26,Sonora,Norte,2010,Condición frecuente,318437,764000,2216
+26,Sonora,Norte,2020,Condición frecuente,442857,848040,712
+27,Tabasco,Sur-Sureste,2010,Condición frecuente,1500311,11072000,2856
+27,Tabasco,Sur-Sureste,2020,Condición frecuente,1709262,12289920,2836
+28,Tamaulipas,Norte,2010,Condición frecuente,924228,3589000,2637
+28,Tamaulipas,Norte,2020,Condición frecuente,1248710,3983790,1001
+29,Tlaxcala,Centro,2010,Condición frecuente,1915371,11607000,903
+29,Tlaxcala,Centro,2020,Condición frecuente,3116343,12883770,2279
+30,Veracruz,Sur-Sureste,2010,Condición frecuente,1590506,3607000,1315
+30,Veracruz,Sur-Sureste,2020,Condición frecuente,1792486,4003770,3117
+31,Yucatán,Sur-Sureste,2010,Condición frecuente,1237087,6203000,3097
+31,Yucatán,Sur-Sureste,2020,Condición frecuente,1716031,6885330,1562
+32,Zacatecas,Centro-Occidente,2010,Condición frecuente,1918421,8908000,2234
+32,Zacatecas,Centro-Occidente,2020,Condición frecuente,1844647,9887880,874
+01,Aguascalientes,Centro-Occidente,2010,Condición poco frecuente,14026,3660000,104
+01,Aguascalientes,Centro-Occidente,2020,Condición poco frecuente,22762,4062600,100
+02,Baja California,Norte,2010,Condición poco frecuente,46914,3782000,125
+02,Baja California,Norte,2020,Condición poco frecuente,63830,4198020,132
+03,Baja California Sur,Norte,2010,Condición poco frecuente,132224,15683000,60
+03,Baja California Sur,Norte,2020,Condición poco frecuente,172069,17408130,100
+04,Campeche,Sur-Sureste,2010,Condición poco frecuente,650622,15491000,111
+04,Campeche,Sur-Sureste,2020,Condición poco frecuente,763485,17195010,140
+05,Coahuila,Norte,2010,Condición poco frecuente,25083,2273000,28
+05,Coahuila,Norte,2020,Condición poco frecuente,29812,2523030,110
+06,Colima,Centro-Occidente,2010,Condición poco frecuente,100108,10689000,127
+06,Colima,Centro-Occidente,2020,Condición poco frecuente,64104,11864790,64
+07,Chiapas,Sur-Sureste,2010,Condición poco frecuente,78372,1866000,100
+07,Chiapas,Sur-Sureste,2020,Condición poco frecuente,88299,2071260,70
+08,Chihuahua,Norte,2010,Condición poco frecuente,178917,15422000,62
+08,Chihuahua,Norte,2020,Condición poco frecuente,160033,17118420,52
+09,Ciudad de México,Centro,2010,Condición poco frecuente,86874,5812000,61
+09,Ciudad de México,Centro,2020,Condición poco frecuente,127568,6451320,97
+10,Durango,Norte,2010,Condición poco frecuente,33043,6976000,47
+10,Durango,Norte,2020,Condición poco frecuente,76596,7743360,96
+11,Guanajuato,Centro-Occidente,2010,Condición poco frecuente,92435,8432000,85
+11,Guanajuato,Centro-Occidente,2020,Condición poco frecuente,139307,9359520,29
+12,Guerrero,Sur-Sureste,2010,Condición poco frecuente,248708,13631000,39
+12,Guerrero,Sur-Sureste,2020,Condición poco frecuente,307372,15130410,151
+13,Hidalgo,Centro,2010,Condición poco frecuente,106743,14013000,34
+13,Hidalgo,Centro,2020,Condición poco frecuente,114512,15554430,34
+14,Jalisco,Centro-Occidente,2010,Condición poco frecuente,90140,13167000,108
+14,Jalisco,Centro-Occidente,2020,Condición poco frecuente,172975,14615370,74
+15,Estado de México,Centro,2010,Condición poco frecuente,104087,10774000,149
+15,Estado de México,Centro,2020,Condición poco frecuente,40924,11959140,134
+16,Michoacán,Centro-Occidente,2010,Condición poco frecuente,84400,9812000,117
+16,Michoacán,Centro-Occidente,2020,Condición poco frecuente,151892,10891320,106
+17,Morelos,Centro,2010,Condición poco frecuente,95154,6200000,46
+17,Morelos,Centro,2020,Condición poco frecuente,104471,6882000,115
+18,Nayarit,Centro-Occidente,2010,Condición poco frecuente,22051,3327000,107
+18,Nayarit,Centro-Occidente,2020,Condición poco frecuente,40218,3692970,140
+19,Nuevo León,Norte,2010,Condición poco frecuente,121519,9680000,148
+19,Nuevo León,Norte,2020,Condición poco frecuente,171702,10744800,93
+20,Oaxaca,Sur-Sureste,2010,Condición poco frecuente,85400,14975000,33
+20,Oaxaca,Sur-Sureste,2020,Condición poco frecuente,173081,16622250,106
+21,Puebla,Centro,2010,Condición poco frecuente,6621,794000,49
+21,Puebla,Centro,2020,Condición poco frecuente,9967,881340,150
+22,Querétaro,Centro,2010,Condición poco frecuente,198333,14815000,83
+22,Querétaro,Centro,2020,Condición poco frecuente,221171,16444650,130
+23,Quintana Roo,Sur-Sureste,2010,Condición poco frecuente,143912,9244000,133
+23,Quintana Roo,Sur-Sureste,2020,Condición poco frecuente,184570,10260840,31
+24,San Luis Potosí,Centro-Occidente,2010,Condición poco frecuente,231495,11528000,86
+24,San Luis Potosí,Centro-Occidente,2020,Condición poco frecuente,276204,12796080,128
+25,Sinaloa,Norte,2010,Condición poco frecuente,212523,7362000,57
+25,Sinaloa,Norte,2020,Condición poco frecuente,255054,8171820,47
+26,Sonora,Norte,2010,Condición poco frecuente,8954,764000,142
+26,Sonora,Norte,2020,Condición poco frecuente,10426,848040,45
+27,Tabasco,Sur-Sureste,2010,Condición poco frecuente,214130,11072000,42
+27,Tabasco,Sur-Sureste,2020,Condición poco frecuente,299488,12289920,115
+28,Tamaulipas,Norte,2010,Condición poco frecuente,39320,3589000,137
+28,Tamaulipas,Norte,2020,Condición poco frecuente,22645,3983790,22
+29,Tlaxcala,Centro,2010,Condición poco frecuente,134750,11607000,43
+29,Tlaxcala,Centro,2020,Condición poco frecuente,154235,12883770,142
+30,Veracruz,Sur-Sureste,2010,Condición poco frecuente,42654,3607000,54
+30,Veracruz,Sur-Sureste,2020,Condición poco frecuente,73482,4003770,137
+31,Yucatán,Sur-Sureste,2010,Condición poco frecuente,69446,6203000,133
+31,Yucatán,Sur-Sureste,2020,Condición poco frecuente,91746,6885330,145
+32,Zacatecas,Centro-Occidente,2010,Condición poco frecuente,85529,8908000,129
+32,Zacatecas,Centro-Occidente,2020,Condición poco frecuente,133909,9887880,35
