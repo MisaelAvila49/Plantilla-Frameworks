@@ -63,6 +63,24 @@ body {
 #observablehq-sidebar { background: var(--fondo-2); color: var(--tinta); font-family: var(--sans-serif); }
 #observablehq-sidebar a[href] { color: var(--tinta-2); }
 #observablehq-sidebar .observablehq-link-active a[href], #observablehq-sidebar a[href]:hover { color: var(--rojo); }
+/* Elemento activo del menú (noviembre 2026): fondo rojo
+   Ibero y letra blanca en negritas, sin la raya lateral. El rojo es el de la
+   marca en los dos temas (#c4101b, 6.1:1 con el blanco): el rojo claro del
+   tema oscuro no daría contraste con la letra blanca. */
+#observablehq-sidebar ol:not(:first-child) .observablehq-link-active::before { display: none; }
+#observablehq-sidebar ol:not(:first-child) .observablehq-link-active > a[href],
+#observablehq-sidebar ol:not(:first-child) .observablehq-link-active > a[href]:hover { background: var(--tapa-rojo); color: #fff; font-weight: 700; border-radius: 0 5px 5px 0; text-decoration: none; }
+/* Al pasar el puntero por los demás: el tono suave del rojo del tema (rosa en
+   claro, vino oscuro en oscuro) y la letra roja, con la misma forma que el
+   activo; el blanco de Framework se veía como un hueco. */
+#observablehq-sidebar ol:not(:first-child) .observablehq-link:not(.observablehq-link-active) > a[href]:hover,
+#observablehq-sidebar details summary:hover { background: var(--tono-suave); color: var(--rojo); border-radius: 0 5px 5px 0; text-decoration: none; }
+/* La marca de arriba no se subraya al pasar el puntero. */
+#observablehq-sidebar > ol:first-child > li > a[href]:hover { text-decoration: none; }
+/* La marca de arriba (logo y título) lleva a Inicio, pero no se marca como
+   seleccionada: ni raya ni fondo cuando se está en Inicio. */
+#observablehq-sidebar > ol:first-child > li.observablehq-link-active::before { display: none; }
+#observablehq-sidebar > ol:first-child > li.observablehq-link-active > a[href] { background: transparent; }
 #observablehq-sidebar summary { color: var(--tinta-2); }
 #observablehq-toc, #observablehq-toc a { color: var(--tinta-2); font-family: var(--sans-serif); }
 #observablehq-toc .observablehq-secondary-link-active a, #observablehq-toc a:hover { color: var(--rojo); }
@@ -72,7 +90,13 @@ body {
 #observablehq-sidebar > ol:first-child > li > a { height: auto; display: block; padding-top: 0.2rem; padding-bottom: 0.4rem; white-space: normal; }
 .sidebar-brand { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.3rem 0 0.2rem; }
 .sidebar-brand-logo svg { display: block; width: 9.2rem; height: auto; }
-:root[data-tema="oscuro"] .sidebar-brand-logo { background: var(--placa-logo); border-radius: 6px; padding: 0.35rem 0.5rem; width: fit-content; }
+/* En el tema oscuro el logo de Social Data se recolorea en línea, sin placa
+   blanca: los círculos y trazos oscuros pasan a la tinta clara del tema, el
+   gris del texto se aclara y el blanco de los íconos de persona toma el fondo
+   del menú para seguir recortándose; los rojos se quedan. */
+:root[data-tema="oscuro"] .sidebar-brand-logo .cls-3 { fill: var(--tinta); }
+:root[data-tema="oscuro"] .sidebar-brand-logo .cls-1 { fill: var(--tinta-2); }
+:root[data-tema="oscuro"] .sidebar-brand-logo .cls-5 { fill: var(--fondo-2); }
 .sidebar-brand-title { font: 600 0.98rem/1.25 var(--serif); color: var(--tinta); }
 
 .boton-tema-caja { list-style: none; margin: 0.5rem 0 0.2rem; }
@@ -347,8 +371,9 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 .portada-botones { display: flex; flex-wrap: wrap; gap: 0.7rem; }
 #observablehq-main a.boton { display: inline-flex; align-items: center; font: 700 0.95rem var(--sans-serif); padding: 0.62rem 1.2rem; border-radius: 999px; text-decoration: none; border: 1px solid var(--borde-fuerte); color: var(--tinta); background: var(--fondo); }
 #observablehq-main a.boton:hover { border-color: var(--tinta-3); }
-#observablehq-main a.boton-principal { background: var(--rojo-fuerte); border-color: var(--rojo-fuerte); color: var(--blanco); }
-:root[data-tema="oscuro"] #observablehq-main a.boton-principal { color: var(--tapa-tinta); }
+/* Botón principal en el rojo de la marca, el mismo del menú, en los dos temas
+   (#c4101b con letra blanca, 6.1:1). */
+#observablehq-main a.boton-principal { background: var(--tapa-rojo); border-color: var(--tapa-rojo); color: #fff; }
 #observablehq-main a.boton-principal:hover { filter: brightness(1.08); }
 
 /* Tapa del libro: un objeto claro en perspectiva, que conserva sus colores
@@ -369,6 +394,7 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 .tapa-pie { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 5cqw; }
 .tapa-lugar { font: 600 3cqw var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tapa-gris); display: flex; flex-direction: column; gap: 0.6cqw; }
 .tapa-logo { width: 26cqw; height: auto; display: block; }
+.tapa-logos { display: flex; align-items: flex-end; gap: 3cqw; }
 
 /* Tapa con imagen (opción `imagen` de portada(), R184): la ilustración del
    tema, grande. Sello rojo y título arriba, figura debajo, año y logo abajo,
@@ -380,9 +406,14 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 .tapa--imagen .tapa-sello { top: 7cqw; left: 9cqw; right: 7cqw; z-index: 3; font: 600 2.5cqw var(--sans-serif); letter-spacing: 0.22em; color: var(--tapa-rojo); }
 .tapa--imagen .tapa-titulo { top: 15cqw; left: 9cqw; right: 8cqw; z-index: 3; font: 500 8.6cqw/1.03 var(--serif); letter-spacing: -0.01em; text-wrap: balance; }
 .tapa--imagen .tapa-imagen { z-index: 2; height: auto; display: block; max-width: none; filter: drop-shadow(0 0 0.7cqw var(--tapa-crema)) drop-shadow(0 0 0.4cqw var(--tapa-crema)); }
-.tapa--imagen .tapa-pie { right: 7cqw; bottom: 6.5cqw; z-index: 3; margin: 0; gap: 3cqw; justify-content: flex-end; }
-.tapa--imagen .tapa-anio { font: 600 2.4cqw var(--sans-serif); letter-spacing: 0.22em; color: var(--tapa-gris); }
+/* Pie de la tapa: el año a la izquierda, a la altura del sello y el título, y
+   los logos a la derecha; todo asienta en el mismo borde de abajo. */
+.tapa--imagen .tapa-pie { left: 9cqw; right: 7cqw; bottom: 6.5cqw; z-index: 3; margin: 0; justify-content: space-between; align-items: flex-end; }
+/* Alto de renglón igual al de las mayúsculas: la tinta del año asienta en el
+   mismo borde que los logos (el renglón normal deja aire del descendente). */
+.tapa--imagen .tapa-anio { font: 600 2.4cqw/0.74 var(--sans-serif); letter-spacing: 0.22em; color: var(--tapa-gris); display: block; }
 .tapa--imagen .tapa-logo { width: 21cqw; }
+.tapa-logo.tapa-logo--ancho { width: auto; height: 3.4cqw; }
 @keyframes libro-llega { from { opacity: 0; transform: translateY(18px) rotateY(-28deg); } to { opacity: 1; transform: rotateY(-16deg) rotateX(3deg); } }
 @media (prefers-reduced-motion: no-preference) { .libro--imagen { animation: libro-llega 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; } }
 

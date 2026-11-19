@@ -65,7 +65,7 @@ export function portada(libro, {dibujo = null, imagen = null, explorar = "./secc
           <p class="tapa-titulo">${tituloCon(libro, "em")}</p>
           <div class="tapa-pie">
             <span class="tapa-lugar"><span>${libro.ciudad}</span><span>${romano(libro.anio)}</span></span>
-            ${logo ? html`<img class="tapa-logo" src=${logo} alt="">` : ""}
+            ${logosTapa(logo)}
           </div>
         </div>`}
       </div>
@@ -74,6 +74,16 @@ export function portada(libro, {dibujo = null, imagen = null, explorar = "./secc
 }
 
 // Tapa con la ilustración del tema (opción `imagen` de portada()).
+// Logos del pie de la tapa, juntos a la derecha (el año o el lugar va a la
+// izquierda) y alineados por abajo. `logo` es una URL o una lista (proyectos
+// conjuntos: el logo de cada institución, en el mismo tono monocromo); cada
+// elemento es una URL o {url, clase}: la clase ajusta su tamaño (un logo muy
+// ancho se ajusta por alto con `tapa-logo--ancho`).
+const logosTapa = (logo) => {
+  const lista = [logo].flat().filter(Boolean).map((l) => (typeof l === "string" ? {url: l} : l));
+  return lista.length ? html`<span class="tapa-logos">${lista.map((l) => html`<img class=${`tapa-logo${l.clase ? " " + l.clase : ""}`} src=${l.url} alt="">`)}</span>` : "";
+};
+
 function tapaConImagen(libro, {url, izquierda = 8, abajo = 18, ancho = 80}, logo) {
   return html`<div class="tapa tapa--imagen">
     <span class="tapa-sello">Social Data Ibero</span>
@@ -81,7 +91,7 @@ function tapaConImagen(libro, {url, izquierda = 8, abajo = 18, ancho = 80}, logo
     <img class="tapa-imagen" src=${url} alt="" style=${`left:${izquierda}cqw;bottom:${abajo}cqw;width:${ancho}cqw`}>
     <div class="tapa-pie">
       <span class="tapa-anio">${romano(libro.anio)}</span>
-      ${logo ? html`<img class="tapa-logo" src=${logo} alt="">` : ""}
+      ${logosTapa(logo)}
     </div>
   </div>`;
 }

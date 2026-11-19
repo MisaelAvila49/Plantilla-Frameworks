@@ -19,7 +19,9 @@ export function tablaBarras(datos, {ancho, nombre, valor, cantidad = null, unida
   const filas = datos.filter((d) => valor(d) != null).sort((a, b) => valor(b) - valor(a));
   if (!filas.length) return vacio();
   const angosto = ancho < 560;
-  const anchoBarra = angosto ? Math.max(120, ancho - 150) : Math.min(520, Math.round(ancho * 0.48));
+  // En angosto la columna del nombre se queda con más de la mitad: la barra
+  // toma 40 % del ancho para que el viewBox casi no tenga que encogerla.
+  const anchoBarra = angosto ? Math.max(120, Math.min(ancho - 150, Math.round(ancho * 0.4))) : Math.min(520, Math.round(ancho * 0.48));
   // La cifra va dentro de la celda, a la derecha de la barra: se reserva
   // espacio para ella dentro del mismo SVG.
   const reserva = 58;
@@ -27,7 +29,9 @@ export function tablaBarras(datos, {ancho, nombre, valor, cantidad = null, unida
   const barra = (d) => {
     const v = valor(d), w = Math.max(1, x(v));
     const tono = destacar == null || nombre(d) === destacar ? P.serie : P.contexto;
-    return svg`<svg class="tb-barra" width=${anchoBarra} height="22" aria-hidden="true">
+    // Con viewBox, si la columna es más angosta que la barra el navegador
+    // escala el dibujo completo en vez de recortar la cifra.
+    return svg`<svg class="tb-barra" width=${anchoBarra} height="22" viewBox=${`0 0 ${anchoBarra} 22`} style="max-width: 100%; height: auto;" aria-hidden="true">
       <rect x="0" y="5" width=${w} height="12" rx="2" fill=${tono} />
       ${referencia ? svg`<line x1=${x(referencia.valor)} x2=${x(referencia.valor)} y1="0" y2="22" stroke=${P.tinta2} stroke-width="1.4" stroke-dasharray="3 2"/>` : ""}
       <text x=${w + 6} y="15.5" font-size="13" font-weight="600" fill=${P.tinta} stroke=${P.fondo} stroke-width="3" paint-order="stroke">${pct(v)}${incierta(d) ? " *" : ""}</text>

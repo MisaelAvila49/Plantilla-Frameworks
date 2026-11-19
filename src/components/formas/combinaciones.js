@@ -18,7 +18,8 @@ import {base, vacio, leyendaItems, conLeyenda, TIPO} from "./comun.js";
 // valor(d) porcentaje del total. `condiciones`: orden fijo de las columnas.
 // `orden(a, b)` compara filas (por omisión, de la más a la menos frecuente).
 // `nombre(d)`: rótulo accesible de la combinación.
-export function combinaciones(datos, {ancho, condiciones, tiene, valor, orden = null, nombre = null, formato = pct, tope = null, globo: g}) {
+// `leyenda`: [texto del punto lleno, texto del punto gris].
+export function combinaciones(datos, {ancho, condiciones, tiene, valor, orden = null, nombre = null, formato = pct, tope = null, leyenda: textosLeyenda = ["Reúne la condición", "No la reúne"], globo: g}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const lista = [...filas].sort(orden ?? ((a, b) => valor(b) - valor(a)));
@@ -61,8 +62,8 @@ export function combinaciones(datos, {ancho, condiciones, tiene, valor, orden = 
   plot.setAttribute("role", "group");
   plot.setAttribute("aria-label", `${lista.length} combinaciones de ${condiciones.length} condiciones. ` + lista.map((d) => `${nombre ? nombre(d) : clave(d)}: ${formato(valor(d))}`).join(". ") + ".");
   const leyenda = leyendaItems([
-    {tipo: "punto", color: P.serie, texto: "Reúne la condición"},
-    {tipo: "punto", color: P.apagado, texto: "No la reúne"},
+    {tipo: "punto", color: P.serie, texto: textosLeyenda[0]},
+    {tipo: "punto", color: P.apagado, texto: textosLeyenda[1]},
   ]);
   return conLeyenda(leyenda, g ? conGlobo(plot, g) : plot);
 }

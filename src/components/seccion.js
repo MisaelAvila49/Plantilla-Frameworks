@@ -100,7 +100,9 @@ export function verificado({fuentes = [], cotejo = null, pendiente = null} = {})
 // «Ver los datos»: la tabla de respaldo. Aquí va lo que NO va en el globo:
 // margen de error, casos de la muestra, numerador y denominador.
 //   columnas: [{titulo, valor: (d) => …, formato: "pct" | "conteo" | … | fn, texto: true}]
-export function tablaDatos(filas, columnas, {titulo = "Ver los datos", nombre = "datos"} = {}) {
+// `etiqueta`: nombre de la región para el lector de pantalla; cada tabla de la
+// página lleva el suyo (axe pide regiones con nombre único).
+export function tablaDatos(filas, columnas, {titulo = "Ver los datos", nombre = "datos", etiqueta = null} = {}) {
   const celda = (c, d) => {
     const x = c.valor(d);
     if (c.texto) return x == null || x === "" ? SIN_DATO : String(x);
@@ -119,7 +121,7 @@ export function tablaDatos(filas, columnas, {titulo = "Ver los datos", nombre = 
   return html`<details class="desplegable tabla-datos">
     <summary>${titulo}</summary>
     <div class="desplegable-cuerpo">
-      <div class="tabla-marco" tabindex="0" role="region" aria-label="Tabla de datos de la gráfica">
+      <div class="tabla-marco" tabindex="0" role="region" aria-label=${etiqueta ? `Datos de: ${etiqueta}` : `Datos de: ${nombre}`}>
         <table>
           <thead><tr>${columnas.map((c) => html`<th scope="col" class=${c.texto ? "" : "num"}>${c.titulo}</th>`)}</tr></thead>
           <tbody>${filas.map((d) => html`<tr>${columnas.map((c) => html`<td class=${c.texto ? "" : "num"}>${celda(c, d)}</td>`)}</tr>`)}</tbody>
@@ -187,7 +189,7 @@ export function analisis({id, numero = null, titulo, entrada = null, panel = nul
       );
       abierta = huecoTabla.querySelector("details")?.open ?? abierta;
       if (r.tabla) {
-        const t = tablaDatos(r.tabla.filas, r.tabla.columnas, {nombre: id});
+        const t = tablaDatos(r.tabla.filas, r.tabla.columnas, {nombre: id, etiqueta: titulo});
         t.open = abierta;
         huecoTabla.replaceChildren(t);
       } else huecoTabla.replaceChildren();
