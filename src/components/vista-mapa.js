@@ -203,6 +203,10 @@ export function mapaIndicador({nivel, geoEnt, geoMun = null, valores, referencia
       // Sin borde entre unidades: un borde claro se ve gris por antialiasing.
       Plot.geo(unidades, {geometry: (u) => u.f.geometry, fill: color, stroke: "none", ...viva(unidades.map((u) => u.d), g, {subir: true})}),
       fragiles.length ? Plot.geo(fragiles, {geometry: (u) => u.f.geometry, fill: `url(#${idTrama})`, stroke: "none", pointerEvents: "none"}) : null,
+      // División entre municipios: línea fina de TINTA semitransparente encima
+      // de los rellenos (no blanca, que el antialiasing vuelve gris). Sin ella
+      // dos municipios del mismo rango se leían como uno solo (noviembre 2026).
+      esMun ? Plot.geo(unidades, {geometry: (u) => u.f.geometry, fill: "none", stroke: P.tinta, strokeOpacity: 0.3, strokeWidth: 0.5, pointerEvents: "none"}) : null,
       Plot.geo(bordes, {geometry: (f) => f.geometry, fill: "none", stroke: P.bordeFuerte, strokeWidth: esMun ? 0.7 : 0.6, pointerEvents: "none"}),
       destacado ? Plot.geo([destacado], {geometry: (f) => f.geometry, fill: "none", stroke: P.tinta, strokeWidth: 2, pointerEvents: "none"}) : null,
     ],

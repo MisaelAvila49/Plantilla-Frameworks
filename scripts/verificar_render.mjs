@@ -78,7 +78,12 @@ async function globoDe(page, i) {
     const t = document.querySelector(".globo-tarjeta");
     if (!t || t.hidden) return null;
     const txt = (c) => t.querySelector(c)?.textContent.trim() ?? "";
-    return {grupo: txt(".gt-grupo"), cifra: txt(".gt-cifra"), personas: txt(".gt-personas"), orden: [...t.children].map((n) => n.className)};
+    // La cifra sin su margen: el margen (± …) va en su propio span dentro de
+    // la cifra (R125) y se revisa aparte.
+    const cifraNodo = t.querySelector(".gt-cifra")?.cloneNode(true);
+    cifraNodo?.querySelector(".gt-margen")?.remove();
+    const margen = t.querySelector(".gt-margen")?.textContent.replace(/^,\s*margen de error\s*/, "").trim() ?? "";
+    return {grupo: txt(".gt-grupo"), cifra: cifraNodo?.textContent.trim() ?? "", margen, personas: txt(".gt-personas"), orden: [...t.children].map((n) => n.className)};
   });
   await page.mouse.move(2, 2);
   return r;
@@ -103,7 +108,12 @@ function defectosGlobo(g) {
   const cola = g.personas.replace(/^[\d,]+ (de [\d,]+ )?/, "");
   if (g.personas && /años/.test(cola)) d.push(`el renglón de población lleva la edad («${g.personas}»): va en el subtítulo (R117)`);
   if (g.personas && cola.split(/\s+/).length > 5) d.push(`universo demasiado largo en el globo («${g.personas}»): dos o tres palabras (R117)`);
-  if (/±/.test(g.cifra + g.personas)) d.push("el margen de error va en la tabla, no en el globo");
+  // El margen va junto a la cifra, en su span (R125): «± 1.2», «± <0.1» o
+  // «± $310»; nunca dentro del texto de la cifra ni de la población, y
+  // nunca «± 0».
+  if (/±/.test(g.cifra + g.personas)) d.push("el margen ± va en su propio span (.gt-margen), no dentro de la cifra ni de la población");
+  if (g.margen && !/^± (<0\.1|\$?[\d,]+(\.\d+)?( h)?)$/.test(g.margen)) d.push(`margen fuera de formato: «${g.margen}» (R125)`);
+  if (g.margen && /^± 0(\.0+)?$/.test(g.margen)) d.push("margen en cero: sin error estimable no se pinta (R125)");
   return d;
 }
 const ORDEN_DESPLEGABLES = ["Fuentes y verificación", "¿Qué quiere decir este análisis?", "Ver los datos"];

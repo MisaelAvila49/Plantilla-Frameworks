@@ -23,7 +23,7 @@
 // Una página que se retira lleva `draft: true` en su front matter y sale de
 // esta lista; no se borra.
 
-export const PAGINAS = [
+const TODAS = [
   {ruta: "/", nombre: "Inicio", analisis: 0, filtros: false},
   {ruta: "/seccion-modelo", nombre: "Sección modelo", grupo: "Ejemplos", analisis: 1, filtros: true},
   {ruta: "/mapa", nombre: "Mapa de flujos", grupo: "Ejemplos", analisis: 0, filtros: true, mapa: true, pager: false, estados: [
@@ -68,10 +68,20 @@ export const PAGINAS = [
   {ruta: "/referencias", nombre: "Referencias", analisis: 0, filtros: false},
 ];
 
+// Lo que revisan los verificadores. Con OBS_RUTAS («tipos,escuela») solo
+// esas páginas: sirve para iterar rápido sobre lo que se tocó. El menú usa
+// siempre la lista completa, así que la variable no afecta al build. Antes
+// de publicar se corre la batería completa, sin OBS_RUTAS.
+// Se aceptan con o sin barra («tipos,escuela»): Git Bash convierte «/tipos» en
+// una ruta de Windows si no se antepone MSYS_NO_PATHCONV=1.
+const SOLO = (process.env.OBS_RUTAS ?? "").split(",").map((r) => r.trim().replace(/^.*\/Git(?=\/)/, "")).filter(Boolean).map((r) => (r.startsWith("/") ? r : "/" + r));
+export const PAGINAS = SOLO.length ? TODAS.filter((p) => SOLO.includes(p.ruta)) : TODAS;
+if (SOLO.length && !PAGINAS.length) throw new Error(`OBS_RUTAS no coincide con ninguna página: ${SOLO.join(", ")}`);
+
 // Menú de Framework a partir de la lista: las páginas con `grupo` se juntan.
 export function menu() {
   const salida = [];
-  for (const p of PAGINAS) {
+  for (const p of TODAS) {
     const item = {name: p.nombre, path: p.ruta, ...(p.pager === false ? {pager: null} : {})};
     if (!p.grupo) { salida.push(item); continue; }
     let g = salida.find((x) => x.name === p.grupo && x.pages);

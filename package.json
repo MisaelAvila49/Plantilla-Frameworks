@@ -19,6 +19,7 @@
     "verificar:paleta": "node scripts/verificar_paleta.mjs",
     "verificar:quieto": "node scripts/verificar_quieto.mjs",
     "verificar:scroll": "node scripts/verificar_scroll.mjs",
+    "verificar:rapido": "node scripts/verificar_rapido.mjs",
     "verificar:todo": "npm run clean && npm run build && npm run verificar:paleta && npm run verificar:render && npm run verificar:filtros && npm run verificar:quieto && npm run verificar:a11y && npm run verificar:scroll"
   },
   "dependencies": {

@@ -143,20 +143,24 @@ ol.referencias li:target { background: var(--tono-suave); }
 .seccion-cuerpo { margin-top: 1.5rem; }
 
 /* ---------------------------------------------------------------- 5. filtros */
-/* Franja gris clara sin borde. Rótulo ARRIBA de cada control, columnas
-   alineadas entre grupos y controles del mismo alto. */
+/* Franja gris clara sin borde. Los grupos son SECCIONES de izquierda a
+   derecha, de lo general a lo particular (el orden lo fija filtros.js), y
+   dentro de cada grupo los controles van en renglón, nunca en columna. Un
+   grupo no se encoge: baja entero al renglón siguiente cuando no cabe. Cada
+   select mide su opción más larga (--largo, en caracteres); un campo que no
+   aplica se oculta y los demás se recorren sin dejar huecos. */
 .panel-filtros {
   position: sticky; top: 0; z-index: 5;
-  display: flex; flex-direction: column; align-items: stretch; gap: 0.7rem;
+  display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 0.9rem 2.25rem;
   margin: 0; padding: 0.9rem 1rem 1rem; background: var(--fondo-2); color: var(--tinta); border-radius: var(--radio);
   font-family: var(--sans-serif);
 }
-.panel-grupo { border: 0; margin: 0; padding: 0; min-width: 0; }
+.panel-grupo { border: 0; margin: 0; padding: 0; min-width: 0; flex: 0 0 auto; max-width: 100%; }
 /* Rótulo de grupo en rojo, con el mismo formato que el número de sección (02):
    compensa el negro dominante de la sección sin teñir los rótulos de cada campo. */
 .panel-grupo > legend { padding: 0; margin-bottom: 0.4rem; font: 700 0.8rem var(--sans-serif); letter-spacing: 0.08em; text-transform: uppercase; color: var(--rojo); }
-.panel-campos { display: grid; grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr)); gap: 0.6rem 0.9rem; align-items: end; }
-.campo { display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; }
+.panel-campos { display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; align-items: flex-end; }
+.campo { display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; flex: 0 0 auto; width: clamp(8rem, calc(var(--largo, 14) * 0.5rem + 2.6rem), 23rem); max-width: 100%; }
 .campo-rotulo { font: 600 0.8rem var(--sans-serif); color: var(--tinta-2); }
 .campo select, .campo input[type="number"] {
   box-sizing: border-box; height: 2.35rem; width: 100%; padding: 0 0.6rem;
@@ -164,7 +168,11 @@ ol.referencias li:target { background: var(--tono-suave); }
   border: 1px solid var(--borde-fuerte); border-radius: 6px;
 }
 .campo select:disabled { color: var(--tinta-2); background: var(--fondo-3); opacity: 1; }
-.campo-umbral { grid-column: span 2; }
+.campo-umbral, .panel-filtros.pegado .campo-umbral { width: auto; flex: 0 1 26rem; }
+/* Fijo arriba, la frase del umbral va en un renglón y la barra se oculta (el
+   número se sigue editando): con la barra la franja pasaba de 110 px. */
+.panel-filtros.pegado .campo-umbral input[type="range"] { display: none; }
+.panel-filtros.pegado .campo-frase { flex-wrap: nowrap; white-space: nowrap; font-size: 0.85rem; }
 .campo-frase { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.92rem; }
 .campo-frase input[type="number"] { width: 4.6rem; }
 .campo-umbral input[type="range"] { accent-color: var(--tono); width: 100%; }
@@ -175,14 +183,22 @@ ol.referencias li:target { background: var(--tono-suave); }
 /* Fijo arriba: solo los controles (los rótulos siguen para el lector de
    pantalla). La reserva que sigue al panel conserva el largo de la página. */
 .panel-filtros.pegado { padding: 0.45rem 0.8rem; gap: 0.35rem; flex-direction: row; flex-wrap: wrap; border-radius: 0 0 var(--radio) var(--radio); box-shadow: 0 1px 0 var(--borde); }
-.panel-filtros.pegado .panel-grupo { flex: 1 1 auto; }
+/* Fijo, cada grupo pone sus controles en UN renglón (columnas de 7.5 rem o
+   más) y los grupos se acomodan uno tras otro: con cinco controles en cuatro
+   grupos (tipo de dificultad y mapa) el panel cabe en un renglón a 1366 px
+   (R66, verificar:quieto). */
+.panel-filtros.pegado .panel-grupo { flex: 1 1 min-content; min-width: min-content; }
+.panel-filtros.pegado .campo { min-width: 0; flex: 0 1 auto; width: clamp(6.5rem, calc(var(--largo, 14) * 0.42rem + 2rem), 12.5rem); }
+.panel-filtros.pegado .campo select { min-width: 0; width: 100%; }
 .panel-filtros.pegado .panel-grupo > legend,
 .panel-filtros.pegado .campo-rotulo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; margin: 0; }
-.panel-filtros.pegado .panel-campos { grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.35rem 0.5rem; }
+.panel-filtros.pegado .panel-campos { flex-wrap: nowrap; gap: 0.35rem 0.5rem; }
 .panel-filtros.pegado .campo select, .panel-filtros.pegado .campo input[type="number"] { height: 2rem; font-size: 0.85rem; }
 @media (max-width: 640px) {
-  .panel-campos { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
-  .campo-umbral { grid-column: 1 / -1; }
+  .panel-filtros { gap: 0.7rem 1rem; }
+  .panel-grupo { flex: 1 1 100%; }
+  .campo { flex: 1 1 9.5rem; width: auto; }
+  .campo-umbral { flex-basis: 100%; }
   .panel-filtros.pegado .panel-boton {
     display: inline-flex; align-items: center; height: 2rem; padding: 0 0.9rem; font: 600 0.85rem var(--sans-serif);
     color: var(--tinta); background: var(--fondo); border: 1px solid var(--borde-fuerte); border-radius: 999px; cursor: pointer;
@@ -318,6 +334,8 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 .gt-muestra { flex: none; width: 0.62rem; height: 0.62rem; border-radius: 50%; }
 .gt-cifra { font: 700 1.5rem/1.15 var(--sans-serif); color: var(--tinta); margin-top: 0.1rem; }
 .gt-personas { color: var(--tinta-2); margin-top: 0.15rem; }
+/* Margen de error al 95 %: junto a la cifra, chico y tenue (no compite con ella). */
+.gt-margen { margin-left: 0.4rem; font: 500 0.85rem var(--sans-serif); color: var(--tinta-2); white-space: nowrap; }
 .gt-aviso { margin-top: 0.3rem; padding-top: 0.3rem; border-top: 1px dashed var(--borde-fuerte); color: var(--tinta-2); font-size: 0.76rem; }
 
 /* ---------------------------------------------------------------- 9. portada */

@@ -113,52 +113,68 @@ const disenada = (b, modo, serie, rampa) => ({...base(b), serie, rampa, categori
 
 export const PROPUESTAS = [
   {
-    id: "a", letra: "A", nombre: "Petróleo Ibero (la actual de la Plantilla)", recomendada: true, disenada: true,
+    id: "rojo-ibero", letra: "A", nombre: "Rojo Ibero (la actual de la Plantilla)", recomendada: true, disenada: true,
+    idea: "El rojo de la marca como serie (#c4101b en claro, #ee5a5f en oscuro) y una rampa de una sola tinta en OKLCH, del rosa pálido al rojo profundo (matiz 22° a 27°). Trae su propio trío (rojo, azul petróleo y dorado) y un gris medio de comparación.",
+    rojo: "La serie ES el rojo de «desfavorable», por decisión (19 de noviembre de 2026). En las gráficas de brecha o cambio, donde la serie no aparece, el rojo sigue marcando lo desfavorable; donde conviven serie y signo, el signo se dice con la dirección de la flecha y con azul o gris.",
+    porque: "Es la paleta de la marca: la gráfica comparte el rojo del antetítulo y de la cifra principal. Medida con el validador en todos los pares: trío ΔE 13.2 en claro y 12.2 en oscuro con daltonismo; serie contra el gris de comparación 16.9 y 10.9. La rampa pasa en orden, con pasos distinguibles y una sola tinta; su extremo claro queda bajo 2:1 contra el fondo, igual que la anterior.",
+    claro: {...base(CLARO), serie: TONOS.rojoIbero.claro, rampa: [...TONOS.rojoIbero.rampa.claro], categorias: [...TONOS.rojoIbero.categorias.claro], divergente: [...DIVERGENTE_DISENADO.claro], comparacion: TONOS.rojoIbero.comparacion.claro},
+    oscuro: {...base(OSCURO), serie: TONOS.rojoIbero.oscuro, rampa: [...TONOS.rojoIbero.rampa.oscuro], categorias: [...TONOS.rojoIbero.categorias.oscuro], divergente: [...DIVERGENTE_DISENADO.oscuro], comparacion: TONOS.rojoIbero.comparacion.oscuro},
+  },
+  {
+    id: "rojo-grafito", letra: "B", nombre: "Rojo y grafito", disenada: true,
+    idea: "El mismo rojo de la marca contra un grafito cálido en la comparación principal (#6b6966 en claro, #a3a09b en oscuro), con una rampa de salmón a rojo de menor croma.",
+    rojo: "Igual que A: la serie es el rojo semántico. El grafito da más peso a la serie de referencia que el gris medio de A.",
+    porque: "Dos tintas de la identidad gráfica, rojo y grafito, para las gráficas que comparan con y sin. Medida: trío ΔE 13.4 y 12.2; serie contra grafito 10.4 en claro y 8.0 en oscuro, en la meta justa, así que en oscuro conviene el rótulo directo.",
+    claro: {...base(CLARO), serie: TONOS.rojoGrafito.claro, rampa: [...TONOS.rojoGrafito.rampa.claro], categorias: [...TONOS.rojoGrafito.categorias.claro], divergente: [...DIVERGENTE_DISENADO.claro], comparacion: TONOS.rojoGrafito.comparacion.claro},
+    oscuro: {...base(OSCURO), serie: TONOS.rojoGrafito.oscuro, rampa: [...TONOS.rojoGrafito.rampa.oscuro], categorias: [...TONOS.rojoGrafito.categorias.oscuro], divergente: [...DIVERGENTE_DISENADO.oscuro], comparacion: TONOS.rojoGrafito.comparacion.oscuro},
+  },
+  {
+    id: "a", letra: "C", nombre: "Petróleo Ibero (la anterior, del 18 de noviembre)", disenada: true,
     idea: "Verde azulado de matiz 185° (serie #008e82, L 0.58, croma 0.12), el lado opuesto del círculo al rojo Ibero (27°). Es la D (el petróleo anterior) rehecha con método: misma familia, pero rampa de una tinta con pasos de luz iguales, divergente con los extremos claros legibles y un trío nuevo sin terracota.",
     rojo: "Sin conflicto, medido: la serie y la rampa se separan del rojo de «desfavorable» con daltonismo y con visión normal en los dos temas, y el trío claro también. El rojo queda para el acento de la interfaz y para lo que se pierde.",
     porque: "Complementa el rojo de la marca sin competir con él: está en el lado opuesto del círculo cromático, así que el rojo del antetítulo, de la cifra principal y de «desfavorable» resalta más junto a él, y ninguno de los dos se lee como el otro con daltonismo. No carga un significado propio, de modo que sirve igual para población, educación, trabajo, salud o territorio: la magnitud va en la rampa petróleo y el cambio en rojo y azul, sin que una se confunda con el otro. Medido en el build: ninguna de las 33 comprobaciones obligatorias falla, ni en claro ni en oscuro; 30 pasan y las otras 3 son los avisos que tiene cualquier propuesta por diseño (el extremo casi blanco de la rampa y el gris de comparación). Su rampa también pasa como nueve clases. Sobre la tapa y la portada claras la serie da 3.72:1 contra el papel #f8f5ee y 4.05:1 contra el blanco, y la tinta negra y el rojo de la marca no cambian.",
-    // Desde el 18 de noviembre de 2026 es el tono por omisión: sus valores
+    // Fue el tono por omisión del 18 al 19 de noviembre de 2026; sus valores
     // viven en TONOS.petroleoIbero de paleta.js y aquí solo se leen.
     claro: disenada(CLARO, "claro", TONOS.petroleoIbero.claro, TONOS.petroleoIbero.rampa.claro),
     oscuro: disenada(OSCURO, "oscuro", TONOS.petroleoIbero.oscuro, TONOS.petroleoIbero.rampa.oscuro),
   },
   {
-    id: "b", letra: "B", nombre: "Jade", disenada: true,
+    id: "b", letra: "D", nombre: "Jade", disenada: true,
     idea: "Un verde más cálido, de matiz 168° (serie #007c5d, L 0.52, croma 0.13): más cerca de la naturaleza y del papel de la marca que el petróleo, y todavía lejos del verde pino que se confunde con el rojo.",
     rojo: "Sin conflicto, medido. Es el verde más amarillo que pasa: a partir de 160° la rampa se confunde con el rojo con protanopía. Por eso su rampa clara termina muy oscura (L 0.29), donde vuelve a separarse.",
     claro: disenada(CLARO, "claro", "#007c5d", ["#d8f9eb", "#a4e5cb", "#53d5aa", "#30ba91", "#009f78", "#008262", "#00674d", "#004d39", "#003426"]),
     oscuro: disenada(OSCURO, "oscuro", "#00936f", ["#002f21", "#004633", "#005f46", "#00785b", "#00936f", "#1cae86", "#44c89e", "#7cdeba", "#c5ecdb"]),
   },
   {
-    id: "c", letra: "C", nombre: "Turquesa", disenada: true,
+    id: "c", letra: "E", nombre: "Turquesa", disenada: true,
     idea: "El verde azulado más frío que pasa en claro, de matiz 195° (serie #009a9a, L 0.62, croma 0.115): más luminoso y más fresco que el petróleo.",
     rojo: "Sin conflicto con el rojo. El límite es el azul: en oscuro, cualquier turquesa queda a ΔE 12.7 a 14.4 del azul de «favorable» (#4A90D9), así que el tema oscuro usa la misma serie y rampa que A. Es una propuesta solo para el tema claro.",
     claro: disenada(CLARO, "claro", "#009a9a", ["#d7f8f7", "#a2e3e3", "#4ad2d2", "#23b7b7", "#009c9c", "#008181", "#006767", "#004d4e", "#003636"]),
     oscuro: disenada(OSCURO, "oscuro", "#009580", ["#002e26", "#00453a", "#005e50", "#007766", "#00927d", "#15ad95", "#41c7ae", "#7addc7", "#c4ebe1"]),
   },
   {
-    id: "d", letra: "D", nombre: "Petróleo (el anterior)",
+    id: "d", letra: "F", nombre: "Petróleo (el primero)",
     idea: "El verde azulado que hoy usa la Plantilla, como punto de comparación. No se parece a la marca, pero no se cruza con el rojo ni con el azul, que quedan libres para lo desfavorable y lo favorable.",
     rojo: "Sin conflicto: el rojo solo aparece en el cambio y en el acento de la interfaz; la rampa y la serie son verdes azuladas. Hallazgo previo a esta comparación: la terracota del trío actual (#863913) casi no se distingue del rojo con protanopía (ΔE 1.8). No comparten figura, pero conviene revisarla.",
     claro: {...base(CLARO), serie: "#0E9384", rampa: derivada("#0E9384", false)},
     oscuro: {...base(OSCURO), serie: "#22AB8A", rampa: derivada("#22AB8A", true)},
   },
   {
-    id: "e", letra: "E", nombre: "Ocre (la alternativa actual)",
+    id: "e", letra: "G", nombre: "Ocre (la alternativa actual)",
     idea: "El ocre que la Plantilla ya trae como segunda opción (TONOS.ocre). Cálido y cercano al papel de la marca sin ser rojo.",
     rojo: "Sin conflicto con el rojo en claro. En oscuro el ocre se acerca al rojo con protanopía (aviso del validador): ahí el color va con rótulo directo. El ocre también es la segunda categoría del trío.",
     claro: {...base(CLARO), serie: "#B87709", rampa: derivada("#B87709", false)},
     oscuro: {...base(OSCURO), serie: "#9A5A0A", rampa: derivada("#9A5A0A", true)},
   },
   {
-    id: "f", letra: "F", nombre: "Rojo Ibero de una tinta",
+    id: "f", letra: "H", nombre: "Rojo Ibero de una tinta",
     idea: "Toda la magnitud en el rojo de la marca: del rosa casi blanco al #C4101B y a un vino oscuro, derivada igual que la rampa del libro. Es la que más se parece a la Ibero.",
     rojo: "Conflicto total: la serie es el mismo color que «desfavorable». Para que el rojo diga una sola cosa, aquí lo desfavorable pasa al ocre (#c0700c) y el cambio se pinta de ocre a azul. Eso rompe la regla de todo el sitio (rojo es lo que se pierde), y el ocre del trío de categorías choca con el nuevo «desfavorable».",
     claro: {...base(CLARO), serie: "#C4101B", rampa: derivada("#C4101B", false), rojo: "#c0700c", divergente: DIVERGENTE_OCRE.claro},
     oscuro: {...base(OSCURO), serie: "#E8474F", rampa: derivada("#E8474F", true), rojo: "#a1600d", divergente: DIVERGENTE_OCRE.oscuro},
   },
   {
-    id: "g", letra: "G", nombre: "Oranges de ColorBrewer",
+    id: "g", letra: "I", nombre: "Oranges de ColorBrewer",
     referencia: {texto: "ColorBrewer, Oranges de 9 clases", url: "https://colorbrewer2.org/#type=sequential&scheme=Oranges&n=9"},
     idea: "La familia cálida de ColorBrewer que no termina en rojo: de crema a naranja quemado y café. Serie en el sexto paso (#f16913). El rojo queda para el cambio, como sugiere separar «magnitud en naranja» y «cambio en rojo y azul».",
     rojo: "Conflicto menor que en OrRd (H), pero medible: la rampa es de una sola tinta y la serie se separa del rojo, aunque sus pasos altos (#d94801 y #7f2704) quedan a ΔE 9.1 y 14.3 del rojo de «desfavorable» aun con visión normal (el mínimo es 15), y en oscuro la mitad de la rampa también. Se resolvería recortando la rampa antes del naranja quemado.",
@@ -166,7 +182,7 @@ export const PROPUESTAS = [
     oscuro: {...base(OSCURO), serie: "#9c4700", rampa: [...OSCURA.Oranges]},
   },
   {
-    id: "h", letra: "H", nombre: "OrRd de ColorBrewer",
+    id: "h", letra: "J", nombre: "OrRd de ColorBrewer",
     referencia: {texto: "ColorBrewer, OrRd de 9 clases", url: "https://colorbrewer2.org/#type=sequential&scheme=OrRd&n=9"},
     idea: "La rampa de referencia, tal cual en claro: de crema a rojo oscuro, pasando por naranja. La serie única toma el sexto paso (#ef6548), el más oscuro que todavía se separa del rojo de «desfavorable».",
     rojo: "Conflicto: el tercio alto de la rampa (#d7301f a #7f0000) es el mismo rojo que «desfavorable», con un matiz a 2 o 3 grados del rojo Ibero. Un mapa de nivel y uno de cambio en el mismo capítulo dirían «rojo» con dos sentidos. Además la rampa gira 47° de matiz (de naranja a rojo) y R99 pide una sola tinta. La serie se resuelve con el naranja; la rampa solo se resuelve recortándola antes del rojo, y entonces ya no es OrRd.",
@@ -174,7 +190,7 @@ export const PROPUESTAS = [
     oscuro: {...base(OSCURO), serie: "#a24100", rampa: [...OSCURA.OrRd]},
   },
   {
-    id: "i", letra: "I", nombre: "Neutra cálida con acento rojo",
+    id: "i", letra: "K", nombre: "Neutra cálida con acento rojo",
     idea: "Grises cálidos para la serie y la rampa, como la tipografía y el papel de la marca; el rojo Ibero queda solo de acento (antetítulo, cifra principal) y para «desfavorable».",
     rojo: "Sin conflicto con el rojo, que queda reservado. El conflicto se muda al gris: en el libro el gris quiere decir «sin cambio», «sin dato» y contexto, y aquí también es la serie. La serie gris no pasa el croma mínimo (se lee gris, a propósito), en oscuro se confunde con el rojo bajo protanopía y la comparación tiene que ir en el gris claro de contexto.",
     claro: {...base(CLARO), serie: "#5b544c", rampa: derivada("#5b544c", false), comparacion: CLARO.contexto},

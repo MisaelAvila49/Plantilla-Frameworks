@@ -41,7 +41,7 @@ export const LIBRO = {
   // Tono de tema: color de la serie única y de la rampa de magnitud. Un
   // nombre de TONOS (src/components/paleta.js) o un objeto {claro, oscuro}.
   // Rojo y azul quedan reservados para lo desfavorable y lo favorable.
-  tono: "petroleoIbero",
+  tono: "rojoIbero",
   // Imagen de vista previa. Cambia de NOMBRE cuando cambia la portada: las
   // redes guardan la vista previa por su dirección.
   imagenOg: "images/og-portada-2026-11.png",

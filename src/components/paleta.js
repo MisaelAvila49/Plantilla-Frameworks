@@ -23,9 +23,13 @@
 // (un nombre de esta lista o un objeto {claro, oscuro}). Resultado de
 // `validate_palette.js` junto al rojo y al azul semánticos, en su tema y
 // exigiendo separación entre TODOS los pares (npm run verificar:paleta):
+//   rojoIbero  TONO POR OMISIÓN desde el 19 de noviembre de 2026 (elegido en
+//             «Paletas rojo Ibero», propuesta A). La serie es el rojo de la
+//             marca; trae su rampa, su trío y su gris de comparación.
+//   rojoGrafito  la propuesta D: mismo rojo, comparación en grafito.
 //   petroleoIbero  pasa en claro y en oscuro, sin más avisos que los de
 //             diseño (extremo casi blanco de la rampa, gris de comparación).
-//             Es el tono por omisión desde el 18 de noviembre de 2026: se
+//             Fue el tono por omisión del 18 al 19 de noviembre de 2026: se
 //             eligió en la Muestra de colores de la Plantilla (propuesta A,
 //             REGLAS R114a). Matiz 185° en OKLCH, el opuesto del rojo Ibero
 //             (27°); su rampa son nueve pasos de UNA tinta con luminosidad
@@ -40,6 +44,33 @@
 // Un tono puede traer su `rampa` {claro, oscuro} ya diseñada (anclas, del
 // valor bajo al alto); sin ella, la rampa se deriva del tono (anclasDe).
 export const TONOS = {
+  // Rojo Ibero (propuesta A de «Paletas rojo Ibero», 19 de noviembre de 2026):
+  // la serie ES el rojo de la marca, así que también es el rojo semántico
+  // (`rojo: true`); la verificación deja de exigir que se separen. Rampa de
+  // una tinta en OKLCH (matiz 22 a 27°, luminosidad 0.93 a 0.33 en claro);
+  // trío y gris de comparación propios, validados con todos los pares:
+  // trío ΔE 13.2 (claro) y 12.2 (oscuro); serie contra gris 16.9 y 10.9.
+  rojoIbero: {
+    claro: "#c4101b", oscuro: "#ee5a5f", rojo: true,
+    rampa: {
+      claro: ["#fee0de", "#febcb8", "#ff9590", "#fe6765", "#e84849", "#c33d3c", "#973c37", "#6a3935", "#542521"],
+      oscuro: ["#4a1f1b", "#741e1b", "#9c1b1f", "#bf272c", "#d94344", "#ea6864", "#f08f8a", "#eeb5b2", "#fed2cf"],
+    },
+    categorias: {claro: ["#c4101b", "#0779a0", "#ac9008"], oscuro: ["#ee5a5f", "#0889b5", "#8a5601"]},
+    comparacion: {claro: "#9a978f", oscuro: "#5c5b56"},
+  },
+  // Rojo y grafito (propuesta D): el mismo rojo contra un gris más oscuro en
+  // la comparación, y una rampa de salmón a rojo. Trío ΔE 13.4 y 12.2;
+  // serie contra grafito 10.4 (claro) y 8.0 (oscuro, en la meta justa).
+  rojoGrafito: {
+    claro: "#c4101b", oscuro: "#ee5a5f", rojo: true,
+    rampa: {
+      claro: ["#fedcd3", "#febaa9", "#fd967f", "#ec7863", "#d3624f", "#b25245", "#8c4940", "#65403b", "#502d29"],
+      oscuro: ["#472522", "#6d2b25", "#913329", "#b04133", "#c95846", "#d97663", "#e19786", "#e3b8ad", "#fbcfc4"],
+    },
+    categorias: {claro: ["#c4101b", "#0090a8", "#b88a06"], oscuro: ["#ee5a5f", "#0a96af", "#8a5601"]},
+    comparacion: {claro: "#6b6966", oscuro: "#a3a09b"},
+  },
   petroleoIbero: {
     claro: "#008e82", oscuro: "#009580",
     rampa: {
@@ -161,7 +192,7 @@ export const luminosidad = (hex) => aOklab(hex)[0];
 
 // ------------------------------------------------------------------ estado
 export const MODO = {oscuro: false};
-let tono = TONOS.petroleoIbero;
+let tono = TONOS.rojoIbero;
 // Paleta viva: las gráficas la leen al dibujar. Se reescribe en sitio al
 // cambiar de tema o de tono, así que nunca se guarda una copia de sus campos.
 export const P = {};
@@ -180,8 +211,11 @@ function recalcular() {
     // Serie de referencia junto a la del tono de tema (mapa de flujos, «De
     // cada 100…»): un gris de tinta, anillo hueco frente al punto relleno.
     // Es neutro a propósito: no es rojo ni azul porque no mide un sentido.
-    comparacion: base.tinta2,
+    comparacion: tono.comparacion?.[MODO.oscuro ? "oscuro" : "claro"] ?? base.tinta2,
   });
+  // Un tono puede traer su trío de identidad (los tonos rojos lo traen: su
+  // primer color es la serie).
+  if (tono.categorias) P.categorias = [...tono.categorias[MODO.oscuro ? "oscuro" : "claro"]];
 }
 
 // Fija el tono de tema. Acepta un nombre de TONOS o {claro, oscuro}.
@@ -301,7 +335,7 @@ export const tintaSobre = (color) => {
 // ----------------------------------------------------- para la hoja y Node
 // Variables CSS de todo el sitio, en los dos temas. La configuración las
 // inyecta en la cabecera; la hoja de estilos solo escribe var(--…).
-export function tokensCss(t = "petroleoIbero") {
+export function tokensCss(t = "rojoIbero") {
   const previo = {tono, oscuro: MODO.oscuro};
   const bloque = (oscuro) => {
     MODO.oscuro = oscuro; tono = typeof t === "string" ? TONOS[t] : t; recalcular();
@@ -325,14 +359,18 @@ export function tokensCss(t = "petroleoIbero") {
 // Paletas que el libro DIBUJA, para `npm run verificar:paleta`. Si se añade
 // una paleta nueva a este módulo, se añade aquí; el verificador no trae
 // ninguna lista propia.
-export function paletasDibujadas(t = "petroleoIbero") {
+export function paletasDibujadas(t = "rojoIbero") {
   const previo = {tono, oscuro: MODO.oscuro};
   const salida = [];
   for (const oscuro of [false, true]) {
     MODO.oscuro = oscuro; tono = typeof t === "string" ? TONOS[t] : t; recalcular();
     const modo = oscuro ? "dark" : "light", sufijo = oscuro ? "oscuro" : "claro";
     salida.push(
-      {nombre: `Semánticos y tono de tema (${sufijo})`, modo, superficie: P.fondo, pares: "all", hex: [P.rojo, P.azul, P.serie]},
+      // Con un tono rojo (`rojo: true`) la serie ES el rojo semántico por
+      // decisión: se validan el rojo y el azul, y la serie frente al azul.
+      tono.rojo
+        ? {nombre: `Semánticos con tono rojo (${sufijo})`, modo, superficie: P.fondo, pares: "all", hex: [P.serie, P.azul]}
+        : {nombre: `Semánticos y tono de tema (${sufijo})`, modo, superficie: P.fondo, pares: "all", hex: [P.rojo, P.azul, P.serie]},
       {nombre: `Categorías de identidad (${sufijo})`, modo, superficie: P.fondo, pares: "all", hex: [...P.categorias]},
       {nombre: `Rampa de una tinta (${sufijo})`, modo, superficie: P.fondo, ordinal: true, hex: [...P.rampa]},
       // Mapa de flujos, «De cada 100…»: tono de tema frente al gris de

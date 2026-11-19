@@ -5,8 +5,16 @@
 //
 // Reglas que el componente hace cumplir:
 //   - El rótulo va ARRIBA de cada control y los controles miden lo mismo.
-//   - Los campos van en grupos rotulados (fieldset + legend), de lo grande a
-//     lo específico: primero dónde, luego entre quiénes, luego cuándo.
+//   - Los campos van en grupos rotulados (fieldset + legend), de izquierda a
+//     derecha y de lo general a lo particular, en un orden FIJO que el
+//     componente impone por la leyenda (ORDEN_GRUPOS): qué se mide, cuándo,
+//     dónde, entre quiénes, tipo de dificultad y al final el mapa.
+//   - Cada select mide lo que su opción más larga (y ese ancho solo crece),
+//     para que el panel no se reacomode al elegir otra opción.
+//   - Un campo que no aplica a la vista elegida, o que tiene una sola opción,
+//     SE OCULTA (un control gris parece que se puede usar y confunde, p. ej.
+//     «Edad del mapa» sin mapa); el resto se recorre sin dejar huecos, y un
+//     grupo que se queda sin controles se oculta entero.
 //   - Un selector NUNCA ofrece una opción que deja la gráfica vacía: las
 //     opciones de cada campo salen de una función de la selección vigente
 //     (solo lo que tiene dato).
@@ -19,6 +27,15 @@
 import {html} from "npm:htl";
 
 let serie = 0;
+
+// Orden de los grupos por su leyenda: de lo general a lo particular. La
+// edición va antes que el lugar porque decide qué dato existe (las opciones de
+// los demás campos dependen de ella). Lo que no está en la lista va primero.
+const ORDEN_GRUPOS = [/^qué/i, /^cuándo/i, /^dónde/i, /^entre quiénes/i, /^tipo de dificultad/i, /^mapa/i];
+const rangoGrupo = (g) => {
+  const i = ORDEN_GRUPOS.findIndex((re) => re.test(String(g.leyenda ?? "").trim()));
+  return i < 0 ? -1 : i;
+};
 const comoOpcion = (o) => (o != null && typeof o === "object" ? o : {valor: o, texto: String(o)});
 
 // Campo de lista. `opciones`: arreglo o función de la selección vigente
@@ -42,8 +59,9 @@ export function campoUmbral({id, antes = "", despues = "", min = 0, max = 100, p
 // y emite `input` cada vez que cambia.
 // Un grupo se oculta entero (con su leyenda) cuando su `oculto(v)` da true o
 // cuando todos sus campos están ocultos: un rótulo de grupo sin controles
-// debajo no se pinta (sustituye a los parches CSS con :has en las páginas).
-export function panel({grupos}) {
+// debajo no se pinta.
+export function panel({grupos: gruposDados}) {
+  const grupos = gruposDados.map((g, i) => ({g, i})).sort((a, b) => rangoGrupo(a.g) - rangoGrupo(b.g) || a.i - b.i).map((x) => x.g);
   const campos = grupos.flatMap((g) => g.campos);
   const v = {};
   const controles = new Map();
@@ -71,14 +89,23 @@ export function panel({grupos}) {
         const firma = JSON.stringify(lista);
         if (sel.dataset.firma !== firma) {
           sel.dataset.firma = firma;
+          // Ancho fijo por la opción más larga: el select no cambia de tamaño
+          // al elegir otra opción y el panel no se reacomoda.
+          // Solo crece: si un filtro cambia las opciones de otro, el campo
+          // conserva el ancho mayor que ya tuvo y el panel no se reacomoda.
+          const caja0 = sel.closest(".campo");
+          const largo = Math.max(c.rotulo?.length ?? 0, ...planas.map((o) => String(o.texto ?? "").length));
+          if (caja0) caja0.style.setProperty("--largo", String(Math.max(largo, Number(caja0.style.getPropertyValue("--largo")) || 0)));
           const opcion = (o) => html`<option value=${String(o.valor)}>${o.texto}</option>`;
           sel.replaceChildren(...lista.map((o) => (o?.grupo != null ? html`<optgroup label=${o.grupo}>${o.opciones.map(comoOpcion).map(opcion)}</optgroup>` : opcion(comoOpcion(o)))));
         }
         sel.value = String(v[c.id]);
-        // Un campo con una sola opción no decide nada: se deshabilita.
-        sel.disabled = planas.length <= 1;
+        // Un campo con una sola opción no decide nada, y uno que no aplica a
+        // la vista elegida tampoco: los dos se ocultan.
         const caja = sel.closest(".campo");
-        if (caja && c.oculto) caja.hidden = Boolean(c.oculto(v));
+        const fuera = Boolean(c.oculto?.(v)) || planas.length <= 1;
+        sel.disabled = fuera;
+        if (caja) caja.hidden = fuera;
       }
       if (!cambio) break;
     }

@@ -189,7 +189,7 @@ function pintarDetalle() {
     html`<h2 class="cm-titulo" id="propuesta"><span class="cm-letra">${p.letra}.</span> ${p.nombre}</h2>`,
     html`<p class="cm-texto">${p.idea}</p>`,
     html`<p class="cm-texto"><strong>Qué pasa con el rojo.</strong> ${p.rojo}</p>`,
-    p.porque ? html`<div class="cm-porque"><p class="cm-sello-recomendada">Recomendada para los libros de la Ibero</p><p class="cm-texto">${p.porque}</p></div>` : "",
+    p.porque ? html`<div class="cm-porque">${p.recomendada ? html`<p class="cm-sello-recomendada">Recomendada para los libros de la Ibero</p>` : ""}<p class="cm-texto">${p.porque}</p></div>` : "",
     p.referencia ? html`<p class="cm-ref">Referencia: <a href=${p.referencia.url} target="_blank" rel="noopener">${p.referencia.texto}</a></p>` : "",
     html`<div class="cm-muestras">
       ${grupoMuestras(`Rampa de magnitud, nueve pasos (tema ${tema})`, celdas(c.rampa.map((hex, i) => ({hex, papel: i === 0 ? "Bajo" : i === 8 ? "Alto" : ""})), {nueve: true}), {ancho: true, nota: "El libro la usa continua, con dominio fijo; estos nueve pasos son sus anclas."})}

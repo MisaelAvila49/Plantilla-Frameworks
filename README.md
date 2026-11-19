@@ -30,7 +30,7 @@ Los verificadores con navegador usan el Edge o el Chrome instalados y corren sob
 
 1. **Copiar la carpeta** sin `node_modules/`, `dist/` ni `docs/capturas/`, y correr `npm install`.
 2. **Editar el bloque `LIBRO`** de `observablehq.config.js`. Es el único lugar donde se escriben título, palabra clave en rojo, `slug`, resumen, autores, año, DOI, licencia y crédito. De ahí salen el título del sitio, los metadatos Open Graph, la marca del menú, la portada, las cuatro citas y el prefijo y el crédito de las descargas. Solo `CITATION.cff` se copia a mano.
-3. **Elegir el tono de tema** en `LIBRO.tono`: un nombre de `TONOS` (`petroleoIbero`, el de omisión desde noviembre de 2026; `petroleo`, el anterior; `ocre`) o un objeto `{claro, oscuro}`. Es el color de la serie única y de la rampa de magnitud. Después, `npm run verificar:paleta`.
+3. **Elegir el tono de tema** en `LIBRO.tono`: un nombre de `TONOS` (`rojoIbero`, el de omisión desde el 19 de noviembre de 2026; `rojoGrafito`, el mismo rojo con comparación en grafito; `petroleoIbero`, el anterior; `petroleo`; `ocre`) o un objeto `{claro, oscuro}`. Es el color de la serie única y de la rampa de magnitud. Después, `npm run verificar:paleta`.
 4. **Declarar el significado del rojo y el azul en cada capítulo**, arriba de su página:
    ```js
    const SIG = significado({rojo: "pierde población", azul: "gana población", gris: "sin cambio", desfavorable: "baja"});

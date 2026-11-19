@@ -61,8 +61,11 @@ export function likert(datos, {ancho, fila, respuesta, valor, respuestas, colore
     marks: [
       !angosto ? rf.eje : null,
       Plot.barX(tramos, {y: "_fila", x1: "_x1", x2: "_x2", fill: (d) => colores[d._i], insetTop: angosto ? 10 : 0, ...viva(tramos, g, {subir: true})}),
-      // Cifra dentro del tramo cuando cabe.
-      Plot.text(tramos.filter((d) => (d._x2 - d._x1) * (ancho - izquierda) / (2 * tope) > 30), {y: "_fila", x: (d) => (d._x1 + d._x2) / 2, dy: angosto ? 5 : 0,
+      // Cifra dentro del tramo cuando cabe y cuando no repite el total de su
+      // lado: con un solo tramo por lado, la cifra de dentro y la de la punta
+      // eran el mismo dato dos veces («79» dentro y «79.2 %» fuera).
+      Plot.text(tramos.filter((d) => (d._x2 - d._x1) * (ancho - izquierda) / (2 * tope) > 30 && (d._i === Math.floor(centro) && k % 2 === 1
+        || tramos.filter((t) => t._fila === d._fila && Math.sign(t._i - centro) === Math.sign(d._i - centro)).length > 1)), {y: "_fila", x: (d) => (d._x1 + d._x2) / 2, dy: angosto ? 5 : 0,
         text: (d) => d3.format(".0f")(d._v), fill: (d) => tintaSobre(colores[d._i]), fontSize: 11.5, fontWeight: 600, pointerEvents: "none"}),
       Plot.ruleX([0], {stroke: P.tinta, strokeWidth: 1.3}),
       // Total de cada lado, escrito junto a la punta de la barra.

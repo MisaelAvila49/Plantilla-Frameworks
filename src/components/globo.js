@@ -5,7 +5,8 @@
 // para leerse de un vistazo:
 //
 //   1. grupo     ● Con discapacidad                   con muestra de color
-//   2. cifra     16.3 %                               grande, color de la serie
+//   2. cifra     16.3 %  ± 1.2                        grande, color de la serie; el
+//                                                     margen de error al 95 % junto, tenue
 //   3. personas  1,234 de 10,032 personas con discapacidad   numerador de denominador y universo
 //   4. aviso     Estimación poco precisa: pocos …     solo si aplica
 //
@@ -16,7 +17,9 @@
 //
 // No van: el lugar y el año del panel (ya los dice el subtítulo), la frase del
 // denominador (va en el subtítulo y en «¿Qué quiere decir este análisis?»),
-// la comparación con otro grupo o año (va en la tabla) ni el margen de error.
+// ni la comparación con otro grupo o año (va en la tabla). El margen de error
+// SÍ va (noviembre 2026, R117): ± 1.96 veces el error estándar, en la unidad
+// de la cifra, junto a ella; sin error estimable no se pinta nada (nunca ± 0).
 // Cuando la marca no se identifica por su grupo (un estado en un mapa, una
 // celda de una rejilla, un año de una serie), su nombre va DELANTE del grupo
 // en el mismo renglón, con `marca`: «Oaxaca · Con discapacidad».
@@ -31,7 +34,7 @@
 // Uso con SVG o HTML propio (treemap, flujo, cuadros, mapas):
 //                 globoEn(nodo, g, dato)             o g.html(dato) a mano.
 
-import {formatear, personas as fPersonas, pocoPrecisa, SIN_DATO} from "./formato.js";
+import {formatear, margen as fMargen, personas as fPersonas, pocoPrecisa, SIN_DATO} from "./formato.js";
 import {P} from "./paleta.js";
 
 const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"})[c]);
@@ -40,7 +43,7 @@ const val = (x, d) => (typeof x === "function" ? x(d) : x);
 // avisa en vez de ignorarlos en silencio.
 const RETIRADOS = ["donde", "cuando", "frase", "comparacion", "apellido"];
 
-// globo({marca, grupo, color, valor, formato, personas, universo, unidad,
+// globo({marca, grupo, color, valor, formato, ee, personas, universo, unidad,
 //        precision, sinDato})
 // Cada campo es un valor fijo o una función del dato. Devuelve un objeto con
 // `.html(d)` (la tarjeta) y `.renglones(d)` (los mismos datos, para pruebas y
@@ -51,6 +54,8 @@ export function globo({
   color = null,        // (d) => color de la serie o del signo; pinta muestra y cifra
   valor,               // (d) => 12.34               la estadística, sin formatear
   formato = "pct",     // "pct" | "puntos" | "de100" | "conteo" | "razon" | "pesos" | "horas" | "relativo" | (v, d) => texto
+  ee = null,           // (d) => 0.61                error estándar EN LA UNIDAD DE `valor` (puntos si es %); si falta, se toma de `precision`;
+                       //                            `false` lo apaga (una diferencia cuyo error no se calcula: el de `precision` sería el de un grupo)
   personas = null,     // (d) => 1234                numerador expandido: quienes cumplen
   universo = null,     // (d) => 10032               denominador expandido
   unidad = "personas", // el UNIVERSO en dos o tres palabras (R117): "personas con discapacidad", "hombres", "habitantes"…
@@ -66,10 +71,12 @@ export function globo({
     const hay = v != null && !Number.isNaN(+v);
     const p = val(personas, d);
     const prec = val(precision, d);
+    const e = ee === false ? null : (val(ee, d) ?? prec?.ee ?? null);
     return {
       grupo: [val(marca, d), val(grupo, d)].filter((x) => x != null && x !== "").join(" · "),
       color: val(color, d) ?? null,
       cifra: !hay ? sinDato : typeof formato === "function" ? formato(v, d) : formatear(v, formato),
+      margen: hay ? textoMargen(e, formato) : "",
       personas: hay && p != null ? fPersonas(p, {universo: val(universo, d), unidad: val(unidad, d)}) : "",
       aviso: hay && prec && pocoPrecisa(prec) ? "Estimación poco precisa: pocos casos en la muestra" : "",
     };
@@ -77,11 +84,22 @@ export function globo({
   return {html: (d) => tarjetaHtml(renglones(d)), renglones};
 }
 
+// Margen de error al 95 % en la unidad de la cifra: «± 1.2» en porcentajes y
+// puntos (son puntos porcentuales), «± $1,234» en pesos, «± 0.8 h» en horas.
+// Sin error estimable, en conteos o con un error no positivo, cadena vacía.
+function textoMargen(e, formato) {
+  if (e == null || e === "" || !Number.isFinite(+e) || +e <= 0 || formato === "conteo") return "";
+  if (["pesos", "horas", "razon"].includes(formato)) return `± ${formatear(1.96 * +e, formato)}`;
+  // Con los mismos decimales que la cifra (uno): «2.5 % ± 0.1», no «± 0.059».
+  const m = 1.96 * +e;
+  return m < 0.05 ? "± <0.1" : fMargen(+e, 1);
+}
+
 // La tarjeta a partir de sus renglones ya resueltos.
 function tarjetaHtml(r) {
   const tono = r.color ? ` style="color:${esc(r.color)}"` : "";
   return (r.grupo ? `<span class="gt-grupo">${r.color ? `<i class="gt-muestra" style="background:${esc(r.color)}"></i>` : ""}${esc(r.grupo)}</span>` : "") +
-    `<span class="gt-cifra"${tono}>${esc(r.cifra)}</span>` +
+    `<span class="gt-cifra"${tono}>${esc(r.cifra)}${r.margen ? `<span class="gt-margen"><span class="solo-lector">, margen de error </span>${esc(r.margen)}</span>` : ""}</span>` +
     (r.personas ? `<span class="gt-personas">${esc(r.personas)}</span>` : "") +
     (r.aviso ? `<span class="gt-aviso">${esc(r.aviso)}</span>` : "");
 }
@@ -99,7 +117,7 @@ export function globoCon(g, sufijo) {
 }
 
 // Nombre accesible de una marca: lo mismo que dice su globo, en el mismo orden.
-export const textoGlobo = (r) => [r.grupo, r.cifra, r.personas, r.aviso].filter(Boolean).join(", ");
+export const textoGlobo = (r) => [r.grupo, r.margen ? `${r.cifra} (margen de error ${r.margen})` : r.cifra, r.personas, r.aviso].filter(Boolean).join(", ");
 
 // ------------------------------------------------------------- la tarjeta
 // Una sola tarjeta para toda la página, colgada del <body>. Cada vez que se
