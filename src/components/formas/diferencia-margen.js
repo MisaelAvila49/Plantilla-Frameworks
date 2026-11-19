@@ -10,7 +10,7 @@ import {html} from "npm:htl";
 import {P} from "../paleta.js";
 import {puntos} from "../formato.js";
 import {conGlobo} from "../globo.js";
-import {base, vacio, margenRotulos, leyendaItems, TIPO} from "./comun.js";
+import {base, vacio, rotulosFila, leyendaItems, TIPO} from "./comun.js";
 
 // Lado de una diferencia con su error: "baja", "sube" o "igual".
 export const ladoDe = (dif, ee) => (dif == null ? null : ee == null ? (Math.abs(dif) < 0.05 ? "igual" : dif < 0 ? "baja" : "sube")
@@ -29,11 +29,13 @@ export function diferenciaMargen(datos, {ancho, etiqueta, dif, ee, sig, limite =
   const nombre = (f) => (angosto && corto ? corto(etiqueta(f.d)) : etiqueta(f.d));
   const tinta = (f) => sig.color(f.lado);
   const signoEje = (x) => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x);
+  const rf = rotulosFila(filas.map(nombre), ancho, {tope: 180});
   const plot = Plot.plot(base({
-    ancho, alto: filas.length * 26 + 46, marginLeft: angosto ? Math.max(60, margenRotulos(filas.map(nombre), 76)) : margenRotulos(filas.map(nombre), 180), marginRight: 66, marginTop: rotuloX ? 50 : 30, marginBottom: 6,
+    ancho, alto: filas.length * (26 + rf.extra) + 46, marginLeft: rf.margen, marginRight: angosto ? 52 : 66, marginTop: rotuloX ? 50 : 30, marginBottom: 6,
     x: {axis: "top", label: rotuloX, labelArrow: "none", domain: [-limite, limite], grid: true, tickFormat: signoEje, ticks: angosto ? 5 : 7},
     y: {label: null, domain: filas.map(nombre), tickSize: 0},
     marks: [
+      rf.eje,
       Plot.ruleX([0], {stroke: P.tinta, strokeWidth: 1.2}),
       Plot.ruleY(filas, {y: nombre, x1: "lo", x2: "hi", stroke: tinta, strokeOpacity: 0.4, strokeWidth: 7, strokeLinecap: "round"}),
       Plot.dot(filas, {y: nombre, x: "v", r: 5, fill: tinta, stroke: P.fondo, strokeWidth: 1}),

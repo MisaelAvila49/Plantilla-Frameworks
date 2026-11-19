@@ -265,6 +265,9 @@ line.piramide-resaltada { stroke-width: 4px; }
 .leyenda-figuras { align-items: center; }
 .unidad-grupo.marca-viva:is(:hover, :focus-visible) > .unidad-zona { stroke: none; }
 svg:has(.unidad-grupo:is(:hover, :focus-visible)) .unidad-grupo:not(:hover, :focus-visible) { opacity: 0.4; }
+/* Escalones: la figura y el bloque de un mismo escalón son dos marcas con
+   su propio globo; al señalar una, la otra del mismo escalón no se atenúa. */
+.escalon:has(> .unidad-grupo:is(:hover, :focus-visible)) > .unidad-grupo { opacity: 1 !important; }
 
 .descarga { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.8rem; font: 0.8rem var(--sans-serif); color: var(--tinta-2); }
 .descarga-etiqueta { font-weight: 600; }

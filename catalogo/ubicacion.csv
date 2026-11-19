@@ -82,6 +82,7 @@ fichas-rango,Fichas por rango con marca de cambio,/galeria/unidades,fichas-rango
 combinaciones,Combinaciones de condiciones (UpSet),/galeria/parte-todo,combinaciones,implementada,D
 euler,Diagrama de Euler de dos conjuntos,/galeria/conceptos,euler,implementada,E
 arbol-pregunta,Árbol de la pregunta,/galeria/conceptos,arbol-pregunta,implementada,E
+matriz-marcas,Matriz de marcas,/galeria/conceptos,matriz-marcas,implementada,E
 embudo,Embudo de universos,/galeria/conceptos,embudo,implementada,E
 arbol-clasificacion,Árbol de clasificación,/galeria/parte-todo,arbol-clasificacion,implementada,D
 mosaico-series,Mosaico de mini-series,/galeria/tiempo,mosaico-series,implementada,D

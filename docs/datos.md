@@ -37,6 +37,33 @@ loader agrega una columna `formato` = `pesos` | `horas`; `num/den` ya es la cifr
 multiplica por cien). Montos de varias ediciones en pesos de 2024 con el INPC del periodo de
 levantamiento (`src/data/inpc.csv`); si falta un índice, el loader aborta.
 
+## Subgrupos con grado (`src/components/subgrupo.js`)
+
+Cuando la población se parte en subgrupos que se traslapan (tipo de dificultad, lengua, programa que
+recibe) y cada uno tiene un grado, el loader escribe un archivo APARTE del de siempre, con el esquema de
+arriba más dos columnas; el archivo de siempre no se toca, porque las páginas lo suman y filas nuevas
+duplicarían cifras.
+
+| Columna | Valores |
+| --- | --- |
+| `subgrupo` | clave del subgrupo, o `Ninguno` en la fila de referencia: quien no está en ningún subgrupo, la misma para todos |
+| `grado` | grado en ESE subgrupo (por ejemplo `Alto` y `Bajo`); `Ninguno` en la referencia |
+
+Reglas: las filas de subgrupos distintos no se suman (una persona está en dos); dentro de un subgrupo los
+grados son excluyentes y su suma es «en el subgrupo»; la comparación es con `Ninguno`, nunca con la suma
+de los subgrupos; un grado no es la categoría excluyente que la fuente publique con el mismo nombre; y se
+usa un solo nivel geográfico a la vez (país, entidades o tamaño de localidad). Las celdas chicas viajan
+con `casos` y `ee` y la página decide el umbral. Ejemplo: `src/data/muestra/subgrupos.csv`
+(`scripts/muestra_subgrupos.mjs`), que trae en el mismo archivo las filas sin subgrupo
+(`subgrupo = Todos`) solo por ser una muestra.
+
+## Rangos de los mapas (`RANGOS` de `src/components/vista-mapa.js`)
+
+Cada indicador que se puede ver en mapa tiene cuatro cortes fijos y desiguales, medidos sobre las
+entidades (y los municipios, si los hay) en todos los años, grupos y subgrupos, con la medición en el
+comentario del componente. Un subgrupo que con los cortes comunes cae en uno o dos tonos lleva cortes
+propios (`subgrupos`), y un indicador en pesos declara `unidad: "pesos"`.
+
 ## Definición de discapacidad
 
 Grupo de Washington: una persona tiene discapacidad si declara **mucha dificultad** o **no poder**

@@ -6,7 +6,7 @@ import * as Plot from "npm:@observablehq/plot";
 import {P} from "../paleta.js";
 import {pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
-import {base, margenRotulos, vacio, leyendaItems, conLeyenda} from "./comun.js";
+import {base, rotulosFila, vacio, leyendaItems, conLeyenda} from "./comun.js";
 
 // datos: una fila por unidad. a(d) y b(d) son los dos valores; el dato que
 // recibe el globo es {...d, lado: "a" | "b", v}. `colorSegmento(d)` permite
@@ -17,11 +17,13 @@ export function dumbbell(datos, {ancho, etiqueta, a, b, nombreA, nombreB, colorA
   const cA = colorA ?? P.resumen, cB = colorB ?? P.serie;
   const puntos = filas.flatMap((d) => [{...d, lado: "a", v: a(d)}, {...d, lado: "b", v: b(d)}]);
   const tinta = (d) => (d.lado === "a" ? cA : cB);
+  const rf = rotulosFila(filas.map(etiqueta), ancho, {tope: 190});
   const plot = Plot.plot(base({
-    ancho, alto: filas.length * 24 + 58, marginLeft: margenRotulos(filas.map(etiqueta), ancho < 520 ? 130 : 190), marginRight: 24, marginTop: rotuloX ? 48 : 30,
+    ancho, alto: filas.length * (24 + rf.extra) + 58, marginLeft: rf.margen, marginRight: 24, marginTop: rotuloX ? 48 : 30,
     x: {axis: "top", label: rotuloX, labelArrow: "none", tickFormat: formatoEje, grid: true, nice: true, ticks: ancho < 520 ? 4 : undefined, ...(dominioX ? {domain: dominioX} : {})},
     y: {label: null, domain: filas.map(etiqueta), tickSize: 0},
     marks: [
+      rf.eje,
       Plot.ruleY(filas, {y: etiqueta, x1: a, x2: b, stroke: colorSegmento ?? P.contexto, strokeWidth: 3, strokeLinecap: "round"}),
       Plot.dot(puntos, {y: etiqueta, x: "v", fill: tinta, r: 5.5, stroke: P.fondo, strokeWidth: 1}),
       Plot.dot(puntos, Plot.pointer({y: etiqueta, x: "v", r: 8.5, stroke: P.tinta, strokeWidth: 1.6, fill: "none", maxRadius: Infinity})),

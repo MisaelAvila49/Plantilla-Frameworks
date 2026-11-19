@@ -175,6 +175,8 @@ export const MINIATURAS = {
   "catalogo/miniaturas/embudo-oscuro.png": FileAttachment("./miniaturas/embudo-oscuro.png").href,
   "catalogo/miniaturas/arbol-clasificacion.png": FileAttachment("./miniaturas/arbol-clasificacion.png").href,
   "catalogo/miniaturas/arbol-clasificacion-oscuro.png": FileAttachment("./miniaturas/arbol-clasificacion-oscuro.png").href,
+  "catalogo/miniaturas/matriz-marcas.png": FileAttachment("./miniaturas/matriz-marcas.png").href,
+  "catalogo/miniaturas/matriz-marcas-oscuro.png": FileAttachment("./miniaturas/matriz-marcas-oscuro.png").href,
   "catalogo/miniaturas/mosaico-series.png": FileAttachment("./miniaturas/mosaico-series.png").href,
   "catalogo/miniaturas/mosaico-series-oscuro.png": FileAttachment("./miniaturas/mosaico-series-oscuro.png").href,
   "catalogo/miniaturas/mosaico-burbujas.png": FileAttachment("./miniaturas/mosaico-burbujas.png").href,

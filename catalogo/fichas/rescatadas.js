@@ -1014,6 +1014,18 @@
     uso: "import {arbolClasificacion} from \"../components/formas/arbol-clasificacion.js\"\narbolClasificacion(filas, {ancho, rama: (d) => d.familia, hoja: (d) => d.agrupacion, valor: (d) => d.hablantes, raiz: \"Lenguas del ejemplo\", tope: TOPE,\r\n            ordenRamas: FAMILIAS, globo: g})" }, estado: "plantilla",
   fuentes: [{ texto: "Data Viz Project, Dendrogram", url: DVP("dendrogram") }, { texto: "Observable Plot, tree mark", url: "https://observablehq.github.io/plot/marks/tree" }],
 },
+{
+  id: "matriz-marcas", nombre: "Matriz de marcas", nivel: 1,
+  familia: "tabla", entrada: ["cruce"], funcion: ["concepto", "comparacion"], forma: ["puntos", "circulo"],
+  pregunta: "¿Qué tiene cada caso de una lista de rasgos (qué pregunta cada fuente, qué cubre cada programa)?",
+  si: "Comparar definiciones entre tres a ocho casos antes de comparar sus cifras: el estado de cada cruce se dice con la forma (lleno, anillo, punto chico) y el color.",
+  no: "Cuando el cruce es una cifra (heatmap o tabla de calor), ni con más de ocho casos (no caben las columnas en un teléfono).",
+  datosForma: "[{columna, fila, estado}] + columnas [{id, cabeza, corto}], filas [{id, texto, corto}], estados {clave: {forma, color, leyenda}}",
+  imagen: null, plantilla: { componente: "src/components/formas/matriz-marcas.js", galeria: "src/galeria/conceptos.md#matriz-marcas",
+    uso: "import {matrizMarcas} from \"../components/formas/matriz-marcas.js\"\nmatrizMarcas(datos, {ancho, columna: (d) => d.f.id, fila: (d) => d.fila.id, estado: (d) => d.estado,\n  columnas: FUENTES, filas, estados: ESTADOS, ordenLeyenda: [\"cuenta\", \"aparte\", \"no\"], globo: g})" },
+  estado: "plantilla",
+  fuentes: [{ texto: "Libro «Las personas con discapacidad en México», introducción, sección 03 (Social Data Ibero, 2026)", url: null }],
+},
 // ==================================================================== MAPAS
 {
   id: "mosaico-series", nombre: "Mosaico de mini-series", nivel: 2,

@@ -58,6 +58,17 @@ de 2026 y dice dónde está el detalle. Se lee completo antes de escribir códig
   códigos verificados con conteos, no por el nombre de la columna; cifras centrales cotejadas contra el
   tabulado oficial en `docs/verificacion/<fuente>.md`.
 - **Ejes**: los de porcentaje llevan « %» (`pctMarca` de `formato.js`).
+- **Mapas como vista del filtro** (R186): si la sección tiene dato por lugar, su panel lleva el grupo
+  «Mapa» con «Ver como» (`campoVista` y `campoPinta` de `src/components/vista-mapa.js`), que arranca en
+  la gráfica. Los cortes van en `RANGOS` del componente, medidos y con la medición en comentario; una
+  página nunca registra los suyos. Municipio solo con censo o intercensal. Ejemplo vivo: galería de
+  mapas, «El indicador por subgrupo, en gráfica o en mapa».
+- **Subgrupo con grado** (R187): para subgrupos que se traslapan (tipo de dificultad, lengua,
+  programa), `grupoSubgrupo` y `seleccionarSubgrupo` de `src/components/subgrupo.js`; con un subgrupo
+  se compara contra «Ninguno», nunca contra la suma. Contrato en `docs/datos.md`, «Subgrupos con grado»;
+  datos de muestra con `node scripts/muestra_subgrupos.mjs`.
+- **Formas sin repetir** (R188): ninguna forma más de dos veces en el libro (el mapa no cuenta) y nunca
+  en secciones seguidas; inventario en `docs/formas-por-seccion.md` antes de entregar.
 
 ## 4. Cómo se trabaja
 

@@ -115,3 +115,4 @@ export {mapaBase, proyectar} from "./mapa-base.js";
 export {arbolPregunta} from "./arbol-pregunta.js";
 export {embudo} from "./embudo.js";
 export {euler} from "./euler.js";
+export {matrizMarcas} from "./matriz-marcas.js";

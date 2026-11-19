@@ -127,6 +127,8 @@ Los mapas pintan el porcentaje con una escala continua de una sola tinta y domin
 
 El mosaico acomoda un cuadro por entidad con la rejilla `mx_state_grid3` del paquete geofacet <a class="cita" href="./referencias#hafen-2025">(Hafen, 2025)</a>, para que todas las entidades tengan el mismo peso visual.
 
+Cuando el mapa es una vista de la sección («Ver como: gráfica / mapa por entidad / mapa por municipio»), toma la selección del panel y pinta cada lugar en uno de cinco rangos fijos y desiguales por indicador, cuyos cuatro cortes se eligen midiendo la distribución de las entidades (y de los municipios, si los hay) en todos los años, grupos y subgrupos, de modo que el valor nacional caiga en un rango intermedio y las entidades ocupen al menos tres tonos. Los cortes nunca se calculan sobre la vista, porque cambiarían con cada filtro. Un subgrupo que con los cortes comunes cae en uno o dos tonos lleva cortes propios, y la tira de rangos dice cuáles usa. En el indicador de muestra los cortes son 5, 10, 20 y 35 %, y 1, 2.5, 5 y 15 % para el subgrupo C. El mapa por municipio solo se ofrece con una fuente representativa a ese nivel, como un censo o una encuesta intercensal; las encuestas por hogares llegan a entidad. Los lugares con menos de 30 casos en la muestra llevan trama, los que no tienen dato van en gris con su casilla, y la diferencia entre el grupo elegido y su referencia se pinta con la rampa divergente: rojo lo desfavorable, azul lo favorable y gris en el cero.
+
 </div>
 
 ---

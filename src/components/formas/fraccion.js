@@ -4,6 +4,7 @@
 // anotada. Varios grupos van en paneles pequeños con la MISMA base, para que
 // se puedan comparar. Si alguna proporción es menor a 1 de cada 100, la base
 // cambia sola a 1,000 o a 10,000 y la gráfica lo dice.
+// Con base 1,000 o 10,000 las unidades son puntos, no figuras.
 // No: más de cuatro grupos, ni para comparar décimas (ahí va el dumbbell).
 import {svg, html} from "npm:htl";
 import {P} from "../paleta.js";
@@ -36,7 +37,10 @@ export function fraccion(datos, {ancho, etiqueta, valor, color = () => P.serie, 
   const B = base ?? baseFraccion(filas.map(valor));
   const n = filas.length, movil = ancho < 560;
   const comoMultitud = acomodo === "multitud" && B === 100;
-  const glifo = B > 1000 ? "punto" : "figura";
+  // Con base 1,000 o 10,000 cada unidad es un punto en una rejilla cuadrada:
+  // mil figuras de pie hacían un bloque de unos 370 px de alto, casi todo
+  // gris, para leer 7 o 96 unidades en color.
+  const glifo = B >= 1000 ? "punto" : "figura";
   const porFila = movil ? (B === 100 && !comoMultitud ? Math.min(n, 2) : 1) : Math.min(n, B === 100 ? (comoMultitud ? 2 : 4) : 2);
   const sep = movil ? 18 : 30;
   const topePanel = B === 100 ? (comoMultitud ? (n === 1 ? 600 : 380) : 250) : B === 1000 ? 600 : 640;
@@ -56,8 +60,8 @@ export function fraccion(datos, {ancho, etiqueta, valor, color = () => P.serie, 
     cols = 10; rens = 10;
     s = Math.min(20, (pw / cols) * 0.78); pasoX = s / 0.78; alto = s * PROPORCION; pasoY = alto * 1.08;
   } else if (B === 1000) {
-    cols = [50, 40, 25, 20].find((c) => pw / c >= 6) ?? 20; rens = B / cols;
-    pasoX = pw / cols; s = pasoX * 0.8; alto = s * PROPORCION; pasoY = alto * 1.08;
+    cols = pw / 50 >= 5 ? 50 : 40; rens = B / cols;
+    pasoX = pasoY = pw / cols; s = alto = pasoX * 0.62;
   } else {
     cols = pw / 125 >= 3.3 ? 125 : 100; rens = B / cols;
     pasoX = pasoY = pw / cols; s = alto = pasoX * 0.62;

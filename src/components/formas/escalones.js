@@ -22,19 +22,27 @@ const acotar = (v, a, b) => Math.max(a, Math.min(b, v));
 // de 0 a 100, queda por encima. `nombres`: textos de la leyenda
 // {valor, banda, umbral, sobre, encima}. El dato del globo lleva además
 // `umbral` y `encima`.
+// El bloque es una marca propia, con su globo (`globoBanda`, R126). Cuando el
+// bloque llega a otro grupo (las personas sin discapacidad), `otro(d)` es la
+// cifra de ese grupo y se escribe como rótulo directo en el extremo del
+// bloque que no ocupa la figura: las dos cifras se leen sin abrir un globo.
 export function escalones(datos, {ancho, grupo, valor, bajo = null, alto = null, dominio = [0, 100], formato = pct, formatoEje = pctMarca,
-  umbral = null, encima = null, formatoEncima = (v) => pct(v, 0), nombres = {}, globo: g}) {
+  umbral = null, encima = null, formatoEncima = (v) => pct(v, 0), nombres = {}, otro = null, formatoOtro = null, globo: g, globoBanda = null}) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
   const m = filas.length, [a, b] = dominio;
-  const conUmbral = umbral != null, conBanda = Boolean(bajo && alto);
+  const conUmbral = umbral != null, conBanda = Boolean(bajo && alto), conOtro = conBanda && Boolean(otro);
+  const fOtro = formatoOtro ?? formato;
   // Margen izquierdo según la marca más larga del eje («100 %»).
   const ml = Math.ceil(Math.max(40, 14 + Math.max(...dominio.map((v) => String(formatoEje(v)).length)) * 7.4)), mr = 4, PW = ancho - ml - mr, cw = PW / m, margen = Math.min(6, cw * 0.08);
   const titulos = filas.map((d) => partir(String(grupo(d)), Math.max(5, Math.floor(cw / 7.4))));
   const altoTitulos = 16 * Math.max(...titulos.map((t) => t.length));
   const conEncima = conUmbral && Boolean(encima);
   const fw = acotar(cw * 0.3, 11, 17), fh = fw * PROPORCION;
-  const mt = altoTitulos + (conEncima ? 20 : 0) + 10 + fh, PH = acotar(ancho * 0.42, 240, 360), mb = 26;
+  // Con rótulo del otro grupo se reserva un renglón arriba y otro abajo: el
+  // rótulo puede ir sobre la cabeza de la figura (bloque corto hacia arriba)
+  // o bajo la cifra de la figura (bloque hacia abajo).
+  const mt = altoTitulos + (conEncima ? 20 : 0) + 10 + fh + (conOtro ? 16 : 0), PH = acotar(ancho * 0.42, 240, 360), mb = conOtro ? 36 : 26;
   const H = Math.ceil(mt + PH + mb);
   const y = (v) => mt + PH * (1 - (acotar(v, a, b) - a) / (b - a));
 
@@ -46,27 +54,53 @@ export function escalones(datos, {ancho, grupo, valor, bajo = null, alto = null,
     ${marcas.map((t) => svg`<g><line x1=${ml} x2=${ml + PW} y1=${y(t)} y2=${y(t)} stroke=${P.rejilla} /><text x=${ml - 7} y=${y(t) + 4} text-anchor="end" font-size=${TIPO.ejes} fill=${P.tinta2}>${formatoEje(t)}</text></g>`)}
   </g>`;
 
+  // Cada escalón es un <g class="escalon"> con dos marcas: el bloque (abajo)
+  // y la figura (encima). Un fondo invisible de toda la columna abre el globo
+  // de la figura, para que tocar cualquier punto del escalón en un teléfono
+  // diga algo. La figura va encima con una zona del ancho de su silueta, de
+  // modo que a sus lados y sobre el bloque se abre el globo del bloque: cada
+  // globo pertenece a la marca bajo el puntero (R128).
   const columnas = filas.map((d, i) => {
-    const x0 = ml + i * cw, v = valor(d), cx = x0 + cw / 2;
+    const x0 = ml + i * cw, v = valor(d), cx = x0 + cw / 2, yv = y(v);
     const e = conEncima ? encima(d, umbral) : null;
-    const piezas = [];
-    if (conBanda && bajo(d) != null && alto(d) != null) {
-      const y1 = y(alto(d)), y2 = y(bajo(d)), yu = conUmbral ? acotar(y(umbral), y1, y2) : y1;
-      // La parte de la banda que queda sobre el umbral va en un tono más intenso.
-      if (conUmbral && yu > y1) piezas.push(svg`<rect x=${x0 + margen} y=${y1} width=${cw - 2 * margen} height=${yu - y1} fill=${P.rampa[2]} />`);
-      if (y2 > yu) piezas.push(svg`<rect x=${x0 + margen} y=${yu} width=${cw - 2 * margen} height=${y2 - yu} fill=${P.rampa[1]} />`);
-    }
-    piezas.push(svg`<line x1=${x0 + margen} x2=${x0 + cw - margen} y1=${y(v)} y2=${y(v)} stroke=${P.tinta} stroke-width="4"/>`);
-    piezas.push(usar(refGlifo(id, i), cx - fw / 2, y(v) - 2.5 - fh, fw, fh, P.tinta, {entra: (500 * i) / m}));
-    const nodo = svg`<g class="marca-viva unidad-grupo" tabindex="0">
-      <rect class="unidad-zona" x=${x0 + 1} y="1" width=${cw - 2} height=${H - 2} rx="5" fill="transparent" />
-      <g stroke="none">${piezas}</g>
+    const dato = {...d, umbral, encima: e};
+    // Caja de la figura: de la cabeza a la cifra escrita bajo la raya.
+    const yFig0 = yv - 4.5 - fh, yFig1 = yv + 22;
+    const hayBanda = conBanda && bajo(d) != null && alto(d) != null;
+    const nodoFigura = svg`<g class="marca-viva unidad-grupo" tabindex="0">
+      ${hayBanda
+        ? svg`<rect class="unidad-zona" x=${cx - fw / 2 - 3} y=${yFig0} width=${fw + 6} height=${yv + 3 - yFig0} rx="3" fill="transparent" />`
+        : svg`<rect class="unidad-zona" x=${x0 + 1} y="1" width=${cw - 2} height=${H - 2} rx="5" fill="transparent" />`}
+      <g stroke="none">
+        <line x1=${x0 + margen} x2=${x0 + cw - margen} y1=${yv} y2=${yv} stroke=${P.tinta} stroke-width="4"/>
+        ${usar(refGlifo(id, i), cx - fw / 2, yv - 2.5 - fh, fw, fh, P.tinta, {entra: (500 * i) / m})}
+      </g>
       ${titulos[i].map((t, k) => svg`<text aria-hidden="true" x=${cx} y=${13 + 16 * k} text-anchor="middle" font-size=${TIPO.ejes} font-weight="700" fill=${P.tinta}>${t}</text>`)}
       ${conEncima && e != null ? svg`<text aria-hidden="true" x=${cx} y=${altoTitulos + 15} text-anchor="middle" font-size="12" font-weight="700" fill=${P.tonoTexto}>${formatoEncima(e)}${cw >= 104 ? " por encima" : ""}</text>` : ""}
-      <text aria-hidden="true" x=${cx} y=${y(v) + 17} text-anchor="middle" font-size=${TIPO.valor} font-weight="800" fill=${P.tinta} stroke=${P.fondo} stroke-width="3" paint-order="stroke" stroke-linejoin="round">${formato(v)}</text>
+      <text aria-hidden="true" x=${cx} y=${yv + 17} text-anchor="middle" font-size=${TIPO.valor} font-weight="800" fill=${P.tinta} stroke=${P.fondo} stroke-width="3" paint-order="stroke" stroke-linejoin="round">${formato(v)}</text>
     </g>`;
-    if (g) globoEn(nodo, g, {...d, umbral, encima: e});
-    return nodo;
+    if (g) globoEn(nodoFigura, g, dato);
+    if (!hayBanda) return svg`<g class="escalon">${nodoFigura}</g>`;
+    const y1 = y(alto(d)), y2 = y(bajo(d)), yu = conUmbral ? acotar(y(umbral), y1, y2) : y1;
+    const piezas = [];
+    // La parte de la banda que queda sobre el umbral va en un tono más intenso.
+    if (conUmbral && yu > y1) piezas.push(svg`<rect x=${x0 + margen} y=${y1} width=${cw - 2 * margen} height=${yu - y1} fill=${P.rampa[2]} />`);
+    if (y2 > yu) piezas.push(svg`<rect x=${x0 + margen} y=${yu} width=${cw - 2 * margen} height=${y2 - yu} fill=${P.rampa[1]} />`);
+    // Rótulo del otro grupo en el extremo del bloque lejos de la figura:
+    // arriba del bloque (o de la cabeza, si el bloque es más corto que ella)
+    // o abajo del bloque (o de la cifra de la figura).
+    const vo = conOtro ? otro(d) : null;
+    const yr = vo == null ? null : vo >= v ? Math.min(y(vo), yFig0 + 2) - 6 : Math.max(y(vo) + 15, yFig1 + 12);
+    const z0 = Math.min(y1, yr != null ? yr - 13 : Infinity), z1 = Math.max(y2, yr != null ? yr + 5 : -Infinity);
+    const nodoBanda = svg`<g class="marca-viva unidad-grupo" tabindex=${globoBanda ? "0" : null}>
+      <rect class="unidad-zona" x=${x0 + 1} y=${z0} width=${cw - 2} height=${Math.max(4, z1 - z0)} rx="5" fill="transparent" />
+      <g stroke="none">${piezas}</g>
+      ${yr != null ? svg`<text aria-hidden="true" x=${cx} y=${yr} text-anchor="middle" font-size=${TIPO.valor} font-weight="700" fill=${P.tinta2} stroke=${P.fondo} stroke-width="3" paint-order="stroke" stroke-linejoin="round">${fOtro(vo)}</text>` : ""}
+    </g>`;
+    if (globoBanda) globoEn(nodoBanda, globoBanda, dato);
+    const fondo = svg`<rect aria-hidden="true" x=${x0 + 1} y="1" width=${cw - 2} height=${H - 2} fill="transparent" />`;
+    if (g) globoEn(fondo, g, dato);
+    return svg`<g class="escalon">${fondo}${nodoBanda}${nodoFigura}</g>`;
   });
 
   // Los escalones se unen con un trazo vertical fino entre el valor de un
@@ -80,7 +114,7 @@ export function escalones(datos, {ancho, grupo, valor, bajo = null, alto = null,
     <text x=${ml - 7} y=${y(umbral) + 4} text-anchor="end" font-size=${TIPO.ejes} font-weight="800" fill=${P.tinta}>${formatoEje(umbral)}</text>
   </g>` : "";
 
-  const descripcion = `${m} grupos en orden. ${filas.map((d) => `${grupo(d)}: ${formato(valor(d))}${conEncima ? `, ${formatoEncima(encima(d, umbral))} por encima del umbral` : ""}`).join(". ")}.${conUmbral ? ` Umbral: ${formato(umbral)}.` : ""}`;
+  const descripcion = `${m} grupos en orden. ${filas.map((d) => `${grupo(d)}: ${formato(valor(d))}${conOtro && otro(d) != null ? ` (el bloque llega a ${fOtro(otro(d))})` : ""}${conEncima ? `, ${formatoEncima(encima(d, umbral))} por encima del umbral` : ""}`).join(". ")}.${conUmbral ? ` Umbral: ${formato(umbral)}.` : ""}`;
   const dibujo = svg`<svg class="escalones" role="group" aria-label=${descripcion} width=${ancho} height=${H} viewBox="0 0 ${ancho} ${H}" style="max-width:100%;height:auto;font-family:var(--sans-serif)">
     ${simbolos(id)}${eje}${peldanos}${columnas}${linea}
   </svg>`;

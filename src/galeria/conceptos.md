@@ -23,10 +23,11 @@ import {analisis} from "../components/seccion.js";
 import {globo} from "../components/globo.js";
 import {panel, campo} from "../components/filtros.js";
 import {significado, P} from "../components/paleta.js";
-import {personas, entero} from "../components/formato.js";
+import {personas, entero, deCada} from "../components/formato.js";
 import {arbolPregunta} from "../components/formas/arbol-pregunta.js";
 import {embudo} from "../components/formas/embudo.js";
 import {euler} from "../components/formas/euler.js";
+import {matrizMarcas} from "../components/formas/matriz-marcas.js";
 import {MUESTRA} from "../components/libro.js";
 import {VERIFICA_MUESTRA} from "../components/muestra.js";
 
@@ -135,7 +136,7 @@ const panelBase = () => panel({grupos: [
   const filtros = panelBase();
   display(analisis({
     id: "embudo", numero: 2, titulo: "Cómo se llega de la población a quienes cambiaron por violencia", panel: filtros, metodo: "m-fuentes", verifica: VERIFICA_MUESTRA, alto: reservar([615, 498, 453]),
-    explica: ["Cada renglón es un paso y su barra es el 100 % del paso anterior. La parte llena es lo que pasa al renglón de abajo, que la amplía a todo el ancho. Así se ve por qué la cifra final es pequeña: si de 100 personas 5 cambiaron de residencia, y de esas 5, 1 lo hizo por violencia, el indicador es 1 de cada 100.",
+    explica: ["Cada renglón es un paso, y su barra son todas las personas de ese paso. La parte en color son las que siguen al renglón de abajo, que las amplía a todo el ancho, y el texto de cada renglón dice cuántas de cada 100 del paso anterior siguieron. Así se ve por qué la cifra final es pequeña: si de 100 personas 5 cambiaron de residencia, y de esas 5, 1 lo hizo por violencia, el indicador es 1 de cada 100.",
       "El primer paso es la población de la edad elegida. El segundo, quienes vivían en otro municipio, entidad o país cinco años antes. El tercero, quienes declararon una causa, y el último, quienes declararon inseguridad delictiva o violencia."],
     dibujar: ({v, ancho}) => {
       const f = fuenteDe(v.fuente), u = sumar(elegir(universos, v)), edad = textoDe(EDADES, v.edad);
@@ -155,14 +156,18 @@ const panelBase = () => panel({grupos: [
         unidad: (d) => ["habitantes", "habitantes", "personas que cambiaron de residencia", "personas que dieron causa"][d.i],
         precision: (d) => ({casos: d.casos}),
       });
-      const dibujo = embudo(pasos, {ancho, color, globo: g,
-        rotulosLeyenda: [{tipo: "cuadro", color: P.serie, texto: "Pasa al renglón de abajo"}, {tipo: "cuadro", color: SIG.color("baja"), texto: "Llega al indicador: por violencia"}, {tipo: "cuadro", color: P.apagado, texto: "Sale del camino"}]});
+      // Cada renglón dice en palabras llanas qué parte del anterior siguió.
+      const k = (f) => deCada(f.deAnterior, 100);
+      const frases = [() => `Población de ${edad}`, (f) => `De ella, ${k(f)} cambiaron de municipio, de entidad o de país`,
+        (f) => `De ellas, ${k(f)} declararon una causa`, (f) => `De ellas, ${k(f)} cambiaron por inseguridad delictiva o violencia`];
+      const dibujo = embudo(pasos, {ancho, color, globo: g, frase: (f) => frases[f.i](f),
+        rotulosLeyenda: [{tipo: "cuadro", color: P.serie, texto: "Siguen al renglón de abajo"}, {tipo: "cuadro", color: SIG.color("baja"), texto: "Llega al indicador: por violencia"}, {tipo: "cuadro", color: P.apagado, texto: "No siguen"}]});
       return {
         figura: {
           titulo: "De la población a quienes cambiaron de residencia por violencia, paso a paso",
           subtitulo: `${f.texto} · ${quienes(v)} · cambio de residencia desde ${f.fecha}`,
           sello: MUESTRA,
-          pie: "Datos de muestra de la Plantilla · cada barra es el total del paso anterior y su parte llena, las personas que pasan al paso siguiente.",
+          pie: "Datos de muestra de la Plantilla · cada barra son las personas de un paso, y su parte en color, las que siguen al renglón de abajo.",
           cuerpo: dibujo,
         },
         tabla: {filas: pasos, columnas: [
@@ -231,6 +236,79 @@ const panelBase = () => panel({grupos: [
           {titulo: "Personas", valor: (r) => r.n, formato: "conteo"},
           {titulo: "Parte del universo", valor: (r) => (100 * r.n) / d.total, formato: "pct"},
           {titulo: "Casos en la muestra", valor: (r) => r.casos, formato: "conteo"},
+        ]},
+      };
+    },
+  }));
+}
+```
+
+---
+
+<h2 id="matriz-marcas" class="toc-anchor">Qué pregunta cada fuente</h2>
+
+```js
+{
+  // Matriz de marcas (formas/matriz-marcas.js): una columna por fuente y un
+  // renglón por rasgo; la FORMA de la marca dice el estado. No lleva cifras:
+  // compara definiciones. Fuentes y rasgos de muestra.
+  const FUENTES_M = [
+    {id: "censo", cabeza: ["Censo", "2020"], corto: "Censo 2020"},
+    {id: "intercensal", cabeza: ["Intercensal", "2025"], corto: "Intercensal 2025"},
+    {id: "hogares", cabeza: ["Encuesta de", "hogares"], corto: "Encuesta de hogares"},
+    {id: "tecnologia", cabeza: ["Encuesta de", "tecnologías"], corto: "Encuesta de tecnologías"},
+    {id: "registro", cabeza: ["Registro", "administrativo"], corto: "Registro"},
+  ];
+  const VISTAS_M = {
+    preguntas: {texto: "Qué pregunta", filas: [
+      {id: "lengua", texto: "Habla una lengua indígena", corto: "Lengua"},
+      {id: "auto", texto: "Se considera indígena", corto: "Se considera"},
+      {id: "afro", texto: "Se considera afrodescendiente", corto: "Afro"},
+      {id: "padres", texto: "Lengua de los padres", corto: "Padres"},
+    ], estados: {
+      censo: {lengua: "cuenta", auto: "cuenta", afro: "cuenta", padres: "no"}, intercensal: {lengua: "cuenta", auto: "cuenta", afro: "cuenta", padres: "no"},
+      hogares: {lengua: "cuenta", auto: "aparte", afro: "no", padres: "no"}, tecnologia: {lengua: "aparte", auto: "no", afro: "no", padres: "no"},
+      registro: {lengua: "no", auto: "aparte", afro: "no", padres: "cuenta"}}},
+    quien: {texto: "Quién responde", filas: [
+      {id: "todos", texto: "Por cada integrante del hogar", corto: "Cada integrante"},
+      {id: "elegida", texto: "Una persona elegida", corto: "Una elegida"},
+      {id: "propia", texto: "La propia persona", corto: "La persona"},
+    ], estados: {
+      censo: {todos: "cuenta", elegida: "no", propia: "no"}, intercensal: {todos: "cuenta", elegida: "no", propia: "no"},
+      hogares: {todos: "cuenta", elegida: "no", propia: "aparte"}, tecnologia: {todos: "no", elegida: "cuenta", propia: "no"},
+      registro: {todos: "no", elegida: "no", propia: "cuenta"}}},
+  };
+  const ESTADOS_M = {
+    cuenta: {forma: "lleno", color: () => P.serie, cifra: "La pregunta y la usa", leyenda: "La pregunta y entra en el indicador"},
+    aparte: {forma: "hueco", color: () => P.comparacion, cifra: "La pregunta aparte", leyenda: "La pregunta aparte, sin sumarla"},
+    no: {forma: "chico", color: () => P.apagado, cifra: "No la pregunta", leyenda: "No la pregunta"},
+  };
+  const filtros = panel({grupos: [{leyenda: "Qué se compara", campos: [
+    campo({id: "vista", rotulo: "Comparar", inicial: "preguntas", opciones: Object.entries(VISTAS_M).map(([valor, x]) => ({valor, texto: x.texto}))}),
+  ]}]});
+  display(analisis({
+    id: "matriz-marcas", numero: 4, titulo: "Qué pregunta cada fuente", panel: filtros, metodo: "m-fuentes", verifica: VERIFICA_MUESTRA,
+    explica: [
+      "Cada columna es una fuente y cada renglón, un rasgo de su cuestionario. El punto lleno dice que la fuente lo pregunta y lo usa en el indicador; el anillo, que lo pregunta aparte y no lo suma, y el punto chico gris, que no lo pregunta. No hay cifras: la figura compara definiciones, para saber qué fuentes se pueden poner lado a lado.",
+      "La forma de la marca repite lo que dice el color, así que se lee también en blanco y negro. El globo nombra la fuente, el rasgo y su estado.",
+    ],
+    dibujar: ({v, ancho}) => {
+      const vista = VISTAS_M[v.vista];
+      const datos = FUENTES_M.flatMap((f) => vista.filas.map((r) => ({f, fila: r, estado: vista.estados[f.id][r.id]})));
+      const g = globo({marca: (d) => d.f.corto, grupo: (d) => d.fila.texto, color: (d) => ESTADOS_M[d.estado].color(), valor: () => 1, formato: (x, d) => ESTADOS_M[d.estado].cifra});
+      return {
+        figura: {
+          titulo: "Qué pregunta cada fuente sobre la pertenencia indígena",
+          subtitulo: `${vista.texto} · cinco fuentes de muestra`,
+          sello: MUESTRA,
+          pie: "Datos de muestra de la Plantilla · cada columna es una fuente y cada marca, lo que pregunta su cuestionario.",
+          cuerpo: matrizMarcas(datos, {ancho, columna: (d) => d.f.id, fila: (d) => d.fila.id, estado: (d) => d.estado,
+            columnas: FUENTES_M, filas: vista.filas, estados: ESTADOS_M, ordenLeyenda: ["cuenta", "aparte", "no"], globo: g}),
+        },
+        tabla: {filas: datos, columnas: [
+          {titulo: "Fuente", valor: (d) => d.f.corto, texto: true},
+          {titulo: "Rasgo", valor: (d) => d.fila.texto, texto: true},
+          {titulo: "Estado", valor: (d) => ESTADOS_M[d.estado].leyenda, texto: true},
         ]},
       };
     },

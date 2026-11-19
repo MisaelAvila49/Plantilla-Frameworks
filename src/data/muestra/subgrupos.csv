@@ -1,0 +1,1729 @@
+cve_ent,entidad,anio,sexo,subgrupo,grado,grupo,num,den,casos,ee
+01,"Aguascalientes",2010,Mujeres,Todos,Todos,Con la condición,20566,92437,755,0.02119
+01,"Aguascalientes",2010,Mujeres,Todos,Todos,Sin la condición,587492,1228087,10027,0.00698
+01,"Aguascalientes",2010,Mujeres,A,Alto,Con la condición,4893,31990,157,0.04022
+01,"Aguascalientes",2010,Mujeres,A,Bajo,Con la condición,11768,63979,403,0.02702
+01,"Aguascalientes",2010,Mujeres,B,Alto,Con la condición,3923,16930,139,0.05010
+01,"Aguascalientes",2010,Mujeres,B,Bajo,Con la condición,8757,33860,202,0.04313
+01,"Aguascalientes",2010,Mujeres,C,Alto,Con la condición,188,1837,16,0.10608
+01,"Aguascalientes",2010,Mujeres,C,Bajo,Con la condición,1469,9187,72,0.06048
+01,"Aguascalientes",2010,Mujeres,Ninguno,Ninguno,Sin la condición,555906,1162061,8506,0.00758
+01,"Aguascalientes",2010,Hombres,Todos,Todos,Con la condición,15128,87752,713,0.01980
+01,"Aguascalientes",2010,Hombres,Todos,Todos,Sin la condición,499321,1165844,9478,0.00712
+01,"Aguascalientes",2010,Hombres,A,Alto,Con la condición,3124,30368,212,0.02921
+01,"Aguascalientes",2010,Hombres,A,Bajo,Con la condición,8130,60737,415,0.02340
+01,"Aguascalientes",2010,Hombres,B,Alto,Con la condición,2919,16072,127,0.04790
+01,"Aguascalientes",2010,Hombres,B,Bajo,Con la condición,6703,32144,177,0.04275
+01,"Aguascalientes",2010,Hombres,C,Alto,Con la condición,91,1744,12,0.08993
+01,"Aguascalientes",2010,Hombres,C,Bajo,Con la condición,958,8721,67,0.05348
+01,"Aguascalientes",2010,Hombres,Ninguno,Ninguno,Sin la condición,472476,1103164,7042,0.00826
+01,"Aguascalientes",2010,Total,Todos,Todos,Con la condición,35694,180188,1299,0.01548
+01,"Aguascalientes",2010,Total,Todos,Todos,Sin la condición,1086813,2393932,17261,0.00531
+01,"Aguascalientes",2010,Total,A,Alto,Con la condición,8018,62358,334,0.02564
+01,"Aguascalientes",2010,Total,A,Bajo,Con la condición,19898,124716,946,0.01667
+01,"Aguascalientes",2010,Total,B,Alto,Con la condición,6842,33002,223,0.03801
+01,"Aguascalientes",2010,Total,B,Bajo,Con la condición,15460,66005,343,0.03201
+01,"Aguascalientes",2010,Total,C,Alto,Con la condición,279,3582,24,0.07661
+01,"Aguascalientes",2010,Total,C,Bajo,Con la condición,2427,17908,97,0.04866
+01,"Aguascalientes",2010,Total,Ninguno,Ninguno,Sin la condición,1028383,2265226,17792,0.00523
+01,"Aguascalientes",2020,Mujeres,Todos,Todos,Con la condición,16193,103789,740,0.01868
+01,"Aguascalientes",2020,Mujeres,Todos,Todos,Sin la condición,567991,1378904,9830,0.00695
+01,"Aguascalientes",2020,Mujeres,A,Alto,Con la condición,3107,35918,192,0.02840
+01,"Aguascalientes",2020,Mujeres,A,Bajo,Con la condición,8439,71836,468,0.02084
+01,"Aguascalientes",2020,Mujeres,B,Alto,Con la condición,3141,19009,103,0.05123
+01,"Aguascalientes",2020,Mujeres,B,Bajo,Con la condición,7306,38019,225,0.03677
+01,"Aguascalientes",2020,Mujeres,C,Alto,Con la condición,74,2063,16,0.06509
+01,"Aguascalientes",2020,Mujeres,C,Bajo,Con la condición,964,10315,86,0.04394
+01,"Aguascalientes",2020,Mujeres,Ninguno,Ninguno,Sin la condición,537454,1304770,8296,0.00757
+01,"Aguascalientes",2020,Hombres,Todos,Todos,Con la condición,10911,98528,624,0.01759
+01,"Aguascalientes",2020,Hombres,Todos,Todos,Sin la condición,479931,1309019,8285,0.00741
+01,"Aguascalientes",2020,Hombres,A,Alto,Con la condición,1406,34098,249,0.01764
+01,"Aguascalientes",2020,Hombres,A,Bajo,Con la condición,4923,68196,399,0.01814
+01,"Aguascalientes",2020,Hombres,B,Alto,Con la condición,2165,18046,143,0.03804
+01,"Aguascalientes",2020,Hombres,B,Bajo,Con la condición,5301,36092,225,0.03304
+01,"Aguascalientes",2020,Hombres,C,Alto,Con la condición,20,1958,11,0.04200
+01,"Aguascalientes",2020,Hombres,C,Bajo,Con la condición,472,9792,82,0.03311
+01,"Aguascalientes",2020,Hombres,Ninguno,Ninguno,Sin la condición,454128,1238641,8683,0.00724
+01,"Aguascalientes",2020,Total,Todos,Todos,Con la condición,27104,202317,1523,0.01222
+01,"Aguascalientes",2020,Total,Todos,Todos,Sin la condición,1047922,2687923,20235,0.00480
+01,"Aguascalientes",2020,Total,A,Alto,Con la condición,4513,70016,365,0.01799
+01,"Aguascalientes",2020,Total,A,Bajo,Con la condición,13362,140032,1021,0.01287
+01,"Aguascalientes",2020,Total,B,Alto,Con la condición,5306,37055,189,0.03567
+01,"Aguascalientes",2020,Total,B,Bajo,Con la condición,12606,74110,540,0.02264
+01,"Aguascalientes",2020,Total,C,Alto,Con la condición,56,4021,35,0.02763
+01,"Aguascalientes",2020,Total,C,Bajo,Con la condición,1436,20107,162,0.02832
+01,"Aguascalientes",2020,Total,Ninguno,Ninguno,Sin la condición,991582,2543411,12504,0.00611
+02,"Baja California",2010,Mujeres,Todos,Todos,Con la condición,76138,166165,1119,0.02085
+02,"Baja California",2010,Mujeres,Todos,Todos,Sin la condición,1555992,2207619,14870,0.00524
+02,"Baja California",2010,Mujeres,A,Alto,Con la condición,21533,53102,323,0.03825
+02,"Baja California",2010,Mujeres,A,Bajo,Con la condición,45018,106203,726,0.02568
+02,"Baja California",2010,Mujeres,B,Alto,Con la condición,16641,35252,270,0.04253
+02,"Baja California",2010,Mujeres,B,Bajo,Con la condición,37098,70504,504,0.03114
+02,"Baja California",2010,Mujeres,C,Alto,Con la condición,970,3091,15,0.16775
+02,"Baja California",2010,Mujeres,C,Bajo,Con la condición,6102,15457,77,0.07799
+02,"Baja California",2010,Mujeres,Ninguno,Ninguno,Sin la condición,1472337,2088930,11131,0.00605
+02,"Baja California",2010,Hombres,Todos,Todos,Con la condición,65442,157743,1231,0.01966
+02,"Baja California",2010,Hombres,Todos,Todos,Sin la condición,1386288,2095733,16361,0.00518
+02,"Baja California",2010,Hombres,A,Alto,Con la condición,18257,50410,329,0.03710
+02,"Baja California",2010,Hombres,A,Bajo,Con la condición,38366,100821,826,0.02365
+02,"Baja California",2010,Hombres,B,Alto,Con la condición,14347,33465,196,0.04949
+02,"Baja California",2010,Hombres,B,Bajo,Con la condición,32316,66931,435,0.03354
+02,"Baja California",2010,Hombres,C,Alto,Con la condición,794,2935,18,0.14659
+02,"Baja California",2010,Hombres,C,Bajo,Con la condición,5157,14674,126,0.05954
+02,"Baja California",2010,Hombres,Ninguno,Ninguno,Sin la condición,1311756,1983059,9857,0.00667
+02,"Baja California",2010,Total,Todos,Todos,Con la condición,141580,323908,1623,0.01724
+02,"Baja California",2010,Total,Todos,Todos,Sin la condición,2942280,4303352,21563,0.00443
+02,"Baja California",2010,Total,A,Alto,Con la condición,39790,103512,755,0.02479
+02,"Baja California",2010,Total,A,Bajo,Con la condición,83385,207024,1212,0.01972
+02,"Baja California",2010,Total,B,Alto,Con la condición,30988,68718,545,0.02984
+02,"Baja California",2010,Total,B,Bajo,Con la condición,69414,137435,857,0.02391
+02,"Baja California",2010,Total,C,Alto,Con la condición,1764,6026,34,0.10925
+02,"Baja California",2010,Total,C,Bajo,Con la condición,11259,30131,252,0.04266
+02,"Baja California",2010,Total,Ninguno,Ninguno,Sin la condición,2784093,4071989,29013,0.00382
+02,"Baja California",2020,Mujeres,Todos,Todos,Con la condición,90021,186571,1430,0.01850
+02,"Baja California",2020,Mujeres,Todos,Todos,Sin la condición,1807295,2478731,19000,0.00451
+02,"Baja California",2020,Mujeres,A,Alto,Con la condición,25626,59623,335,0.03787
+02,"Baja California",2020,Mujeres,A,Bajo,Con la condición,53444,119246,683,0.02664
+02,"Baja California",2020,Mujeres,B,Alto,Con la condición,19646,39581,336,0.03819
+02,"Baja California",2020,Mujeres,B,Bajo,Con la condición,43577,79163,542,0.02991
+02,"Baja California",2020,Mujeres,C,Alto,Con la condición,1174,3471,20,0.14810
+02,"Baja California",2020,Mujeres,C,Bajo,Con la condición,7273,17356,92,0.07202
+02,"Baja California",2020,Mujeres,Ninguno,Ninguno,Sin la condición,1710129,2345466,13961,0.00527
+02,"Baja California",2020,Hombres,Todos,Todos,Con la condición,79881,177115,1412,0.01854
+02,"Baja California",2020,Hombres,Todos,Todos,Sin la condición,1641594,2353103,18755,0.00470
+02,"Baja California",2020,Hombres,A,Alto,Con la condición,22545,56601,348,0.03674
+02,"Baja California",2020,Hombres,A,Bajo,Con la condición,47170,113202,841,0.02380
+02,"Baja California",2020,Hombres,B,Alto,Con la condición,17467,37575,269,0.04257
+02,"Baja California",2020,Hombres,B,Bajo,Con la condición,39002,75151,411,0.03450
+02,"Baja California",2020,Hombres,C,Alto,Con la condición,1011,3295,26,0.12661
+02,"Baja California",2020,Hombres,C,Bajo,Con la condición,6385,16476,122,0.06175
+02,"Baja California",2020,Hombres,Ninguno,Ninguno,Sin la condición,1553336,2226592,17342,0.00488
+02,"Baja California",2020,Total,Todos,Todos,Con la condición,169901,363686,2672,0.01351
+02,"Baja California",2020,Total,Todos,Todos,Sin la condición,3448889,4831834,35500,0.00336
+02,"Baja California",2020,Total,A,Alto,Con la condición,48171,116224,839,0.02381
+02,"Baja California",2020,Total,A,Bajo,Con la condición,100614,232448,1826,0.01623
+02,"Baja California",2020,Total,B,Alto,Con la condición,37114,77157,525,0.03053
+02,"Baja California",2020,Total,B,Bajo,Con la condición,82579,154313,857,0.02385
+02,"Baja California",2020,Total,C,Alto,Con la condición,2184,6766,37,0.10761
+02,"Baja California",2020,Total,C,Bajo,Con la condición,13658,33832,230,0.04529
+02,"Baja California",2020,Total,Ninguno,Ninguno,Sin la condición,3263465,4572058,31547,0.00356
+03,"Baja California Sur",2010,Mujeres,Todos,Todos,Con la condición,941,24112,185,0.01993
+03,"Baja California Sur",2010,Mujeres,Todos,Todos,Sin la condición,86237,320347,2461,0.01252
+03,"Baja California Sur",2010,Mujeres,A,Alto,Con la condición,72,7231,44,0.02100
+03,"Baja California Sur",2010,Mujeres,A,Bajo,Con la condición,145,14461,98,0.01407
+03,"Baja California Sur",2010,Mujeres,B,Alto,Con la condición,449,5913,43,0.05653
+03,"Baja California Sur",2010,Mujeres,B,Bajo,Con la condición,837,11826,95,0.03684
+03,"Baja California Sur",2010,Mujeres,C,Alto,Con la condición,4,434,4,0.06965
+03,"Baja California Sur",2010,Mujeres,C,Bajo,Con la condición,22,2168,11,0.04200
+03,"Baja California Sur",2010,Mujeres,Ninguno,Ninguno,Sin la condición,81600,303124,1877,0.01433
+03,"Baja California Sur",2010,Hombres,Todos,Todos,Con la condición,687,22890,179,0.01785
+03,"Baja California Sur",2010,Hombres,Todos,Todos,Sin la condición,77459,304111,2376,0.01251
+03,"Baja California Sur",2010,Hombres,A,Alto,Con la condición,69,6864,47,0.02032
+03,"Baja California Sur",2010,Hombres,A,Bajo,Con la condición,137,13728,79,0.01567
+03,"Baja California Sur",2010,Hombres,B,Alto,Con la condición,375,5613,44,0.05271
+03,"Baja California Sur",2010,Hombres,B,Bajo,Con la condición,694,11227,80,0.03768
+03,"Baja California Sur",2010,Hombres,C,Alto,Con la condición,4,412,3,0.08042
+03,"Baja California Sur",2010,Hombres,C,Bajo,Con la condición,21,2058,16,0.03482
+03,"Baja California Sur",2010,Hombres,Ninguno,Ninguno,Sin la condición,73294,287761,2377,0.01251
+03,"Baja California Sur",2010,Total,Todos,Todos,Con la condición,1502,47002,344,0.01328
+03,"Baja California Sur",2010,Total,Todos,Todos,Sin la condición,163696,624458,4570,0.00911
+03,"Baja California Sur",2010,Total,A,Alto,Con la condición,141,14095,100,0.01393
+03,"Baja California Sur",2010,Total,A,Bajo,Con la condición,282,28189,139,0.01182
+03,"Baja California Sur",2010,Total,B,Alto,Con la condición,793,11526,66,0.04362
+03,"Baja California Sur",2010,Total,B,Bajo,Con la condición,1469,23053,188,0.02494
+03,"Baja California Sur",2010,Total,C,Alto,Con la condición,8,845,5,0.06230
+03,"Baja California Sur",2010,Total,C,Bajo,Con la condición,42,4227,26,0.02732
+03,"Baja California Sur",2010,Total,Ninguno,Ninguno,Sin la condición,154895,590885,4242,0.00945
+03,"Baja California Sur",2020,Mujeres,Todos,Todos,Con la condición,1221,27073,173,0.02209
+03,"Baja California Sur",2020,Mujeres,Todos,Todos,Sin la condición,99021,359688,2300,0.01304
+03,"Baja California Sur",2020,Mujeres,A,Alto,Con la condición,81,8119,54,0.01896
+03,"Baja California Sur",2020,Mujeres,A,Bajo,Con la condición,219,16237,137,0.01381
+03,"Baja California Sur",2020,Mujeres,B,Alto,Con la condición,544,6639,49,0.05486
+03,"Baja California Sur",2020,Mujeres,B,Bajo,Con la condición,1021,13278,78,0.04223
+03,"Baja California Sur",2020,Mujeres,C,Alto,Con la condición,5,487,3,0.08042
+03,"Baja California Sur",2020,Mujeres,C,Bajo,Con la condición,24,2435,13,0.03863
+03,"Baja California Sur",2020,Mujeres,Ninguno,Ninguno,Sin la condición,93697,340350,1889,0.01439
+03,"Baja California Sur",2020,Hombres,Todos,Todos,Con la condición,771,25701,132,0.02079
+03,"Baja California Sur",2020,Hombres,Todos,Todos,Sin la condición,64979,341458,1760,0.01310
+03,"Baja California Sur",2020,Hombres,A,Alto,Con la condición,77,7707,40,0.02202
+03,"Baja California Sur",2020,Hombres,A,Bajo,Con la condición,154,15414,104,0.01366
+03,"Baja California Sur",2020,Hombres,B,Alto,Con la condición,421,6303,48,0.05047
+03,"Baja California Sur",2020,Hombres,B,Bajo,Con la condición,779,12605,66,0.04149
+03,"Baja California Sur",2020,Hombres,C,Alto,Con la condición,5,462,3,0.08042
+03,"Baja California Sur",2020,Hombres,C,Bajo,Con la condición,23,2311,13,0.03863
+03,"Baja California Sur",2020,Hombres,Ninguno,Ninguno,Sin la condición,61485,323100,1863,0.01273
+03,"Baja California Sur",2020,Total,Todos,Todos,Con la condición,1583,52774,319,0.01337
+03,"Baja California Sur",2020,Total,Todos,Todos,Sin la condición,164000,701146,4238,0.00910
+03,"Baja California Sur",2020,Total,A,Alto,Con la condición,158,15826,96,0.01422
+03,"Baja California Sur",2020,Total,A,Bajo,Con la condición,317,31651,174,0.01056
+03,"Baja California Sur",2020,Total,B,Alto,Con la condición,865,12942,78,0.03959
+03,"Baja California Sur",2020,Total,B,Bajo,Con la condición,1599,25884,158,0.02681
+03,"Baja California Sur",2020,Total,C,Alto,Con la condición,9,949,5,0.06230
+03,"Baja California Sur",2020,Total,C,Bajo,Con la condición,47,4746,39,0.02231
+03,"Baja California Sur",2020,Total,Ninguno,Ninguno,Sin la condición,155182,663450,5243,0.00818
+04,"Campeche",2010,Mujeres,Todos,Todos,Con la condición,25637,110408,901,0.01969
+04,"Campeche",2010,Mujeres,Todos,Todos,Sin la condición,737988,1466852,11968,0.00640
+04,"Campeche",2010,Mujeres,A,Alto,Con la condición,7461,45955,386,0.02628
+04,"Campeche",2010,Mujeres,A,Bajo,Con la condición,19338,91910,780,0.02043
+04,"Campeche",2010,Mujeres,B,Alto,Con la condición,5644,20813,176,0.04692
+04,"Campeche",2010,Mujeres,B,Bajo,Con la condición,11120,41626,206,0.04316
+04,"Campeche",2010,Mujeres,C,Alto,Con la condición,178,1845,10,0.13056
+04,"Campeche",2010,Mujeres,C,Bajo,Con la condición,1600,9227,68,0.06428
+04,"Campeche",2010,Mujeres,Ninguno,Ninguno,Sin la condición,698312,1387989,7324,0.00818
+04,"Campeche",2010,Hombres,Todos,Todos,Con la condición,20881,104812,771,0.02014
+04,"Campeche",2010,Hombres,Todos,Todos,Sin la condición,654665,1392508,10248,0.00690
+04,"Campeche",2010,Hombres,A,Alto,Con la condición,5644,43626,229,0.03105
+04,"Campeche",2010,Hombres,A,Bajo,Con la condición,15481,87252,682,0.02048
+04,"Campeche",2010,Hombres,B,Alto,Con la condición,4707,19758,138,0.05077
+04,"Campeche",2010,Hombres,B,Bajo,Con la condición,9253,39517,209,0.04101
+04,"Campeche",2010,Hombres,C,Alto,Con la condición,111,1752,13,0.09451
+04,"Campeche",2010,Hombres,C,Bajo,Con la condición,1230,8759,55,0.06559
+04,"Campeche",2010,Hombres,Ninguno,Ninguno,Sin la condición,619468,1317642,7811,0.00791
+04,"Campeche",2010,Total,Todos,Todos,Con la condición,46518,215221,1312,0.01591
+04,"Campeche",2010,Total,Todos,Todos,Sin la condición,1392653,2859359,17427,0.00530
+04,"Campeche",2010,Total,A,Alto,Con la condición,13106,89581,448,0.02338
+04,"Campeche",2010,Total,A,Bajo,Con la condición,34818,179162,1074,0.01690
+04,"Campeche",2010,Total,B,Alto,Con la condición,10351,40572,317,0.03428
+04,"Campeche",2010,Total,B,Bajo,Con la condición,20373,81143,573,0.02536
+04,"Campeche",2010,Total,C,Alto,Con la condición,288,3597,26,0.07456
+04,"Campeche",2010,Total,C,Bajo,Con la condición,2830,17986,121,0.04634
+04,"Campeche",2010,Total,Ninguno,Ninguno,Sin la condición,1317779,2705630,17094,0.00535
+04,"Campeche",2020,Mujeres,Todos,Todos,Con la condición,34389,123967,644,0.02470
+04,"Campeche",2020,Mujeres,Todos,Todos,Sin la condición,903073,1646991,8557,0.00753
+04,"Campeche",2020,Mujeres,A,Alto,Con la condición,10710,51599,354,0.03018
+04,"Campeche",2020,Mujeres,A,Bajo,Con la condición,26378,103197,551,0.02602
+04,"Campeche",2020,Mujeres,B,Alto,Con la condición,7394,23369,169,0.05008
+04,"Campeche",2020,Mujeres,B,Bajo,Con la condición,14599,46738,371,0.03369
+04,"Campeche",2020,Mujeres,C,Alto,Con la condición,293,2072,16,0.12196
+04,"Campeche",2020,Mujeres,C,Bajo,Con la condición,2265,10360,71,0.06867
+04,"Campeche",2020,Mujeres,Ninguno,Ninguno,Sin la condición,854521,1558443,9721,0.00707
+04,"Campeche",2020,Hombres,Todos,Todos,Con la condición,26974,117684,607,0.02388
+04,"Campeche",2020,Hombres,Todos,Todos,Sin la condición,781945,1563518,8068,0.00779
+04,"Campeche",2020,Hombres,A,Alto,Con la condición,7806,48984,243,0.03287
+04,"Campeche",2020,Hombres,A,Bajo,Con la condición,20319,97967,469,0.02621
+04,"Campeche",2020,Hombres,B,Alto,Con la condición,5950,22185,154,0.04998
+04,"Campeche",2020,Hombres,B,Bajo,Con la condición,11720,44370,332,0.03387
+04,"Campeche",2020,Hombres,C,Alto,Con la condición,183,1967,11,0.12273
+04,"Campeche",2020,Hombres,C,Bajo,Con la condición,1676,9835,66,0.06480
+04,"Campeche",2020,Hombres,Ninguno,Ninguno,Sin la condición,739905,1479458,7843,0.00790
+04,"Campeche",2020,Total,Todos,Todos,Con la condición,61364,241651,1396,0.01631
+04,"Campeche",2020,Total,Todos,Todos,Sin la condición,1685018,3210509,18546,0.00513
+04,"Campeche",2020,Total,A,Alto,Con la condición,18517,100582,810,0.01906
+04,"Campeche",2020,Total,A,Bajo,Con la condición,46697,201164,1265,0.01662
+04,"Campeche",2020,Total,B,Alto,Con la condición,13344,45554,249,0.04038
+04,"Campeche",2020,Total,B,Bajo,Con la condición,26319,91108,720,0.02365
+04,"Campeche",2020,Total,C,Alto,Con la condición,476,4039,21,0.09854
+04,"Campeche",2020,Total,C,Bajo,Con la condición,3941,20194,105,0.05415
+04,"Campeche",2020,Total,Ninguno,Ninguno,Sin la condición,1594426,3037901,15967,0.00553
+05,"Coahuila",2010,Mujeres,Todos,Todos,Con la condición,23334,112414,690,0.02162
+05,"Coahuila",2010,Mujeres,Todos,Todos,Sin la condición,659305,1493502,9172,0.00726
+05,"Coahuila",2010,Mujeres,A,Alto,Con la condición,7287,47890,242,0.03232
+05,"Coahuila",2010,Mujeres,A,Bajo,Con la condición,18759,95780,645,0.02188
+05,"Coahuila",2010,Mujeres,B,Alto,Con la condición,5793,25981,210,0.04021
+05,"Coahuila",2010,Mujeres,B,Bajo,Con la condición,12721,51962,418,0.02944
+05,"Coahuila",2010,Mujeres,C,Alto,Con la condición,144,1895,11,0.11198
+05,"Coahuila",2010,Mujeres,C,Bajo,Con la condición,1336,9475,46,0.07184
+05,"Coahuila",2010,Mujeres,Ninguno,Ninguno,Sin la condición,623859,1413206,8352,0.00761
+05,"Coahuila",2010,Hombres,Todos,Todos,Con la condición,17599,106717,530,0.02257
+05,"Coahuila",2010,Hombres,Todos,Todos,Sin la condición,565406,1417807,7046,0.00817
+05,"Coahuila",2010,Hombres,A,Alto,Con la condición,4978,45463,222,0.02934
+05,"Coahuila",2010,Hombres,A,Bajo,Con la condición,13930,90926,733,0.01862
+05,"Coahuila",2010,Hombres,B,Alto,Con la condición,4447,24664,200,0.03806
+05,"Coahuila",2010,Hombres,B,Bajo,Con la condición,9972,49329,305,0.03219
+05,"Coahuila",2010,Hombres,C,Alto,Con la condición,60,1799,11,0.07597
+05,"Coahuila",2010,Hombres,C,Bajo,Con la condición,885,8995,70,0.04983
+05,"Coahuila",2010,Hombres,Ninguno,Ninguno,Sin la condición,535008,1341581,8737,0.00733
+05,"Coahuila",2010,Total,Todos,Todos,Con la condición,40933,219131,1752,0.01304
+05,"Coahuila",2010,Total,Todos,Todos,Sin la condición,1224712,2911309,23278,0.00453
+05,"Coahuila",2010,Total,A,Alto,Con la condición,12265,93353,448,0.02234
+05,"Coahuila",2010,Total,A,Bajo,Con la condición,32689,186706,947,0.01729
+05,"Coahuila",2010,Total,B,Alto,Con la condición,10240,50646,409,0.02780
+05,"Coahuila",2010,Total,B,Bajo,Con la condición,22693,101291,481,0.02662
+05,"Coahuila",2010,Total,C,Alto,Con la condición,205,3694,25,0.06405
+05,"Coahuila",2010,Total,C,Bajo,Con la condición,2221,18469,153,0.03681
+05,"Coahuila",2010,Total,Ninguno,Ninguno,Sin la condición,1158867,2754787,16255,0.00542
+05,"Coahuila",2020,Mujeres,Todos,Todos,Con la condición,18244,126219,1005,0.01553
+05,"Coahuila",2020,Mujeres,Todos,Todos,Sin la condición,634578,1676914,13347,0.00588
+05,"Coahuila",2020,Mujeres,A,Alto,Con la condición,4792,53771,310,0.02266
+05,"Coahuila",2020,Mujeres,A,Bajo,Con la condición,14285,107542,860,0.01620
+05,"Coahuila",2020,Mujeres,B,Alto,Con la condición,4666,29172,171,0.03924
+05,"Coahuila",2020,Mujeres,B,Bajo,Con la condición,10606,58344,499,0.02417
+05,"Coahuila",2020,Mujeres,C,Alto,Con la condición,28,2128,17,0.03868
+05,"Coahuila",2020,Mujeres,C,Bajo,Con la condición,830,10638,85,0.04072
+05,"Coahuila",2020,Mujeres,Ninguno,Ninguno,Sin la condición,600461,1586757,11529,0.00632
+05,"Coahuila",2020,Hombres,Todos,Todos,Con la condición,13629,119822,584,0.01839
+05,"Coahuila",2020,Hombres,Todos,Todos,Sin la condición,553387,1591925,7765,0.00757
+05,"Coahuila",2020,Hombres,A,Alto,Con la condición,2977,51046,365,0.01717
+05,"Coahuila",2020,Hombres,A,Bajo,Con la condición,10416,102092,765,0.01532
+05,"Coahuila",2020,Hombres,B,Alto,Con la condición,3576,27693,135,0.04041
+05,"Coahuila",2020,Hombres,B,Bajo,Con la condición,8363,55387,399,0.02509
+05,"Coahuila",2020,Hombres,C,Alto,Con la condición,20,2020,13,0.03863
+05,"Coahuila",2020,Hombres,C,Bajo,Con la condición,476,10099,69,0.03573
+05,"Coahuila",2020,Hombres,Ninguno,Ninguno,Sin la condición,523635,1506337,11439,0.00623
+05,"Coahuila",2020,Total,Todos,Todos,Con la condición,31874,246042,1841,0.01096
+05,"Coahuila",2020,Total,Todos,Todos,Sin la condición,1187965,3268838,24457,0.00431
+05,"Coahuila",2020,Total,A,Alto,Con la condición,7770,104817,578,0.01526
+05,"Coahuila",2020,Total,A,Bajo,Con la condición,24701,209634,1500,0.01165
+05,"Coahuila",2020,Total,B,Alto,Con la condición,8242,56865,491,0.02224
+05,"Coahuila",2020,Total,B,Bajo,Con la condición,18969,113730,963,0.01682
+05,"Coahuila",2020,Total,C,Alto,Con la condición,41,4148,22,0.02970
+05,"Coahuila",2020,Total,C,Bajo,Con la condición,1306,20738,165,0.02648
+05,"Coahuila",2020,Total,Ninguno,Ninguno,Sin la condición,1124096,3093094,22744,0.00447
+06,"Colima",2010,Mujeres,Todos,Todos,Con la condición,12965,170095,1019,0.01164
+06,"Colima",2010,Mujeres,Todos,Todos,Sin la condición,765857,2259832,13541,0.00569
+06,"Colima",2010,Mujeres,A,Alto,Con la condición,680,67955,582,0.00577
+06,"Colima",2010,Mujeres,A,Bajo,Con la condición,9185,135911,764,0.01271
+06,"Colima",2010,Mujeres,B,Alto,Con la condición,3242,29665,163,0.03421
+06,"Colima",2010,Mujeres,B,Bajo,Con la condición,8556,59330,352,0.02621
+06,"Colima",2010,Mujeres,C,Alto,Con la condición,27,2651,19,0.03196
+06,"Colima",2010,Mujeres,C,Bajo,Con la condición,133,13255,106,0.01353
+06,"Colima",2010,Mujeres,Ninguno,Ninguno,Sin la condición,724682,2138336,13252,0.00576
+06,"Colima",2010,Hombres,Todos,Todos,Con la condición,4844,161474,1310,0.00660
+06,"Colima",2010,Hombres,Todos,Todos,Sin la condición,605375,2145299,17410,0.00478
+06,"Colima",2010,Hombres,A,Alto,Con la condición,645,64511,419,0.00681
+06,"Colima",2010,Hombres,A,Bajo,Con la condición,2756,129022,896,0.00676
+06,"Colima",2010,Hombres,B,Alto,Con la condición,1776,28162,180,0.02537
+06,"Colima",2010,Hombres,B,Bajo,Con la condición,5519,56323,415,0.02043
+06,"Colima",2010,Hombres,C,Alto,Con la condición,25,2517,19,0.03196
+06,"Colima",2010,Hombres,C,Bajo,Con la condición,126,12583,102,0.01379
+06,"Colima",2010,Hombres,Ninguno,Ninguno,Sin la condición,572828,2029960,13069,0.00551
+06,"Colima",2010,Total,Todos,Todos,Con la condición,16114,331569,2716,0.00578
+06,"Colima",2010,Total,Todos,Todos,Sin la condición,1371232,4405131,36077,0.00341
+06,"Colima",2010,Total,A,Alto,Con la condición,1325,132467,728,0.00516
+06,"Colima",2010,Total,A,Bajo,Con la condición,10587,264933,1504,0.00707
+06,"Colima",2010,Total,B,Alto,Con la condición,4723,57827,311,0.02174
+06,"Colima",2010,Total,B,Bajo,Con la condición,13484,115653,586,0.01856
+06,"Colima",2010,Total,C,Alto,Con la condición,52,5167,44,0.02100
+06,"Colima",2010,Total,C,Bajo,Con la condición,258,25837,160,0.01101
+06,"Colima",2010,Total,Ninguno,Ninguno,Sin la condición,1297510,4168296,29719,0.00376
+06,"Colima",2020,Mujeres,Todos,Todos,Con la condición,5730,190984,1536,0.00609
+06,"Colima",2020,Mujeres,Todos,Todos,Sin la condición,719015,2537355,20403,0.00442
+06,"Colima",2020,Mujeres,A,Alto,Con la condición,763,76301,568,0.00584
+06,"Colima",2020,Mujeres,A,Bajo,Con la condición,3260,152601,1069,0.00619
+06,"Colima",2020,Mujeres,B,Alto,Con la condición,2101,33308,161,0.02682
+06,"Colima",2020,Mujeres,B,Bajo,Con la condición,6528,66616,354,0.02212
+06,"Colima",2020,Mujeres,C,Alto,Con la condición,30,2976,15,0.03597
+06,"Colima",2020,Mujeres,C,Bajo,Con la condición,149,14882,112,0.01316
+06,"Colima",2020,Mujeres,Ninguno,Ninguno,Sin la condición,680358,2400938,11752,0.00582
+06,"Colima",2020,Hombres,Todos,Todos,Con la condición,5439,181304,1491,0.00618
+06,"Colima",2020,Hombres,Todos,Todos,Sin la condición,640958,2408757,19804,0.00440
+06,"Colima",2020,Hombres,A,Alto,Con la condición,724,72434,507,0.00619
+06,"Colima",2020,Hombres,A,Bajo,Con la condición,3094,144867,1130,0.00602
+06,"Colima",2020,Hombres,B,Alto,Con la condición,1994,31620,228,0.02254
+06,"Colima",2020,Hombres,B,Bajo,Con la condición,6197,63240,304,0.02387
+06,"Colima",2020,Hombres,C,Alto,Con la condición,28,2826,24,0.02843
+06,"Colima",2020,Hombres,C,Bajo,Con la condición,141,14128,118,0.01282
+06,"Colima",2020,Hombres,Ninguno,Ninguno,Sin la condición,606498,2279254,14634,0.00511
+06,"Colima",2020,Total,Todos,Todos,Con la condición,11169,372288,2785,0.00453
+06,"Colima",2020,Total,Todos,Todos,Sin la condición,1359972,4946112,36996,0.00325
+06,"Colima",2020,Total,A,Alto,Con la condición,1487,148734,702,0.00526
+06,"Colima",2020,Total,A,Bajo,Con la condición,6354,297469,1394,0.00542
+06,"Colima",2020,Total,B,Alto,Con la condición,4095,64928,370,0.01769
+06,"Colima",2020,Total,B,Bajo,Con la condición,12724,129856,958,0.01345
+06,"Colima",2020,Total,C,Alto,Con la condición,58,5802,49,0.01990
+06,"Colima",2020,Total,C,Bajo,Con la condición,290,29010,150,0.01137
+06,"Colima",2020,Total,Ninguno,Ninguno,Sin la condición,1286856,4680192,37287,0.00324
+07,"Chiapas",2010,Mujeres,Todos,Todos,Con la condición,25864,109467,722,0.02213
+07,"Chiapas",2010,Mujeres,Todos,Todos,Sin la condición,719084,1454342,9586,0.00715
+07,"Chiapas",2010,Mujeres,A,Alto,Con la condición,7846,41577,218,0.03710
+07,"Chiapas",2010,Mujeres,A,Bajo,Con la condición,17090,83154,628,0.02257
+07,"Chiapas",2010,Mujeres,B,Alto,Con la condición,5881,22712,162,0.04818
+07,"Chiapas",2010,Mujeres,B,Bajo,Con la condición,13110,45424,383,0.03241
+07,"Chiapas",2010,Mujeres,C,Alto,Con la condición,174,1638,9,0.14367
+07,"Chiapas",2010,Mujeres,C,Bajo,Con la condición,1532,8191,59,0.07107
+07,"Chiapas",2010,Mujeres,Ninguno,Ninguno,Sin la condición,680424,1376152,10131,0.00695
+07,"Chiapas",2010,Hombres,Todos,Todos,Con la condición,17755,103919,600,0.02151
+07,"Chiapas",2010,Hombres,Todos,Todos,Sin la condición,592315,1380632,7971,0.00776
+07,"Chiapas",2010,Hombres,A,Alto,Con la condición,4866,39470,308,0.02623
+07,"Chiapas",2010,Hombres,A,Bajo,Con la condición,11060,78940,488,0.02200
+07,"Chiapas",2010,Hombres,B,Alto,Con la condición,4172,21561,107,0.05347
+07,"Chiapas",2010,Hombres,B,Bajo,Con la condición,9624,43122,218,0.03948
+07,"Chiapas",2010,Hombres,C,Alto,Con la condición,63,1555,8,0.09769
+07,"Chiapas",2010,Hombres,C,Bajo,Con la condición,946,7776,45,0.06821
+07,"Chiapas",2010,Hombres,Ninguno,Ninguno,Sin la condición,560470,1306405,6862,0.00836
+07,"Chiapas",2010,Total,Todos,Todos,Con la condición,43619,213385,1584,0.01419
+07,"Chiapas",2010,Total,Todos,Todos,Sin la condición,1311399,2834975,21051,0.00481
+07,"Chiapas",2010,Total,A,Alto,Con la condición,12712,81047,697,0.01928
+07,"Chiapas",2010,Total,A,Bajo,Con la condición,28150,162093,1204,0.01528
+07,"Chiapas",2010,Total,B,Alto,Con la condición,10053,44273,349,0.03139
+07,"Chiapas",2010,Total,B,Bajo,Con la condición,22734,88546,748,0.02236
+07,"Chiapas",2010,Total,C,Alto,Con la condición,237,3193,24,0.07488
+07,"Chiapas",2010,Total,C,Bajo,Con la condición,2478,15967,89,0.05373
+07,"Chiapas",2010,Total,Ninguno,Ninguno,Sin la condición,1240894,2682557,14410,0.00581
+07,"Chiapas",2020,Mujeres,Todos,Todos,Con la condición,29254,122910,915,0.01971
+07,"Chiapas",2020,Mujeres,Todos,Todos,Sin la condición,810230,1632945,12152,0.00635
+07,"Chiapas",2020,Mujeres,A,Alto,Con la condición,8890,46683,399,0.02752
+07,"Chiapas",2020,Mujeres,A,Bajo,Con la condición,19351,93366,577,0.02362
+07,"Chiapas",2020,Mujeres,B,Alto,Con la condición,6647,25501,145,0.05104
+07,"Chiapas",2020,Mujeres,B,Bajo,Con la condición,14809,51003,312,0.03598
+07,"Chiapas",2020,Mujeres,C,Alto,Con la condición,198,1839,13,0.12040
+07,"Chiapas",2020,Mujeres,C,Bajo,Con la condición,1736,9197,61,0.07015
+07,"Chiapas",2020,Mujeres,Ninguno,Ninguno,Sin la condición,766670,1545152,8088,0.00778
+07,"Chiapas",2020,Hombres,Todos,Todos,Con la condición,20466,116681,776,0.01911
+07,"Chiapas",2020,Hombres,Todos,Todos,Sin la condición,672110,1550184,10304,0.00683
+07,"Chiapas",2020,Hombres,A,Alto,Con la condición,5665,44317,268,0.02855
+07,"Chiapas",2020,Hombres,A,Bajo,Con la condición,12821,88634,491,0.02222
+07,"Chiapas",2020,Hombres,B,Alto,Con la condición,4795,24209,144,0.04650
+07,"Chiapas",2020,Hombres,B,Bajo,Con la condición,11027,48418,327,0.03247
+07,"Chiapas",2020,Hombres,C,Alto,Con la condición,79,1746,10,0.09192
+07,"Chiapas",2020,Hombres,C,Bajo,Con la condición,1102,8731,52,0.06446
+07,"Chiapas",2020,Hombres,Ninguno,Ninguno,Sin la condición,635975,1466841,10133,0.00689
+07,"Chiapas",2020,Total,Todos,Todos,Con la condición,49720,239590,1799,0.01339
+07,"Chiapas",2020,Total,Todos,Todos,Sin la condición,1482341,3183130,23900,0.00452
+07,"Chiapas",2020,Total,A,Alto,Con la condición,14555,91000,590,0.02113
+07,"Chiapas",2020,Total,A,Bajo,Con la condición,32173,182000,1241,0.01516
+07,"Chiapas",2020,Total,B,Alto,Con la condición,11442,49710,355,0.03128
+07,"Chiapas",2020,Total,B,Bajo,Con la condición,25835,99420,649,0.02410
+07,"Chiapas",2020,Total,C,Alto,Con la condición,277,3586,21,0.08158
+07,"Chiapas",2020,Total,C,Bajo,Con la condición,2838,17928,110,0.04872
+07,"Chiapas",2020,Total,Ninguno,Ninguno,Sin la condición,1402645,3011994,21909,0.00472
+08,"Chihuahua",2010,Mujeres,Todos,Todos,Con la condición,8707,72623,577,0.01893
+08,"Chihuahua",2010,Mujeres,Todos,Todos,Sin la condición,344317,964848,7667,0.00766
+08,"Chihuahua",2010,Mujeres,A,Alto,Con la condición,1330,31087,222,0.01901
+08,"Chihuahua",2010,Mujeres,A,Bajo,Con la condición,6323,62174,334,0.02315
+08,"Chihuahua",2010,Mujeres,B,Alto,Con la condición,1891,14206,103,0.04686
+08,"Chihuahua",2010,Mujeres,B,Bajo,Con la condición,4438,28411,168,0.03921
+08,"Chihuahua",2010,Mujeres,C,Alto,Con la condición,13,1255,8,0.04925
+08,"Chihuahua",2010,Mujeres,C,Bajo,Con la condición,258,6275,40,0.04394
+08,"Chihuahua",2010,Mujeres,Ninguno,Ninguno,Sin la condición,325806,912974,6814,0.00813
+08,"Chihuahua",2010,Hombres,Todos,Todos,Con la condición,2467,68942,410,0.01284
+08,"Chihuahua",2010,Hombres,Todos,Todos,Sin la condición,249829,915947,5447,0.00845
+08,"Chihuahua",2010,Hombres,A,Alto,Con la condición,295,29511,165,0.01084
+08,"Chihuahua",2010,Hombres,A,Bajo,Con la condición,1038,59022,351,0.00982
+08,"Chihuahua",2010,Hombres,B,Alto,Con la condición,661,13486,84,0.03298
+08,"Chihuahua",2010,Hombres,B,Bajo,Con la condición,1944,26971,152,0.02937
+08,"Chihuahua",2010,Hombres,C,Alto,Con la condición,12,1191,6,0.05687
+08,"Chihuahua",2010,Hombres,C,Bajo,Con la condición,60,5957,31,0.02502
+08,"Chihuahua",2010,Hombres,Ninguno,Ninguno,Sin la condición,236397,866702,6754,0.00759
+08,"Chihuahua",2010,Total,Todos,Todos,Con la condición,11174,141565,893,0.01263
+08,"Chihuahua",2010,Total,Todos,Todos,Sin la condición,594146,1880795,11869,0.00597
+08,"Chihuahua",2010,Total,A,Alto,Con la condición,606,60598,418,0.00681
+08,"Chihuahua",2010,Total,A,Bajo,Con la condición,7360,121196,1034,0.01040
+08,"Chihuahua",2010,Total,B,Alto,Con la condición,2552,27691,166,0.03143
+08,"Chihuahua",2010,Total,B,Bajo,Con la condición,6382,55383,323,0.02487
+08,"Chihuahua",2010,Total,C,Alto,Con la condición,24,2446,19,0.03196
+08,"Chihuahua",2010,Total,C,Bajo,Con la condición,122,12232,79,0.01567
+08,"Chihuahua",2010,Total,Ninguno,Ninguno,Sin la condición,562203,1779677,13211,0.00566
+08,"Chihuahua",2020,Mujeres,Todos,Todos,Con la condición,7825,81542,588,0.01701
+08,"Chihuahua",2020,Mujeres,Todos,Todos,Sin la condición,360684,1083337,7811,0.00747
+08,"Chihuahua",2020,Mujeres,A,Alto,Con la condición,658,34904,262,0.01176
+08,"Chihuahua",2020,Mujeres,A,Bajo,Con la condición,5429,69809,362,0.01971
+08,"Chihuahua",2020,Mujeres,B,Alto,Con la condición,1742,15950,104,0.04281
+08,"Chihuahua",2020,Mujeres,B,Bajo,Con la condición,4219,31900,207,0.03297
+08,"Chihuahua",2020,Mujeres,C,Alto,Con la condición,14,1409,10,0.04405
+08,"Chihuahua",2020,Mujeres,C,Bajo,Con la condición,121,7046,52,0.02522
+08,"Chihuahua",2020,Mujeres,Ninguno,Ninguno,Sin la condición,341292,1025094,6262,0.00834
+08,"Chihuahua",2020,Hombres,Todos,Todos,Con la condición,2796,77409,384,0.01333
+08,"Chihuahua",2020,Hombres,Todos,Todos,Sin la condición,280858,1028432,5098,0.00874
+08,"Chihuahua",2020,Hombres,A,Alto,Con la condición,331,33135,207,0.00968
+08,"Chihuahua",2020,Hombres,A,Bajo,Con la condición,1188,66271,431,0.00895
+08,"Chihuahua",2020,Hombres,B,Alto,Con la condición,747,15142,99,0.03047
+08,"Chihuahua",2020,Hombres,B,Bajo,Con la condición,2193,30284,229,0.02398
+08,"Chihuahua",2020,Hombres,C,Alto,Con la condición,13,1338,10,0.04405
+08,"Chihuahua",2020,Hombres,C,Bajo,Con la condición,67,6689,34,0.02389
+08,"Chihuahua",2020,Hombres,Ninguno,Ninguno,Sin la condición,265758,973140,6531,0.00772
+08,"Chihuahua",2020,Total,Todos,Todos,Con la condición,10622,158950,1085,0.01061
+08,"Chihuahua",2020,Total,Todos,Todos,Sin la condición,641542,2111770,14412,0.00536
+08,"Chihuahua",2020,Total,A,Alto,Con la condición,680,68040,494,0.00627
+08,"Chihuahua",2020,Total,A,Bajo,Con la condición,6617,136080,877,0.01017
+08,"Chihuahua",2020,Total,B,Alto,Con la condición,2489,31092,169,0.02922
+08,"Chihuahua",2020,Total,B,Bajo,Con la condición,6413,62184,381,0.02181
+08,"Chihuahua",2020,Total,C,Alto,Con la condición,27,2747,22,0.02970
+08,"Chihuahua",2020,Total,C,Bajo,Con la condición,137,13734,78,0.01577
+08,"Chihuahua",2020,Total,Ninguno,Ninguno,Sin la condición,607051,1998234,11932,0.00589
+09,"Ciudad de México",2010,Mujeres,Todos,Todos,Con la condición,2191,7696,51,0.08847
+09,"Ciudad de México",2010,Mujeres,Todos,Todos,Sin la condición,57505,102250,672,0.02679
+09,"Ciudad de México",2010,Mujeres,A,Alto,Con la condición,766,3143,19,0.13791
+09,"Ciudad de México",2010,Mujeres,A,Bajo,Con la condición,1554,6286,50,0.08541
+09,"Ciudad de México",2010,Mujeres,B,Alto,Con la condición,493,1697,11,0.19162
+09,"Ciudad de México",2010,Mujeres,B,Bajo,Con la condición,1203,3394,20,0.14973
+09,"Ciudad de México",2010,Mujeres,C,Alto,Con la condición,19,123,3,0.29360
+09,"Ciudad de México",2010,Mujeres,C,Bajo,Con la condición,148,616,5,0.26753
+09,"Ciudad de México",2010,Mujeres,Ninguno,Ninguno,Sin la condición,54414,96752,606,0.02821
+09,"Ciudad de México",2010,Hombres,Todos,Todos,Con la condición,1735,7306,37,0.09793
+09,"Ciudad de México",2010,Hombres,Todos,Todos,Sin la condición,50001,97068,491,0.03158
+09,"Ciudad de México",2010,Hombres,A,Alto,Con la condición,586,2984,22,0.11861
+09,"Ciudad de México",2010,Hombres,A,Bajo,Con la condición,1193,5967,47,0.08167
+09,"Ciudad de México",2010,Hombres,B,Alto,Con la condición,392,1611,11,0.18107
+09,"Ciudad de México",2010,Hombres,B,Bajo,Con la condición,989,3222,19,0.14814
+09,"Ciudad de México",2010,Hombres,C,Alto,Con la condición,13,117,3,0.25201
+09,"Ciudad de México",2010,Hombres,C,Bajo,Con la condición,113,585,5,0.24713
+09,"Ciudad de México",2010,Hombres,Ninguno,Ninguno,Sin la condición,47313,91849,782,0.02502
+09,"Ciudad de México",2010,Total,Todos,Todos,Con la condición,3926,15002,111,0.05841
+09,"Ciudad de México",2010,Total,Todos,Todos,Sin la condición,107507,199318,1477,0.01816
+09,"Ciudad de México",2010,Total,A,Alto,Con la condición,1353,6126,44,0.08754
+09,"Ciudad de México",2010,Total,A,Bajo,Con la condición,2747,12253,83,0.06409
+09,"Ciudad de México",2010,Total,B,Alto,Con la condición,885,3308,28,0.11710
+09,"Ciudad de México",2010,Total,B,Bajo,Con la condición,2192,6617,46,0.09715
+09,"Ciudad de México",2010,Total,C,Alto,Con la condición,32,240,3,0.27480
+09,"Ciudad de México",2010,Total,C,Bajo,Con la condición,261,1201,8,0.20414
+09,"Ciudad de México",2010,Total,Ninguno,Ninguno,Sin la condición,101727,188602,1030,0.02174
+09,"Ciudad de México",2020,Mujeres,Todos,Todos,Con la condición,1823,8641,63,0.07197
+09,"Ciudad de México",2020,Mujeres,Todos,Todos,Sin la condición,56107,114807,840,0.02415
+09,"Ciudad de México",2020,Mujeres,A,Alto,Con la condición,600,3529,18,0.12399
+09,"Ciudad de México",2020,Mujeres,A,Bajo,Con la condición,1225,7058,46,0.07817
+09,"Ciudad de México",2020,Mujeres,B,Alto,Con la condición,413,1906,14,0.15415
+09,"Ciudad de México",2020,Mujeres,B,Bajo,Con la condición,1069,3811,23,0.13116
+09,"Ciudad de México",2020,Mujeres,C,Alto,Con la condición,11,138,3,0.22263
+09,"Ciudad de México",2020,Mujeres,C,Bajo,Con la condición,115,692,3,0.30123
+09,"Ciudad de México",2020,Mujeres,Ninguno,Ninguno,Sin la condición,53090,108634,759,0.02540
+09,"Ciudad de México",2020,Hombres,Todos,Todos,Con la condición,1296,8203,56,0.06824
+09,"Ciudad de México",2020,Hombres,Todos,Todos,Sin la condición,47488,108989,742,0.02548
+09,"Ciudad de México",2020,Hombres,A,Alto,Con la condición,392,3350,16,0.11256
+09,"Ciudad de México",2020,Hombres,A,Bajo,Con la condición,808,6700,35,0.07705
+09,"Ciudad de México",2020,Hombres,B,Alto,Con la condición,296,1809,16,0.12950
+09,"Ciudad de México",2020,Hombres,B,Bajo,Con la condición,823,3618,21,0.12809
+09,"Ciudad de México",2020,Hombres,C,Alto,Con la condición,4,131,3,0.13724
+09,"Ciudad de México",2020,Hombres,C,Bajo,Con la condición,75,657,5,0.19873
+09,"Ciudad de México",2020,Hombres,Ninguno,Ninguno,Sin la condición,44935,103129,769,0.02503
+09,"Ciudad de México",2020,Total,Todos,Todos,Con la condición,3120,16845,81,0.06043
+09,"Ciudad de México",2020,Total,Todos,Todos,Sin la condición,103595,223795,1075,0.02129
+09,"Ciudad de México",2020,Total,A,Alto,Con la condición,993,6879,49,0.07028
+09,"Ciudad de México",2020,Total,A,Bajo,Con la condición,2032,13757,94,0.05123
+09,"Ciudad de México",2020,Total,B,Alto,Con la condición,709,3715,32,0.09726
+09,"Ciudad de México",2020,Total,B,Bajo,Con la condición,1893,7429,38,0.09896
+09,"Ciudad de México",2020,Total,C,Alto,Con la condición,15,270,3,0.18724
+09,"Ciudad de México",2020,Total,C,Bajo,Con la condición,190,1348,11,0.14684
+09,"Ciudad de México",2020,Total,Ninguno,Ninguno,Sin la condición,98025,211763,1801,0.01645
+10,"Durango",2010,Mujeres,Todos,Todos,Con la condición,5897,67424,552,0.01683
+10,"Durango",2010,Mujeres,Todos,Todos,Sin la condición,299377,895775,7333,0.00771
+10,"Durango",2010,Mujeres,A,Alto,Con la condición,398,20804,111,0.01821
+10,"Durango",2010,Mujeres,A,Bajo,Con la condición,2777,41608,335,0.01909
+10,"Durango",2010,Mujeres,B,Alto,Con la condición,1939,16886,138,0.03800
+10,"Durango",2010,Mujeres,B,Bajo,Con la condición,5060,33771,216,0.03400
+10,"Durango",2010,Mujeres,C,Alto,Con la condición,12,1241,11,0.04200
+10,"Durango",2010,Mujeres,C,Bajo,Con la condición,165,6204,38,0.03652
+10,"Durango",2010,Mujeres,Ninguno,Ninguno,Sin la condición,283282,847615,5043,0.00930
+10,"Durango",2010,Hombres,Todos,Todos,Con la condición,1920,64007,482,0.01088
+10,"Durango",2010,Hombres,Todos,Todos,Sin la condición,231924,850374,6405,0.00779
+10,"Durango",2010,Hombres,A,Alto,Con la condición,197,19750,137,0.01190
+10,"Durango",2010,Hombres,A,Bajo,Con la condición,395,39499,304,0.00799
+10,"Durango",2010,Hombres,B,Alto,Con la condición,920,16030,103,0.03208
+10,"Durango",2010,Hombres,B,Bajo,Con la condición,2961,32060,154,0.03267
+10,"Durango",2010,Hombres,C,Alto,Con la condición,12,1178,7,0.05265
+10,"Durango",2010,Hombres,C,Bajo,Con la condición,59,5889,36,0.02322
+10,"Durango",2010,Hombres,Ninguno,Ninguno,Sin la condición,219455,804655,5992,0.00805
+10,"Durango",2010,Total,Todos,Todos,Con la condición,7561,131431,913,0.01079
+10,"Durango",2010,Total,Todos,Todos,Sin la condición,531301,1746149,12131,0.00585
+10,"Durango",2010,Total,A,Alto,Con la condición,406,40554,280,0.00832
+10,"Durango",2010,Total,A,Bajo,Con la condición,2985,81108,697,0.00998
+10,"Durango",2010,Total,B,Alto,Con la condición,2794,32915,282,0.02324
+10,"Durango",2010,Total,B,Bajo,Con la condición,7893,65831,474,0.02089
+10,"Durango",2010,Total,C,Alto,Con la condición,24,2419,12,0.04021
+10,"Durango",2010,Total,C,Bajo,Con la condición,121,12093,80,0.01557
+10,"Durango",2010,Total,Ninguno,Ninguno,Sin la condición,502736,1652270,7715,0.00733
+10,"Durango",2020,Mujeres,Todos,Todos,Con la condición,6804,75704,510,0.01773
+10,"Durango",2020,Mujeres,Todos,Todos,Sin la condición,338568,1005782,6778,0.00804
+10,"Durango",2020,Mujeres,A,Alto,Con la condición,503,23359,176,0.01532
+10,"Durango",2020,Mujeres,A,Bajo,Con la condición,3231,46718,242,0.02283
+10,"Durango",2020,Mujeres,B,Alto,Con la condición,2223,18959,130,0.03950
+10,"Durango",2020,Mujeres,B,Bajo,Con la condición,5773,37919,261,0.03113
+10,"Durango",2020,Mujeres,C,Alto,Con la condición,14,1393,8,0.04925
+10,"Durango",2020,Mujeres,C,Bajo,Con la condición,202,6966,48,0.03390
+10,"Durango",2020,Mujeres,Ninguno,Ninguno,Sin la condición,320366,951708,4831,0.00952
+10,"Durango",2020,Hombres,Todos,Todos,Con la condición,4012,71867,511,0.01422
+10,"Durango",2020,Hombres,Todos,Todos,Sin la condición,288903,954807,6785,0.00781
+10,"Durango",2020,Hombres,A,Alto,Con la condición,222,22175,149,0.01141
+10,"Durango",2020,Hombres,A,Bajo,Con la condición,1557,44350,214,0.01762
+10,"Durango",2020,Hombres,B,Alto,Con la condición,1497,17998,100,0.03867
+10,"Durango",2020,Hombres,B,Bajo,Con la condición,4255,35997,173,0.03436
+10,"Durango",2020,Hombres,C,Alto,Con la condición,13,1323,7,0.05265
+10,"Durango",2020,Hombres,C,Bajo,Con la condición,66,6613,56,0.01861
+10,"Durango",2020,Hombres,Ninguno,Ninguno,Sin la condición,273370,903473,5511,0.00866
+10,"Durango",2020,Total,Todos,Todos,Con la condición,10817,147571,1044,0.01129
+10,"Durango",2020,Total,Todos,Todos,Sin la condición,627471,1960589,13871,0.00555
+10,"Durango",2020,Total,A,Alto,Con la condición,455,45534,267,0.00852
+10,"Durango",2020,Total,A,Bajo,Con la condición,4788,91068,495,0.01404
+10,"Durango",2020,Total,B,Alto,Con la condición,3720,36958,269,0.02568
+10,"Durango",2020,Total,B,Bajo,Con la condición,10028,73915,572,0.02004
+10,"Durango",2020,Total,C,Alto,Con la condición,27,2716,17,0.03378
+10,"Durango",2020,Total,C,Bajo,Con la condición,168,13578,66,0.01907
+10,"Durango",2020,Total,Ninguno,Ninguno,Sin la condición,593736,1855181,13533,0.00561
+11,"Guanajuato",2010,Mujeres,Todos,Todos,Con la condición,1414,11053,90,0.04929
+11,"Guanajuato",2010,Mujeres,Todos,Todos,Sin la condición,55678,146848,1201,0.01960
+11,"Guanajuato",2010,Mujeres,A,Alto,Con la condición,316,4055,23,0.07829
+11,"Guanajuato",2010,Mujeres,A,Bajo,Con la condición,991,8110,58,0.06022
+11,"Guanajuato",2010,Mujeres,B,Alto,Con la condición,346,2659,21,0.10275
+11,"Guanajuato",2010,Mujeres,B,Bajo,Con la condición,845,5317,42,0.07897
+11,"Guanajuato",2010,Mujeres,C,Alto,Con la condición,2,155,3,0.08042
+11,"Guanajuato",2010,Mujeres,C,Bajo,Con la condición,64,775,6,0.15780
+11,"Guanajuato",2010,Mujeres,Ninguno,Ninguno,Sin la condición,52685,138953,1204,0.01958
+11,"Guanajuato",2010,Hombres,Todos,Todos,Con la condición,651,10493,83,0.03706
+11,"Guanajuato",2010,Hombres,Todos,Todos,Sin la condición,43672,139406,1105,0.01953
+11,"Guanajuato",2010,Hombres,A,Alto,Con la condición,47,3850,27,0.02949
+11,"Guanajuato",2010,Hombres,A,Bajo,Con la condición,434,7699,54,0.04394
+11,"Guanajuato",2010,Hombres,B,Alto,Con la condición,162,2524,19,0.07870
+11,"Guanajuato",2010,Hombres,B,Bajo,Con la condición,469,5048,26,0.07974
+11,"Guanajuato",2010,Hombres,C,Alto,Con la condición,1,147,3,0.08042
+11,"Guanajuato",2010,Hombres,C,Bajo,Con la condición,13,735,6,0.07442
+11,"Guanajuato",2010,Hombres,Ninguno,Ninguno,Sin la condición,41324,131911,1045,0.02009
+11,"Guanajuato",2010,Total,Todos,Todos,Con la condición,2064,21546,158,0.03278
+11,"Guanajuato",2010,Total,Todos,Todos,Sin la condición,99350,286254,2096,0.01456
+11,"Guanajuato",2010,Total,A,Alto,Con la condición,363,7905,67,0.03580
+11,"Guanajuato",2010,Total,A,Bajo,Con la condición,1425,15810,123,0.03615
+11,"Guanajuato",2010,Total,B,Alto,Con la condición,508,5183,37,0.06841
+11,"Guanajuato",2010,Total,B,Bajo,Con la condición,1314,10365,78,0.05275
+11,"Guanajuato",2010,Total,C,Alto,Con la condición,3,302,3,0.08042
+11,"Guanajuato",2010,Total,C,Bajo,Con la condición,77,1510,11,0.09291
+11,"Guanajuato",2010,Total,Ninguno,Ninguno,Sin la condición,94009,270864,1916,0.01523
+11,"Guanajuato",2020,Mujeres,Todos,Todos,Con la condición,1481,12411,84,0.04952
+11,"Guanajuato",2020,Mujeres,Todos,Todos,Sin la condición,61104,164882,1111,0.02029
+11,"Guanajuato",2020,Mujeres,A,Alto,Con la condición,316,4553,35,0.06016
+11,"Guanajuato",2020,Mujeres,A,Bajo,Con la condición,1035,9106,47,0.06482
+11,"Guanajuato",2020,Mujeres,B,Alto,Con la condición,363,2985,17,0.11092
+11,"Guanajuato",2020,Mujeres,B,Bajo,Con la condición,897,5970,43,0.07630
+11,"Guanajuato",2020,Mujeres,C,Alto,Con la condición,2,174,3,0.08042
+11,"Guanajuato",2020,Mujeres,C,Bajo,Con la condición,65,870,7,0.13901
+11,"Guanajuato",2020,Mujeres,Ninguno,Ninguno,Sin la condición,57819,156018,954,0.02189
+11,"Guanajuato",2020,Hombres,Todos,Todos,Con la condición,821,11781,85,0.03865
+11,"Guanajuato",2020,Hombres,Todos,Todos,Sin la condición,50230,156526,1131,0.01943
+11,"Guanajuato",2020,Hombres,A,Alto,Con la condición,85,4322,32,0.03445
+11,"Guanajuato",2020,Hombres,A,Bajo,Con la condición,553,8645,57,0.04538
+11,"Guanajuato",2020,Hombres,B,Alto,Con la condición,203,2834,19,0.08291
+11,"Guanajuato",2020,Hombres,B,Bajo,Con la condición,570,5668,36,0.07019
+11,"Guanajuato",2020,Hombres,C,Alto,Con la condición,2,165,3,0.08042
+11,"Guanajuato",2020,Hombres,C,Bajo,Con la condición,21,826,5,0.09753
+11,"Guanajuato",2020,Hombres,Ninguno,Ninguno,Sin la condición,47529,148110,835,0.02262
+11,"Guanajuato",2020,Total,Todos,Todos,Con la condición,2301,24192,150,0.03354
+11,"Guanajuato",2020,Total,Todos,Todos,Sin la condición,111334,321408,1989,0.01494
+11,"Guanajuato",2020,Total,A,Alto,Con la condición,402,8876,48,0.04200
+11,"Guanajuato",2020,Total,A,Bajo,Con la condición,1589,17751,128,0.03532
+11,"Guanajuato",2020,Total,B,Alto,Con la condición,566,5819,35,0.07012
+11,"Guanajuato",2020,Total,B,Bajo,Con la condición,1468,11638,100,0.04648
+11,"Guanajuato",2020,Total,C,Alto,Con la condición,3,339,3,0.08042
+11,"Guanajuato",2020,Total,C,Bajo,Con la condición,85,1696,14,0.08184
+11,"Guanajuato",2020,Total,Ninguno,Ninguno,Sin la condición,105348,304128,2044,0.01473
+12,"Guerrero",2010,Mujeres,Todos,Todos,Con la condición,3586,119537,775,0.00858
+12,"Guerrero",2010,Mujeres,Todos,Todos,Sin la condición,397239,1588137,10294,0.00598
+12,"Guerrero",2010,Mujeres,A,Alto,Con la condición,470,47024,265,0.00856
+12,"Guerrero",2010,Mujeres,A,Bajo,Con la condición,940,94048,530,0.00605
+12,"Guerrero",2010,Mujeres,B,Alto,Con la condición,1240,25287,159,0.02397
+12,"Guerrero",2010,Mujeres,B,Bajo,Con la condición,4283,50574,401,0.01947
+12,"Guerrero",2010,Mujeres,C,Alto,Con la condición,18,1828,12,0.04021
+12,"Guerrero",2010,Mujeres,C,Bajo,Con la condición,91,9139,48,0.02011
+12,"Guerrero",2010,Mujeres,Ninguno,Ninguno,Sin la condición,375882,1502753,11038,0.00577
+12,"Guerrero",2010,Hombres,Todos,Todos,Con la condición,3404,113479,738,0.00879
+12,"Guerrero",2010,Hombres,Todos,Todos,Sin la condición,321549,1507647,9806,0.00579
+12,"Guerrero",2010,Hombres,A,Alto,Con la condición,446,44641,363,0.00731
+12,"Guerrero",2010,Hombres,A,Bajo,Con la condición,893,89282,457,0.00652
+12,"Guerrero",2010,Hombres,B,Alto,Con la condición,1177,24006,198,0.02148
+12,"Guerrero",2010,Hombres,B,Bajo,Con la condición,4066,48011,226,0.02593
+12,"Guerrero",2010,Hombres,C,Alto,Con la condición,17,1735,10,0.04405
+12,"Guerrero",2010,Hombres,C,Bajo,Con la condición,87,8676,67,0.01702
+12,"Guerrero",2010,Hombres,Ninguno,Ninguno,Sin la condición,304261,1426591,10631,0.00556
+12,"Guerrero",2010,Total,Todos,Todos,Con la condición,6990,233016,1971,0.00538
+12,"Guerrero",2010,Total,Todos,Todos,Sin la condición,718788,3095784,26185,0.00365
+12,"Guerrero",2010,Total,A,Alto,Con la condición,917,91665,710,0.00523
+12,"Guerrero",2010,Total,A,Bajo,Con la condición,1833,183330,1020,0.00436
+12,"Guerrero",2010,Total,B,Alto,Con la condición,2417,49293,349,0.01618
+12,"Guerrero",2010,Total,B,Bajo,Con la condición,8350,98586,757,0.01417
+12,"Guerrero",2010,Total,C,Alto,Con la condición,36,3563,21,0.03040
+12,"Guerrero",2010,Total,C,Bajo,Con la condición,178,17815,123,0.01256
+12,"Guerrero",2010,Total,Ninguno,Ninguno,Sin la condición,680143,2929344,16671,0.00458
+12,"Guerrero",2020,Mujeres,Todos,Todos,Con la condición,6252,134217,641,0.01165
+12,"Guerrero",2020,Mujeres,Todos,Todos,Sin la condición,568896,1783172,8512,0.00707
+12,"Guerrero",2020,Mujeres,A,Alto,Con la condición,528,52799,376,0.00718
+12,"Guerrero",2020,Mujeres,A,Bajo,Con la condición,1056,105598,778,0.00499
+12,"Guerrero",2020,Mujeres,B,Alto,Con la condición,1863,28393,239,0.02242
+12,"Guerrero",2020,Mujeres,B,Bajo,Con la condición,5751,56785,287,0.02493
+12,"Guerrero",2020,Mujeres,C,Alto,Con la condición,21,2052,14,0.03723
+12,"Guerrero",2020,Mujeres,C,Bajo,Con la condición,103,10261,75,0.01608
+12,"Guerrero",2020,Mujeres,Ninguno,Ninguno,Sin la condición,538310,1687302,13655,0.00558
+12,"Guerrero",2020,Hombres,Todos,Todos,Con la condición,3822,127415,1028,0.00745
+12,"Guerrero",2020,Hombres,Todos,Todos,Sin la condición,495148,1692796,13661,0.00545
+12,"Guerrero",2020,Hombres,A,Alto,Con la condición,501,50123,240,0.00899
+12,"Guerrero",2020,Hombres,A,Bajo,Con la condición,1002,100246,518,0.00612
+12,"Guerrero",2020,Hombres,B,Alto,Con la condición,1321,26954,200,0.02137
+12,"Guerrero",2020,Hombres,B,Bajo,Con la condición,4566,53907,266,0.02390
+12,"Guerrero",2020,Hombres,C,Alto,Con la condición,19,1948,11,0.04200
+12,"Guerrero",2020,Hombres,C,Bajo,Con la condición,97,9741,83,0.01529
+12,"Guerrero",2020,Hombres,Ninguno,Ninguno,Sin la condición,468527,1601786,7733,0.00724
+12,"Guerrero",2020,Total,Todos,Todos,Con la condición,8806,261632,1889,0.00581
+12,"Guerrero",2020,Total,Todos,Todos,Sin la condición,1064044,3475968,25100,0.00407
+12,"Guerrero",2020,Total,A,Alto,Con la condición,1029,102922,525,0.00608
+12,"Guerrero",2020,Total,A,Bajo,Con la condición,2058,205845,1380,0.00375
+12,"Guerrero",2020,Total,B,Alto,Con la condición,2916,55346,307,0.01785
+12,"Guerrero",2020,Total,B,Bajo,Con la condición,9780,110693,669,0.01536
+12,"Guerrero",2020,Total,C,Alto,Con la condición,40,4001,29,0.02587
+12,"Guerrero",2020,Total,C,Bajo,Con la condición,200,20003,97,0.01414
+12,"Guerrero",2020,Total,Ninguno,Ninguno,Sin la condición,1006837,3289088,21285,0.00442
+13,"Hidalgo",2010,Mujeres,Todos,Todos,Con la condición,10651,37540,223,0.04226
+13,"Hidalgo",2010,Mujeres,Todos,Todos,Sin la condición,257081,498740,2962,0.01286
+13,"Hidalgo",2010,Mujeres,A,Alto,Con la condición,3189,15507,96,0.05775
+13,"Hidalgo",2010,Mujeres,A,Bajo,Con la condición,8331,31014,240,0.04006
+13,"Hidalgo",2010,Mujeres,B,Alto,Con la condición,2160,7006,57,0.08564
+13,"Hidalgo",2010,Mujeres,B,Bajo,Con la condición,4540,14012,79,0.07372
+13,"Hidalgo",2010,Mujeres,C,Alto,Con la condición,85,622,4,0.24035
+13,"Hidalgo",2010,Mujeres,C,Bajo,Con la condición,651,3109,17,0.13818
+13,"Hidalgo",2010,Mujeres,Ninguno,Ninguno,Sin la condición,243260,471926,3959,0.01112
+13,"Hidalgo",2010,Hombres,Todos,Todos,Con la condición,9121,35637,168,0.04714
+13,"Hidalgo",2010,Hombres,Todos,Todos,Sin la condición,230892,473463,2238,0.01479
+13,"Hidalgo",2010,Hombres,A,Alto,Con la condición,2618,14721,96,0.05463
+13,"Hidalgo",2010,Hombres,A,Bajo,Con la condición,7091,29442,202,0.04212
+13,"Hidalgo",2010,Hombres,B,Alto,Con la condición,1866,6651,56,0.08405
+13,"Hidalgo",2010,Hombres,B,Bajo,Con la condición,3940,13302,66,0.07868
+13,"Hidalgo",2010,Hombres,C,Alto,Con la condición,64,590,4,0.21792
+13,"Hidalgo",2010,Hombres,C,Bajo,Con la condición,536,2951,16,0.13496
+13,"Hidalgo",2010,Hombres,Ninguno,Ninguno,Sin la condición,218478,448008,2704,0.01346
+13,"Hidalgo",2010,Total,Todos,Todos,Con la condición,19772,73177,605,0.02528
+13,"Hidalgo",2010,Total,Todos,Todos,Sin la condición,487973,972203,8042,0.00781
+13,"Hidalgo",2010,Total,A,Alto,Con la condición,5806,30228,213,0.03779
+13,"Hidalgo",2010,Total,A,Bajo,Con la condición,15422,60456,286,0.03609
+13,"Hidalgo",2010,Total,B,Alto,Con la condición,4027,13657,83,0.07007
+13,"Hidalgo",2010,Total,B,Bajo,Con la condición,8481,27313,165,0.05043
+13,"Hidalgo",2010,Total,C,Alto,Con la condición,149,1212,10,0.14541
+13,"Hidalgo",2010,Total,C,Bajo,Con la condición,1188,6060,42,0.08575
+13,"Hidalgo",2010,Total,Ninguno,Ninguno,Sin la condición,461738,919934,6785,0.00850
+13,"Hidalgo",2020,Mujeres,Todos,Todos,Con la condición,9008,42150,327,0.03174
+13,"Hidalgo",2020,Mujeres,Todos,Todos,Sin la condición,249442,559989,4347,0.01055
+13,"Hidalgo",2020,Mujeres,A,Alto,Con la condición,2361,17411,107,0.04634
+13,"Hidalgo",2020,Mujeres,A,Bajo,Con la condición,6916,34823,230,0.03683
+13,"Hidalgo",2020,Mujeres,B,Alto,Con la condición,1875,7866,47,0.08701
+13,"Hidalgo",2020,Mujeres,B,Bajo,Con la condición,3996,15732,110,0.05811
+13,"Hidalgo",2020,Mujeres,C,Alto,Con la condición,46,698,5,0.15602
+13,"Hidalgo",2020,Mujeres,C,Bajo,Con la condición,487,3491,27,0.09335
+13,"Hidalgo",2020,Mujeres,Ninguno,Ninguno,Sin la condición,236031,529882,3028,0.01265
+13,"Hidalgo",2020,Hombres,Todos,Todos,Con la condición,6969,40013,248,0.03371
+13,"Hidalgo",2020,Hombres,Todos,Todos,Sin la condición,215772,531608,3293,0.01198
+13,"Hidalgo",2020,Hombres,A,Alto,Con la condición,1588,16529,100,0.04125
+13,"Hidalgo",2020,Hombres,A,Bajo,Con la condición,5258,33058,214,0.03500
+13,"Hidalgo",2020,Hombres,B,Alto,Con la condición,1485,7468,63,0.07039
+13,"Hidalgo",2020,Hombres,B,Bajo,Con la condición,3203,14935,81,0.06385
+13,"Hidalgo",2020,Hombres,C,Alto,Con la condición,18,663,5,0.10141
+13,"Hidalgo",2020,Hombres,C,Bajo,Con la condición,331,3314,24,0.08571
+13,"Hidalgo",2020,Hombres,Ninguno,Ninguno,Sin la condición,204171,503026,3529,0.01157
+13,"Hidalgo",2020,Total,Todos,Todos,Con la condición,15976,82163,407,0.02746
+13,"Hidalgo",2020,Total,Todos,Todos,Sin la condición,465214,1091597,5413,0.00941
+13,"Hidalgo",2020,Total,A,Alto,Con la condición,3948,33940,264,0.02763
+13,"Hidalgo",2020,Total,A,Bajo,Con la condición,12175,67881,421,0.02618
+13,"Hidalgo",2020,Total,B,Alto,Con la condición,3359,15334,75,0.06687
+13,"Hidalgo",2020,Total,B,Bajo,Con la condición,7199,30668,165,0.04619
+13,"Hidalgo",2020,Total,C,Alto,Con la condición,64,1361,9,0.09902
+13,"Hidalgo",2020,Total,C,Bajo,Con la condición,818,6804,59,0.05928
+13,"Hidalgo",2020,Total,Ninguno,Ninguno,Sin la condición,440202,1032909,8002,0.00774
+14,"Jalisco",2010,Mujeres,Todos,Todos,Con la condición,16303,62430,292,0.03599
+14,"Jalisco",2010,Mujeres,Todos,Todos,Sin la condición,434577,829421,3875,0.01123
+14,"Jalisco",2010,Mujeres,A,Alto,Con la condición,4471,22413,144,0.04662
+14,"Jalisco",2010,Mujeres,A,Bajo,Con la condición,10988,44826,334,0.03295
+14,"Jalisco",2010,Mujeres,B,Alto,Con la condición,3523,12174,101,0.06317
+14,"Jalisco",2010,Mujeres,B,Bajo,Con la condición,7704,24348,174,0.04936
+14,"Jalisco",2010,Mujeres,C,Alto,Con la condición,102,872,5,0.20163
+14,"Jalisco",2010,Mujeres,C,Bajo,Con la condición,866,4360,35,0.09441
+14,"Jalisco",2010,Mujeres,Ninguno,Ninguno,Sin la condición,411213,784829,5240,0.00966
+14,"Jalisco",2010,Hombres,Todos,Todos,Con la condición,11712,59266,431,0.02685
+14,"Jalisco",2010,Hombres,Todos,Todos,Sin la condición,362537,787385,5720,0.00923
+14,"Jalisco",2010,Hombres,A,Alto,Con la condición,2893,21277,155,0.03854
+14,"Jalisco",2010,Hombres,A,Bajo,Con la condición,7728,42554,217,0.03664
+14,"Jalisco",2010,Hombres,B,Alto,Con la condición,2610,11557,96,0.05975
+14,"Jalisco",2010,Hombres,B,Bajo,Con la condición,5846,23114,194,0.04369
+14,"Jalisco",2010,Hombres,C,Alto,Con la condición,45,828,6,0.12918
+14,"Jalisco",2010,Hombres,C,Bajo,Con la condición,559,4139,31,0.08595
+14,"Jalisco",2010,Hombres,Ninguno,Ninguno,Sin la condición,343046,745052,4872,0.01000
+14,"Jalisco",2010,Total,Todos,Todos,Con la condición,28016,121695,609,0.02388
+14,"Jalisco",2010,Total,Todos,Todos,Sin la condición,797114,1616806,8094,0.00778
+14,"Jalisco",2010,Total,A,Alto,Con la condición,7364,43690,224,0.03502
+14,"Jalisco",2010,Total,A,Bajo,Con la condición,18716,87381,445,0.02723
+14,"Jalisco",2010,Total,B,Alto,Con la condición,6133,23731,171,0.04687
+14,"Jalisco",2010,Total,B,Bajo,Con la condición,13550,47461,361,0.03328
+14,"Jalisco",2010,Total,C,Alto,Con la condición,147,1700,15,0.10166
+14,"Jalisco",2010,Total,C,Bajo,Con la condición,1425,8499,68,0.06342
+14,"Jalisco",2010,Total,Ninguno,Ninguno,Sin la condición,754259,1529881,10480,0.00684
+14,"Jalisco",2020,Mujeres,Todos,Todos,Con la condición,21147,70096,520,0.02818
+14,"Jalisco",2020,Mujeres,Todos,Todos,Sin la condición,525704,931280,6906,0.00835
+14,"Jalisco",2020,Mujeres,A,Alto,Con la condición,6041,25166,154,0.04818
+14,"Jalisco",2020,Mujeres,A,Bajo,Con la condición,14378,50331,347,0.03395
+14,"Jalisco",2020,Mujeres,B,Alto,Con la condición,4509,13669,85,0.07140
+14,"Jalisco",2020,Mujeres,B,Bajo,Con la condición,9759,27338,155,0.05388
+14,"Jalisco",2020,Mujeres,C,Alto,Con la condición,155,979,5,0.22840
+14,"Jalisco",2020,Mujeres,C,Bajo,Con la condición,1171,4895,35,0.10094
+14,"Jalisco",2020,Mujeres,Ninguno,Ninguno,Sin la condición,497440,881211,6192,0.00882
+14,"Jalisco",2020,Hombres,Todos,Todos,Con la condición,16133,66544,414,0.02949
+14,"Jalisco",2020,Hombres,Todos,Todos,Sin la condición,446685,884080,5497,0.00944
+14,"Jalisco",2020,Hombres,A,Alto,Con la condición,4319,23890,172,0.04108
+14,"Jalisco",2020,Hombres,A,Bajo,Con la condición,10818,47780,364,0.03071
+14,"Jalisco",2020,Hombres,B,Alto,Con la condición,3512,12976,78,0.07043
+14,"Jalisco",2020,Hombres,B,Bajo,Con la condición,7727,25952,199,0.04538
+14,"Jalisco",2020,Hombres,C,Alto,Con la condición,92,929,6,0.17056
+14,"Jalisco",2020,Hombres,C,Bajo,Con la condición,836,4647,34,0.09222
+14,"Jalisco",2020,Hombres,Ninguno,Ninguno,Sin la condición,422670,836549,5988,0.00905
+14,"Jalisco",2020,Total,Todos,Todos,Con la condición,37281,136640,997,0.01975
+14,"Jalisco",2020,Total,Todos,Todos,Sin la condición,972389,1815360,13247,0.00607
+14,"Jalisco",2020,Total,A,Alto,Con la condición,10360,49056,276,0.03439
+14,"Jalisco",2020,Total,A,Bajo,Con la condición,25196,98111,523,0.02674
+14,"Jalisco",2020,Total,B,Alto,Con la condición,8022,26645,146,0.05315
+14,"Jalisco",2020,Total,B,Bajo,Con la condición,17485,53290,273,0.03978
+14,"Jalisco",2020,Total,C,Alto,Con la condición,247,1908,13,0.13025
+14,"Jalisco",2020,Total,C,Bajo,Con la condición,2007,9542,59,0.07428
+14,"Jalisco",2020,Total,Ninguno,Ninguno,Sin la condición,920110,1717760,13154,0.00609
+15,"Estado de México",2010,Mujeres,Todos,Todos,Con la condición,5502,169849,1403,0.00662
+15,"Estado de México",2010,Mujeres,Todos,Todos,Sin la condición,626141,2256569,18634,0.00459
+15,"Estado de México",2010,Mujeres,A,Alto,Con la condición,593,59316,425,0.00676
+15,"Estado de México",2010,Mujeres,A,Bajo,Con la condición,1406,118632,555,0.00643
+15,"Estado de México",2010,Mujeres,B,Alto,Con la condición,2262,39056,315,0.01842
+15,"Estado de México",2010,Mujeres,B,Bajo,Con la condición,7191,78112,580,0.01681
+15,"Estado de México",2010,Mujeres,C,Alto,Con la condición,34,3402,23,0.02905
+15,"Estado de México",2010,Mujeres,C,Bajo,Con la condición,170,17009,127,0.01236
+15,"Estado de México",2010,Mujeres,Ninguno,Ninguno,Sin la condición,592477,2135248,11388,0.00587
+15,"Estado de México",2010,Hombres,Todos,Todos,Con la condición,4837,161241,861,0.00814
+15,"Estado de México",2010,Hombres,Todos,Todos,Sin la condición,510421,2142201,11435,0.00558
+15,"Estado de México",2010,Hombres,A,Alto,Con la condición,563,56310,300,0.00804
+15,"Estado de México",2010,Hombres,A,Bajo,Con la condición,1126,112620,663,0.00541
+15,"Estado de México",2010,Hombres,B,Alto,Con la condición,2058,37077,273,0.01940
+15,"Estado de México",2010,Hombres,B,Bajo,Con la condición,6649,74153,533,0.01733
+15,"Estado de México",2010,Hombres,C,Alto,Con la condición,32,3229,16,0.03482
+15,"Estado de México",2010,Hombres,C,Bajo,Con la condición,161,16147,126,0.01241
+15,"Estado de México",2010,Hombres,Ninguno,Ninguno,Sin la condición,482979,2027029,9573,0.00610
+15,"Estado de México",2010,Total,Todos,Todos,Con la condición,9933,331090,2538,0.00474
+15,"Estado de México",2010,Total,Todos,Todos,Sin la condición,1136561,4398770,33717,0.00334
+15,"Estado de México",2010,Total,A,Alto,Con la condición,1156,115626,732,0.00515
+15,"Estado de México",2010,Total,A,Bajo,Con la condición,2313,231252,1776,0.00331
+15,"Estado de México",2010,Total,B,Alto,Con la condición,4227,76133,608,0.01300
+15,"Estado de México",2010,Total,B,Bajo,Con la condición,13653,152266,1302,0.01109
+15,"Estado de México",2010,Total,C,Alto,Con la condición,66,6631,50,0.01970
+15,"Estado de México",2010,Total,C,Bajo,Con la condición,332,33156,266,0.00854
+15,"Estado de México",2010,Total,Ninguno,Ninguno,Sin la condición,1075456,4162277,31195,0.00347
+15,"Estado de México",2020,Mujeres,Todos,Todos,Con la condición,30087,190708,1200,0.01473
+15,"Estado de México",2020,Mujeres,Todos,Todos,Sin la condición,1020690,2533691,15947,0.00544
+15,"Estado de México",2020,Mujeres,A,Alto,Con la condición,5383,66601,312,0.02160
+15,"Estado de México",2020,Mujeres,A,Bajo,Con la condición,18278,133201,692,0.01831
+15,"Estado de México",2020,Mujeres,B,Alto,Con la condición,8037,43852,379,0.02782
+15,"Estado de México",2020,Mujeres,B,Bajo,Con la condición,19070,87705,414,0.02838
+15,"Estado de México",2020,Mujeres,C,Alto,Con la condición,104,3820,32,0.04023
+15,"Estado de México",2020,Mujeres,C,Bajo,Con la condición,2155,19098,131,0.03870
+15,"Estado de México",2020,Mujeres,Ninguno,Ninguno,Sin la condición,965814,2397471,20650,0.00478
+15,"Estado de México",2020,Hombres,Todos,Todos,Con la condición,19812,181042,1315,0.01205
+15,"Estado de México",2020,Hombres,Todos,Todos,Sin la condición,852704,2405279,17466,0.00507
+15,"Estado de México",2020,Hombres,A,Alto,Con la condición,2055,63225,486,0.01126
+15,"Estado de México",2020,Hombres,A,Bajo,Con la condición,11240,126450,748,0.01457
+15,"Estado de México",2020,Hombres,B,Alto,Con la condición,5618,41630,212,0.03285
+15,"Estado de México",2020,Hombres,B,Bajo,Con la condición,14079,83260,627,0.02096
+15,"Estado de México",2020,Hombres,C,Alto,Con la condición,36,3626,18,0.03283
+15,"Estado de México",2020,Hombres,C,Bajo,Con la condición,1169,18130,141,0.02896
+15,"Estado de México",2020,Hombres,Ninguno,Ninguno,Sin la condición,806859,2275962,12559,0.00598
+15,"Estado de México",2020,Total,Todos,Todos,Con la condición,49900,371750,3152,0.00850
+15,"Estado de México",2020,Total,Todos,Todos,Sin la condición,1873393,4938970,41874,0.00332
+15,"Estado de México",2020,Total,A,Alto,Con la condición,7438,129826,754,0.01185
+15,"Estado de México",2020,Total,A,Bajo,Con la condición,29518,259652,1326,0.01220
+15,"Estado de México",2020,Total,B,Alto,Con la condición,13655,85482,685,0.01960
+15,"Estado de México",2020,Total,B,Bajo,Con la condición,33149,170965,1228,0.01579
+15,"Estado de México",2020,Total,C,Alto,Con la condición,74,7446,40,0.02202
+15,"Estado de México",2020,Total,C,Bajo,Con la condición,3324,37228,188,0.02912
+15,"Estado de México",2020,Total,Ninguno,Ninguno,Sin la condición,1772673,4673434,28709,0.00401
+16,"Michoacán",2010,Mujeres,Todos,Todos,Con la condición,2599,86624,618,0.00961
+16,"Michoacán",2010,Mujeres,Todos,Todos,Sin la condición,269673,1150855,8209,0.00655
+16,"Michoacán",2010,Mujeres,A,Alto,Con la condición,325,32547,186,0.01021
+16,"Michoacán",2010,Mujeres,A,Bajo,Con la condición,1553,65094,486,0.00969
+16,"Michoacán",2010,Mujeres,B,Alto,Con la condición,1141,17407,102,0.03431
+16,"Michoacán",2010,Mujeres,B,Bajo,Con la condición,3399,34814,171,0.03178
+16,"Michoacán",2010,Mujeres,C,Alto,Con la condición,13,1251,8,0.04925
+16,"Michoacán",2010,Mujeres,C,Bajo,Con la condición,63,6256,37,0.02290
+16,"Michoacán",2010,Mujeres,Ninguno,Ninguno,Sin la condición,255175,1088982,5369,0.00809
+16,"Michoacán",2010,Hombres,Todos,Todos,Con la condición,2467,82233,588,0.00985
+16,"Michoacán",2010,Hombres,Todos,Todos,Sin la condición,197191,1092528,7814,0.00609
+16,"Michoacán",2010,Hombres,A,Alto,Con la condición,309,30897,258,0.00867
+16,"Michoacán",2010,Hombres,A,Bajo,Con la condición,1474,61795,377,0.01100
+16,"Michoacán",2010,Hombres,B,Alto,Con la condición,1083,16525,79,0.03898
+16,"Michoacán",2010,Hombres,B,Bajo,Con la condición,3227,33049,242,0.02671
+16,"Michoacán",2010,Hombres,C,Alto,Con la condición,12,1188,7,0.05265
+16,"Michoacán",2010,Hombres,C,Bajo,Con la condición,59,5939,37,0.02290
+16,"Michoacán",2010,Hombres,Ninguno,Ninguno,Sin la condición,186589,1033790,8433,0.00586
+16,"Michoacán",2010,Total,Todos,Todos,Con la condición,5066,168857,927,0.00784
+16,"Michoacán",2010,Total,Todos,Todos,Sin la condición,466864,2243383,12310,0.00512
+16,"Michoacán",2010,Total,A,Alto,Con la condición,634,63444,520,0.00611
+16,"Michoacán",2010,Total,A,Bajo,Con la condición,3027,126889,689,0.00814
+16,"Michoacán",2010,Total,B,Alto,Con la condición,2224,33932,177,0.02604
+16,"Michoacán",2010,Total,B,Bajo,Con la condición,6626,67863,438,0.01986
+16,"Michoacán",2010,Total,C,Alto,Con la condición,24,2439,16,0.03482
+16,"Michoacán",2010,Total,C,Bajo,Con la condición,122,12194,89,0.01477
+16,"Michoacán",2010,Total,Ninguno,Ninguno,Sin la condición,441764,2122771,10800,0.00547
+16,"Michoacán",2020,Mujeres,Todos,Todos,Con la condición,2918,97262,719,0.00891
+16,"Michoacán",2020,Mujeres,Todos,Todos,Sin la condición,264047,1292189,9557,0.00577
+16,"Michoacán",2020,Mujeres,A,Alto,Con la condición,365,36544,275,0.00840
+16,"Michoacán",2020,Mujeres,A,Bajo,Con la condición,1743,73088,505,0.00951
+16,"Michoacán",2020,Mujeres,B,Alto,Con la condición,1281,19545,134,0.02993
+16,"Michoacán",2020,Mujeres,B,Bajo,Con la condición,3817,39089,281,0.02479
+16,"Michoacán",2020,Mujeres,C,Alto,Con la condición,14,1405,11,0.04200
+16,"Michoacán",2020,Mujeres,C,Bajo,Con la condición,70,7024,56,0.01861
+16,"Michoacán",2020,Mujeres,Ninguno,Ninguno,Sin la condición,249850,1222716,10355,0.00555
+16,"Michoacán",2020,Hombres,Todos,Todos,Con la condición,2770,92332,446,0.01131
+16,"Michoacán",2020,Hombres,Todos,Todos,Sin la condición,194149,1226698,5929,0.00664
+16,"Michoacán",2020,Hombres,A,Alto,Con la condición,347,34692,185,0.01024
+16,"Michoacán",2020,Hombres,A,Bajo,Con la condición,1655,69384,558,0.00904
+16,"Michoacán",2020,Hombres,B,Alto,Con la condición,1216,18554,98,0.03500
+16,"Michoacán",2020,Hombres,B,Bajo,Con la condición,3623,37108,278,0.02492
+16,"Michoacán",2020,Hombres,C,Alto,Con la condición,13,1334,7,0.05265
+16,"Michoacán",2020,Hombres,C,Bajo,Con la condición,67,6668,41,0.02175
+16,"Michoacán",2020,Hombres,Ninguno,Ninguno,Sin la condición,183711,1160746,7158,0.00604
+16,"Michoacán",2020,Total,Todos,Todos,Con la condición,5688,189594,1068,0.00731
+16,"Michoacán",2020,Total,Todos,Todos,Sin la condición,458196,2518886,14187,0.00453
+16,"Michoacán",2020,Total,A,Alto,Con la condición,712,71236,524,0.00609
+16,"Michoacán",2020,Total,A,Bajo,Con la condición,3398,142471,695,0.00810
+16,"Michoacán",2020,Total,B,Alto,Con la condición,2497,38099,286,0.02049
+16,"Michoacán",2020,Total,B,Bajo,Con la condición,7440,76197,570,0.01741
+16,"Michoacán",2020,Total,C,Alto,Con la condición,27,2738,17,0.03378
+16,"Michoacán",2020,Total,C,Bajo,Con la condición,137,13692,109,0.01334
+16,"Michoacán",2020,Total,Ninguno,Ninguno,Sin la condición,433561,2383462,16885,0.00416
+17,"Morelos",2010,Mujeres,Todos,Todos,Con la condición,2230,74342,437,0.01142
+17,"Morelos",2010,Mujeres,Todos,Todos,Sin la condición,290007,987691,5808,0.00837
+17,"Morelos",2010,Mujeres,A,Alto,Con la condición,294,29397,197,0.00992
+17,"Morelos",2010,Mujeres,A,Bajo,Con la condición,588,58794,409,0.00689
+17,"Morelos",2010,Mujeres,B,Alto,Con la condición,876,13087,66,0.04307
+17,"Morelos",2010,Mujeres,B,Bajo,Con la condición,2462,26173,226,0.02718
+17,"Morelos",2010,Mujeres,C,Alto,Con la condición,12,1168,8,0.04925
+17,"Morelos",2010,Mujeres,C,Bajo,Con la condición,58,5842,40,0.02202
+17,"Morelos",2010,Mujeres,Ninguno,Ninguno,Sin la condición,274415,934589,5015,0.00900
+17,"Morelos",2010,Hombres,Todos,Todos,Con la condición,2117,70574,365,0.01250
+17,"Morelos",2010,Hombres,Todos,Todos,Sin la condición,230508,937633,4854,0.00865
+17,"Morelos",2010,Hombres,A,Alto,Con la condición,279,27907,234,0.00911
+17,"Morelos",2010,Hombres,A,Bajo,Con la condición,558,55814,265,0.00856
+17,"Morelos",2010,Hombres,B,Alto,Con la condición,832,12423,100,0.03499
+17,"Morelos",2010,Hombres,B,Bajo,Con la condición,2337,24847,212,0.02807
+17,"Morelos",2010,Hombres,C,Alto,Con la condición,11,1109,6,0.05687
+17,"Morelos",2010,Hombres,C,Bajo,Con la condición,55,5545,45,0.02077
+17,"Morelos",2010,Hombres,Ninguno,Ninguno,Sin la condición,218115,887222,5413,0.00819
+17,"Morelos",2010,Total,Todos,Todos,Con la condición,4348,144917,1248,0.00676
+17,"Morelos",2010,Total,Todos,Todos,Sin la condición,520515,1925323,16577,0.00483
+17,"Morelos",2010,Total,A,Alto,Con la condición,573,57304,489,0.00630
+17,"Morelos",2010,Total,A,Bajo,Con la condición,1146,114608,703,0.00525
+17,"Morelos",2010,Total,B,Alto,Con la condición,1708,25510,127,0.03105
+17,"Morelos",2010,Total,B,Bajo,Con la condición,4799,51020,279,0.02447
+17,"Morelos",2010,Total,C,Alto,Con la condición,23,2277,15,0.03597
+17,"Morelos",2010,Total,C,Bajo,Con la condición,114,11387,82,0.01538
+17,"Morelos",2010,Total,Ninguno,Ninguno,Sin la condición,492530,1821811,15159,0.00505
+17,"Morelos",2020,Mujeres,Todos,Todos,Con la condición,2504,83472,633,0.00949
+17,"Morelos",2020,Mujeres,Todos,Todos,Sin la condición,243824,1108986,8416,0.00632
+17,"Morelos",2020,Mujeres,A,Alto,Con la condición,330,33007,172,0.01062
+17,"Morelos",2020,Mujeres,A,Bajo,Con la condición,660,66014,345,0.00750
+17,"Morelos",2020,Mujeres,B,Alto,Con la condición,984,14694,86,0.03773
+17,"Morelos",2020,Mujeres,B,Bajo,Con la condición,2764,29387,221,0.02749
+17,"Morelos",2020,Mujeres,C,Alto,Con la condición,13,1312,8,0.04925
+17,"Morelos",2020,Mujeres,C,Bajo,Con la condición,66,6559,32,0.02462
+17,"Morelos",2020,Mujeres,Ninguno,Ninguno,Sin la condición,230715,1049363,7909,0.00652
+17,"Morelos",2020,Hombres,Todos,Todos,Con la condición,2377,79242,517,0.01050
+17,"Morelos",2020,Hombres,Todos,Todos,Sin la condición,168529,1052780,6874,0.00619
+17,"Morelos",2020,Hombres,A,Alto,Con la condición,313,31334,242,0.00895
+17,"Morelos",2020,Hombres,A,Bajo,Con la condición,627,62669,295,0.00811
+17,"Morelos",2020,Hombres,B,Alto,Con la condición,934,13949,109,0.03351
+17,"Morelos",2020,Hombres,B,Bajo,Con la condición,2624,27898,231,0.02689
+17,"Morelos",2020,Hombres,C,Alto,Con la condición,12,1245,7,0.05265
+17,"Morelos",2020,Hombres,C,Bajo,Con la condición,62,6226,46,0.02054
+17,"Morelos",2020,Hombres,Ninguno,Ninguno,Sin la condición,159468,996179,4707,0.00748
+17,"Morelos",2020,Total,Todos,Todos,Con la condición,4881,162714,951,0.00774
+17,"Morelos",2020,Total,Todos,Todos,Sin la condición,412353,2161766,12640,0.00489
+17,"Morelos",2020,Total,A,Alto,Con la condición,643,64342,462,0.00648
+17,"Morelos",2020,Total,A,Bajo,Con la condición,1287,128683,643,0.00549
+17,"Morelos",2020,Total,B,Alto,Con la condición,1918,28643,187,0.02559
+17,"Morelos",2020,Total,B,Bajo,Con la condición,5388,57285,407,0.02026
+17,"Morelos",2020,Total,C,Alto,Con la condición,26,2557,14,0.03723
+17,"Morelos",2020,Total,C,Bajo,Con la condición,128,12785,81,0.01548
+17,"Morelos",2020,Total,Ninguno,Ninguno,Sin la condición,390184,2045542,15425,0.00443
+18,"Nayarit",2010,Mujeres,Todos,Todos,Con la condición,19413,44581,216,0.04723
+18,"Nayarit",2010,Mujeres,Todos,Todos,Sin la condición,409910,592288,2872,0.01206
+18,"Nayarit",2010,Mujeres,A,Alto,Con la condición,5624,15218,89,0.07163
+18,"Nayarit",2010,Mujeres,A,Bajo,Con la condición,12791,30436,148,0.05680
+18,"Nayarit",2010,Mujeres,B,Alto,Con la condición,3831,8221,64,0.08730
+18,"Nayarit",2010,Mujeres,B,Bajo,Con la condición,8230,16442,92,0.07298
+18,"Nayarit",2010,Mujeres,C,Alto,Con la condición,249,891,4,0.31401
+18,"Nayarit",2010,Mujeres,C,Bajo,Con la condición,1759,4453,30,0.12496
+18,"Nayarit",2010,Mujeres,Ninguno,Ninguno,Sin la condición,387872,560445,2974,0.01185
+18,"Nayarit",2010,Hombres,Todos,Todos,Con la condición,17996,42321,319,0.03875
+18,"Nayarit",2010,Hombres,Todos,Todos,Sin la condición,383382,562270,4233,0.01002
+18,"Nayarit",2010,Hombres,A,Alto,Con la condición,5192,14447,92,0.07003
+18,"Nayarit",2010,Hombres,A,Bajo,Con la condición,11847,28893,196,0.04918
+18,"Nayarit",2010,Hombres,B,Alto,Con la condición,3557,7804,60,0.09002
+18,"Nayarit",2010,Hombres,B,Bajo,Con la condición,7653,15609,109,0.06704
+18,"Nayarit",2010,Hombres,C,Alto,Con la condición,227,845,6,0.25343
+18,"Nayarit",2010,Hombres,C,Bajo,Con la condición,1627,4227,22,0.14523
+18,"Nayarit",2010,Hombres,Ninguno,Ninguno,Sin la condición,362770,532040,3306,0.01134
+18,"Nayarit",2010,Total,Todos,Todos,Con la condición,37409,86902,729,0.02567
+18,"Nayarit",2010,Total,Todos,Todos,Sin la condición,793292,1154558,9680,0.00660
+18,"Nayarit",2010,Total,A,Alto,Con la condición,10816,29665,157,0.05378
+18,"Nayarit",2010,Total,A,Bajo,Con la condición,24639,59329,484,0.03136
+18,"Nayarit",2010,Total,B,Alto,Con la condición,7389,16025,131,0.06097
+18,"Nayarit",2010,Total,B,Bajo,Con la condición,15883,32051,179,0.05232
+18,"Nayarit",2010,Total,C,Alto,Con la condición,476,1736,10,0.19750
+18,"Nayarit",2010,Total,C,Bajo,Con la condición,3387,8680,75,0.07885
+18,"Nayarit",2010,Total,Ninguno,Ninguno,Sin la condición,750642,1092485,7195,0.00765
+18,"Nayarit",2020,Mujeres,Todos,Todos,Con la condición,22749,50056,288,0.04108
+18,"Nayarit",2020,Mujeres,Todos,Todos,Sin la condición,472900,665025,3824,0.01026
+18,"Nayarit",2020,Mujeres,A,Alto,Con la condición,6640,17087,80,0.07630
+18,"Nayarit",2020,Mujeres,A,Bajo,Con la condición,15012,34174,219,0.04695
+18,"Nayarit",2020,Mujeres,B,Alto,Con la condición,4478,9231,47,0.10206
+18,"Nayarit",2020,Mujeres,B,Bajo,Con la condición,9592,18461,141,0.05891
+18,"Nayarit",2020,Mujeres,C,Alto,Con la condición,298,1000,6,0.26146
+18,"Nayarit",2020,Mujeres,C,Bajo,Con la condición,2071,5000,33,0.12004
+18,"Nayarit",2020,Mujeres,Ninguno,Ninguno,Sin la condición,447475,629271,5415,0.00862
+18,"Nayarit",2020,Hombres,Todos,Todos,Con la condición,18487,47519,312,0.03864
+18,"Nayarit",2020,Hombres,Todos,Todos,Sin la condición,407629,631320,4145,0.01040
+18,"Nayarit",2020,Hombres,A,Alto,Con la condición,5242,16221,102,0.06483
+18,"Nayarit",2020,Hombres,A,Bajo,Con la condición,12129,32442,163,0.05306
+18,"Nayarit",2020,Hombres,B,Alto,Con la condición,3677,8763,44,0.10416
+18,"Nayarit",2020,Hombres,B,Bajo,Con la condición,7959,17525,119,0.06390
+18,"Nayarit",2020,Hombres,C,Alto,Con la condición,221,949,5,0.26459
+18,"Nayarit",2020,Hombres,C,Bajo,Con la condición,1655,4746,27,0.12840
+18,"Nayarit",2020,Hombres,Ninguno,Ninguno,Sin la condición,385714,597378,4935,0.00953
+18,"Nayarit",2020,Total,Todos,Todos,Con la condición,41236,97574,570,0.02897
+18,"Nayarit",2020,Total,Todos,Todos,Sin la condición,880529,1296346,7574,0.00751
+18,"Nayarit",2020,Total,A,Alto,Con la condición,11883,33308,204,0.04696
+18,"Nayarit",2020,Total,A,Bajo,Con la condición,27141,66615,361,0.03621
+18,"Nayarit",2020,Total,B,Alto,Con la condición,8155,17993,146,0.05768
+18,"Nayarit",2020,Total,B,Bajo,Con la condición,17551,35987,263,0.04315
+18,"Nayarit",2020,Total,C,Alto,Con la condición,519,1949,11,0.18659
+18,"Nayarit",2020,Total,C,Bajo,Con la condición,3726,9746,77,0.07753
+18,"Nayarit",2020,Total,Ninguno,Ninguno,Sin la condición,833189,1226650,9125,0.00684
+19,"Nuevo León",2010,Mujeres,Todos,Todos,Con la condición,43126,138409,1063,0.01989
+19,"Nuevo León",2010,Mujeres,Todos,Todos,Sin la condición,1053157,1838867,14122,0.00583
+19,"Nuevo León",2010,Mujeres,A,Alto,Con la condición,13006,49974,283,0.03652
+19,"Nuevo León",2010,Mujeres,A,Bajo,Con la condición,29563,99947,637,0.02532
+19,"Nuevo León",2010,Mujeres,B,Alto,Con la condición,10695,32809,173,0.04989
+19,"Nuevo León",2010,Mujeres,B,Bajo,Con la condición,22493,65618,510,0.02942
+19,"Nuevo León",2010,Mujeres,C,Alto,Con la condición,352,1902,15,0.14037
+19,"Nuevo León",2010,Mujeres,C,Bajo,Con la condición,2257,9508,68,0.07224
+19,"Nuevo León",2010,Mujeres,Ninguno,Ninguno,Sin la condición,996536,1740003,13275,0.00601
+19,"Nuevo León",2010,Hombres,Todos,Todos,Con la condición,36089,131394,846,0.02148
+19,"Nuevo León",2010,Hombres,Todos,Todos,Sin la condición,935330,1745670,11243,0.00658
+19,"Nuevo León",2010,Hombres,A,Alto,Con la condición,10595,47441,338,0.03172
+19,"Nuevo León",2010,Hombres,A,Bajo,Con la condición,24562,94882,546,0.02624
+19,"Nuevo León",2010,Hombres,B,Alto,Con la condición,9003,31146,204,0.04443
+19,"Nuevo León",2010,Hombres,B,Bajo,Con la condición,19053,62292,513,0.02848
+19,"Nuevo León",2010,Hombres,C,Alto,Con la condición,267,1805,15,0.12840
+19,"Nuevo León",2010,Hombres,C,Bajo,Con la condición,1810,9026,43,0.08548
+19,"Nuevo León",2010,Hombres,Ninguno,Ninguno,Sin la condición,885043,1651816,12963,0.00613
+19,"Nuevo León",2010,Total,Todos,Todos,Con la condición,79215,269804,1513,0.01639
+19,"Nuevo León",2010,Total,Todos,Todos,Sin la condición,1988487,3584536,20106,0.00491
+19,"Nuevo León",2010,Total,A,Alto,Con la condición,23602,97415,648,0.02356
+19,"Nuevo León",2010,Total,A,Bajo,Con la condición,54125,194829,1183,0.01823
+19,"Nuevo León",2010,Total,B,Alto,Con la condición,19698,63955,352,0.03445
+19,"Nuevo León",2010,Total,B,Bajo,Con la condición,41546,127910,854,0.02243
+19,"Nuevo León",2010,Total,C,Alto,Con la condición,619,3707,20,0.11677
+19,"Nuevo León",2010,Total,C,Bajo,Con la condición,4067,18534,89,0.06142
+19,"Nuevo León",2010,Total,Ninguno,Ninguno,Sin la condición,1881579,3391819,17188,0.00531
+19,"Nuevo León",2020,Mujeres,Todos,Todos,Con la condición,37092,155407,772,0.02148
+19,"Nuevo León",2020,Mujeres,Todos,Todos,Sin la condición,1031965,2064693,10256,0.00691
+19,"Nuevo León",2020,Mujeres,A,Alto,Con la condición,10513,56111,289,0.03213
+19,"Nuevo León",2020,Mujeres,A,Bajo,Con la condición,25012,112222,644,0.02296
+19,"Nuevo León",2020,Mujeres,B,Alto,Con la condición,9323,36838,231,0.04005
+19,"Nuevo León",2020,Mujeres,B,Bajo,Con la condición,19884,73676,521,0.02723
+19,"Nuevo León",2020,Mujeres,C,Alto,Con la condición,239,2135,14,0.11805
+19,"Nuevo León",2020,Mujeres,C,Bajo,Con la condición,1756,10676,85,0.05630
+19,"Nuevo León",2020,Mujeres,Ninguno,Ninguno,Sin la condición,976483,1953688,14048,0.00591
+19,"Nuevo León",2020,Hombres,Todos,Todos,Con la condición,27592,147531,912,0.01808
+19,"Nuevo León",2020,Hombres,Todos,Todos,Sin la condición,878430,1960049,12116,0.00633
+19,"Nuevo León",2020,Hombres,A,Alto,Con la condición,7229,53267,309,0.02728
+19,"Nuevo León",2020,Hombres,A,Bajo,Con la condición,18242,106534,819,0.01843
+19,"Nuevo León",2020,Hombres,B,Alto,Con la condición,7044,34971,239,0.03632
+19,"Nuevo León",2020,Hombres,B,Bajo,Con la condición,15264,69942,430,0.02789
+19,"Nuevo León",2020,Hombres,C,Alto,Con la condición,123,2027,16,0.08342
+19,"Nuevo León",2020,Hombres,C,Bajo,Con la condición,1144,10135,57,0.05868
+19,"Nuevo León",2020,Hombres,Ninguno,Ninguno,Sin la condición,831203,1854670,9751,0.00705
+19,"Nuevo León",2020,Total,Todos,Todos,Con la condición,64684,302938,2085,0.01256
+19,"Nuevo León",2020,Total,Todos,Todos,Sin la condición,1910395,4024742,27703,0.00420
+19,"Nuevo León",2020,Total,A,Alto,Con la condición,17741,109378,839,0.01782
+19,"Nuevo León",2020,Total,A,Bajo,Con la condición,43255,218756,1205,0.01606
+19,"Nuevo León",2020,Total,B,Alto,Con la condición,16367,71809,454,0.02756
+19,"Nuevo León",2020,Total,B,Bajo,Con la condición,35147,143618,681,0.02306
+19,"Nuevo León",2020,Total,C,Alto,Con la condición,362,4162,27,0.07592
+19,"Nuevo León",2020,Total,C,Bajo,Con la condición,2900,20810,137,0.04142
+19,"Nuevo León",2020,Total,Ninguno,Ninguno,Sin la condición,1807686,3808358,31773,0.00392
+20,"Oaxaca",2010,Mujeres,Todos,Todos,Con la condición,55542,166574,1045,0.02042
+20,"Oaxaca",2010,Mujeres,Todos,Todos,Sin la condición,1354603,2213059,13880,0.00579
+20,"Oaxaca",2010,Mujeres,A,Alto,Con la condición,17479,68481,386,0.03107
+20,"Oaxaca",2010,Mujeres,A,Bajo,Con la condición,40954,136962,982,0.02045
+20,"Oaxaca",2010,Mujeres,B,Alto,Con la condición,11210,30210,242,0.04348
+20,"Oaxaca",2010,Mujeres,B,Bajo,Con la condición,24089,60421,306,0.03919
+20,"Oaxaca",2010,Mujeres,C,Alto,Con la condición,549,2689,21,0.12318
+20,"Oaxaca",2010,Mujeres,C,Bajo,Con la condición,3594,13444,92,0.06460
+20,"Oaxaca",2010,Mujeres,Ninguno,Ninguno,Sin la condición,1281775,2094077,17719,0.00512
+20,"Oaxaca",2010,Hombres,Todos,Todos,Con la condición,42482,158132,1314,0.01712
+20,"Oaxaca",2010,Hombres,Todos,Todos,Sin la condición,1149842,2100895,17456,0.00527
+20,"Oaxaca",2010,Hombres,A,Alto,Con la condición,12381,65010,520,0.02411
+20,"Oaxaca",2010,Hombres,A,Bajo,Con la condición,30455,130021,853,0.02030
+20,"Oaxaca",2010,Hombres,B,Alto,Con la condición,8784,28679,218,0.04371
+20,"Oaxaca",2010,Hombres,B,Bajo,Con la condición,19152,57359,306,0.03774
+20,"Oaxaca",2010,Hombres,C,Alto,Con la condición,356,2553,17,0.11765
+20,"Oaxaca",2010,Hombres,C,Bajo,Con la condición,2585,12763,91,0.05898
+20,"Oaxaca",2010,Hombres,Ninguno,Ninguno,Sin la condición,1088022,1987944,13603,0.00597
+20,"Oaxaca",2010,Total,Todos,Todos,Con la condición,98024,324706,1936,0.01461
+20,"Oaxaca",2010,Total,Todos,Todos,Sin la condición,2504445,4313954,25716,0.00431
+20,"Oaxaca",2010,Total,A,Alto,Con la condición,29860,133491,911,0.01933
+20,"Oaxaca",2010,Total,A,Bajo,Con la condición,71410,266983,1397,0.01658
+20,"Oaxaca",2010,Total,B,Alto,Con la condición,19994,58890,335,0.03622
+20,"Oaxaca",2010,Total,B,Bajo,Con la condición,43241,117779,831,0.02341
+20,"Oaxaca",2010,Total,C,Alto,Con la condición,906,5241,45,0.07890
+20,"Oaxaca",2010,Total,C,Bajo,Con la condición,6179,26207,144,0.04952
+20,"Oaxaca",2010,Total,Ninguno,Ninguno,Sin la condición,2369798,4082021,26407,0.00425
+20,"Oaxaca",2020,Mujeres,Todos,Todos,Con la condición,68353,187031,1287,0.01879
+20,"Oaxaca",2020,Mujeres,Todos,Todos,Sin la condición,1600538,2484837,17098,0.00513
+20,"Oaxaca",2020,Mujeres,A,Alto,Con la condición,22088,76891,616,0.02552
+20,"Oaxaca",2020,Mujeres,A,Bajo,Con la condición,50909,153782,863,0.02243
+20,"Oaxaca",2020,Mujeres,B,Alto,Con la condición,13673,33920,166,0.05330
+20,"Oaxaca",2020,Mujeres,B,Bajo,Con la condición,29220,67841,584,0.02869
+20,"Oaxaca",2020,Mujeres,C,Alto,Con la condición,714,3019,18,0.14019
+20,"Oaxaca",2020,Mujeres,C,Bajo,Con la condición,4519,15095,99,0.06444
+20,"Oaxaca",2020,Mujeres,Ninguno,Ninguno,Sin la condición,1514487,2351244,16064,0.00529
+20,"Oaxaca",2020,Hombres,Todos,Todos,Con la condición,56936,177552,880,0.02203
+20,"Oaxaca",2020,Hombres,Todos,Todos,Sin la condición,1413765,2358900,11698,0.00634
+20,"Oaxaca",2020,Hombres,A,Alto,Con la condición,17699,72994,378,0.03086
+20,"Oaxaca",2020,Hombres,A,Bajo,Con la condición,41790,145988,826,0.02202
+20,"Oaxaca",2020,Hombres,B,Alto,Con la condición,11538,32201,251,0.04237
+20,"Oaxaca",2020,Hombres,B,Bajo,Con la condición,24854,64403,543,0.02925
+20,"Oaxaca",2020,Hombres,C,Alto,Con la condición,549,2866,22,0.11746
+20,"Oaxaca",2020,Hombres,C,Bajo,Con la condición,3648,14330,95,0.06257
+20,"Oaxaca",2020,Hombres,Ninguno,Ninguno,Sin la condición,1337756,2232078,13721,0.00586
+20,"Oaxaca",2020,Total,Todos,Todos,Con la condición,125288,364582,2976,0.01219
+20,"Oaxaca",2020,Total,Todos,Todos,Sin la condición,3014303,4843738,39540,0.00341
+20,"Oaxaca",2020,Total,A,Alto,Con la condición,39787,149885,1220,0.01770
+20,"Oaxaca",2020,Total,A,Bajo,Con la condición,92699,299770,2195,0.01381
+20,"Oaxaca",2020,Total,B,Alto,Con la condición,25211,66122,488,0.03078
+20,"Oaxaca",2020,Total,B,Bajo,Con la condición,54074,132243,722,0.02562
+20,"Oaxaca",2020,Total,C,Alto,Con la condición,1263,5885,50,0.08127
+20,"Oaxaca",2020,Total,C,Bajo,Con la condición,8167,29425,206,0.04368
+20,"Oaxaca",2020,Total,Ninguno,Ninguno,Sin la condición,2852243,4583322,31698,0.00381
+21,"Puebla",2010,Mujeres,Todos,Todos,Con la condición,25901,107461,825,0.02085
+21,"Puebla",2010,Mujeres,Todos,Todos,Sin la condición,735512,1427692,10962,0.00668
+21,"Puebla",2010,Mujeres,A,Alto,Con la condición,8240,42062,363,0.02916
+21,"Puebla",2010,Mujeres,A,Bajo,Con la condición,18569,84123,504,0.02586
+21,"Puebla",2010,Mujeres,B,Alto,Con la condición,6445,23044,145,0.05218
+21,"Puebla",2010,Mujeres,B,Bajo,Con la condición,13253,46088,316,0.03565
+21,"Puebla",2010,Mujeres,C,Alto,Con la condición,138,1668,10,0.12194
+21,"Puebla",2010,Mujeres,C,Bajo,Con la condición,1631,8340,53,0.07628
+21,"Puebla",2010,Mujeres,Ninguno,Ninguno,Sin la condición,695968,1350935,10401,0.00686
+21,"Puebla",2010,Hombres,Todos,Todos,Con la condición,18981,102014,581,0.02260
+21,"Puebla",2010,Hombres,Todos,Todos,Sin la condición,623736,1355334,7714,0.00794
+21,"Puebla",2010,Hombres,A,Alto,Con la condición,5628,39930,213,0.03338
+21,"Puebla",2010,Hombres,A,Bajo,Con la condición,13238,79860,656,0.02033
+21,"Puebla",2010,Hombres,B,Alto,Con la condición,4916,21876,140,0.04939
+21,"Puebla",2010,Hombres,B,Bajo,Con la condición,10176,43752,372,0.03067
+21,"Puebla",2010,Hombres,C,Alto,Con la condición,44,1584,12,0.06636
+21,"Puebla",2010,Hombres,C,Bajo,Con la condición,1113,7918,52,0.06749
+21,"Puebla",2010,Hombres,Ninguno,Ninguno,Sin la condición,590202,1282466,10867,0.00669
+21,"Puebla",2010,Total,Todos,Todos,Con la condición,44882,209475,1090,0.01740
+21,"Puebla",2010,Total,Todos,Todos,Sin la condición,1359248,2783026,14480,0.00582
+21,"Puebla",2010,Total,A,Alto,Con la condición,13868,81992,384,0.02678
+21,"Puebla",2010,Total,A,Bajo,Con la condición,31806,163983,1061,0.01699
+21,"Puebla",2010,Total,B,Alto,Con la condición,11361,44920,269,0.03710
+21,"Puebla",2010,Total,B,Bajo,Con la condición,23429,89840,425,0.02982
+21,"Puebla",2010,Total,C,Alto,Con la condición,182,3252,15,0.08306
+21,"Puebla",2010,Total,C,Bajo,Con la condición,2745,16258,83,0.05756
+21,"Puebla",2010,Total,Ninguno,Ninguno,Sin la condición,1286170,2633401,14766,0.00576
+21,"Puebla",2020,Mujeres,Todos,Todos,Con la condición,19674,120658,1022,0.01618
+21,"Puebla",2020,Mujeres,Todos,Todos,Sin la condición,700841,1603022,13578,0.00596
+21,"Puebla",2020,Mujeres,A,Alto,Con la condición,5570,47227,290,0.02652
+21,"Puebla",2020,Mujeres,A,Bajo,Con la condición,13484,94454,465,0.02271
+21,"Puebla",2020,Mujeres,B,Alto,Con la condición,5219,25874,202,0.03953
+21,"Puebla",2020,Mujeres,B,Bajo,Con la condición,10845,51748,333,0.03123
+21,"Puebla",2020,Mujeres,C,Alto,Con la condición,19,1873,15,0.03597
+21,"Puebla",2020,Mujeres,C,Bajo,Con la condición,1101,9365,65,0.05594
+21,"Puebla",2020,Mujeres,Ninguno,Ninguno,Sin la condición,663161,1516838,10053,0.00693
+21,"Puebla",2020,Hombres,Todos,Todos,Con la condición,11224,114542,958,0.01345
+21,"Puebla",2020,Hombres,Todos,Todos,Sin la condición,566304,1521778,12727,0.00600
+21,"Puebla",2020,Hombres,A,Alto,Con la condición,2370,44834,353,0.01667
+21,"Puebla",2020,Hombres,A,Bajo,Con la condición,6966,89667,569,0.01571
+21,"Puebla",2020,Hombres,B,Alto,Con la condición,3357,24562,149,0.03939
+21,"Puebla",2020,Hombres,B,Bajo,Con la condición,7099,49125,385,0.02509
+21,"Puebla",2020,Hombres,C,Alto,Con la condición,18,1778,14,0.03723
+21,"Puebla",2020,Hombres,C,Bajo,Con la condición,467,8890,51,0.04374
+21,"Puebla",2020,Hombres,Ninguno,Ninguno,Sin la condición,535857,1439962,12033,0.00617
+21,"Puebla",2020,Total,Todos,Todos,Con la condición,30898,235200,1407,0.01261
+21,"Puebla",2020,Total,Todos,Todos,Sin la condición,1267145,3124800,18697,0.00503
+21,"Puebla",2020,Total,A,Alto,Con la condición,7940,92061,760,0.01426
+21,"Puebla",2020,Total,A,Bajo,Con la condición,20450,184121,907,0.01461
+21,"Puebla",2020,Total,B,Alto,Con la condición,8576,50436,251,0.03320
+21,"Puebla",2020,Total,B,Bajo,Con la condición,17945,100873,530,0.02326
+21,"Puebla",2020,Total,C,Alto,Con la condición,37,3651,23,0.02905
+21,"Puebla",2020,Total,C,Bajo,Con la condición,1568,18254,136,0.03364
+21,"Puebla",2020,Total,Ninguno,Ninguno,Sin la condición,1199018,2956800,18021,0.00512
+22,"Querétaro",2010,Mujeres,Todos,Todos,Con la condición,3293,109753,541,0.01027
+22,"Querétaro",2010,Mujeres,Todos,Todos,Sin la condición,301685,1458149,7182,0.00669
+22,"Querétaro",2010,Mujeres,A,Alto,Con la condición,470,46956,387,0.00708
+22,"Querétaro",2010,Mujeres,A,Bajo,Con la condición,2220,93911,570,0.00891
+22,"Querétaro",2010,Mujeres,B,Alto,Con la condición,1358,21454,163,0.02670
+22,"Querétaro",2010,Mujeres,B,Bajo,Con la condición,3756,42907,351,0.02112
+22,"Querétaro",2010,Mujeres,C,Alto,Con la condición,19,1895,14,0.03723
+22,"Querétaro",2010,Mujeres,C,Bajo,Con la condición,95,9477,80,0.01557
+22,"Querétaro",2010,Mujeres,Ninguno,Ninguno,Sin la condición,285465,1379754,7163,0.00670
+22,"Querétaro",2010,Hombres,Todos,Todos,Con la condición,3126,104191,648,0.00938
+22,"Querétaro",2010,Hombres,Todos,Todos,Sin la condición,179083,1384247,8613,0.00506
+22,"Querétaro",2010,Hombres,A,Alto,Con la condición,446,44576,272,0.00845
+22,"Querétaro",2010,Hombres,A,Bajo,Con la condición,2108,89151,519,0.00934
+22,"Querétaro",2010,Hombres,B,Alto,Con la condición,1290,20366,121,0.03099
+22,"Querétaro",2010,Hombres,B,Bajo,Con la condición,3566,40733,229,0.02615
+22,"Querétaro",2010,Hombres,C,Alto,Con la condición,18,1799,13,0.03863
+22,"Querétaro",2010,Hombres,C,Bajo,Con la condición,90,8997,60,0.01798
+22,"Querétaro",2010,Hombres,Ninguno,Ninguno,Sin la condición,169455,1309825,10450,0.00460
+22,"Querétaro",2010,Total,Todos,Todos,Con la condición,6418,213944,1594,0.00598
+22,"Querétaro",2010,Total,Todos,Todos,Sin la condición,480767,2842396,21175,0.00361
+22,"Querétaro",2010,Total,A,Alto,Con la condición,915,91531,635,0.00553
+22,"Querétaro",2010,Total,A,Bajo,Con la condición,4328,183063,1342,0.00581
+22,"Querétaro",2010,Total,B,Alto,Con la condición,2648,41820,294,0.01988
+22,"Querétaro",2010,Total,B,Bajo,Con la condición,7322,83640,565,0.01665
+22,"Querétaro",2010,Total,C,Alto,Con la condición,37,3695,32,0.02462
+22,"Querétaro",2010,Total,C,Bajo,Con la condición,185,18474,115,0.01299
+22,"Querétaro",2010,Total,Ninguno,Ninguno,Sin la condición,454920,2689579,18314,0.00388
+22,"Querétaro",2020,Mujeres,Todos,Todos,Con la condición,3697,123232,774,0.00858
+22,"Querétaro",2020,Mujeres,Todos,Todos,Sin la condición,236915,1637220,10285,0.00486
+22,"Querétaro",2020,Mujeres,A,Alto,Con la condición,527,52722,369,0.00725
+22,"Querétaro",2020,Mujeres,A,Bajo,Con la condición,2493,105444,683,0.00814
+22,"Querétaro",2020,Mujeres,B,Alto,Con la condición,1525,24088,166,0.02646
+22,"Querétaro",2020,Mujeres,B,Bajo,Con la condición,4218,48177,371,0.02054
+22,"Querétaro",2020,Mujeres,C,Alto,Con la condición,21,2128,14,0.03723
+22,"Querétaro",2020,Mujeres,C,Bajo,Con la condición,106,10641,74,0.01619
+22,"Querétaro",2020,Mujeres,Ninguno,Ninguno,Sin la condición,224178,1549198,11833,0.00453
+22,"Querétaro",2020,Hombres,Todos,Todos,Con la condición,3510,116986,752,0.00871
+22,"Querétaro",2020,Hombres,Todos,Todos,Sin la condición,186325,1554242,9992,0.00455
+22,"Querétaro",2020,Hombres,A,Alto,Con la condición,500,50050,334,0.00762
+22,"Querétaro",2020,Hombres,A,Bajo,Con la condición,2366,100100,545,0.00911
+22,"Querétaro",2020,Hombres,B,Alto,Con la condición,1448,22867,191,0.02467
+22,"Querétaro",2020,Hombres,B,Bajo,Con la condición,4004,45735,319,0.02215
+22,"Querétaro",2020,Hombres,C,Alto,Con la condición,20,2020,17,0.03378
+22,"Querétaro",2020,Hombres,C,Bajo,Con la condición,101,10102,76,0.01598
+22,"Querétaro",2020,Hombres,Ninguno,Ninguno,Sin la condición,176307,1470681,7121,0.00539
+22,"Querétaro",2020,Total,Todos,Todos,Con la condición,7207,240218,1876,0.00551
+22,"Querétaro",2020,Total,Todos,Todos,Sin la condición,423240,3191462,24926,0.00301
+22,"Querétaro",2020,Total,A,Alto,Con la condición,1028,102772,848,0.00478
+22,"Querétaro",2020,Total,A,Bajo,Con la condición,4859,205544,1346,0.00580
+22,"Querétaro",2020,Total,B,Alto,Con la condición,2973,46956,357,0.01804
+22,"Querétaro",2020,Total,B,Bajo,Con la condición,8222,93911,579,0.01644
+22,"Querétaro",2020,Total,C,Alto,Con la condición,41,4149,22,0.02970
+22,"Querétaro",2020,Total,C,Bajo,Con la condición,207,20743,119,0.01277
+22,"Querétaro",2020,Total,Ninguno,Ninguno,Sin la condición,400485,3019878,21859,0.00321
+23,"Quintana Roo",2010,Mujeres,Todos,Todos,Con la condición,33357,79869,392,0.03487
+23,"Quintana Roo",2010,Mujeres,Todos,Todos,Sin la condición,725099,1061115,5204,0.00903
+23,"Quintana Roo",2010,Mujeres,A,Alto,Con la condición,11309,32597,256,0.04165
+23,"Quintana Roo",2010,Mujeres,A,Bajo,Con la condición,26986,65194,356,0.03655
+23,"Quintana Roo",2010,Mujeres,B,Alto,Con la condición,7680,17602,146,0.05746
+23,"Quintana Roo",2010,Mujeres,B,Bajo,Con la condición,16756,35204,169,0.05378
+23,"Quintana Roo",2010,Mujeres,C,Alto,Con la condición,368,1278,8,0.22418
+23,"Quintana Roo",2010,Mujeres,C,Bajo,Con la condición,2388,6389,48,0.09776
+23,"Quintana Roo",2010,Mujeres,Ninguno,Ninguno,Sin la condición,686116,1004066,5489,0.00879
+23,"Quintana Roo",2010,Hombres,Todos,Todos,Con la condición,28075,75821,431,0.03256
+23,"Quintana Roo",2010,Hombres,Todos,Todos,Sin la condición,640636,1007335,5730,0.00890
+23,"Quintana Roo",2010,Hombres,A,Alto,Con la condición,9270,30945,259,0.03985
+23,"Quintana Roo",2010,Hombres,A,Bajo,Con la condición,22687,61889,435,0.03235
+23,"Quintana Roo",2010,Hombres,B,Alto,Con la condición,6499,16710,134,0.05896
+23,"Quintana Roo",2010,Hombres,B,Bajo,Con la condición,14323,33420,193,0.04987
+23,"Quintana Roo",2010,Hombres,C,Alto,Con la condición,292,1213,10,0.18930
+23,"Quintana Roo",2010,Hombres,C,Bajo,Con la condición,1979,6065,33,0.11427
+23,"Quintana Roo",2010,Hombres,Ninguno,Ninguno,Sin la condición,606193,953177,7167,0.00796
+23,"Quintana Roo",2010,Total,Todos,Todos,Con la condición,61431,155690,1292,0.01904
+23,"Quintana Roo",2010,Total,Todos,Todos,Sin la condición,1365735,2068450,17171,0.00506
+23,"Quintana Roo",2010,Total,A,Alto,Con la condición,20579,63541,445,0.03106
+23,"Quintana Roo",2010,Total,A,Bajo,Con la condición,49673,127083,682,0.02616
+23,"Quintana Roo",2010,Total,B,Alto,Con la condición,14179,34312,288,0.04062
+23,"Quintana Roo",2010,Total,B,Bajo,Con la condición,31079,68625,514,0.03074
+23,"Quintana Roo",2010,Total,C,Alto,Con la condición,660,2491,16,0.15449
+23,"Quintana Roo",2010,Total,C,Bajo,Con la condición,4367,12454,89,0.07081
+23,"Quintana Roo",2010,Total,Ninguno,Ninguno,Sin la condición,1292308,1957243,15141,0.00539
+23,"Quintana Roo",2020,Mujeres,Todos,Todos,Con la condición,35639,89677,523,0.02996
+23,"Quintana Roo",2020,Mujeres,Todos,Todos,Sin la condición,790043,1191428,6949,0.00794
+23,"Quintana Roo",2020,Mujeres,A,Alto,Con la condición,11958,36600,244,0.04204
+23,"Quintana Roo",2020,Mujeres,A,Bajo,Con la condición,28820,73200,522,0.02994
+23,"Quintana Roo",2020,Mujeres,B,Alto,Con la condición,8223,19764,160,0.05455
+23,"Quintana Roo",2020,Mujeres,B,Bajo,Con la condición,18014,39528,291,0.04087
+23,"Quintana Roo",2020,Mujeres,C,Alto,Con la condición,384,1435,11,0.18695
+23,"Quintana Roo",2020,Mujeres,C,Bajo,Con la condición,2536,7173,40,0.10582
+23,"Quintana Roo",2020,Mujeres,Ninguno,Ninguno,Sin la condición,747567,1127372,9488,0.00679
+23,"Quintana Roo",2020,Hombres,Todos,Todos,Con la condición,30130,85132,712,0.02509
+23,"Quintana Roo",2020,Hombres,Todos,Todos,Sin la condición,700814,1131043,9464,0.00699
+23,"Quintana Roo",2020,Hombres,A,Alto,Con la condición,9841,34745,189,0.04588
+23,"Quintana Roo",2020,Hombres,A,Bajo,Con la condición,24337,69490,347,0.03585
+23,"Quintana Roo",2020,Hombres,B,Alto,Con la condición,6991,18762,128,0.05983
+23,"Quintana Roo",2020,Hombres,B,Bajo,Con la condición,15469,37524,274,0.04163
+23,"Quintana Roo",2020,Hombres,C,Alto,Con la condición,306,1362,9,0.19471
+23,"Quintana Roo",2020,Hombres,C,Bajo,Con la condición,2111,6810,57,0.08576
+23,"Quintana Roo",2020,Hombres,Ninguno,Ninguno,Sin la condición,663135,1070234,6012,0.00877
+23,"Quintana Roo",2020,Total,Todos,Todos,Con la condición,65769,174810,1393,0.01817
+23,"Quintana Roo",2020,Total,Todos,Todos,Sin la condición,1490856,2322470,18502,0.00493
+23,"Quintana Roo",2020,Total,A,Alto,Con la condición,21798,71345,424,0.03132
+23,"Quintana Roo",2020,Total,A,Bajo,Con la condición,53156,142690,1203,0.01952
+23,"Quintana Roo",2020,Total,B,Alto,Con la condición,15214,38526,314,0.03862
+23,"Quintana Roo",2020,Total,B,Bajo,Con la condición,33483,77052,456,0.03250
+23,"Quintana Roo",2020,Total,C,Alto,Con la condición,690,2797,16,0.15090
+23,"Quintana Roo",2020,Total,C,Bajo,Con la condición,4647,13983,109,0.06317
+23,"Quintana Roo",2020,Total,Ninguno,Ninguno,Sin la condición,1410703,2197606,11824,0.00617
+24,"San Luis Potosí",2010,Mujeres,Todos,Todos,Con la condición,5012,50148,413,0.02066
+24,"San Luis Potosí",2010,Mujeres,Todos,Todos,Sin la condición,248136,666257,5491,0.00913
+24,"San Luis Potosí",2010,Mujeres,A,Alto,Con la condición,966,19731,120,0.02758
+24,"San Luis Potosí",2010,Mujeres,A,Bajo,Con la condición,2526,39462,305,0.01962
+24,"San Luis Potosí",2010,Mujeres,B,Alto,Con la condición,1398,12862,107,0.04212
+24,"San Luis Potosí",2010,Mujeres,B,Bajo,Con la condición,4153,25724,122,0.04664
+24,"San Luis Potosí",2010,Mujeres,C,Alto,Con la condición,8,767,4,0.06965
+24,"San Luis Potosí",2010,Mujeres,C,Bajo,Con la condición,198,3835,20,0.06933
+24,"San Luis Potosí",2010,Mujeres,Ninguno,Ninguno,Sin la condición,234795,630436,4910,0.00966
+24,"San Luis Potosí",2010,Hombres,Todos,Todos,Con la condición,2157,47607,303,0.01673
+24,"San Luis Potosí",2010,Hombres,Todos,Todos,Sin la condición,200998,632489,4026,0.01027
+24,"San Luis Potosí",2010,Hombres,A,Alto,Con la condición,187,18731,88,0.01485
+24,"San Luis Potosí",2010,Hombres,A,Bajo,Con la condición,375,37462,306,0.00796
+24,"San Luis Potosí",2010,Hombres,B,Alto,Con la condición,660,12210,105,0.03089
+24,"San Luis Potosí",2010,Hombres,B,Bajo,Con la condición,2608,24421,131,0.03778
+24,"San Luis Potosí",2010,Hombres,C,Alto,Con la condición,7,728,5,0.06230
+24,"San Luis Potosí",2010,Hombres,C,Bajo,Con la condición,36,3641,31,0.02502
+24,"San Luis Potosí",2010,Hombres,Ninguno,Ninguno,Sin la condición,190191,598484,3269,0.01140
+24,"San Luis Potosí",2010,Total,Todos,Todos,Con la condición,7169,97755,707,0.01373
+24,"San Luis Potosí",2010,Total,Todos,Todos,Sin la condición,449133,1298746,9394,0.00687
+24,"San Luis Potosí",2010,Total,A,Alto,Con la condición,860,38462,313,0.01170
+24,"San Luis Potosí",2010,Total,A,Bajo,Con la condición,2877,76925,652,0.01040
+24,"San Luis Potosí",2010,Total,B,Alto,Con la condición,2057,25072,120,0.03508
+24,"San Luis Potosí",2010,Total,B,Bajo,Con la condición,6761,50145,411,0.02359
+24,"San Luis Potosí",2010,Total,C,Alto,Con la condición,15,1495,11,0.04200
+24,"San Luis Potosí",2010,Total,C,Bajo,Con la condición,188,7475,58,0.02876
+24,"San Luis Potosí",2010,Total,Ninguno,Ninguno,Sin la condición,424986,1228921,9018,0.00701
+24,"San Luis Potosí",2020,Mujeres,Todos,Todos,Con la condición,1689,56307,416,0.01171
+24,"San Luis Potosí",2020,Mujeres,Todos,Todos,Sin la condición,224829,748077,5529,0.00863
+24,"San Luis Potosí",2020,Mujeres,A,Alto,Con la condición,222,22154,150,0.01137
+24,"San Luis Potosí",2020,Mujeres,A,Bajo,Con la condición,443,44309,225,0.00929
+24,"San Luis Potosí",2020,Mujeres,B,Alto,Con la condición,559,14442,83,0.02965
+24,"San Luis Potosí",2020,Mujeres,B,Bajo,Con la condición,2643,28883,204,0.02826
+24,"San Luis Potosí",2020,Mujeres,C,Alto,Con la condición,9,861,6,0.05687
+24,"San Luis Potosí",2020,Mujeres,C,Bajo,Con la condición,43,4306,25,0.02786
+24,"San Luis Potosí",2020,Mujeres,Ninguno,Ninguno,Sin la condición,212742,707858,4187,0.00992
+24,"San Luis Potosí",2020,Hombres,Todos,Todos,Con la condición,1604,53453,294,0.01393
+24,"San Luis Potosí",2020,Hombres,Todos,Todos,Sin la condición,175084,710163,3900,0.00966
+24,"San Luis Potosí",2020,Hombres,A,Alto,Con la condición,210,21032,135,0.01199
+24,"San Luis Potosí",2020,Hombres,A,Bajo,Con la condición,421,42063,202,0.00980
+24,"San Luis Potosí",2020,Hombres,B,Alto,Con la condición,531,13710,89,0.02863
+24,"San Luis Potosí",2020,Hombres,B,Bajo,Con la condición,2509,27420,181,0.03000
+24,"San Luis Potosí",2020,Hombres,C,Alto,Con la condición,8,818,6,0.05687
+24,"San Luis Potosí",2020,Hombres,C,Bajo,Con la condición,41,4088,35,0.02355
+24,"San Luis Potosí",2020,Hombres,Ninguno,Ninguno,Sin la condición,165671,671982,5246,0.00833
+24,"San Luis Potosí",2020,Total,Todos,Todos,Con la condición,3293,109760,785,0.00852
+24,"San Luis Potosí",2020,Total,Todos,Todos,Sin la condición,399913,1458240,10427,0.00612
+24,"San Luis Potosí",2020,Total,A,Alto,Con la condición,432,43186,271,0.00846
+24,"San Luis Potosí",2020,Total,A,Bajo,Con la condición,864,86372,440,0.00664
+24,"San Luis Potosí",2020,Total,B,Alto,Con la condición,1090,28152,156,0.02162
+24,"San Luis Potosí",2020,Total,B,Bajo,Con la condición,5151,56303,344,0.02176
+24,"San Luis Potosí",2020,Total,C,Alto,Con la condición,17,1679,8,0.04925
+24,"San Luis Potosí",2020,Total,C,Bajo,Con la condición,84,8393,61,0.01784
+24,"San Luis Potosí",2020,Total,Ninguno,Ninguno,Sin la condición,378412,1379840,7501,0.00721
+25,"Sinaloa",2010,Mujeres,Todos,Todos,Con la condición,12136,138573,838,0.01367
+25,"Sinaloa",2010,Mujeres,Todos,Todos,Sin la condición,654572,1841043,11128,0.00635
+25,"Sinaloa",2010,Mujeres,A,Alto,Con la condición,2359,51793,433,0.01403
+25,"Sinaloa",2010,Mujeres,A,Bajo,Con la condición,5128,103585,702,0.01146
+25,"Sinaloa",2010,Mujeres,B,Alto,Con la condición,2955,28248,204,0.03000
+25,"Sinaloa",2010,Mujeres,B,Bajo,Con la condición,7592,56495,486,0.02166
+25,"Sinaloa",2010,Mujeres,C,Alto,Con la condición,20,2034,12,0.04021
+25,"Sinaloa",2010,Mujeres,C,Bajo,Con la condición,166,10168,72,0.02093
+25,"Sinaloa",2010,Mujeres,Ninguno,Ninguno,Sin la condición,619380,1742062,12953,0.00589
+25,"Sinaloa",2010,Hombres,Todos,Todos,Con la condición,8010,131550,761,0.01214
+25,"Sinaloa",2010,Hombres,Todos,Todos,Sin la condición,574748,1747734,10107,0.00654
+25,"Sinaloa",2010,Hombres,A,Alto,Con la condición,927,49168,275,0.01148
+25,"Sinaloa",2010,Hombres,A,Bajo,Con la condición,2243,98335,751,0.00763
+25,"Sinaloa",2010,Hombres,B,Alto,Con la condición,2090,26816,154,0.03024
+25,"Sinaloa",2010,Hombres,B,Bajo,Con la condición,5776,53632,452,0.02041
+25,"Sinaloa",2010,Hombres,C,Alto,Con la condición,19,1930,11,0.04200
+25,"Sinaloa",2010,Hombres,C,Bajo,Con la condición,97,9652,55,0.01878
+25,"Sinaloa",2010,Hombres,Ninguno,Ninguno,Sin la condición,543848,1653770,13180,0.00573
+25,"Sinaloa",2010,Total,Todos,Todos,Con la condición,20146,270123,1663,0.00902
+25,"Sinaloa",2010,Total,Todos,Todos,Sin la condición,1229321,3588777,22089,0.00447
+25,"Sinaloa",2010,Total,A,Alto,Con la condición,3286,100960,741,0.00913
+25,"Sinaloa",2010,Total,A,Bajo,Con la condición,7371,201921,1626,0.00651
+25,"Sinaloa",2010,Total,B,Alto,Con la condición,5045,55063,453,0.01898
+25,"Sinaloa",2010,Total,B,Bajo,Con la condición,13367,110127,519,0.02007
+25,"Sinaloa",2010,Total,C,Alto,Con la condición,40,3964,31,0.02502
+25,"Sinaloa",2010,Total,C,Bajo,Con la condición,198,19820,124,0.01251
+25,"Sinaloa",2010,Total,Ninguno,Ninguno,Sin la condición,1163228,3395832,18709,0.00486
+25,"Sinaloa",2020,Mujeres,Todos,Todos,Con la condición,4668,155591,739,0.00879
+25,"Sinaloa",2020,Mujeres,Todos,Todos,Sin la condición,403842,2067135,9819,0.00560
+25,"Sinaloa",2020,Mujeres,A,Alto,Con la condición,582,58153,385,0.00710
+25,"Sinaloa",2020,Mujeres,A,Bajo,Con la condición,1163,116306,752,0.00508
+25,"Sinaloa",2020,Mujeres,B,Alto,Con la condición,1492,31717,273,0.01794
+25,"Sinaloa",2020,Mujeres,B,Bajo,Con la condición,4872,63433,327,0.02061
+25,"Sinaloa",2020,Mujeres,C,Alto,Con la condición,23,2283,19,0.03196
+25,"Sinaloa",2020,Mujeres,C,Bajo,Con la condición,114,11416,74,0.01619
+25,"Sinaloa",2020,Mujeres,Ninguno,Ninguno,Sin la condición,382130,1955999,15390,0.00447
+25,"Sinaloa",2020,Hombres,Todos,Todos,Con la condición,4431,147705,1156,0.00702
+25,"Sinaloa",2020,Hombres,Todos,Todos,Sin la condición,298551,1962369,15360,0.00406
+25,"Sinaloa",2020,Hombres,A,Alto,Con la condición,552,55206,456,0.00652
+25,"Sinaloa",2020,Hombres,A,Bajo,Con la condición,1104,110412,840,0.00481
+25,"Sinaloa",2020,Hombres,B,Alto,Con la condición,1417,30109,222,0.01990
+25,"Sinaloa",2020,Hombres,B,Bajo,Con la condición,4625,60218,293,0.02178
+25,"Sinaloa",2020,Hombres,C,Alto,Con la condición,22,2168,15,0.03597
+25,"Sinaloa",2020,Hombres,C,Bajo,Con la condición,108,10838,62,0.01769
+25,"Sinaloa",2020,Hombres,Ninguno,Ninguno,Sin la condición,282500,1856865,9708,0.00510
+25,"Sinaloa",2020,Total,Todos,Todos,Con la condición,9099,303296,1531,0.00610
+25,"Sinaloa",2020,Total,Todos,Todos,Sin la condición,702394,4029504,20339,0.00372
+25,"Sinaloa",2020,Total,A,Alto,Con la condición,1134,113359,580,0.00578
+25,"Sinaloa",2020,Total,A,Bajo,Con la condición,2267,226718,1845,0.00324
+25,"Sinaloa",2020,Total,B,Alto,Con la condición,2909,61826,501,0.01324
+25,"Sinaloa",2020,Total,B,Bajo,Con la condición,9496,123651,601,0.01521
+25,"Sinaloa",2020,Total,C,Alto,Con la condición,45,4451,37,0.02290
+25,"Sinaloa",2020,Total,C,Bajo,Con la condición,223,22254,133,0.01208
+25,"Sinaloa",2020,Total,Ninguno,Ninguno,Sin la condición,664631,3812864,27332,0.00321
+26,"Sonora",2010,Mujeres,Todos,Todos,Con la condición,17453,143977,828,0.01588
+26,"Sonora",2010,Mujeres,Todos,Todos,Sin la condición,715723,1912835,10998,0.00646
+26,"Sonora",2010,Mujeres,A,Alto,Con la condición,4060,52539,303,0.02148
+26,"Sonora",2010,Mujeres,A,Bajo,Con la condición,10612,105078,521,0.01848
+26,"Sonora",2010,Mujeres,B,Alto,Con la condición,4598,35049,272,0.02866
+26,"Sonora",2010,Mujeres,B,Bajo,Con la condición,10666,70099,495,0.02260
+26,"Sonora",2010,Mujeres,C,Alto,Con la condición,21,2052,15,0.03597
+26,"Sonora",2010,Mujeres,C,Bajo,Con la condición,809,10259,84,0.04117
+26,"Sonora",2010,Mujeres,Ninguno,Ninguno,Sin la condición,677244,1809995,12777,0.00599
+26,"Sonora",2010,Hombres,Todos,Todos,Con la condición,12194,136680,761,0.01447
+26,"Sonora",2010,Hombres,Todos,Todos,Sin la condición,621336,1815888,10104,0.00661
+26,"Sonora",2010,Hombres,A,Alto,Con la condición,2258,49876,247,0.01852
+26,"Sonora",2010,Hombres,A,Bajo,Con la condición,6881,99753,659,0.01382
+26,"Sonora",2010,Hombres,B,Alto,Con la condición,3300,33273,173,0.03182
+26,"Sonora",2010,Hombres,B,Bajo,Con la condición,7996,66546,364,0.02386
+26,"Sonora",2010,Hombres,C,Alto,Con la condición,19,1948,13,0.03863
+26,"Sonora",2010,Hombres,C,Bajo,Con la condición,456,9739,83,0.03247
+26,"Sonora",2010,Hombres,Ninguno,Ninguno,Sin la condición,587931,1718260,13799,0.00565
+26,"Sonora",2010,Total,Todos,Todos,Con la condición,29647,280657,2297,0.00898
+26,"Sonora",2010,Total,Todos,Todos,Sin la condición,1337060,3728723,30517,0.00384
+26,"Sonora",2010,Total,A,Alto,Con la condición,6317,102416,863,0.01147
+26,"Sonora",2010,Total,A,Bajo,Con la condición,17493,204831,1126,0.01166
+26,"Sonora",2010,Total,B,Alto,Con la condición,7898,68322,341,0.02424
+26,"Sonora",2010,Total,B,Bajo,Con la condición,18662,136644,892,0.01610
+26,"Sonora",2010,Total,C,Alto,Con la condición,40,4000,25,0.02786
+26,"Sonora",2010,Total,C,Bajo,Con la condición,1265,19998,140,0.02880
+26,"Sonora",2010,Total,Ninguno,Ninguno,Sin la condición,1265175,3528254,23002,0.00443
+26,"Sonora",2020,Mujeres,Todos,Todos,Con la condición,18122,161658,1030,0.01376
+26,"Sonora",2020,Mujeres,Todos,Todos,Sin la condición,784038,2147745,13681,0.00576
+26,"Sonora",2020,Mujeres,A,Alto,Con la condición,4020,58991,488,0.01597
+26,"Sonora",2020,Mujeres,A,Bajo,Con la condición,10839,117983,686,0.01544
+26,"Sonora",2020,Mujeres,B,Alto,Con la condición,4804,39354,260,0.02842
+26,"Sonora",2020,Mujeres,B,Bajo,Con la condición,11258,78707,653,0.01918
+26,"Sonora",2020,Mujeres,C,Alto,Con la condición,23,2304,13,0.03863
+26,"Sonora",2020,Mujeres,C,Bajo,Con la condición,803,11519,55,0.04808
+26,"Sonora",2020,Mujeres,Ninguno,Ninguno,Sin la condición,741885,2032275,14400,0.00562
+26,"Sonora",2020,Hombres,Todos,Todos,Con la condición,13661,153465,1083,0.01211
+26,"Sonora",2020,Hombres,Todos,Todos,Sin la condición,697233,2038892,14389,0.00554
+26,"Sonora",2020,Hombres,A,Alto,Con la condición,2524,56002,427,0.01405
+26,"Sonora",2020,Hombres,A,Bajo,Con la condición,7704,112003,728,0.01313
+26,"Sonora",2020,Hombres,B,Alto,Con la condición,3698,37359,281,0.02494
+26,"Sonora",2020,Hombres,B,Bajo,Con la condición,8963,74718,388,0.02309
+26,"Sonora",2020,Hombres,C,Alto,Con la condición,22,2187,14,0.03723
+26,"Sonora",2020,Hombres,C,Bajo,Con la condición,510,10935,88,0.03147
+26,"Sonora",2020,Hombres,Ninguno,Ninguno,Sin la condición,659747,1929274,9629,0.00677
+26,"Sonora",2020,Total,Todos,Todos,Con la condición,31783,315123,2459,0.00850
+26,"Sonora",2020,Total,Todos,Todos,Sin la condición,1481270,4186637,32665,0.00370
+26,"Sonora",2020,Total,A,Alto,Con la condición,6544,114993,836,0.01122
+26,"Sonora",2020,Total,A,Bajo,Con la condición,18543,229986,1968,0.00859
+26,"Sonora",2020,Total,B,Alto,Con la condición,8502,76713,562,0.01854
+26,"Sonora",2020,Total,B,Bajo,Con la condición,20221,153425,1141,0.01402
+26,"Sonora",2020,Total,C,Alto,Con la condición,45,4491,38,0.02260
+26,"Sonora",2020,Total,C,Bajo,Con la condición,1313,22453,185,0.02415
+26,"Sonora",2020,Total,Ninguno,Ninguno,Sin la condición,1401632,3961549,20783,0.00464
+27,"Tabasco",2010,Mujeres,Todos,Todos,Con la condición,7876,49944,409,0.02523
+27,"Tabasco",2010,Mujeres,Todos,Todos,Sin la condición,266331,663536,5436,0.00931
+27,"Tabasco",2010,Mujeres,A,Alto,Con la condición,1753,17241,122,0.03831
+27,"Tabasco",2010,Mujeres,A,Bajo,Con la condición,4338,34482,264,0.02857
+27,"Tabasco",2010,Mujeres,B,Alto,Con la condición,1440,9122,71,0.06058
+27,"Tabasco",2010,Mujeres,B,Bajo,Con la condición,4099,18243,121,0.05312
+27,"Tabasco",2010,Mujeres,C,Alto,Con la condición,10,991,8,0.04925
+27,"Tabasco",2010,Mujeres,C,Bajo,Con la condición,426,4953,32,0.06938
+27,"Tabasco",2010,Mujeres,Ninguno,Ninguno,Sin la condición,252012,627862,3994,0.01086
+27,"Tabasco",2010,Hombres,Todos,Todos,Con la condición,4740,47412,355,0.02229
+27,"Tabasco",2010,Hombres,Todos,Todos,Sin la condición,216464,629908,4713,0.00969
+27,"Tabasco",2010,Hombres,A,Alto,Con la condición,719,16367,114,0.02688
+27,"Tabasco",2010,Hombres,A,Bajo,Con la condición,2228,32735,241,0.02271
+27,"Tabasco",2010,Hombres,B,Alto,Con la condición,867,8659,57,0.05565
+27,"Tabasco",2010,Hombres,B,Bajo,Con la condición,2891,17319,110,0.04978
+27,"Tabasco",2010,Hombres,C,Alto,Con la condición,9,940,6,0.05687
+27,"Tabasco",2010,Hombres,C,Bajo,Con la condición,133,4702,38,0.03763
+27,"Tabasco",2010,Hombres,Ninguno,Ninguno,Sin la condición,204826,596042,3605,0.01107
+27,"Tabasco",2010,Total,Todos,Todos,Con la condición,12616,97356,455,0.02204
+27,"Tabasco",2010,Total,Todos,Todos,Sin la condición,482795,1293444,6050,0.00871
+27,"Tabasco",2010,Total,A,Alto,Con la condición,2472,33609,216,0.02487
+27,"Tabasco",2010,Total,A,Bajo,Con la condición,6566,67217,379,0.02135
+27,"Tabasco",2010,Total,B,Alto,Con la condición,2306,17781,110,0.04485
+27,"Tabasco",2010,Total,B,Bajo,Con la condición,6990,35562,241,0.03584
+27,"Tabasco",2010,Total,C,Alto,Con la condición,19,1931,17,0.03378
+27,"Tabasco",2010,Total,C,Bajo,Con la condición,559,9656,77,0.03725
+27,"Tabasco",2010,Total,Ninguno,Ninguno,Sin la condición,456838,1223904,10343,0.00666
+27,"Tabasco",2020,Mujeres,Todos,Todos,Con la condición,6430,56077,316,0.02509
+27,"Tabasco",2020,Mujeres,Todos,Todos,Sin la condición,266975,745024,4201,0.01036
+27,"Tabasco",2020,Mujeres,A,Alto,Con la condición,1135,19359,130,0.02885
+27,"Tabasco",2020,Mujeres,A,Bajo,Con la condición,3204,38717,247,0.02454
+27,"Tabasco",2020,Mujeres,B,Alto,Con la condición,1176,10242,80,0.04990
+27,"Tabasco",2020,Mujeres,B,Bajo,Con la condición,3721,20484,163,0.04228
+27,"Tabasco",2020,Mujeres,C,Alto,Con la condición,11,1112,7,0.05265
+27,"Tabasco",2020,Mujeres,C,Bajo,Con la condición,239,5562,36,0.04730
+27,"Tabasco",2020,Mujeres,Ninguno,Ninguno,Sin la condición,252622,704969,4393,0.01013
+27,"Tabasco",2020,Hombres,Todos,Todos,Con la condición,2523,53235,395,0.01497
+27,"Tabasco",2020,Hombres,Todos,Todos,Sin la condición,205865,707264,5249,0.00878
+27,"Tabasco",2020,Hombres,A,Alto,Con la condición,184,18377,107,0.01347
+27,"Tabasco",2020,Hombres,A,Bajo,Con la condición,569,36755,220,0.01166
+27,"Tabasco",2020,Hombres,B,Alto,Con la condición,462,9723,66,0.03666
+27,"Tabasco",2020,Hombres,B,Bajo,Con la condición,2224,19446,104,0.04369
+27,"Tabasco",2020,Hombres,C,Alto,Con la condición,11,1056,6,0.05687
+27,"Tabasco",2020,Hombres,C,Bajo,Con la condición,53,5280,40,0.02202
+27,"Tabasco",2020,Hombres,Ninguno,Ninguno,Sin la condición,194797,669239,4532,0.00945
+27,"Tabasco",2020,Total,Todos,Todos,Con la condición,8953,109312,885,0.01291
+27,"Tabasco",2020,Total,Todos,Todos,Sin la condición,472840,1452288,11763,0.00605
+27,"Tabasco",2020,Total,A,Alto,Con la condición,977,37736,318,0.01247
+27,"Tabasco",2020,Total,A,Bajo,Con la condición,3774,75472,371,0.01584
+27,"Tabasco",2020,Total,B,Alto,Con la condición,1638,19965,129,0.03383
+27,"Tabasco",2020,Total,B,Bajo,Con la condición,5945,39929,330,0.02743
+27,"Tabasco",2020,Total,C,Alto,Con la condición,22,2168,12,0.04021
+27,"Tabasco",2020,Total,C,Bajo,Con la condición,110,10841,93,0.01458
+27,"Tabasco",2020,Total,Ninguno,Ninguno,Sin la condición,447418,1374208,8869,0.00697
+28,"Tamaulipas",2010,Mujeres,Todos,Todos,Con la condición,9986,100583,549,0.01787
+28,"Tamaulipas",2010,Mujeres,Todos,Todos,Sin la condición,446202,1336320,7299,0.00773
+28,"Tamaulipas",2010,Mujeres,A,Alto,Con la condición,1172,32121,159,0.02081
+28,"Tamaulipas",2010,Mujeres,A,Bajo,Con la condición,5230,64241,537,0.01652
+28,"Tamaulipas",2010,Mujeres,B,Alto,Con la condición,2388,21325,158,0.03512
+28,"Tamaulipas",2010,Mujeres,B,Bajo,Con la condición,6740,42650,214,0.03491
+28,"Tamaulipas",2010,Mujeres,C,Alto,Con la condición,19,1870,11,0.04200
+28,"Tamaulipas",2010,Mujeres,C,Bajo,Con la condición,542,9351,56,0.04372
+28,"Tamaulipas",2010,Mujeres,Ninguno,Ninguno,Sin la condición,422213,1264475,8340,0.00723
+28,"Tamaulipas",2010,Hombres,Todos,Todos,Con la condición,3902,95485,731,0.01025
+28,"Tamaulipas",2010,Hombres,Todos,Todos,Sin la condición,349481,1268592,9717,0.00635
+28,"Tamaulipas",2010,Hombres,A,Alto,Con la condición,305,30493,174,0.01056
+28,"Tamaulipas",2010,Hombres,A,Bajo,Con la condición,1402,60985,500,0.00938
+28,"Tamaulipas",2010,Hombres,B,Alto,Con la condición,1084,20244,124,0.02831
+28,"Tamaulipas",2010,Hombres,B,Bajo,Con la condición,4034,40489,276,0.02524
+28,"Tamaulipas",2010,Hombres,C,Alto,Con la condición,18,1775,11,0.04200
+28,"Tamaulipas",2010,Hombres,C,Bajo,Con la condición,89,8877,51,0.01951
+28,"Tamaulipas",2010,Hombres,Ninguno,Ninguno,Sin la condición,330692,1200388,7058,0.00744
+28,"Tamaulipas",2010,Total,Todos,Todos,Con la condición,13889,196069,1478,0.00934
+28,"Tamaulipas",2010,Total,Todos,Todos,Sin la condición,795683,2604911,19638,0.00460
+28,"Tamaulipas",2010,Total,A,Alto,Con la condición,626,62613,500,0.00623
+28,"Tamaulipas",2010,Total,A,Bajo,Con la condición,6632,125226,761,0.01137
+28,"Tamaulipas",2010,Total,B,Alto,Con la condición,3472,41569,287,0.02287
+28,"Tamaulipas",2010,Total,B,Bajo,Con la condición,10774,83139,481,0.02144
+28,"Tamaulipas",2010,Total,C,Alto,Con la condición,36,3646,30,0.02543
+28,"Tamaulipas",2010,Total,C,Bajo,Con la condición,538,18228,122,0.02146
+28,"Tamaulipas",2010,Total,Ninguno,Ninguno,Sin la condición,752905,2464862,20449,0.00451
+28,"Tamaulipas",2020,Mujeres,Todos,Todos,Con la condición,4445,112935,561,0.01149
+28,"Tamaulipas",2020,Mujeres,Todos,Todos,Sin la condición,411090,1500429,7449,0.00723
+28,"Tamaulipas",2020,Mujeres,A,Alto,Con la condición,361,36065,176,0.01050
+28,"Tamaulipas",2020,Mujeres,A,Bajo,Con la condición,1550,72130,355,0.01077
+28,"Tamaulipas",2020,Mujeres,B,Alto,Con la condición,1247,23944,157,0.02482
+28,"Tamaulipas",2020,Mujeres,B,Bajo,Con la condición,4699,47888,341,0.02255
+28,"Tamaulipas",2020,Mujeres,C,Alto,Con la condición,21,2100,12,0.04021
+28,"Tamaulipas",2020,Mujeres,C,Bajo,Con la condición,105,10500,67,0.01702
+28,"Tamaulipas",2020,Mujeres,Ninguno,Ninguno,Sin la condición,388988,1419760,7924,0.00701
+28,"Tamaulipas",2020,Hombres,Todos,Todos,Con la condición,3216,107212,891,0.00800
+28,"Tamaulipas",2020,Hombres,Todos,Todos,Sin la condición,309988,1424384,11836,0.00531
+28,"Tamaulipas",2020,Hombres,A,Alto,Con la condición,342,34237,201,0.00983
+28,"Tamaulipas",2020,Hombres,A,Bajo,Con la condición,830,68475,346,0.00824
+28,"Tamaulipas",2020,Hombres,B,Alto,Con la condición,971,22730,179,0.02116
+28,"Tamaulipas",2020,Hombres,B,Bajo,Con la condición,4035,45461,326,0.02205
+28,"Tamaulipas",2020,Hombres,C,Alto,Con la condición,20,1993,15,0.03597
+28,"Tamaulipas",2020,Hombres,C,Bajo,Con la condición,100,9967,83,0.01529
+28,"Tamaulipas",2020,Hombres,Ninguno,Ninguno,Sin la condición,293322,1347804,10446,0.00565
+28,"Tamaulipas",2020,Total,Todos,Todos,Con la condición,6604,220147,1367,0.00646
+28,"Tamaulipas",2020,Total,Todos,Todos,Sin la condición,721078,2924813,18157,0.00448
+28,"Tamaulipas",2020,Total,A,Alto,Con la condición,703,70302,563,0.00587
+28,"Tamaulipas",2020,Total,A,Bajo,Con la condición,1705,140605,780,0.00549
+28,"Tamaulipas",2020,Total,B,Alto,Con la condición,1993,46674,348,0.01517
+28,"Tamaulipas",2020,Total,B,Bajo,Con la condición,8285,93349,795,0.01412
+28,"Tamaulipas",2020,Total,C,Alto,Con la condición,41,4093,29,0.02587
+28,"Tamaulipas",2020,Total,C,Bajo,Con la condición,205,20467,129,0.01226
+28,"Tamaulipas",2020,Total,Ninguno,Ninguno,Sin la condición,682310,2767565,21381,0.00413
+29,"Tlaxcala",2010,Mujeres,Todos,Todos,Con la condición,17177,70003,548,0.02573
+29,"Tlaxcala",2010,Mujeres,Todos,Todos,Sin la condición,442216,930039,7275,0.00820
+29,"Tlaxcala",2010,Mujeres,A,Alto,Con la condición,3510,20976,120,0.04770
+29,"Tlaxcala",2010,Mujeres,A,Bajo,Con la condición,9570,41952,349,0.03145
+29,"Tlaxcala",2010,Mujeres,B,Alto,Con la condición,4226,17157,95,0.06189
+29,"Tlaxcala",2010,Mujeres,B,Bajo,Con la condición,10226,34314,178,0.04800
+29,"Tlaxcala",2010,Mujeres,C,Alto,Con la condición,139,1258,9,0.14631
+29,"Tlaxcala",2010,Mujeres,C,Bajo,Con la condición,1230,6291,39,0.08891
+29,"Tlaxcala",2010,Mujeres,Ninguno,Ninguno,Sin la condición,418441,880037,5641,0.00931
+29,"Tlaxcala",2010,Hombres,Todos,Todos,Con la condición,13234,66455,339,0.03037
+29,"Tlaxcala",2010,Hombres,Todos,Todos,Sin la condición,378987,882903,4503,0.01033
+29,"Tlaxcala",2010,Hombres,A,Alto,Con la condición,2411,19913,138,0.03888
+29,"Tlaxcala",2010,Hombres,A,Bajo,Con la condición,7244,39826,330,0.02973
+29,"Tlaxcala",2010,Hombres,B,Alto,Con la condición,3259,16288,131,0.04893
+29,"Tlaxcala",2010,Hombres,B,Bajo,Con la condición,8202,32575,243,0.03898
+29,"Tlaxcala",2010,Hombres,C,Alto,Con la condición,77,1195,10,0.10857
+29,"Tlaxcala",2010,Hombres,C,Bajo,Con la condición,892,5973,47,0.07278
+29,"Tlaxcala",2010,Hombres,Ninguno,Ninguno,Sin la condición,358611,835435,6953,0.00831
+29,"Tlaxcala",2010,Total,Todos,Todos,Con la condición,30411,136458,848,0.02001
+29,"Tlaxcala",2010,Total,Todos,Todos,Sin la condición,821203,1812942,11260,0.00657
+29,"Tlaxcala",2010,Total,A,Alto,Con la condición,5921,40889,286,0.02913
+29,"Tlaxcala",2010,Total,A,Bajo,Con la condición,16814,81777,387,0.02876
+29,"Tlaxcala",2010,Total,B,Alto,Con la condición,7485,33445,247,0.03713
+29,"Tlaxcala",2010,Total,B,Bajo,Con la condición,18428,66889,398,0.03135
+29,"Tlaxcala",2010,Total,C,Alto,Con la condición,216,2453,20,0.08868
+29,"Tlaxcala",2010,Total,C,Bajo,Con la condición,2122,12264,59,0.06895
+29,"Tlaxcala",2010,Total,Ninguno,Ninguno,Sin la condición,777052,1715472,8856,0.00741
+29,"Tlaxcala",2020,Mujeres,Todos,Todos,Con la condición,25068,78600,560,0.02757
+29,"Tlaxcala",2020,Mujeres,Todos,Todos,Sin la condición,573329,1044254,7438,0.00808
+29,"Tlaxcala",2020,Mujeres,A,Alto,Con la condición,5673,23552,162,0.04704
+29,"Tlaxcala",2020,Mujeres,A,Bajo,Con la condición,14210,47104,353,0.03420
+29,"Tlaxcala",2020,Mujeres,B,Alto,Con la condición,6162,19264,124,0.05864
+29,"Tlaxcala",2020,Mujeres,B,Bajo,Con la condición,14316,38528,200,0.04784
+29,"Tlaxcala",2020,Mujeres,C,Alto,Con la condición,260,1413,7,0.20506
+29,"Tlaxcala",2020,Mujeres,C,Bajo,Con la condición,1901,7064,46,0.09155
+29,"Tlaxcala",2020,Mujeres,Ninguno,Ninguno,Sin la condición,542505,988112,6185,0.00886
+29,"Tlaxcala",2020,Hombres,Todos,Todos,Con la condición,20799,74616,409,0.03104
+29,"Tlaxcala",2020,Hombres,Todos,Todos,Sin la condición,504444,991330,5439,0.00949
+29,"Tlaxcala",2020,Hombres,A,Alto,Con la condición,4487,22358,173,0.04263
+29,"Tlaxcala",2020,Hombres,A,Bajo,Con la condición,11693,44716,331,0.03382
+29,"Tlaxcala",2020,Hombres,B,Alto,Con la condición,5115,18288,150,0.05131
+29,"Tlaxcala",2020,Hombres,B,Bajo,Con la condición,12121,36576,212,0.04526
+29,"Tlaxcala",2020,Hombres,C,Alto,Con la condición,193,1341,7,0.18571
+29,"Tlaxcala",2020,Hombres,C,Bajo,Con la condición,1535,6706,50,0.08318
+29,"Tlaxcala",2020,Hombres,Ninguno,Ninguno,Sin la condición,477323,938032,7037,0.00834
+29,"Tlaxcala",2020,Total,Todos,Todos,Con la condición,45867,153216,1321,0.01764
+29,"Tlaxcala",2020,Total,Todos,Todos,Sin la condición,1077773,2035584,17554,0.00527
+29,"Tlaxcala",2020,Total,A,Alto,Con la condición,10160,45910,246,0.03705
+29,"Tlaxcala",2020,Total,A,Bajo,Con la condición,25903,91820,795,0.02234
+29,"Tlaxcala",2020,Total,B,Alto,Con la condición,11277,37552,312,0.03633
+29,"Tlaxcala",2020,Total,B,Bajo,Con la condición,26437,75104,466,0.03097
+29,"Tlaxcala",2020,Total,C,Alto,Con la condición,453,2754,22,0.11065
+29,"Tlaxcala",2020,Total,C,Bajo,Con la condición,3436,13770,78,0.06860
+29,"Tlaxcala",2020,Total,Ninguno,Ninguno,Sin la condición,1019828,1926144,12584,0.00623
+30,"Veracruz",2010,Mujeres,Todos,Todos,Con la condición,2481,82694,579,0.00993
+30,"Veracruz",2010,Mujeres,Todos,Todos,Sin la condición,305441,1098642,7693,0.00715
+30,"Veracruz",2010,Mujeres,A,Alto,Con la condición,268,26827,203,0.00978
+30,"Veracruz",2010,Mujeres,A,Bajo,Con la condición,537,53654,427,0.00674
+30,"Veracruz",2010,Mujeres,B,Alto,Con la condición,918,21159,139,0.02419
+30,"Veracruz",2010,Mujeres,B,Bajo,Con la condición,3307,42318,267,0.02300
+30,"Veracruz",2010,Mujeres,C,Alto,Con la condición,16,1558,8,0.04925
+30,"Veracruz",2010,Mujeres,C,Bajo,Con la condición,78,7789,45,0.02077
+30,"Veracruz",2010,Mujeres,Ninguno,Ninguno,Sin la condición,289019,1039576,6653,0.00769
+30,"Veracruz",2010,Hombres,Todos,Todos,Con la condición,2355,78502,494,0.01075
+30,"Veracruz",2010,Hombres,Todos,Todos,Sin la condición,249506,1042962,6561,0.00737
+30,"Veracruz",2010,Hombres,A,Alto,Con la condición,255,25467,212,0.00957
+30,"Veracruz",2010,Hombres,A,Bajo,Con la condición,509,50935,310,0.00791
+30,"Veracruz",2010,Hombres,B,Alto,Con la condición,871,20087,113,0.02683
+30,"Veracruz",2010,Hombres,B,Bajo,Con la condición,3140,40174,336,0.02050
+30,"Veracruz",2010,Hombres,C,Alto,Con la condición,15,1479,12,0.04021
+30,"Veracruz",2010,Hombres,C,Bajo,Con la condición,74,7394,35,0.02355
+30,"Veracruz",2010,Hombres,Ninguno,Ninguno,Sin la condición,236092,986888,5710,0.00790
+30,"Veracruz",2010,Total,Todos,Todos,Con la condición,4836,161196,774,0.00858
+30,"Veracruz",2010,Total,Todos,Todos,Sin la condición,554947,2141604,10278,0.00605
+30,"Veracruz",2010,Total,A,Alto,Con la condición,523,52294,432,0.00670
+30,"Veracruz",2010,Total,A,Bajo,Con la condición,1046,104589,873,0.00471
+30,"Veracruz",2010,Total,B,Alto,Con la condición,1789,41246,343,0.01540
+30,"Veracruz",2010,Total,B,Bajo,Con la condición,6447,82492,639,0.01487
+30,"Veracruz",2010,Total,C,Alto,Con la condición,30,3036,16,0.03482
+30,"Veracruz",2010,Total,C,Bajo,Con la condición,152,15182,110,0.01328
+30,"Veracruz",2010,Total,Ninguno,Ninguno,Sin la condición,525111,2026464,14273,0.00513
+30,"Veracruz",2020,Mujeres,Todos,Todos,Con la condición,8049,92849,745,0.01443
+30,"Veracruz",2020,Mujeres,Todos,Todos,Sin la condición,413245,1233564,9893,0.00664
+30,"Veracruz",2020,Mujeres,A,Alto,Con la condición,1388,30122,212,0.02016
+30,"Veracruz",2020,Mujeres,A,Bajo,Con la condición,3165,60243,294,0.01822
+30,"Veracruz",2020,Mujeres,B,Alto,Con la condición,2377,23758,122,0.03804
+30,"Veracruz",2020,Mujeres,B,Bajo,Con la condición,6407,47515,388,0.02428
+30,"Veracruz",2020,Mujeres,C,Alto,Con la condición,17,1749,15,0.03597
+30,"Veracruz",2020,Mujeres,C,Bajo,Con la condición,87,8745,64,0.01741
+30,"Veracruz",2020,Mujeres,Ninguno,Ninguno,Sin la condición,391027,1167243,6654,0.00810
+30,"Veracruz",2020,Hombres,Todos,Todos,Con la condición,3009,88143,665,0.00986
+30,"Veracruz",2020,Hombres,Todos,Todos,Sin la condición,330765,1171044,8834,0.00671
+30,"Veracruz",2020,Hombres,A,Alto,Con la condición,286,28595,141,0.01173
+30,"Veracruz",2020,Hombres,A,Bajo,Con la condición,572,57190,455,0.00653
+30,"Veracruz",2020,Hombres,B,Alto,Con la condición,1072,22554,179,0.02226
+30,"Veracruz",2020,Hombres,B,Bajo,Con la condición,3712,45107,211,0.02649
+30,"Veracruz",2020,Hombres,C,Alto,Con la condición,17,1660,13,0.03863
+30,"Veracruz",2020,Hombres,C,Bajo,Con la condición,83,8302,48,0.02011
+30,"Veracruz",2020,Hombres,Ninguno,Ninguno,Sin la condición,312982,1108085,6759,0.00767
+30,"Veracruz",2020,Total,Todos,Todos,Con la condición,11058,180992,1440,0.00884
+30,"Veracruz",2020,Total,Todos,Todos,Sin la condición,744009,2404608,19137,0.00468
+30,"Veracruz",2020,Total,A,Alto,Con la condición,1203,58716,327,0.01097
+30,"Veracruz",2020,Total,A,Bajo,Con la condición,3164,117433,702,0.00856
+30,"Veracruz",2020,Total,B,Alto,Con la condición,3449,46311,250,0.02325
+30,"Veracruz",2020,Total,B,Bajo,Con la condición,10119,92622,775,0.01569
+30,"Veracruz",2020,Total,C,Alto,Con la condición,34,3409,29,0.02587
+30,"Veracruz",2020,Total,C,Bajo,Con la condición,170,17047,145,0.01157
+30,"Veracruz",2020,Total,Ninguno,Ninguno,Sin la condición,704009,2275328,13170,0.00564
+31,"Yucatán",2010,Mujeres,Todos,Todos,Con la condición,21280,77085,589,0.02579
+31,"Yucatán",2010,Mujeres,Todos,Todos,Sin la condición,561105,1024131,7828,0.00788
+31,"Yucatán",2010,Mujeres,A,Alto,Con la condición,7482,32288,222,0.03965
+31,"Yucatán",2010,Mujeres,A,Bajo,Con la condición,15330,64575,527,0.02595
+31,"Yucatán",2010,Mujeres,B,Alto,Con la condición,4325,14653,76,0.07325
+31,"Yucatán",2010,Mujeres,B,Bajo,Con la condición,9925,29306,228,0.04388
+31,"Yucatán",2010,Mujeres,C,Alto,Con la condición,163,1298,6,0.18927
+31,"Yucatán",2010,Mujeres,C,Bajo,Con la condición,1439,6490,42,0.08975
+31,"Yucatán",2010,Mujeres,Ninguno,Ninguno,Sin la condición,530938,969070,7461,0.00807
+31,"Yucatán",2010,Hombres,Todos,Todos,Con la condición,15915,73178,601,0.02356
+31,"Yucatán",2010,Hombres,Todos,Todos,Sin la condición,475722,972226,7986,0.00783
+31,"Yucatán",2010,Hombres,A,Alto,Con la condición,5307,30651,193,0.03813
+31,"Yucatán",2010,Hombres,A,Bajo,Con la condición,10962,61302,417,0.02627
+31,"Yucatán",2010,Hombres,B,Alto,Con la condición,3291,13910,87,0.06379
+31,"Yucatán",2010,Hombres,B,Bajo,Con la condición,7793,27821,206,0.04380
+31,"Yucatán",2010,Hombres,C,Alto,Con la condición,82,1232,7,0.13213
+31,"Yucatán",2010,Hombres,C,Bajo,Con la condición,1006,6162,34,0.08873
+31,"Yucatán",2010,Hombres,Ninguno,Ninguno,Sin la condición,450146,919956,6516,0.00867
+31,"Yucatán",2010,Total,Todos,Todos,Con la condición,37195,150263,968,0.01942
+31,"Yucatán",2010,Total,Todos,Todos,Sin la condición,1036827,1996357,12863,0.00617
+31,"Yucatán",2010,Total,A,Alto,Con la condición,12789,62939,489,0.02547
+31,"Yucatán",2010,Total,A,Bajo,Con la condición,26292,125878,811,0.01998
+31,"Yucatán",2010,Total,B,Alto,Con la condición,7617,28563,232,0.04065
+31,"Yucatán",2010,Total,B,Bajo,Con la condición,17718,57127,271,0.03934
+31,"Yucatán",2010,Total,C,Alto,Con la condición,245,2530,17,0.10043
+31,"Yucatán",2010,Total,C,Bajo,Con la condición,2445,12652,100,0.05528
+31,"Yucatán",2010,Total,Ninguno,Ninguno,Sin la condición,981083,1889026,11094,0.00664
+31,"Yucatán",2020,Mujeres,Todos,Todos,Con la condición,19598,86552,690,0.02231
+31,"Yucatán",2020,Mujeres,Todos,Todos,Sin la condición,572956,1149901,9172,0.00731
+31,"Yucatán",2020,Mujeres,A,Alto,Con la condición,6602,36253,273,0.03270
+31,"Yucatán",2020,Mujeres,A,Bajo,Con la condición,13615,72506,408,0.02707
+31,"Yucatán",2020,Mujeres,B,Alto,Con la condición,4040,16452,137,0.05148
+31,"Yucatán",2020,Mujeres,B,Bajo,Con la condición,9511,32905,246,0.04046
+31,"Yucatán",2020,Mujeres,C,Alto,Con la condición,110,1458,10,0.11716
+31,"Yucatán",2020,Mujeres,C,Bajo,Con la condición,1255,7288,39,0.08463
+31,"Yucatán",2020,Mujeres,Ninguno,Ninguno,Sin la condición,542152,1088079,6408,0.00874
+31,"Yucatán",2020,Hombres,Todos,Todos,Con la condición,16112,82165,442,0.02644
+31,"Yucatán",2020,Hombres,Todos,Todos,Sin la condición,510799,1091622,5874,0.00911
+31,"Yucatán",2020,Hombres,A,Alto,Con la condición,5223,34415,174,0.03808
+31,"Yucatán",2020,Hombres,A,Bajo,Con la condición,10836,68831,375,0.02633
+31,"Yucatán",2020,Hombres,B,Alto,Con la condición,3361,15619,130,0.05046
+31,"Yucatán",2020,Hombres,B,Bajo,Con la condición,8082,31237,235,0.03999
+31,"Yucatán",2020,Hombres,C,Alto,Con la condición,63,1384,8,0.10308
+31,"Yucatán",2020,Hombres,C,Bajo,Con la condición,981,6918,37,0.08030
+31,"Yucatán",2020,Hombres,Ninguno,Ninguno,Sin la condición,483336,1032933,5393,0.00951
+31,"Yucatán",2020,Total,Todos,Todos,Con la condición,35711,168717,852,0.01959
+31,"Yucatán",2020,Total,Todos,Todos,Sin la condición,1083755,2241523,11320,0.00658
+31,"Yucatán",2020,Total,A,Alto,Con la condición,11825,70668,484,0.02375
+31,"Yucatán",2020,Total,A,Bajo,Con la condición,24451,141336,1048,0.01636
+31,"Yucatán",2020,Total,B,Alto,Con la condición,7402,32071,260,0.03658
+31,"Yucatán",2020,Total,B,Bajo,Con la condición,17593,64142,420,0.03048
+31,"Yucatán",2020,Total,C,Alto,Con la condición,173,2841,23,0.06986
+31,"Yucatán",2020,Total,C,Bajo,Con la condición,2236,14206,83,0.05596
+31,"Yucatán",2020,Total,Ninguno,Ninguno,Sin la condición,1025489,2121011,16788,0.00540
+32,"Zacatecas",2010,Mujeres,Todos,Todos,Con la condición,41384,97513,461,0.03223
+32,"Zacatecas",2010,Mujeres,Todos,Todos,Sin la condición,902989,1295528,6122,0.00822
+32,"Zacatecas",2010,Mujeres,A,Alto,Con la condición,13088,37293,183,0.04939
+32,"Zacatecas",2010,Mujeres,A,Bajo,Con la condición,29573,74586,413,0.03370
+32,"Zacatecas",2010,Mujeres,B,Alto,Con la condición,9151,20386,155,0.05593
+32,"Zacatecas",2010,Mujeres,B,Bajo,Con la condición,19045,40772,276,0.04204
+32,"Zacatecas",2010,Mujeres,C,Alto,Con la condición,427,1472,13,0.17626
+32,"Zacatecas",2010,Mujeres,C,Bajo,Con la condición,2826,7358,62,0.08648
+32,"Zacatecas",2010,Mujeres,Ninguno,Ninguno,Sin la condición,854442,1225876,8126,0.00714
+32,"Zacatecas",2010,Hombres,Todos,Todos,Con la condición,35741,92571,779,0.02442
+32,"Zacatecas",2010,Hombres,Todos,Todos,Sin la condición,810115,1229868,10347,0.00653
+32,"Zacatecas",2010,Hombres,A,Alto,Con la condición,11068,35403,201,0.04578
+32,"Zacatecas",2010,Hombres,A,Bajo,Con la condición,25362,70806,358,0.03548
+32,"Zacatecas",2010,Hombres,B,Alto,Con la condición,7946,19353,97,0.06993
+32,"Zacatecas",2010,Hombres,B,Bajo,Con la condición,16597,38705,207,0.04816
+32,"Zacatecas",2010,Hombres,C,Alto,Con la condición,352,1397,9,0.20264
+32,"Zacatecas",2010,Hombres,C,Bajo,Con la condición,2415,6985,43,0.10154
+32,"Zacatecas",2010,Hombres,Ninguno,Ninguno,Sin la condición,766560,1163746,7539,0.00765
+32,"Zacatecas",2010,Total,Todos,Todos,Con la condición,77126,190084,1014,0.02159
+32,"Zacatecas",2010,Total,Todos,Todos,Sin la condición,1713104,2525396,13475,0.00563
+32,"Zacatecas",2010,Total,A,Alto,Con la condición,24156,72696,597,0.02699
+32,"Zacatecas",2010,Total,A,Bajo,Con la condición,54936,145392,999,0.02148
+32,"Zacatecas",2010,Total,B,Alto,Con la condición,17096,39738,313,0.03918
+32,"Zacatecas",2010,Total,B,Bajo,Con la condición,35641,79477,446,0.03297
+32,"Zacatecas",2010,Total,C,Alto,Con la condición,780,2869,14,0.16645
+32,"Zacatecas",2010,Total,C,Bajo,Con la condición,5241,14344,76,0.07733
+32,"Zacatecas",2010,Total,Ninguno,Ninguno,Sin la condición,1621002,2389622,17524,0.00494
+32,"Zacatecas",2020,Mujeres,Todos,Todos,Con la condición,56770,109488,524,0.03056
+32,"Zacatecas",2020,Mujeres,Todos,Todos,Sin la condición,1150769,1454628,6956,0.00682
+32,"Zacatecas",2020,Mujeres,A,Alto,Con la condición,18635,41873,273,0.04211
+32,"Zacatecas",2020,Mujeres,A,Bajo,Con la condición,41086,83746,544,0.03001
+32,"Zacatecas",2020,Mujeres,B,Alto,Con la condición,12428,22889,197,0.04969
+32,"Zacatecas",2020,Mujeres,B,Bajo,Con la condición,25691,45779,229,0.04591
+32,"Zacatecas",2020,Mujeres,C,Alto,Con la condición,635,1652,10,0.21537
+32,"Zacatecas",2020,Mujeres,C,Bajo,Con la condición,3950,8262,45,0.10425
+32,"Zacatecas",2020,Mujeres,Ninguno,Ninguno,Sin la condición,1088900,1376422,10336,0.00560
+32,"Zacatecas",2020,Hombres,Todos,Todos,Con la condición,49160,103939,650,0.02742
+32,"Zacatecas",2020,Hombres,Todos,Todos,Sin la condición,1029564,1380905,8635,0.00656
+32,"Zacatecas",2020,Hombres,A,Alto,Con la condición,15881,39751,211,0.04721
+32,"Zacatecas",2020,Hombres,A,Bajo,Con la condición,35384,79502,458,0.03251
+32,"Zacatecas",2020,Hombres,B,Alto,Con la condición,10809,21729,182,0.05189
+32,"Zacatecas",2020,Hombres,B,Bajo,Con la condición,22410,43458,363,0.03672
+32,"Zacatecas",2020,Hombres,C,Alto,Con la condición,532,1569,11,0.19981
+32,"Zacatecas",2020,Hombres,C,Bajo,Con la condición,3393,7843,38,0.11252
+32,"Zacatecas",2020,Hombres,Ninguno,Ninguno,Sin la condición,974211,1306663,8588,0.00658
+32,"Zacatecas",2020,Total,Todos,Todos,Con la condición,105930,213427,1665,0.01715
+32,"Zacatecas",2020,Total,Todos,Todos,Sin la condición,2180334,2835533,22116,0.00397
+32,"Zacatecas",2020,Total,A,Alto,Con la condición,34516,81624,567,0.02905
+32,"Zacatecas",2020,Total,A,Bajo,Con la condición,76470,163247,987,0.02224
+32,"Zacatecas",2020,Total,B,Alto,Con la condición,23237,44618,214,0.04781
+32,"Zacatecas",2020,Total,B,Bajo,Con la condición,48102,89237,757,0.02536
+32,"Zacatecas",2020,Total,C,Alto,Con la condición,1167,3221,24,0.13736
+32,"Zacatecas",2020,Total,C,Bajo,Con la condición,7343,16105,107,0.06741
+32,"Zacatecas",2020,Total,Ninguno,Ninguno,Sin la condición,2063111,2683085,14768,0.00486

@@ -23,13 +23,30 @@
 // (un nombre de esta lista o un objeto {claro, oscuro}). Resultado de
 // `validate_palette.js` junto al rojo y al azul semánticos, en su tema y
 // exigiendo separación entre TODOS los pares (npm run verificar:paleta):
-//   petroleo  pasa en claro y en oscuro. Es el tono por omisión.
+//   petroleoIbero  pasa en claro y en oscuro, sin más avisos que los de
+//             diseño (extremo casi blanco de la rampa, gris de comparación).
+//             Es el tono por omisión desde el 18 de noviembre de 2026: se
+//             eligió en la Muestra de colores de la Plantilla (propuesta A,
+//             REGLAS R114a). Matiz 185° en OKLCH, el opuesto del rojo Ibero
+//             (27°); su rampa son nueve pasos de UNA tinta con luminosidad
+//             uniforme (0.955 a 0.315 en claro, 0.27 a 0.91 en oscuro), así
+//             que también pasa como nueve clases.
+//   petroleo  el tono anterior; pasa en claro y en oscuro.
 //   ocre      pasa en claro; en oscuro pasa con AVISO (separación con el
 //             rojo de 7.0 bajo protanopía, en la banda mínima de 6 a 8): ahí
 //             el color tiene que ir acompañado de rótulo directo.
 // Un verde azulado más profundo (#0F766E, #0E7C86) NO pasa: su croma queda
 // bajo 0.10 (se lee gris) y se separa del azul menos de 15.
+// Un tono puede traer su `rampa` {claro, oscuro} ya diseñada (anclas, del
+// valor bajo al alto); sin ella, la rampa se deriva del tono (anclasDe).
 export const TONOS = {
+  petroleoIbero: {
+    claro: "#008e82", oscuro: "#009580",
+    rampa: {
+      claro: ["#d6f9f3", "#a3e5db", "#4ad5c6", "#23bbad", "#00a093", "#00857a", "#006b62", "#00524b", "#003b35"],
+      oscuro: ["#002e26", "#00453a", "#005e50", "#007766", "#00927d", "#15ad95", "#41c7ae", "#7addc7", "#c4ebe1"],
+    },
+  },
   petroleo: {claro: "#0E9384", oscuro: "#22AB8A"},
   ocre: {claro: "#B87709", oscuro: "#9A5A0A"},
 };
@@ -46,11 +63,15 @@ const CLARO = {
   // Semánticos.
   rojo: "#C4101B", azul: "#2166AC", gris: "#8a8a86",
   rojoTexto: "#c4101b", rojoFuerte: "#9c0d16",
-  // Divergente de nueve tonos: rojos, gris al centro, azules.
-  divergente: ["#67001F", "#B2182B", "#D6604D", "#F4A582", "#E8E6E1", "#92C5DE", "#4393C3", "#2166AC", "#053061"],
-  // Identidad (categorías sin orden): tres tonos fijos (verde azulado, ocre y
-  // terracota) y gris para «Otras». No dependen del tono de tema.
-  categorias: ["#0E9384", "#B87709", "#863913"], otras: "#8a8a86",
+  // Divergente de nueve tonos: rojos, gris al centro, azules. Los extremos
+  // claros de cada brazo se llevaron a 2:1 contra el blanco (#F4A582 daba
+  // 1.99:1 y #92C5DE 1.86:1): mismo matiz, luminosidad 0.77.
+  divergente: ["#67001F", "#B2182B", "#D6604D", "#eb9e84", "#E8E6E1", "#85b9d8", "#4393C3", "#2166AC", "#053061"],
+  // Identidad (categorías sin orden): tres tonos fijos (petróleo, ocre y
+  // verde) y gris para «Otras». No dependen del tono de tema. Sustituyen al
+  // trío con terracota (#863913), que con protanopía era el mismo rojo de
+  // «desfavorable» (ΔE 1.8); este se separa del rojo y del azul en claro.
+  categorias: ["#00a18d", "#bf7900", "#006e47"], otras: "#8a8a86",
   // Mapa bivariado (3 × 3), indexado [a][b]: `a` es el tercil del eje A
   // (rojo, el horizontal de la leyenda) y `b` el del eje B (azul, el
   // vertical). En el bivariado, «los dos altos» sale morada por la mezcla: es la
@@ -69,7 +90,9 @@ const OSCURO = {
   rojo: "#E8474F", azul: "#4A90D9", gris: "#8a8a86",
   rojoTexto: "#f27076", rojoFuerte: "#f27076",
   divergente: ["#FFB3B8", "#F27C82", "#E8474F", "#A32C34", "#4A4A45", "#2C5C8C", "#4A90D9", "#7FB6EA", "#B8D8F7"],
-  categorias: ["#22AB8A", "#B28834", "#A84832"], otras: "#8a8a86",
+  // En oscuro ningún trío posible separa los tres tonos del rojo (búsqueda
+  // de 1,717 tríos); el mejor deja el ocre a ΔE 6.0 con deuteranopía.
+  categorias: ["#009784", "#d77800", "#1f7200"], otras: "#8a8a86",
   // En oscuro la luminosidad se invierte: «los dos altos» es la celda más clara.
   bivariado: [["#2E2E2C", "#2C4356", "#4E88B8"], ["#6A3036", "#5A5A63", "#7A94D0"], ["#8C4048", "#A0707C", "#C2AAE2"]],
   blanco: "#ffffff", negro: "#1d1d1b",
@@ -81,6 +104,9 @@ const FIJOS = {
   tapaRojo: "#c4101b", tapaGris: "#6b6966", placaLogo: "#ffffff",
   // Crema de la tapa con imagen: el fondo de las ilustraciones del equipo.
   tapaCrema: "#f8f5ee",
+  // Negro pleno: solo para texto sobre los tonos medios de una rampa, donde
+  // ni el blanco ni la tinta negra del libro llegan a 4.5:1 (ver tintaSobre).
+  negroPleno: "#000000",
 };
 
 // ---------------------------------------------------------- color en OKLab
@@ -129,13 +155,13 @@ function anclasDe(serie, oscuro) {
 }
 // Rampa del tono en su versión CLARA, sin importar el tema: para la tapa del
 // libro, que es un objeto claro también de noche.
-export const rampaClara = () => porTramos(anclasDe(tono.claro, false));
+export const rampaClara = () => porTramos(tono.rampa?.claro ?? anclasDe(tono.claro, false));
 // Luminosidad percibida (0 a 1), para elegir la tinta sobre un relleno.
 export const luminosidad = (hex) => aOklab(hex)[0];
 
 // ------------------------------------------------------------------ estado
 export const MODO = {oscuro: false};
-let tono = TONOS.petroleo;
+let tono = TONOS.petroleoIbero;
 // Paleta viva: las gráficas la leen al dibujar. Se reescribe en sitio al
 // cambiar de tema o de tono, así que nunca se guarda una copia de sus campos.
 export const P = {};
@@ -147,7 +173,7 @@ function recalcular() {
   for (const k of Object.keys(P)) delete P[k];
   Object.assign(P, base, FIJOS, {
     serie,
-    rampa: anclasDe(serie, MODO.oscuro),
+    rampa: [...(tono.rampa?.[MODO.oscuro ? "oscuro" : "claro"] ?? anclasDe(serie, MODO.oscuro))],
     // Paso del tono que libra 4.5:1 como texto sobre el fondo del tema.
     tonoTexto: MODO.oscuro ? matiz(serie, 0.78, 0.9) : matiz(serie, 0.45, 0.95),
     tonoSuave: MODO.oscuro ? matiz(serie, 0.3, 0.45) : matiz(serie, 0.95, 0.25),
@@ -242,7 +268,8 @@ export function categorias(nombres) {
   return color;
 }
 
-// Tinta legible sobre un relleno: la que da MÁS contraste WCAG (blanco o negro).
+// Tinta legible sobre un relleno: la que da MÁS contraste WCAG (blanco o negro),
+// con negro pleno de respaldo cuando ninguna de las dos llega a 4.5:1.
 // Antes era un umbral fijo de luminosidad (0.62) y en los tonos medios de la
 // rampa, sobre todo en tema oscuro, escogía la tinta con menos contraste.
 // Canales de un color «#rrggbb» o «rgb(r, g, b)»; null si no se reconoce.
@@ -262,13 +289,19 @@ export const tintaSobre = (color) => {
   const rgb = canales(color);
   if (!rgb) return luminosidad(color) < 0.62 ? P.blanco : P.negro;
   const l = lumWcag(rgb);
-  return razon(l, lumWcag(canales(P.blanco))) >= razon(l, lumWcag(canales(P.negro))) ? P.blanco : P.negro;
+  const rb = razon(l, lumWcag(canales(P.blanco))), rn = razon(l, lumWcag(canales(P.negro)));
+  if (Math.max(rb, rn) >= 4.5) return rb >= rn ? P.blanco : P.negro;
+  // Banda media de las rampas (petróleo hacia t = 0.45 a 0.6 en los dos
+  // temas, rojo y azul del divergente): blanco y #1d1d1b se quedaban en
+  // 4.1 a 4.4:1. Con negro pleno, el mejor de los dos da al menos 4.58:1
+  // sobre CUALQUIER relleno, así que todo texto sobre celda libra AA.
+  return rb >= razon(l, 0) ? P.blanco : P.negroPleno;
 };
 
 // ----------------------------------------------------- para la hoja y Node
 // Variables CSS de todo el sitio, en los dos temas. La configuración las
 // inyecta en la cabecera; la hoja de estilos solo escribe var(--…).
-export function tokensCss(t = "petroleo") {
+export function tokensCss(t = "petroleoIbero") {
   const previo = {tono, oscuro: MODO.oscuro};
   const bloque = (oscuro) => {
     MODO.oscuro = oscuro; tono = typeof t === "string" ? TONOS[t] : t; recalcular();
@@ -292,7 +325,7 @@ export function tokensCss(t = "petroleo") {
 // Paletas que el libro DIBUJA, para `npm run verificar:paleta`. Si se añade
 // una paleta nueva a este módulo, se añade aquí; el verificador no trae
 // ninguna lista propia.
-export function paletasDibujadas(t = "petroleo") {
+export function paletasDibujadas(t = "petroleoIbero") {
   const previo = {tono, oscuro: MODO.oscuro};
   const salida = [];
   for (const oscuro of [false, true]) {

@@ -2137,7 +2137,7 @@
     "claro": "catalogo/miniaturas/unidades-espejo.png",
     "oscuro": "catalogo/miniaturas/unidades-espejo-oscuro.png",
     "ancho": 1320,
-    "alto": 872,
+    "alto": 850,
     "origen": "galeria"
    }
   },
@@ -3529,6 +3529,49 @@
     "oscuro": "catalogo/miniaturas/arbol-clasificacion-oscuro.png",
     "ancho": 1320,
     "alto": 1064,
+    "origen": "galeria"
+   }
+  },
+  {
+   "id": "matriz-marcas",
+   "nombre": "Matriz de marcas",
+   "nivel": 1,
+   "familia": [
+    "tabla"
+   ],
+   "entrada": [
+    "cruce"
+   ],
+   "funcion": [
+    "concepto",
+    "comparacion"
+   ],
+   "forma": [
+    "puntos",
+    "circulo"
+   ],
+   "pregunta": "¿Qué tiene cada caso de una lista de rasgos (qué pregunta cada fuente, qué cubre cada programa)?",
+   "si": "Comparar definiciones entre tres a ocho casos antes de comparar sus cifras: el estado de cada cruce se dice con la forma (lleno, anillo, punto chico) y el color.",
+   "no": "Cuando el cruce es una cifra (heatmap o tabla de calor), ni con más de ocho casos (no caben las columnas en un teléfono).",
+   "datosForma": "[{columna, fila, estado}] + columnas [{id, cabeza, corto}], filas [{id, texto, corto}], estados {clave: {forma, color, leyenda}}",
+   "fuentes": [
+    {
+     "texto": "Libro «Las personas con discapacidad en México», introducción, sección 03 (Social Data Ibero, 2026)",
+     "url": null
+    }
+   ],
+   "componente": "src/components/formas/matriz-marcas.js",
+   "receta": false,
+   "enGaleria": true,
+   "pagina": "/galeria/conceptos",
+   "paginaNombre": "Conceptos y diagramas",
+   "ancla": "matriz-marcas",
+   "destino": "galeria/conceptos#matriz-marcas",
+   "miniatura": {
+    "claro": "catalogo/miniaturas/matriz-marcas.png",
+    "oscuro": "catalogo/miniaturas/matriz-marcas-oscuro.png",
+    "ancho": 1320,
+    "alto": 500,
     "origen": "galeria"
    }
   },

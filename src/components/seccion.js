@@ -154,7 +154,7 @@ function alCambiarAncho(el, fn) {
 // o `figuras: [...]` para dos gráficas en rejilla. `v` es la selección del
 // panel. `explica`: texto o párrafos; `metodo`: ancla `m-…` de Metodología;
 // `verifica`: argumentos de `verificado()`.
-export function analisis({id, numero = null, titulo, entrada = null, panel = null, dibujar, explica, metodo = null, verifica = {}, alto = 520}) {
+export function analisis({id, numero = null, titulo, entrada = null, panel = null, dibujar, explica, metodo = null, verifica = {}, alto = 520, altoMovil = null}) {
   const cuerpo = html`<div class="seccion-cuerpo"></div>`;
   const huecoTabla = html`<div class="hueco-tabla"></div>`;
   const nodo = html`<section class="analisis" data-analisis=${id} aria-labelledby=${id}>
@@ -207,7 +207,11 @@ export function analisis({id, numero = null, titulo, entrada = null, panel = nul
     cuerpo.classList.add("en-vista");
     setTimeout(() => cuerpo.classList.add("animada"), 1200);
     alCambiarAncho(cuerpo, pintar);
-  }, {alto});
+  // Reserva del alto antes de dibujar: en un teléfono (menos de 640 px) las
+  // figuras crecen (rótulos partidos, barras apiladas) y una reserva corta
+  // hace que el anclaje de scroll mueva la página al dibujarse la sección
+  // por encima de la vista. `altoMovil` es el alto medido a 390 px.
+  }, {alto: altoMovil && window.innerWidth < 640 ? altoMovil : alto});
   panel?.addEventListener("input", pintar);
   alCambiarModo(pintar);
   nodo.pintar = pintar;

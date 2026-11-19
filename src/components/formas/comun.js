@@ -5,6 +5,7 @@
 // ningún otro lado.
 
 import * as d3 from "npm:d3";
+import * as Plot from "npm:@observablehq/plot";
 import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
 import {globoEn} from "../globo.js";
@@ -27,6 +28,23 @@ export const altoTiempo = (ancho) => Math.round(Math.max(240, Math.min(400, anch
 
 // Margen izquierdo para rótulos de fila, según el más largo.
 export const margenRotulos = (rotulos, tope = 190) => Math.min(tope, 16 + Math.max(0, ...rotulos.map((r) => String(r).length)) * 7.2);
+
+// Rótulos de renglón medidos del texto más largo, también en un teléfono.
+// El margen es el que pide el rótulo más largo, con tope `tope` en pantalla
+// ancha y una fracción del ancho (42 %) por debajo de `corte` px, nunca menos
+// de `min`. Lo que no cabe en el tope se parte en renglones (hasta tres) con
+// un eje propio, en vez de cortarse en el borde: `eje` es la marca del eje y
+// va en `marks` (sustituye al eje implícito), y `extra` son los píxeles que
+// cada fila necesita de más para los renglones añadidos.
+export function rotulosFila(rotulos, ancho, {tope = 190, min = 60, fraccion = 0.42, corte = 560} = {}) {
+  const largo = margenRotulos(rotulos, Infinity);
+  const angosto = ancho < corte;
+  const max = angosto ? Math.max(min, Math.round(ancho * fraccion)) : tope;
+  const margen = Math.round(Math.max(min, Math.min(max, largo)));
+  const lineas = largo > margen ? Math.min(3, Math.ceil((largo - 16) / Math.max(1, margen - 16))) : 1;
+  const eje = lineas > 1 ? Plot.axisY({tickSize: 0, label: null, lineWidth: (margen - 12) / TIPO.ejes}) : null;
+  return {margen, lineas, eje, extra: (lineas - 1) * 13};
+}
 
 // Enlaza el globo a cada elemento de una marca de Plot (barras, celdas,
 // polígonos). Se usa como `...viva(datos, g)` en las opciones de la marca:

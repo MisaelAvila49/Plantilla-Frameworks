@@ -13,8 +13,11 @@ import {vacio, TIPO} from "./comun.js";
 // paso de la primera a la segunda), origen(d), destino(d), valor(d).
 // `etapas`: nombres de las etapas. `categorias`: orden de arriba a abajo.
 // color(categoria). `globo`: para las cintas; `globoNodo`: para los nodos,
-// cuyo dato es {etapa, categoria, valor, total}.
-export function sankey(flujos, {ancho, etapa = () => 0, origen, destino, valor, etapas, categorias, color, colorNodo = color, lado = ancho < 520 ? 74 : 130, alto = null, globo: g, globoNodo = null}) {
+// cuyo dato es {etapa, categoria, valor, total}. `colorCinta(d)`: tono de una
+// cinta (por omisión, el de su origen). Una categoría que no tiene nada en una
+// etapa no ocupa lugar en esa columna: así las etapas pueden tener categorías
+// distintas (seis dificultades a la izquierda, dos destinos a la derecha).
+export function sankey(flujos, {ancho, etapa = () => 0, origen, destino, valor, etapas, categorias, color, colorNodo = color, colorCinta = null, lado = ancho < 520 ? 74 : 130, alto = null, globo: g, globoNodo = null}) {
   const filas = flujos.filter((d) => valor(d) > 0);
   if (!filas.length) return vacio();
   const n = etapas.length, H = alto ?? Math.max(300, Math.min(460, ancho * 0.55));
@@ -24,13 +27,14 @@ export function sankey(flujos, {ancho, etapa = () => 0, origen, destino, valor, 
   const totalDe = (i, c) => (i < n - 1
     ? d3.sum(filas.filter((d) => etapa(d) === i && origen(d) === c), valor)
     : d3.sum(filas.filter((d) => etapa(d) === i - 1 && destino(d) === c), valor));
-  const totalEtapa = d3.max(d3.range(n), (i) => d3.sum(categorias, (c) => totalDe(i, c)));
-  const k = (H - mt - mb - hueco * (categorias.length - 1)) / totalEtapa;
+  // La escala es la de la etapa más apretada: su total y sus huecos llenan el alto.
+  const presentes = d3.range(n).map((i) => categorias.filter((c) => totalDe(i, c) > 0));
+  const k = d3.min(d3.range(n), (i) => (H - mt - mb - hueco * (presentes[i].length - 1)) / d3.sum(presentes[i], (c) => totalDe(i, c)));
   const nodos = d3.range(n).map((i) => {
     let y = mt;
     return new Map(categorias.map((c) => {
       const v = totalDe(i, c), nodo = {etapa: etapas[i], categoria: c, valor: v, total: d3.sum(categorias, (q) => totalDe(i, q)), y0: y, y1: y + v * k, sale: y, entra: y};
-      y += v * k + hueco;
+      if (v > 0) y += v * k + hueco;
       return [c, nodo];
     }));
   });
@@ -44,7 +48,7 @@ export function sankey(flujos, {ancho, etapa = () => 0, origen, destino, valor, 
       const ya = a.sale, yb = b.entra;
       a.sale += h; b.entra += h;
       const camino = `M${x0},${ya}C${xm},${ya} ${xm},${yb} ${x1},${yb}L${x1},${yb + h}C${xm},${yb + h} ${xm},${ya + h} ${x0},${ya + h}Z`;
-      const nodo = svg`<path class="marca-viva sankey-cinta" tabindex="0" d=${camino} fill=${color(co)} fill-opacity="0.42"/>`;
+      const nodo = svg`<path class="marca-viva sankey-cinta" tabindex="0" d=${camino} fill=${colorCinta ? colorCinta(d) : color(co)} fill-opacity="0.42"/>`;
       if (g) globoEn(nodo, g, {...d, totalOrigen: a.valor, etapaOrigen: etapas[i], etapaDestino: etapas[i + 1]});
       cintas.push(nodo);
     }

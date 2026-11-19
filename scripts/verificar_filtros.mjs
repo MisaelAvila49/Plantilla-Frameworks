@@ -63,29 +63,54 @@ for (const p of PAGINAS.filter((x) => x.filtros || x.catalogo)) {
     const id = await sec.getAttribute("data-analisis");
     const selects = sec.locator(".panel-filtros select");
     const nSel = await selects.count();
-    for (let k = 0; k < nSel; k++) {
+    // Un campo oculto (el grado sin tipo elegido, los campos del mapa en
+    // vista de gráfica) no se prueba desde el estado inicial: se prueba
+    // cuando el campo que lo gobierna lo hace visible, una sola vez.
+    const visible = (sel) => sel.evaluate((n) => !n.closest("[hidden]") && n.getBoundingClientRect().height > 0);
+    const probados = new Set();
+    // Ningún campo oculto se pinta (R65): se mide, no se lee el atributo.
+    const pintados = await sec.evaluate((s) => [...s.querySelectorAll(".panel-filtros .campo[hidden]")].filter((c) => c.getBoundingClientRect().height > 0).length);
+    if (pintados) fallos.push(`${p.ruta} ${id} — ${pintados} campo(s) con hidden siguen pintados`);
+    const probar = async (k, contexto = "") => {
       const sel = selects.nth(k);
-      if (await sel.isDisabled()) continue;
       const nombre = await sel.getAttribute("name");
+      if (probados.has(nombre) || (await sel.isDisabled()) || !(await visible(sel))) return;
+      probados.add(nombre);
       const inicial = await sel.inputValue();
       const opciones = (await sel.locator("option").evaluateAll((os) => os.map((o) => o.value))).slice(0, MAX_OPCIONES);
-      if (opciones.length < 2) { fallos.push(`${p.ruta} ${id} — el filtro «${nombre}» ofrece una sola opción y no está deshabilitado`); continue; }
+      const rotulo = contexto ? `«${nombre}» (con ${contexto})` : `«${nombre}»`;
+      if (opciones.length < 2) { fallos.push(`${p.ruta} ${id} — el filtro ${rotulo} ofrece una sola opción y no está deshabilitado`); return; }
       controles++;
-      const firmas = new Set(), subtitulos = new Set();
+      const firmas = new Set(), subtitulos = new Set(), pendientes = new Map();
       for (const o of opciones) {
         await sel.selectOption(o);
         await page.waitForTimeout(120);
         const h = await huella(page, i);
         cambios++;
-        if (h.error) fallos.push(`${p.ruta} ${id} — «${nombre}» = ${o}: ${h.error}`);
-        else if (h.vacia || h.marcas < 4) fallos.push(`${p.ruta} ${id} — «${nombre}» = ${o} deja la gráfica vacía (${h.marcas} marcas): el selector ofrece una opción sin dato`);
+        if (h.error) fallos.push(`${p.ruta} ${id} — ${rotulo} = ${o}: ${h.error}`);
+        else if (h.vacia || h.marcas < 4) fallos.push(`${p.ruta} ${id} — ${rotulo} = ${o} deja la gráfica vacía (${h.marcas} marcas): el selector ofrece una opción sin dato`);
         firmas.add(h.firma); subtitulos.add(h.subtitulo);
+        for (let k2 = 0; k2 < nSel; k2++) {
+          if (k2 === k || pendientes.has(k2)) continue;
+          const s2 = selects.nth(k2);
+          if (!probados.has(await s2.getAttribute("name")) && !(await s2.isDisabled()) && (await visible(s2))) pendientes.set(k2, o);
+        }
       }
-      if (firmas.size < 2) fallos.push(`${p.ruta} ${id} — el filtro «${nombre}» no cambia el dibujo con ninguna de sus ${opciones.length} opciones`);
-      if (subtitulos.size < 2) fallos.push(`${p.ruta} ${id} — el subtítulo de la figura no cambia al mover «${nombre}»`);
+      if (firmas.size < 2) fallos.push(`${p.ruta} ${id} — el filtro ${rotulo} no cambia el dibujo con ninguna de sus ${opciones.length} opciones`);
+      if (subtitulos.size < 2) fallos.push(`${p.ruta} ${id} — el subtítulo de la figura no cambia al mover ${rotulo}`);
       await sel.selectOption(inicial);
       await page.waitForTimeout(80);
-    }
+      // Los campos que solo aparecen con otra opción de este campo.
+      for (const [k2, o] of pendientes) {
+        if (await visible(selects.nth(k2))) continue; // ya visibles en el estado inicial: los prueba el recorrido normal
+        await sel.selectOption(o);
+        await page.waitForTimeout(120);
+        await probar(k2, `${nombre} = ${o}`);
+        await sel.selectOption(inicial);
+        await page.waitForTimeout(80);
+      }
+    };
+    for (let k = 0; k < nSel; k++) await probar(k);
     // Umbral escrito como frase: mover la cifra tiene que cambiar el dibujo.
     const umbral = sec.locator(".panel-filtros input[type=number]");
     if (await umbral.count()) {

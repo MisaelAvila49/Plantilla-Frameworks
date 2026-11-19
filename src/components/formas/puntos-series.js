@@ -9,7 +9,7 @@ import {html, svg} from "npm:htl";
 import {P} from "../paleta.js";
 import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
-import {base, vacio, margenRotulos, TIPO} from "./comun.js";
+import {base, vacio, rotulosFila, TIPO} from "./comun.js";
 
 const SIMBOLOS = ["circle", "square", "triangle"];
 
@@ -40,12 +40,14 @@ export function puntosSeries(datos, {ancho, fila, serie, valor, series, color, o
   }).sort((p, q) => q.orden - p.orden);
   const rotulados = filas.filter((d) => serie(d) === clave);
   const simbolo = (s) => SIMBOLOS[Math.max(0, series.indexOf(s))];
+  const rf = rotulosFila(tramos.map((t) => t.nombre), ancho, {tope: 170});
   const plot = Plot.plot(base({
-    ancho, alto: tramos.length * 34 + 50, marginLeft: angosto ? Math.max(60, margenRotulos(tramos.map((t) => t.nombre), 76)) : margenRotulos(tramos.map((t) => t.nombre), 170), marginRight: 22, marginTop: rotuloX ? 50 : 34, marginBottom: 6,
+    ancho, alto: tramos.length * (34 + rf.extra) + 50, marginLeft: rf.margen, marginRight: 22, marginTop: rotuloX ? 50 : 34, marginBottom: 6,
     x: {axis: "top", label: rotuloX, labelArrow: "none", domain: dominioX, grid: true, tickFormat: formatoEje, ticks: angosto ? 4 : 6},
     y: {label: null, domain: tramos.map((t) => t.nombre), tickSize: 0},
     symbol: {domain: series, range: SIMBOLOS},
     marks: [
+      rf.eje,
       Plot.ruleY(tramos, {y: "nombre", x1: "a", x2: "b", stroke: P.contexto, strokeWidth: 2.5, strokeLinecap: "round"}),
       Plot.dot(filas, {y: nombre, x: valor, symbol: serie, r: 6, fill: (d) => (incierta(d) ? P.fondo : color(serie(d))), stroke: (d) => color(serie(d)), strokeWidth: 1.6}),
       Plot.text(rotulados, {stroke: P.fondo, strokeWidth: 3, paintOrder: "stroke", y: nombre, x: valor, text: (d) => formato(valor(d)) + (incierta(d) ? " *" : ""), dy: -12, fill: P.tinta, fontWeight: 600, fontSize: TIPO.valor - 0.5}),

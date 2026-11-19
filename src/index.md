@@ -75,7 +75,7 @@ display(comoCitar(LIBRO));
   <li><strong>Elegir el tono de tema</strong> en <code>LIBRO.tono</code> y correr <code>npm run verificar:paleta</code>. Cada capítulo declara arriba qué significan el rojo y el azul con <code>significado()</code>.</li>
   <li><strong>Cargar los datos</strong> en <code>src/data/</code> en lugar de <code>src/components/muestra.js</code>, y quitar el sello «Datos de muestra» de cada figura.</li>
   <li><strong>Escribir las páginas</strong> a partir de la <a href="./seccion-modelo">sección modelo</a> y registrar cada una en <code>scripts/paginas.mjs</code>, la lista que arma el menú y que leen los verificadores.</li>
-  <li><strong>Cambiar la tapa</strong> en <code>src/index.md</code> por una ilustración del tema del libro, con su licencia anotada en Referencias, y generar la vista previa <code>src/images/og-portada.png</code>.</li>
+  <li><strong>Cambiar la tapa</strong> en <code>src/index.md</code> por una ilustración del tema del libro, con su licencia anotada en Referencias, y generar la vista previa (1200 × 630) con un nombre nuevo, como <code>src/images/og-portada-2026-11.png</code>, que se declara en <code>imagenOg</code> de la configuración.</li>
   <li><strong>Verificar</strong> con <code>npm run verificar:todo</code>: build, dibujo de cada página, filtros, accesibilidad, paleta y panel quieto.</li>
   <li><strong>Publicar</strong> en GitHub Pages con el procedimiento de <code>docs/publicar-en-github-pages.md</code>.</li>
   </ol>

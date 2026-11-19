@@ -103,7 +103,7 @@ function tarjeta(p) {
 // Selector de página, pegajoso: una pastilla por propuesta.
 const selector = html`<nav class="cm-selector" aria-label="Elegir la propuesta de paleta"><span class="cm-selector-rotulo" aria-hidden="true">Propuesta</span></nav>`;
 const pastillas = PROPUESTAS.map((p) => {
-  const b = html`<button type="button" class="cm-pastilla" aria-pressed=${String(p.id === estado.elegida)}><span class="cm-letra">${p.letra}</span>${p.nombre.replace(/ \(.*\)$/, "").replace(/ de ColorBrewer$/, "").replace(/ de una tinta$/, "").replace(/ con acento rojo$/, "")}${/actual del libro/.test(p.nombre) ? html`<span class="cm-pastilla-marca"> · actual</span>` : ""}${p.recomendada ? html`<span class="cm-pastilla-marca"> · recomendada</span>` : ""}</button>`;
+  const b = html`<button type="button" class="cm-pastilla" aria-pressed=${String(p.id === estado.elegida)}><span class="cm-letra">${p.letra}</span>${p.nombre.replace(/ \(.*\)$/, "").replace(/ de ColorBrewer$/, "").replace(/ de una tinta$/, "").replace(/ con acento rojo$/, "")}${/la actual de la Plantilla/.test(p.nombre) ? html`<span class="cm-pastilla-marca"> · actual</span>` : ""}${/el anterior/.test(p.nombre) ? html`<span class="cm-pastilla-marca"> · anterior</span>` : ""}${p.recomendada ? html`<span class="cm-pastilla-marca"> · recomendada</span>` : ""}</button>`;
   b.addEventListener("click", () => elegir(p.id));
   return b;
 });

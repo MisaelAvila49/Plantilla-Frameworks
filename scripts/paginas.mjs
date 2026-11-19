@@ -61,9 +61,9 @@ export const PAGINAS = [
   {ruta: "/galeria/parte-todo", nombre: "Parte de un todo", grupo: "Galería de formas", analisis: 10, filtros: true},
   {ruta: "/galeria/tiempo", nombre: "Tiempo", grupo: "Galería de formas", analisis: 13, filtros: true},
   {ruta: "/galeria/flujo", nombre: "Flujo", grupo: "Galería de formas", analisis: 11, filtros: true},
-  {ruta: "/galeria/mapas", nombre: "Mapas", grupo: "Galería de formas", analisis: 13, filtros: true},
+  {ruta: "/galeria/mapas", nombre: "Mapas", grupo: "Galería de formas", analisis: 14, filtros: true},
   {ruta: "/galeria/unidades", nombre: "Unidades", grupo: "Galería de formas", analisis: 8, filtros: true},
-  {ruta: "/galeria/conceptos", nombre: "Conceptos y diagramas", grupo: "Galería de formas", analisis: 3, filtros: true},
+  {ruta: "/galeria/conceptos", nombre: "Conceptos y diagramas", grupo: "Galería de formas", analisis: 4, filtros: true},
   {ruta: "/metodologia", nombre: "Metodología", analisis: 0, filtros: false},
   {ruta: "/referencias", nombre: "Referencias", analisis: 0, filtros: false},
 ];

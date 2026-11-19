@@ -10,7 +10,7 @@ import {html, svg} from "npm:htl";
 import {P, rampaTema} from "../paleta.js";
 import {pct, pctMarca} from "../formato.js";
 import {conGlobo} from "../globo.js";
-import {base, vacio, margenRotulos, TIPO} from "./comun.js";
+import {base, vacio, rotulosFila, TIPO} from "./comun.js";
 
 // datos: una fila por unidad. etiqueta(d), valor(d) en %, ee(d) en puntos.
 // `incierta(d)`: poco precisa. `referencia`: {valor, texto}. `dominioX`:
@@ -23,11 +23,13 @@ export function puntosIntervalo(datos, {ancho, etiqueta, valor, ee, incierta = (
   const nombre = (f) => (angosto && corto ? corto(etiqueta(f.d)) : etiqueta(f.d));
   // Tinta de la raya: un paso claro de la rampa del tono, no una opacidad.
   const claro = rampaTema([0, 1])(0.4);
+  const rf = rotulosFila(filas.map(nombre), ancho, {tope: 180});
   const plot = Plot.plot(base({
-    ancho, alto: filas.length * 26 + 46, marginLeft: angosto ? Math.max(60, margenRotulos(filas.map(nombre), 76)) : margenRotulos(filas.map(nombre), 180), marginRight: 74, marginTop: rotuloX ? 50 : 30, marginBottom: 6,
+    ancho, alto: filas.length * (26 + rf.extra) + 46, marginLeft: rf.margen, marginRight: angosto ? 58 : 74, marginTop: rotuloX ? 50 : 30, marginBottom: 6,
     x: {axis: "top", label: rotuloX, labelArrow: "none", domain: dominioX, grid: true, tickFormat: formatoEje, ticks: angosto ? 4 : 7},
     y: {label: null, domain: filas.map(nombre), tickSize: 0},
     marks: [
+      rf.eje,
       referencia ? Plot.ruleX([referencia.valor], {stroke: P.tinta2, strokeWidth: 1.3, strokeDasharray: "4 3"}) : null,
       Plot.ruleY(filas.filter((f) => f.lo != null), {y: nombre, x1: "lo", x2: "hi", stroke: claro, strokeWidth: 7, strokeLinecap: "round"}),
       Plot.dot(filas, {y: nombre, x: "v", r: 5, fill: (f) => (incierta(f.d) ? P.fondo : P.serie), stroke: P.serie, strokeWidth: 1.8}),

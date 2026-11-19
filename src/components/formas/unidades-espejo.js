@@ -49,6 +49,9 @@ export function unidadesEspejo(datos, {ancho, categoria, lado, valor, lados, cat
   }
   const N = pilas.reduce((s, p) => s + p.n, 0);
   const maxN = Math.max(...pilas.map((p) => p.n));
+  // Cada lado reserva solo el alto de su pila más alta: con un lado mucho
+  // más chico que el otro, la mitad de arriba no deja una franja vacía.
+  const maxLado = [0, 1].map((li) => Math.max(1, ...pilas.filter((p) => p.li === li).map((p) => p.n)));
   const nCat = categorias.length;
 
   // ---- Geometría: tamaño del cuadro y cuántos caben a lo ancho de una pila.
@@ -61,11 +64,12 @@ export function unidadesEspejo(datos, {ancho, categoria, lado, valor, lados, cat
       paso = u + Math.max(1.2, u * 0.16); porRenglon = Math.max(1, Math.floor(libre / paso));
       if (Math.ceil(maxN / porRenglon) * paso <= altoMax) break;
     }
-    const altoPila = Math.ceil(maxN / porRenglon) * paso;
-    ejePos = 30 + altoPila + 22;
-    W = ancho; H = ejePos + 22 + altoPila + 30;
+    const [alto0, alto1] = maxLado.map((n) => Math.ceil(n / porRenglon) * paso);
+    ejePos = 30 + alto0 + 22;
+    W = ancho; H = ejePos + 22 + alto1 + 30;
   } else {
-    const centro = 58, cifraW = 46, ladoW = (ancho - centro) / 2 - cifraW;
+    // El espacio de la cifra se mide del texto más largo que se escribirá.
+    const centro = 58, cifraW = 10 + Math.max(...pilas.map((p) => anchoTexto(p.v ? entero(p.v) : "Sin dato", fCifra, true))), ladoW = (ancho - centro) / 2 - cifraW;
     for (u = 12; u >= 3; u -= 0.5) {
       paso = u + Math.max(1, u * 0.16); porRenglon = Math.max(1, Math.floor(ladoW / paso));
       const renglon = Math.ceil(maxN / porRenglon) * paso + 12;

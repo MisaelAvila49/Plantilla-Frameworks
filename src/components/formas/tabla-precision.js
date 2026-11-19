@@ -29,7 +29,9 @@ function simbolo(nivel) {
 // datos: una fila por unidad. nombre(d), valor(d) en %, ee(d) en puntos.
 // `referencia`: la fila del nacional (o null). `dominio`: FIJO del
 // intervalo. `orden`: comparador; por omisión, de mayor a menor.
-export function tablaPrecision(datos, {ancho, nombre, valor, ee, referencia = null, dominio = [0, 100], orden = null, rotuloNombre = "Entidad", rotuloValor = "Estimación", globo: g}) {
+// `textoReferencia`: qué es la raya de la referencia en el encabezado
+// («nacional», «promedio de las entidades», «todas las personas»).
+export function tablaPrecision(datos, {ancho, nombre, valor, ee, referencia = null, dominio = [0, 100], orden = null, rotuloNombre = "Entidad", rotuloValor = "Estimación", textoReferencia = "nacional", globo: g}) {
   const filas = datos.filter((d) => valor(d) != null).sort(orden ?? ((a, b) => valor(b) - valor(a)));
   if (!filas.length) return vacio();
   const angosto = ancho < 560;
@@ -67,7 +69,7 @@ export function tablaPrecision(datos, {ancho, nombre, valor, ee, referencia = nu
       <thead><tr>
         <th scope="col">${rotuloNombre}</th>
         <th scope="col" class="num">${angosto ? "Valor" : rotuloValor}</th>
-        <th scope="col">Intervalo de 95&nbsp;%<span class="gB-th-nota">${angosto ? `${dominio[0]} a ${dominio[1]} %` : `escala de ${dominio[0]} a ${dominio[1]} %${ref != null ? " · raya: nacional" : ""}`}</span></th>
+        <th scope="col">Intervalo de 95&nbsp;%<span class="gB-th-nota">${angosto ? `${dominio[0]} a ${dominio[1]} %` : `escala de ${dominio[0]} a ${dominio[1]} %${ref != null ? ` · raya: ${textoReferencia}` : ""}`}</span></th>
         ${angosto ? "" : html`<th scope="col" class="num">Coef. de variación</th>`}
         <th scope="col">${angosto ? html`<span aria-hidden="true">Prec.</span><span class="solo-lector">Precisión</span>` : "Precisión"}</th>
       </tr></thead>

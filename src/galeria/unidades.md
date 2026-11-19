@@ -24,7 +24,7 @@ import {analisis} from "../components/seccion.js";
 import {panel, campo, campoUmbral, conDato} from "../components/filtros.js";
 import {globo} from "../components/globo.js";
 import {significado, categorias, P} from "../components/paleta.js";
-import {entero, deCada, cambioRelativo} from "../components/formato.js";
+import {entero, deCada, cambioRelativo, pct} from "../components/formato.js";
 import {waffle, multitud, fraccion, histogramaUnidades, pila, escalones, unidadesEspejo} from "../components/formas/index.js";
 import {REGIONES} from "../components/geografia.js";
 import {MUESTRA} from "../components/libro.js";
@@ -330,6 +330,12 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
         valor: (d) => d.pct, formato: "pct",
         personas: (d) => d.num, universo: (d) => d.den, unidad: "personas de esa edad",
       });
+      // El bloque es su propia marca: su globo dice de dónde a dónde va la
+      // mitad central de las unidades (un rango, sin renglón de población).
+      const gBanda = globo({
+        marca: (d) => `${d.grupo} años`, grupo: "Mitad central de las unidades", color: P.tinta2,
+        valor: (d) => d.q1, formato: (x, d) => `${pct(d.q1)} a ${pct(d.q3)}`,
+      });
       return {
         figura: {
           titulo: "Porcentaje que cumple la condición en cada grupo de edad",
@@ -338,7 +344,7 @@ const reservar = ([angosto, medio, ancho]) => (window.innerWidth < 640 ? angosto
           pie: "Datos de muestra de la Plantilla · la figura marca el porcentaje de cada grupo de edad, el bloque es la mitad central de sus unidades y la línea punteada, el umbral.",
           cuerpo: escalones(filas, {ancho, grupo: (d) => d.grupo, valor: (d) => d.pct, bajo: (d) => d.q1, alto: (d) => d.q3, dominio: [0, 100],
             umbral: v.umbral, encima: (d) => d.parteSobre,
-            nombres: {valor: "Porcentaje del grupo de edad", banda: "Mitad central de las unidades", umbral: `Umbral: ${v.umbral} %`, sobre: "Parte de la mitad central que alcanza el umbral", encima: "Bajo el nombre de cada grupo, la parte de sus unidades que alcanza el umbral"}, globo: g}),
+            nombres: {valor: "Porcentaje del grupo de edad", banda: "Mitad central de las unidades", umbral: `Umbral: ${v.umbral} %`, sobre: "Parte de la mitad central que alcanza el umbral", encima: "Bajo el nombre de cada grupo, la parte de sus unidades que alcanza el umbral"}, globo: g, globoBanda: gBanda}),
         },
         tabla: {filas, columnas: [
           {titulo: "Grupo de edad", valor: (d) => `${d.grupo} años`, texto: true},

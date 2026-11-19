@@ -24,9 +24,11 @@ import {rotulo, separar, anchoTexto} from "./anotaciones.js";
 // que cae. `referencia`: {valor, texto} dibuja el eje de referencia y lo
 // rotula en la leyenda, fuera del lienzo. `dominio`: extremos FIJOS del eje
 // del valor. `vertical`: tiempo hacia abajo. corto(serie): nombre abreviado.
+// `formatoTiempo(t)`: rótulo del eje del tiempo (o del eje ordenado que haga
+// sus veces: deciles en romanos, grupos de edad).
 export function destacadas(datos, {
   ancho, tiempo, valor, serie, destacada = () => false, color = null, signo = null, referencia = null, dominio = null, vertical = true,
-  formato = pctMarca, rotuloValor = null, nombre = String, corto = null, textoDestacadas = "Grupo destacado", textoResto = "Las demás series", prefijo = "destacadas", globo: g,
+  formato = pctMarca, formatoTiempo = (v) => String(v), rotuloValor = null, nombre = String, corto = null, textoDestacadas = "Grupo destacado", textoResto = "Las demás series", prefijo = "destacadas", globo: g,
 }) {
   const filas = datos.filter((d) => valor(d) != null);
   if (!filas.length) return vacio();
@@ -43,7 +45,7 @@ export function destacadas(datos, {
   const cadaCuanto = Math.ceil(tiempos.length / (vertical ? 9 : angosto ? 4 : 8));
   const marcasTiempo = tiempos.filter((_, i) => i % cadaCuanto === 0);
   const ejeValor = {label: rotuloValor, labelArrow: "none", tickFormat: formato, grid: true, ticks: angosto ? 4 : 7, ...(dominio ? {domain: dominio} : {nice: true})};
-  const ejeTiempo = {label: null, tickFormat: (v) => String(v), ticks: marcasTiempo, tickSize: 0};
+  const ejeTiempo = {label: null, tickFormat: formatoTiempo, ticks: marcasTiempo, tickSize: 0};
   const cx = vertical ? valor : tiempo, cy = vertical ? tiempo : valor, curva = vertical ? "monotone-y" : "monotone-x";
   const margenRotulos = vertical ? 0 : angosto ? 58 : 132;
   const plot = Plot.plot(base({

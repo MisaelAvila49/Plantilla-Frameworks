@@ -12,6 +12,7 @@ toc: true
 <link rel="stylesheet" href="../formas-flujo.css">
 <link rel="stylesheet" href="../formas-territorio.css">
 <link rel="stylesheet" href="../formas-gE.css">
+<link rel="stylesheet" href="../formas-gC.css">
 
 ```js
 import * as d3 from "npm:d3";
@@ -681,6 +682,107 @@ import {bivariado, cortesTerciles} from "../components/formas/bivariado.js";
 import {leerEntidades} from "../components/muestra-gC.js";
 ```
 
+<h2 id="subgrupo-mapa" class="toc-anchor">El indicador por subgrupo, en gráfica o en mapa</h2>
+
+```js
+// Componentes del patrón: subgrupo con grado y mapa como vista del filtro.
+import {grupoSubgrupo, seleccionarSubgrupo, catalogo, conSubgrupo, FOCO, REFERENCIA} from "../components/subgrupo.js";
+import {campoVista, campoPinta, esMapa, mapaIndicador, columnasMapa, notasMapa, BRECHA, ENTIDAD} from "../components/vista-mapa.js";
+import {fraccion} from "../components/formas/fraccion.js";
+import {tasaPorGrupo} from "../components/agregar.js";
+// Datos de muestra (scripts/muestra_subgrupos.mjs).
+const crudoSubgrupos = await FileAttachment("../data/muestra/subgrupos.csv").csv();
+```
+
+```js
+{
+  // PATRÓN «SUBGRUPO CON GRADO» Y «EL MAPA COMO VISTA DEL FILTRO» (R186 y
+  // R187; docs/EMPEZAR-AQUI.md). Con «Todos los subgrupos» se suman las
+  // filas de siempre (con y sin la condición); con un subgrupo, las del
+  // subgrupo y grado elegidos contra la referencia «Ninguno». El mapa arranca
+  // en «Gráfica», pinta con los rangos fijos de RANGOS.indicador_muestra
+  // (vista-mapa.js) y ofrece la diferencia en puntos. No hay mapa por
+  // municipio: la muestra imita una encuesta representativa por entidad.
+  const filasS = crudoSubgrupos.map((r) => ({...r, anio: +r.anio, num: +r.num, den: +r.den, casos: +r.casos, ee: r.ee === "" ? null : +r.ee}));
+  const base = filasS.filter((r) => r.subgrupo === "Todos");
+  const porSubgrupo = filasS.filter((r) => r.subgrupo !== "Todos");
+  const CAT = catalogo({
+    // Tres subgrupos de muestra que se traslapan (una persona puede trabajar y
+    // estudiar) y dos grados de frecuencia.
+    subgrupos: [{valor: "A", texto: "Trabaja", corto: "Trabaja"}, {valor: "B", texto: "Estudia", corto: "Estudia"},
+      {valor: "C", texto: "Cuida a alguien", corto: "Cuida"}],
+    grados: [{valor: "Alto", texto: "Todos los días", corto: "todos los días"}, {valor: "Bajo", texto: "Algunos días", corto: "algunos días"}],
+    referenciaSubgrupo: "Ninguna de las tres",
+  });
+  const PAIS_S = "Todo el país";
+  const NOMBRES = [...new Set(base.map((r) => r.entidad))].sort((a, b) => a.localeCompare(b, "es"));
+  const pasaS = (v) => (r) => r.anio === Number(v.anio) && (v.sexo === "Total" || r.sexo === v.sexo) && (v.entidad === PAIS_S || r.entidad === v.entidad);
+  const filtros = panel({grupos: [
+    {leyenda: "Cuándo y dónde", campos: [
+      campo({id: "anio", rotulo: "Año", inicial: 2020, opciones: [2020, 2010]}),
+      campo({id: "entidad", rotulo: "Entidad", inicial: PAIS_S, opciones: [PAIS_S, ...NOMBRES]}),
+    ]},
+    {leyenda: "Entre quiénes", campos: [campo({id: "sexo", rotulo: "Sexo", inicial: "Total", opciones: opcionesSexo})]},
+    grupoSubgrupo(CAT),
+    {leyenda: "Mapa", campos: [campoVista({entidad: true}), campoPinta()]},
+  ]});
+  display(analisis({
+    id: "subgrupo-mapa", numero: 13, titulo: "El indicador por subgrupo, en gráfica o en mapa", panel: filtros, metodo: "m-mapas", verifica: VERIFICA_MUESTRA,
+    explica: [
+      "Con «Todos los subgrupos», cada bloque reúne a cien personas: a la izquierda las que tienen la condición y a la derecha las que no, y las figuras en color cumplen el indicador. Al elegir un subgrupo y su grado, el bloque de la izquierda son las personas de ese subgrupo con ese grado y el de la derecha, las que no están en ningún subgrupo. Una persona puede estar en dos subgrupos, así que los subgrupos no se suman.",
+      "El mapa pinta cada entidad en uno de cinco rangos fijos, los mismos con cualquier filtro, o la diferencia en puntos entre los dos grupos, en rojo donde el grupo elegido queda abajo. El subgrupo «Cuida a alguien» lleva rangos propios porque casi todas sus entidades caían en el primer tono. Las entidades con menos de 30 casos en la muestra van con trama.",
+    ],
+    dibujar: ({v, ancho}) => {
+      const s = seleccionarSubgrupo({cat: CAT, base, porSubgrupo, v, grupoBase: (r) => (r.grupo === "Con la condición" ? FOCO : r.grupo === "Sin la condición" ? REFERENCIA : null)});
+      if (esMapa(v)) {
+        const t = tasaPorGrupo(s.filas.filter(pasaS({...v, entidad: PAIS_S})), ["grupo", "cve_ent"]);
+        const porCve = (g) => new Map(t.filter((d) => d.grupo === g).map((d) => [d.cve_ent, d]));
+        const cveSel = v.entidad === PAIS_S ? null : base.find((r) => r.entidad === v.entidad)?.cve_ent ?? null;
+        const r = mapaIndicador({nivel: ENTIDAD, geoEnt: geo, valores: porCve(FOCO), referencia: porCve(REFERENCIA), pinta: v.pinta, indicador: "indicador_muestra",
+          subgrupo: s.esSubgrupo ? s.subgrupo : null, ancho, grupo: s.texto(FOCO), referenciaTexto: s.texto(REFERENCIA), unidad: s.unidad(FOCO), entidad: cveSel});
+        const brecha = v.pinta === BRECHA;
+        return {
+          figura: {
+            titulo: brecha ? "Diferencia en el indicador entre los dos grupos, por entidad" : "Personas que cumplen el indicador, por entidad",
+            subtitulo: `${r.descripcion} · ${textoSexo(v.sexo)} · ${v.entidad} · ${v.anio} · ${entero(r.conDato.length)} entidades con dato`,
+            sello: MUESTRA,
+            pie: `Datos de muestra de la Plantilla · cada entidad va en el tono de ${brecha ? "la diferencia en puntos, en rojo donde el grupo elegido queda abajo" : "su rango fijo de porcentaje, que se lee en la tira de rangos"}.`,
+            notas: notasMapa(r, {nivel: ENTIDAD, anio: v.anio}),
+            cuerpo: r.cuerpo,
+          },
+          tabla: {filas: r.filasTabla, columnas: columnasMapa({nivel: ENTIDAD, pinta: v.pinta, referenciaTexto: s.texto(REFERENCIA), unidad: r.unidad})},
+        };
+      }
+      const orden = [FOCO, REFERENCIA].map((g) => tasaPorGrupo(s.filas.filter(pasaS(v)), ["grupo"]).find((d) => d.grupo === g)).filter(Boolean);
+      const g = globo({grupo: (d) => s.texto(d.grupo), color: (d) => s.color(d.grupo), valor: (d) => d.pct, formato: "pct",
+        personas: (d) => d.num, universo: (d) => d.den, unidad: (d) => s.unidad(d.grupo), precision: (d) => ({valor: d.pct, ee: d.ee, casos: d.casos})});
+      const fragil = orden.find((d) => d.grupo === FOCO && d.casos < MIN_CASOS);
+      return {
+        figura: {
+          titulo: "Personas que cumplen el indicador, de cada cien",
+          subtitulo: `${s.seleccion} · ${textoSexo(v.sexo)} · ${v.entidad} · ${v.anio}`,
+          sello: MUESTRA,
+          pie: "Datos de muestra de la Plantilla · cada bloque reúne a cien personas de un grupo y las figuras en color cumplen el indicador.",
+          notas: [fragil ? "Menos de 30 casos del grupo elegido en la muestra. La cifra es poco precisa." : null,
+            conSubgrupo(v) ? "Una persona puede estar en dos subgrupos: las cifras de subgrupos distintos no se suman." : null],
+          cuerpo: fraccion(orden, {ancho, etiqueta: (d) => s.corto(d.grupo), valor: (d) => d.pct, color: (d) => s.color(d.grupo), acomodo: "multitud", globo: g}),
+        },
+        tabla: {filas: orden, columnas: [
+          {titulo: "Grupo", valor: (d) => s.texto(d.grupo), texto: true},
+          {titulo: "Porcentaje", valor: (d) => d.pct, formato: "pct"},
+          {titulo: "Margen de error (95 %)", valor: (d) => d.ee, formato: (x) => margen(x)},
+          {titulo: "Población que cumple", valor: (d) => d.num, formato: "conteo"},
+          {titulo: "Población total", valor: (d) => d.den, formato: "conteo"},
+          {titulo: "Casos en la muestra", valor: (d) => d.casos, formato: "conteo"},
+        ]},
+      };
+    },
+  }));
+}
+```
+
+---
+
 <h2 id="bivariado" class="toc-anchor">Dónde coinciden internet en el hogar y escolaridad</h2>
 
 ```js
@@ -700,7 +802,7 @@ import {leerEntidades} from "../components/muestra-gC.js";
     ]},
   ]});
   display(analisis({
-    id: "bivariado", numero: 13, titulo: "Dónde coinciden internet en el hogar y escolaridad", panel: filtros, metodo: "m-mapas", verifica: VERIFICA_MUESTRA, alto: reservar([640, 790, 880]),
+    id: "bivariado", numero: 14, titulo: "Dónde coinciden internet en el hogar y escolaridad", panel: filtros, metodo: "m-mapas", verifica: VERIFICA_MUESTRA, alto: reservar([640, 790, 880]),
     explica: ["Cada entidad se pinta con dos medidas a la vez: la parte de sus hogares con internet y los años de escuela de su población, en promedio. Cada medida se parte en tres niveles (bajo, medio y alto) y la combinación da uno de nueve colores. Hacia la derecha de la leyenda crece el internet; hacia arriba, la escolaridad. La esquina de arriba a la derecha son las entidades altas en las dos.",
       "Los cortes entre niveles son los mismos en los tres años, así que un color quiere decir lo mismo en cualquier año. El mapa dice dónde coinciden las dos medidas, no que una cause la otra. Para la cifra exacta de cada entidad, la tabla."],
     dibujar: ({v, ancho}) => {

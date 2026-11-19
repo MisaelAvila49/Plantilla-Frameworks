@@ -14,7 +14,7 @@ import {P, tintaSobre} from "../paleta.js";
 import {pct, pctEje, entero} from "../formato.js";
 import {globoEn} from "../globo.js";
 import {vacio, leyendaItems, conLeyenda, TIPO} from "./comun.js";
-import {lienzo, anchoTexto} from "./anotaciones.js";
+import {lienzo, anchoTexto, partir} from "./anotaciones.js";
 
 // datos: una fila por (corte, categoría). corte(d), categoria(d), valor(d).
 // `cortes`: orden de arriba a abajo (por omisión, ascendente). `categorias`:
@@ -32,7 +32,14 @@ export function apiladasFlujo(datos, {
   if (!orden.length) return vacio();
   const angosto = ancho < 520;
   const W = Math.min(ancho, 1040), hB = altoBarra ?? (angosto ? 38 : 42), hC = hueco ?? (angosto ? 46 : 60);
-  const ml = angosto ? 44 : 62, mr = 16, mt = 30, mb = 6;
+  // El margen izquierdo se mide del nombre de corte más largo («Sin
+  // discapacidad»), partido en renglones si pasa de un cuarto del ancho.
+  const tamNombre = angosto ? TIPO.ejes - 1 : TIPO.ejes, topeNombre = W * (angosto ? 0.3 : 0.22);
+  const nombresPartidos = orden.map((c) => {
+    const t = String(c);
+    return anchoTexto(t, tamNombre, 700) + 12 <= topeNombre ? [t] : partir(t, Math.max(4, Math.floor((topeNombre - 12) / (tamNombre * 0.6))));
+  });
+  const ml = Math.max(angosto ? 44 : 62, Math.ceil(12 + Math.max(...nombresPartidos.flat().map((t) => anchoTexto(t, tamNombre, 700))))), mr = 16, mt = 30, mb = 6;
   const H = mt + orden.length * hB + (orden.length - 1) * hC + mb;
 
   // Apilado propio: cada tramo guarda su intervalo, su parte y el tramo de la
@@ -88,7 +95,10 @@ export function apiladasFlujo(datos, {
     <line x1=${x(v)} x2=${x(v)} y1=${mt - 5} y2=${H - mb} stroke=${P.rejilla} />
     <text x=${x(v)} y=${mt - 11} text-anchor=${v === 0 ? "start" : v === techo ? "end" : "middle"} font-size=${TIPO.ejes - 1} fill=${P.tinta2}>${absoluto ? formatoValor(v) : `${pctEje(v)} %`}</text>
   </g>`);
-  const nombres = orden.map((c, i) => svg`<text x=${ml - 10} y=${y(i) + hB / 2} dy="0.35em" text-anchor="end" font-size=${TIPO.ejes} font-weight="700" fill=${P.tinta}>${c}</text>`);
+  const nombres = orden.map((c, i) => {
+    const r = nombresPartidos[i], y0 = y(i) + hB / 2 - ((r.length - 1) * tamNombre * 1.15) / 2;
+    return svg`<text x=${ml - 10} y=${y0} text-anchor="end" font-size=${tamNombre} font-weight="700" fill=${P.tinta}>${r.map((t, k) => svg`<tspan x=${ml - 10} dy=${k ? tamNombre * 1.15 : "0.35em"}>${t}</tspan>`)}</text>`;
+  });
 
   const foco = destacar ?? categorias[0], primero = porCorte.get(orden[0]).tramos.find((t) => t._cat === foco), ultimo = porCorte.get(orden.at(-1)).tramos.find((t) => t._cat === foco);
   const dibujo = lienzo({

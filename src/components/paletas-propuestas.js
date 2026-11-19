@@ -22,7 +22,7 @@
 // (src/.observablehq/cache/data/paletas-propuestas.json) o el build sirve el
 // resultado anterior.
 
-import {P, MODO, CLARO, OSCURO, definirTema, alCambiarModo, anclasDe, porTramos} from "./paleta.js";
+import {P, MODO, CLARO, OSCURO, TONOS, definirTema, alCambiarModo, anclasDe, porTramos} from "./paleta.js";
 
 // Nueve pasos de una rampa continua (anclas en OKLab), del bajo al alto.
 const nueve = (anclas) => Array.from({length: 9}, (_, i) => porTramos(anclas)(i / 8));
@@ -46,16 +46,26 @@ const OSCURA = {
   Oranges: ["#2c251e", "#493622", "#6b4619", "#955100", "#be5d00", "#ec6405", "#ff835a", "#ffad92", "#ffd3c5"],
 };
 
+// Trío y divergente que tenía paleta.js antes de adoptar la propuesta A (18
+// de noviembre de 2026). Las propuestas de la primera ronda (D a I) se
+// comparan con ellos, como se validaron entonces; paleta.js ya usa los de A.
+const ANTERIOR = {
+  claro: {categorias: ["#0E9384", "#B87709", "#863913"], divergente: ["#67001F", "#B2182B", "#D6604D", "#F4A582", "#E8E6E1", "#92C5DE", "#4393C3", "#2166AC", "#053061"]},
+  oscuro: {categorias: ["#22AB8A", "#B28834", "#A84832"], divergente: [...OSCURO.divergente]},
+};
 // Divergente del cambio de la propuesta F (rojo Ibero): ocre en el lado desfavorable,
 // gris al centro, los azules del libro en el favorable. Brazo ocre hecho en
 // OKLCH (matiz 62° a 72°), sin rojo porque el rojo ya es la magnitud.
 const DIVERGENTE_OCRE = {
-  claro: ["#5b3100", "#8f5300", "#c68128", "#ebc391", CLARO.divergente[4], ...CLARO.divergente.slice(5)],
-  oscuro: ["#f5d1a5", "#d6954a", "#a1600d", "#60370b", OSCURO.divergente[4], ...OSCURO.divergente.slice(5)],
+  claro: ["#5b3100", "#8f5300", "#c68128", "#ebc391", ...ANTERIOR.claro.divergente.slice(4)],
+  oscuro: ["#f5d1a5", "#d6954a", "#a1600d", "#60370b", ...ANTERIOR.oscuro.divergente.slice(4)],
 };
 
-// Base común: lo que la propuesta no cambia sale de paleta.js.
-const base = (b) => ({categorias: [...b.categorias], divergente: [...b.divergente], rojo: b.rojo, azul: b.azul, comparacion: b.tinta2, contexto: b.contexto, gris: b.gris});
+// Base común: grises, rojo y azul salen de paleta.js; trío y divergente, de ANTERIOR.
+const base = (b) => {
+  const a = b === OSCURO ? ANTERIOR.oscuro : ANTERIOR.claro;
+  return {categorias: [...a.categorias], divergente: [...a.divergente], rojo: b.rojo, azul: b.azul, comparacion: b.tinta2, contexto: b.contexto, gris: b.gris};
+};
 
 // ------------------------------------ propuestas diseñadas (A, B y C)
 // Segunda ronda: en vez de partir de una paleta hecha, se diseñaron en OKLCH
@@ -103,12 +113,14 @@ const disenada = (b, modo, serie, rampa) => ({...base(b), serie, rampa, categori
 
 export const PROPUESTAS = [
   {
-    id: "a", letra: "A", nombre: "Petróleo Ibero", recomendada: true, disenada: true,
-    idea: "Verde azulado de matiz 185° (serie #008e82, L 0.58, croma 0.12), el lado opuesto del círculo al rojo Ibero (27°). Es la D (la actual del libro) rehecha con método: misma familia, pero rampa de una tinta con pasos de luz iguales, divergente con los extremos claros legibles y un trío nuevo sin terracota.",
+    id: "a", letra: "A", nombre: "Petróleo Ibero (la actual de la Plantilla)", recomendada: true, disenada: true,
+    idea: "Verde azulado de matiz 185° (serie #008e82, L 0.58, croma 0.12), el lado opuesto del círculo al rojo Ibero (27°). Es la D (el petróleo anterior) rehecha con método: misma familia, pero rampa de una tinta con pasos de luz iguales, divergente con los extremos claros legibles y un trío nuevo sin terracota.",
     rojo: "Sin conflicto, medido: la serie y la rampa se separan del rojo de «desfavorable» con daltonismo y con visión normal en los dos temas, y el trío claro también. El rojo queda para el acento de la interfaz y para lo que se pierde.",
     porque: "Complementa el rojo de la marca sin competir con él: está en el lado opuesto del círculo cromático, así que el rojo del antetítulo, de la cifra principal y de «desfavorable» resalta más junto a él, y ninguno de los dos se lee como el otro con daltonismo. No carga un significado propio, de modo que sirve igual para población, educación, trabajo, salud o territorio: la magnitud va en la rampa petróleo y el cambio en rojo y azul, sin que una se confunda con el otro. Medido en el build: ninguna de las 33 comprobaciones obligatorias falla, ni en claro ni en oscuro; 30 pasan y las otras 3 son los avisos que tiene cualquier propuesta por diseño (el extremo casi blanco de la rampa y el gris de comparación). Su rampa también pasa como nueve clases. Sobre la tapa y la portada claras la serie da 3.72:1 contra el papel #f8f5ee y 4.05:1 contra el blanco, y la tinta negra y el rojo de la marca no cambian.",
-    claro: disenada(CLARO, "claro", "#008e82", ["#d6f9f3", "#a3e5db", "#4ad5c6", "#23bbad", "#00a093", "#00857a", "#006b62", "#00524b", "#003b35"]),
-    oscuro: disenada(OSCURO, "oscuro", "#009580", ["#002e26", "#00453a", "#005e50", "#007766", "#00927d", "#15ad95", "#41c7ae", "#7addc7", "#c4ebe1"]),
+    // Desde el 18 de noviembre de 2026 es el tono por omisión: sus valores
+    // viven en TONOS.petroleoIbero de paleta.js y aquí solo se leen.
+    claro: disenada(CLARO, "claro", TONOS.petroleoIbero.claro, TONOS.petroleoIbero.rampa.claro),
+    oscuro: disenada(OSCURO, "oscuro", TONOS.petroleoIbero.oscuro, TONOS.petroleoIbero.rampa.oscuro),
   },
   {
     id: "b", letra: "B", nombre: "Jade", disenada: true,
@@ -125,7 +137,7 @@ export const PROPUESTAS = [
     oscuro: disenada(OSCURO, "oscuro", "#009580", ["#002e26", "#00453a", "#005e50", "#007766", "#00927d", "#15ad95", "#41c7ae", "#7addc7", "#c4ebe1"]),
   },
   {
-    id: "d", letra: "D", nombre: "Petróleo (la actual del libro)",
+    id: "d", letra: "D", nombre: "Petróleo (el anterior)",
     idea: "El verde azulado que hoy usa la Plantilla, como punto de comparación. No se parece a la marca, pero no se cruza con el rojo ni con el azul, que quedan libres para lo desfavorable y lo favorable.",
     rojo: "Sin conflicto: el rojo solo aparece en el cambio y en el acento de la interfaz; la rampa y la serie son verdes azuladas. Hallazgo previo a esta comparación: la terracota del trío actual (#863913) casi no se distingue del rojo con protanopía (ΔE 1.8). No comparten figura, pero conviene revisarla.",
     claro: {...base(CLARO), serie: "#0E9384", rampa: derivada("#0E9384", false)},

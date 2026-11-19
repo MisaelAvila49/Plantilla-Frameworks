@@ -10,7 +10,7 @@ import * as Plot from "npm:@observablehq/plot";
 import * as d3 from "npm:d3";
 import {P, tintaSobre} from "../paleta.js";
 import {pctMarca, pct} from "../formato.js";
-import {base, vacio, viva, leyendaItems, conLeyenda, TIPO} from "./comun.js";
+import {base, vacio, viva, leyendaItems, conLeyenda, rotulosFila, TIPO} from "./comun.js";
 
 // datos: una fila por pregunta y respuesta. fila(d) la pregunta, respuesta(d),
 // valor(d) porcentaje de la fila (las respuestas de una fila suman 100).
@@ -45,16 +45,21 @@ export function likert(datos, {ancho, fila, respuesta, valor, respuestas, colore
   });
   // Dominio simétrico: el lado más largo más el espacio de su total escrito.
   const tope = Math.max(60, Math.ceil(d3.max(resumen, (r) => Math.max(r.negativo, r.positivo) + r.neutro / 2) / 10) * 10 + (angosto ? 20 : 12));
-  const largo = d3.max(resumen, (r) => String(r.fila).length);
-  const izquierda = angosto ? 8 : Math.min(220, 16 + largo * 7.1);
-  const altoFila = angosto ? 54 : 38;
+  // En pantalla ancha el rótulo va a la izquierda, medido del más largo y
+  // partido en renglones si pasa del tope; en un teléfono va encima de su
+  // barra y los márgenes dejan lugar a la marca extrema del eje y al total
+  // escrito junto a la punta, que no se cortan.
+  const rf = rotulosFila(resumen.map((r) => r.fila), ancho, {tope: 220});
+  const izquierda = angosto ? 18 : rf.margen;
+  const altoFila = angosto ? 54 : 38 + rf.extra;
   const ordenFilas = resumen.map((r) => r.fila);
   const plot = Plot.plot(base({
-    ancho, alto: resumen.length * altoFila + 42, marginLeft: izquierda, marginRight: 10, marginTop: 30, marginBottom: 6,
+    ancho, alto: resumen.length * altoFila + 42, marginLeft: izquierda, marginRight: angosto ? 18 : 10, marginTop: 30, marginBottom: 6,
     x: {domain: [-tope, tope], axis: "top", tickFormat: (v) => pctMarca(Math.abs(v)), ticks: angosto ? 5 : 9, grid: true, label: null, tickSize: 0},
-    y: {domain: ordenFilas, axis: angosto ? null : "left", label: null, tickSize: 0, padding: angosto ? 0.42 : 0.2},
+    y: {domain: ordenFilas, axis: angosto || rf.eje ? null : "left", label: null, tickSize: 0, padding: angosto ? 0.42 : 0.2},
     color: {domain: respuestas, range: colores},
     marks: [
+      !angosto ? rf.eje : null,
       Plot.barX(tramos, {y: "_fila", x1: "_x1", x2: "_x2", fill: (d) => colores[d._i], insetTop: angosto ? 10 : 0, ...viva(tramos, g, {subir: true})}),
       // Cifra dentro del tramo cuando cabe.
       Plot.text(tramos.filter((d) => (d._x2 - d._x1) * (ancho - izquierda) / (2 * tope) > 30), {y: "_fila", x: (d) => (d._x1 + d._x2) / 2, dy: angosto ? 5 : 0,
@@ -64,7 +69,7 @@ export function likert(datos, {ancho, fila, respuesta, valor, respuestas, colore
       Plot.text(resumen, {y: "fila", x: (r) => -(r.negativo + r.neutro / 2), dx: -6, dy: angosto ? 5 : 0, textAnchor: "end", text: (r) => formato(r.negativo), fill: P.tinta, fontSize: TIPO.valor, fontWeight: 700}),
       Plot.text(resumen, {y: "fila", x: (r) => r.positivo + r.neutro / 2, dx: 6, dy: angosto ? 5 : 0, textAnchor: "start", text: (r) => formato(r.positivo), fill: P.tinta, fontSize: TIPO.valor, fontWeight: 700}),
       // En un teléfono la pregunta va encima de su barra.
-      angosto ? Plot.text(resumen, {y: "fila", x: () => -tope, text: "fila", textAnchor: "start", dy: -14, fontSize: 12, fontWeight: 600, fill: P.tinta}) : null,
+      angosto ? Plot.text(resumen, {y: "fila", x: () => -tope, text: "fila", textAnchor: "start", lineAnchor: "bottom", dy: -8, lineWidth: (ancho - 40) / 12, fontSize: 12, fontWeight: 600, fill: P.tinta}) : null,
     ],
   }));
   plot.setAttribute("role", "group");

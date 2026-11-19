@@ -36,10 +36,13 @@ export function campoUmbral({id, antes = "", despues = "", min = 0, max = 100, p
   return {tipo: "umbral", id, rotulo, antes, despues, min, max, paso, inicial};
 }
 
-// panel({grupos: [{leyenda, campos: [...]}]}) devuelve un <form> con:
+// panel({grupos: [{leyenda, campos: [...], oculto}]}) devuelve un <form> con:
 //   .value        la selección vigente, {id: valor}
 //   .fijar(obj)   cambia valores desde fuera (un clic en la gráfica)
 // y emite `input` cada vez que cambia.
+// Un grupo se oculta entero (con su leyenda) cuando su `oculto(v)` da true o
+// cuando todos sus campos están ocultos: un rótulo de grupo sin controles
+// debajo no se pinta (sustituye a los parches CSS con :has en las páginas).
 export function panel({grupos}) {
   const campos = grupos.flatMap((g) => g.campos);
   const v = {};
@@ -79,7 +82,14 @@ export function panel({grupos}) {
       }
       if (!cambio) break;
     }
+    grupos.forEach((g, i) => {
+      const caja = cajasGrupo[i];
+      if (!caja) return;
+      const vacios = [...caja.querySelectorAll(".campo")].every((x) => x.hidden);
+      caja.hidden = Boolean(g.oculto?.(v)) || vacios;
+    });
   }
+  const cajasGrupo = [];
 
   const armarLista = (c) => {
     const id = `f${n}-${c.id}`;
@@ -111,10 +121,10 @@ export function panel({grupos}) {
     return html`<div class="campo campo-umbral"><label class="campo-rotulo solo-lector" for=${id}>${c.rotulo}</label><span class="campo-frase">${c.antes} ${numero} ${c.despues}</span>${barra}</div>`;
   };
 
-  const forma = html`<form class="panel-filtros" aria-label="Filtros de esta gráfica">${grupos.map((g) => html`<fieldset class="panel-grupo">
+  const forma = html`<form class="panel-filtros" aria-label="Filtros de esta gráfica">${grupos.map((g, i) => (cajasGrupo[i] = html`<fieldset class="panel-grupo">
     <legend>${g.leyenda}</legend>
     <div class="panel-campos">${g.campos.map((c) => (c.tipo === "umbral" ? armarUmbral(c) : armarLista(c)))}</div>
-  </fieldset>`)}</form>`;
+  </fieldset>`))}</form>`;
   forma.addEventListener("submit", (e) => e.preventDefault());
 
   for (const c of campos) if (c.tipo === "lista") v[c.id] = c.inicial;

@@ -29,6 +29,8 @@
 .gB-celda-svg { line-height: 0; }
 .gB-celda-svg svg { display: block; }
 .gB-nivel { display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+/* El símbolo de precisión no se encoge en celdas angostas. */
+.gB-nivel svg { flex: none; }
 .gB-tabla tr.gB-ref > * { background: var(--fondo-2); font-weight: 700; }
 .gB-tabla tr.gB-destacada > th { color: var(--tono-texto); }
 .figura-cuerpo .gB-glifo { display: inline-block; vertical-align: baseline; }
