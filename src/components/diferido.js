@@ -1,7 +1,8 @@
 // src/components/diferido.js
 // Dibujo diferido: un análisis se dibuja cuando se acerca a la pantalla, no
 // al abrir la página. Reserva alto para que el índice y el scroll no brinquen,
-// observa con un margen amplio y ejecuta `fn` UNA sola vez.
+// observa con un margen amplio y ejecuta `fn` UNA sola vez (con respaldo por
+// posición: ver abajo).
 
 export function alAcercarse(el, fn, {margen = "1200px 0px", alto = 520} = {}) {
   el.style.minHeight = alto + "px";
@@ -10,15 +11,48 @@ export function alAcercarse(el, fn, {margen = "1200px 0px", alto = 520} = {}) {
   // Chrome toma ese estado intermedio para su ancla de scroll y, si la
   // sección está por encima de la vista, compensa de más: al subir con la
   // rueda la página brincaba unos 300 px hacia abajo (docs/scroll-bug.md).
-  const listo = () => { fn(); el.style.minHeight = ""; };
-  if (!("IntersectionObserver" in window)) { listo(); return () => {}; }
+  let hecho = false;
+  const listo = () => {
+    if (hecho) return;
+    hecho = true;
+    soltar();
+    fn();
+    el.style.minHeight = "";
+  };
+  if (!("IntersectionObserver" in window)) { hecho = true; fn(); el.style.minHeight = ""; return () => {}; }
   const vigia = new IntersectionObserver((entradas) => {
-    if (!entradas.some((e) => e.isIntersecting)) return;
-    vigia.disconnect();
-    listo();
+    if (entradas.some((e) => e.isIntersecting)) listo();
   }, {rootMargin: margen});
   vigia.observe(el);
-  return () => vigia.disconnect();
+  // Respaldo: en celulares (Brave y Chrome en Android) el observador a veces no
+  // avisa y la sección se quedaba en blanco para siempre (noviembre 2026: la
+  // mitad de Trabajo y algunos mapas, también en verificar:render). Se revisa
+  // la posición al desplazar, al cambiar el tamaño o el zoom (visualViewport) y
+  // cada segundo; con el mismo margen del observador. Pasivo y sin bucle una
+  // vez dibujada.
+  const px = (parseInt(margen, 10) || 0);
+  const cerca = () => {
+    if (hecho || !el.isConnected) return;
+    const r = el.getBoundingClientRect();
+    const alto = window.visualViewport?.height ?? innerHeight;
+    if (r.bottom >= -px && r.top <= alto + px) listo();
+  };
+  let pendiente = false;
+  const alMover = () => { if (pendiente) return; pendiente = true; requestAnimationFrame(() => { pendiente = false; cerca(); }); };
+  addEventListener("scroll", alMover, {passive: true});
+  addEventListener("resize", alMover, {passive: true});
+  window.visualViewport?.addEventListener("resize", alMover, {passive: true});
+  window.visualViewport?.addEventListener("scroll", alMover, {passive: true});
+  const reloj = setInterval(cerca, 1000);
+  function soltar() {
+    vigia.disconnect();
+    clearInterval(reloj);
+    removeEventListener("scroll", alMover);
+    removeEventListener("resize", alMover);
+    window.visualViewport?.removeEventListener("resize", alMover);
+    window.visualViewport?.removeEventListener("scroll", alMover);
+  }
+  return soltar;
 }
 
 // Espera a que el navegador quede libre antes de cargar una tanda pesada de

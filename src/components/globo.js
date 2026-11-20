@@ -163,18 +163,40 @@ function vigilar() {
   addEventListener("scroll", () => { if (visible() && !(dueno && dueno.contains(document.activeElement) && document.activeElement.matches?.(":focus-visible"))) ocultarGlobo(); }, {passive: true, capture: true});
   addEventListener("keydown", (e) => { if (e.key === "Escape") ocultarGlobo(); });
 }
+// ¿El último toque fue con el dedo? Con el dedo el globo va ARRIBA del punto
+// tocado (abajo lo tapa la mano) y centrado en él.
+let tactil = false;
+if (typeof addEventListener === "function") addEventListener("pointerdown", (e) => { tactil = e.pointerType === "touch"; }, {passive: true, capture: true});
 export function mostrarGlobo(contenido, x, y, de = null) {
   const t = laTarjeta();
   dueno = de ?? duenoEn(x, y);
   t.innerHTML = contenido;
   t.hidden = false;
+  // El área que de verdad se ve: con zoom de pellizco en el celular es solo una
+  // parte de la página (visualViewport), y con innerWidth/innerHeight el globo
+  // quedaba fuera de la pantalla. Las coordenadas del puntero son de la página
+  // visible completa (layout viewport); visualViewport dice dónde está el área
+  // que se ve dentro de ella.
+  const vv = window.visualViewport;
+  const ox = vv?.offsetLeft ?? 0, oy = vv?.offsetTop ?? 0;
+  const vw = vv?.width ?? innerWidth, vh = vv?.height ?? innerHeight;
+  t.style.maxWidth = Math.max(160, Math.min(280, vw - 16)) + "px";
   const w = t.offsetWidth, h = t.offsetHeight;
-  // A la derecha y abajo del puntero; se voltea si no cabe en la ventana.
-  let px = x + 14, py = y + 16;
-  if (px + w > innerWidth - 8) px = x - w - 14;
-  if (py + h > innerHeight - 8) py = y - h - 12;
-  t.style.left = Math.max(8, px) + scrollX + "px";
-  t.style.top = Math.max(8, py) + scrollY + "px";
+  let px, py;
+  if (tactil) {
+    px = x - w / 2;
+    py = y - h - 22;
+    if (py < oy + 8) py = y + 26;
+  } else {
+    // A la derecha y abajo del puntero; se voltea si no cabe.
+    px = x + 14; py = y + 16;
+    if (px + w > ox + vw - 8) px = x - w - 14;
+    if (py + h > oy + vh - 8) py = y - h - 12;
+  }
+  px = Math.min(Math.max(ox + 8, px), ox + vw - w - 8);
+  py = Math.min(Math.max(oy + 8, py), oy + vh - h - 8);
+  t.style.left = px + scrollX + "px";
+  t.style.top = py + scrollY + "px";
 }
 export function ocultarGlobo() {
   if (tarjeta) tarjeta.hidden = true;

@@ -230,6 +230,15 @@ ol.referencias li:target { background: var(--tono-suave); }
   .panel-filtros.pegado:not(.abierto) .panel-grupo { display: none; }
   .panel-filtros.pegado.abierto { flex-direction: column; }
 }
+/* Sin espacio para un panel fijo (ver filtros-sueltos en la cabecera): el
+   panel vuelve a su lugar en la página y no tapa lo que se lee. */
+html.filtros-sueltos .panel-filtros { position: static; }
+/* Panel completo que no cabe fijo (más de una cuarta parte del alto visible):
+   sube con la página y vuelve compacto, sin tapar mientras está completo. */
+.panel-filtros.panel-alto:not(.pegado) { position: relative; }
+/* En el celular, el panel fijo abierto tiene alto máximo y su propio scroll:
+   sin tope llegaba a tapar toda la pantalla. */
+.panel-filtros.pegado.abierto { max-height: calc(100vh - 5rem); max-height: calc(100dvh - 5rem); overflow-y: auto; overscroll-behavior: contain; }
 /* `hidden` no oculta si un selector propio fija `display`. */
 .panel-filtros [hidden] { display: none !important; }
 
@@ -348,7 +357,7 @@ dl.ficha dd { margin: 0; color: var(--tinta); }
 /* Una sola tarjeta para todos los globos del libro (src/components/globo.js).
    Orden fijo y corto (R116): grupo, cifra, personas y, si aplica, aviso. */
 .globo-tarjeta {
-  position: absolute; z-index: 40; pointer-events: none; max-width: 17.5rem; min-width: 9rem;
+  position: absolute; z-index: 40; pointer-events: none; max-width: 17.5rem; min-width: 9rem; box-sizing: border-box;
   display: flex; flex-direction: column; gap: 0.12rem; padding: 0.6rem 0.75rem 0.65rem;
   background: var(--fondo); color: var(--tinta); border: 1px solid var(--borde-fuerte); border-radius: var(--radio);
   box-shadow: 0 6px 22px rgb(0 0 0 / 0.16); font: 0.82rem/1.35 var(--sans-serif);

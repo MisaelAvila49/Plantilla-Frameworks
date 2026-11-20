@@ -242,21 +242,45 @@ window.__RAIZ = ${JSON.stringify(raiz)};
     // franja que soltaria al compactarse; si se compactara apenas se fija, la
     // reserva quedaria a la vista como un hueco vacio de unos 150 px bajo la
     // barra. El largo de la pagina sigue igual en los dos estados.
+    // Sin espacio para un panel fijo (pantalla visible de menos de 480 px de
+    // alto: zoom de 200 % en una laptop, celular acostado; o zoom de pellizco)
+    // el panel vuelve a su lugar y no se fija: fijo tapaba la mitad de lo que
+    // se ve. Lo marca la clase filtros-sueltos en <html> (la hoja quita sticky).
+    const sinEspacio = () => {
+      const vv = window.visualViewport;
+      return (vv ? vv.height : innerHeight) < 480 || (vv ? vv.scale : 1) > 1.2;
+    };
+    // Un panel completo que ocupa mas de una cuarta parte del alto visible (el
+    // celular, con los campos apilados) no se queda fijo mientras esta
+    // completo: sube con la pagina y regresa compacto cuando el contenido llega
+    // arriba. Fijo y completo tapaba de 29 a 37 % de la pantalla.
+    const altoVisible = () => (window.visualViewport ? window.visualViewport.height : innerHeight);
     const evaluar = (seccion, visible) => {
+      const suelto = sinEspacio();
+      document.documentElement.classList.toggle("filtros-sueltos", suelto);
       for (const [panel, centinela] of seccion.panelesDentro ?? []) {
-        if (!panel.classList.contains("pegado")) panel.alturaLlena = panel.offsetHeight;
+        if (!panel.classList.contains("pegado")) {
+          panel.alturaLlena = panel.offsetHeight;
+          panel.classList.toggle("panel-alto", panel.alturaLlena > altoVisible() * 0.25);
+        }
         const umbral = Math.max(0, (panel.alturaLlena || 0) - (panel.alturaCompacta || 56));
-        fijar(panel, visible && centinela.getBoundingClientRect().top < -umbral);
+        fijar(panel, !suelto && visible && centinela.getBoundingClientRect().top < -umbral);
         if (panel.classList.contains("pegado")) panel.alturaCompacta = panel.offsetHeight;
       }
     };
     const seccionesVisibles = new Set();
     let pendiente = false;
-    if (!vigiaPanel && "IntersectionObserver" in window) addEventListener("scroll", () => {
+    const reevaluar = () => {
       if (pendiente) return;
       pendiente = true;
       requestAnimationFrame(() => { pendiente = false; for (const s of seccionesVisibles) evaluar(s, true); });
-    }, {passive: true});
+    };
+    if (!vigiaPanel && "IntersectionObserver" in window) {
+      addEventListener("scroll", reevaluar, {passive: true});
+      // El zoom cambia el alto visible: se vuelve a decidir si cabe fijo.
+      addEventListener("resize", reevaluar, {passive: true});
+      window.visualViewport?.addEventListener("resize", reevaluar, {passive: true});
+    }
     vigiaPanel ??= ("IntersectionObserver" in window) ? new IntersectionObserver((entradas) => {
       for (const e of entradas) {
         if (e.isIntersecting) seccionesVisibles.add(e.target); else seccionesVisibles.delete(e.target);
